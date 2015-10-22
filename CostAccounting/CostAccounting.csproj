@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82528DEF-9CEF-4015-B986-214AADD56767}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CostAccounting</RootNamespace>
+    <AssemblyName>CostAccounting</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>64b34c65</NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.98.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.98.1\lib\net451\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.98.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.98.1\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.98.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.98.1\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseCostMng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CostMngTotal.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Divergence.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Fare.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Common_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Common_Menu.Designer.cs">
+      <DependentUpon>Form_Common_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Common_SelectData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Common_SelectData.Designer.cs">
+      <DependentUpon>Form_Common_SelectData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Common_SelectYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Common_SelectYear.Designer.cs">
+      <DependentUpon>Form_Common_SelectYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CostMng_ActualReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CostMng_ActualReg.Designer.cs">
+      <DependentUpon>Form_CostMng_ActualReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CostMng_ActualReg_child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CostMng_ActualReg_child.Designer.cs">
+      <DependentUpon>Form_CostMng_ActualReg_child.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CostMng_ActualTotal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CostMng_ActualTotal.Designer.cs">
+      <DependentUpon>Form_CostMng_ActualTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CostMng_BudgetReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CostMng_BudgetReg.Designer.cs">
+      <DependentUpon>Form_CostMng_BudgetReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CostMng_Comparison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CostMng_Comparison.Designer.cs">
+      <DependentUpon>Form_CostMng_Comparison.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CostMng_Divergence .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CostMng_Divergence .Designer.cs">
+      <DependentUpon>Form_CostMng_Divergence .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Prepare_FareReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Prepare_FareReg.Designer.cs">
+      <DependentUpon>Form_Prepare_FareReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Prepare_ItemReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Prepare_ItemReg.Designer.cs">
+      <DependentUpon>Form_Prepare_ItemReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Prepare_MachineReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Prepare_MachineReg.Designer.cs">
+      <DependentUpon>Form_Prepare_MachineReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Prepare_MaterialsReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Prepare_MaterialsReg.Designer.cs">
+      <DependentUpon>Form_Prepare_MaterialsReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Prepare_OtherReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Prepare_OtherReg.Designer.cs">
+      <DependentUpon>Form_Prepare_OtherReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Prepare_ProductReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Prepare_ProductReg.Designer.cs">
+      <DependentUpon>Form_Prepare_ProductReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Prepare_RawMaterialsReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Prepare_RawMaterialsReg.Designer.cs">
+      <DependentUpon>Form_Prepare_RawMaterialsReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Prepare_SupplierReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Prepare_SupplierReg.Designer.cs">
+      <DependentUpon>Form_Prepare_SupplierReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ProductMng_BlendReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ProductMng_BlendReg.Designer.cs">
+      <DependentUpon>Form_ProductMng_BlendReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ProductMng_ProductReg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ProductMng_ProductReg.Designer.cs">
+      <DependentUpon>Form_ProductMng_ProductReg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Machine.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Material.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Other.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBlend.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCode.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductContractor.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductMachine.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductMaterial.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductMaterialsFare.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPacking.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPackingFare.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductSupplier.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RowMaterial.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseCostMng.resx">
+      <DependentUpon>BaseCostMng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Common_Menu.resx">
+      <DependentUpon>Form_Common_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Common_SelectData.resx">
+      <DependentUpon>Form_Common_SelectData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Common_SelectYear.resx">
+      <DependentUpon>Form_Common_SelectYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CostMng_ActualReg.resx">
+      <DependentUpon>Form_CostMng_ActualReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CostMng_ActualReg_child.resx">
+      <DependentUpon>Form_CostMng_ActualReg_child.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CostMng_ActualTotal.resx">
+      <DependentUpon>Form_CostMng_ActualTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CostMng_BudgetReg.resx">
+      <DependentUpon>Form_CostMng_BudgetReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CostMng_Comparison.resx">
+      <DependentUpon>Form_CostMng_Comparison.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CostMng_Divergence .resx">
+      <DependentUpon>Form_CostMng_Divergence .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Prepare_FareReg.resx">
+      <DependentUpon>Form_Prepare_FareReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Prepare_ItemReg.resx">
+      <DependentUpon>Form_Prepare_ItemReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Prepare_MachineReg.resx">
+      <DependentUpon>Form_Prepare_MachineReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Prepare_MaterialsReg.resx">
+      <DependentUpon>Form_Prepare_MaterialsReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Prepare_OtherReg.resx">
+      <DependentUpon>Form_Prepare_OtherReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Prepare_ProductReg.resx">
+      <DependentUpon>Form_Prepare_ProductReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Prepare_RawMaterialsReg.resx">
+      <DependentUpon>Form_Prepare_RawMaterialsReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Prepare_SupplierReg.resx">
+      <DependentUpon>Form_Prepare_SupplierReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ProductMng_BlendReg.resx">
+      <DependentUpon>Form_ProductMng_BlendReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ProductMng_ProductReg.resx">
+      <DependentUpon>Form_ProductMng_ProductReg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EntityDeploy Include="Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.Context.cs</LastGenOutput>
+    </None>
+    <None Include="Model.edmx.diagram">
+      <DependentUpon>Model.edmx</DependentUpon>
+    </None>
+    <None Include="Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model.edmx</DependentUpon>
+      <LastGenOutput>Model.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 および x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.98.1\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.98.1\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>このプロジェクトは、このコンピューターにはない NuGet パッケージを参照しています。これらをダウンロードするには、NuGet パッケージの復元を有効にしてください。詳細については、http://go.microsoft.com/fwlink/?LinkID=322105 を参照してください。不足しているファイルは {0} です。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.98.1\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.98.1\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
