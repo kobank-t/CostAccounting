@@ -71,8 +71,8 @@ namespace CostAccounting
         public DataTable material;
         public DataTable machine;
         public DataTable fare;
-        public static DataTableSupport budget = new DataTableSupport(Const.CATEGORY_TYPE.Budget);
-        public static DataTableSupport actual = new DataTableSupport(Const.CATEGORY_TYPE.Actual);
+        private static DataTableSupport budget = new DataTableSupport(Const.CATEGORY_TYPE.Budget);
+        private static DataTableSupport actual = new DataTableSupport(Const.CATEGORY_TYPE.Actual);
 
         /// -----------------------------------------------------------------------------
         /// <summary>
@@ -112,6 +112,18 @@ namespace CostAccounting
                     break;
             }
             return ret;
+        }
+
+        /// -----------------------------------------------------------------------------
+        /// <summary>
+        ///     インスタンスをリフレッシュする</summary>
+        /// <returns>
+        ///     </returns>
+        /// -----------------------------------------------------------------------------
+        public static void refresh()
+        {
+            budget = new DataTableSupport(Const.CATEGORY_TYPE.Budget);
+            actual = new DataTableSupport(Const.CATEGORY_TYPE.Actual);
         }
 
         /// -----------------------------------------------------------------------------
@@ -335,77 +347,29 @@ namespace CostAccounting
             return ret;
         }
 
-        ///// -----------------------------------------------------------------------------
-        ///// <summary>
-        /////     包装資材のデータテーブルの指定キーの価格を返却します。</summary>
-        ///// <param name="materialTable">
-        /////     検査対象と包装資材データテーブル。<param>
-        ///// <param name="searchKey">
-        /////     検索キー。<param>
-        ///// <returns>
-        /////     キーに該当する価格。</returns>
-        ///// -----------------------------------------------------------------------------
-        //public static decimal getPackingPrice(DataTable packingTable, string searchKey)
-        //{
-        //    decimal ret = decimal.Zero;
+        /// -----------------------------------------------------------------------------
+        /// <summary>
+        ///     データテーブルの指定キーの名称を返却します。</summary>
+        /// <param name="materialTable">
+        ///     検査対象とデータテーブル。<param>
+        /// <param name="searchKey">
+        ///     検索キー。<param>
+        /// <returns>
+        ///     キーに該当する名称。</returns>
+        /// -----------------------------------------------------------------------------
+        public static string getName(DataTable table, string searchKey)
+        {
+            string ret = string.Empty;
 
-        //    foreach (DataRow data in packingTable.Rows)
-        //    {
-        //        if (searchKey.Equals(data["code"].ToString()))
-        //        {
-        //            ret = (decimal)data["price"];
-        //        }
-        //    }
-        //    return ret;
-        //}
-
-        ///// -----------------------------------------------------------------------------
-        ///// <summary>
-        /////     設備のデータテーブルの指定キーのレートを返却します。</summary>
-        ///// <param name="machineTable">
-        /////     検査対象と設備データテーブル。<param>
-        ///// <param name="searchKey">
-        /////     検索キー。<param>
-        ///// <returns>
-        /////     キーに該当するレート。</returns>
-        ///// -----------------------------------------------------------------------------
-        //public static decimal getMachineRate(DataTable machineTable, string searchKey)
-        //{
-        //    decimal ret = decimal.Zero;
-
-        //    foreach (DataRow data in machineTable.Rows)
-        //    {
-        //        if (searchKey.Equals(data["code"].ToString()))
-        //        {
-        //            ret = (decimal)data["price"];
-        //        }
-        //    }
-        //    return ret;
-        //}
-
-        ///// -----------------------------------------------------------------------------
-        ///// <summary>
-        /////     荷造運賃のデータテーブルの指定キーの価格を返却します。</summary>
-        ///// <param name="machineTable">
-        /////     検査対象と荷造運賃データテーブル。<param>
-        ///// <param name="searchKey">
-        /////     検索キー。<param>
-        ///// <returns>
-        /////     キーに該当する価格。</returns>
-        ///// -----------------------------------------------------------------------------
-        //public static decimal getPackingFarePrice(DataTable packingFareTable, string searchKey)
-        //{
-        //    decimal ret = decimal.Zero;
-
-        //    foreach (DataRow data in packingFareTable.Rows)
-        //    {
-        //        if (searchKey.Equals(data["code"].ToString()))
-        //        {
-        //            ret = (decimal)data["price"];
-        //        }
-        //    }
-        //    return ret;
-        //}
+            foreach (DataRow data in table.Rows)
+            {
+                if (searchKey.Equals(data["code"].ToString()))
+                {
+                    ret = (string)data["name"];
+                }
+            }
+            return ret;
+        }
     }
 
 
@@ -433,6 +397,9 @@ namespace CostAccounting
 
         // 処理のタイプ
         public enum CATEGORY_TYPE { Budget, Actual }
+
+        // 商品のタイプ
+        public enum PRODUCT_TYPE { Normal, Blend }
     }
 
 
@@ -613,9 +580,10 @@ namespace CostAccounting
         public decimal allocationExt = decimal.Zero;
         public decimal rateExpend = decimal.Zero;
         public decimal rateLoss = decimal.Zero;
+        public decimal trayNum = decimal.Zero;
 
-        public static Parameters plan = new Parameters(Const.CATEGORY_TYPE.Budget);
-        public static Parameters actual = new Parameters(Const.CATEGORY_TYPE.Actual);
+        private static Parameters plan = new Parameters(Const.CATEGORY_TYPE.Budget);
+        private static Parameters actual = new Parameters(Const.CATEGORY_TYPE.Actual);
 
 
         /// -----------------------------------------------------------------------------
@@ -651,6 +619,7 @@ namespace CostAccounting
                     allocationExt = target.First().allocation_ext;
                     rateExpend = target.First().rate_expend;
                     rateLoss = target.First().rate_loss;
+                    trayNum = target.First().tray_num;
                 }
             }
         }
@@ -677,6 +646,18 @@ namespace CostAccounting
                     break;
             }
             return ret;
+        }
+
+        /// -----------------------------------------------------------------------------
+        /// <summary>
+        ///     インスタンスをリフレッシュする</summary>
+        /// <returns>
+        ///     </returns>
+        /// -----------------------------------------------------------------------------
+        public static void refresh()
+        {
+            plan = new Parameters(Const.CATEGORY_TYPE.Budget);
+            actual = new Parameters(Const.CATEGORY_TYPE.Actual);
         }
     }
 }

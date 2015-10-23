@@ -85,7 +85,8 @@ namespace CostAccounting
             fuelAmountPerHourA.Text = Parameters.getInstance(category).utilitiesFD.ToString("N");
 
             // 製造経費－その他経費タブの設定
-            fuelAmountPerHourMachine.Text = Parameters.getInstance(category).allocationAD.ToString("N");
+            fuelAmountPerHourFD.Text = Parameters.getInstance(category).allocationFD.ToString("N");
+            fuelAmountPerHourAD.Text = Parameters.getInstance(category).allocationAD.ToString("N");
             fuelAmountPerHourLabor.Text = Parameters.getInstance(category).allocationLabor.ToString("N");
 
             // 算出式を設定
@@ -196,6 +197,8 @@ namespace CostAccounting
                     dgvMachine.Rows[i].Cells["dgvMachineName"].Style.BackColor = Color.White;
                     dgvMachine.Rows[i].Cells["dgvMachineName"].ReadOnly = true;
                 }
+
+                trayLabel.Text = DataTableSupport.getName((DataTable)dgvMachineName.DataSource, initCode[0]) + " トレー枚数：";
             }
             else
             {
@@ -424,6 +427,7 @@ namespace CostAccounting
                     dryTimeF.Text = product.First().dry_time_f.ToString();
                     selectionTimeM.Text = product.First().selection_time_m.ToString();
                     selectionTimeF.Text = product.First().selection_time_f.ToString();
+                    trayNum.Text = product.First().tray_num.ToString();
 
                     // 取引先データの設定
                     var supplier = from t in context.ProductSupplier
@@ -527,6 +531,7 @@ namespace CostAccounting
                     // データクリア
                     itemCode.SelectedIndex = 0;
                     volume.Text = string.Empty;
+                    trayNum.Text = string.Empty;
                     unitPrice.Text = string.Empty;
                     updateTime.Text = string.Empty;
                     updatePC.Text = string.Empty;
@@ -983,7 +988,13 @@ namespace CostAccounting
             // 夜勤
             decimal nightTimeM = Conversion.Parse(this.nightTimeM_indirect.Text);
             decimal nightTimeF = Conversion.Parse(this.nightTimeF.Text);
-            decimal nightTimeM_direct = decimal.Round(decimal.Multiply(nightTimeM, (decimal)(2 * 0.476)), 0);
+
+            decimal tray = Parameters.getInstance(Program.judgeCategory(radioBudget, radioActual)).trayNum;
+            decimal nightTimeM_direct = (tray != decimal.Zero ? 
+                                            decimal.Divide(decimal.Multiply(nightTimeM, (decimal)(2 * Conversion.Parse(trayNum.Text)))
+                                                           , tray)
+                                            : decimal.Zero);
+
             this.nightTimeM_direct.Text = nightTimeM_direct.ToString("#,0");
             nightTimeSum.Text = decimal.Add(nightTimeM, nightTimeF).ToString("#,0");
             this.nightTimeM_indirect.Text = nightTimeM.ToString("#,0");
@@ -1126,6 +1137,9 @@ namespace CostAccounting
                     decimal time = Conversion.Parse((string)row.Cells["dgvMachineTime"].Value);
                     decimal rate = Conversion.Parse((string)row.Cells["dgvMachineRate"].Value);
                     decimal amount = decimal.Multiply(time, rate);
+                    if ("A".Equals(name))
+                        amount = decimal.Multiply(amount, Conversion.Parse(trayNum.Text));
+
                     decimal kgPerAmount = (volume != decimal.Zero ? decimal.Divide(amount, volume) : decimal.Zero);
 
                     row.Cells["dgvMachineTime"].Value = time.ToString("#,0.0");
@@ -1141,6 +1155,8 @@ namespace CostAccounting
             dgvMachineTotal.Rows[0].Cells[3].Value = sumAmount.ToString("N");
             dgvMachineTotal.Rows[0].Cells[4].Value = sumCostKgPerAmount.ToString("N");
 
+            trayNum.Text = Conversion.Parse(trayNum.Text).ToString("N");
+
             // 製造経費－水道光熱費タブの計算
             calcUtilitiesCost();
 
@@ -1154,7 +1170,8 @@ namespace CostAccounting
         private void calcUtilitiesCost()
         {
             decimal machineUseTimeB = decimal.Divide(Conversion.Parse((string)dgvMachine.Rows[0].Cells["dgvMachineTime"].Value), 60);
-            decimal machineUseTimeA = decimal.Divide(Conversion.Parse((string)dgvMachine.Rows[1].Cells["dgvMachineTime"].Value), 60);
+            decimal machineUseTimeA = decimal.Divide(decimal.Multiply(Conversion.Parse(trayNum.Text)
+                                                     , Conversion.Parse((string)dgvMachine.Rows[1].Cells["dgvMachineTime"].Value)), 60);
             decimal utilitiesAmountB = decimal.Multiply(machineUseTimeB, Conversion.Parse(fuelAmountPerHourB.Text));
             decimal utilitiesAmountA = decimal.Multiply(machineUseTimeA, Conversion.Parse(fuelAmountPerHourA.Text));
 
@@ -1177,24 +1194,32 @@ namespace CostAccounting
          *************************************************************/
         private void calcOtherCost()
         {
-            decimal timeMachine = decimal.Divide(Conversion.Parse((string)dgvMachine.Rows[0].Cells["dgvMachineTime"].Value)
-                                                 + Conversion.Parse((string)dgvMachine.Rows[1].Cells["dgvMachineTime"].Value), 60);
+            decimal timeFD = decimal.Divide(decimal.Multiply(Conversion.Parse(trayNum.Text)
+                                            , Conversion.Parse((string)dgvMachine.Rows[0].Cells["dgvMachineTime"].Value)), 60);
+            decimal timeAD = decimal.Divide(Conversion.Parse((string)dgvMachine.Rows[1].Cells["dgvMachineTime"].Value), 60);
             decimal timeLabor = decimal.Divide(Conversion.Parse(workingTimeM.Text), 60);
-            decimal allocationMachine = decimal.Multiply(timeMachine, Conversion.Parse(fuelAmountPerHourMachine.Text));
+            decimal allocationFD = decimal.Multiply(timeFD, Conversion.Parse(fuelAmountPerHourFD.Text));
+            decimal allocationAD = decimal.Multiply(timeAD, Conversion.Parse(fuelAmountPerHourAD.Text));
             decimal allocationLabor = decimal.Multiply(timeLabor, Conversion.Parse(fuelAmountPerHourLabor.Text));
 
             decimal volume = Conversion.Parse(this.volume.Text);
-            decimal utilitiesKgPerAmountMachine = (volume != decimal.Zero ? decimal.Divide(allocationMachine, volume) : decimal.Zero);
+            decimal utilitiesKgPerAmountFD = (volume != decimal.Zero ? decimal.Divide(allocationFD, volume) : decimal.Zero);
+            decimal utilitiesKgPerAmountAD = (volume != decimal.Zero ? decimal.Divide(allocationAD, volume) : decimal.Zero);
             decimal utilitiesKgPerAmountLabor = (volume != decimal.Zero ? decimal.Divide(allocationLabor, volume) : decimal.Zero);
 
-            this.timeMachine.Text = timeMachine.ToString("N");
+            this.timeFD.Text = timeFD.ToString("N");
+            this.timeAD.Text = timeAD.ToString("N");
             this.timeLabor.Text = timeLabor.ToString("N");
-            this.allocationMachine.Text = allocationMachine.ToString("N");
+
+            this.allocationFD.Text = allocationFD.ToString("N");
+            this.allocationAD.Text = allocationAD.ToString("N");
             this.allocationLabor.Text = allocationLabor.ToString("N");
-            this.allocationSum.Text = decimal.Add(allocationMachine, allocationLabor).ToString("N");
-            this.otherKgPerAmountMachine.Text = utilitiesKgPerAmountMachine.ToString("N");
+            this.allocationSum.Text = decimal.Add(allocationFD + allocationAD, allocationLabor).ToString("N");
+
+            this.otherKgPerAmountFD.Text = utilitiesKgPerAmountFD.ToString("N");
+            this.otherKgPerAmountAD.Text = utilitiesKgPerAmountAD.ToString("N");
             this.otherKgPerAmountLabor.Text = utilitiesKgPerAmountLabor.ToString("N");
-            this.otherKgPerAmountSum.Text = decimal.Add(utilitiesKgPerAmountMachine, utilitiesKgPerAmountLabor).ToString("N");
+            this.otherKgPerAmountSum.Text = decimal.Add(utilitiesKgPerAmountFD + utilitiesKgPerAmountAD, utilitiesKgPerAmountLabor).ToString("N");
         }
 
         /*************************************************************
@@ -1260,6 +1285,7 @@ namespace CostAccounting
             // 登録処理を行う
             using (var context = new CostAccountingEntities())
             {
+                executeDelete(context, true);
                 executeAppend(context);
 
                 // 予定の場合は実績も同データで登録する
@@ -1388,6 +1414,7 @@ namespace CostAccounting
                 dry_time_f = Conversion.Parse(dryTimeF.Text),
                 selection_time_m = Conversion.Parse(selectionTimeM.Text),
                 selection_time_f = Conversion.Parse(selectionTimeF.Text),
+                tray_num = Conversion.Parse(trayNum.Text),
                 update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                 update_date = DateTime.Now,
                 del_flg = Const.FLG_OFF

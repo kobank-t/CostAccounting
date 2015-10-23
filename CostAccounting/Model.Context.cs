@@ -32,6 +32,7 @@ namespace CostAccounting
         public virtual DbSet<Machine> Machine { get; set; }
         public virtual DbSet<Material> Material { get; set; }
         public virtual DbSet<Other> Other { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductBlend> ProductBlend { get; set; }
         public virtual DbSet<ProductCode> ProductCode { get; set; }
         public virtual DbSet<ProductContractor> ProductContractor { get; set; }
@@ -43,6 +44,5 @@ namespace CostAccounting
         public virtual DbSet<ProductSupplier> ProductSupplier { get; set; }
         public virtual DbSet<RowMaterial> RowMaterial { get; set; }
         public virtual DbSet<Supplier> Supplier { get; set; }
-        public virtual DbSet<Product> Product { get; set; }
     }
 }

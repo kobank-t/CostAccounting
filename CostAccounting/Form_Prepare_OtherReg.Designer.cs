@@ -103,6 +103,11 @@
             this.wageF_actual = new System.Windows.Forms.TextBox();
             this.wageM_actual = new System.Windows.Forms.TextBox();
             this.btnAppend = new System.Windows.Forms.Button();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.trayNum_plan = new System.Windows.Forms.TextBox();
+            this.trayNum_actual = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,24 +133,7 @@
             this.tableLayoutPanel.Controls.Add(this.label17, 1, 6);
             this.tableLayoutPanel.Controls.Add(this.label18, 1, 7);
             this.tableLayoutPanel.Controls.Add(this.label19, 1, 8);
-            this.tableLayoutPanel.Controls.Add(this.label1, 0, 9);
-            this.tableLayoutPanel.Controls.Add(this.label2, 1, 9);
-            this.tableLayoutPanel.Controls.Add(this.label3, 1, 10);
-            this.tableLayoutPanel.Controls.Add(this.label4, 1, 11);
             this.tableLayoutPanel.Controls.Add(this.label8, 4, 0);
-            this.tableLayoutPanel.Controls.Add(this.label20, 0, 12);
-            this.tableLayoutPanel.Controls.Add(this.label21, 1, 12);
-            this.tableLayoutPanel.Controls.Add(this.label5, 1, 13);
-            this.tableLayoutPanel.Controls.Add(this.label22, 3, 12);
-            this.tableLayoutPanel.Controls.Add(this.label23, 3, 13);
-            this.tableLayoutPanel.Controls.Add(this.label24, 3, 9);
-            this.tableLayoutPanel.Controls.Add(this.label25, 3, 10);
-            this.tableLayoutPanel.Controls.Add(this.label26, 3, 11);
-            this.tableLayoutPanel.Controls.Add(this.label27, 5, 9);
-            this.tableLayoutPanel.Controls.Add(this.label28, 5, 10);
-            this.tableLayoutPanel.Controls.Add(this.label29, 5, 11);
-            this.tableLayoutPanel.Controls.Add(this.label30, 5, 12);
-            this.tableLayoutPanel.Controls.Add(this.label31, 5, 13);
             this.tableLayoutPanel.Controls.Add(this.label33, 3, 1);
             this.tableLayoutPanel.Controls.Add(this.label32, 3, 2);
             this.tableLayoutPanel.Controls.Add(this.label34, 3, 3);
@@ -170,16 +158,6 @@
             this.tableLayoutPanel.Controls.Add(this.allocationFD_plan, 2, 6);
             this.tableLayoutPanel.Controls.Add(this.allocationAD_plan, 2, 7);
             this.tableLayoutPanel.Controls.Add(this.allocationLabor_plan, 2, 8);
-            this.tableLayoutPanel.Controls.Add(this.allocationSale_plan, 2, 9);
-            this.tableLayoutPanel.Controls.Add(this.allocationMng_plan, 2, 10);
-            this.tableLayoutPanel.Controls.Add(this.allocationExt_plan, 2, 11);
-            this.tableLayoutPanel.Controls.Add(this.rateExpend_plan, 2, 12);
-            this.tableLayoutPanel.Controls.Add(this.rateLoss_plan, 2, 13);
-            this.tableLayoutPanel.Controls.Add(this.rateLoss_actual, 4, 13);
-            this.tableLayoutPanel.Controls.Add(this.rateExpend_actual, 4, 12);
-            this.tableLayoutPanel.Controls.Add(this.allocationExt_actual, 4, 11);
-            this.tableLayoutPanel.Controls.Add(this.allocationMng_actual, 4, 10);
-            this.tableLayoutPanel.Controls.Add(this.allocationSale_actual, 4, 9);
             this.tableLayoutPanel.Controls.Add(this.allocationLabor_actual, 4, 8);
             this.tableLayoutPanel.Controls.Add(this.allocationAD_actual, 4, 7);
             this.tableLayoutPanel.Controls.Add(this.allocationFD_actual, 4, 6);
@@ -188,9 +166,41 @@
             this.tableLayoutPanel.Controls.Add(this.wageIndirect_actual, 4, 3);
             this.tableLayoutPanel.Controls.Add(this.wageF_actual, 4, 2);
             this.tableLayoutPanel.Controls.Add(this.wageM_actual, 4, 1);
+            this.tableLayoutPanel.Controls.Add(this.label5, 1, 14);
+            this.tableLayoutPanel.Controls.Add(this.rateLoss_plan, 2, 14);
+            this.tableLayoutPanel.Controls.Add(this.label23, 3, 14);
+            this.tableLayoutPanel.Controls.Add(this.rateLoss_actual, 4, 14);
+            this.tableLayoutPanel.Controls.Add(this.label31, 5, 14);
+            this.tableLayoutPanel.Controls.Add(this.label30, 5, 13);
+            this.tableLayoutPanel.Controls.Add(this.label29, 5, 12);
+            this.tableLayoutPanel.Controls.Add(this.label28, 5, 11);
+            this.tableLayoutPanel.Controls.Add(this.label27, 5, 10);
+            this.tableLayoutPanel.Controls.Add(this.rateExpend_actual, 4, 13);
+            this.tableLayoutPanel.Controls.Add(this.allocationExt_actual, 4, 12);
+            this.tableLayoutPanel.Controls.Add(this.allocationMng_actual, 4, 11);
+            this.tableLayoutPanel.Controls.Add(this.allocationSale_actual, 4, 10);
+            this.tableLayoutPanel.Controls.Add(this.label22, 3, 13);
+            this.tableLayoutPanel.Controls.Add(this.label26, 3, 12);
+            this.tableLayoutPanel.Controls.Add(this.label25, 3, 11);
+            this.tableLayoutPanel.Controls.Add(this.label24, 3, 10);
+            this.tableLayoutPanel.Controls.Add(this.rateExpend_plan, 2, 13);
+            this.tableLayoutPanel.Controls.Add(this.allocationExt_plan, 2, 12);
+            this.tableLayoutPanel.Controls.Add(this.allocationMng_plan, 2, 11);
+            this.tableLayoutPanel.Controls.Add(this.allocationSale_plan, 2, 10);
+            this.tableLayoutPanel.Controls.Add(this.label21, 1, 13);
+            this.tableLayoutPanel.Controls.Add(this.label4, 1, 12);
+            this.tableLayoutPanel.Controls.Add(this.label3, 1, 11);
+            this.tableLayoutPanel.Controls.Add(this.label2, 1, 10);
+            this.tableLayoutPanel.Controls.Add(this.label20, 0, 13);
+            this.tableLayoutPanel.Controls.Add(this.label1, 0, 10);
+            this.tableLayoutPanel.Controls.Add(this.label48, 3, 9);
+            this.tableLayoutPanel.Controls.Add(this.label49, 5, 9);
+            this.tableLayoutPanel.Controls.Add(this.label50, 1, 9);
+            this.tableLayoutPanel.Controls.Add(this.trayNum_plan, 2, 9);
+            this.tableLayoutPanel.Controls.Add(this.trayNum_actual, 4, 9);
             this.tableLayoutPanel.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
-            this.tableLayoutPanel.RowCount = 14;
+            this.tableLayoutPanel.RowCount = 15;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
@@ -205,7 +215,9 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tableLayoutPanel.Size = new System.Drawing.Size(618, 322);
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel.Size = new System.Drawing.Size(618, 345);
             this.tableLayoutPanel.TabIndex = 3;
             // 
             // label6
@@ -339,8 +351,8 @@
             this.label16.Location = new System.Drawing.Point(0, 138);
             this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
-            this.tableLayoutPanel.SetRowSpan(this.label16, 3);
-            this.label16.Size = new System.Drawing.Size(154, 69);
+            this.tableLayoutPanel.SetRowSpan(this.label16, 4);
+            this.label16.Size = new System.Drawing.Size(154, 92);
             this.label16.TabIndex = 0;
             this.label16.Text = "製造経費配賦";
             this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -389,7 +401,7 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(0, 207);
+            this.label1.Location = new System.Drawing.Point(0, 230);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.tableLayoutPanel.SetRowSpan(this.label1, 3);
@@ -403,7 +415,7 @@
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Location = new System.Drawing.Point(154, 207);
+            this.label2.Location = new System.Drawing.Point(154, 230);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 23);
@@ -416,7 +428,7 @@
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Location = new System.Drawing.Point(154, 230);
+            this.label3.Location = new System.Drawing.Point(154, 253);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(154, 23);
@@ -429,7 +441,7 @@
             this.label4.AutoSize = true;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Location = new System.Drawing.Point(154, 253);
+            this.label4.Location = new System.Drawing.Point(154, 276);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(154, 23);
@@ -457,7 +469,7 @@
             this.label20.AutoSize = true;
             this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Location = new System.Drawing.Point(0, 276);
+            this.label20.Location = new System.Drawing.Point(0, 299);
             this.label20.Margin = new System.Windows.Forms.Padding(0);
             this.label20.Name = "label20";
             this.tableLayoutPanel.SetRowSpan(this.label20, 2);
@@ -471,7 +483,7 @@
             this.label21.AutoSize = true;
             this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label21.Location = new System.Drawing.Point(154, 276);
+            this.label21.Location = new System.Drawing.Point(154, 299);
             this.label21.Margin = new System.Windows.Forms.Padding(0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(154, 23);
@@ -484,7 +496,7 @@
             this.label5.AutoSize = true;
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Location = new System.Drawing.Point(154, 299);
+            this.label5.Location = new System.Drawing.Point(154, 322);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(154, 23);
@@ -497,7 +509,7 @@
             this.label22.AutoSize = true;
             this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Location = new System.Drawing.Point(437, 276);
+            this.label22.Location = new System.Drawing.Point(437, 299);
             this.label22.Margin = new System.Windows.Forms.Padding(0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(24, 23);
@@ -510,7 +522,7 @@
             this.label23.AutoSize = true;
             this.label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Location = new System.Drawing.Point(437, 299);
+            this.label23.Location = new System.Drawing.Point(437, 322);
             this.label23.Margin = new System.Windows.Forms.Padding(0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(24, 23);
@@ -523,7 +535,7 @@
             this.label24.AutoSize = true;
             this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label24.Location = new System.Drawing.Point(437, 207);
+            this.label24.Location = new System.Drawing.Point(437, 230);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(24, 23);
@@ -536,7 +548,7 @@
             this.label25.AutoSize = true;
             this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.Location = new System.Drawing.Point(437, 230);
+            this.label25.Location = new System.Drawing.Point(437, 253);
             this.label25.Margin = new System.Windows.Forms.Padding(0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(24, 23);
@@ -549,7 +561,7 @@
             this.label26.AutoSize = true;
             this.label26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label26.Location = new System.Drawing.Point(437, 253);
+            this.label26.Location = new System.Drawing.Point(437, 276);
             this.label26.Margin = new System.Windows.Forms.Padding(0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(24, 23);
@@ -562,7 +574,7 @@
             this.label27.AutoSize = true;
             this.label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Location = new System.Drawing.Point(590, 207);
+            this.label27.Location = new System.Drawing.Point(590, 230);
             this.label27.Margin = new System.Windows.Forms.Padding(0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(28, 23);
@@ -575,7 +587,7 @@
             this.label28.AutoSize = true;
             this.label28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.Location = new System.Drawing.Point(590, 230);
+            this.label28.Location = new System.Drawing.Point(590, 253);
             this.label28.Margin = new System.Windows.Forms.Padding(0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(28, 23);
@@ -588,7 +600,7 @@
             this.label29.AutoSize = true;
             this.label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Location = new System.Drawing.Point(590, 253);
+            this.label29.Location = new System.Drawing.Point(590, 276);
             this.label29.Margin = new System.Windows.Forms.Padding(0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(28, 23);
@@ -601,7 +613,7 @@
             this.label30.AutoSize = true;
             this.label30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label30.Location = new System.Drawing.Point(590, 276);
+            this.label30.Location = new System.Drawing.Point(590, 299);
             this.label30.Margin = new System.Windows.Forms.Padding(0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(28, 23);
@@ -614,7 +626,7 @@
             this.label31.AutoSize = true;
             this.label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label31.Location = new System.Drawing.Point(590, 299);
+            this.label31.Location = new System.Drawing.Point(590, 322);
             this.label31.Margin = new System.Windows.Forms.Padding(0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(28, 23);
@@ -823,7 +835,7 @@
             this.wageM_plan.Margin = new System.Windows.Forms.Padding(0);
             this.wageM_plan.Name = "wageM_plan";
             this.wageM_plan.Size = new System.Drawing.Size(129, 23);
-            this.wageM_plan.TabIndex = 1;
+            this.wageM_plan.TabIndex = 0;
             this.wageM_plan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.wageM_plan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.wageM_plan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -837,7 +849,7 @@
             this.wageF_plan.Margin = new System.Windows.Forms.Padding(0);
             this.wageF_plan.Name = "wageF_plan";
             this.wageF_plan.Size = new System.Drawing.Size(129, 23);
-            this.wageF_plan.TabIndex = 2;
+            this.wageF_plan.TabIndex = 1;
             this.wageF_plan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.wageF_plan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.wageF_plan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -851,7 +863,7 @@
             this.wageIndirect_plan.Margin = new System.Windows.Forms.Padding(0);
             this.wageIndirect_plan.Name = "wageIndirect_plan";
             this.wageIndirect_plan.Size = new System.Drawing.Size(129, 23);
-            this.wageIndirect_plan.TabIndex = 3;
+            this.wageIndirect_plan.TabIndex = 2;
             this.wageIndirect_plan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.wageIndirect_plan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.wageIndirect_plan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -865,7 +877,7 @@
             this.utilitiesFD_plan.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesFD_plan.Name = "utilitiesFD_plan";
             this.utilitiesFD_plan.Size = new System.Drawing.Size(129, 23);
-            this.utilitiesFD_plan.TabIndex = 4;
+            this.utilitiesFD_plan.TabIndex = 3;
             this.utilitiesFD_plan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesFD_plan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesFD_plan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -879,7 +891,7 @@
             this.utilitiesAD_plan.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesAD_plan.Name = "utilitiesAD_plan";
             this.utilitiesAD_plan.Size = new System.Drawing.Size(129, 23);
-            this.utilitiesAD_plan.TabIndex = 5;
+            this.utilitiesAD_plan.TabIndex = 4;
             this.utilitiesAD_plan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesAD_plan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesAD_plan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -893,7 +905,7 @@
             this.allocationFD_plan.Margin = new System.Windows.Forms.Padding(0);
             this.allocationFD_plan.Name = "allocationFD_plan";
             this.allocationFD_plan.Size = new System.Drawing.Size(129, 23);
-            this.allocationFD_plan.TabIndex = 6;
+            this.allocationFD_plan.TabIndex = 5;
             this.allocationFD_plan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.allocationFD_plan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.allocationFD_plan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -907,7 +919,7 @@
             this.allocationAD_plan.Margin = new System.Windows.Forms.Padding(0);
             this.allocationAD_plan.Name = "allocationAD_plan";
             this.allocationAD_plan.Size = new System.Drawing.Size(129, 23);
-            this.allocationAD_plan.TabIndex = 7;
+            this.allocationAD_plan.TabIndex = 6;
             this.allocationAD_plan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.allocationAD_plan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.allocationAD_plan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -921,7 +933,7 @@
             this.allocationLabor_plan.Margin = new System.Windows.Forms.Padding(0);
             this.allocationLabor_plan.Name = "allocationLabor_plan";
             this.allocationLabor_plan.Size = new System.Drawing.Size(129, 23);
-            this.allocationLabor_plan.TabIndex = 8;
+            this.allocationLabor_plan.TabIndex = 7;
             this.allocationLabor_plan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.allocationLabor_plan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.allocationLabor_plan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -931,7 +943,7 @@
             this.allocationSale_plan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.allocationSale_plan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.allocationSale_plan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.allocationSale_plan.Location = new System.Drawing.Point(308, 207);
+            this.allocationSale_plan.Location = new System.Drawing.Point(308, 230);
             this.allocationSale_plan.Margin = new System.Windows.Forms.Padding(0);
             this.allocationSale_plan.Name = "allocationSale_plan";
             this.allocationSale_plan.Size = new System.Drawing.Size(129, 23);
@@ -945,7 +957,7 @@
             this.allocationMng_plan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.allocationMng_plan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.allocationMng_plan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.allocationMng_plan.Location = new System.Drawing.Point(308, 230);
+            this.allocationMng_plan.Location = new System.Drawing.Point(308, 253);
             this.allocationMng_plan.Margin = new System.Windows.Forms.Padding(0);
             this.allocationMng_plan.Name = "allocationMng_plan";
             this.allocationMng_plan.Size = new System.Drawing.Size(129, 23);
@@ -959,7 +971,7 @@
             this.allocationExt_plan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.allocationExt_plan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.allocationExt_plan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.allocationExt_plan.Location = new System.Drawing.Point(308, 253);
+            this.allocationExt_plan.Location = new System.Drawing.Point(308, 276);
             this.allocationExt_plan.Margin = new System.Windows.Forms.Padding(0);
             this.allocationExt_plan.Name = "allocationExt_plan";
             this.allocationExt_plan.Size = new System.Drawing.Size(129, 23);
@@ -973,7 +985,7 @@
             this.rateExpend_plan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.rateExpend_plan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rateExpend_plan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rateExpend_plan.Location = new System.Drawing.Point(308, 276);
+            this.rateExpend_plan.Location = new System.Drawing.Point(308, 299);
             this.rateExpend_plan.Margin = new System.Windows.Forms.Padding(0);
             this.rateExpend_plan.Name = "rateExpend_plan";
             this.rateExpend_plan.Size = new System.Drawing.Size(129, 23);
@@ -987,7 +999,7 @@
             this.rateLoss_plan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.rateLoss_plan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rateLoss_plan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rateLoss_plan.Location = new System.Drawing.Point(308, 299);
+            this.rateLoss_plan.Location = new System.Drawing.Point(308, 322);
             this.rateLoss_plan.Margin = new System.Windows.Forms.Padding(0);
             this.rateLoss_plan.Name = "rateLoss_plan";
             this.rateLoss_plan.Size = new System.Drawing.Size(129, 23);
@@ -1001,11 +1013,11 @@
             this.rateLoss_actual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.rateLoss_actual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rateLoss_actual.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rateLoss_actual.Location = new System.Drawing.Point(461, 299);
+            this.rateLoss_actual.Location = new System.Drawing.Point(461, 322);
             this.rateLoss_actual.Margin = new System.Windows.Forms.Padding(0);
             this.rateLoss_actual.Name = "rateLoss_actual";
             this.rateLoss_actual.Size = new System.Drawing.Size(129, 23);
-            this.rateLoss_actual.TabIndex = 26;
+            this.rateLoss_actual.TabIndex = 27;
             this.rateLoss_actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.rateLoss_actual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.rateLoss_actual.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1015,11 +1027,11 @@
             this.rateExpend_actual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.rateExpend_actual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rateExpend_actual.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rateExpend_actual.Location = new System.Drawing.Point(461, 276);
+            this.rateExpend_actual.Location = new System.Drawing.Point(461, 299);
             this.rateExpend_actual.Margin = new System.Windows.Forms.Padding(0);
             this.rateExpend_actual.Name = "rateExpend_actual";
             this.rateExpend_actual.Size = new System.Drawing.Size(129, 23);
-            this.rateExpend_actual.TabIndex = 25;
+            this.rateExpend_actual.TabIndex = 26;
             this.rateExpend_actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.rateExpend_actual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.rateExpend_actual.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1029,11 +1041,11 @@
             this.allocationExt_actual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.allocationExt_actual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.allocationExt_actual.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.allocationExt_actual.Location = new System.Drawing.Point(461, 253);
+            this.allocationExt_actual.Location = new System.Drawing.Point(461, 276);
             this.allocationExt_actual.Margin = new System.Windows.Forms.Padding(0);
             this.allocationExt_actual.Name = "allocationExt_actual";
             this.allocationExt_actual.Size = new System.Drawing.Size(129, 23);
-            this.allocationExt_actual.TabIndex = 24;
+            this.allocationExt_actual.TabIndex = 25;
             this.allocationExt_actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.allocationExt_actual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.allocationExt_actual.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1043,11 +1055,11 @@
             this.allocationMng_actual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.allocationMng_actual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.allocationMng_actual.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.allocationMng_actual.Location = new System.Drawing.Point(461, 230);
+            this.allocationMng_actual.Location = new System.Drawing.Point(461, 253);
             this.allocationMng_actual.Margin = new System.Windows.Forms.Padding(0);
             this.allocationMng_actual.Name = "allocationMng_actual";
             this.allocationMng_actual.Size = new System.Drawing.Size(129, 23);
-            this.allocationMng_actual.TabIndex = 23;
+            this.allocationMng_actual.TabIndex = 24;
             this.allocationMng_actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.allocationMng_actual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.allocationMng_actual.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1057,11 +1069,11 @@
             this.allocationSale_actual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.allocationSale_actual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.allocationSale_actual.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.allocationSale_actual.Location = new System.Drawing.Point(461, 207);
+            this.allocationSale_actual.Location = new System.Drawing.Point(461, 230);
             this.allocationSale_actual.Margin = new System.Windows.Forms.Padding(0);
             this.allocationSale_actual.Name = "allocationSale_actual";
             this.allocationSale_actual.Size = new System.Drawing.Size(129, 23);
-            this.allocationSale_actual.TabIndex = 22;
+            this.allocationSale_actual.TabIndex = 23;
             this.allocationSale_actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.allocationSale_actual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.allocationSale_actual.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1180,7 +1192,7 @@
             // 
             // btnAppend
             // 
-            this.btnAppend.Location = new System.Drawing.Point(555, 340);
+            this.btnAppend.Location = new System.Drawing.Point(555, 363);
             this.btnAppend.Name = "btnAppend";
             this.btnAppend.Size = new System.Drawing.Size(75, 23);
             this.btnAppend.TabIndex = 27;
@@ -1188,11 +1200,78 @@
             this.btnAppend.UseVisualStyleBackColor = true;
             this.btnAppend.Click += new System.EventHandler(this.btnAppend_Click);
             // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label48.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label48.Location = new System.Drawing.Point(437, 207);
+            this.label48.Margin = new System.Windows.Forms.Padding(0);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(24, 23);
+            this.label48.TabIndex = 0;
+            this.label48.Text = "枚";
+            this.label48.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label49.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label49.Location = new System.Drawing.Point(590, 207);
+            this.label49.Margin = new System.Windows.Forms.Padding(0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(28, 23);
+            this.label49.TabIndex = 0;
+            this.label49.Text = "枚";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label50.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label50.Location = new System.Drawing.Point(154, 207);
+            this.label50.Margin = new System.Windows.Forms.Padding(0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(154, 23);
+            this.label50.TabIndex = 0;
+            this.label50.Text = "夜勤1回あたり稼働トレー枚数";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // trayNum_plan
+            // 
+            this.trayNum_plan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.trayNum_plan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.trayNum_plan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trayNum_plan.Location = new System.Drawing.Point(308, 207);
+            this.trayNum_plan.Margin = new System.Windows.Forms.Padding(0);
+            this.trayNum_plan.Name = "trayNum_plan";
+            this.trayNum_plan.Size = new System.Drawing.Size(129, 23);
+            this.trayNum_plan.TabIndex = 8;
+            this.trayNum_plan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.trayNum_plan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.trayNum_plan.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // trayNum_actual
+            // 
+            this.trayNum_actual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.trayNum_actual.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.trayNum_actual.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.trayNum_actual.Location = new System.Drawing.Point(461, 207);
+            this.trayNum_actual.Margin = new System.Windows.Forms.Padding(0);
+            this.trayNum_actual.Name = "trayNum_actual";
+            this.trayNum_actual.Size = new System.Drawing.Size(129, 23);
+            this.trayNum_actual.TabIndex = 22;
+            this.trayNum_actual.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.trayNum_actual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.trayNum_actual.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
             // Form_Prepare_OtherReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(642, 372);
+            this.ClientSize = new System.Drawing.Size(642, 393);
             this.Controls.Add(this.btnAppend);
             this.Controls.Add(this.tableLayoutPanel);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -1285,6 +1364,11 @@
         private System.Windows.Forms.TextBox wageF_actual;
         private System.Windows.Forms.TextBox wageM_actual;
         private System.Windows.Forms.Button btnAppend;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox trayNum_plan;
+        private System.Windows.Forms.TextBox trayNum_actual;
 
     }
 }

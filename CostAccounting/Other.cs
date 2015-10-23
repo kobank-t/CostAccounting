@@ -29,6 +29,7 @@ namespace CostAccounting
         public decimal allocation_ext { get; set; }
         public decimal rate_expend { get; set; }
         public decimal rate_loss { get; set; }
+        public decimal tray_num { get; set; }
         public string update_user { get; set; }
         public System.DateTime update_date { get; set; }
         public string del_flg { get; set; }

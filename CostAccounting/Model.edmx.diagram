@@ -5,25 +5,25 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="de5c35271fd94c22bd7b3d815b2f9bd3" Name="Diagram1">
-        <EntityTypeShape EntityType="CostAccountingModel.CostMngTotal" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.Divergence" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.Fare" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.Item" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.Machine" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.Material" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.Other" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.ProductBlend" Width="1.5" PointX="2.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.ProductCode" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.ProductContractor" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.ProductMachine" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.ProductMaterial" Width="1.5" PointX="6.75" PointY="10.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.ProductMaterialsFare" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.ProductPacking" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.ProductPackingFare" Width="1.5" PointX="2.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.ProductSupplier" Width="1.5" PointX="12.75" PointY="4.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.RowMaterial" Width="1.5" PointX="8.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.Supplier" Width="1.5" PointX="10.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CostAccountingModel.Product" Width="1.5" PointX="13.375" PointY="11.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.CostMngTotal" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.Divergence" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.Fare" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.Item" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.Machine" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.Material" Width="1.5" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.Other" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.Product" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.ProductBlend" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.ProductCode" Width="1.5" PointX="4.75" PointY="8.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.ProductContractor" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.ProductMachine" Width="1.5" PointX="10.75" PointY="4.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.ProductMaterial" Width="1.5" PointX="6.75" PointY="10.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.ProductMaterialsFare" Width="1.5" PointX="10.75" PointY="8.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.ProductPacking" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.ProductPackingFare" Width="1.5" PointX="2.75" PointY="12.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.ProductSupplier" Width="1.5" PointX="12.75" PointY="4.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.RowMaterial" Width="1.5" PointX="8.75" PointY="12.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.Supplier" Width="1.5" PointX="10.75" PointY="12.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

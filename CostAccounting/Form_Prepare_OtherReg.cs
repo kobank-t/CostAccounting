@@ -69,6 +69,7 @@ namespace CostAccounting
                     allocationExt_plan.Text = plan.First().allocation_ext.ToString("N");
                     rateExpend_plan.Text = plan.First().rate_expend.ToString("N");
                     rateLoss_plan.Text = plan.First().rate_loss.ToString("N");
+                    trayNum_plan.Text = plan.First().tray_num.ToString("N");
                 }
 
                 // 実績データの設定
@@ -92,6 +93,7 @@ namespace CostAccounting
                     allocationExt_actual.Text = actual.First().allocation_ext.ToString("N");
                     rateExpend_actual.Text = actual.First().rate_expend.ToString("N");
                     rateLoss_actual.Text = actual.First().rate_loss.ToString("N");
+                    trayNum_actual.Text = actual.First().tray_num.ToString("N");
                 }
             }
         }
@@ -131,6 +133,7 @@ namespace CostAccounting
                     allocation_ext = Conversion.Parse(allocationExt_plan.Text),
                     rate_expend = Conversion.Parse(rateExpend_plan.Text),
                     rate_loss = Conversion.Parse(rateLoss_plan.Text),
+                    tray_num = Conversion.Parse(trayNum_plan.Text),
                     update_user = SystemInformation.UserName,
                     update_date = DateTime.Now,
                     del_flg = Const.FLG_OFF
@@ -153,6 +156,7 @@ namespace CostAccounting
                     allocation_ext = Conversion.Parse(allocationExt_actual.Text),
                     rate_expend = Conversion.Parse(rateExpend_actual.Text),
                     rate_loss = Conversion.Parse(rateLoss_actual.Text),
+                    tray_num = Conversion.Parse(trayNum_actual.Text),
                     update_user = SystemInformation.UserName,
                     update_date = DateTime.Now,
                     del_flg = Const.FLG_OFF

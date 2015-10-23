@@ -6,16 +6,15 @@ namespace CostAccounting
     public partial class Form_Common_Menu : Form
     {
         /*************************************************************
-         * 
+         * コンストラクタ
          *************************************************************/
         public Form_Common_Menu()
         {
             InitializeComponent();
-
         }
 
         /*************************************************************
-         * 
+         * 導入処理ボタン押下時の処理
          *************************************************************/
         private void btnMainPrepare_Click(object sender, EventArgs e)
         {
@@ -37,7 +36,7 @@ namespace CostAccounting
         }
 
         /*************************************************************
-         * 
+         * 商品管理ボタン押下時の処理
          *************************************************************/
         private void btnMainProductMng_Click(object sender, EventArgs e)
         {
@@ -59,7 +58,7 @@ namespace CostAccounting
         }
 
         /*************************************************************
-         * 
+         * 原価管理ボタン押下時の処理
          *************************************************************/
         private void btnMainCostMng_Click(object sender, EventArgs e)
         {
@@ -85,9 +84,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubRawMaterialsReg_Click(object sender, EventArgs e)
         {
-            Form_Prepare_RawMaterialsReg form = new Form_Prepare_RawMaterialsReg();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_Prepare_RawMaterialsReg());
         }
 
         /*************************************************************
@@ -95,9 +92,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubMaterialsReg_Click(object sender, EventArgs e)
         {
-            Form_Prepare_MaterialsReg form = new Form_Prepare_MaterialsReg();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_Prepare_MaterialsReg());
         }
 
         /*************************************************************
@@ -105,9 +100,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubMachineReg_Click(object sender, EventArgs e)
         {
-            Form_Prepare_MachineReg form = new Form_Prepare_MachineReg();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_Prepare_MachineReg());
         }
 
         /*************************************************************
@@ -115,9 +108,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubFareReg_Click(object sender, EventArgs e)
         {
-            Form_Prepare_FareReg form = new Form_Prepare_FareReg();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_Prepare_FareReg());
         }
 
         /*************************************************************
@@ -125,9 +116,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubProductCdReg_Click(object sender, EventArgs e)
         {
-            Form_Prepare_ProductReg form = new Form_Prepare_ProductReg();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_Prepare_ProductReg());
         }
 
         /*************************************************************
@@ -135,9 +124,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubSupplierReg_Click(object sender, EventArgs e)
         {
-            Form_Prepare_SupplierReg form = new Form_Prepare_SupplierReg();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_Prepare_SupplierReg());
         }
 
         /*************************************************************
@@ -145,9 +132,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubItemReg_Click(object sender, EventArgs e)
         {
-            Form_Prepare_ItemReg form = new Form_Prepare_ItemReg();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_Prepare_ItemReg());
         }
 
         /*************************************************************
@@ -155,9 +140,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubOtherReg_Click(object sender, EventArgs e)
         {
-            Form_Prepare_OtherReg form = new Form_Prepare_OtherReg();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_Prepare_OtherReg());
         }
 
         /*************************************************************
@@ -165,9 +148,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubBudgetReg_Click(object sender, EventArgs e)
         {
-            Form_CostMng_BudgetReg form = new Form_CostMng_BudgetReg();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_CostMng_BudgetReg());
         }
 
         /*************************************************************
@@ -175,9 +156,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubActualReg_Click(object sender, EventArgs e)
         {
-            Form_CostMng_ActualReg form = new Form_CostMng_ActualReg();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_CostMng_ActualReg());
         }
 
         /*************************************************************
@@ -185,9 +164,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubComparison_Click(object sender, EventArgs e)
         {
-            Form_CostMng_Comparison form = new Form_CostMng_Comparison();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_CostMng_Comparison());
         }
 
         /*************************************************************
@@ -195,9 +172,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubActualTotal_Click(object sender, EventArgs e)
         {
-            Form_CostMng_ActualTotal form = new Form_CostMng_ActualTotal();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_CostMng_ActualTotal());
         }
 
         /*************************************************************
@@ -205,9 +180,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubDivergence_Click(object sender, EventArgs e)
         {
-            Form_CostMng_Divergence form = new Form_CostMng_Divergence();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_CostMng_Divergence());
         }
 
         /*************************************************************
@@ -215,9 +188,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubProductReg_Click(object sender, EventArgs e)
         {
-            Form_ProductMng_ProductReg form = new Form_ProductMng_ProductReg();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_ProductMng_ProductReg());
         }
 
         /*************************************************************
@@ -225,9 +196,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnSubBlendReg_Click(object sender, EventArgs e)
         {
-            Form_ProductMng_BlendReg form = new Form_ProductMng_BlendReg();
-            form.ShowDialog();
-            form.Dispose();
+            openForm(new Form_ProductMng_BlendReg());
         }
 
         /*************************************************************
@@ -236,6 +205,17 @@ namespace CostAccounting
         private void Form_Menu_Load(object sender, EventArgs e)
         {
             this.btnMainPrepare.PerformClick();
+        }
+
+        /*************************************************************
+         * 対象フォームを呼び出す
+         *************************************************************/
+        private void openForm(Form target)
+        {
+            target.ShowDialog();
+            target.Dispose();
+            DataTableSupport.refresh();
+            Parameters.refresh();
         }
     }
 }

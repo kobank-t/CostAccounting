@@ -109,6 +109,7 @@ namespace CostAccounting
             // 登録処理を行う
             using (var context = new CostAccountingEntities())
             {
+                executeDelete(context, true);
                 executeAppend(context);
 
                 // 予定の場合は実績も同データで登録する

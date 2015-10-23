@@ -180,6 +180,8 @@
             this.dgvPackingAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvPackingKgPerAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.trayLabel = new System.Windows.Forms.Label();
             this.dgvMachineTotal = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn32 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn33 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -192,6 +194,7 @@
             this.dgvMachineRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvMachineAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvMachineKgPerAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.trayNum = new System.Windows.Forms.TextBox();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label140 = new System.Windows.Forms.Label();
@@ -218,24 +221,29 @@
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label160 = new System.Windows.Forms.Label();
             this.label161 = new System.Windows.Forms.Label();
-            this.label162 = new System.Windows.Forms.Label();
-            this.label163 = new System.Windows.Forms.Label();
             this.label164 = new System.Windows.Forms.Label();
             this.label165 = new System.Windows.Forms.Label();
             this.label166 = new System.Windows.Forms.Label();
             this.label167 = new System.Windows.Forms.Label();
-            this.otherKgPerAmountMachine = new System.Windows.Forms.Label();
-            this.otherKgPerAmountLabor = new System.Windows.Forms.Label();
-            this.otherKgPerAmountSum = new System.Windows.Forms.Label();
-            this.allocationMachine = new System.Windows.Forms.Label();
-            this.allocationLabor = new System.Windows.Forms.Label();
+            this.otherKgPerAmountFD = new System.Windows.Forms.Label();
+            this.allocationFD = new System.Windows.Forms.Label();
+            this.fuelAmountPerHourFD = new System.Windows.Forms.Label();
+            this.timeFD = new System.Windows.Forms.Label();
+            this.label163 = new System.Windows.Forms.Label();
             this.allocationSum = new System.Windows.Forms.Label();
-            this.fuelAmountPerHourMachine = new System.Windows.Forms.Label();
-            this.fuelAmountPerHourLabor = new System.Windows.Forms.Label();
-            this.label176 = new System.Windows.Forms.Label();
-            this.timeMachine = new System.Windows.Forms.Label();
-            this.timeLabor = new System.Windows.Forms.Label();
+            this.otherKgPerAmountSum = new System.Windows.Forms.Label();
+            this.otherKgPerAmountLabor = new System.Windows.Forms.Label();
+            this.allocationLabor = new System.Windows.Forms.Label();
+            this.label162 = new System.Windows.Forms.Label();
             this.label179 = new System.Windows.Forms.Label();
+            this.label176 = new System.Windows.Forms.Label();
+            this.fuelAmountPerHourLabor = new System.Windows.Forms.Label();
+            this.timeLabor = new System.Windows.Forms.Label();
+            this.timeAD = new System.Windows.Forms.Label();
+            this.fuelAmountPerHourAD = new System.Windows.Forms.Label();
+            this.allocationAD = new System.Windows.Forms.Label();
+            this.otherKgPerAmountAD = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.dgvPackingFareTotal = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn41 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -1787,14 +1795,35 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.label13);
+            this.tabPage7.Controls.Add(this.trayLabel);
             this.tabPage7.Controls.Add(this.dgvMachineTotal);
             this.tabPage7.Controls.Add(this.dgvMachine);
+            this.tabPage7.Controls.Add(this.trayNum);
             this.tabPage7.Location = new System.Drawing.Point(4, 24);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Size = new System.Drawing.Size(794, 224);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "設備費";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(754, 8);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(19, 15);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "枚";
+            // 
+            // trayLabel
+            // 
+            this.trayLabel.Location = new System.Drawing.Point(361, 8);
+            this.trayLabel.Name = "trayLabel";
+            this.trayLabel.Size = new System.Drawing.Size(300, 15);
+            this.trayLabel.TabIndex = 13;
+            this.trayLabel.Text = "xxxx";
+            this.trayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // dgvMachineTotal
             // 
@@ -1877,12 +1906,12 @@
             this.dgvMachineRate,
             this.dgvMachineAmount,
             this.dgvMachineKgPerAmount});
-            this.dgvMachine.Location = new System.Drawing.Point(16, 18);
+            this.dgvMachine.Location = new System.Drawing.Point(16, 33);
             this.dgvMachine.MultiSelect = false;
             this.dgvMachine.Name = "dgvMachine";
             this.dgvMachine.RowTemplate.Height = 21;
             this.dgvMachine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMachine.Size = new System.Drawing.Size(761, 178);
+            this.dgvMachine.Size = new System.Drawing.Size(761, 163);
             this.dgvMachine.TabIndex = 12;
             this.dgvMachine.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             this.dgvMachine.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellEndEdit);
@@ -1940,6 +1969,17 @@
             this.dgvMachineKgPerAmount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvMachineKgPerAmount.Width = 105;
             // 
+            // trayNum
+            // 
+            this.trayNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.trayNum.Location = new System.Drawing.Point(662, 5);
+            this.trayNum.Name = "trayNum";
+            this.trayNum.Size = new System.Drawing.Size(89, 23);
+            this.trayNum.TabIndex = 15;
+            this.trayNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.trayNum.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.trayNum.Leave += new System.EventHandler(this.control_Leave_calc);
+            // 
             // tabPage8
             // 
             this.tabPage8.Controls.Add(this.tableLayoutPanel5);
@@ -1953,11 +1993,11 @@
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.ColumnCount = 5;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
             this.tableLayoutPanel5.Controls.Add(this.label140, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.label141, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.label142, 0, 2);
@@ -1981,11 +2021,11 @@
             this.tableLayoutPanel5.Location = new System.Drawing.Point(18, 17);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 4;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(674, 82);
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(755, 92);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // label140
@@ -1997,7 +2037,7 @@
             this.label140.Location = new System.Drawing.Point(0, 0);
             this.label140.Margin = new System.Windows.Forms.Padding(0);
             this.label140.Name = "label140";
-            this.label140.Size = new System.Drawing.Size(134, 20);
+            this.label140.Size = new System.Drawing.Size(241, 23);
             this.label140.TabIndex = 0;
             this.label140.Text = "使用乾燥設備";
             this.label140.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2007,10 +2047,10 @@
             this.label141.AutoSize = true;
             this.label141.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label141.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label141.Location = new System.Drawing.Point(0, 20);
+            this.label141.Location = new System.Drawing.Point(0, 23);
             this.label141.Margin = new System.Windows.Forms.Padding(0);
             this.label141.Name = "label141";
-            this.label141.Size = new System.Drawing.Size(134, 20);
+            this.label141.Size = new System.Drawing.Size(241, 23);
             this.label141.TabIndex = 0;
             this.label141.Text = "B 熱風乾燥機";
             this.label141.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2020,12 +2060,12 @@
             this.label142.AutoSize = true;
             this.label142.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label142.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label142.Location = new System.Drawing.Point(0, 40);
+            this.label142.Location = new System.Drawing.Point(0, 46);
             this.label142.Margin = new System.Windows.Forms.Padding(0);
             this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(134, 20);
+            this.label142.Size = new System.Drawing.Size(241, 23);
             this.label142.TabIndex = 0;
-            this.label142.Text = "A 真空凍結乾燥機";
+            this.label142.Text = "A 真空凍結乾燥機(使用時間×枚数)";
             this.label142.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label143
@@ -2034,10 +2074,10 @@
             this.label143.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label143.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label143.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label143.Location = new System.Drawing.Point(0, 60);
+            this.label143.Location = new System.Drawing.Point(0, 69);
             this.label143.Margin = new System.Windows.Forms.Padding(0);
             this.label143.Name = "label143";
-            this.label143.Size = new System.Drawing.Size(134, 22);
+            this.label143.Size = new System.Drawing.Size(241, 23);
             this.label143.TabIndex = 0;
             this.label143.Text = "合計";
             this.label143.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2048,10 +2088,10 @@
             this.label144.BackColor = System.Drawing.SystemColors.Menu;
             this.label144.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label144.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label144.Location = new System.Drawing.Point(134, 0);
+            this.label144.Location = new System.Drawing.Point(241, 0);
             this.label144.Margin = new System.Windows.Forms.Padding(0);
             this.label144.Name = "label144";
-            this.label144.Size = new System.Drawing.Size(134, 20);
+            this.label144.Size = new System.Drawing.Size(128, 23);
             this.label144.TabIndex = 0;
             this.label144.Text = "設備使用時間(ｈ)";
             this.label144.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2062,10 +2102,10 @@
             this.label145.BackColor = System.Drawing.SystemColors.Menu;
             this.label145.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label145.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label145.Location = new System.Drawing.Point(268, 0);
+            this.label145.Location = new System.Drawing.Point(369, 0);
             this.label145.Margin = new System.Windows.Forms.Padding(0);
             this.label145.Name = "label145";
-            this.label145.Size = new System.Drawing.Size(134, 20);
+            this.label145.Size = new System.Drawing.Size(128, 23);
             this.label145.TabIndex = 0;
             this.label145.Text = "時間当り燃料額";
             this.label145.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2076,10 +2116,10 @@
             this.label146.BackColor = System.Drawing.SystemColors.Menu;
             this.label146.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label146.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label146.Location = new System.Drawing.Point(402, 0);
+            this.label146.Location = new System.Drawing.Point(497, 0);
             this.label146.Margin = new System.Windows.Forms.Padding(0);
             this.label146.Name = "label146";
-            this.label146.Size = new System.Drawing.Size(134, 20);
+            this.label146.Size = new System.Drawing.Size(128, 23);
             this.label146.TabIndex = 0;
             this.label146.Text = "金額";
             this.label146.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2090,10 +2130,10 @@
             this.label147.BackColor = System.Drawing.SystemColors.Menu;
             this.label147.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label147.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label147.Location = new System.Drawing.Point(536, 0);
+            this.label147.Location = new System.Drawing.Point(625, 0);
             this.label147.Margin = new System.Windows.Forms.Padding(0);
             this.label147.Name = "label147";
-            this.label147.Size = new System.Drawing.Size(138, 20);
+            this.label147.Size = new System.Drawing.Size(130, 23);
             this.label147.TabIndex = 0;
             this.label147.Text = "kg当り金額";
             this.label147.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2103,10 +2143,10 @@
             this.utilitiesKgPerAmountB.AutoSize = true;
             this.utilitiesKgPerAmountB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.utilitiesKgPerAmountB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesKgPerAmountB.Location = new System.Drawing.Point(536, 20);
+            this.utilitiesKgPerAmountB.Location = new System.Drawing.Point(625, 23);
             this.utilitiesKgPerAmountB.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesKgPerAmountB.Name = "utilitiesKgPerAmountB";
-            this.utilitiesKgPerAmountB.Size = new System.Drawing.Size(138, 20);
+            this.utilitiesKgPerAmountB.Size = new System.Drawing.Size(130, 23);
             this.utilitiesKgPerAmountB.TabIndex = 0;
             this.utilitiesKgPerAmountB.Text = "0.00";
             this.utilitiesKgPerAmountB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2116,10 +2156,10 @@
             this.utilitiesKgPerAmountA.AutoSize = true;
             this.utilitiesKgPerAmountA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.utilitiesKgPerAmountA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesKgPerAmountA.Location = new System.Drawing.Point(536, 40);
+            this.utilitiesKgPerAmountA.Location = new System.Drawing.Point(625, 46);
             this.utilitiesKgPerAmountA.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesKgPerAmountA.Name = "utilitiesKgPerAmountA";
-            this.utilitiesKgPerAmountA.Size = new System.Drawing.Size(138, 20);
+            this.utilitiesKgPerAmountA.Size = new System.Drawing.Size(130, 23);
             this.utilitiesKgPerAmountA.TabIndex = 0;
             this.utilitiesKgPerAmountA.Text = "0.00";
             this.utilitiesKgPerAmountA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2130,10 +2170,10 @@
             this.utilitiesKgPerAmountSum.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.utilitiesKgPerAmountSum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.utilitiesKgPerAmountSum.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesKgPerAmountSum.Location = new System.Drawing.Point(536, 60);
+            this.utilitiesKgPerAmountSum.Location = new System.Drawing.Point(625, 69);
             this.utilitiesKgPerAmountSum.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesKgPerAmountSum.Name = "utilitiesKgPerAmountSum";
-            this.utilitiesKgPerAmountSum.Size = new System.Drawing.Size(138, 22);
+            this.utilitiesKgPerAmountSum.Size = new System.Drawing.Size(130, 23);
             this.utilitiesKgPerAmountSum.TabIndex = 0;
             this.utilitiesKgPerAmountSum.Text = "0.00";
             this.utilitiesKgPerAmountSum.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2143,10 +2183,10 @@
             this.utilitiesAmountB.AutoSize = true;
             this.utilitiesAmountB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.utilitiesAmountB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesAmountB.Location = new System.Drawing.Point(402, 20);
+            this.utilitiesAmountB.Location = new System.Drawing.Point(497, 23);
             this.utilitiesAmountB.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesAmountB.Name = "utilitiesAmountB";
-            this.utilitiesAmountB.Size = new System.Drawing.Size(134, 20);
+            this.utilitiesAmountB.Size = new System.Drawing.Size(128, 23);
             this.utilitiesAmountB.TabIndex = 0;
             this.utilitiesAmountB.Text = "0.00";
             this.utilitiesAmountB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2156,10 +2196,10 @@
             this.utilitiesAmountA.AutoSize = true;
             this.utilitiesAmountA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.utilitiesAmountA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesAmountA.Location = new System.Drawing.Point(402, 40);
+            this.utilitiesAmountA.Location = new System.Drawing.Point(497, 46);
             this.utilitiesAmountA.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesAmountA.Name = "utilitiesAmountA";
-            this.utilitiesAmountA.Size = new System.Drawing.Size(134, 20);
+            this.utilitiesAmountA.Size = new System.Drawing.Size(128, 23);
             this.utilitiesAmountA.TabIndex = 0;
             this.utilitiesAmountA.Text = "0.00";
             this.utilitiesAmountA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2170,10 +2210,10 @@
             this.utilitiesAmountSum.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.utilitiesAmountSum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.utilitiesAmountSum.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesAmountSum.Location = new System.Drawing.Point(402, 60);
+            this.utilitiesAmountSum.Location = new System.Drawing.Point(497, 69);
             this.utilitiesAmountSum.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesAmountSum.Name = "utilitiesAmountSum";
-            this.utilitiesAmountSum.Size = new System.Drawing.Size(134, 22);
+            this.utilitiesAmountSum.Size = new System.Drawing.Size(128, 23);
             this.utilitiesAmountSum.TabIndex = 0;
             this.utilitiesAmountSum.Text = "0.00";
             this.utilitiesAmountSum.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2183,10 +2223,10 @@
             this.fuelAmountPerHourB.AutoSize = true;
             this.fuelAmountPerHourB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fuelAmountPerHourB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fuelAmountPerHourB.Location = new System.Drawing.Point(268, 20);
+            this.fuelAmountPerHourB.Location = new System.Drawing.Point(369, 23);
             this.fuelAmountPerHourB.Margin = new System.Windows.Forms.Padding(0);
             this.fuelAmountPerHourB.Name = "fuelAmountPerHourB";
-            this.fuelAmountPerHourB.Size = new System.Drawing.Size(134, 20);
+            this.fuelAmountPerHourB.Size = new System.Drawing.Size(128, 23);
             this.fuelAmountPerHourB.TabIndex = 0;
             this.fuelAmountPerHourB.Text = "0.00";
             this.fuelAmountPerHourB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2196,10 +2236,10 @@
             this.fuelAmountPerHourA.AutoSize = true;
             this.fuelAmountPerHourA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fuelAmountPerHourA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fuelAmountPerHourA.Location = new System.Drawing.Point(268, 40);
+            this.fuelAmountPerHourA.Location = new System.Drawing.Point(369, 46);
             this.fuelAmountPerHourA.Margin = new System.Windows.Forms.Padding(0);
             this.fuelAmountPerHourA.Name = "fuelAmountPerHourA";
-            this.fuelAmountPerHourA.Size = new System.Drawing.Size(134, 20);
+            this.fuelAmountPerHourA.Size = new System.Drawing.Size(128, 23);
             this.fuelAmountPerHourA.TabIndex = 0;
             this.fuelAmountPerHourA.Text = "0.00";
             this.fuelAmountPerHourA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2210,10 +2250,10 @@
             this.label156.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label156.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label156.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label156.Location = new System.Drawing.Point(268, 60);
+            this.label156.Location = new System.Drawing.Point(369, 69);
             this.label156.Margin = new System.Windows.Forms.Padding(0);
             this.label156.Name = "label156";
-            this.label156.Size = new System.Drawing.Size(134, 22);
+            this.label156.Size = new System.Drawing.Size(128, 23);
             this.label156.TabIndex = 0;
             this.label156.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2222,10 +2262,10 @@
             this.machineUseTimeB.AutoSize = true;
             this.machineUseTimeB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.machineUseTimeB.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.machineUseTimeB.Location = new System.Drawing.Point(134, 20);
+            this.machineUseTimeB.Location = new System.Drawing.Point(241, 23);
             this.machineUseTimeB.Margin = new System.Windows.Forms.Padding(0);
             this.machineUseTimeB.Name = "machineUseTimeB";
-            this.machineUseTimeB.Size = new System.Drawing.Size(134, 20);
+            this.machineUseTimeB.Size = new System.Drawing.Size(128, 23);
             this.machineUseTimeB.TabIndex = 0;
             this.machineUseTimeB.Text = "0.00";
             this.machineUseTimeB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2235,10 +2275,10 @@
             this.machineUseTimeA.AutoSize = true;
             this.machineUseTimeA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.machineUseTimeA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.machineUseTimeA.Location = new System.Drawing.Point(134, 40);
+            this.machineUseTimeA.Location = new System.Drawing.Point(241, 46);
             this.machineUseTimeA.Margin = new System.Windows.Forms.Padding(0);
             this.machineUseTimeA.Name = "machineUseTimeA";
-            this.machineUseTimeA.Size = new System.Drawing.Size(134, 20);
+            this.machineUseTimeA.Size = new System.Drawing.Size(128, 23);
             this.machineUseTimeA.TabIndex = 0;
             this.machineUseTimeA.Text = "0.00";
             this.machineUseTimeA.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -2249,10 +2289,10 @@
             this.label159.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label159.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label159.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label159.Location = new System.Drawing.Point(134, 60);
+            this.label159.Location = new System.Drawing.Point(241, 69);
             this.label159.Margin = new System.Windows.Forms.Padding(0);
             this.label159.Name = "label159";
-            this.label159.Size = new System.Drawing.Size(134, 22);
+            this.label159.Size = new System.Drawing.Size(128, 23);
             this.label159.TabIndex = 0;
             this.label159.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -2269,39 +2309,45 @@
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 5;
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
             this.tableLayoutPanel6.Controls.Add(this.label160, 0, 0);
             this.tableLayoutPanel6.Controls.Add(this.label161, 0, 1);
-            this.tableLayoutPanel6.Controls.Add(this.label162, 0, 2);
-            this.tableLayoutPanel6.Controls.Add(this.label163, 0, 3);
             this.tableLayoutPanel6.Controls.Add(this.label164, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.label165, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.label166, 3, 0);
             this.tableLayoutPanel6.Controls.Add(this.label167, 4, 0);
-            this.tableLayoutPanel6.Controls.Add(this.otherKgPerAmountMachine, 4, 1);
-            this.tableLayoutPanel6.Controls.Add(this.otherKgPerAmountLabor, 4, 2);
-            this.tableLayoutPanel6.Controls.Add(this.otherKgPerAmountSum, 4, 3);
-            this.tableLayoutPanel6.Controls.Add(this.allocationMachine, 3, 1);
-            this.tableLayoutPanel6.Controls.Add(this.allocationLabor, 3, 2);
-            this.tableLayoutPanel6.Controls.Add(this.allocationSum, 3, 3);
-            this.tableLayoutPanel6.Controls.Add(this.fuelAmountPerHourMachine, 2, 1);
-            this.tableLayoutPanel6.Controls.Add(this.fuelAmountPerHourLabor, 2, 2);
-            this.tableLayoutPanel6.Controls.Add(this.label176, 2, 3);
-            this.tableLayoutPanel6.Controls.Add(this.timeMachine, 1, 1);
-            this.tableLayoutPanel6.Controls.Add(this.timeLabor, 1, 2);
-            this.tableLayoutPanel6.Controls.Add(this.label179, 1, 3);
+            this.tableLayoutPanel6.Controls.Add(this.otherKgPerAmountFD, 4, 1);
+            this.tableLayoutPanel6.Controls.Add(this.allocationFD, 3, 1);
+            this.tableLayoutPanel6.Controls.Add(this.fuelAmountPerHourFD, 2, 1);
+            this.tableLayoutPanel6.Controls.Add(this.timeFD, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label163, 0, 4);
+            this.tableLayoutPanel6.Controls.Add(this.allocationSum, 3, 4);
+            this.tableLayoutPanel6.Controls.Add(this.otherKgPerAmountSum, 4, 4);
+            this.tableLayoutPanel6.Controls.Add(this.otherKgPerAmountLabor, 4, 3);
+            this.tableLayoutPanel6.Controls.Add(this.allocationLabor, 3, 3);
+            this.tableLayoutPanel6.Controls.Add(this.label162, 0, 3);
+            this.tableLayoutPanel6.Controls.Add(this.label179, 1, 4);
+            this.tableLayoutPanel6.Controls.Add(this.label176, 2, 4);
+            this.tableLayoutPanel6.Controls.Add(this.fuelAmountPerHourLabor, 2, 3);
+            this.tableLayoutPanel6.Controls.Add(this.timeLabor, 1, 3);
+            this.tableLayoutPanel6.Controls.Add(this.timeAD, 1, 2);
+            this.tableLayoutPanel6.Controls.Add(this.fuelAmountPerHourAD, 2, 2);
+            this.tableLayoutPanel6.Controls.Add(this.allocationAD, 3, 2);
+            this.tableLayoutPanel6.Controls.Add(this.otherKgPerAmountAD, 4, 2);
+            this.tableLayoutPanel6.Controls.Add(this.label44, 0, 2);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(18, 17);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
-            this.tableLayoutPanel6.RowCount = 4;
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(674, 82);
+            this.tableLayoutPanel6.RowCount = 5;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(755, 115);
             this.tableLayoutPanel6.TabIndex = 11;
             // 
             // label160
@@ -2313,7 +2359,7 @@
             this.label160.Location = new System.Drawing.Point(0, 0);
             this.label160.Margin = new System.Windows.Forms.Padding(0);
             this.label160.Name = "label160";
-            this.label160.Size = new System.Drawing.Size(134, 20);
+            this.label160.Size = new System.Drawing.Size(241, 23);
             this.label160.TabIndex = 0;
             this.label160.Text = "配賦先";
             this.label160.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2323,40 +2369,13 @@
             this.label161.AutoSize = true;
             this.label161.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label161.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label161.Location = new System.Drawing.Point(0, 20);
+            this.label161.Location = new System.Drawing.Point(0, 23);
             this.label161.Margin = new System.Windows.Forms.Padding(0);
             this.label161.Name = "label161";
-            this.label161.Size = new System.Drawing.Size(134, 20);
+            this.label161.Size = new System.Drawing.Size(241, 23);
             this.label161.TabIndex = 0;
-            this.label161.Text = "設備費配賦額";
+            this.label161.Text = "FD機配賦額(使用時間×枚数)";
             this.label161.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label162
-            // 
-            this.label162.AutoSize = true;
-            this.label162.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label162.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label162.Location = new System.Drawing.Point(0, 40);
-            this.label162.Margin = new System.Windows.Forms.Padding(0);
-            this.label162.Name = "label162";
-            this.label162.Size = new System.Drawing.Size(134, 20);
-            this.label162.TabIndex = 0;
-            this.label162.Text = "人件費配賦額";
-            this.label162.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label163
-            // 
-            this.label163.AutoSize = true;
-            this.label163.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label163.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label163.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label163.Location = new System.Drawing.Point(0, 60);
-            this.label163.Margin = new System.Windows.Forms.Padding(0);
-            this.label163.Name = "label163";
-            this.label163.Size = new System.Drawing.Size(134, 22);
-            this.label163.TabIndex = 0;
-            this.label163.Text = "合計";
-            this.label163.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label164
             // 
@@ -2364,10 +2383,10 @@
             this.label164.BackColor = System.Drawing.SystemColors.Menu;
             this.label164.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label164.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label164.Location = new System.Drawing.Point(134, 0);
+            this.label164.Location = new System.Drawing.Point(241, 0);
             this.label164.Margin = new System.Windows.Forms.Padding(0);
             this.label164.Name = "label164";
-            this.label164.Size = new System.Drawing.Size(134, 20);
+            this.label164.Size = new System.Drawing.Size(128, 23);
             this.label164.TabIndex = 0;
             this.label164.Text = "時間(ｈ)";
             this.label164.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2378,10 +2397,10 @@
             this.label165.BackColor = System.Drawing.SystemColors.Menu;
             this.label165.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label165.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label165.Location = new System.Drawing.Point(268, 0);
+            this.label165.Location = new System.Drawing.Point(369, 0);
             this.label165.Margin = new System.Windows.Forms.Padding(0);
             this.label165.Name = "label165";
-            this.label165.Size = new System.Drawing.Size(134, 20);
+            this.label165.Size = new System.Drawing.Size(128, 23);
             this.label165.TabIndex = 0;
             this.label165.Text = "時間当り燃料額";
             this.label165.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2392,10 +2411,10 @@
             this.label166.BackColor = System.Drawing.SystemColors.Menu;
             this.label166.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label166.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label166.Location = new System.Drawing.Point(402, 0);
+            this.label166.Location = new System.Drawing.Point(497, 0);
             this.label166.Margin = new System.Windows.Forms.Padding(0);
             this.label166.Name = "label166";
-            this.label166.Size = new System.Drawing.Size(134, 20);
+            this.label166.Size = new System.Drawing.Size(128, 23);
             this.label166.TabIndex = 0;
             this.label166.Text = "配賦額";
             this.label166.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2406,79 +2425,79 @@
             this.label167.BackColor = System.Drawing.SystemColors.Menu;
             this.label167.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label167.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label167.Location = new System.Drawing.Point(536, 0);
+            this.label167.Location = new System.Drawing.Point(625, 0);
             this.label167.Margin = new System.Windows.Forms.Padding(0);
             this.label167.Name = "label167";
-            this.label167.Size = new System.Drawing.Size(138, 20);
+            this.label167.Size = new System.Drawing.Size(130, 23);
             this.label167.TabIndex = 0;
             this.label167.Text = "kg当り金額";
             this.label167.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // otherKgPerAmountMachine
+            // otherKgPerAmountFD
             // 
-            this.otherKgPerAmountMachine.AutoSize = true;
-            this.otherKgPerAmountMachine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherKgPerAmountMachine.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherKgPerAmountMachine.Location = new System.Drawing.Point(536, 20);
-            this.otherKgPerAmountMachine.Margin = new System.Windows.Forms.Padding(0);
-            this.otherKgPerAmountMachine.Name = "otherKgPerAmountMachine";
-            this.otherKgPerAmountMachine.Size = new System.Drawing.Size(138, 20);
-            this.otherKgPerAmountMachine.TabIndex = 0;
-            this.otherKgPerAmountMachine.Text = "0.00";
-            this.otherKgPerAmountMachine.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.otherKgPerAmountFD.AutoSize = true;
+            this.otherKgPerAmountFD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.otherKgPerAmountFD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.otherKgPerAmountFD.Location = new System.Drawing.Point(625, 23);
+            this.otherKgPerAmountFD.Margin = new System.Windows.Forms.Padding(0);
+            this.otherKgPerAmountFD.Name = "otherKgPerAmountFD";
+            this.otherKgPerAmountFD.Size = new System.Drawing.Size(130, 23);
+            this.otherKgPerAmountFD.TabIndex = 0;
+            this.otherKgPerAmountFD.Text = "0.00";
+            this.otherKgPerAmountFD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // otherKgPerAmountLabor
+            // allocationFD
             // 
-            this.otherKgPerAmountLabor.AutoSize = true;
-            this.otherKgPerAmountLabor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherKgPerAmountLabor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherKgPerAmountLabor.Location = new System.Drawing.Point(536, 40);
-            this.otherKgPerAmountLabor.Margin = new System.Windows.Forms.Padding(0);
-            this.otherKgPerAmountLabor.Name = "otherKgPerAmountLabor";
-            this.otherKgPerAmountLabor.Size = new System.Drawing.Size(138, 20);
-            this.otherKgPerAmountLabor.TabIndex = 0;
-            this.otherKgPerAmountLabor.Text = "0.00";
-            this.otherKgPerAmountLabor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.allocationFD.AutoSize = true;
+            this.allocationFD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.allocationFD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.allocationFD.Location = new System.Drawing.Point(497, 23);
+            this.allocationFD.Margin = new System.Windows.Forms.Padding(0);
+            this.allocationFD.Name = "allocationFD";
+            this.allocationFD.Size = new System.Drawing.Size(128, 23);
+            this.allocationFD.TabIndex = 0;
+            this.allocationFD.Text = "0.00";
+            this.allocationFD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // otherKgPerAmountSum
+            // fuelAmountPerHourFD
             // 
-            this.otherKgPerAmountSum.AutoSize = true;
-            this.otherKgPerAmountSum.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.otherKgPerAmountSum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherKgPerAmountSum.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherKgPerAmountSum.Location = new System.Drawing.Point(536, 60);
-            this.otherKgPerAmountSum.Margin = new System.Windows.Forms.Padding(0);
-            this.otherKgPerAmountSum.Name = "otherKgPerAmountSum";
-            this.otherKgPerAmountSum.Size = new System.Drawing.Size(138, 22);
-            this.otherKgPerAmountSum.TabIndex = 0;
-            this.otherKgPerAmountSum.Text = "0.00";
-            this.otherKgPerAmountSum.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.fuelAmountPerHourFD.AutoSize = true;
+            this.fuelAmountPerHourFD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fuelAmountPerHourFD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fuelAmountPerHourFD.Location = new System.Drawing.Point(369, 23);
+            this.fuelAmountPerHourFD.Margin = new System.Windows.Forms.Padding(0);
+            this.fuelAmountPerHourFD.Name = "fuelAmountPerHourFD";
+            this.fuelAmountPerHourFD.Size = new System.Drawing.Size(128, 23);
+            this.fuelAmountPerHourFD.TabIndex = 0;
+            this.fuelAmountPerHourFD.Text = "0.00";
+            this.fuelAmountPerHourFD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // allocationMachine
+            // timeFD
             // 
-            this.allocationMachine.AutoSize = true;
-            this.allocationMachine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.allocationMachine.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.allocationMachine.Location = new System.Drawing.Point(402, 20);
-            this.allocationMachine.Margin = new System.Windows.Forms.Padding(0);
-            this.allocationMachine.Name = "allocationMachine";
-            this.allocationMachine.Size = new System.Drawing.Size(134, 20);
-            this.allocationMachine.TabIndex = 0;
-            this.allocationMachine.Text = "0.00";
-            this.allocationMachine.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.timeFD.AutoSize = true;
+            this.timeFD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.timeFD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.timeFD.Location = new System.Drawing.Point(241, 23);
+            this.timeFD.Margin = new System.Windows.Forms.Padding(0);
+            this.timeFD.Name = "timeFD";
+            this.timeFD.Size = new System.Drawing.Size(128, 23);
+            this.timeFD.TabIndex = 0;
+            this.timeFD.Text = "0.00";
+            this.timeFD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // allocationLabor
+            // label163
             // 
-            this.allocationLabor.AutoSize = true;
-            this.allocationLabor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.allocationLabor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.allocationLabor.Location = new System.Drawing.Point(402, 40);
-            this.allocationLabor.Margin = new System.Windows.Forms.Padding(0);
-            this.allocationLabor.Name = "allocationLabor";
-            this.allocationLabor.Size = new System.Drawing.Size(134, 20);
-            this.allocationLabor.TabIndex = 0;
-            this.allocationLabor.Text = "0.00";
-            this.allocationLabor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label163.AutoSize = true;
+            this.label163.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label163.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label163.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label163.Location = new System.Drawing.Point(0, 92);
+            this.label163.Margin = new System.Windows.Forms.Padding(0);
+            this.label163.Name = "label163";
+            this.label163.Size = new System.Drawing.Size(241, 23);
+            this.label163.TabIndex = 0;
+            this.label163.Text = "合計";
+            this.label163.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // allocationSum
             // 
@@ -2486,78 +2505,66 @@
             this.allocationSum.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.allocationSum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.allocationSum.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.allocationSum.Location = new System.Drawing.Point(402, 60);
+            this.allocationSum.Location = new System.Drawing.Point(497, 92);
             this.allocationSum.Margin = new System.Windows.Forms.Padding(0);
             this.allocationSum.Name = "allocationSum";
-            this.allocationSum.Size = new System.Drawing.Size(134, 22);
+            this.allocationSum.Size = new System.Drawing.Size(128, 23);
             this.allocationSum.TabIndex = 0;
             this.allocationSum.Text = "0.00";
             this.allocationSum.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // fuelAmountPerHourMachine
+            // otherKgPerAmountSum
             // 
-            this.fuelAmountPerHourMachine.AutoSize = true;
-            this.fuelAmountPerHourMachine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fuelAmountPerHourMachine.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fuelAmountPerHourMachine.Location = new System.Drawing.Point(268, 20);
-            this.fuelAmountPerHourMachine.Margin = new System.Windows.Forms.Padding(0);
-            this.fuelAmountPerHourMachine.Name = "fuelAmountPerHourMachine";
-            this.fuelAmountPerHourMachine.Size = new System.Drawing.Size(134, 20);
-            this.fuelAmountPerHourMachine.TabIndex = 0;
-            this.fuelAmountPerHourMachine.Text = "0.00";
-            this.fuelAmountPerHourMachine.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.otherKgPerAmountSum.AutoSize = true;
+            this.otherKgPerAmountSum.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.otherKgPerAmountSum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.otherKgPerAmountSum.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.otherKgPerAmountSum.Location = new System.Drawing.Point(625, 92);
+            this.otherKgPerAmountSum.Margin = new System.Windows.Forms.Padding(0);
+            this.otherKgPerAmountSum.Name = "otherKgPerAmountSum";
+            this.otherKgPerAmountSum.Size = new System.Drawing.Size(130, 23);
+            this.otherKgPerAmountSum.TabIndex = 0;
+            this.otherKgPerAmountSum.Text = "0.00";
+            this.otherKgPerAmountSum.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // fuelAmountPerHourLabor
+            // otherKgPerAmountLabor
             // 
-            this.fuelAmountPerHourLabor.AutoSize = true;
-            this.fuelAmountPerHourLabor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.fuelAmountPerHourLabor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fuelAmountPerHourLabor.Location = new System.Drawing.Point(268, 40);
-            this.fuelAmountPerHourLabor.Margin = new System.Windows.Forms.Padding(0);
-            this.fuelAmountPerHourLabor.Name = "fuelAmountPerHourLabor";
-            this.fuelAmountPerHourLabor.Size = new System.Drawing.Size(134, 20);
-            this.fuelAmountPerHourLabor.TabIndex = 0;
-            this.fuelAmountPerHourLabor.Text = "0.00";
-            this.fuelAmountPerHourLabor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.otherKgPerAmountLabor.AutoSize = true;
+            this.otherKgPerAmountLabor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.otherKgPerAmountLabor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.otherKgPerAmountLabor.Location = new System.Drawing.Point(625, 69);
+            this.otherKgPerAmountLabor.Margin = new System.Windows.Forms.Padding(0);
+            this.otherKgPerAmountLabor.Name = "otherKgPerAmountLabor";
+            this.otherKgPerAmountLabor.Size = new System.Drawing.Size(130, 23);
+            this.otherKgPerAmountLabor.TabIndex = 0;
+            this.otherKgPerAmountLabor.Text = "0.00";
+            this.otherKgPerAmountLabor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label176
+            // allocationLabor
             // 
-            this.label176.AutoSize = true;
-            this.label176.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.label176.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label176.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label176.Location = new System.Drawing.Point(268, 60);
-            this.label176.Margin = new System.Windows.Forms.Padding(0);
-            this.label176.Name = "label176";
-            this.label176.Size = new System.Drawing.Size(134, 22);
-            this.label176.TabIndex = 0;
-            this.label176.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.allocationLabor.AutoSize = true;
+            this.allocationLabor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.allocationLabor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.allocationLabor.Location = new System.Drawing.Point(497, 69);
+            this.allocationLabor.Margin = new System.Windows.Forms.Padding(0);
+            this.allocationLabor.Name = "allocationLabor";
+            this.allocationLabor.Size = new System.Drawing.Size(128, 23);
+            this.allocationLabor.TabIndex = 0;
+            this.allocationLabor.Text = "0.00";
+            this.allocationLabor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // timeMachine
+            // label162
             // 
-            this.timeMachine.AutoSize = true;
-            this.timeMachine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.timeMachine.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.timeMachine.Location = new System.Drawing.Point(134, 20);
-            this.timeMachine.Margin = new System.Windows.Forms.Padding(0);
-            this.timeMachine.Name = "timeMachine";
-            this.timeMachine.Size = new System.Drawing.Size(134, 20);
-            this.timeMachine.TabIndex = 0;
-            this.timeMachine.Text = "0.00";
-            this.timeMachine.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // timeLabor
-            // 
-            this.timeLabor.AutoSize = true;
-            this.timeLabor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.timeLabor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.timeLabor.Location = new System.Drawing.Point(134, 40);
-            this.timeLabor.Margin = new System.Windows.Forms.Padding(0);
-            this.timeLabor.Name = "timeLabor";
-            this.timeLabor.Size = new System.Drawing.Size(134, 20);
-            this.timeLabor.TabIndex = 0;
-            this.timeLabor.Text = "0.00";
-            this.timeLabor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label162.AutoSize = true;
+            this.label162.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label162.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label162.Location = new System.Drawing.Point(0, 69);
+            this.label162.Margin = new System.Windows.Forms.Padding(0);
+            this.label162.Name = "label162";
+            this.label162.Size = new System.Drawing.Size(241, 23);
+            this.label162.TabIndex = 0;
+            this.label162.Text = "人件費配賦額";
+            this.label162.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label179
             // 
@@ -2565,12 +2572,116 @@
             this.label179.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label179.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label179.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label179.Location = new System.Drawing.Point(134, 60);
+            this.label179.Location = new System.Drawing.Point(241, 92);
             this.label179.Margin = new System.Windows.Forms.Padding(0);
             this.label179.Name = "label179";
-            this.label179.Size = new System.Drawing.Size(134, 22);
+            this.label179.Size = new System.Drawing.Size(128, 23);
             this.label179.TabIndex = 0;
             this.label179.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label176
+            // 
+            this.label176.AutoSize = true;
+            this.label176.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label176.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label176.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label176.Location = new System.Drawing.Point(369, 92);
+            this.label176.Margin = new System.Windows.Forms.Padding(0);
+            this.label176.Name = "label176";
+            this.label176.Size = new System.Drawing.Size(128, 23);
+            this.label176.TabIndex = 0;
+            this.label176.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // fuelAmountPerHourLabor
+            // 
+            this.fuelAmountPerHourLabor.AutoSize = true;
+            this.fuelAmountPerHourLabor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fuelAmountPerHourLabor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fuelAmountPerHourLabor.Location = new System.Drawing.Point(369, 69);
+            this.fuelAmountPerHourLabor.Margin = new System.Windows.Forms.Padding(0);
+            this.fuelAmountPerHourLabor.Name = "fuelAmountPerHourLabor";
+            this.fuelAmountPerHourLabor.Size = new System.Drawing.Size(128, 23);
+            this.fuelAmountPerHourLabor.TabIndex = 0;
+            this.fuelAmountPerHourLabor.Text = "0.00";
+            this.fuelAmountPerHourLabor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // timeLabor
+            // 
+            this.timeLabor.AutoSize = true;
+            this.timeLabor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.timeLabor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.timeLabor.Location = new System.Drawing.Point(241, 69);
+            this.timeLabor.Margin = new System.Windows.Forms.Padding(0);
+            this.timeLabor.Name = "timeLabor";
+            this.timeLabor.Size = new System.Drawing.Size(128, 23);
+            this.timeLabor.TabIndex = 0;
+            this.timeLabor.Text = "0.00";
+            this.timeLabor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // timeAD
+            // 
+            this.timeAD.AutoSize = true;
+            this.timeAD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.timeAD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.timeAD.Location = new System.Drawing.Point(241, 46);
+            this.timeAD.Margin = new System.Windows.Forms.Padding(0);
+            this.timeAD.Name = "timeAD";
+            this.timeAD.Size = new System.Drawing.Size(128, 23);
+            this.timeAD.TabIndex = 0;
+            this.timeAD.Text = "0.00";
+            this.timeAD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // fuelAmountPerHourAD
+            // 
+            this.fuelAmountPerHourAD.AutoSize = true;
+            this.fuelAmountPerHourAD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.fuelAmountPerHourAD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fuelAmountPerHourAD.Location = new System.Drawing.Point(369, 46);
+            this.fuelAmountPerHourAD.Margin = new System.Windows.Forms.Padding(0);
+            this.fuelAmountPerHourAD.Name = "fuelAmountPerHourAD";
+            this.fuelAmountPerHourAD.Size = new System.Drawing.Size(128, 23);
+            this.fuelAmountPerHourAD.TabIndex = 0;
+            this.fuelAmountPerHourAD.Text = "0.00";
+            this.fuelAmountPerHourAD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // allocationAD
+            // 
+            this.allocationAD.AutoSize = true;
+            this.allocationAD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.allocationAD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.allocationAD.Location = new System.Drawing.Point(497, 46);
+            this.allocationAD.Margin = new System.Windows.Forms.Padding(0);
+            this.allocationAD.Name = "allocationAD";
+            this.allocationAD.Size = new System.Drawing.Size(128, 23);
+            this.allocationAD.TabIndex = 0;
+            this.allocationAD.Text = "0.00";
+            this.allocationAD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // otherKgPerAmountAD
+            // 
+            this.otherKgPerAmountAD.AutoSize = true;
+            this.otherKgPerAmountAD.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.otherKgPerAmountAD.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.otherKgPerAmountAD.Location = new System.Drawing.Point(625, 46);
+            this.otherKgPerAmountAD.Margin = new System.Windows.Forms.Padding(0);
+            this.otherKgPerAmountAD.Name = "otherKgPerAmountAD";
+            this.otherKgPerAmountAD.Size = new System.Drawing.Size(130, 23);
+            this.otherKgPerAmountAD.TabIndex = 0;
+            this.otherKgPerAmountAD.Text = "0.00";
+            this.otherKgPerAmountAD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label44.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label44.Location = new System.Drawing.Point(0, 46);
+            this.label44.Margin = new System.Windows.Forms.Padding(0);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(241, 23);
+            this.label44.TabIndex = 0;
+            this.label44.Text = "AD機配賦額";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // tabPage10
             // 
@@ -4476,6 +4587,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPackingTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacking)).EndInit();
             this.tabPage7.ResumeLayout(false);
+            this.tabPage7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMachineTotal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMachine)).EndInit();
             this.tabPage8.ResumeLayout(false);
@@ -4717,16 +4829,16 @@
         private System.Windows.Forms.Label label165;
         private System.Windows.Forms.Label label166;
         private System.Windows.Forms.Label label167;
-        private System.Windows.Forms.Label otherKgPerAmountMachine;
+        private System.Windows.Forms.Label otherKgPerAmountFD;
         private System.Windows.Forms.Label otherKgPerAmountLabor;
         private System.Windows.Forms.Label otherKgPerAmountSum;
-        private System.Windows.Forms.Label allocationMachine;
+        private System.Windows.Forms.Label allocationFD;
         private System.Windows.Forms.Label allocationLabor;
         private System.Windows.Forms.Label allocationSum;
-        private System.Windows.Forms.Label fuelAmountPerHourMachine;
+        private System.Windows.Forms.Label fuelAmountPerHourFD;
         private System.Windows.Forms.Label fuelAmountPerHourLabor;
         private System.Windows.Forms.Label label176;
-        private System.Windows.Forms.Label timeMachine;
+        private System.Windows.Forms.Label timeFD;
         private System.Windows.Forms.Label timeLabor;
         private System.Windows.Forms.Label label179;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaterialsFareName;
@@ -4805,5 +4917,13 @@
         private System.Windows.Forms.RadioButton radioBudget;
         private System.Windows.Forms.Label overallCostRatio;
         private System.Windows.Forms.Label overallCost;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label trayLabel;
+        private System.Windows.Forms.TextBox trayNum;
+        private System.Windows.Forms.Label timeAD;
+        private System.Windows.Forms.Label fuelAmountPerHourAD;
+        private System.Windows.Forms.Label allocationAD;
+        private System.Windows.Forms.Label otherKgPerAmountAD;
+        private System.Windows.Forms.Label label44;
     }
 }

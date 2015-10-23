@@ -45,6 +45,7 @@ namespace CostAccounting
         public decimal dry_time_f { get; set; }
         public decimal selection_time_m { get; set; }
         public decimal selection_time_f { get; set; }
+        public decimal tray_num { get; set; }
         public string update_user { get; set; }
         public System.DateTime update_date { get; set; }
         public string del_flg { get; set; }
