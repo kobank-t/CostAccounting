@@ -435,7 +435,8 @@ namespace CostAccounting
 
                 var dataList = target.ToList();
                 dataGridView.RowCount = dataList.Count;
-
+                decimal rateExpend_budget = decimal.Divide(Parameters.getInstance(Const.CATEGORY_TYPE.Budget).rateExpend, 100);
+                decimal rateExpend_actual = decimal.Divide(Parameters.getInstance(Const.CATEGORY_TYPE.Actual).rateExpend, 100);
                 for (int i = 0; i < dataList.Count; i++)
                 {
                     dataGridView.Rows[i].Cells[0].Value = (i + 1).ToString();
@@ -449,7 +450,7 @@ namespace CostAccounting
                     dataGridView.Rows[i].Cells[13].Value = dataList[i].t_actual.t_product.materials_fare.ToString("N");
                     dataGridView.Rows[i].Cells[15].Value = dataList[i].t_actual.t_product.packing_cost.ToString("N");
                     dataGridView.Rows[i].Cells[17].Value = dataList[i].t_actual.t_product.utilities_cost.ToString("N");
-                    dataGridView.Rows[i].Cells[19].Value = decimal.Multiply(dataList[i].t_actual.t_product.other_cost, (decimal)0.15948).ToString("N");
+                    dataGridView.Rows[i].Cells[19].Value = decimal.Multiply(dataList[i].t_actual.t_product.other_cost, rateExpend_actual).ToString("N");
                     dataGridView.Rows[i].Cells[21].Value = dataList[i].t_actual.t_product.packing_fare.ToString("N");
 
                     dataGridView.Rows[i].Cells[23].Value = (dataList[i].t_actual.t_product.material_cost
@@ -458,7 +459,7 @@ namespace CostAccounting
                                                             + dataList[i].t_actual.t_product.materials_fare
                                                             + dataList[i].t_actual.t_product.packing_cost
                                                             + dataList[i].t_actual.t_product.utilities_cost
-                                                            + decimal.Multiply(dataList[i].t_actual.t_product.other_cost, (decimal)0.15948)
+                                                            + decimal.Multiply(dataList[i].t_actual.t_product.other_cost, rateExpend_actual)
                                                             + dataList[i].t_actual.t_product.packing_fare).ToString("N");
 
                     dataGridView.Rows[i].Cells[25].Value = decimal.Subtract(Conversion.Parse((string)dataGridView.Rows[i].Cells[5].Value)
@@ -488,7 +489,7 @@ namespace CostAccounting
                         dataGridView.Rows[i].Cells[12].Value = dataList[i].t_budget.t_product.materials_fare.ToString("N");
                         dataGridView.Rows[i].Cells[14].Value = dataList[i].t_budget.t_product.packing_cost.ToString("N");
                         dataGridView.Rows[i].Cells[16].Value = dataList[i].t_budget.t_product.utilities_cost.ToString("N");
-                        dataGridView.Rows[i].Cells[18].Value = decimal.Multiply(dataList[i].t_budget.t_product.other_cost, (decimal)0.15948).ToString("N");
+                        dataGridView.Rows[i].Cells[18].Value = decimal.Multiply(dataList[i].t_budget.t_product.other_cost, rateExpend_budget).ToString("N");
                         dataGridView.Rows[i].Cells[20].Value = dataList[i].t_budget.t_product.packing_fare.ToString("N");
 
                         dataGridView.Rows[i].Cells[22].Value = (dataList[i].t_budget.t_product.material_cost
@@ -497,7 +498,7 @@ namespace CostAccounting
                                                                 + dataList[i].t_budget.t_product.materials_fare
                                                                 + dataList[i].t_budget.t_product.packing_cost
                                                                 + dataList[i].t_budget.t_product.utilities_cost
-                                                                + decimal.Multiply(dataList[i].t_budget.t_product.other_cost, (decimal)0.15948)
+                                                                + decimal.Multiply(dataList[i].t_budget.t_product.other_cost, rateExpend_budget)
                                                                 + dataList[i].t_budget.t_product.packing_fare).ToString("N");
 
                         dataGridView.Rows[i].Cells[24].Value = decimal.Subtract(Conversion.Parse((string)dataGridView.Rows[i].Cells[4].Value)

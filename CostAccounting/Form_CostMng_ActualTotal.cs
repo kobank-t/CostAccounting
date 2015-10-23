@@ -148,6 +148,7 @@ namespace CostAccounting
                     dataGridView.Rows[i].Cells[0].Value = (i + 1).ToString();
                     dataGridView.Rows[i].Cells[1].Value = dataList[i].Key;
 
+                    decimal rateExpend = decimal.Divide(Parameters.getInstance(category).rateExpend, 100);
                     foreach (var data in dataList[i])
                     {
                         dataGridView.Rows[i].Cells[4].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[4].Value)
@@ -165,7 +166,7 @@ namespace CostAccounting
                         dataGridView.Rows[i].Cells[10].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[10].Value)
                                                                 + data.t_product.utilities_cost).ToString("N");
                         dataGridView.Rows[i].Cells[11].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[11].Value)
-                                                                + decimal.Multiply(data.t_product.other_cost, (decimal)0.15948)).ToString("N");
+                                                                + decimal.Multiply(data.t_product.other_cost, rateExpend)).ToString("N");
                         dataGridView.Rows[i].Cells[12].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[12].Value)
                                                                 + data.t_product.packing_fare).ToString("N");
 
@@ -176,7 +177,7 @@ namespace CostAccounting
                                                                    + data.t_product.materials_fare
                                                                    + data.t_product.packing_cost
                                                                    + data.t_product.utilities_cost
-                                                                   + decimal.Multiply(data.t_product.other_cost, (decimal)0.15948)
+                                                                   + decimal.Multiply(data.t_product.other_cost, rateExpend)
                                                                    + data.t_product.packing_fare)
                                                                 ).ToString("N");
 
@@ -242,6 +243,7 @@ namespace CostAccounting
                     dataGridView.Rows[i].Cells[0].Value = (i + 1).ToString();
                     dataGridView.Rows[i].Cells[2].Value = dataList[i].Key;
 
+                    decimal rateExpend = decimal.Divide(Parameters.getInstance(category).rateExpend, 100);
                     foreach (var data in dataList[i])
                     {
                         dataGridView.Rows[i].Cells[4].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[4].Value)
@@ -259,7 +261,7 @@ namespace CostAccounting
                         dataGridView.Rows[i].Cells[10].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[10].Value)
                                                                 + data.t_product.utilities_cost).ToString("N");
                         dataGridView.Rows[i].Cells[11].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[11].Value)
-                                                                + decimal.Multiply(data.t_product.other_cost, (decimal)0.15948)).ToString("N");
+                                                                + decimal.Multiply(data.t_product.other_cost, rateExpend)).ToString("N");
                         dataGridView.Rows[i].Cells[12].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[12].Value)
                                                                 + data.t_product.packing_fare).ToString("N");
 
@@ -270,7 +272,7 @@ namespace CostAccounting
                                                                    + data.t_product.materials_fare
                                                                    + data.t_product.packing_cost
                                                                    + data.t_product.utilities_cost
-                                                                   + decimal.Multiply(data.t_product.other_cost, (decimal)0.15948)
+                                                                   + decimal.Multiply(data.t_product.other_cost, rateExpend)
                                                                    + data.t_product.packing_fare)
                                                                 ).ToString("N");
 

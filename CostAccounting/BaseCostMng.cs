@@ -498,6 +498,7 @@ namespace CostAccounting
                 var dataList = target.ToList();
                 dataGridView.RowCount = dataList.Count;
 
+                decimal rateExpend = decimal.Divide(Parameters.getInstance(category).rateExpend, 100);
                 for (int i = 0; i < dataList.Count; i++)
                 {
                     dataGridView.Rows[i].Cells[0].Value = (i + 1).ToString();
@@ -512,7 +513,7 @@ namespace CostAccounting
                     dataGridView.Rows[i].Cells[8].Value = dataList[i].t_product.materials_fare.ToString("N");
                     dataGridView.Rows[i].Cells[9].Value = dataList[i].t_product.packing_cost.ToString("N");
                     dataGridView.Rows[i].Cells[10].Value = dataList[i].t_product.utilities_cost.ToString("N");
-                    dataGridView.Rows[i].Cells[11].Value = decimal.Multiply(dataList[i].t_product.other_cost, (decimal)0.15948).ToString("N");
+                    dataGridView.Rows[i].Cells[11].Value = decimal.Multiply(dataList[i].t_product.other_cost, rateExpend).ToString("N");
                     dataGridView.Rows[i].Cells[12].Value = dataList[i].t_product.packing_fare.ToString("N");
 
                     dataGridView.Rows[i].Cells[13].Value = (dataList[i].t_product.material_cost
@@ -521,7 +522,7 @@ namespace CostAccounting
                                                             + dataList[i].t_product.materials_fare
                                                             + dataList[i].t_product.packing_cost
                                                             + dataList[i].t_product.utilities_cost
-                                                            + decimal.Multiply(dataList[i].t_product.other_cost, (decimal)0.15948)
+                                                            + decimal.Multiply(dataList[i].t_product.other_cost, rateExpend)
                                                             + dataList[i].t_product.packing_fare).ToString("N");
 
                     dataGridView.Rows[i].Cells[14].Value = decimal.Subtract(Conversion.Parse((string)dataGridView.Rows[i].Cells[4].Value)
