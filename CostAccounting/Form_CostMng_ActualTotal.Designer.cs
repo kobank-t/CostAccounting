@@ -1930,7 +1930,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "Form_CostMng_ActualTotal";
-            this.Text = "実績集計";
+            this.Text = "予算実績集計";
             this.Load += new System.EventHandler(this.Form_CostMng_ActualTotal_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
