@@ -78,23 +78,23 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.label4);
-            this.splitContainer1.Panel2.Controls.Add(this.label2);
-            this.splitContainer1.Panel2.Controls.Add(this.btnSubOtherReg);
-            this.splitContainer1.Panel2.Controls.Add(this.btnSubItemReg);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubActualReg);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubComparison);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubActualTotal);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubDivergence);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubBudgetReg);
-            this.splitContainer1.Panel2.Controls.Add(this.btnSubRawMaterialsReg);
-            this.splitContainer1.Panel2.Controls.Add(this.btnSubMaterialsReg);
+            this.splitContainer1.Panel2.Controls.Add(this.label4);
+            this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.btnSubOtherReg);
+            this.splitContainer1.Panel2.Controls.Add(this.btnSubItemReg);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubProductReg);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubBlendReg);
-            this.splitContainer1.Panel2.Controls.Add(this.btnSubMachineReg);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubFareReg);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubProductCdReg);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubSupplierReg);
+            this.splitContainer1.Panel2.Controls.Add(this.btnSubRawMaterialsReg);
+            this.splitContainer1.Panel2.Controls.Add(this.btnSubMaterialsReg);
+            this.splitContainer1.Panel2.Controls.Add(this.btnSubMachineReg);
             this.splitContainer1.Panel2.ForeColor = System.Drawing.Color.White;
             this.splitContainer1.Size = new System.Drawing.Size(584, 481);
             this.splitContainer1.SplitterDistance = 292;
@@ -107,7 +107,7 @@
             this.label3.Location = new System.Drawing.Point(12, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(265, 2);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 1;
             // 
             // label1
             // 
@@ -117,7 +117,7 @@
             this.label1.Location = new System.Drawing.Point(100, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 20);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "メインメニュー";
             // 
             // btnMainCostMng
@@ -126,7 +126,7 @@
             this.btnMainCostMng.Location = new System.Drawing.Point(35, 208);
             this.btnMainCostMng.Name = "btnMainCostMng";
             this.btnMainCostMng.Size = new System.Drawing.Size(220, 44);
-            this.btnMainCostMng.TabIndex = 0;
+            this.btnMainCostMng.TabIndex = 4;
             this.btnMainCostMng.Text = "原価管理";
             this.btnMainCostMng.UseVisualStyleBackColor = false;
             this.btnMainCostMng.Click += new System.EventHandler(this.btnMainCostMng_Click);
@@ -137,7 +137,7 @@
             this.btnMainProductMng.Location = new System.Drawing.Point(35, 136);
             this.btnMainProductMng.Name = "btnMainProductMng";
             this.btnMainProductMng.Size = new System.Drawing.Size(220, 44);
-            this.btnMainProductMng.TabIndex = 0;
+            this.btnMainProductMng.TabIndex = 3;
             this.btnMainProductMng.Text = "商品管理";
             this.btnMainProductMng.UseVisualStyleBackColor = false;
             this.btnMainProductMng.Click += new System.EventHandler(this.btnMainProductMng_Click);
@@ -149,7 +149,7 @@
             this.btnMainPrepare.Location = new System.Drawing.Point(35, 64);
             this.btnMainPrepare.Name = "btnMainPrepare";
             this.btnMainPrepare.Size = new System.Drawing.Size(220, 44);
-            this.btnMainPrepare.TabIndex = 0;
+            this.btnMainPrepare.TabIndex = 2;
             this.btnMainPrepare.Text = "導入処理";
             this.btnMainPrepare.UseVisualStyleBackColor = false;
             this.btnMainPrepare.Click += new System.EventHandler(this.btnMainPrepare_Click);
@@ -161,7 +161,7 @@
             this.label4.Location = new System.Drawing.Point(11, 38);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(265, 2);
-            this.label4.TabIndex = 2;
+            this.label4.TabIndex = 1;
             // 
             // label2
             // 
@@ -171,7 +171,7 @@
             this.label2.Location = new System.Drawing.Point(103, 8);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 20);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 0;
             this.label2.Text = "サブメニュー";
             // 
             // btnSubOtherReg
@@ -181,7 +181,7 @@
             this.btnSubOtherReg.Location = new System.Drawing.Point(33, 414);
             this.btnSubOtherReg.Name = "btnSubOtherReg";
             this.btnSubOtherReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubOtherReg.TabIndex = 0;
+            this.btnSubOtherReg.TabIndex = 9;
             this.btnSubOtherReg.Text = "その他登録";
             this.btnSubOtherReg.UseVisualStyleBackColor = false;
             this.btnSubOtherReg.Click += new System.EventHandler(this.btnSubOtherReg_Click);
@@ -193,7 +193,7 @@
             this.btnSubItemReg.Location = new System.Drawing.Point(33, 364);
             this.btnSubItemReg.Name = "btnSubItemReg";
             this.btnSubItemReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubItemReg.TabIndex = 0;
+            this.btnSubItemReg.TabIndex = 8;
             this.btnSubItemReg.Text = "品種コード登録";
             this.btnSubItemReg.UseVisualStyleBackColor = false;
             this.btnSubItemReg.Click += new System.EventHandler(this.btnSubItemReg_Click);
@@ -205,7 +205,7 @@
             this.btnSubActualReg.Location = new System.Drawing.Point(33, 114);
             this.btnSubActualReg.Name = "btnSubActualReg";
             this.btnSubActualReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubActualReg.TabIndex = 0;
+            this.btnSubActualReg.TabIndex = 11;
             this.btnSubActualReg.Text = "実績登録";
             this.btnSubActualReg.UseVisualStyleBackColor = false;
             this.btnSubActualReg.Click += new System.EventHandler(this.btnSubActualReg_Click);
@@ -217,7 +217,7 @@
             this.btnSubComparison.Location = new System.Drawing.Point(33, 164);
             this.btnSubComparison.Name = "btnSubComparison";
             this.btnSubComparison.Size = new System.Drawing.Size(220, 44);
-            this.btnSubComparison.TabIndex = 0;
+            this.btnSubComparison.TabIndex = 12;
             this.btnSubComparison.Text = "予算実績対比";
             this.btnSubComparison.UseVisualStyleBackColor = false;
             this.btnSubComparison.Click += new System.EventHandler(this.btnSubComparison_Click);
@@ -229,7 +229,7 @@
             this.btnSubActualTotal.Location = new System.Drawing.Point(33, 214);
             this.btnSubActualTotal.Name = "btnSubActualTotal";
             this.btnSubActualTotal.Size = new System.Drawing.Size(220, 44);
-            this.btnSubActualTotal.TabIndex = 0;
+            this.btnSubActualTotal.TabIndex = 13;
             this.btnSubActualTotal.Text = "予算実績集計";
             this.btnSubActualTotal.UseVisualStyleBackColor = false;
             this.btnSubActualTotal.Click += new System.EventHandler(this.btnSubActualTotal_Click);
@@ -241,7 +241,7 @@
             this.btnSubDivergence.Location = new System.Drawing.Point(33, 264);
             this.btnSubDivergence.Name = "btnSubDivergence";
             this.btnSubDivergence.Size = new System.Drawing.Size(220, 44);
-            this.btnSubDivergence.TabIndex = 0;
+            this.btnSubDivergence.TabIndex = 14;
             this.btnSubDivergence.Text = "乖離幅測定";
             this.btnSubDivergence.UseVisualStyleBackColor = false;
             this.btnSubDivergence.Click += new System.EventHandler(this.btnSubDivergence_Click);
@@ -253,7 +253,7 @@
             this.btnSubBudgetReg.Location = new System.Drawing.Point(33, 64);
             this.btnSubBudgetReg.Name = "btnSubBudgetReg";
             this.btnSubBudgetReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubBudgetReg.TabIndex = 0;
+            this.btnSubBudgetReg.TabIndex = 10;
             this.btnSubBudgetReg.Text = "予算登録";
             this.btnSubBudgetReg.UseVisualStyleBackColor = false;
             this.btnSubBudgetReg.Click += new System.EventHandler(this.btnSubBudgetReg_Click);
@@ -265,7 +265,7 @@
             this.btnSubRawMaterialsReg.Location = new System.Drawing.Point(33, 64);
             this.btnSubRawMaterialsReg.Name = "btnSubRawMaterialsReg";
             this.btnSubRawMaterialsReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubRawMaterialsReg.TabIndex = 0;
+            this.btnSubRawMaterialsReg.TabIndex = 2;
             this.btnSubRawMaterialsReg.Text = "原材料登録";
             this.btnSubRawMaterialsReg.UseVisualStyleBackColor = false;
             this.btnSubRawMaterialsReg.Click += new System.EventHandler(this.btnSubRawMaterialsReg_Click);
@@ -277,7 +277,7 @@
             this.btnSubMaterialsReg.Location = new System.Drawing.Point(33, 114);
             this.btnSubMaterialsReg.Name = "btnSubMaterialsReg";
             this.btnSubMaterialsReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubMaterialsReg.TabIndex = 0;
+            this.btnSubMaterialsReg.TabIndex = 3;
             this.btnSubMaterialsReg.Text = "資材登録";
             this.btnSubMaterialsReg.UseVisualStyleBackColor = false;
             this.btnSubMaterialsReg.Click += new System.EventHandler(this.btnSubMaterialsReg_Click);
@@ -289,7 +289,7 @@
             this.btnSubProductReg.Location = new System.Drawing.Point(33, 64);
             this.btnSubProductReg.Name = "btnSubProductReg";
             this.btnSubProductReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubProductReg.TabIndex = 0;
+            this.btnSubProductReg.TabIndex = 5;
             this.btnSubProductReg.Text = "商品登録";
             this.btnSubProductReg.UseVisualStyleBackColor = false;
             this.btnSubProductReg.Click += new System.EventHandler(this.btnSubProductReg_Click);
@@ -301,7 +301,7 @@
             this.btnSubBlendReg.Location = new System.Drawing.Point(33, 114);
             this.btnSubBlendReg.Name = "btnSubBlendReg";
             this.btnSubBlendReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubBlendReg.TabIndex = 0;
+            this.btnSubBlendReg.TabIndex = 6;
             this.btnSubBlendReg.Text = "ブレンド品登録";
             this.btnSubBlendReg.UseVisualStyleBackColor = false;
             this.btnSubBlendReg.Click += new System.EventHandler(this.btnSubBlendReg_Click);
@@ -313,7 +313,7 @@
             this.btnSubMachineReg.Location = new System.Drawing.Point(33, 164);
             this.btnSubMachineReg.Name = "btnSubMachineReg";
             this.btnSubMachineReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubMachineReg.TabIndex = 0;
+            this.btnSubMachineReg.TabIndex = 4;
             this.btnSubMachineReg.Text = "マシン登録";
             this.btnSubMachineReg.UseVisualStyleBackColor = false;
             this.btnSubMachineReg.Click += new System.EventHandler(this.btnSubMachineReg_Click);
@@ -325,7 +325,7 @@
             this.btnSubFareReg.Location = new System.Drawing.Point(33, 214);
             this.btnSubFareReg.Name = "btnSubFareReg";
             this.btnSubFareReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubFareReg.TabIndex = 0;
+            this.btnSubFareReg.TabIndex = 5;
             this.btnSubFareReg.Text = "運賃登録";
             this.btnSubFareReg.UseVisualStyleBackColor = false;
             this.btnSubFareReg.Click += new System.EventHandler(this.btnSubFareReg_Click);
@@ -337,7 +337,7 @@
             this.btnSubProductCdReg.Location = new System.Drawing.Point(33, 264);
             this.btnSubProductCdReg.Name = "btnSubProductCdReg";
             this.btnSubProductCdReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubProductCdReg.TabIndex = 0;
+            this.btnSubProductCdReg.TabIndex = 6;
             this.btnSubProductCdReg.Text = "商品コード登録";
             this.btnSubProductCdReg.UseVisualStyleBackColor = false;
             this.btnSubProductCdReg.Click += new System.EventHandler(this.btnSubProductCdReg_Click);
@@ -349,7 +349,7 @@
             this.btnSubSupplierReg.Location = new System.Drawing.Point(33, 314);
             this.btnSubSupplierReg.Name = "btnSubSupplierReg";
             this.btnSubSupplierReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubSupplierReg.TabIndex = 0;
+            this.btnSubSupplierReg.TabIndex = 7;
             this.btnSubSupplierReg.Text = "取引先コード登録";
             this.btnSubSupplierReg.UseVisualStyleBackColor = false;
             this.btnSubSupplierReg.Click += new System.EventHandler(this.btnSubSupplierReg_Click);
@@ -361,7 +361,7 @@
             this.label5.Location = new System.Drawing.Point(3, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(406, 28);
-            this.label5.TabIndex = 2;
+            this.label5.TabIndex = 0;
             this.label5.Text = "浦幌フリーズドライ株式会社　原価計算ソフト";
             // 
             // Form_Common_Menu

@@ -246,7 +246,7 @@
             this.groupBox2.Location = new System.Drawing.Point(6, 13);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(180, 36);
-            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             // 
             // radioSuppliers
@@ -255,7 +255,7 @@
             this.radioSuppliers.Location = new System.Drawing.Point(87, 12);
             this.radioSuppliers.Name = "radioSuppliers";
             this.radioSuppliers.Size = new System.Drawing.Size(87, 19);
-            this.radioSuppliers.TabIndex = 0;
+            this.radioSuppliers.TabIndex = 1;
             this.radioSuppliers.Text = "取引先コード";
             this.radioSuppliers.UseVisualStyleBackColor = true;
             this.radioSuppliers.CheckedChanged += new System.EventHandler(this.radio_CheckedChanged);
@@ -280,7 +280,7 @@
             this.label3.Location = new System.Drawing.Point(12, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(1243, 2);
-            this.label3.TabIndex = 15;
+            this.label3.TabIndex = 2;
             // 
             // dataGridViewTotal
             // 
@@ -368,7 +368,7 @@
             this.dataGridViewTotal.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridViewTotal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
             this.dataGridViewTotal.Size = new System.Drawing.Size(1243, 44);
-            this.dataGridViewTotal.TabIndex = 18;
+            this.dataGridViewTotal.TabIndex = 5;
             this.dataGridViewTotal.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewTotal_CellPainting);
             // 
             // dgvMaterialCostNameTotal
@@ -862,7 +862,7 @@
             this.dataGridView.RowTemplate.Height = 21;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dataGridView.Size = new System.Drawing.Size(1243, 522);
-            this.dataGridView.TabIndex = 16;
+            this.dataGridView.TabIndex = 4;
             this.dataGridView.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView_Scroll);
             // 
             // dataGridViewTextBoxColumn1
@@ -1309,7 +1309,7 @@
             this.dataGridViewHeader.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridViewHeader.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewHeader.Size = new System.Drawing.Size(1243, 43);
-            this.dataGridViewHeader.TabIndex = 17;
+            this.dataGridViewHeader.TabIndex = 3;
             this.dataGridViewHeader.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewHeader_CellPainting);
             this.dataGridViewHeader.ColumnWidthChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.dataGridViewHeader_ColumnWidthChanged);
             // 
@@ -1675,7 +1675,7 @@
             this.category.Location = new System.Drawing.Point(192, 13);
             this.category.Name = "category";
             this.category.Size = new System.Drawing.Size(118, 36);
-            this.category.TabIndex = 19;
+            this.category.TabIndex = 1;
             this.category.TabStop = false;
             // 
             // radioActual
@@ -1685,7 +1685,7 @@
             this.radioActual.Location = new System.Drawing.Point(61, 12);
             this.radioActual.Name = "radioActual";
             this.radioActual.Size = new System.Drawing.Size(49, 19);
-            this.radioActual.TabIndex = 0;
+            this.radioActual.TabIndex = 1;
             this.radioActual.TabStop = true;
             this.radioActual.Text = "実績";
             this.radioActual.UseVisualStyleBackColor = true;
@@ -1709,7 +1709,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 9);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(320, 55);
-            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "集計条件";
             // 
@@ -1732,7 +1732,7 @@
             this.groupMonth.Location = new System.Drawing.Point(338, 9);
             this.groupMonth.Name = "groupMonth";
             this.groupMonth.Size = new System.Drawing.Size(796, 55);
-            this.groupMonth.TabIndex = 21;
+            this.groupMonth.TabIndex = 1;
             this.groupMonth.TabStop = false;
             this.groupMonth.Text = "表示対象月";
             // 
@@ -1742,7 +1742,7 @@
             this.btnAllClear.Location = new System.Drawing.Point(708, 21);
             this.btnAllClear.Name = "btnAllClear";
             this.btnAllClear.Size = new System.Drawing.Size(75, 23);
-            this.btnAllClear.TabIndex = 1;
+            this.btnAllClear.TabIndex = 13;
             this.btnAllClear.Text = "全て外す";
             this.btnAllClear.UseVisualStyleBackColor = true;
             this.btnAllClear.Click += new System.EventHandler(this.btnAllClear_Click);
@@ -1753,7 +1753,7 @@
             this.btnAllCheck.Location = new System.Drawing.Point(627, 21);
             this.btnAllCheck.Name = "btnAllCheck";
             this.btnAllCheck.Size = new System.Drawing.Size(75, 23);
-            this.btnAllCheck.TabIndex = 1;
+            this.btnAllCheck.TabIndex = 12;
             this.btnAllCheck.Text = "全てチェック";
             this.btnAllCheck.UseVisualStyleBackColor = true;
             this.btnAllCheck.Click += new System.EventHandler(this.btnAllCheck_Click);
@@ -1766,7 +1766,7 @@
             this.checkBoxMar.Location = new System.Drawing.Point(576, 25);
             this.checkBoxMar.Name = "checkBoxMar";
             this.checkBoxMar.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxMar.TabIndex = 0;
+            this.checkBoxMar.TabIndex = 11;
             this.checkBoxMar.Text = "3月";
             this.checkBoxMar.UseVisualStyleBackColor = true;
             this.checkBoxMar.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
@@ -1779,7 +1779,7 @@
             this.checkBoxFeb.Location = new System.Drawing.Point(527, 25);
             this.checkBoxFeb.Name = "checkBoxFeb";
             this.checkBoxFeb.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxFeb.TabIndex = 0;
+            this.checkBoxFeb.TabIndex = 10;
             this.checkBoxFeb.Text = "2月";
             this.checkBoxFeb.UseVisualStyleBackColor = true;
             this.checkBoxFeb.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
@@ -1792,7 +1792,7 @@
             this.checkBoxJan.Location = new System.Drawing.Point(478, 25);
             this.checkBoxJan.Name = "checkBoxJan";
             this.checkBoxJan.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxJan.TabIndex = 0;
+            this.checkBoxJan.TabIndex = 9;
             this.checkBoxJan.Text = "1月";
             this.checkBoxJan.UseVisualStyleBackColor = true;
             this.checkBoxJan.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
@@ -1805,7 +1805,7 @@
             this.checkBoxDec.Location = new System.Drawing.Point(422, 25);
             this.checkBoxDec.Name = "checkBoxDec";
             this.checkBoxDec.Size = new System.Drawing.Size(52, 19);
-            this.checkBoxDec.TabIndex = 0;
+            this.checkBoxDec.TabIndex = 8;
             this.checkBoxDec.Text = "12月";
             this.checkBoxDec.UseVisualStyleBackColor = true;
             this.checkBoxDec.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
@@ -1818,7 +1818,7 @@
             this.checkBoxNov.Location = new System.Drawing.Point(366, 25);
             this.checkBoxNov.Name = "checkBoxNov";
             this.checkBoxNov.Size = new System.Drawing.Size(52, 19);
-            this.checkBoxNov.TabIndex = 0;
+            this.checkBoxNov.TabIndex = 7;
             this.checkBoxNov.Text = "11月";
             this.checkBoxNov.UseVisualStyleBackColor = true;
             this.checkBoxNov.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
@@ -1831,7 +1831,7 @@
             this.checkBoxOct.Location = new System.Drawing.Point(310, 25);
             this.checkBoxOct.Name = "checkBoxOct";
             this.checkBoxOct.Size = new System.Drawing.Size(52, 19);
-            this.checkBoxOct.TabIndex = 0;
+            this.checkBoxOct.TabIndex = 6;
             this.checkBoxOct.Text = "10月";
             this.checkBoxOct.UseVisualStyleBackColor = true;
             this.checkBoxOct.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
@@ -1844,7 +1844,7 @@
             this.checkBoxSep.Location = new System.Drawing.Point(261, 25);
             this.checkBoxSep.Name = "checkBoxSep";
             this.checkBoxSep.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxSep.TabIndex = 0;
+            this.checkBoxSep.TabIndex = 5;
             this.checkBoxSep.Text = "9月";
             this.checkBoxSep.UseVisualStyleBackColor = true;
             this.checkBoxSep.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
@@ -1857,7 +1857,7 @@
             this.checkBoxAug.Location = new System.Drawing.Point(212, 25);
             this.checkBoxAug.Name = "checkBoxAug";
             this.checkBoxAug.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxAug.TabIndex = 0;
+            this.checkBoxAug.TabIndex = 4;
             this.checkBoxAug.Text = "8月";
             this.checkBoxAug.UseVisualStyleBackColor = true;
             this.checkBoxAug.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
@@ -1870,7 +1870,7 @@
             this.checkBoxJul.Location = new System.Drawing.Point(163, 25);
             this.checkBoxJul.Name = "checkBoxJul";
             this.checkBoxJul.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxJul.TabIndex = 0;
+            this.checkBoxJul.TabIndex = 3;
             this.checkBoxJul.Text = "7月";
             this.checkBoxJul.UseVisualStyleBackColor = true;
             this.checkBoxJul.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
@@ -1883,7 +1883,7 @@
             this.checkBoxJun.Location = new System.Drawing.Point(114, 25);
             this.checkBoxJun.Name = "checkBoxJun";
             this.checkBoxJun.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxJun.TabIndex = 0;
+            this.checkBoxJun.TabIndex = 2;
             this.checkBoxJun.Text = "6月";
             this.checkBoxJun.UseVisualStyleBackColor = true;
             this.checkBoxJun.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
@@ -1896,7 +1896,7 @@
             this.checkBoxMay.Location = new System.Drawing.Point(65, 25);
             this.checkBoxMay.Name = "checkBoxMay";
             this.checkBoxMay.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxMay.TabIndex = 0;
+            this.checkBoxMay.TabIndex = 1;
             this.checkBoxMay.Text = "5月";
             this.checkBoxMay.UseVisualStyleBackColor = true;
             this.checkBoxMay.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);

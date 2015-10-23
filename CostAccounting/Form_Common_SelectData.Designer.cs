@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,7 +36,6 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.checkBoxSearchFlg = new System.Windows.Forms.CheckBox();
             this.textSearchName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.textSearchCode = new System.Windows.Forms.TextBox();
@@ -51,8 +50,8 @@
             this.dataGridView.AccessibleRole = System.Windows.Forms.AccessibleRole.Animation;
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -68,7 +67,7 @@
             this.dataGridView.RowTemplate.Height = 21;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(607, 316);
-            this.dataGridView.TabIndex = 8;
+            this.dataGridView.TabIndex = 2;
             // 
             // code
             // 
@@ -104,7 +103,6 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnSearch);
-            this.groupBox3.Controls.Add(this.checkBoxSearchFlg);
             this.groupBox3.Controls.Add(this.textSearchName);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.textSearchCode);
@@ -112,7 +110,7 @@
             this.groupBox3.Location = new System.Drawing.Point(12, 12);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(607, 45);
-            this.groupBox3.TabIndex = 9;
+            this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "絞り込み";
             // 
@@ -121,27 +119,17 @@
             this.btnSearch.Location = new System.Drawing.Point(526, 16);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 0;
+            this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "検索";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // checkBoxSearchFlg
-            // 
-            this.checkBoxSearchFlg.AutoSize = true;
-            this.checkBoxSearchFlg.Location = new System.Drawing.Point(458, 19);
-            this.checkBoxSearchFlg.Name = "checkBoxSearchFlg";
-            this.checkBoxSearchFlg.Size = new System.Drawing.Size(62, 19);
-            this.checkBoxSearchFlg.TabIndex = 10;
-            this.checkBoxSearchFlg.Text = "未登録";
-            this.checkBoxSearchFlg.UseVisualStyleBackColor = true;
             // 
             // textSearchName
             // 
             this.textSearchName.Location = new System.Drawing.Point(157, 17);
             this.textSearchName.Name = "textSearchName";
-            this.textSearchName.Size = new System.Drawing.Size(288, 23);
-            this.textSearchName.TabIndex = 5;
+            this.textSearchName.Size = new System.Drawing.Size(363, 23);
+            this.textSearchName.TabIndex = 3;
             // 
             // label8
             // 
@@ -149,7 +137,7 @@
             this.label8.Location = new System.Drawing.Point(11, 20);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(33, 15);
-            this.label8.TabIndex = 4;
+            this.label8.TabIndex = 0;
             this.label8.Text = "コード";
             // 
             // textSearchCode
@@ -157,7 +145,8 @@
             this.textSearchCode.Location = new System.Drawing.Point(50, 17);
             this.textSearchCode.Name = "textSearchCode";
             this.textSearchCode.Size = new System.Drawing.Size(55, 23);
-            this.textSearchCode.TabIndex = 5;
+            this.textSearchCode.TabIndex = 1;
+            this.textSearchCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             // 
             // label9
             // 
@@ -165,7 +154,7 @@
             this.label9.Location = new System.Drawing.Point(120, 20);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 15);
-            this.label9.TabIndex = 4;
+            this.label9.TabIndex = 2;
             this.label9.Text = "名称";
             // 
             // btnDecide
@@ -174,7 +163,7 @@
             this.btnDecide.Location = new System.Drawing.Point(544, 385);
             this.btnDecide.Name = "btnDecide";
             this.btnDecide.Size = new System.Drawing.Size(75, 23);
-            this.btnDecide.TabIndex = 11;
+            this.btnDecide.TabIndex = 1;
             this.btnDecide.Text = "決定";
             this.btnDecide.UseVisualStyleBackColor = true;
             this.btnDecide.Click += new System.EventHandler(this.btnDecide_Click);
@@ -208,7 +197,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textSearchCode;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox checkBoxSearchFlg;
         private System.Windows.Forms.Button btnDecide;
         internal System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn code;

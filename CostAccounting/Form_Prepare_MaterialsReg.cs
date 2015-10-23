@@ -75,8 +75,8 @@ namespace CostAccounting
             {
                 textRegCode.Text = dataGridView.SelectedRows[0].Cells[0].Value.ToString();
                 textRegName.Text = dataGridView.SelectedRows[0].Cells[1].Value.ToString();
-                textRegPriceBudget.Text = dataGridView.SelectedRows[0].Cells[2].Value.ToString();
-                textRegPriceActual.Text = dataGridView.SelectedRows[0].Cells[3].Value.ToString();
+                textRegPriceBudget.Text = Conversion.Parse(dataGridView.SelectedRows[0].Cells[2].Value.ToString()).ToString("N");
+                textRegPriceActual.Text = Conversion.Parse(dataGridView.SelectedRows[0].Cells[3].Value.ToString()).ToString("N");
                 textRegNote.Text = (string)dataGridView.SelectedRows[0].Cells[4].Value;
             }
         }
@@ -299,6 +299,22 @@ namespace CostAccounting
             }
             // テキストを忘れずに描画する
             e.DrawText();
+        }
+
+        /*************************************************************
+         * テキストボックスにて数値のみ入力可能にする
+         *************************************************************/
+        private void textBox_KeyPress_numeric(object sender, KeyPressEventArgs e)
+        {
+            Event.textBox_KeyPress_numeric(sender, e);
+        }
+
+        /*************************************************************
+         * テキストボックスのロストフォーカス時にフォーマットする
+         *************************************************************/
+        private void textBox_Leave(object sender, EventArgs e)
+        {
+            Event.textBox_Leave_format(sender, e);
         }
     }
 }

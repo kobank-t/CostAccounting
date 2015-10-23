@@ -49,22 +49,22 @@ namespace CostAccounting
                 {
                     case Const.SEARCH_TYPE.Product:
                         var productList = from t in context.ProductCode
-                               where t.year.Equals(Const.TARGET_YEAR)
-                                  && (string.IsNullOrEmpty(code) || t.code.StartsWith(code))
-                                  && (string.IsNullOrEmpty(name) || t.name.Contains(name))
-                                  && t.del_flg.Equals(Const.FLG_OFF)
-                               orderby t.code
-                               select new { t.code, t.name, t.note, t.unit};
+                                          where t.year.Equals(Const.TARGET_YEAR)
+                                             && (string.IsNullOrEmpty(code) || t.code.StartsWith(code))
+                                             && (string.IsNullOrEmpty(name) || t.name.Contains(name))
+                                             && t.del_flg.Equals(Const.FLG_OFF)
+                                          orderby t.code
+                                          select new { t.code, t.name, t.note, t.unit };
                         dataGridView.DataSource = productList.ToList();
                         break;
                     case Const.SEARCH_TYPE.Supplier:
                         var supplierList = from t in context.Supplier
-                               where t.year.Equals(Const.TARGET_YEAR)
-                                  && (string.IsNullOrEmpty(code) || t.code.StartsWith(code))
-                                  && (string.IsNullOrEmpty(name) || t.name.Contains(name))
-                                  && t.del_flg.Equals(Const.FLG_OFF)
-                               orderby t.code
-                               select new { t.code, t.name, t.note, t.unit  };
+                                           where t.year.Equals(Const.TARGET_YEAR)
+                                              && (string.IsNullOrEmpty(code) || t.code.StartsWith(code))
+                                              && (string.IsNullOrEmpty(name) || t.name.Contains(name))
+                                              && t.del_flg.Equals(Const.FLG_OFF)
+                                           orderby t.code
+                                           select new { t.code, t.name, t.note, t.unit };
                         dataGridView.DataSource = supplierList.ToList();
                         break;
                 }
@@ -83,6 +83,14 @@ namespace CostAccounting
                 return;
             }
             DialogResult = DialogResult.OK;
+        }
+
+        /*************************************************************
+         * テキストボックスにて数値のみ入力可能にする
+         *************************************************************/
+        private void textBox_KeyPress_numeric(object sender, KeyPressEventArgs e)
+        {
+            Event.textBox_KeyPress_numeric(sender, e);
         }
 
     }

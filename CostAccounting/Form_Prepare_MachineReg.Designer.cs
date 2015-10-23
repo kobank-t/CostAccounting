@@ -84,7 +84,7 @@
             this.groupBox2.Location = new System.Drawing.Point(6, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(625, 298);
-            this.groupBox2.TabIndex = 19;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "個別メンテナンス";
             // 
@@ -94,7 +94,7 @@
             this.label1.Location = new System.Drawing.Point(13, 269);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 15);
-            this.label1.TabIndex = 32;
+            this.label1.TabIndex = 10;
             this.label1.Text = "※レート単位は『円/min』";
             // 
             // btnDelete
@@ -102,7 +102,7 @@
             this.btnDelete.Location = new System.Drawing.Point(541, 265);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 29;
+            this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "削除";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -112,7 +112,7 @@
             this.btnChange.Location = new System.Drawing.Point(460, 265);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(75, 23);
-            this.btnChange.TabIndex = 30;
+            this.btnChange.TabIndex = 12;
             this.btnChange.Text = "修正";
             this.btnChange.UseVisualStyleBackColor = true;
             this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
@@ -122,7 +122,7 @@
             this.btnAppend.Location = new System.Drawing.Point(379, 265);
             this.btnAppend.Name = "btnAppend";
             this.btnAppend.Size = new System.Drawing.Size(75, 23);
-            this.btnAppend.TabIndex = 31;
+            this.btnAppend.TabIndex = 11;
             this.btnAppend.Text = "登録";
             this.btnAppend.UseVisualStyleBackColor = true;
             this.btnAppend.Click += new System.EventHandler(this.btnAppend_Click);
@@ -132,7 +132,8 @@
             this.textRegCode.Location = new System.Drawing.Point(83, 207);
             this.textRegCode.Name = "textRegCode";
             this.textRegCode.Size = new System.Drawing.Size(55, 23);
-            this.textRegCode.TabIndex = 24;
+            this.textRegCode.TabIndex = 1;
+            this.textRegCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             // 
             // label2
             // 
@@ -140,7 +141,7 @@
             this.label2.Location = new System.Drawing.Point(13, 210);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
-            this.label2.TabIndex = 19;
+            this.label2.TabIndex = 0;
             this.label2.Text = "設備コード";
             // 
             // textRegName
@@ -148,21 +149,23 @@
             this.textRegName.Location = new System.Drawing.Point(249, 207);
             this.textRegName.Name = "textRegName";
             this.textRegName.Size = new System.Drawing.Size(366, 23);
-            this.textRegName.TabIndex = 25;
+            this.textRegName.TabIndex = 3;
             // 
             // textRegNote
             // 
             this.textRegNote.Location = new System.Drawing.Point(385, 236);
             this.textRegNote.Name = "textRegNote";
             this.textRegNote.Size = new System.Drawing.Size(230, 23);
-            this.textRegNote.TabIndex = 26;
+            this.textRegNote.TabIndex = 9;
             // 
             // textRegRateActual
             // 
             this.textRegRateActual.Location = new System.Drawing.Point(249, 236);
             this.textRegRateActual.Name = "textRegRateActual";
             this.textRegRateActual.Size = new System.Drawing.Size(90, 23);
-            this.textRegRateActual.TabIndex = 27;
+            this.textRegRateActual.TabIndex = 7;
+            this.textRegRateActual.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.textRegRateActual.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // label5
             // 
@@ -170,7 +173,7 @@
             this.label5.Location = new System.Drawing.Point(180, 210);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 15);
-            this.label5.TabIndex = 20;
+            this.label5.TabIndex = 2;
             this.label5.Text = "設備名";
             // 
             // label3
@@ -179,7 +182,7 @@
             this.label3.Location = new System.Drawing.Point(180, 239);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 15);
-            this.label3.TabIndex = 21;
+            this.label3.TabIndex = 6;
             this.label3.Text = "実績レート";
             // 
             // label7
@@ -188,7 +191,7 @@
             this.label7.Location = new System.Drawing.Point(349, 239);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 15);
-            this.label7.TabIndex = 22;
+            this.label7.TabIndex = 8;
             this.label7.Text = "備考";
             // 
             // textRegRateBudget
@@ -196,7 +199,9 @@
             this.textRegRateBudget.Location = new System.Drawing.Point(83, 236);
             this.textRegRateBudget.Name = "textRegRateBudget";
             this.textRegRateBudget.Size = new System.Drawing.Size(90, 23);
-            this.textRegRateBudget.TabIndex = 28;
+            this.textRegRateBudget.TabIndex = 5;
+            this.textRegRateBudget.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.textRegRateBudget.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // label6
             // 
@@ -204,7 +209,7 @@
             this.label6.Location = new System.Drawing.Point(13, 239);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(58, 15);
-            this.label6.TabIndex = 23;
+            this.label6.TabIndex = 4;
             this.label6.Text = "予定レート";
             // 
             // dataGridView
@@ -229,7 +234,7 @@
             this.dataGridView.RowTemplate.Height = 21;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(607, 178);
-            this.dataGridView.TabIndex = 5;
+            this.dataGridView.TabIndex = 14;
             this.dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_RowEnter);
             // 
             // code
@@ -279,7 +284,7 @@
             this.groupBox1.Location = new System.Drawing.Point(6, 310);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(625, 57);
-            this.groupBox1.TabIndex = 20;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // label4
@@ -288,7 +293,7 @@
             this.label4.Location = new System.Drawing.Point(124, 26);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(204, 15);
-            this.label4.TabIndex = 32;
+            this.label4.TabIndex = 1;
             this.label4.Text = "※設備コードA～Rのデータを登録します。";
             // 
             // btnDefaultDataReg
@@ -296,7 +301,7 @@
             this.btnDefaultDataReg.Location = new System.Drawing.Point(9, 22);
             this.btnDefaultDataReg.Name = "btnDefaultDataReg";
             this.btnDefaultDataReg.Size = new System.Drawing.Size(109, 23);
-            this.btnDefaultDataReg.TabIndex = 21;
+            this.btnDefaultDataReg.TabIndex = 0;
             this.btnDefaultDataReg.Text = "初期データ登録";
             this.btnDefaultDataReg.UseVisualStyleBackColor = true;
             this.btnDefaultDataReg.Click += new System.EventHandler(this.btnDefaultDataReg_Click);

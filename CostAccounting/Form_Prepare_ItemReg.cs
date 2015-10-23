@@ -190,5 +190,14 @@ namespace CostAccounting
                 Form_Prepare_ItemReg_Load(sender, e);
             }
         }
+
+        /*************************************************************
+         * テキストボックスにて数値のみ入力可能にする
+         *************************************************************/
+        private void textBox_KeyPress_numeric(object sender, KeyPressEventArgs e)
+        {
+            Event.textBox_KeyPress_numeric(sender, e);
+        }
+
     }
 }

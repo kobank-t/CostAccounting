@@ -48,7 +48,7 @@
             this.btnDecide.Location = new System.Drawing.Point(780, 588);
             this.btnDecide.Name = "btnDecide";
             this.btnDecide.Size = new System.Drawing.Size(75, 23);
-            this.btnDecide.TabIndex = 7;
+            this.btnDecide.TabIndex = 4;
             this.btnDecide.Text = "OK";
             this.btnDecide.UseVisualStyleBackColor = true;
             // 
@@ -66,7 +66,7 @@
             this.listView.Name = "listView";
             this.listView.OwnerDraw = true;
             this.listView.Size = new System.Drawing.Size(840, 555);
-            this.listView.TabIndex = 8;
+            this.listView.TabIndex = 5;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
             this.listView.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView_DrawColumnHeader);
@@ -108,7 +108,7 @@
             this.recordCnt.Location = new System.Drawing.Point(15, 591);
             this.recordCnt.Name = "recordCnt";
             this.recordCnt.Size = new System.Drawing.Size(71, 18);
-            this.recordCnt.TabIndex = 10;
+            this.recordCnt.TabIndex = 1;
             // 
             // label4
             // 
@@ -116,7 +116,7 @@
             this.label4.Location = new System.Drawing.Point(91, 592);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(19, 15);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 2;
             this.label4.Text = "件";
             // 
             // description
@@ -125,7 +125,7 @@
             this.description.Location = new System.Drawing.Point(12, 9);
             this.description.Name = "description";
             this.description.Size = new System.Drawing.Size(169, 15);
-            this.description.TabIndex = 11;
+            this.description.TabIndex = 0;
             this.description.Text = "・・・（説明をプログラムから設定）";
             // 
             // btnClipboard
@@ -133,7 +133,7 @@
             this.btnClipboard.Location = new System.Drawing.Point(733, 588);
             this.btnClipboard.Name = "btnClipboard";
             this.btnClipboard.Size = new System.Drawing.Size(122, 23);
-            this.btnClipboard.TabIndex = 12;
+            this.btnClipboard.TabIndex = 3;
             this.btnClipboard.Text = "クリップボードにコピー";
             this.btnClipboard.UseVisualStyleBackColor = true;
             this.btnClipboard.Click += new System.EventHandler(this.btnClipboard_Click);

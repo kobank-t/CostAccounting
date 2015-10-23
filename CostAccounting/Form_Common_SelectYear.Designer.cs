@@ -43,7 +43,7 @@
             this.label5.Location = new System.Drawing.Point(3, 7);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(406, 28);
-            this.label5.TabIndex = 2;
+            this.label5.TabIndex = 0;
             this.label5.Text = "浦幌フリーズドライ株式会社　原価計算ソフト";
             // 
             // targetYear
@@ -54,9 +54,10 @@
             this.targetYear.MaxLength = 4;
             this.targetYear.Name = "targetYear";
             this.targetYear.Size = new System.Drawing.Size(84, 38);
-            this.targetYear.TabIndex = 3;
+            this.targetYear.TabIndex = 0;
             this.targetYear.Text = "2017";
             this.targetYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.targetYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             // 
             // label1
             // 
@@ -65,7 +66,7 @@
             this.label1.Location = new System.Drawing.Point(109, 46);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 15);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 1;
             this.label1.Text = "年度";
             // 
             // groupBox1
@@ -77,7 +78,7 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox1.Size = new System.Drawing.Size(322, 77);
-            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "対象年度　※西暦で入力してください※";
             // 
@@ -86,7 +87,7 @@
             this.btnEnter.Location = new System.Drawing.Point(241, 42);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(75, 23);
-            this.btnEnter.TabIndex = 6;
+            this.btnEnter.TabIndex = 2;
             this.btnEnter.Text = "決定";
             this.btnEnter.UseVisualStyleBackColor = true;
             this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);

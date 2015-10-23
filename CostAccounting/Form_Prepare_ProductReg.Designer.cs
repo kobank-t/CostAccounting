@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.btnFileOpen = new System.Windows.Forms.Button();
             this.listView = new System.Windows.Forms.ListView();
@@ -109,7 +109,7 @@
             this.listView.Name = "listView";
             this.listView.OwnerDraw = true;
             this.listView.Size = new System.Drawing.Size(607, 139);
-            this.listView.TabIndex = 1;
+            this.listView.TabIndex = 7;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
             this.listView.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView_DrawColumnHeader);
@@ -143,7 +143,7 @@
             this.groupBox1.Location = new System.Drawing.Point(6, 365);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(625, 277);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "一括登録";
             // 
@@ -155,7 +155,7 @@
             this.groupKbn2.Location = new System.Drawing.Point(9, 50);
             this.groupKbn2.Name = "groupKbn2";
             this.groupKbn2.Size = new System.Drawing.Size(266, 44);
-            this.groupKbn2.TabIndex = 5;
+            this.groupKbn2.TabIndex = 3;
             this.groupKbn2.TabStop = false;
             this.groupKbn2.Text = "商品区分";
             // 
@@ -206,7 +206,7 @@
             this.labelFilePath.Location = new System.Drawing.Point(215, 25);
             this.labelFilePath.Name = "labelFilePath";
             this.labelFilePath.Size = new System.Drawing.Size(401, 18);
-            this.labelFilePath.TabIndex = 4;
+            this.labelFilePath.TabIndex = 2;
             // 
             // label4
             // 
@@ -214,7 +214,7 @@
             this.label4.Location = new System.Drawing.Point(82, 249);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(19, 15);
-            this.label4.TabIndex = 2;
+            this.label4.TabIndex = 5;
             this.label4.Text = "件";
             // 
             // label1
@@ -223,7 +223,7 @@
             this.label1.Location = new System.Drawing.Point(124, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 15);
-            this.label1.TabIndex = 2;
+            this.label1.TabIndex = 1;
             this.label1.Text = "選択したファイル：";
             // 
             // btnFileReg
@@ -231,7 +231,7 @@
             this.btnFileReg.Location = new System.Drawing.Point(541, 245);
             this.btnFileReg.Name = "btnFileReg";
             this.btnFileReg.Size = new System.Drawing.Size(75, 23);
-            this.btnFileReg.TabIndex = 0;
+            this.btnFileReg.TabIndex = 6;
             this.btnFileReg.Text = "登録";
             this.btnFileReg.UseVisualStyleBackColor = true;
             this.btnFileReg.Click += new System.EventHandler(this.btnFileReg_Click);
@@ -242,7 +242,7 @@
             this.label5.Location = new System.Drawing.Point(181, 260);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 15);
-            this.label5.TabIndex = 4;
+            this.label5.TabIndex = 3;
             this.label5.Text = "商品名";
             // 
             // textRegName
@@ -250,7 +250,7 @@
             this.textRegName.Location = new System.Drawing.Point(250, 257);
             this.textRegName.Name = "textRegName";
             this.textRegName.Size = new System.Drawing.Size(366, 23);
-            this.textRegName.TabIndex = 5;
+            this.textRegName.TabIndex = 4;
             // 
             // label7
             // 
@@ -258,7 +258,7 @@
             this.label7.Location = new System.Drawing.Point(14, 319);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(31, 15);
-            this.label7.TabIndex = 4;
+            this.label7.TabIndex = 9;
             this.label7.Text = "備考";
             // 
             // textRegNote
@@ -266,14 +266,14 @@
             this.textRegNote.Location = new System.Drawing.Point(84, 316);
             this.textRegNote.Name = "textRegNote";
             this.textRegNote.Size = new System.Drawing.Size(256, 23);
-            this.textRegNote.TabIndex = 5;
+            this.textRegNote.TabIndex = 10;
             // 
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(540, 315);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 0;
+            this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "削除";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -283,7 +283,7 @@
             this.btnChange.Location = new System.Drawing.Point(459, 315);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(75, 23);
-            this.btnChange.TabIndex = 0;
+            this.btnChange.TabIndex = 12;
             this.btnChange.Text = "修正";
             this.btnChange.UseVisualStyleBackColor = true;
             this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
@@ -293,7 +293,7 @@
             this.btnAppend.Location = new System.Drawing.Point(378, 315);
             this.btnAppend.Name = "btnAppend";
             this.btnAppend.Size = new System.Drawing.Size(75, 23);
-            this.btnAppend.TabIndex = 0;
+            this.btnAppend.TabIndex = 11;
             this.btnAppend.Text = "登録";
             this.btnAppend.UseVisualStyleBackColor = true;
             this.btnAppend.Click += new System.EventHandler(this.btnAppend_Click);
@@ -318,7 +318,7 @@
             this.groupBox2.Location = new System.Drawing.Point(6, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(625, 347);
-            this.groupBox2.TabIndex = 6;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "個別メンテナンス";
             // 
@@ -330,7 +330,7 @@
             this.groupKbn1.Location = new System.Drawing.Point(250, 277);
             this.groupKbn1.Name = "groupKbn1";
             this.groupKbn1.Size = new System.Drawing.Size(266, 33);
-            this.groupKbn1.TabIndex = 5;
+            this.groupKbn1.TabIndex = 8;
             this.groupKbn1.TabStop = false;
             // 
             // radioConsignment1
@@ -376,7 +376,7 @@
             this.groupBox3.Location = new System.Drawing.Point(9, 22);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(607, 45);
-            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabIndex = 0;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "絞り込み";
             // 
@@ -385,7 +385,7 @@
             this.btnSearch.Location = new System.Drawing.Point(526, 16);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
-            this.btnSearch.TabIndex = 0;
+            this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "検索";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -395,7 +395,7 @@
             this.textSearchName.Location = new System.Drawing.Point(183, 17);
             this.textSearchName.Name = "textSearchName";
             this.textSearchName.Size = new System.Drawing.Size(337, 23);
-            this.textSearchName.TabIndex = 5;
+            this.textSearchName.TabIndex = 3;
             // 
             // label8
             // 
@@ -403,7 +403,7 @@
             this.label8.Location = new System.Drawing.Point(11, 20);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 15);
-            this.label8.TabIndex = 4;
+            this.label8.TabIndex = 0;
             this.label8.Text = "商品コード";
             // 
             // textSearchCode
@@ -411,7 +411,8 @@
             this.textSearchCode.Location = new System.Drawing.Point(72, 17);
             this.textSearchCode.Name = "textSearchCode";
             this.textSearchCode.Size = new System.Drawing.Size(55, 23);
-            this.textSearchCode.TabIndex = 5;
+            this.textSearchCode.TabIndex = 1;
+            this.textSearchCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             // 
             // label9
             // 
@@ -419,7 +420,7 @@
             this.label9.Location = new System.Drawing.Point(136, 20);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(43, 15);
-            this.label9.TabIndex = 4;
+            this.label9.TabIndex = 2;
             this.label9.Text = "商品名";
             // 
             // dataGridView
@@ -427,8 +428,8 @@
             this.dataGridView.AccessibleRole = System.Windows.Forms.AccessibleRole.Animation;
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.code,
@@ -444,7 +445,7 @@
             this.dataGridView.RowTemplate.Height = 21;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(607, 178);
-            this.dataGridView.TabIndex = 7;
+            this.dataGridView.TabIndex = 14;
             this.dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_RowEnter);
             // 
             // code
@@ -492,14 +493,15 @@
             this.textRegUnit.Location = new System.Drawing.Point(84, 286);
             this.textRegUnit.Name = "textRegUnit";
             this.textRegUnit.Size = new System.Drawing.Size(90, 23);
-            this.textRegUnit.TabIndex = 9;
+            this.textRegUnit.TabIndex = 6;
             // 
             // textRegCode
             // 
             this.textRegCode.Location = new System.Drawing.Point(84, 257);
             this.textRegCode.Name = "textRegCode";
             this.textRegCode.Size = new System.Drawing.Size(55, 23);
-            this.textRegCode.TabIndex = 10;
+            this.textRegCode.TabIndex = 2;
+            this.textRegCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             // 
             // label6
             // 
@@ -507,7 +509,7 @@
             this.label6.Location = new System.Drawing.Point(14, 289);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 15);
-            this.label6.TabIndex = 7;
+            this.label6.TabIndex = 5;
             this.label6.Text = "単位";
             // 
             // label2
@@ -516,7 +518,7 @@
             this.label2.Location = new System.Drawing.Point(14, 260);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
-            this.label2.TabIndex = 8;
+            this.label2.TabIndex = 1;
             this.label2.Text = "商品コード";
             // 
             // label3
@@ -525,7 +527,7 @@
             this.label3.Location = new System.Drawing.Point(181, 289);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 15);
-            this.label3.TabIndex = 4;
+            this.label3.TabIndex = 7;
             this.label3.Text = "商品区分";
             // 
             // Form_Prepare_ProductReg

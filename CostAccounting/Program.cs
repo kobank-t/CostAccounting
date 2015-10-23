@@ -527,6 +527,23 @@ namespace CostAccounting
             // 上記以外は入力不可
             e.Handled = true;
         }
+
+        /// -----------------------------------------------------------------------------
+        /// <summary>
+        ///     テキストボックスのロストフォーカス時にフォーマットします。</summary>
+        /// <param name="sender">
+        ///     イベント発生元のオブジェクト。<param>
+        /// <param name="e">
+        ///     イベント引数。<param>
+        /// -----------------------------------------------------------------------------
+        public static void textBox_Leave_format(object sender, EventArgs e)
+        {
+            if (sender is TextBox)
+            {
+                TextBox target = (TextBox)sender;
+                target.Text = Conversion.Parse(target.Text).ToString("N");
+            }
+        }
     }
 
     /// -----------------------------------------------------------------------------
