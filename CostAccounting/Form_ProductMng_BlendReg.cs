@@ -129,6 +129,7 @@ namespace CostAccounting
                 context.SaveChanges();
             }
 
+            setSupplierData();
             setOperationKbn();
             Program.MessageBoxAfter("登録しました。");
         }
@@ -160,6 +161,8 @@ namespace CostAccounting
                 context.SaveChanges();
             }
 
+            setSupplierData();
+            setOperationKbn();
             Program.MessageBoxAfter("修正しました。");
         }
 
@@ -199,6 +202,7 @@ namespace CostAccounting
                 year = Const.TARGET_YEAR,
                 code = productCode.Text,
                 category = category,
+                type = (int)Const.PRODUCT_TYPE.Blend,
                 item_code = itemCode.SelectedValue.ToString(),
                 packing = packing.Text,
                 note = note.Text,
@@ -231,6 +235,7 @@ namespace CostAccounting
                 product_code = productCode.Text,
                 supplier_code = suppllierCode.Text,
                 category = category,
+                type = (int)Const.PRODUCT_TYPE.Blend,
                 unit_price = Conversion.Parse(unitPrice.Text),
                 update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                 update_date = DateTime.Now,
@@ -242,6 +247,7 @@ namespace CostAccounting
             string id = string.Concat(Const.TARGET_YEAR, productCode.Text, category);
 
             // ブレンドする商品データの登録
+            int no = 0;
             foreach (DataGridViewRow row in dgvProduct.Rows)
             {
                 string code = (string)row.Cells["dgvProductCode"].Value;
@@ -257,6 +263,7 @@ namespace CostAccounting
                     var entity = new ProductBlend()
                     {
                         id = id,
+                        no = no++,
                         code = code,
                         blend_rate = rate,
                         update_user = SystemInformation.ComputerName,
@@ -281,6 +288,7 @@ namespace CostAccounting
                               && t.product_code.Equals(productCode.Text)
                               && t.supplier_code.Equals(suppllierCode.Text)
                               && t.category.Equals(category)
+                              && t.type.Equals((int)Const.PRODUCT_TYPE.Blend)
                            select t;
             context.ProductSupplier.RemoveRange(supplier);
 
@@ -291,6 +299,7 @@ namespace CostAccounting
                                     where t.year.Equals(Const.TARGET_YEAR)
                                        && t.product_code.Equals(productCode.Text)
                                        && t.category.Equals(category)
+                                       && t.type.Equals((int)Const.PRODUCT_TYPE.Blend)
                                     select t;
 
                 if (supplierOther.Count() > decimal.One)
@@ -304,6 +313,7 @@ namespace CostAccounting
                           where t.code.Equals(productCode.Text)
                              && t.year.Equals(Const.TARGET_YEAR)
                              && t.category.Equals(category)
+                             && t.type.Equals((int)Const.PRODUCT_TYPE.Blend)
                           select t;
             context.Product.RemoveRange(product);
 
@@ -583,6 +593,7 @@ namespace CostAccounting
                               where t.code.Equals(productCode.Text)
                                  && t.year.Equals(Const.TARGET_YEAR)
                                  && t.category.Equals(category)
+                                 && t.type.Equals((int)Const.PRODUCT_TYPE.Blend)
                               select t;
 
                 if (product.Count() == decimal.One)
@@ -593,25 +604,7 @@ namespace CostAccounting
                     note.Text = product.First().note;
 
                     // 取引先データの設定
-                    var supplier = from t in context.ProductSupplier
-                                   where t.year.Equals(Const.TARGET_YEAR)
-                                      && t.product_code.Equals(productCode.Text)
-                                      && t.supplier_code.Equals(suppllierCode.Text)
-                                      && t.category.Equals(category)
-                                   select t;
-
-                    if (supplier.Count() == decimal.One)
-                    {
-                        unitPrice.Text = supplier.First().unit_price.ToString();
-                        updateTime.Text = supplier.First().update_date.ToString();
-                        updatePC.Text = supplier.First().update_user;
-                    }
-                    else
-                    {
-                        unitPrice.Text = String.Empty;
-                        updateTime.Text = String.Empty;
-                        updatePC.Text = String.Empty;
-                    }
+                    setSupplierData();
 
                     // 主キー（年＋商品コード＋取引先コード）を生成
                     string id = string.Concat(Const.TARGET_YEAR, productCode.Text, category);
@@ -619,6 +612,7 @@ namespace CostAccounting
                     // データグリッドビューの設定
                     List<ProductBlend> blend = (from t in context.ProductBlend
                                                 where t.id.Equals(id)
+                                                orderby t.no
                                                 select t).ToList();
                     dgvProduct.RowCount = blend.Count() + 1;
                     for (int i = 0; i < blend.Count(); i++)
@@ -650,11 +644,12 @@ namespace CostAccounting
                 int category = (int)Program.judgeCategory(radioBudget, radioActual);
 
                 var product = from t_product in context.Product
-                              join t_supplier in context.RowMaterial on t_product.code equals t_supplier.code
+                              join m_product in context.ProductCode on t_product.code equals m_product.code
                               where t_product.code.Equals(productCode)
                                  && t_product.year.Equals(Const.TARGET_YEAR)
                                  && t_product.category.Equals(category)
-                              select new { t = t_product, t_supplier.name };
+                                 && t_product.type.Equals((int)Const.PRODUCT_TYPE.Blend)
+                              select new { t = t_product, m_product.name };
 
                 if (product.Count() == decimal.One)
                 {
@@ -721,11 +716,12 @@ namespace CostAccounting
                                   && t.product_code.Equals(productCode.Text)
                                   && t.supplier_code.Equals(suppllierCode.Text)
                                   && t.category.Equals(category)
+                                  && t.type.Equals((int)Const.PRODUCT_TYPE.Blend)
                                select t;
 
                 if (supplier.Count() == decimal.One)
                 {
-                    unitPrice.Text = supplier.First().unit_price.ToString();
+                    unitPrice.Text = supplier.First().unit_price.ToString("N");
                     updateTime.Text = supplier.First().update_date.ToString();
                     updatePC.Text = supplier.First().update_user;
                 }
@@ -751,17 +747,14 @@ namespace CostAccounting
 
                     var target = from t_product in context.Product
                                  join t_supplier in context.ProductSupplier on
-                                      new { t_product.year, t_product.code, t_product.category }
+                                      new { t_product.year, t_product.code, t_product.category, t_product.type }
                                         equals
-                                      new { t_supplier.year, code = t_supplier.product_code, t_supplier.category }
-                                 join t_blend in context.ProductBlend on
-                                      string.Concat(t_supplier.year, t_supplier.product_code, t_supplier.category)
-                                        equals
-                                      t_blend.id
+                                      new { t_supplier.year, code = t_supplier.product_code, t_supplier.category, t_supplier.type }
                                  where t_product.year.Equals(Const.TARGET_YEAR)
                                     && t_product.code.Equals(productCode.Text)
                                     && t_supplier.supplier_code.Equals(suppllierCode.Text)
                                     && t_product.category.Equals(category)
+                                    && t_product.type.Equals((int)Const.PRODUCT_TYPE.Blend)
                                  select t_product;
 
                     if (target.Count() > decimal.Zero)

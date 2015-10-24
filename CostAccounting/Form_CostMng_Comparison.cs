@@ -405,7 +405,9 @@ namespace CostAccounting
                                  (
                                    from t_product in context.Product
                                    join t_supplier in context.ProductSupplier
-                                   on new { t_product.year, t_product.code, t_product.category } equals new { t_supplier.year, code = t_supplier.product_code, t_supplier.category }
+                                   on new { t_product.year, t_product.code, t_product.category, t_product.type }
+                                        equals
+                                      new { t_supplier.year, code = t_supplier.product_code, t_supplier.category, t_supplier.type }
                                    where t_product.year.Equals(Const.TARGET_YEAR)
                                       && t_product.category.Equals((int)Const.CATEGORY_TYPE.Actual)
                                    select new { t_product, t_supplier }
@@ -414,13 +416,16 @@ namespace CostAccounting
                                  (
                                    from t_product in context.Product
                                    join t_supplier in context.ProductSupplier
-                                   on new { t_product.year, t_product.code, t_product.category } equals new { t_supplier.year, code = t_supplier.product_code, t_supplier.category }
+                                   on new { t_product.year, t_product.code, t_product.category, t_product.type }
+                                        equals
+                                      new { t_supplier.year, code = t_supplier.product_code, t_supplier.category, t_supplier.type }
                                    where t_product.year.Equals(Const.TARGET_YEAR)
                                       && t_product.category.Equals((int)Const.CATEGORY_TYPE.Budget)
                                    select new { t_product, t_supplier }
                                  )
-                             on new { t_actual.t_product.year, t_actual.t_product.code, t_actual.t_supplier.supplier_code }
-                             equals new { t_budget_temp.t_product.year, t_budget_temp.t_product.code, t_budget_temp.t_supplier.supplier_code } into t_budget_sub
+                             on new { t_actual.t_product.year, t_actual.t_product.code, t_actual.t_product.type, t_actual.t_supplier.supplier_code }
+                                  equals
+                                new { t_budget_temp.t_product.year, t_budget_temp.t_product.code, t_budget_temp.t_product.type, t_budget_temp.t_supplier.supplier_code } into t_budget_sub
                              from t_budget in t_budget_sub.DefaultIfEmpty()
 
                              join m_product in context.ProductCode
@@ -521,7 +526,7 @@ namespace CostAccounting
                     {
                         int[] index = { 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 28, 30, 32, 34, 36, 38, 40, 42, 44, 46, 48, 50 };
                         foreach (int j in index)
-                            dataGridView.Rows[i].Cells[j].Value = decimal.Zero.ToString("N");
+                            dataGridView.Rows[i].Cells[j].Value = "-";
                     }
                 }
             }

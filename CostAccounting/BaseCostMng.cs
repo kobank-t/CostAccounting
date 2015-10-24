@@ -481,19 +481,25 @@ namespace CostAccounting
             using (var context = new CostAccountingEntities())
             {
                 //------------------------------------------------------------------------------ 各商品の入力値を設定
-                var target = from t_supplier in context.ProductSupplier
+                var target = from t in
+                                 (
+                                   from product in context.Product
+                                   join supplier in context.ProductSupplier
+                                   on new { product.year, product.code, product.category, product.type }
+                                      equals
+                                      new { supplier.year, code = supplier.product_code, supplier.category, supplier.type }
+                                   where product.year.Equals(Const.TARGET_YEAR)
+                                      && product.category.Equals((int)category)
+                                   select new { product, supplier }
+                                 )
                              join m_product in context.ProductCode
-                                  on new { t_supplier.year, code = t_supplier.product_code } equals new { m_product.year, m_product.code }
+                                  on new { t.product.year, code = t.product.code } equals new { m_product.year, m_product.code }
                              join m_supplier in context.Supplier
-                                  on new { t_supplier.year, code = t_supplier.supplier_code } equals new { m_supplier.year, m_supplier.code }
-                             join t_product in context.Product
-                                  on new { t_supplier.year, code = t_supplier.product_code, t_supplier.category } equals new { t_product.year, t_product.code, t_product.category }
+                                  on new { t.supplier.year, code = t.supplier.supplier_code } equals new { m_supplier.year, m_supplier.code }
                              join m_item in context.Item
-                                  on t_product.item_code equals m_item.code
-                             where t_supplier.year.Equals(Const.TARGET_YEAR)
-                                   && t_supplier.category.Equals((int)category)
-                             orderby t_supplier.supplier_code, t_supplier.product_code
-                             select new { t_product, t_supplier, m_product, m_supplier, m_item };
+                                  on t.product.item_code equals m_item.code
+                             orderby t.supplier.supplier_code, t.product.code, t.supplier.type
+                             select new { t_product = t.product, t_supplier = t.supplier, m_product, m_supplier, m_item };
 
                 var dataList = target.ToList();
                 dataGridView.RowCount = dataList.Count;
@@ -542,6 +548,7 @@ namespace CostAccounting
                     dataGridView.Rows[i].Cells[27].Value = dataList[i].t_supplier.month_03.ToString("N");
                     dataGridView.Rows[i].Cells["product_code"].Value = dataList[i].t_supplier.product_code;
                     dataGridView.Rows[i].Cells["supplier_code"].Value = dataList[i].t_supplier.supplier_code;
+                    dataGridView.Rows[i].Cells["type"].Value = dataList[i].t_supplier.type;
                 }
 
                 //------------------------------------------------------------------------------ 合計行の入力値を設定
@@ -839,12 +846,14 @@ namespace CostAccounting
 
                     string productCode = (string)row.Cells["product_code"].Value;
                     string supplierCode = (string)row.Cells["supplier_code"].Value;
+                    int type = (int)row.Cells["type"].Value;
 
                     var target = from t in context.ProductSupplier
                                  where t.year.Equals(Const.TARGET_YEAR)
                                     && t.product_code.Equals(productCode)
                                     && t.supplier_code.Equals(supplierCode)
                                     && t.category.Equals((int)category)
+                                    && t.type.Equals(type)
                                  select t;
 
                     if (target.Count() > 0)

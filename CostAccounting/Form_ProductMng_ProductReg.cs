@@ -381,11 +381,12 @@ namespace CostAccounting
                                   && t.product_code.Equals(productCode.Text)
                                   && t.supplier_code.Equals(suppllierCode.Text)
                                   && t.category.Equals(category)
+                                  && t.type.Equals((int)Const.PRODUCT_TYPE.Normal)
                                select t;
 
                 if (supplier.Count() == decimal.One)
                 {
-                    unitPrice.Text = supplier.First().unit_price.ToString();
+                    unitPrice.Text = supplier.First().unit_price.ToString("N");
                     updateTime.Text = supplier.First().update_date.ToString();
                     updatePC.Text = supplier.First().update_user;
                 }
@@ -410,6 +411,7 @@ namespace CostAccounting
                               where t.code.Equals(productCode.Text)
                                  && t.year.Equals(Const.TARGET_YEAR)
                                  && t.category.Equals(category)
+                                 && t.type.Equals((int)Const.PRODUCT_TYPE.Normal)
                               select t;
 
                 if (product.Count() == decimal.One)
@@ -430,25 +432,7 @@ namespace CostAccounting
                     trayNum.Text = product.First().tray_num.ToString();
 
                     // 取引先データの設定
-                    var supplier = from t in context.ProductSupplier
-                                   where t.year.Equals(Const.TARGET_YEAR)
-                                      && t.product_code.Equals(productCode.Text)
-                                      && t.supplier_code.Equals(suppllierCode.Text)
-                                      && t.category.Equals(category)
-                                   select t;
-
-                    if (supplier.Count() == decimal.One)
-                    {
-                        unitPrice.Text = supplier.First().unit_price.ToString();
-                        updateTime.Text = supplier.First().update_date.ToString();
-                        updatePC.Text = supplier.First().update_user;
-                    }
-                    else
-                    {
-                        unitPrice.Text = String.Empty;
-                        updateTime.Text = String.Empty;
-                        updatePC.Text = String.Empty;
-                    }
+                    setSupplierData();
 
                     // 関連テーブルの主キー（年＋商品コード＋取引先コード＋予定／実績）を生成
                     string id = string.Concat(Const.TARGET_YEAR, productCode.Text, category);
@@ -456,6 +440,7 @@ namespace CostAccounting
                     // 原料費データ
                     List<ProductMaterial> material = (from t in context.ProductMaterial
                                                       where t.id.Equals(id)
+                                                      orderby t.no
                                                       select t).ToList();
                     dgvMaterialCost.RowCount = material.Count() + 1;
                     for (int i = 0; i < material.Count(); i++)
@@ -468,6 +453,7 @@ namespace CostAccounting
                     // 外注費データ
                     List<ProductContractor> contractor = (from t in context.ProductContractor
                                                           where t.id.Equals(id)
+                                                          orderby t.no
                                                           select t).ToList();
                     dgvContractors.RowCount = contractor.Count() + 1;
                     for (int i = 0; i < contractor.Count(); i++)
@@ -480,6 +466,7 @@ namespace CostAccounting
                     // 製造経費－原料運賃データ
                     List<ProductMaterialsFare> materialFare = (from t in context.ProductMaterialsFare
                                                                where t.id.Equals(id)
+                                                               orderby t.no
                                                                select t).ToList();
                     dgvMaterialsFare.RowCount = materialFare.Count() + 1;
                     for (int i = 0; i < materialFare.Count(); i++)
@@ -492,6 +479,7 @@ namespace CostAccounting
                     // 製造経費－包装資材費データ
                     List<ProductPacking> packingList = (from t in context.ProductPacking
                                                         where t.id.Equals(id)
+                                                        orderby t.no
                                                         select t).ToList();
                     dgvPacking.RowCount = packingList.Count() + 1;
                     for (int i = 0; i < packingList.Count(); i++)
@@ -505,9 +493,10 @@ namespace CostAccounting
                     // 製造経費－設備費データ
                     List<ProductMachine> machine = (from t in context.ProductMachine
                                                     where t.id.Equals(id)
+                                                    orderby t.no
                                                     select t).ToList();
                     dgvMachine.RowCount = machine.Count() + 1;
-                    for (int i = 2; i < machine.Count(); i++)
+                    for (int i = 0; i < machine.Count(); i++)
                     {
                         dgvMachine.Rows[i].Cells["dgvMachineName"].Value = machine[i].code;
                         dgvMachine.Rows[i].Cells["dgvMachineTime"].Value = machine[i].time.ToString();
@@ -517,6 +506,7 @@ namespace CostAccounting
                     // 製造経費－荷造運賃データ
                     List<ProductPackingFare> packingFare = (from t in context.ProductPackingFare
                                                             where t.id.Equals(id)
+                                                            orderby t.no
                                                             select t).ToList();
                     dgvPackingFare.RowCount = packingFare.Count() + 1;
                     for (int i = 0; i < packingFare.Count(); i++)
@@ -597,13 +587,14 @@ namespace CostAccounting
 
                     var target = from t_product in context.Product
                                  join t_supplier in context.ProductSupplier on
-                                      new { t_product.year, t_product.code, t_product.category }
+                                      new { t_product.year, t_product.code, t_product.category, t_product.type }
                                         equals
-                                      new { t_supplier.year, code = t_supplier.product_code, t_supplier.category }
+                                      new { t_supplier.year, code = t_supplier.product_code, t_supplier.category, t_supplier.type }
                                  where t_product.year.Equals(Const.TARGET_YEAR)
                                     && t_product.code.Equals(productCode.Text)
                                     && t_supplier.supplier_code.Equals(suppllierCode.Text)
                                     && t_product.category.Equals(category)
+                                    && t_product.type.Equals((int)Const.PRODUCT_TYPE.Normal)
                                  select t_product;
 
                     if (target.Count() > decimal.Zero)
@@ -1305,6 +1296,7 @@ namespace CostAccounting
                 context.SaveChanges();
             }
 
+            setSupplierData();
             setOperationKbn();
             Program.MessageBoxAfter("登録しました。");
         }
@@ -1336,6 +1328,8 @@ namespace CostAccounting
                 context.SaveChanges();
             }
 
+            setSupplierData();
+            setOperationKbn();
             Program.MessageBoxAfter("修正しました。");
         }
 
@@ -1386,6 +1380,7 @@ namespace CostAccounting
                 year = Const.TARGET_YEAR,
                 code = productCode.Text,
                 category = category,
+                type = (int)Const.PRODUCT_TYPE.Normal,
                 item_code = itemCode.SelectedValue.ToString(),
                 volume = Conversion.Parse(volume.Text),
                 packing = packing.Text,
@@ -1428,6 +1423,7 @@ namespace CostAccounting
                 product_code = productCode.Text,
                 supplier_code = suppllierCode.Text,
                 category = category,
+                type = (int)Const.PRODUCT_TYPE.Normal,
                 unit_price = Conversion.Parse(unitPrice.Text),
                 update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                 update_date = DateTime.Now,
@@ -1439,6 +1435,7 @@ namespace CostAccounting
             string id = string.Concat(Const.TARGET_YEAR, productCode.Text, category);
 
             // 原料費データの登録
+            int no = 0;
             foreach (DataGridViewRow row in dgvMaterialCost.Rows)
             {
                 string code = (string)row.Cells["dgvMaterialCostName"].Value;
@@ -1447,6 +1444,7 @@ namespace CostAccounting
                     var entity = new ProductMaterial()
                     {
                         id = id,
+                        no = no++,
                         code = code,
                         quantity = Conversion.Parse((string)row.Cells["dgvMaterialCostQuantity"].Value),
                         update_user = SystemInformation.ComputerName,
@@ -1458,6 +1456,7 @@ namespace CostAccounting
             }
 
             // 外注費データの登録
+            no = 0;
             foreach (DataGridViewRow row in dgvContractors.Rows)
             {
                 string name = (string)row.Cells["dgvContractorsName"].Value;
@@ -1466,6 +1465,7 @@ namespace CostAccounting
                     var entity = new ProductContractor()
                     {
                         id = id,
+                        no = no++,
                         name = name,
                         quantity = Conversion.Parse((string)row.Cells["dgvContractorsQuantity"].Value),
                         cost = Conversion.Parse((string)row.Cells["dgvContractorsCost"].Value),
@@ -1478,6 +1478,7 @@ namespace CostAccounting
             }
 
             // 原料運賃データの登録
+            no = 0;
             foreach (DataGridViewRow row in dgvMaterialsFare.Rows)
             {
                 string name = (string)row.Cells["dgvMaterialsFareName"].Value;
@@ -1486,6 +1487,7 @@ namespace CostAccounting
                     var entity = new ProductMaterialsFare()
                     {
                         id = id,
+                        no = no++,
                         name = name,
                         quantity = Conversion.Parse((string)row.Cells["dgvMaterialsFareQuantity"].Value),
                         cost = Conversion.Parse((string)row.Cells["dgvMaterialsFareCost"].Value),
@@ -1498,6 +1500,7 @@ namespace CostAccounting
             }
 
             // 包装資材費データの登録
+            no = 0;
             foreach (DataGridViewRow row in dgvPacking.Rows)
             {
                 string code = (string)row.Cells["dgvPackingName"].Value;
@@ -1506,6 +1509,7 @@ namespace CostAccounting
                     var entity = new ProductPacking()
                     {
                         id = id,
+                        no = no++,
                         code = code,
                         quantity = Conversion.Parse((string)row.Cells["dgvPackingQuantity"].Value),
                         update_user = SystemInformation.ComputerName,
@@ -1517,6 +1521,7 @@ namespace CostAccounting
             }
 
             // 設備費データの登録
+            no = 0;
             foreach (DataGridViewRow row in dgvMachine.Rows)
             {
                 string code = (string)row.Cells["dgvMachineName"].Value;
@@ -1525,6 +1530,7 @@ namespace CostAccounting
                     var entity = new ProductMachine()
                     {
                         id = id,
+                        no = no++,
                         code = code,
                         time = Conversion.Parse((string)row.Cells["dgvMachineTime"].Value),
                         update_user = SystemInformation.ComputerName,
@@ -1536,6 +1542,7 @@ namespace CostAccounting
             }
 
             // 荷造運賃
+            no = 0;
             foreach (DataGridViewRow row in dgvPackingFare.Rows)
             {
                 string code = (string)row.Cells["dgvPackingFareName"].Value;
@@ -1544,6 +1551,7 @@ namespace CostAccounting
                     var entity = new ProductPackingFare()
                     {
                         id = id,
+                        no = no++,
                         code = code,
                         quantity = Conversion.Parse((string)row.Cells["dgvPackingFareQuantity"].Value),
                         update_user = SystemInformation.ComputerName,
@@ -1569,6 +1577,7 @@ namespace CostAccounting
                               && t.product_code.Equals(productCode.Text)
                               && t.supplier_code.Equals(suppllierCode.Text)
                               && t.category.Equals(category)
+                              && t.type.Equals((int)Const.PRODUCT_TYPE.Normal)
                            select t;
             context.ProductSupplier.RemoveRange(supplier);
 
@@ -1579,6 +1588,7 @@ namespace CostAccounting
                                     where t.year.Equals(Const.TARGET_YEAR)
                                        && t.product_code.Equals(productCode.Text)
                                        && t.category.Equals(category)
+                                       && t.type.Equals((int)Const.PRODUCT_TYPE.Normal)
                                     select t;
 
                 if (supplierOther.Count() > decimal.One)
@@ -1592,6 +1602,7 @@ namespace CostAccounting
                           where t.code.Equals(productCode.Text)
                              && t.year.Equals(Const.TARGET_YEAR)
                              && t.category.Equals(category)
+                             && t.type.Equals((int)Const.PRODUCT_TYPE.Normal)
                           select t;
             context.Product.RemoveRange(product);
 

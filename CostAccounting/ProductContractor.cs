@@ -15,6 +15,7 @@ namespace CostAccounting
     public partial class ProductContractor
     {
         public string id { get; set; }
+        public int no { get; set; }
         public string name { get; set; }
         public decimal quantity { get; set; }
         public decimal cost { get; set; }

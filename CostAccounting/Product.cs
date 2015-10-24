@@ -17,6 +17,7 @@ namespace CostAccounting
         public int year { get; set; }
         public string code { get; set; }
         public int category { get; set; }
+        public int type { get; set; }
         public string item_code { get; set; }
         public decimal volume { get; set; }
         public string packing { get; set; }

@@ -15,6 +15,7 @@ namespace CostAccounting
     public partial class ProductMaterial
     {
         public string id { get; set; }
+        public int no { get; set; }
         public string code { get; set; }
         public decimal quantity { get; set; }
         public string update_user { get; set; }

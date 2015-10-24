@@ -170,6 +170,7 @@
             this.dataGridViewTextBoxColumn49 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.product_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplier_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAppend = new System.Windows.Forms.Button();
             this.dataGridViewTotal = new System.Windows.Forms.DataGridView();
             this.dgvMaterialCostNameTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -760,7 +761,8 @@
             this.dataGridViewTextBoxColumn48,
             this.dataGridViewTextBoxColumn49,
             this.product_code,
-            this.supplier_code});
+            this.supplier_code,
+            this.type});
             this.dataGridView.Location = new System.Drawing.Point(12, 147);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
@@ -1155,6 +1157,12 @@
             this.supplier_code.Name = "supplier_code";
             this.supplier_code.ReadOnly = true;
             this.supplier_code.Visible = false;
+            // 
+            // type
+            // 
+            this.type.HeaderText = "type";
+            this.type.Name = "type";
+            this.type.Visible = false;
             // 
             // btnAppend
             // 
@@ -2111,6 +2119,28 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column114;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column115;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column116;
+        private System.Windows.Forms.Label labelFilePath;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown targetMonth;
+        private System.Windows.Forms.Button btnFileOpen;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.GroupBox groupMonth;
+        private System.Windows.Forms.Button btnAllClear;
+        private System.Windows.Forms.Button btnAllCheck;
+        private System.Windows.Forms.CheckBox checkBoxMar;
+        private System.Windows.Forms.CheckBox checkBoxFeb;
+        private System.Windows.Forms.CheckBox checkBoxJan;
+        private System.Windows.Forms.CheckBox checkBoxDec;
+        private System.Windows.Forms.CheckBox checkBoxNov;
+        private System.Windows.Forms.CheckBox checkBoxOct;
+        private System.Windows.Forms.CheckBox checkBoxSep;
+        private System.Windows.Forms.CheckBox checkBoxAug;
+        private System.Windows.Forms.CheckBox checkBoxJul;
+        private System.Windows.Forms.CheckBox checkBoxJun;
+        private System.Windows.Forms.CheckBox checkBoxMay;
+        private System.Windows.Forms.CheckBox checkBoxApr;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewItem;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewSuppliers;
@@ -2170,27 +2200,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn49;
         private System.Windows.Forms.DataGridViewTextBoxColumn product_code;
         private System.Windows.Forms.DataGridViewTextBoxColumn supplier_code;
-        private System.Windows.Forms.Label labelFilePath;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown targetMonth;
-        private System.Windows.Forms.Button btnFileOpen;
-        private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.GroupBox groupMonth;
-        private System.Windows.Forms.Button btnAllClear;
-        private System.Windows.Forms.Button btnAllCheck;
-        private System.Windows.Forms.CheckBox checkBoxMar;
-        private System.Windows.Forms.CheckBox checkBoxFeb;
-        private System.Windows.Forms.CheckBox checkBoxJan;
-        private System.Windows.Forms.CheckBox checkBoxDec;
-        private System.Windows.Forms.CheckBox checkBoxNov;
-        private System.Windows.Forms.CheckBox checkBoxOct;
-        private System.Windows.Forms.CheckBox checkBoxSep;
-        private System.Windows.Forms.CheckBox checkBoxAug;
-        private System.Windows.Forms.CheckBox checkBoxJul;
-        private System.Windows.Forms.CheckBox checkBoxJun;
-        private System.Windows.Forms.CheckBox checkBoxMay;
-        private System.Windows.Forms.CheckBox checkBoxApr;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn type;
     }
 }

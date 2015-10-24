@@ -18,6 +18,7 @@ namespace CostAccounting
         public string product_code { get; set; }
         public string supplier_code { get; set; }
         public int category { get; set; }
+        public int type { get; set; }
         public decimal unit_price { get; set; }
         public decimal month_01 { get; set; }
         public decimal month_02 { get; set; }
