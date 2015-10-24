@@ -1593,7 +1593,7 @@ namespace CostAccounting
                              && t.year.Equals(Const.TARGET_YEAR)
                              && t.category.Equals(category)
                           select t;
-            context.Product.Remove(product.First());
+            context.Product.RemoveRange(product);
 
             // 関連テーブルの主キー（年＋商品コード＋取引先コード＋予定／実績）を生成
             string id = string.Concat(Const.TARGET_YEAR, productCode.Text, category);
