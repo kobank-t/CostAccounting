@@ -45,12 +45,18 @@ namespace CostAccounting
                 var list = from t in context.ProductCode
                            where t.year.Equals(Const.TARGET_YEAR)
                               && (string.IsNullOrEmpty(code) || t.code.StartsWith(code))
-                              && (string.IsNullOrEmpty(name) || t.name.Contains(name))
                               && t.del_flg.Equals(Const.FLG_OFF)
                            orderby t.code
                            select new { t.code, t.name, t.unit, t.kbn, t.note };
 
-                dataGridView.DataSource = list.ToList();
+                var ret = list.ToList();
+                if (!string.IsNullOrEmpty(name))
+                {
+                    foreach (var data in list.ToList())
+                        if (!data.name.Contains(name))
+                            ret.Remove(data);
+                }
+                dataGridView.DataSource = ret;
             }
 
             SelectedRows();

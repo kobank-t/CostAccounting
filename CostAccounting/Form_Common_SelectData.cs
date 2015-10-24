@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO;
+using System.Collections.Generic;
 
 namespace CostAccounting
 {
@@ -32,7 +33,6 @@ namespace CostAccounting
          *************************************************************/
         private void Form_Common_SelectData_Load(object sender, EventArgs e)
         {
-
         }
 
         /*************************************************************
@@ -40,34 +40,73 @@ namespace CostAccounting
          *************************************************************/
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string code = textSearchCode.Text;
-            string name = textSearchName.Text;
-
             using (var context = new CostAccountingEntities())
             {
                 switch (type)
                 {
                     case Const.SEARCH_TYPE.Product:
-                        var productList = from t in context.ProductCode
-                                          where t.year.Equals(Const.TARGET_YEAR)
-                                             && (string.IsNullOrEmpty(code) || t.code.StartsWith(code))
-                                             && (string.IsNullOrEmpty(name) || t.name.Contains(name))
-                                             && t.del_flg.Equals(Const.FLG_OFF)
-                                          orderby t.code
-                                          select new { t.code, t.name, t.note, t.unit };
-                        dataGridView.DataSource = productList.ToList();
+                        searchProduct();
                         break;
                     case Const.SEARCH_TYPE.Supplier:
-                        var supplierList = from t in context.Supplier
-                                           where t.year.Equals(Const.TARGET_YEAR)
-                                              && (string.IsNullOrEmpty(code) || t.code.StartsWith(code))
-                                              && (string.IsNullOrEmpty(name) || t.name.Contains(name))
-                                              && t.del_flg.Equals(Const.FLG_OFF)
-                                           orderby t.code
-                                           select new { t.code, t.name, t.note, t.unit };
-                        dataGridView.DataSource = supplierList.ToList();
+                        searchSupplier();
                         break;
                 }
+            }
+        }
+
+        /*************************************************************
+         * 商品検索を行う
+         *************************************************************/
+        private void searchProduct()
+        {
+            string code = textSearchCode.Text;
+            string name = textSearchName.Text;
+
+            using (var context = new CostAccountingEntities())
+            {
+                var productList = from t in context.ProductCode
+                                  where t.year.Equals(Const.TARGET_YEAR)
+                                     && (string.IsNullOrEmpty(code) || t.code.StartsWith(code))
+                                     && t.del_flg.Equals(Const.FLG_OFF)
+                                  orderby t.code
+                                  select new { t.code, t.name, t.note, t.unit };
+
+                var ret = productList.ToList();
+                if (!string.IsNullOrEmpty(name))
+                {
+                    foreach (var data in productList.ToList())
+                        if (!data.name.Contains(name))
+                            ret.Remove(data);
+                }
+                dataGridView.DataSource = ret;
+            }
+        }
+
+        /*************************************************************
+         * 取引先検索を行う
+         *************************************************************/
+        private void searchSupplier()
+        {
+            string code = textSearchCode.Text;
+            string name = textSearchName.Text;
+
+            using (var context = new CostAccountingEntities())
+            {
+                var supplierList = from t in context.Supplier
+                                   where t.year.Equals(Const.TARGET_YEAR)
+                                      && (string.IsNullOrEmpty(code) || t.code.StartsWith(code))
+                                      && t.del_flg.Equals(Const.FLG_OFF)
+                                   orderby t.code
+                                   select new { t.code, t.name, t.note, t.unit };
+
+                var ret = supplierList.ToList();
+                if (!string.IsNullOrEmpty(name))
+                {
+                    foreach (var data in supplierList.ToList())
+                        if (!data.name.Contains(name))
+                            ret.Remove(data);
+                }
+                dataGridView.DataSource = ret;
             }
         }
 

@@ -42,17 +42,21 @@ namespace CostAccounting
 
             using (var context = new CostAccountingEntities())
             {
-                // TODO 曖昧検索の見直し
-                context.Database.Log = sql => { Console.Write(sql); };
                 var list = from t in context.Material
                            where t.year.Equals(Const.TARGET_YEAR)
                               && (string.IsNullOrEmpty(code) || t.code.StartsWith(code))
-                              && (string.IsNullOrEmpty(name) || t.name.Contains(name))
                               && t.del_flg.Equals(Const.FLG_OFF)
                            orderby t.code
                            select new { t.code, t.name, t.price_budget, t.price_actual, t.note };
 
-                dataGridView.DataSource = list.ToList();
+                var ret = list.ToList();
+                if (!string.IsNullOrEmpty(name))
+                {
+                    foreach (var data in list.ToList())
+                        if (!data.name.Contains(name))
+                            ret.Remove(data);
+                }
+                dataGridView.DataSource = ret;
             }
 
             SelectedRows();
