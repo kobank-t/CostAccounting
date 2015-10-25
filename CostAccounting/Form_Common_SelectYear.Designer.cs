@@ -55,7 +55,6 @@
             this.targetYear.Name = "targetYear";
             this.targetYear.Size = new System.Drawing.Size(84, 38);
             this.targetYear.TabIndex = 0;
-            this.targetYear.Text = "2017";
             this.targetYear.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.targetYear.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             // 
