@@ -340,7 +340,6 @@
           <Property Name="year" Type="int" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="note" Type="nvarchar" MaxLength="50" />
-          <Property Name="unit" Type="varchar" MaxLength="10" />
           <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
@@ -726,7 +725,6 @@
           <Property Name="year" Type="Int32" Nullable="false" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="unit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
@@ -1065,7 +1063,6 @@
                 <ScalarProperty Name="del_flg" ColumnName="del_flg" />
                 <ScalarProperty Name="update_date" ColumnName="update_date" />
                 <ScalarProperty Name="update_user" ColumnName="update_user" />
-                <ScalarProperty Name="unit" ColumnName="unit" />
                 <ScalarProperty Name="note" ColumnName="note" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="year" ColumnName="year" />

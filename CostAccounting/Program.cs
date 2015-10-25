@@ -390,7 +390,7 @@ namespace CostAccounting
         public const string FLG_OFF = "0";
 
         // データ検索のタイプ
-        public enum SEARCH_TYPE { Product, Supplier }
+        public enum SEARCH_TYPE { Product, Supplier, Material, Packing }
 
         // ステータスのタイプ
         public enum STATUS_TYPE { Default, Error }

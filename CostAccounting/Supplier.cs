@@ -18,7 +18,6 @@ namespace CostAccounting
         public int year { get; set; }
         public string name { get; set; }
         public string note { get; set; }
-        public string unit { get; set; }
         public string update_user { get; set; }
         public System.DateTime update_date { get; set; }
         public string del_flg { get; set; }

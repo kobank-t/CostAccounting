@@ -529,7 +529,15 @@ namespace CostAccounting
                     {
                         string code = (string)form.dataGridView.SelectedRows[0].Cells[0].Value;
                         setProductData(code, e.RowIndex);
+
+                        if (e.RowIndex == dgvProduct.NewRowIndex)
+                        {
+                            dgvProduct.BeginEdit(false);
+                            dgvProduct.CurrentCell = dgvProduct[3, dgvProduct.NewRowIndex];
+                            dgvProduct.NotifyCurrentCellDirty(true);
+                        }
                     }
+                    calcAll();
                 }
             }
         }

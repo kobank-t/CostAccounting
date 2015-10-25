@@ -266,6 +266,8 @@ namespace CostAccounting
                 dgvTextBox.Leave -= new EventHandler(control_Leave_calc);
                 dgvTextBox = null;
             }
+
+            calcAll();
         }
 
         /*************************************************************
@@ -295,11 +297,62 @@ namespace CostAccounting
         {
             DataGridView dgv = (DataGridView)sender;
 
-            if (e.ColumnIndex > decimal.MinusOne)
+            if (e.ColumnIndex > decimal.MinusOne && e.RowIndex > decimal.MinusOne)
             {
                 if (dgv.Columns[e.ColumnIndex] is DataGridViewTextBoxColumn)
                 {
                     SendKeys.Send("{F2}");
+                }
+
+                if (dgv.Columns[e.ColumnIndex] is DataGridViewButtonColumn)
+                {
+
+                    // 原料名検索
+                    if (dgv.CurrentCell.OwningColumn.Name == "dgvMaterialCostBtn")
+                    {
+                        Form_Common_SelectData form = new Form_Common_SelectData(Const.SEARCH_TYPE.Material);
+                        form.ShowDialog();
+                        if (form.DialogResult == DialogResult.OK)
+                        {
+                            string code = (string)form.dataGridView.SelectedRows[0].Cells[0].Value;
+                            if (DataTableSupport.containsKey((DataTable)dgvMaterialCostName.DataSource, code))
+                            {
+                                dgvMaterialCost.Rows[e.RowIndex].Cells["dgvMaterialCostName"].Value = code;
+                                dgvMaterialCost.Rows[e.RowIndex].Cells["dgvMaterialCostPrice"].Value = DataTableSupport.getPrice((DataTable)dgvMaterialCostName.DataSource, code).ToString("N");
+
+                                if (e.RowIndex == dgvMaterialCost.NewRowIndex)
+                                {
+                                    dgvMaterialCost.BeginEdit(false);
+                                    dgvMaterialCost.CurrentCell = dgvMaterialCost[2, dgvMaterialCost.NewRowIndex];
+                                    dgvMaterialCost.NotifyCurrentCellDirty(true);
+                                }                                
+                            }
+                        }
+                    }
+
+                     // 包装資材費検索
+                    if (dgv.CurrentCell.OwningColumn.Name == "dgvPackingBtn")
+                    {
+                        Form_Common_SelectData form = new Form_Common_SelectData(Const.SEARCH_TYPE.Packing);
+                        form.ShowDialog();
+                        if (form.DialogResult == DialogResult.OK)
+                        {
+                            string code = (string)form.dataGridView.SelectedRows[0].Cells[0].Value;
+                            if (DataTableSupport.containsKey((DataTable)dgvPackingName.DataSource, code))
+                            {
+                                dgvPacking.Rows[e.RowIndex].Cells["dgvPackingName"].Value = code;
+                                dgvPacking.Rows[e.RowIndex].Cells["dgvPackingCost"].Value = DataTableSupport.getPrice((DataTable)dgvPackingName.DataSource, code).ToString("N");
+
+                                if (e.RowIndex == dgvPacking.NewRowIndex)
+                                {
+                                    dgvPacking.BeginEdit(false);
+                                    dgvPacking.CurrentCell = dgvPacking[2, dgvPacking.NewRowIndex];
+                                    dgvPacking.NotifyCurrentCellDirty(true);
+                                }
+                            }
+                        }
+                    }
+                    calcAll();
                 }
             }
         }
@@ -981,7 +1034,7 @@ namespace CostAccounting
             decimal nightTimeF = Conversion.Parse(this.nightTimeF.Text);
 
             decimal tray = Parameters.getInstance(Program.judgeCategory(radioBudget, radioActual)).trayNum;
-            decimal nightTimeM_direct = (tray != decimal.Zero ? 
+            decimal nightTimeM_direct = (tray != decimal.Zero ?
                                             decimal.Divide(decimal.Multiply(nightTimeM, (decimal)(2 * Conversion.Parse(trayNum.Text)))
                                                            , tray)
                                             : decimal.Zero);

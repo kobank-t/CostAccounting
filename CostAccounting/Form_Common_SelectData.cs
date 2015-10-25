@@ -25,6 +25,12 @@ namespace CostAccounting
                 case Const.SEARCH_TYPE.Supplier:
                     this.Text = "取引先検索";
                     break;
+                case Const.SEARCH_TYPE.Material:
+                    this.Text = "原材料検索";
+                    break;
+                case Const.SEARCH_TYPE.Packing:
+                    this.Text = "資材検索";
+                    break;
             }
         }
 
@@ -49,6 +55,12 @@ namespace CostAccounting
                         break;
                     case Const.SEARCH_TYPE.Supplier:
                         searchSupplier();
+                        break;
+                    case Const.SEARCH_TYPE.Material:
+                        searchMaterial();
+                        break;
+                    case Const.SEARCH_TYPE.Packing:
+                        searchPacking();
                         break;
                 }
             }
@@ -97,12 +109,68 @@ namespace CostAccounting
                                       && (string.IsNullOrEmpty(code) || t.code.StartsWith(code))
                                       && t.del_flg.Equals(Const.FLG_OFF)
                                    orderby t.code
-                                   select new { t.code, t.name, t.note, t.unit };
+                                   select new { t.code, t.name, t.note, unit = "" };
 
                 var ret = supplierList.ToList();
                 if (!string.IsNullOrEmpty(name))
                 {
                     foreach (var data in supplierList.ToList())
+                        if (!data.name.Contains(name))
+                            ret.Remove(data);
+                }
+                dataGridView.DataSource = ret;
+            }
+        }
+
+        /*************************************************************
+         * 原材料検索を行う
+         *************************************************************/
+        private void searchMaterial()
+        {
+            string code = textSearchCode.Text;
+            string name = textSearchName.Text;
+
+            using (var context = new CostAccountingEntities())
+            {
+                var target = from t in context.RowMaterial
+                             where t.year.Equals(Const.TARGET_YEAR)
+                                && (string.IsNullOrEmpty(code) || t.code.StartsWith(code))
+                                && t.del_flg.Equals(Const.FLG_OFF)
+                             orderby t.code
+                             select new { t.code, t.name, t.note, unit = "" };
+
+                var ret = target.ToList();
+                if (!string.IsNullOrEmpty(name))
+                {
+                    foreach (var data in target.ToList())
+                        if (!data.name.Contains(name))
+                            ret.Remove(data);
+                }
+                dataGridView.DataSource = ret;
+            }
+        }
+
+        /*************************************************************
+         * 資材検索を行う
+         *************************************************************/
+        private void searchPacking()
+        {
+            string code = textSearchCode.Text;
+            string name = textSearchName.Text;
+
+            using (var context = new CostAccountingEntities())
+            {
+                var target = from t in context.Material
+                             where t.year.Equals(Const.TARGET_YEAR)
+                                && (string.IsNullOrEmpty(code) || t.code.StartsWith(code))
+                                && t.del_flg.Equals(Const.FLG_OFF)
+                             orderby t.code
+                             select new { t.code, t.name, t.note, unit = "" };
+
+                var ret = target.ToList();
+                if (!string.IsNullOrEmpty(name))
+                {
+                    foreach (var data in target.ToList())
                         if (!data.name.Contains(name))
                             ret.Remove(data);
                 }
