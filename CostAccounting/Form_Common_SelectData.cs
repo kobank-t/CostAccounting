@@ -12,6 +12,9 @@ namespace CostAccounting
         // 検索タイプ
         private Const.SEARCH_TYPE type;
 
+        /*************************************************************
+         * コンストラクタ
+         *************************************************************/
         public Form_Common_SelectData(Const.SEARCH_TYPE type)
         {
             InitializeComponent();
@@ -200,5 +203,12 @@ namespace CostAccounting
             Event.textBox_KeyPress_numeric(sender, e);
         }
 
+        /*************************************************************
+         * データグリッドビューの行をダブルクリックで決定とする
+         *************************************************************/
+        private void dataGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnDecide.PerformClick();
+        }
     }
 }
