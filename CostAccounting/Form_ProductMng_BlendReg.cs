@@ -46,6 +46,14 @@ namespace CostAccounting
             if (!radio.Checked)
                 return;
 
+            // ブレンド対象の商品データを再設定
+            foreach (DataGridViewRow row in dgvProduct.Rows)
+            {
+                string code = (string)row.Cells["dgvProductCode"].Value;
+                if (!string.IsNullOrEmpty(code))
+                    setProductData(code, row.Index);
+            }
+
             // 商品データと取引先データの再設定
             if (!string.IsNullOrEmpty(productCode.Text)
                 && Program.MessageBoxBefore(string.Concat(productName.Text + "の登録済み" + radio.Text + "情報に切り替えますか？"
