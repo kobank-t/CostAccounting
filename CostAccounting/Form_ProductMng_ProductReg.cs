@@ -148,7 +148,9 @@ namespace CostAccounting
 
             // 商品データと取引先データの再設定
             if (!string.IsNullOrEmpty(productCode.Text)
-                && Program.MessageBoxBefore(productName.Text + "の" + radio.Text + "情報に切り替えますか？") == DialogResult.Yes)
+                && Program.MessageBoxBefore(string.Concat(productName.Text + "の登録済み" + radio.Text + "情報に切り替えますか？"
+                                                          , Environment.NewLine
+                                                          , "※" + radio.Text + "情報が未登録の場合は、全て初期値を設定します。")) == DialogResult.Yes)
             {
                 setProductData();
                 setSupplierData();
@@ -325,12 +327,12 @@ namespace CostAccounting
                                     dgvMaterialCost.BeginEdit(false);
                                     dgvMaterialCost.CurrentCell = dgvMaterialCost[2, dgvMaterialCost.NewRowIndex];
                                     dgvMaterialCost.NotifyCurrentCellDirty(true);
-                                }                                
+                                }
                             }
                         }
                     }
 
-                     // 包装資材費検索
+                    // 包装資材費検索
                     if (dgv.CurrentCell.OwningColumn.Name == "dgvPackingBtn")
                     {
                         Form_Common_SelectData form = new Form_Common_SelectData(Const.SEARCH_TYPE.Packing);
@@ -1312,7 +1314,12 @@ namespace CostAccounting
          *************************************************************/
         private void btnAppend_Click(object sender, EventArgs e)
         {
-            if (Program.MessageBoxBefore("登録しますか？") != DialogResult.Yes)
+            string radioText = radioBudget.Checked ? "【予定】" : "【実績】";
+
+            string msg = radioText + "情報を登録しますか？";
+            msg = radioBudget.Checked ? string.Concat(msg, Environment.NewLine, "※実績情報にもコピーします。") : msg;
+
+            if (Program.MessageBoxBefore(msg) != DialogResult.Yes)
             {
                 return;
             }
@@ -1359,7 +1366,9 @@ namespace CostAccounting
          *************************************************************/
         private void btnChange_Click(object sender, EventArgs e)
         {
-            if (Program.MessageBoxBefore("修正しますか？") != DialogResult.Yes)
+            string radioText = radioBudget.Checked ? "【予定】" : "【実績】";
+
+            if (Program.MessageBoxBefore(radioText + "情報を修正しますか？") != DialogResult.Yes)
             {
                 return;
             }
@@ -1391,7 +1400,9 @@ namespace CostAccounting
          *************************************************************/
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (Program.MessageBoxBefore("削除しますか？") != DialogResult.Yes)
+            string radioText = radioBudget.Checked ? "【予定】" : "【実績】";
+
+            if (Program.MessageBoxBefore(radioText + "情報を削除しますか？") != DialogResult.Yes)
             {
                 return;
             }

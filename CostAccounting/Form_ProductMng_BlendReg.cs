@@ -48,7 +48,9 @@ namespace CostAccounting
 
             // 商品データと取引先データの再設定
             if (!string.IsNullOrEmpty(productCode.Text)
-                && Program.MessageBoxBefore(productName.Text + "の" + radio.Text + "情報に切り替えますか？") == DialogResult.Yes)
+                && Program.MessageBoxBefore(string.Concat(productName.Text + "の登録済み" + radio.Text + "情報に切り替えますか？"
+                                                          , Environment.NewLine
+                                                          , "※" + radio.Text + "情報が未登録の場合は、全て初期値を設定します。")) == DialogResult.Yes)
             {
                 setProductData();
                 setSupplierData();
@@ -92,7 +94,12 @@ namespace CostAccounting
          *************************************************************/
         private void btnAppend_Click(object sender, EventArgs e)
         {
-            if (Program.MessageBoxBefore("登録しますか？") != DialogResult.Yes)
+            string radioText = radioBudget.Checked ? "【予定】" : "【実績】";
+
+            string msg = radioText + "情報を登録しますか？";
+            msg = radioBudget.Checked ? string.Concat(msg, Environment.NewLine, "※実績情報にもコピーします。") : msg;
+
+            if (Program.MessageBoxBefore(msg) != DialogResult.Yes)
             {
                 return;
             }
@@ -139,7 +146,9 @@ namespace CostAccounting
          *************************************************************/
         private void btnChange_Click(object sender, EventArgs e)
         {
-            if (Program.MessageBoxBefore("修正しますか？") != DialogResult.Yes)
+            string radioText = radioBudget.Checked ? "【予定】" : "【実績】";
+
+            if (Program.MessageBoxBefore(radioText + "情報を修正しますか？") != DialogResult.Yes)
             {
                 return;
             }
@@ -171,7 +180,9 @@ namespace CostAccounting
          *************************************************************/
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (Program.MessageBoxBefore("削除しますか？") != DialogResult.Yes)
+            string radioText = radioBudget.Checked ? "【予定】" : "【実績】";
+
+            if (Program.MessageBoxBefore(radioText + "情報を削除しますか？") != DialogResult.Yes)
             {
                 return;
             }
@@ -656,7 +667,7 @@ namespace CostAccounting
                               where t_product.code.Equals(productCode)
                                  && t_product.year.Equals(Const.TARGET_YEAR)
                                  && t_product.category.Equals(category)
-                                 && t_product.type.Equals((int)Const.PRODUCT_TYPE.Blend)
+                                 && t_product.type.Equals((int)Const.PRODUCT_TYPE.Normal)
                               select new { t = t_product, m_product.name };
 
                 if (product.Count() == decimal.One)
