@@ -42,6 +42,7 @@ namespace CostAccounting
                 { 20, "8月" }, { 21, "9月" }, { 22, "10月" }, { 23, "11月" },
                 { 24 , "12月" }, { 25, "1月" }, { 26, "2月" }, { 27, "3月" }
             };
+        private Dictionary<CheckBox, int> checkBoxMonthDic = new Dictionary<CheckBox, int>();
 
         protected Control.ControlCollection ChecBoxControls
         {
@@ -53,6 +54,8 @@ namespace CostAccounting
                     {
                         CheckBox checkbox = (CheckBox)control;
                         checkBoxDic.Add(checkbox.Text, checkbox);
+
+                        checkBoxMonthDic.Add(checkbox, int.Parse(checkbox.Text.Replace("月", "")));
                     }
                 }
             }
@@ -924,46 +927,59 @@ namespace CostAccounting
                 //----------------------------------------- 実績登録の場合は、乖離幅測定データも登録
                 if (Const.CATEGORY_TYPE.Actual.Equals(category))
                 {
-                    var divergence = from t in context.Divergence
-                                     where t.year.Equals(Const.TARGET_YEAR)
-                                        && t.del_flg.Equals(Const.FLG_OFF)
-                                     select t;
-
-                    if (divergence.Count() == 0)
+                    foreach (CheckBox target in checkBoxMonthDic.Keys)
                     {
-                        // 登録処理
-                        var entity = new Divergence()
+                        target.Checked = true;
+                        foreach (CheckBox other in checkBoxMonthDic.Keys)
                         {
-                            year = Const.TARGET_YEAR,
-                            materialCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[29].Value),
-                            laborCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[30].Value),
-                            contractorsCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[31].Value),
-                            materialsFare_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[32].Value),
-                            packingCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[33].Value),
-                            utilitiesCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[34].Value),
-                            otherCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[35].Value),
-                            packingFare_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[36].Value),
-                            update_user = SystemInformation.UserName,
-                            update_date = DateTime.Now,
-                            del_flg = Const.FLG_OFF
-                        };
-                        context.Divergence.Add(entity);
-                    }
-                    else
-                    {
-                        // 更新処理
-                        divergence.First().materialCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[29].Value);
-                        divergence.First().laborCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[30].Value);
-                        divergence.First().contractorsCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[31].Value);
-                        divergence.First().materialsFare_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[32].Value);
-                        divergence.First().packingCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[33].Value);
-                        divergence.First().utilitiesCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[34].Value);
-                        divergence.First().otherCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[35].Value);
-                        divergence.First().packingFare_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[36].Value);
-                        divergence.First().update_user = SystemInformation.UserName;
-                        divergence.First().update_date = DateTime.Now;
-                    }
+                            if (!target.Equals(other))
+                                other.Checked = false;
+                        }
 
+                        int month = checkBoxMonthDic[target];
+                        var divergence = from t in context.Divergence
+                                         where t.year.Equals(Const.TARGET_YEAR)
+                                            && t.month.Equals(month)
+                                            && t.del_flg.Equals(Const.FLG_OFF)
+                                         select t;
+
+                        if (divergence.Count() == 0)
+                        {
+                            // 登録処理
+                            var entity = new Divergence()
+                            {
+                                year = Const.TARGET_YEAR,
+                                month = month,
+                                materialCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[29].Value),
+                                laborCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[30].Value),
+                                contractorsCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[31].Value),
+                                materialsFare_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[32].Value),
+                                packingCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[33].Value),
+                                utilitiesCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[34].Value),
+                                otherCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[35].Value),
+                                packingFare_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[36].Value),
+                                update_user = SystemInformation.UserName,
+                                update_date = DateTime.Now,
+                                del_flg = Const.FLG_OFF
+                            };
+                            context.Divergence.Add(entity);
+                        }
+                        else
+                        {
+                            // 更新処理
+                            divergence.First().materialCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[29].Value);
+                            divergence.First().laborCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[30].Value);
+                            divergence.First().contractorsCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[31].Value);
+                            divergence.First().materialsFare_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[32].Value);
+                            divergence.First().packingCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[33].Value);
+                            divergence.First().utilitiesCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[34].Value);
+                            divergence.First().otherCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[35].Value);
+                            divergence.First().packingFare_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[36].Value);
+                            divergence.First().update_user = SystemInformation.UserName;
+                            divergence.First().update_date = DateTime.Now;
+                        }
+
+                    }
                 }
 
                 context.SaveChanges();

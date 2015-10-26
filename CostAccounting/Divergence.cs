@@ -15,6 +15,7 @@ namespace CostAccounting
     public partial class Divergence
     {
         public int year { get; set; }
+        public int month { get; set; }
         public decimal materialCost { get; set; }
         public decimal laborCost { get; set; }
         public decimal contractorsCost { get; set; }

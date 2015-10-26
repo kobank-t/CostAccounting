@@ -29,8 +29,10 @@
         <EntityType Name="Divergence">
           <Key>
             <PropertyRef Name="year" />
+            <PropertyRef Name="month" />
           </Key>
           <Property Name="year" Type="int" Nullable="false" />
+          <Property Name="month" Type="int" Nullable="false" />
           <Property Name="materialCost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="laborCost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="contractorsCost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
@@ -414,8 +416,10 @@
         <EntityType Name="Divergence">
           <Key>
             <PropertyRef Name="year" />
+            <PropertyRef Name="month" />
           </Key>
           <Property Name="year" Type="Int32" Nullable="false" />
+          <Property Name="month" Type="Int32" Nullable="false" />
           <Property Name="materialCost" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="laborCost" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="contractorsCost" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
@@ -778,6 +782,7 @@
                 <ScalarProperty Name="contractorsCost" ColumnName="contractorsCost" />
                 <ScalarProperty Name="laborCost" ColumnName="laborCost" />
                 <ScalarProperty Name="materialCost" ColumnName="materialCost" />
+                <ScalarProperty Name="month" ColumnName="month" />
                 <ScalarProperty Name="year" ColumnName="year" />
               </MappingFragment>
             </EntityTypeMapping>

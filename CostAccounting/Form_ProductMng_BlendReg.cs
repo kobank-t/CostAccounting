@@ -126,6 +126,7 @@ namespace CostAccounting
             {
                 executeDelete(context, true);
                 executeAppend(context);
+                executeAppendSupplier(context);
 
                 // 予定の場合は実績も同データで登録する
                 if (radioBudget.Checked)
@@ -136,6 +137,8 @@ namespace CostAccounting
                     radioActual.Checked = true;
                     executeDelete(context, true);
                     executeAppend(context);
+                    executeDeleteSupplier(context);
+                    executeAppendSupplier(context);
                     radioBudget.Checked = true;
 
                     radioActual.CheckedChanged += new EventHandler(radio_CheckedChanged);
@@ -175,6 +178,7 @@ namespace CostAccounting
             {
                 executeDelete(context, true);
                 executeAppend(context);
+                executeChangeSupplier(context);
                 context.SaveChanges();
             }
 
@@ -199,6 +203,7 @@ namespace CostAccounting
             using (var context = new CostAccountingEntities())
             {
                 executeDelete(context, false);
+                executeDeleteSupplier(context);
                 context.SaveChanges();
             }
 
@@ -206,6 +211,70 @@ namespace CostAccounting
             setSupplierData();
             setOperationKbn();
             Program.MessageBoxAfter("削除しました。");
+        }
+
+        /*************************************************************
+         * 取引先の登録処理を行う
+         *************************************************************/
+        private void executeAppendSupplier(CostAccountingEntities context)
+        {
+            int category = (int)Program.judgeCategory(radioBudget, radioActual);
+
+            // 取引先データの登録
+            var entitySupplier = new ProductSupplier()
+            {
+                year = Const.TARGET_YEAR,
+                product_code = productCode.Text,
+                supplier_code = suppllierCode.Text,
+                category = category,
+                type = (int)Const.PRODUCT_TYPE.Blend,
+                unit_price = Conversion.Parse(unitPrice.Text),
+                update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
+                update_date = DateTime.Now,
+                del_flg = Const.FLG_OFF
+            };
+            context.ProductSupplier.Add(entitySupplier);
+        }
+
+        /*************************************************************
+         * 取引先の修正処理を行う
+         *************************************************************/
+        private void executeChangeSupplier(CostAccountingEntities context)
+        {
+            int category = (int)Program.judgeCategory(radioBudget, radioActual);
+
+            var target = from t in context.ProductSupplier
+                         where t.year.Equals(Const.TARGET_YEAR)
+                            && t.product_code.Equals(productCode.Text)
+                            && t.supplier_code.Equals(suppllierCode.Text)
+                            && t.category.Equals(category)
+                            && t.type.Equals((int)Const.PRODUCT_TYPE.Blend)
+                         select t;
+
+            if (target.Count() > decimal.Zero)
+            {
+                target.First().unit_price = Conversion.Parse(unitPrice.Text);
+                target.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
+                target.First().update_date = DateTime.Now;
+            }
+        }
+
+        /*************************************************************
+         * 取引先の削除処理を行う
+         *************************************************************/
+        private void executeDeleteSupplier(CostAccountingEntities context)
+        {
+            int category = (int)Program.judgeCategory(radioBudget, radioActual);
+
+            var target = from t in context.ProductSupplier
+                         where t.year.Equals(Const.TARGET_YEAR)
+                            && t.product_code.Equals(productCode.Text)
+                            && t.supplier_code.Equals(suppllierCode.Text)
+                            && t.category.Equals(category)
+                            && t.type.Equals((int)Const.PRODUCT_TYPE.Blend)
+                         select t;
+
+            context.ProductSupplier.RemoveRange(target);
         }
 
         /*************************************************************
@@ -247,21 +316,6 @@ namespace CostAccounting
             };
             context.Product.Add(entityProduct);
 
-            // 取引先データの登録
-            var entitySupplier = new ProductSupplier()
-            {
-                year = Const.TARGET_YEAR,
-                product_code = productCode.Text,
-                supplier_code = suppllierCode.Text,
-                category = category,
-                type = (int)Const.PRODUCT_TYPE.Blend,
-                unit_price = Conversion.Parse(unitPrice.Text),
-                update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
-                update_date = DateTime.Now,
-                del_flg = Const.FLG_OFF
-            };
-            context.ProductSupplier.Add(entitySupplier);
-
             // 関連テーブルの主キー（年＋商品コード＋取引先コード＋予定／実績）を生成
             string id = string.Concat(Const.TARGET_YEAR, productCode.Text, category);
 
@@ -300,16 +354,6 @@ namespace CostAccounting
         private void executeDelete(CostAccountingEntities context, bool delProduct)
         {
             int category = (int)Program.judgeCategory(radioBudget, radioActual);
-
-            // 取引先データ
-            var supplier = from t in context.ProductSupplier
-                           where t.year.Equals(Const.TARGET_YEAR)
-                              && t.product_code.Equals(productCode.Text)
-                              && t.supplier_code.Equals(suppllierCode.Text)
-                              && t.category.Equals(category)
-                              && t.type.Equals((int)Const.PRODUCT_TYPE.Blend)
-                           select t;
-            context.ProductSupplier.RemoveRange(supplier);
 
             if (!delProduct)
             {
