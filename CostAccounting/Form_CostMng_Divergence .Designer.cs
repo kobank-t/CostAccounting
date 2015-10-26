@@ -3010,13 +3010,13 @@
             // 
             // materialCost
             // 
-            this.materialCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.materialCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.materialCost.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialCost.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.materialCost.Location = new System.Drawing.Point(125, 69);
             this.materialCost.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost.Name = "materialCost";
+            this.materialCost.ReadOnly = true;
             this.materialCost.Size = new System.Drawing.Size(125, 23);
             this.materialCost.TabIndex = 1;
             this.materialCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3025,13 +3025,13 @@
             // 
             // laborCost
             // 
-            this.laborCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.laborCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.laborCost.Dock = System.Windows.Forms.DockStyle.Fill;
             this.laborCost.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.laborCost.Location = new System.Drawing.Point(250, 69);
             this.laborCost.Margin = new System.Windows.Forms.Padding(0);
             this.laborCost.Name = "laborCost";
+            this.laborCost.ReadOnly = true;
             this.laborCost.Size = new System.Drawing.Size(125, 23);
             this.laborCost.TabIndex = 1;
             this.laborCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3040,13 +3040,13 @@
             // 
             // contractorsCost
             // 
-            this.contractorsCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.contractorsCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.contractorsCost.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contractorsCost.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.contractorsCost.Location = new System.Drawing.Point(375, 69);
             this.contractorsCost.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost.Name = "contractorsCost";
+            this.contractorsCost.ReadOnly = true;
             this.contractorsCost.Size = new System.Drawing.Size(125, 23);
             this.contractorsCost.TabIndex = 1;
             this.contractorsCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3055,13 +3055,13 @@
             // 
             // materialsFare
             // 
-            this.materialsFare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.materialsFare.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.materialsFare.Dock = System.Windows.Forms.DockStyle.Fill;
             this.materialsFare.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.materialsFare.Location = new System.Drawing.Point(500, 69);
             this.materialsFare.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare.Name = "materialsFare";
+            this.materialsFare.ReadOnly = true;
             this.materialsFare.Size = new System.Drawing.Size(125, 23);
             this.materialsFare.TabIndex = 1;
             this.materialsFare.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3070,13 +3070,13 @@
             // 
             // packingCost
             // 
-            this.packingCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.packingCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.packingCost.Dock = System.Windows.Forms.DockStyle.Fill;
             this.packingCost.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.packingCost.Location = new System.Drawing.Point(625, 69);
             this.packingCost.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost.Name = "packingCost";
+            this.packingCost.ReadOnly = true;
             this.packingCost.Size = new System.Drawing.Size(125, 23);
             this.packingCost.TabIndex = 1;
             this.packingCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3085,13 +3085,13 @@
             // 
             // utilitiesCost
             // 
-            this.utilitiesCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.utilitiesCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.utilitiesCost.Dock = System.Windows.Forms.DockStyle.Fill;
             this.utilitiesCost.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.utilitiesCost.Location = new System.Drawing.Point(750, 69);
             this.utilitiesCost.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost.Name = "utilitiesCost";
+            this.utilitiesCost.ReadOnly = true;
             this.utilitiesCost.Size = new System.Drawing.Size(125, 23);
             this.utilitiesCost.TabIndex = 1;
             this.utilitiesCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3100,13 +3100,13 @@
             // 
             // otherCost
             // 
-            this.otherCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.otherCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.otherCost.Dock = System.Windows.Forms.DockStyle.Fill;
             this.otherCost.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.otherCost.Location = new System.Drawing.Point(875, 69);
             this.otherCost.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost.Name = "otherCost";
+            this.otherCost.ReadOnly = true;
             this.otherCost.Size = new System.Drawing.Size(125, 23);
             this.otherCost.TabIndex = 1;
             this.otherCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -3115,13 +3115,13 @@
             // 
             // packingFare
             // 
-            this.packingFare.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.packingFare.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.packingFare.Dock = System.Windows.Forms.DockStyle.Fill;
             this.packingFare.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.packingFare.Location = new System.Drawing.Point(1000, 69);
             this.packingFare.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare.Name = "packingFare";
+            this.packingFare.ReadOnly = true;
             this.packingFare.Size = new System.Drawing.Size(125, 23);
             this.packingFare.TabIndex = 1;
             this.packingFare.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
