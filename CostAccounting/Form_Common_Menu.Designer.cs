@@ -34,24 +34,25 @@
             this.btnMainCostMng = new System.Windows.Forms.Button();
             this.btnMainProductMng = new System.Windows.Forms.Button();
             this.btnMainPrepare = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnSubOtherReg = new System.Windows.Forms.Button();
-            this.btnSubItemReg = new System.Windows.Forms.Button();
             this.btnSubActualReg = new System.Windows.Forms.Button();
             this.btnSubComparison = new System.Windows.Forms.Button();
             this.btnSubActualTotal = new System.Windows.Forms.Button();
             this.btnSubDivergence = new System.Windows.Forms.Button();
             this.btnSubBudgetReg = new System.Windows.Forms.Button();
-            this.btnSubRawMaterialsReg = new System.Windows.Forms.Button();
-            this.btnSubMaterialsReg = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSubOtherReg = new System.Windows.Forms.Button();
+            this.btnSubItemReg = new System.Windows.Forms.Button();
             this.btnSubProductReg = new System.Windows.Forms.Button();
             this.btnSubBlendReg = new System.Windows.Forms.Button();
-            this.btnSubMachineReg = new System.Windows.Forms.Button();
             this.btnSubFareReg = new System.Windows.Forms.Button();
             this.btnSubProductCdReg = new System.Windows.Forms.Button();
             this.btnSubSupplierReg = new System.Windows.Forms.Button();
+            this.btnSubRawMaterialsReg = new System.Windows.Forms.Button();
+            this.btnSubMaterialsReg = new System.Windows.Forms.Button();
+            this.btnSubMachineReg = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnSubDataCopy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -63,7 +64,7 @@
             this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.splitContainer1.IsSplitterFixed = true;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 61);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 46);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -85,6 +86,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnSubBudgetReg);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
+            this.splitContainer1.Panel2.Controls.Add(this.btnSubDataCopy);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubOtherReg);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubItemReg);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubProductReg);
@@ -96,7 +98,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnSubMaterialsReg);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubMachineReg);
             this.splitContainer1.Panel2.ForeColor = System.Drawing.Color.White;
-            this.splitContainer1.Size = new System.Drawing.Size(584, 481);
+            this.splitContainer1.Size = new System.Drawing.Size(584, 520);
             this.splitContainer1.SplitterDistance = 292;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -153,50 +155,6 @@
             this.btnMainPrepare.Text = "導入処理";
             this.btnMainPrepare.UseVisualStyleBackColor = false;
             this.btnMainPrepare.Click += new System.EventHandler(this.btnMainPrepare_Click);
-            // 
-            // label4
-            // 
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label4.Font = new System.Drawing.Font("Meiryo UI", 0.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label4.Location = new System.Drawing.Point(11, 38);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(265, 2);
-            this.label4.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Meiryo UI", 12F);
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(103, 8);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 20);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "サブメニュー";
-            // 
-            // btnSubOtherReg
-            // 
-            this.btnSubOtherReg.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSubOtherReg.Font = new System.Drawing.Font("Meiryo UI", 12F);
-            this.btnSubOtherReg.Location = new System.Drawing.Point(33, 414);
-            this.btnSubOtherReg.Name = "btnSubOtherReg";
-            this.btnSubOtherReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubOtherReg.TabIndex = 9;
-            this.btnSubOtherReg.Text = "その他登録";
-            this.btnSubOtherReg.UseVisualStyleBackColor = false;
-            this.btnSubOtherReg.Click += new System.EventHandler(this.btnSubOtherReg_Click);
-            // 
-            // btnSubItemReg
-            // 
-            this.btnSubItemReg.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSubItemReg.Font = new System.Drawing.Font("Meiryo UI", 12F);
-            this.btnSubItemReg.Location = new System.Drawing.Point(33, 364);
-            this.btnSubItemReg.Name = "btnSubItemReg";
-            this.btnSubItemReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubItemReg.TabIndex = 8;
-            this.btnSubItemReg.Text = "品種コード登録";
-            this.btnSubItemReg.UseVisualStyleBackColor = false;
-            this.btnSubItemReg.Click += new System.EventHandler(this.btnSubItemReg_Click);
             // 
             // btnSubActualReg
             // 
@@ -258,29 +216,49 @@
             this.btnSubBudgetReg.UseVisualStyleBackColor = false;
             this.btnSubBudgetReg.Click += new System.EventHandler(this.btnSubBudgetReg_Click);
             // 
-            // btnSubRawMaterialsReg
+            // label4
             // 
-            this.btnSubRawMaterialsReg.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSubRawMaterialsReg.Font = new System.Drawing.Font("Meiryo UI", 12F);
-            this.btnSubRawMaterialsReg.Location = new System.Drawing.Point(33, 64);
-            this.btnSubRawMaterialsReg.Name = "btnSubRawMaterialsReg";
-            this.btnSubRawMaterialsReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubRawMaterialsReg.TabIndex = 2;
-            this.btnSubRawMaterialsReg.Text = "原材料登録";
-            this.btnSubRawMaterialsReg.UseVisualStyleBackColor = false;
-            this.btnSubRawMaterialsReg.Click += new System.EventHandler(this.btnSubRawMaterialsReg_Click);
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Font = new System.Drawing.Font("Meiryo UI", 0.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.Location = new System.Drawing.Point(11, 38);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(265, 2);
+            this.label4.TabIndex = 1;
             // 
-            // btnSubMaterialsReg
+            // label2
             // 
-            this.btnSubMaterialsReg.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSubMaterialsReg.Font = new System.Drawing.Font("Meiryo UI", 12F);
-            this.btnSubMaterialsReg.Location = new System.Drawing.Point(33, 114);
-            this.btnSubMaterialsReg.Name = "btnSubMaterialsReg";
-            this.btnSubMaterialsReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubMaterialsReg.TabIndex = 3;
-            this.btnSubMaterialsReg.Text = "資材登録";
-            this.btnSubMaterialsReg.UseVisualStyleBackColor = false;
-            this.btnSubMaterialsReg.Click += new System.EventHandler(this.btnSubMaterialsReg_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Meiryo UI", 12F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(103, 8);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "サブメニュー";
+            // 
+            // btnSubOtherReg
+            // 
+            this.btnSubOtherReg.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSubOtherReg.Font = new System.Drawing.Font("Meiryo UI", 12F);
+            this.btnSubOtherReg.Location = new System.Drawing.Point(33, 414);
+            this.btnSubOtherReg.Name = "btnSubOtherReg";
+            this.btnSubOtherReg.Size = new System.Drawing.Size(220, 44);
+            this.btnSubOtherReg.TabIndex = 9;
+            this.btnSubOtherReg.Text = "その他登録";
+            this.btnSubOtherReg.UseVisualStyleBackColor = false;
+            this.btnSubOtherReg.Click += new System.EventHandler(this.btnSubOtherReg_Click);
+            // 
+            // btnSubItemReg
+            // 
+            this.btnSubItemReg.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSubItemReg.Font = new System.Drawing.Font("Meiryo UI", 12F);
+            this.btnSubItemReg.Location = new System.Drawing.Point(33, 364);
+            this.btnSubItemReg.Name = "btnSubItemReg";
+            this.btnSubItemReg.Size = new System.Drawing.Size(220, 44);
+            this.btnSubItemReg.TabIndex = 8;
+            this.btnSubItemReg.Text = "品種コード登録";
+            this.btnSubItemReg.UseVisualStyleBackColor = false;
+            this.btnSubItemReg.Click += new System.EventHandler(this.btnSubItemReg_Click);
             // 
             // btnSubProductReg
             // 
@@ -305,18 +283,6 @@
             this.btnSubBlendReg.Text = "ブレンド品登録";
             this.btnSubBlendReg.UseVisualStyleBackColor = false;
             this.btnSubBlendReg.Click += new System.EventHandler(this.btnSubBlendReg_Click);
-            // 
-            // btnSubMachineReg
-            // 
-            this.btnSubMachineReg.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSubMachineReg.Font = new System.Drawing.Font("Meiryo UI", 12F);
-            this.btnSubMachineReg.Location = new System.Drawing.Point(33, 164);
-            this.btnSubMachineReg.Name = "btnSubMachineReg";
-            this.btnSubMachineReg.Size = new System.Drawing.Size(220, 44);
-            this.btnSubMachineReg.TabIndex = 4;
-            this.btnSubMachineReg.Text = "マシン登録";
-            this.btnSubMachineReg.UseVisualStyleBackColor = false;
-            this.btnSubMachineReg.Click += new System.EventHandler(this.btnSubMachineReg_Click);
             // 
             // btnSubFareReg
             // 
@@ -354,6 +320,42 @@
             this.btnSubSupplierReg.UseVisualStyleBackColor = false;
             this.btnSubSupplierReg.Click += new System.EventHandler(this.btnSubSupplierReg_Click);
             // 
+            // btnSubRawMaterialsReg
+            // 
+            this.btnSubRawMaterialsReg.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSubRawMaterialsReg.Font = new System.Drawing.Font("Meiryo UI", 12F);
+            this.btnSubRawMaterialsReg.Location = new System.Drawing.Point(33, 64);
+            this.btnSubRawMaterialsReg.Name = "btnSubRawMaterialsReg";
+            this.btnSubRawMaterialsReg.Size = new System.Drawing.Size(220, 44);
+            this.btnSubRawMaterialsReg.TabIndex = 2;
+            this.btnSubRawMaterialsReg.Text = "原材料登録";
+            this.btnSubRawMaterialsReg.UseVisualStyleBackColor = false;
+            this.btnSubRawMaterialsReg.Click += new System.EventHandler(this.btnSubRawMaterialsReg_Click);
+            // 
+            // btnSubMaterialsReg
+            // 
+            this.btnSubMaterialsReg.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSubMaterialsReg.Font = new System.Drawing.Font("Meiryo UI", 12F);
+            this.btnSubMaterialsReg.Location = new System.Drawing.Point(33, 114);
+            this.btnSubMaterialsReg.Name = "btnSubMaterialsReg";
+            this.btnSubMaterialsReg.Size = new System.Drawing.Size(220, 44);
+            this.btnSubMaterialsReg.TabIndex = 3;
+            this.btnSubMaterialsReg.Text = "資材登録";
+            this.btnSubMaterialsReg.UseVisualStyleBackColor = false;
+            this.btnSubMaterialsReg.Click += new System.EventHandler(this.btnSubMaterialsReg_Click);
+            // 
+            // btnSubMachineReg
+            // 
+            this.btnSubMachineReg.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSubMachineReg.Font = new System.Drawing.Font("Meiryo UI", 12F);
+            this.btnSubMachineReg.Location = new System.Drawing.Point(33, 164);
+            this.btnSubMachineReg.Name = "btnSubMachineReg";
+            this.btnSubMachineReg.Size = new System.Drawing.Size(220, 44);
+            this.btnSubMachineReg.TabIndex = 4;
+            this.btnSubMachineReg.Text = "マシン登録";
+            this.btnSubMachineReg.UseVisualStyleBackColor = false;
+            this.btnSubMachineReg.Click += new System.EventHandler(this.btnSubMachineReg_Click);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -364,12 +366,25 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "浦幌フリーズドライ株式会社　原価計算ソフト";
             // 
+            // btnSubDataCopy
+            // 
+            this.btnSubDataCopy.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnSubDataCopy.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnSubDataCopy.ForeColor = System.Drawing.Color.Yellow;
+            this.btnSubDataCopy.Location = new System.Drawing.Point(33, 464);
+            this.btnSubDataCopy.Name = "btnSubDataCopy";
+            this.btnSubDataCopy.Size = new System.Drawing.Size(220, 44);
+            this.btnSubDataCopy.TabIndex = 9;
+            this.btnSubDataCopy.Text = "データコピー";
+            this.btnSubDataCopy.UseVisualStyleBackColor = false;
+            this.btnSubDataCopy.Click += new System.EventHandler(this.btnSubDataCopy_Click);
+            // 
             // Form_Common_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(584, 542);
+            this.ClientSize = new System.Drawing.Size(584, 566);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.splitContainer1);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -416,6 +431,7 @@
         private System.Windows.Forms.Button btnSubBudgetReg;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSubOtherReg;
+        private System.Windows.Forms.Button btnSubDataCopy;
 
     }
 }

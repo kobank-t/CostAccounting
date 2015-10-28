@@ -12,7 +12,7 @@ namespace CostAccounting
     using System;
     using System.Collections.Generic;
     
-    public partial class Supplier
+    [Serializable] public partial class Supplier
     {
         public string code { get; set; }
         public int year { get; set; }

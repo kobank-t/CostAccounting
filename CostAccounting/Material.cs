@@ -12,7 +12,7 @@ namespace CostAccounting
     using System;
     using System.Collections.Generic;
     
-    public partial class Material
+    [Serializable] public partial class Material
     {
         public string code { get; set; }
         public int year { get; set; }

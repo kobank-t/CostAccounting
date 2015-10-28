@@ -12,7 +12,7 @@ namespace CostAccounting
     using System;
     using System.Collections.Generic;
     
-    public partial class Divergence
+    [Serializable] public partial class Divergence
     {
         public int year { get; set; }
         public int month { get; set; }

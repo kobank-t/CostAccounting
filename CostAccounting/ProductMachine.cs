@@ -12,7 +12,7 @@ namespace CostAccounting
     using System;
     using System.Collections.Generic;
     
-    public partial class ProductMachine
+    [Serializable] public partial class ProductMachine
     {
         public string id { get; set; }
         public int no { get; set; }

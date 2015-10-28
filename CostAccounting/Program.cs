@@ -4,6 +4,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace CostAccounting
 {
@@ -658,6 +660,38 @@ namespace CostAccounting
         {
             plan = new Parameters(Const.CATEGORY_TYPE.Budget);
             actual = new Parameters(Const.CATEGORY_TYPE.Actual);
+        }
+    }
+
+    public static class DeepCopyHelper
+    {
+        /// -----------------------------------------------------------------------------
+        /// <summary>
+        ///     インスタンスをリフレッシュする</summary>
+        /// <returns>
+        ///     </returns>
+        /// -----------------------------------------------------------------------------
+        public static T DeepCopy<T>(T target)
+        {
+
+            T result;
+            BinaryFormatter b = new BinaryFormatter();
+
+            MemoryStream mem = new MemoryStream();
+
+            try
+            {
+                b.Serialize(mem, target);
+                mem.Position = 0;
+                result = (T)b.Deserialize(mem);
+            }
+            finally
+            {
+                mem.Close();
+            }
+
+            return result;
+
         }
     }
 }

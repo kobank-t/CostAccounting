@@ -26,6 +26,7 @@ namespace CostAccounting
             this.btnSubSupplierReg.Visible = true;
             this.btnSubItemReg.Visible = true;
             this.btnSubOtherReg.Visible = true;
+            this.btnSubDataCopy.Visible = true;
             this.btnSubProductReg.Visible = false;
             this.btnSubBlendReg.Visible = false;
             this.btnSubBudgetReg.Visible = false;
@@ -48,6 +49,7 @@ namespace CostAccounting
             this.btnSubSupplierReg.Visible = false;
             this.btnSubItemReg.Visible = false;
             this.btnSubOtherReg.Visible = false;
+            this.btnSubDataCopy.Visible = false;
             this.btnSubProductReg.Visible = true;
             this.btnSubBlendReg.Visible = true;
             this.btnSubBudgetReg.Visible = false;
@@ -70,6 +72,7 @@ namespace CostAccounting
             this.btnSubSupplierReg.Visible = false;
             this.btnSubItemReg.Visible = false;
             this.btnSubOtherReg.Visible = false;
+            this.btnSubDataCopy.Visible = false;
             this.btnSubProductReg.Visible = false;
             this.btnSubBlendReg.Visible = false;
             this.btnSubBudgetReg.Visible = true;
@@ -141,6 +144,14 @@ namespace CostAccounting
         private void btnSubOtherReg_Click(object sender, EventArgs e)
         {
             openForm(new Form_Prepare_OtherReg());
+        }
+
+        /*************************************************************
+         * 導入処理－データコピーボタン押下時の処理
+         *************************************************************/
+        private void btnSubDataCopy_Click(object sender, EventArgs e)
+        {
+            openForm(new Form_PrePare_DataCopy());
         }
 
         /*************************************************************
