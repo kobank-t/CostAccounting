@@ -94,17 +94,22 @@ namespace CostAccounting
             //---------------------------------------------------------
             var target01 = from t in context.CostMngTotal
                            where t.year.Equals(srcYear)
+                              //&& t.category.Equals((int)Const.CATEGORY_TYPE.Actual)
                            select t;
             foreach (var data in target01.ToList())
             {
-                var entity = DeepCopyHelper.DeepCopy<CostMngTotal>(data);
-                entity.year = Const.TARGET_YEAR;
-                entity.update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
-                entity.update_date = DateTime.Now;
+                foreach (int category in Enum.GetValues(typeof(Const.CATEGORY_TYPE)))
+                {
+                    MessageBox.Show(category + "");
+                }
+                //var entity = DeepCopyHelper.DeepCopy<CostMngTotal>(data);
+                //entity.year = Const.TARGET_YEAR;
+                //entity.update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
+                //entity.update_date = DateTime.Now;
 
 
 
-                context.CostMngTotal.Add(entity);
+                //context.CostMngTotal.Add(entity);
             }
 
             ////---------------------------------------------------------

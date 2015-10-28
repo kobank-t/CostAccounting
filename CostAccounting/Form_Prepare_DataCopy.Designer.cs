@@ -47,7 +47,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox1.Size = new System.Drawing.Size(581, 77);
+            this.groupBox1.Size = new System.Drawing.Size(561, 77);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "コピー元年度　※西暦で入力してください※";
@@ -64,7 +64,7 @@
             // 
             // btnEnter
             // 
-            this.btnEnter.Location = new System.Drawing.Point(495, 42);
+            this.btnEnter.Location = new System.Drawing.Point(473, 42);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(75, 23);
             this.btnEnter.TabIndex = 4;
@@ -110,7 +110,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(608, 103);
+            this.ClientSize = new System.Drawing.Size(586, 103);
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
