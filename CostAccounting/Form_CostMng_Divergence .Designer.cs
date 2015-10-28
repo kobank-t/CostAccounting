@@ -211,14 +211,14 @@
             this.packingFare_rate = new System.Windows.Forms.Label();
             this.total_rate = new System.Windows.Forms.Label();
             this.total = new System.Windows.Forms.Label();
-            this.materialCost = new System.Windows.Forms.TextBox();
-            this.laborCost = new System.Windows.Forms.TextBox();
-            this.contractorsCost = new System.Windows.Forms.TextBox();
-            this.materialsFare = new System.Windows.Forms.TextBox();
-            this.packingCost = new System.Windows.Forms.TextBox();
-            this.utilitiesCost = new System.Windows.Forms.TextBox();
-            this.otherCost = new System.Windows.Forms.TextBox();
-            this.packingFare = new System.Windows.Forms.TextBox();
+            this.materialCost = new System.Windows.Forms.Label();
+            this.laborCost = new System.Windows.Forms.Label();
+            this.contractorsCost = new System.Windows.Forms.Label();
+            this.materialsFare = new System.Windows.Forms.Label();
+            this.packingCost = new System.Windows.Forms.Label();
+            this.utilitiesCost = new System.Windows.Forms.Label();
+            this.otherCost = new System.Windows.Forms.Label();
+            this.packingFare = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -231,7 +231,7 @@
             this.btnAppend.Location = new System.Drawing.Point(1157, 321);
             this.btnAppend.Name = "btnAppend";
             this.btnAppend.Size = new System.Drawing.Size(75, 23);
-            this.btnAppend.TabIndex = 1;
+            this.btnAppend.TabIndex = 0;
             this.btnAppend.Text = "登録";
             this.btnAppend.UseVisualStyleBackColor = true;
             this.btnAppend.Click += new System.EventHandler(this.btnAppend_Click);
@@ -243,7 +243,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 265);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1282, 357);
-            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "決算書実績登録";
             // 
@@ -614,7 +614,7 @@
             this.materialCost_May.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost_May.Name = "materialCost_May";
             this.materialCost_May.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_May.TabIndex = 1;
+            this.materialCost_May.TabIndex = 8;
             this.materialCost_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialCost_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialCost_May.Leave += new System.EventHandler(this.textBox_Leave);
@@ -629,7 +629,7 @@
             this.laborCost_May.Margin = new System.Windows.Forms.Padding(0);
             this.laborCost_May.Name = "laborCost_May";
             this.laborCost_May.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_May.TabIndex = 1;
+            this.laborCost_May.TabIndex = 9;
             this.laborCost_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.laborCost_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.laborCost_May.Leave += new System.EventHandler(this.textBox_Leave);
@@ -644,7 +644,7 @@
             this.contractorsCost_May.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost_May.Name = "contractorsCost_May";
             this.contractorsCost_May.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_May.TabIndex = 1;
+            this.contractorsCost_May.TabIndex = 10;
             this.contractorsCost_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.contractorsCost_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.contractorsCost_May.Leave += new System.EventHandler(this.textBox_Leave);
@@ -659,7 +659,7 @@
             this.materialsFare_May.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare_May.Name = "materialsFare_May";
             this.materialsFare_May.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_May.TabIndex = 1;
+            this.materialsFare_May.TabIndex = 11;
             this.materialsFare_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialsFare_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialsFare_May.Leave += new System.EventHandler(this.textBox_Leave);
@@ -674,7 +674,7 @@
             this.packingCost_May.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost_May.Name = "packingCost_May";
             this.packingCost_May.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_May.TabIndex = 1;
+            this.packingCost_May.TabIndex = 12;
             this.packingCost_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingCost_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingCost_May.Leave += new System.EventHandler(this.textBox_Leave);
@@ -689,7 +689,7 @@
             this.utilitiesCost_May.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost_May.Name = "utilitiesCost_May";
             this.utilitiesCost_May.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_May.TabIndex = 1;
+            this.utilitiesCost_May.TabIndex = 13;
             this.utilitiesCost_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesCost_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesCost_May.Leave += new System.EventHandler(this.textBox_Leave);
@@ -704,7 +704,7 @@
             this.otherCost_May.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost_May.Name = "otherCost_May";
             this.otherCost_May.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_May.TabIndex = 1;
+            this.otherCost_May.TabIndex = 14;
             this.otherCost_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otherCost_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.otherCost_May.Leave += new System.EventHandler(this.textBox_Leave);
@@ -719,7 +719,7 @@
             this.packingFare_May.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare_May.Name = "packingFare_May";
             this.packingFare_May.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_May.TabIndex = 1;
+            this.packingFare_May.TabIndex = 15;
             this.packingFare_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingFare_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingFare_May.Leave += new System.EventHandler(this.textBox_Leave);
@@ -838,7 +838,7 @@
             this.materialCost_Apr.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost_Apr.Name = "materialCost_Apr";
             this.materialCost_Apr.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Apr.TabIndex = 1;
+            this.materialCost_Apr.TabIndex = 0;
             this.materialCost_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialCost_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialCost_Apr.Leave += new System.EventHandler(this.textBox_Leave);
@@ -868,7 +868,7 @@
             this.contractorsCost_Apr.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost_Apr.Name = "contractorsCost_Apr";
             this.contractorsCost_Apr.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Apr.TabIndex = 1;
+            this.contractorsCost_Apr.TabIndex = 2;
             this.contractorsCost_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.contractorsCost_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.contractorsCost_Apr.Leave += new System.EventHandler(this.textBox_Leave);
@@ -883,7 +883,7 @@
             this.materialsFare_Apr.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare_Apr.Name = "materialsFare_Apr";
             this.materialsFare_Apr.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Apr.TabIndex = 1;
+            this.materialsFare_Apr.TabIndex = 3;
             this.materialsFare_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialsFare_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialsFare_Apr.Leave += new System.EventHandler(this.textBox_Leave);
@@ -898,7 +898,7 @@
             this.packingCost_Apr.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost_Apr.Name = "packingCost_Apr";
             this.packingCost_Apr.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Apr.TabIndex = 1;
+            this.packingCost_Apr.TabIndex = 4;
             this.packingCost_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingCost_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingCost_Apr.Leave += new System.EventHandler(this.textBox_Leave);
@@ -913,7 +913,7 @@
             this.utilitiesCost_Apr.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost_Apr.Name = "utilitiesCost_Apr";
             this.utilitiesCost_Apr.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Apr.TabIndex = 1;
+            this.utilitiesCost_Apr.TabIndex = 5;
             this.utilitiesCost_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesCost_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesCost_Apr.Leave += new System.EventHandler(this.textBox_Leave);
@@ -928,7 +928,7 @@
             this.otherCost_Apr.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost_Apr.Name = "otherCost_Apr";
             this.otherCost_Apr.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Apr.TabIndex = 1;
+            this.otherCost_Apr.TabIndex = 6;
             this.otherCost_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otherCost_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.otherCost_Apr.Leave += new System.EventHandler(this.textBox_Leave);
@@ -943,7 +943,7 @@
             this.packingFare_Apr.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare_Apr.Name = "packingFare_Apr";
             this.packingFare_Apr.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Apr.TabIndex = 1;
+            this.packingFare_Apr.TabIndex = 7;
             this.packingFare_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingFare_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingFare_Apr.Leave += new System.EventHandler(this.textBox_Leave);
@@ -958,7 +958,7 @@
             this.materialCost_Jun.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost_Jun.Name = "materialCost_Jun";
             this.materialCost_Jun.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Jun.TabIndex = 1;
+            this.materialCost_Jun.TabIndex = 16;
             this.materialCost_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialCost_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialCost_Jun.Leave += new System.EventHandler(this.textBox_Leave);
@@ -973,7 +973,7 @@
             this.materialCost_Jul.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost_Jul.Name = "materialCost_Jul";
             this.materialCost_Jul.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Jul.TabIndex = 1;
+            this.materialCost_Jul.TabIndex = 24;
             this.materialCost_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialCost_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialCost_Jul.Leave += new System.EventHandler(this.textBox_Leave);
@@ -988,7 +988,7 @@
             this.materialCost_Aug.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost_Aug.Name = "materialCost_Aug";
             this.materialCost_Aug.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Aug.TabIndex = 1;
+            this.materialCost_Aug.TabIndex = 32;
             this.materialCost_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialCost_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialCost_Aug.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1003,7 +1003,7 @@
             this.materialCost_Sep.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost_Sep.Name = "materialCost_Sep";
             this.materialCost_Sep.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Sep.TabIndex = 1;
+            this.materialCost_Sep.TabIndex = 40;
             this.materialCost_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialCost_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialCost_Sep.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1018,7 +1018,7 @@
             this.materialCost_Oct.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost_Oct.Name = "materialCost_Oct";
             this.materialCost_Oct.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Oct.TabIndex = 1;
+            this.materialCost_Oct.TabIndex = 48;
             this.materialCost_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialCost_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialCost_Oct.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1033,7 +1033,7 @@
             this.materialCost_Nov.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost_Nov.Name = "materialCost_Nov";
             this.materialCost_Nov.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Nov.TabIndex = 1;
+            this.materialCost_Nov.TabIndex = 56;
             this.materialCost_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialCost_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialCost_Nov.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1048,7 +1048,7 @@
             this.materialCost_Dec.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost_Dec.Name = "materialCost_Dec";
             this.materialCost_Dec.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Dec.TabIndex = 1;
+            this.materialCost_Dec.TabIndex = 64;
             this.materialCost_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialCost_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialCost_Dec.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1063,7 +1063,7 @@
             this.materialCost_Jan.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost_Jan.Name = "materialCost_Jan";
             this.materialCost_Jan.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Jan.TabIndex = 1;
+            this.materialCost_Jan.TabIndex = 72;
             this.materialCost_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialCost_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialCost_Jan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1078,7 +1078,7 @@
             this.materialCost_Feb.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost_Feb.Name = "materialCost_Feb";
             this.materialCost_Feb.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Feb.TabIndex = 1;
+            this.materialCost_Feb.TabIndex = 80;
             this.materialCost_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialCost_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialCost_Feb.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1093,7 +1093,7 @@
             this.materialCost_Mar.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost_Mar.Name = "materialCost_Mar";
             this.materialCost_Mar.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Mar.TabIndex = 1;
+            this.materialCost_Mar.TabIndex = 88;
             this.materialCost_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialCost_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialCost_Mar.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1108,7 +1108,7 @@
             this.laborCost_Jun.Margin = new System.Windows.Forms.Padding(0);
             this.laborCost_Jun.Name = "laborCost_Jun";
             this.laborCost_Jun.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Jun.TabIndex = 1;
+            this.laborCost_Jun.TabIndex = 17;
             this.laborCost_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.laborCost_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.laborCost_Jun.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1123,7 +1123,7 @@
             this.laborCost_Jul.Margin = new System.Windows.Forms.Padding(0);
             this.laborCost_Jul.Name = "laborCost_Jul";
             this.laborCost_Jul.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Jul.TabIndex = 1;
+            this.laborCost_Jul.TabIndex = 25;
             this.laborCost_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.laborCost_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.laborCost_Jul.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1138,7 +1138,7 @@
             this.laborCost_Aug.Margin = new System.Windows.Forms.Padding(0);
             this.laborCost_Aug.Name = "laborCost_Aug";
             this.laborCost_Aug.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Aug.TabIndex = 1;
+            this.laborCost_Aug.TabIndex = 33;
             this.laborCost_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.laborCost_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.laborCost_Aug.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1153,7 +1153,7 @@
             this.laborCost_Sep.Margin = new System.Windows.Forms.Padding(0);
             this.laborCost_Sep.Name = "laborCost_Sep";
             this.laborCost_Sep.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Sep.TabIndex = 1;
+            this.laborCost_Sep.TabIndex = 41;
             this.laborCost_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.laborCost_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.laborCost_Sep.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1168,7 +1168,7 @@
             this.laborCost_Oct.Margin = new System.Windows.Forms.Padding(0);
             this.laborCost_Oct.Name = "laborCost_Oct";
             this.laborCost_Oct.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Oct.TabIndex = 1;
+            this.laborCost_Oct.TabIndex = 49;
             this.laborCost_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.laborCost_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.laborCost_Oct.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1183,7 +1183,7 @@
             this.laborCost_Nov.Margin = new System.Windows.Forms.Padding(0);
             this.laborCost_Nov.Name = "laborCost_Nov";
             this.laborCost_Nov.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Nov.TabIndex = 1;
+            this.laborCost_Nov.TabIndex = 57;
             this.laborCost_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.laborCost_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.laborCost_Nov.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1198,7 +1198,7 @@
             this.laborCost_Dec.Margin = new System.Windows.Forms.Padding(0);
             this.laborCost_Dec.Name = "laborCost_Dec";
             this.laborCost_Dec.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Dec.TabIndex = 1;
+            this.laborCost_Dec.TabIndex = 65;
             this.laborCost_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.laborCost_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.laborCost_Dec.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1213,7 +1213,7 @@
             this.laborCost_Jan.Margin = new System.Windows.Forms.Padding(0);
             this.laborCost_Jan.Name = "laborCost_Jan";
             this.laborCost_Jan.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Jan.TabIndex = 1;
+            this.laborCost_Jan.TabIndex = 73;
             this.laborCost_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.laborCost_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.laborCost_Jan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1228,7 +1228,7 @@
             this.laborCost_Feb.Margin = new System.Windows.Forms.Padding(0);
             this.laborCost_Feb.Name = "laborCost_Feb";
             this.laborCost_Feb.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Feb.TabIndex = 1;
+            this.laborCost_Feb.TabIndex = 81;
             this.laborCost_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.laborCost_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.laborCost_Feb.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1243,7 +1243,7 @@
             this.laborCost_Mar.Margin = new System.Windows.Forms.Padding(0);
             this.laborCost_Mar.Name = "laborCost_Mar";
             this.laborCost_Mar.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Mar.TabIndex = 1;
+            this.laborCost_Mar.TabIndex = 89;
             this.laborCost_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.laborCost_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.laborCost_Mar.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1258,7 +1258,7 @@
             this.contractorsCost_Jun.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost_Jun.Name = "contractorsCost_Jun";
             this.contractorsCost_Jun.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Jun.TabIndex = 1;
+            this.contractorsCost_Jun.TabIndex = 18;
             this.contractorsCost_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.contractorsCost_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.contractorsCost_Jun.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1273,7 +1273,7 @@
             this.contractorsCost_Jul.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost_Jul.Name = "contractorsCost_Jul";
             this.contractorsCost_Jul.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Jul.TabIndex = 1;
+            this.contractorsCost_Jul.TabIndex = 26;
             this.contractorsCost_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.contractorsCost_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.contractorsCost_Jul.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1288,7 +1288,7 @@
             this.contractorsCost_Aug.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost_Aug.Name = "contractorsCost_Aug";
             this.contractorsCost_Aug.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Aug.TabIndex = 1;
+            this.contractorsCost_Aug.TabIndex = 34;
             this.contractorsCost_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.contractorsCost_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.contractorsCost_Aug.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1303,7 +1303,7 @@
             this.contractorsCost_Sep.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost_Sep.Name = "contractorsCost_Sep";
             this.contractorsCost_Sep.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Sep.TabIndex = 1;
+            this.contractorsCost_Sep.TabIndex = 42;
             this.contractorsCost_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.contractorsCost_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.contractorsCost_Sep.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1318,7 +1318,7 @@
             this.contractorsCost_Oct.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost_Oct.Name = "contractorsCost_Oct";
             this.contractorsCost_Oct.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Oct.TabIndex = 1;
+            this.contractorsCost_Oct.TabIndex = 50;
             this.contractorsCost_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.contractorsCost_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.contractorsCost_Oct.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1333,7 +1333,7 @@
             this.contractorsCost_Nov.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost_Nov.Name = "contractorsCost_Nov";
             this.contractorsCost_Nov.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Nov.TabIndex = 1;
+            this.contractorsCost_Nov.TabIndex = 58;
             this.contractorsCost_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.contractorsCost_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.contractorsCost_Nov.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1348,7 +1348,7 @@
             this.contractorsCost_Dec.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost_Dec.Name = "contractorsCost_Dec";
             this.contractorsCost_Dec.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Dec.TabIndex = 1;
+            this.contractorsCost_Dec.TabIndex = 66;
             this.contractorsCost_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.contractorsCost_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.contractorsCost_Dec.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1363,7 +1363,7 @@
             this.contractorsCost_Jan.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost_Jan.Name = "contractorsCost_Jan";
             this.contractorsCost_Jan.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Jan.TabIndex = 1;
+            this.contractorsCost_Jan.TabIndex = 74;
             this.contractorsCost_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.contractorsCost_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.contractorsCost_Jan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1378,7 +1378,7 @@
             this.contractorsCost_Feb.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost_Feb.Name = "contractorsCost_Feb";
             this.contractorsCost_Feb.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Feb.TabIndex = 1;
+            this.contractorsCost_Feb.TabIndex = 82;
             this.contractorsCost_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.contractorsCost_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.contractorsCost_Feb.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1393,7 +1393,7 @@
             this.contractorsCost_Mar.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost_Mar.Name = "contractorsCost_Mar";
             this.contractorsCost_Mar.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Mar.TabIndex = 1;
+            this.contractorsCost_Mar.TabIndex = 90;
             this.contractorsCost_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.contractorsCost_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.contractorsCost_Mar.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1408,7 +1408,7 @@
             this.materialsFare_Jun.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare_Jun.Name = "materialsFare_Jun";
             this.materialsFare_Jun.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Jun.TabIndex = 1;
+            this.materialsFare_Jun.TabIndex = 19;
             this.materialsFare_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialsFare_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialsFare_Jun.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1423,7 +1423,7 @@
             this.materialsFare_Jul.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare_Jul.Name = "materialsFare_Jul";
             this.materialsFare_Jul.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Jul.TabIndex = 1;
+            this.materialsFare_Jul.TabIndex = 27;
             this.materialsFare_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialsFare_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialsFare_Jul.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1438,7 +1438,7 @@
             this.materialsFare_Aug.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare_Aug.Name = "materialsFare_Aug";
             this.materialsFare_Aug.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Aug.TabIndex = 1;
+            this.materialsFare_Aug.TabIndex = 35;
             this.materialsFare_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialsFare_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialsFare_Aug.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1453,7 +1453,7 @@
             this.materialsFare_Sep.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare_Sep.Name = "materialsFare_Sep";
             this.materialsFare_Sep.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Sep.TabIndex = 1;
+            this.materialsFare_Sep.TabIndex = 43;
             this.materialsFare_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialsFare_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialsFare_Sep.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1468,7 +1468,7 @@
             this.materialsFare_Oct.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare_Oct.Name = "materialsFare_Oct";
             this.materialsFare_Oct.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Oct.TabIndex = 1;
+            this.materialsFare_Oct.TabIndex = 51;
             this.materialsFare_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialsFare_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialsFare_Oct.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1483,7 +1483,7 @@
             this.materialsFare_Nov.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare_Nov.Name = "materialsFare_Nov";
             this.materialsFare_Nov.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Nov.TabIndex = 1;
+            this.materialsFare_Nov.TabIndex = 59;
             this.materialsFare_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialsFare_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialsFare_Nov.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1498,7 +1498,7 @@
             this.materialsFare_Dec.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare_Dec.Name = "materialsFare_Dec";
             this.materialsFare_Dec.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Dec.TabIndex = 1;
+            this.materialsFare_Dec.TabIndex = 67;
             this.materialsFare_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialsFare_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialsFare_Dec.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1513,7 +1513,7 @@
             this.materialsFare_Jan.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare_Jan.Name = "materialsFare_Jan";
             this.materialsFare_Jan.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Jan.TabIndex = 1;
+            this.materialsFare_Jan.TabIndex = 75;
             this.materialsFare_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialsFare_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialsFare_Jan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1528,7 +1528,7 @@
             this.materialsFare_Feb.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare_Feb.Name = "materialsFare_Feb";
             this.materialsFare_Feb.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Feb.TabIndex = 1;
+            this.materialsFare_Feb.TabIndex = 83;
             this.materialsFare_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialsFare_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialsFare_Feb.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1543,7 +1543,7 @@
             this.materialsFare_Mar.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare_Mar.Name = "materialsFare_Mar";
             this.materialsFare_Mar.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Mar.TabIndex = 1;
+            this.materialsFare_Mar.TabIndex = 91;
             this.materialsFare_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.materialsFare_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.materialsFare_Mar.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1558,7 +1558,7 @@
             this.packingCost_Jun.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost_Jun.Name = "packingCost_Jun";
             this.packingCost_Jun.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Jun.TabIndex = 1;
+            this.packingCost_Jun.TabIndex = 20;
             this.packingCost_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingCost_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingCost_Jun.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1573,7 +1573,7 @@
             this.packingCost_Jul.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost_Jul.Name = "packingCost_Jul";
             this.packingCost_Jul.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Jul.TabIndex = 1;
+            this.packingCost_Jul.TabIndex = 28;
             this.packingCost_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingCost_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingCost_Jul.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1588,7 +1588,7 @@
             this.packingCost_Aug.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost_Aug.Name = "packingCost_Aug";
             this.packingCost_Aug.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Aug.TabIndex = 1;
+            this.packingCost_Aug.TabIndex = 36;
             this.packingCost_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingCost_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingCost_Aug.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1603,7 +1603,7 @@
             this.packingCost_Sep.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost_Sep.Name = "packingCost_Sep";
             this.packingCost_Sep.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Sep.TabIndex = 1;
+            this.packingCost_Sep.TabIndex = 44;
             this.packingCost_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingCost_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingCost_Sep.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1618,7 +1618,7 @@
             this.packingCost_Oct.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost_Oct.Name = "packingCost_Oct";
             this.packingCost_Oct.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Oct.TabIndex = 1;
+            this.packingCost_Oct.TabIndex = 52;
             this.packingCost_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingCost_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingCost_Oct.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1633,7 +1633,7 @@
             this.packingCost_Nov.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost_Nov.Name = "packingCost_Nov";
             this.packingCost_Nov.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Nov.TabIndex = 1;
+            this.packingCost_Nov.TabIndex = 60;
             this.packingCost_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingCost_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingCost_Nov.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1648,7 +1648,7 @@
             this.packingCost_Dec.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost_Dec.Name = "packingCost_Dec";
             this.packingCost_Dec.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Dec.TabIndex = 1;
+            this.packingCost_Dec.TabIndex = 68;
             this.packingCost_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingCost_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingCost_Dec.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1663,7 +1663,7 @@
             this.packingCost_Jan.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost_Jan.Name = "packingCost_Jan";
             this.packingCost_Jan.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Jan.TabIndex = 1;
+            this.packingCost_Jan.TabIndex = 76;
             this.packingCost_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingCost_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingCost_Jan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1678,7 +1678,7 @@
             this.packingCost_Feb.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost_Feb.Name = "packingCost_Feb";
             this.packingCost_Feb.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Feb.TabIndex = 1;
+            this.packingCost_Feb.TabIndex = 84;
             this.packingCost_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingCost_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingCost_Feb.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1693,7 +1693,7 @@
             this.packingCost_Mar.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost_Mar.Name = "packingCost_Mar";
             this.packingCost_Mar.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Mar.TabIndex = 1;
+            this.packingCost_Mar.TabIndex = 92;
             this.packingCost_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingCost_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingCost_Mar.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1708,7 +1708,7 @@
             this.utilitiesCost_Jun.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost_Jun.Name = "utilitiesCost_Jun";
             this.utilitiesCost_Jun.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Jun.TabIndex = 1;
+            this.utilitiesCost_Jun.TabIndex = 21;
             this.utilitiesCost_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesCost_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesCost_Jun.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1723,7 +1723,7 @@
             this.utilitiesCost_Jul.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost_Jul.Name = "utilitiesCost_Jul";
             this.utilitiesCost_Jul.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Jul.TabIndex = 1;
+            this.utilitiesCost_Jul.TabIndex = 29;
             this.utilitiesCost_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesCost_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesCost_Jul.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1738,7 +1738,7 @@
             this.utilitiesCost_Aug.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost_Aug.Name = "utilitiesCost_Aug";
             this.utilitiesCost_Aug.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Aug.TabIndex = 1;
+            this.utilitiesCost_Aug.TabIndex = 37;
             this.utilitiesCost_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesCost_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesCost_Aug.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1753,7 +1753,7 @@
             this.utilitiesCost_Sep.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost_Sep.Name = "utilitiesCost_Sep";
             this.utilitiesCost_Sep.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Sep.TabIndex = 1;
+            this.utilitiesCost_Sep.TabIndex = 45;
             this.utilitiesCost_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesCost_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesCost_Sep.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1768,7 +1768,7 @@
             this.utilitiesCost_Oct.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost_Oct.Name = "utilitiesCost_Oct";
             this.utilitiesCost_Oct.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Oct.TabIndex = 1;
+            this.utilitiesCost_Oct.TabIndex = 53;
             this.utilitiesCost_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesCost_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesCost_Oct.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1783,7 +1783,7 @@
             this.utilitiesCost_Nov.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost_Nov.Name = "utilitiesCost_Nov";
             this.utilitiesCost_Nov.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Nov.TabIndex = 1;
+            this.utilitiesCost_Nov.TabIndex = 61;
             this.utilitiesCost_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesCost_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesCost_Nov.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1798,7 +1798,7 @@
             this.utilitiesCost_Dec.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost_Dec.Name = "utilitiesCost_Dec";
             this.utilitiesCost_Dec.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Dec.TabIndex = 1;
+            this.utilitiesCost_Dec.TabIndex = 69;
             this.utilitiesCost_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesCost_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesCost_Dec.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1813,7 +1813,7 @@
             this.utilitiesCost_Jan.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost_Jan.Name = "utilitiesCost_Jan";
             this.utilitiesCost_Jan.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Jan.TabIndex = 1;
+            this.utilitiesCost_Jan.TabIndex = 77;
             this.utilitiesCost_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesCost_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesCost_Jan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1828,7 +1828,7 @@
             this.utilitiesCost_Feb.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost_Feb.Name = "utilitiesCost_Feb";
             this.utilitiesCost_Feb.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Feb.TabIndex = 1;
+            this.utilitiesCost_Feb.TabIndex = 85;
             this.utilitiesCost_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesCost_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesCost_Feb.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1843,7 +1843,7 @@
             this.utilitiesCost_Mar.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost_Mar.Name = "utilitiesCost_Mar";
             this.utilitiesCost_Mar.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Mar.TabIndex = 1;
+            this.utilitiesCost_Mar.TabIndex = 93;
             this.utilitiesCost_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.utilitiesCost_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.utilitiesCost_Mar.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1858,7 +1858,7 @@
             this.otherCost_Jun.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost_Jun.Name = "otherCost_Jun";
             this.otherCost_Jun.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Jun.TabIndex = 1;
+            this.otherCost_Jun.TabIndex = 22;
             this.otherCost_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otherCost_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.otherCost_Jun.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1873,7 +1873,7 @@
             this.otherCost_Jul.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost_Jul.Name = "otherCost_Jul";
             this.otherCost_Jul.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Jul.TabIndex = 1;
+            this.otherCost_Jul.TabIndex = 30;
             this.otherCost_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otherCost_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.otherCost_Jul.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1888,7 +1888,7 @@
             this.otherCost_Aug.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost_Aug.Name = "otherCost_Aug";
             this.otherCost_Aug.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Aug.TabIndex = 1;
+            this.otherCost_Aug.TabIndex = 38;
             this.otherCost_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otherCost_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.otherCost_Aug.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1903,7 +1903,7 @@
             this.otherCost_Sep.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost_Sep.Name = "otherCost_Sep";
             this.otherCost_Sep.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Sep.TabIndex = 1;
+            this.otherCost_Sep.TabIndex = 46;
             this.otherCost_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otherCost_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.otherCost_Sep.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1918,7 +1918,7 @@
             this.otherCost_Oct.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost_Oct.Name = "otherCost_Oct";
             this.otherCost_Oct.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Oct.TabIndex = 1;
+            this.otherCost_Oct.TabIndex = 54;
             this.otherCost_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otherCost_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.otherCost_Oct.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1933,7 +1933,7 @@
             this.otherCost_Nov.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost_Nov.Name = "otherCost_Nov";
             this.otherCost_Nov.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Nov.TabIndex = 1;
+            this.otherCost_Nov.TabIndex = 62;
             this.otherCost_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otherCost_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.otherCost_Nov.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1948,7 +1948,7 @@
             this.otherCost_Dec.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost_Dec.Name = "otherCost_Dec";
             this.otherCost_Dec.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Dec.TabIndex = 1;
+            this.otherCost_Dec.TabIndex = 70;
             this.otherCost_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otherCost_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.otherCost_Dec.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1963,7 +1963,7 @@
             this.otherCost_Jan.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost_Jan.Name = "otherCost_Jan";
             this.otherCost_Jan.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Jan.TabIndex = 1;
+            this.otherCost_Jan.TabIndex = 78;
             this.otherCost_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otherCost_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.otherCost_Jan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1978,7 +1978,7 @@
             this.otherCost_Feb.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost_Feb.Name = "otherCost_Feb";
             this.otherCost_Feb.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Feb.TabIndex = 1;
+            this.otherCost_Feb.TabIndex = 86;
             this.otherCost_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otherCost_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.otherCost_Feb.Leave += new System.EventHandler(this.textBox_Leave);
@@ -1993,7 +1993,7 @@
             this.otherCost_Mar.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost_Mar.Name = "otherCost_Mar";
             this.otherCost_Mar.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Mar.TabIndex = 1;
+            this.otherCost_Mar.TabIndex = 94;
             this.otherCost_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otherCost_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.otherCost_Mar.Leave += new System.EventHandler(this.textBox_Leave);
@@ -2008,7 +2008,7 @@
             this.packingFare_Mar.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare_Mar.Name = "packingFare_Mar";
             this.packingFare_Mar.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Mar.TabIndex = 1;
+            this.packingFare_Mar.TabIndex = 95;
             this.packingFare_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingFare_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingFare_Mar.Leave += new System.EventHandler(this.textBox_Leave);
@@ -2023,7 +2023,7 @@
             this.packingFare_Feb.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare_Feb.Name = "packingFare_Feb";
             this.packingFare_Feb.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Feb.TabIndex = 1;
+            this.packingFare_Feb.TabIndex = 87;
             this.packingFare_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingFare_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingFare_Feb.Leave += new System.EventHandler(this.textBox_Leave);
@@ -2038,7 +2038,7 @@
             this.packingFare_Jan.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare_Jan.Name = "packingFare_Jan";
             this.packingFare_Jan.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Jan.TabIndex = 1;
+            this.packingFare_Jan.TabIndex = 79;
             this.packingFare_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingFare_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingFare_Jan.Leave += new System.EventHandler(this.textBox_Leave);
@@ -2053,7 +2053,7 @@
             this.packingFare_Dec.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare_Dec.Name = "packingFare_Dec";
             this.packingFare_Dec.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Dec.TabIndex = 1;
+            this.packingFare_Dec.TabIndex = 71;
             this.packingFare_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingFare_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingFare_Dec.Leave += new System.EventHandler(this.textBox_Leave);
@@ -2068,7 +2068,7 @@
             this.packingFare_Nov.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare_Nov.Name = "packingFare_Nov";
             this.packingFare_Nov.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Nov.TabIndex = 1;
+            this.packingFare_Nov.TabIndex = 63;
             this.packingFare_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingFare_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingFare_Nov.Leave += new System.EventHandler(this.textBox_Leave);
@@ -2083,7 +2083,7 @@
             this.packingFare_Oct.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare_Oct.Name = "packingFare_Oct";
             this.packingFare_Oct.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Oct.TabIndex = 1;
+            this.packingFare_Oct.TabIndex = 55;
             this.packingFare_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingFare_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingFare_Oct.Leave += new System.EventHandler(this.textBox_Leave);
@@ -2098,7 +2098,7 @@
             this.packingFare_Sep.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare_Sep.Name = "packingFare_Sep";
             this.packingFare_Sep.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Sep.TabIndex = 1;
+            this.packingFare_Sep.TabIndex = 47;
             this.packingFare_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingFare_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingFare_Sep.Leave += new System.EventHandler(this.textBox_Leave);
@@ -2113,7 +2113,7 @@
             this.packingFare_Aug.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare_Aug.Name = "packingFare_Aug";
             this.packingFare_Aug.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Aug.TabIndex = 1;
+            this.packingFare_Aug.TabIndex = 39;
             this.packingFare_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingFare_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingFare_Aug.Leave += new System.EventHandler(this.textBox_Leave);
@@ -2128,7 +2128,7 @@
             this.packingFare_Jul.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare_Jul.Name = "packingFare_Jul";
             this.packingFare_Jul.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Jul.TabIndex = 1;
+            this.packingFare_Jul.TabIndex = 31;
             this.packingFare_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingFare_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingFare_Jul.Leave += new System.EventHandler(this.textBox_Leave);
@@ -2143,7 +2143,7 @@
             this.packingFare_Jun.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare_Jun.Name = "packingFare_Jun";
             this.packingFare_Jun.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Jun.TabIndex = 1;
+            this.packingFare_Jun.TabIndex = 23;
             this.packingFare_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.packingFare_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.packingFare_Jun.Leave += new System.EventHandler(this.textBox_Leave);
@@ -2155,7 +2155,7 @@
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1282, 236);
-            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "乖離幅測定";
             // 
@@ -2191,6 +2191,7 @@
             this.btnAllClear.TabIndex = 13;
             this.btnAllClear.Text = "全て外す";
             this.btnAllClear.UseVisualStyleBackColor = true;
+            this.btnAllClear.Click += new System.EventHandler(this.btnAllClear_Click);
             // 
             // btnAllCheck
             // 
@@ -2201,6 +2202,7 @@
             this.btnAllCheck.TabIndex = 12;
             this.btnAllCheck.Text = "全てチェック";
             this.btnAllCheck.UseVisualStyleBackColor = true;
+            this.btnAllCheck.Click += new System.EventHandler(this.btnAllCheck_Click);
             // 
             // checkBoxMar
             // 
@@ -2213,6 +2215,7 @@
             this.checkBoxMar.TabIndex = 11;
             this.checkBoxMar.Text = "3月";
             this.checkBoxMar.UseVisualStyleBackColor = true;
+            this.checkBoxMar.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBoxFeb
             // 
@@ -2225,6 +2228,7 @@
             this.checkBoxFeb.TabIndex = 10;
             this.checkBoxFeb.Text = "2月";
             this.checkBoxFeb.UseVisualStyleBackColor = true;
+            this.checkBoxFeb.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBoxJan
             // 
@@ -2237,6 +2241,7 @@
             this.checkBoxJan.TabIndex = 9;
             this.checkBoxJan.Text = "1月";
             this.checkBoxJan.UseVisualStyleBackColor = true;
+            this.checkBoxJan.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBoxDec
             // 
@@ -2249,6 +2254,7 @@
             this.checkBoxDec.TabIndex = 8;
             this.checkBoxDec.Text = "12月";
             this.checkBoxDec.UseVisualStyleBackColor = true;
+            this.checkBoxDec.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBoxNov
             // 
@@ -2261,6 +2267,7 @@
             this.checkBoxNov.TabIndex = 7;
             this.checkBoxNov.Text = "11月";
             this.checkBoxNov.UseVisualStyleBackColor = true;
+            this.checkBoxNov.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBoxOct
             // 
@@ -2273,6 +2280,7 @@
             this.checkBoxOct.TabIndex = 6;
             this.checkBoxOct.Text = "10月";
             this.checkBoxOct.UseVisualStyleBackColor = true;
+            this.checkBoxOct.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBoxSep
             // 
@@ -2285,6 +2293,7 @@
             this.checkBoxSep.TabIndex = 5;
             this.checkBoxSep.Text = "9月";
             this.checkBoxSep.UseVisualStyleBackColor = true;
+            this.checkBoxSep.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBoxAug
             // 
@@ -2297,6 +2306,7 @@
             this.checkBoxAug.TabIndex = 4;
             this.checkBoxAug.Text = "8月";
             this.checkBoxAug.UseVisualStyleBackColor = true;
+            this.checkBoxAug.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBoxJul
             // 
@@ -2309,6 +2319,7 @@
             this.checkBoxJul.TabIndex = 3;
             this.checkBoxJul.Text = "7月";
             this.checkBoxJul.UseVisualStyleBackColor = true;
+            this.checkBoxJul.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBoxJun
             // 
@@ -2321,6 +2332,7 @@
             this.checkBoxJun.TabIndex = 2;
             this.checkBoxJun.Text = "6月";
             this.checkBoxJun.UseVisualStyleBackColor = true;
+            this.checkBoxJun.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBoxMay
             // 
@@ -2333,6 +2345,7 @@
             this.checkBoxMay.TabIndex = 1;
             this.checkBoxMay.Text = "5月";
             this.checkBoxMay.UseVisualStyleBackColor = true;
+            this.checkBoxMay.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // checkBoxApr
             // 
@@ -2345,6 +2358,7 @@
             this.checkBoxApr.TabIndex = 0;
             this.checkBoxApr.Text = "4月";
             this.checkBoxApr.UseVisualStyleBackColor = true;
+            this.checkBoxApr.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -3010,123 +3024,107 @@
             // 
             // materialCost
             // 
+            this.materialCost.AutoSize = true;
             this.materialCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.materialCost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCost.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.materialCost.Location = new System.Drawing.Point(125, 69);
             this.materialCost.Margin = new System.Windows.Forms.Padding(0);
             this.materialCost.Name = "materialCost";
-            this.materialCost.ReadOnly = true;
             this.materialCost.Size = new System.Drawing.Size(125, 23);
-            this.materialCost.TabIndex = 1;
-            this.materialCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialCost.Leave += new System.EventHandler(this.textBox_Leave);
+            this.materialCost.TabIndex = 0;
+            this.materialCost.Text = "0.00";
+            this.materialCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // laborCost
             // 
+            this.laborCost.AutoSize = true;
             this.laborCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.laborCost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laborCost.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.laborCost.Location = new System.Drawing.Point(250, 69);
             this.laborCost.Margin = new System.Windows.Forms.Padding(0);
             this.laborCost.Name = "laborCost";
-            this.laborCost.ReadOnly = true;
             this.laborCost.Size = new System.Drawing.Size(125, 23);
-            this.laborCost.TabIndex = 1;
-            this.laborCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.laborCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.laborCost.Leave += new System.EventHandler(this.textBox_Leave);
+            this.laborCost.TabIndex = 0;
+            this.laborCost.Text = "0.00";
+            this.laborCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // contractorsCost
             // 
+            this.contractorsCost.AutoSize = true;
             this.contractorsCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.contractorsCost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractorsCost.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.contractorsCost.Location = new System.Drawing.Point(375, 69);
             this.contractorsCost.Margin = new System.Windows.Forms.Padding(0);
             this.contractorsCost.Name = "contractorsCost";
-            this.contractorsCost.ReadOnly = true;
             this.contractorsCost.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost.TabIndex = 1;
-            this.contractorsCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.contractorsCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.contractorsCost.Leave += new System.EventHandler(this.textBox_Leave);
+            this.contractorsCost.TabIndex = 0;
+            this.contractorsCost.Text = "0.00";
+            this.contractorsCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // materialsFare
             // 
+            this.materialsFare.AutoSize = true;
             this.materialsFare.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.materialsFare.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsFare.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.materialsFare.Location = new System.Drawing.Point(500, 69);
             this.materialsFare.Margin = new System.Windows.Forms.Padding(0);
             this.materialsFare.Name = "materialsFare";
-            this.materialsFare.ReadOnly = true;
             this.materialsFare.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare.TabIndex = 1;
-            this.materialsFare.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialsFare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialsFare.Leave += new System.EventHandler(this.textBox_Leave);
+            this.materialsFare.TabIndex = 0;
+            this.materialsFare.Text = "0.00";
+            this.materialsFare.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // packingCost
             // 
+            this.packingCost.AutoSize = true;
             this.packingCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.packingCost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingCost.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.packingCost.Location = new System.Drawing.Point(625, 69);
             this.packingCost.Margin = new System.Windows.Forms.Padding(0);
             this.packingCost.Name = "packingCost";
-            this.packingCost.ReadOnly = true;
             this.packingCost.Size = new System.Drawing.Size(125, 23);
-            this.packingCost.TabIndex = 1;
-            this.packingCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingCost.Leave += new System.EventHandler(this.textBox_Leave);
+            this.packingCost.TabIndex = 0;
+            this.packingCost.Text = "0.00";
+            this.packingCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // utilitiesCost
             // 
+            this.utilitiesCost.AutoSize = true;
             this.utilitiesCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.utilitiesCost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesCost.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.utilitiesCost.Location = new System.Drawing.Point(750, 69);
             this.utilitiesCost.Margin = new System.Windows.Forms.Padding(0);
             this.utilitiesCost.Name = "utilitiesCost";
-            this.utilitiesCost.ReadOnly = true;
             this.utilitiesCost.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost.TabIndex = 1;
-            this.utilitiesCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.utilitiesCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.utilitiesCost.Leave += new System.EventHandler(this.textBox_Leave);
+            this.utilitiesCost.TabIndex = 0;
+            this.utilitiesCost.Text = "0.00";
+            this.utilitiesCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // otherCost
             // 
+            this.otherCost.AutoSize = true;
             this.otherCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.otherCost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherCost.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.otherCost.Location = new System.Drawing.Point(875, 69);
             this.otherCost.Margin = new System.Windows.Forms.Padding(0);
             this.otherCost.Name = "otherCost";
-            this.otherCost.ReadOnly = true;
             this.otherCost.Size = new System.Drawing.Size(125, 23);
-            this.otherCost.TabIndex = 1;
-            this.otherCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otherCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.otherCost.Leave += new System.EventHandler(this.textBox_Leave);
+            this.otherCost.TabIndex = 0;
+            this.otherCost.Text = "0.00";
+            this.otherCost.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // packingFare
             // 
+            this.packingFare.AutoSize = true;
             this.packingFare.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.packingFare.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingFare.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.packingFare.Location = new System.Drawing.Point(1000, 69);
             this.packingFare.Margin = new System.Windows.Forms.Padding(0);
             this.packingFare.Name = "packingFare";
-            this.packingFare.ReadOnly = true;
             this.packingFare.Size = new System.Drawing.Size(125, 23);
-            this.packingFare.TabIndex = 1;
-            this.packingFare.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingFare.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingFare.Leave += new System.EventHandler(this.textBox_Leave);
+            this.packingFare.TabIndex = 0;
+            this.packingFare.Text = "0.00";
+            this.packingFare.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Form_CostMng_Divergence
             // 
@@ -3228,14 +3226,6 @@
         private System.Windows.Forms.Label packingFare_rate;
         private System.Windows.Forms.Label total_rate;
         private System.Windows.Forms.Label total;
-        private System.Windows.Forms.TextBox materialCost;
-        private System.Windows.Forms.TextBox laborCost;
-        private System.Windows.Forms.TextBox contractorsCost;
-        private System.Windows.Forms.TextBox materialsFare;
-        private System.Windows.Forms.TextBox packingCost;
-        private System.Windows.Forms.TextBox utilitiesCost;
-        private System.Windows.Forms.TextBox otherCost;
-        private System.Windows.Forms.TextBox packingFare;
         private System.Windows.Forms.GroupBox groupMonth;
         private System.Windows.Forms.Button btnAllClear;
         private System.Windows.Forms.Button btnAllCheck;
@@ -3347,6 +3337,14 @@
         private System.Windows.Forms.TextBox packingFare_Aug;
         private System.Windows.Forms.TextBox packingFare_Jul;
         private System.Windows.Forms.TextBox packingFare_Jun;
+        private System.Windows.Forms.Label materialCost;
+        private System.Windows.Forms.Label laborCost;
+        private System.Windows.Forms.Label contractorsCost;
+        private System.Windows.Forms.Label materialsFare;
+        private System.Windows.Forms.Label packingCost;
+        private System.Windows.Forms.Label utilitiesCost;
+        private System.Windows.Forms.Label otherCost;
+        private System.Windows.Forms.Label packingFare;
 
 
     }
