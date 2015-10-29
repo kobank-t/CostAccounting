@@ -223,10 +223,22 @@ namespace CostAccounting
          *************************************************************/
         private void openForm(Form target)
         {
-            target.ShowDialog();
-            target.Dispose();
-            DataTableSupport.refresh();
-            Parameters.refresh();
+            try
+            {
+                target.ShowDialog();
+                target.Dispose();
+                DataTableSupport.refresh();
+                Parameters.refresh();
+            }
+            catch (Exception e)
+            {
+                Program.MessageBoxError(string.Concat("予期しないエラーが発生しました。"
+                                              , Environment.NewLine
+                                              , "お手数ですが、ログファイルの送付をお願いします。"
+                                              , Environment.NewLine
+                                              , "_(._.)_"));
+                Logger.Error("予期しないエラーが発生しました。", e);
+            }
         }
     }
 }

@@ -41,6 +41,7 @@
             this.btnSubBudgetReg = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnSubDataCopy = new System.Windows.Forms.Button();
             this.btnSubOtherReg = new System.Windows.Forms.Button();
             this.btnSubItemReg = new System.Windows.Forms.Button();
             this.btnSubProductReg = new System.Windows.Forms.Button();
@@ -52,7 +53,6 @@
             this.btnSubMaterialsReg = new System.Windows.Forms.Button();
             this.btnSubMachineReg = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnSubDataCopy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -236,6 +236,19 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "サブメニュー";
             // 
+            // btnSubDataCopy
+            // 
+            this.btnSubDataCopy.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnSubDataCopy.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnSubDataCopy.ForeColor = System.Drawing.Color.Yellow;
+            this.btnSubDataCopy.Location = new System.Drawing.Point(33, 464);
+            this.btnSubDataCopy.Name = "btnSubDataCopy";
+            this.btnSubDataCopy.Size = new System.Drawing.Size(220, 44);
+            this.btnSubDataCopy.TabIndex = 9;
+            this.btnSubDataCopy.Text = "データコピー";
+            this.btnSubDataCopy.UseVisualStyleBackColor = false;
+            this.btnSubDataCopy.Click += new System.EventHandler(this.btnSubDataCopy_Click);
+            // 
             // btnSubOtherReg
             // 
             this.btnSubOtherReg.BackColor = System.Drawing.Color.RoyalBlue;
@@ -365,19 +378,6 @@
             this.label5.Size = new System.Drawing.Size(406, 28);
             this.label5.TabIndex = 0;
             this.label5.Text = "浦幌フリーズドライ株式会社　原価計算ソフト";
-            // 
-            // btnSubDataCopy
-            // 
-            this.btnSubDataCopy.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnSubDataCopy.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnSubDataCopy.ForeColor = System.Drawing.Color.Yellow;
-            this.btnSubDataCopy.Location = new System.Drawing.Point(33, 464);
-            this.btnSubDataCopy.Name = "btnSubDataCopy";
-            this.btnSubDataCopy.Size = new System.Drawing.Size(220, 44);
-            this.btnSubDataCopy.TabIndex = 9;
-            this.btnSubDataCopy.Text = "データコピー";
-            this.btnSubDataCopy.UseVisualStyleBackColor = false;
-            this.btnSubDataCopy.Click += new System.EventHandler(this.btnSubDataCopy_Click);
             // 
             // Form_Common_Menu
             // 

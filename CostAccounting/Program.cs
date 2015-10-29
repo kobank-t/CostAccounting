@@ -703,7 +703,7 @@ namespace CostAccounting
     ///    ログ出力をサポートした静的クラスです。
     /// </summary>
     /// -----------------------------------------------------------------------------
-    public static class Log
+    public static class Logger
     {
         private static readonly log4net.ILog logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
@@ -714,10 +714,47 @@ namespace CostAccounting
         ///     ログメッセージ<param>
         /// <returns></returns>
         /// -----------------------------------------------------------------------------
-        public static void info(string message)
+        public static void Info(string message)
         {
             logger.Info(message);
+            logger.InfoFormat("mymethod:今日の日付 Date:{0}", DateTime.Now);
         }
-    
+
+        /// -----------------------------------------------------------------------------
+        /// <summary>
+        ///     インフォレベルのログを出力します。</summary>
+        /// <param name="message">
+        ///     ログメッセージ<param>
+        /// <param name="param">
+        ///     置換パラメータ<param>
+        /// <returns></returns>
+        /// -----------------------------------------------------------------------------
+        public static void Info(string message, params string[] param)
+        {
+            logger.InfoFormat(message, param);
+        }
+
+        /// -----------------------------------------------------------------------------
+        /// <summary>
+        ///     エラーレベルのログを出力します。</summary>
+        /// <param name="message">
+        ///     ログメッセージ<param>
+        /// <param name="exception">
+        ///     エラークラス<param>
+        /// <returns></returns>
+        /// -----------------------------------------------------------------------------
+        public static void Error(string message, Exception exception)
+        {
+            logger.Error(message, exception);
+        }
+    }
+
+    /// -----------------------------------------------------------------------------
+    /// <summary>
+    ///    メッセージの定数クラスです。
+    /// </summary>
+    /// -----------------------------------------------------------------------------
+    public static class Message
+    {
     }
 }
