@@ -927,6 +927,11 @@ namespace CostAccounting
                 //----------------------------------------- 実績登録の場合は、乖離幅測定データも登録
                 if (Const.CATEGORY_TYPE.Actual.Equals(category))
                 {
+                    Dictionary<CheckBox, bool> prevState = new Dictionary<CheckBox, bool>();
+
+                    foreach (CheckBox target in checkBoxMonthDic.Keys)
+                        prevState.Add(target, target.Checked);
+
                     foreach (CheckBox target in checkBoxMonthDic.Keys)
                     {
                         target.Checked = true;
@@ -978,8 +983,10 @@ namespace CostAccounting
                             divergence.First().update_user = SystemInformation.UserName;
                             divergence.First().update_date = DateTime.Now;
                         }
-
                     }
+
+                    foreach (CheckBox target in checkBoxMonthDic.Keys)
+                        target.Checked = prevState[target];
                 }
 
                 context.SaveChanges();
