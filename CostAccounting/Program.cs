@@ -663,20 +663,25 @@ namespace CostAccounting
         }
     }
 
+    /// -----------------------------------------------------------------------------
+    /// <summary>
+    ///     オブジェクトコピーをサポートした静的クラスです。
+    /// </summary>
+    /// -----------------------------------------------------------------------------
     public static class DeepCopyHelper
     {
         /// -----------------------------------------------------------------------------
         /// <summary>
-        ///     インスタンスをリフレッシュする</summary>
+        ///     指定されたオブジェクトのディープコピーを返却します。</summary>
+        /// <param name="target">
+        ///     コピー元オブジェクト<param>
         /// <returns>
-        ///     </returns>
+        ///     コピーオブジェクト</returns>
         /// -----------------------------------------------------------------------------
         public static T DeepCopy<T>(T target)
         {
-
             T result;
             BinaryFormatter b = new BinaryFormatter();
-
             MemoryStream mem = new MemoryStream();
 
             try
@@ -689,9 +694,30 @@ namespace CostAccounting
             {
                 mem.Close();
             }
-
             return result;
-
         }
+    }
+
+    /// -----------------------------------------------------------------------------
+    /// <summary>
+    ///    ログ出力をサポートした静的クラスです。
+    /// </summary>
+    /// -----------------------------------------------------------------------------
+    public static class Log
+    {
+        private static readonly log4net.ILog logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        /// -----------------------------------------------------------------------------
+        /// <summary>
+        ///     インフォレベルのログを出力します。</summary>
+        /// <param name="message">
+        ///     ログメッセージ<param>
+        /// <returns></returns>
+        /// -----------------------------------------------------------------------------
+        public static void info(string message)
+        {
+            logger.Info(message);
+        }
+    
     }
 }
