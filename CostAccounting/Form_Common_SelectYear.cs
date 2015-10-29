@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data.SQLite;
 
 namespace CostAccounting
 {
@@ -52,6 +53,23 @@ namespace CostAccounting
         private void textBox_KeyPress_numeric(object sender, KeyPressEventArgs e)
         {
             Event.textBox_KeyPress_numeric(sender, e);
+        }
+
+        /*************************************************************
+         * フォーム終了時の処理
+         *************************************************************/
+        private void Form_Common_SelectYear_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string dbPath = System.Configuration.ConfigurationManager.AppSettings["dbPath"];
+            using (SQLiteConnection connection = new SQLiteConnection("Data Source=" + dbPath))
+            {
+                connection.Open();
+                using (SQLiteCommand command = new SQLiteCommand(connection))
+                {
+                    command.CommandText = "vacuum;";
+                    command.ExecuteNonQuery();
+                }
+            }
         }
     }
 }
