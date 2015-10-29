@@ -132,7 +132,7 @@ namespace CostAccounting
                     unit = textRegUnit.Text,
                     kbn = getProductKbn(groupKbn1),
                     note = textRegNote.Text,
-                    update_user = SystemInformation.UserName,
+                    update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                     update_date = DateTime.Now,
                     del_flg = Const.FLG_OFF
                 };
@@ -180,7 +180,7 @@ namespace CostAccounting
                         target.First().unit = textRegUnit.Text;
                         target.First().kbn = getProductKbn(groupKbn1);
                         target.First().note = textRegNote.Text;
-                        target.First().update_user = SystemInformation.UserName;
+                        target.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
                         target.First().update_date = DateTime.Now;
                     }
                     context.SaveChanges();
@@ -310,7 +310,7 @@ namespace CostAccounting
                             unit = items.SubItems[2].Text,
                             kbn = productKbn,
                             note = string.Empty,
-                            update_user = SystemInformation.UserName,
+                            update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                             update_date = DateTime.Now,
                             del_flg = Const.FLG_OFF
                         };

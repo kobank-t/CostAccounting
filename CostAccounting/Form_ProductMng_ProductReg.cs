@@ -1573,7 +1573,7 @@ namespace CostAccounting
                         no = no++,
                         code = code,
                         quantity = Conversion.Parse((string)row.Cells["dgvMaterialCostQuantity"].Value),
-                        update_user = SystemInformation.ComputerName,
+                        update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                         update_date = DateTime.Now,
                         del_flg = Const.FLG_OFF
                     };
@@ -1597,7 +1597,7 @@ namespace CostAccounting
                         name = name,
                         quantity = Conversion.Parse((string)row.Cells["dgvContractorsQuantity"].Value),
                         cost = Conversion.Parse((string)row.Cells["dgvContractorsCost"].Value),
-                        update_user = SystemInformation.ComputerName,
+                        update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                         update_date = DateTime.Now,
                         del_flg = Const.FLG_OFF
                     };
@@ -1621,7 +1621,7 @@ namespace CostAccounting
                         name = name,
                         quantity = Conversion.Parse((string)row.Cells["dgvMaterialsFareQuantity"].Value),
                         cost = Conversion.Parse((string)row.Cells["dgvMaterialsFareCost"].Value),
-                        update_user = SystemInformation.ComputerName,
+                        update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                         update_date = DateTime.Now,
                         del_flg = Const.FLG_OFF
                     };
@@ -1644,7 +1644,7 @@ namespace CostAccounting
                         no = no++,
                         code = code,
                         quantity = Conversion.Parse((string)row.Cells["dgvPackingQuantity"].Value),
-                        update_user = SystemInformation.ComputerName,
+                        update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                         update_date = DateTime.Now,
                         del_flg = Const.FLG_OFF
                     };
@@ -1667,7 +1667,7 @@ namespace CostAccounting
                         no = no++,
                         code = code,
                         time = Conversion.Parse((string)row.Cells["dgvMachineTime"].Value),
-                        update_user = SystemInformation.ComputerName,
+                        update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                         update_date = DateTime.Now,
                         del_flg = Const.FLG_OFF
                     };
@@ -1690,7 +1690,7 @@ namespace CostAccounting
                         no = no++,
                         code = code,
                         quantity = Conversion.Parse((string)row.Cells["dgvPackingFareQuantity"].Value),
-                        update_user = SystemInformation.ComputerName,
+                        update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                         update_date = DateTime.Now,
                         del_flg = Const.FLG_OFF
                     };

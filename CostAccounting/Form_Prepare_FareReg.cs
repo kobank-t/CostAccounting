@@ -69,7 +69,7 @@ namespace CostAccounting
                     price_budget = Conversion.Parse(textRegPriceBudget.Text),
                     price_actual = Conversion.Parse(textRegPriceActual.Text),
                     note = textRegNote.Text,
-                    update_user = SystemInformation.UserName,
+                    update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                     update_date = DateTime.Now,
                     del_flg = Const.FLG_OFF
                 };
@@ -117,7 +117,7 @@ namespace CostAccounting
                         target.First().price_budget = Conversion.Parse(textRegPriceBudget.Text);
                         target.First().price_actual = Conversion.Parse(textRegPriceActual.Text);
                         target.First().note = textRegNote.Text;
-                        target.First().update_user = SystemInformation.UserName;
+                        target.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
                         target.First().update_date = DateTime.Now;
                     }
                     context.SaveChanges();
@@ -186,7 +186,7 @@ namespace CostAccounting
                             price_budget = decimal.Zero,
                             price_actual = decimal.Zero,
                             note = string.Empty,
-                            update_user = SystemInformation.UserName,
+                            update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                             update_date = DateTime.Now,
                             del_flg = Const.FLG_OFF
                         };

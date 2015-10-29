@@ -338,7 +338,7 @@ namespace CostAccounting
                         no = no++,
                         code = code,
                         blend_rate = rate,
-                        update_user = SystemInformation.ComputerName,
+                        update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                         update_date = DateTime.Now,
                         del_flg = Const.FLG_OFF
                     };

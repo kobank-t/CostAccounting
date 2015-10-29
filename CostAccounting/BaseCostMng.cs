@@ -873,7 +873,7 @@ namespace CostAccounting
                         target.First().month_01 = Conversion.Parse((string)row.Cells[25].Value);
                         target.First().month_02 = Conversion.Parse((string)row.Cells[26].Value);
                         target.First().month_03 = Conversion.Parse((string)row.Cells[27].Value);
-                        target.First().update_user = SystemInformation.UserName;
+                        target.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
                         target.First().update_date = DateTime.Now;
                     }
                 }
@@ -897,7 +897,7 @@ namespace CostAccounting
                     budget.First().selling_depreciation = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[47].Value);
                     budget.First().selling_other = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[48].Value);
                     budget.First().operating_expenses = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[49].Value);
-                    budget.First().update_user = SystemInformation.UserName;
+                    budget.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
                     budget.First().update_date = DateTime.Now;
                 }
                 else
@@ -917,7 +917,7 @@ namespace CostAccounting
                         selling_depreciation = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[47].Value),
                         selling_other = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[48].Value),
                         operating_expenses = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[49].Value),
-                        update_user = SystemInformation.UserName,
+                        update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                         update_date = DateTime.Now,
                         del_flg = Const.FLG_OFF
                     };
@@ -963,7 +963,7 @@ namespace CostAccounting
                                 utilitiesCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[34].Value),
                                 otherCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[35].Value),
                                 packingFare_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[36].Value),
-                                update_user = SystemInformation.UserName,
+                                update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                                 update_date = DateTime.Now,
                                 del_flg = Const.FLG_OFF
                             };
@@ -980,7 +980,7 @@ namespace CostAccounting
                             divergence.First().utilitiesCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[34].Value);
                             divergence.First().otherCost_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[35].Value);
                             divergence.First().packingFare_costing = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[36].Value);
-                            divergence.First().update_user = SystemInformation.UserName;
+                            divergence.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
                             divergence.First().update_date = DateTime.Now;
                         }
                     }

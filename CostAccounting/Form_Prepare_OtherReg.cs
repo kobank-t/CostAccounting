@@ -134,7 +134,7 @@ namespace CostAccounting
                     rate_expend = Conversion.Parse(rateExpend_plan.Text),
                     rate_loss = Conversion.Parse(rateLoss_plan.Text),
                     tray_num = Conversion.Parse(trayNum_plan.Text),
-                    update_user = SystemInformation.UserName,
+                    update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                     update_date = DateTime.Now,
                     del_flg = Const.FLG_OFF
                 };
@@ -157,7 +157,7 @@ namespace CostAccounting
                     rate_expend = Conversion.Parse(rateExpend_actual.Text),
                     rate_loss = Conversion.Parse(rateLoss_actual.Text),
                     tray_num = Conversion.Parse(trayNum_actual.Text),
-                    update_user = SystemInformation.UserName,
+                    update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                     update_date = DateTime.Now,
                     del_flg = Const.FLG_OFF
                 };

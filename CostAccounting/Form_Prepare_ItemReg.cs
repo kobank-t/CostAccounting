@@ -65,7 +65,7 @@ namespace CostAccounting
                     year = Const.TARGET_YEAR,
                     name = textRegName.Text,
                     note = textRegNote.Text,
-                    update_user = SystemInformation.UserName,
+                    update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                     update_date = DateTime.Now,
                     del_flg = Const.FLG_OFF
                 };
@@ -111,7 +111,7 @@ namespace CostAccounting
                         target.First().code = textRegCode.Text;
                         target.First().name = textRegName.Text;
                         target.First().note = textRegNote.Text;
-                        target.First().update_user = SystemInformation.UserName;
+                        target.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
                         target.First().update_date = DateTime.Now;
                     }
                     context.SaveChanges();
@@ -178,7 +178,7 @@ namespace CostAccounting
                             year = Const.TARGET_YEAR,
                             name = data[1],
                             note = string.Empty,
-                            update_user = SystemInformation.UserName,
+                            update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                             update_date = DateTime.Now,
                             del_flg = Const.FLG_OFF
                         };
