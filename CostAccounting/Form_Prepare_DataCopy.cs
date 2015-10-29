@@ -215,15 +215,16 @@ namespace CostAccounting
 
             //---------------------------------------------------------
             var target09 = from t in context.ProductBlend
-                           where t.id.StartsWith(srcYear.ToString())
-                              && t.id.EndsWith(((int)Const.CATEGORY_TYPE.Actual).ToString())
+                           where t.year.Equals(srcYear)
+                              && t.category.Equals((int)Const.CATEGORY_TYPE.Actual)
                            select t;
             foreach (var data in target09.ToList())
             {
                 foreach (int category in Enum.GetValues(typeof(Const.CATEGORY_TYPE)))
                 {
                     var entity = DeepCopyHelper.DeepCopy<ProductBlend>(data);
-                    entity.id = "";
+                    entity.year = Const.TARGET_YEAR;
+                    entity.category = category;
                     entity.update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
                     entity.update_date = DateTime.Now;
                     context.ProductBlend.Add(entity);
@@ -243,41 +244,113 @@ namespace CostAccounting
                 context.ProductCode.Add(entity);
             }
 
-            ////---------------------------------------------------------
-            //var target11 = from t in context.ProductContractor
-            //               where t.id.StartsWith(srcYear.ToString())
-            //               select t;
-            //context.ProductContractor.AddRange(target11);
+            //---------------------------------------------------------
+            var target11 = from t in context.ProductContractor
+                           where t.year.Equals(srcYear)
+                              && t.category.Equals((int)Const.CATEGORY_TYPE.Actual)
+                           select t;
+            foreach (var data in target11.ToList())
+            {
+                foreach (int category in Enum.GetValues(typeof(Const.CATEGORY_TYPE)))
+                {
+                    var entity = DeepCopyHelper.DeepCopy<ProductContractor>(data);
+                    entity.year = Const.TARGET_YEAR;
+                    entity.category = category;
+                    entity.update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
+                    entity.update_date = DateTime.Now;
+                    context.ProductContractor.Add(entity);
+                }
+            }
 
-            ////---------------------------------------------------------
-            //var target12 = from t in context.ProductMachine
-            //               where t.id.StartsWith(srcYear.ToString())
-            //               select t;
-            //context.ProductMachine.AddRange(target12);
+            //---------------------------------------------------------
+            var target12 = from t in context.ProductMachine
+                           where t.year.Equals(srcYear)
+                              && t.category.Equals((int)Const.CATEGORY_TYPE.Actual)
+                           select t;
+            foreach (var data in target12.ToList())
+            {
+                foreach (int category in Enum.GetValues(typeof(Const.CATEGORY_TYPE)))
+                {
+                    var entity = DeepCopyHelper.DeepCopy<ProductMachine>(data);
+                    entity.year = Const.TARGET_YEAR;
+                    entity.category = category;
+                    entity.update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
+                    entity.update_date = DateTime.Now;
+                    context.ProductMachine.Add(entity);
+                }
+            }
 
-            ////---------------------------------------------------------
-            //var target13 = from t in context.ProductMaterial
-            //               where t.id.StartsWith(srcYear.ToString())
-            //               select t;
-            //context.ProductMaterial.AddRange(target13);
+            //---------------------------------------------------------
+            var target13 = from t in context.ProductMaterial
+                           where t.year.Equals(srcYear)
+                              && t.category.Equals((int)Const.CATEGORY_TYPE.Actual)
+                           select t;
+            foreach (var data in target13.ToList())
+            {
+                foreach (int category in Enum.GetValues(typeof(Const.CATEGORY_TYPE)))
+                {
+                    var entity = DeepCopyHelper.DeepCopy<ProductMaterial>(data);
+                    entity.year = Const.TARGET_YEAR;
+                    entity.category = category;
+                    entity.update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
+                    entity.update_date = DateTime.Now;
+                    context.ProductMaterial.Add(entity);
+                }
+            }
 
-            ////---------------------------------------------------------
-            //var target14 = from t in context.ProductMaterialsFare
-            //               where t.id.StartsWith(srcYear.ToString())
-            //               select t;
-            //context.ProductMaterialsFare.AddRange(target14);
+            //---------------------------------------------------------
+            var target14 = from t in context.ProductMaterialsFare
+                           where t.year.Equals(srcYear)
+                              && t.category.Equals((int)Const.CATEGORY_TYPE.Actual)
+                           select t;
+            foreach (var data in target14.ToList())
+            {
+                foreach (int category in Enum.GetValues(typeof(Const.CATEGORY_TYPE)))
+                {
+                    var entity = DeepCopyHelper.DeepCopy<ProductMaterialsFare>(data);
+                    entity.year = Const.TARGET_YEAR;
+                    entity.category = category;
+                    entity.update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
+                    entity.update_date = DateTime.Now;
+                    context.ProductMaterialsFare.Add(entity);
+                }
+            }
 
-            ////---------------------------------------------------------
-            //var targe15 = from t in context.ProductPacking
-            //              where t.id.StartsWith(srcYear.ToString())
-            //              select t;
-            //context.ProductPacking.AddRange(targe15);
+            //---------------------------------------------------------
+            var targe15 = from t in context.ProductPacking
+                          where t.year.Equals(srcYear)
+                              && t.category.Equals((int)Const.CATEGORY_TYPE.Actual)
+                          select t;
+            foreach (var data in targe15.ToList())
+            {
+                foreach (int category in Enum.GetValues(typeof(Const.CATEGORY_TYPE)))
+                {
+                    var entity = DeepCopyHelper.DeepCopy<ProductPacking>(data);
+                    entity.year = Const.TARGET_YEAR;
+                    entity.category = category;
+                    entity.update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
+                    entity.update_date = DateTime.Now;
+                    context.ProductPacking.Add(entity);
+                }
+            }
 
-            ////---------------------------------------------------------
-            //var target16 = from t in context.ProductPackingFare
-            //               where t.id.StartsWith(srcYear.ToString())
-            //               select t;
-            //context.ProductPackingFare.AddRange(target16);
+            //---------------------------------------------------------
+            var target16 = from t in context.ProductPackingFare
+                           where t.year.Equals(srcYear)
+                              && t.category.Equals((int)Const.CATEGORY_TYPE.Actual)
+                           select t;
+            foreach (var data in target16.ToList())
+            {
+                foreach (int category in Enum.GetValues(typeof(Const.CATEGORY_TYPE)))
+                {
+                    var entity = DeepCopyHelper.DeepCopy<ProductPackingFare>(data);
+                    entity.year = Const.TARGET_YEAR;
+                    entity.category = category;
+                    entity.update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
+                    entity.update_date = DateTime.Now;
+                    context.ProductPackingFare.Add(entity);
+                }
+            }
 
             //---------------------------------------------------------
             var target17 = from t in context.ProductSupplier
@@ -380,7 +453,7 @@ namespace CostAccounting
 
             //---------------------------------------------------------
             var target09 = from t in context.ProductBlend
-                           where t.id.StartsWith(Const.TARGET_YEAR.ToString())
+                           where t.year.Equals(Const.TARGET_YEAR)
                            select t;
             context.ProductBlend.RemoveRange(target09);
 
@@ -392,37 +465,37 @@ namespace CostAccounting
 
             //---------------------------------------------------------
             var target11 = from t in context.ProductContractor
-                           where t.id.StartsWith(Const.TARGET_YEAR.ToString())
+                           where t.year.Equals(Const.TARGET_YEAR)
                            select t;
             context.ProductContractor.RemoveRange(target11);
 
             //---------------------------------------------------------
             var target12 = from t in context.ProductMachine
-                           where t.id.StartsWith(Const.TARGET_YEAR.ToString())
+                           where t.year.Equals(Const.TARGET_YEAR)
                            select t;
             context.ProductMachine.RemoveRange(target12);
 
             //---------------------------------------------------------
             var target13 = from t in context.ProductMaterial
-                           where t.id.StartsWith(Const.TARGET_YEAR.ToString())
+                           where t.year.Equals(Const.TARGET_YEAR)
                            select t;
             context.ProductMaterial.RemoveRange(target13);
 
             //---------------------------------------------------------
             var target14 = from t in context.ProductMaterialsFare
-                           where t.id.StartsWith(Const.TARGET_YEAR.ToString())
+                           where t.year.Equals(Const.TARGET_YEAR)
                            select t;
             context.ProductMaterialsFare.RemoveRange(target14);
 
             //---------------------------------------------------------
             var targe15 = from t in context.ProductPacking
-                          where t.id.StartsWith(Const.TARGET_YEAR.ToString())
+                          where t.year.Equals(Const.TARGET_YEAR)
                           select t;
             context.ProductPacking.RemoveRange(targe15);
 
             //---------------------------------------------------------
             var target16 = from t in context.ProductPackingFare
-                           where t.id.StartsWith(Const.TARGET_YEAR.ToString())
+                           where t.year.Equals(Const.TARGET_YEAR)
                            select t;
             context.ProductPackingFare.RemoveRange(target16);
 

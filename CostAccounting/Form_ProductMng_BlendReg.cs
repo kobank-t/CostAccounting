@@ -316,9 +316,6 @@ namespace CostAccounting
             };
             context.Product.Add(entityProduct);
 
-            // 関連テーブルの主キー（年＋商品コード＋取引先コード＋予定／実績）を生成
-            string id = string.Concat(Const.TARGET_YEAR, productCode.Text, category);
-
             // ブレンドする商品データの登録
             int no = 0;
             foreach (DataGridViewRow row in dgvProduct.Rows)
@@ -335,7 +332,9 @@ namespace CostAccounting
 
                     var entity = new ProductBlend()
                     {
-                        id = id,
+                        year = Const.TARGET_YEAR,
+                        product_code = productCode.Text,
+                        category = category,
                         no = no++,
                         code = code,
                         blend_rate = rate,
@@ -380,12 +379,11 @@ namespace CostAccounting
                           select t;
             context.Product.RemoveRange(product);
 
-            // 主キー（年＋商品コード＋取引先コード＋予定／実績）を生成
-            string id = string.Concat(Const.TARGET_YEAR, productCode.Text, category);
-
             // ブレンドする商品データ
             var blend = from t in context.ProductBlend
-                        where t.id.Equals(id)
+                        where t.year.Equals(Const.TARGET_YEAR)
+                           && t.product_code.Equals(productCode.Text)
+                           && t.category.Equals(category)
                         select t;
             context.ProductBlend.RemoveRange(blend);
         }
@@ -677,12 +675,11 @@ namespace CostAccounting
                     // 取引先データの設定
                     setSupplierData();
 
-                    // 主キー（年＋商品コード＋取引先コード）を生成
-                    string id = string.Concat(Const.TARGET_YEAR, productCode.Text, category);
-
                     // データグリッドビューの設定
                     List<ProductBlend> blend = (from t in context.ProductBlend
-                                                where t.id.Equals(id)
+                                                where t.year.Equals(Const.TARGET_YEAR)
+                                                   && t.product_code.Equals(productCode.Text)
+                                                   && t.category.Equals(category)
                                                 orderby t.no
                                                 select t).ToList();
                     dgvProduct.RowCount = blend.Count() + 1;
@@ -715,7 +712,8 @@ namespace CostAccounting
                 int category = (int)Program.judgeCategory(radioBudget, radioActual);
 
                 var product = from t_product in context.Product
-                              join m_product in context.ProductCode on t_product.code equals m_product.code
+                              join m_product in context.ProductCode on
+                                   new { t_product.code, t_product.year } equals new { m_product.code, m_product.year }
                               where t_product.code.Equals(productCode)
                                  && t_product.year.Equals(Const.TARGET_YEAR)
                                  && t_product.category.Equals(category)

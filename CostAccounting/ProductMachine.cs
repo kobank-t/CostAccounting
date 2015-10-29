@@ -14,7 +14,9 @@ namespace CostAccounting
     
     [Serializable] public partial class ProductMachine
     {
-        public string id { get; set; }
+        public int year { get; set; }
+        public string product_code { get; set; }
+        public int category { get; set; }
         public int no { get; set; }
         public string code { get; set; }
         public decimal time { get; set; }

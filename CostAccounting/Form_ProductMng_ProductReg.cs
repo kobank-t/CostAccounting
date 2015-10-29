@@ -489,12 +489,11 @@ namespace CostAccounting
                     // 取引先データの設定
                     setSupplierData();
 
-                    // 関連テーブルの主キー（年＋商品コード＋取引先コード＋予定／実績）を生成
-                    string id = string.Concat(Const.TARGET_YEAR, productCode.Text, category);
-
                     // 原料費データ
                     List<ProductMaterial> material = (from t in context.ProductMaterial
-                                                      where t.id.Equals(id)
+                                                      where t.year.Equals(Const.TARGET_YEAR)
+                                                         && t.product_code.Equals(productCode.Text)
+                                                         && t.category.Equals(category)
                                                       orderby t.no
                                                       select t).ToList();
                     dgvMaterialCost.RowCount = material.Count() + 1;
@@ -507,7 +506,9 @@ namespace CostAccounting
 
                     // 外注費データ
                     List<ProductContractor> contractor = (from t in context.ProductContractor
-                                                          where t.id.Equals(id)
+                                                          where t.year.Equals(Const.TARGET_YEAR)
+                                                             && t.product_code.Equals(productCode.Text)
+                                                             && t.category.Equals(category)
                                                           orderby t.no
                                                           select t).ToList();
                     dgvContractors.RowCount = contractor.Count() + 1;
@@ -520,7 +521,9 @@ namespace CostAccounting
 
                     // 製造経費－原料運賃データ
                     List<ProductMaterialsFare> materialFare = (from t in context.ProductMaterialsFare
-                                                               where t.id.Equals(id)
+                                                               where t.year.Equals(Const.TARGET_YEAR)
+                                                                  && t.product_code.Equals(productCode.Text)
+                                                                  && t.category.Equals(category)
                                                                orderby t.no
                                                                select t).ToList();
                     dgvMaterialsFare.RowCount = materialFare.Count() + 1;
@@ -533,7 +536,9 @@ namespace CostAccounting
 
                     // 製造経費－包装資材費データ
                     List<ProductPacking> packingList = (from t in context.ProductPacking
-                                                        where t.id.Equals(id)
+                                                        where t.year.Equals(Const.TARGET_YEAR)
+                                                           && t.product_code.Equals(productCode.Text)
+                                                           && t.category.Equals(category)
                                                         orderby t.no
                                                         select t).ToList();
                     dgvPacking.RowCount = packingList.Count() + 1;
@@ -547,7 +552,9 @@ namespace CostAccounting
 
                     // 製造経費－設備費データ
                     List<ProductMachine> machine = (from t in context.ProductMachine
-                                                    where t.id.Equals(id)
+                                                    where t.year.Equals(Const.TARGET_YEAR)
+                                                       && t.product_code.Equals(productCode.Text)
+                                                       && t.category.Equals(category)
                                                     orderby t.no
                                                     select t).ToList();
                     dgvMachine.RowCount = machine.Count() + 1;
@@ -560,7 +567,9 @@ namespace CostAccounting
 
                     // 製造経費－荷造運賃データ
                     List<ProductPackingFare> packingFare = (from t in context.ProductPackingFare
-                                                            where t.id.Equals(id)
+                                                            where t.year.Equals(Const.TARGET_YEAR)
+                                                               && t.product_code.Equals(productCode.Text)
+                                                               && t.category.Equals(category)
                                                             orderby t.no
                                                             select t).ToList();
                     dgvPackingFare.RowCount = packingFare.Count() + 1;
@@ -1549,9 +1558,6 @@ namespace CostAccounting
             };
             context.Product.Add(entityProduct);
 
-            // 関連テーブルの主キー（年＋商品コード＋取引先コード＋予定／実績）を生成
-            string id = string.Concat(Const.TARGET_YEAR, productCode.Text, category);
-
             // 原料費データの登録
             int no = 0;
             foreach (DataGridViewRow row in dgvMaterialCost.Rows)
@@ -1561,7 +1567,9 @@ namespace CostAccounting
                 {
                     var entity = new ProductMaterial()
                     {
-                        id = id,
+                        year = Const.TARGET_YEAR,
+                        product_code = productCode.Text,
+                        category = category,
                         no = no++,
                         code = code,
                         quantity = Conversion.Parse((string)row.Cells["dgvMaterialCostQuantity"].Value),
@@ -1582,7 +1590,9 @@ namespace CostAccounting
                 {
                     var entity = new ProductContractor()
                     {
-                        id = id,
+                        year = Const.TARGET_YEAR,
+                        product_code = productCode.Text,
+                        category = category,
                         no = no++,
                         name = name,
                         quantity = Conversion.Parse((string)row.Cells["dgvContractorsQuantity"].Value),
@@ -1604,7 +1614,9 @@ namespace CostAccounting
                 {
                     var entity = new ProductMaterialsFare()
                     {
-                        id = id,
+                        year = Const.TARGET_YEAR,
+                        product_code = productCode.Text,
+                        category = category,
                         no = no++,
                         name = name,
                         quantity = Conversion.Parse((string)row.Cells["dgvMaterialsFareQuantity"].Value),
@@ -1626,7 +1638,9 @@ namespace CostAccounting
                 {
                     var entity = new ProductPacking()
                     {
-                        id = id,
+                        year = Const.TARGET_YEAR,
+                        product_code = productCode.Text,
+                        category = category,
                         no = no++,
                         code = code,
                         quantity = Conversion.Parse((string)row.Cells["dgvPackingQuantity"].Value),
@@ -1647,7 +1661,9 @@ namespace CostAccounting
                 {
                     var entity = new ProductMachine()
                     {
-                        id = id,
+                        year = Const.TARGET_YEAR,
+                        product_code = productCode.Text,
+                        category = category,
                         no = no++,
                         code = code,
                         time = Conversion.Parse((string)row.Cells["dgvMachineTime"].Value),
@@ -1668,7 +1684,9 @@ namespace CostAccounting
                 {
                     var entity = new ProductPackingFare()
                     {
-                        id = id,
+                        year = Const.TARGET_YEAR,
+                        product_code = productCode.Text,
+                        category = category,
                         no = no++,
                         code = code,
                         quantity = Conversion.Parse((string)row.Cells["dgvPackingFareQuantity"].Value),
@@ -1713,42 +1731,51 @@ namespace CostAccounting
                           select t;
             context.Product.RemoveRange(product);
 
-            // 関連テーブルの主キー（年＋商品コード＋取引先コード＋予定／実績）を生成
-            string id = string.Concat(Const.TARGET_YEAR, productCode.Text, category);
-
             // 原料費データ
             var material = from t in context.ProductMaterial
-                           where t.id.Equals(id)
+                           where t.year.Equals(Const.TARGET_YEAR)
+                              && t.product_code.Equals(productCode.Text)
+                              && t.category.Equals(category)
                            select t;
             context.ProductMaterial.RemoveRange(material);
 
             // 外注費データ
             var contractor = from t in context.ProductContractor
-                             where t.id.Equals(id)
+                             where t.year.Equals(Const.TARGET_YEAR)
+                                && t.product_code.Equals(productCode.Text)
+                                && t.category.Equals(category)
                              select t;
             context.ProductContractor.RemoveRange(contractor);
 
             // 製造経費－原料運賃データ
             var materialFare = from t in context.ProductMaterialsFare
-                               where t.id.Equals(id)
+                               where t.year.Equals(Const.TARGET_YEAR)
+                                  && t.product_code.Equals(productCode.Text)
+                                  && t.category.Equals(category)
                                select t;
             context.ProductMaterialsFare.RemoveRange(materialFare);
 
             // 製造経費－包装資材費データ
             var packing = from t in context.ProductPacking
-                          where t.id.Equals(id)
+                          where t.year.Equals(Const.TARGET_YEAR)
+                             && t.product_code.Equals(productCode.Text)
+                             && t.category.Equals(category)
                           select t;
             context.ProductPacking.RemoveRange(packing);
 
             // 製造経費－設備費データ
             var machine = from t in context.ProductMachine
-                          where t.id.Equals(id)
+                          where t.year.Equals(Const.TARGET_YEAR)
+                             && t.product_code.Equals(productCode.Text)
+                             && t.category.Equals(category)
                           select t;
             context.ProductMachine.RemoveRange(machine);
 
             // 製造経費－荷造運賃データ
             var packingFare = from t in context.ProductPackingFare
-                              where t.id.Equals(id)
+                              where t.year.Equals(Const.TARGET_YEAR)
+                                 && t.product_code.Equals(productCode.Text)
+                                 && t.category.Equals(category)
                               select t;
             context.ProductPackingFare.RemoveRange(packingFare);
         }
