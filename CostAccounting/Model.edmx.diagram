@@ -24,6 +24,7 @@
         <EntityTypeShape EntityType="CostAccountingModel.ProductSupplier" Width="1.5" PointX="12.75" PointY="4.75" />
         <EntityTypeShape EntityType="CostAccountingModel.RowMaterial" Width="1.5" PointX="12.75" PointY="10.75" />
         <EntityTypeShape EntityType="CostAccountingModel.Supplier" Width="1.5" PointX="6.75" PointY="13.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.DbSize" Width="1.5" PointX="9.375" PointY="13.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

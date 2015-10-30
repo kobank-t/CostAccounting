@@ -433,7 +433,8 @@ namespace CostAccounting
                              join m_supplier in context.Supplier
                                   on new { t_actual.t_supplier.year, code = t_actual.t_supplier.supplier_code } equals new { m_supplier.year, m_supplier.code }
                              join m_item in context.Item
-                                  on t_actual.t_product.item_code equals m_item.code
+                                  on new { t_actual.t_product.year, code = t_actual.t_product.item_code } equals new { m_item.year, m_item.code }
+
                              orderby t_actual.t_supplier.supplier_code, t_actual.t_supplier.product_code
                              select new { t_actual, t_budget, m_product, m_supplier, m_item };
 

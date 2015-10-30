@@ -204,7 +204,7 @@ namespace CostAccounting
             this.total_diff.Text = total_diff.ToString("N");
             this.total_rate.Text = total_rate.ToString("P");
         }
-        
+
         /*************************************************************
          * 本画面のすべての計算を行う
          *************************************************************/
@@ -312,6 +312,8 @@ namespace CostAccounting
                 }
                 context.SaveChanges();
             }
+
+            Logger.Info(Message.INF003, new string[] { this.Text, "-" });
             Program.MessageBoxAfter("登録しました。");
         }
 

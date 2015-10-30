@@ -237,7 +237,7 @@ namespace CostAccounting
                                               , "お手数ですが、ログファイルの送付をお願いします。"
                                               , Environment.NewLine
                                               , "_(._.)_"));
-                Logger.Error("予期しないエラーが発生しました。", e);
+                Logger.Error(Message.ERR001, e);
             }
         }
     }

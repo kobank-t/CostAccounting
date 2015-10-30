@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Data.SQLite;
+using System.IO;
 
 namespace CostAccounting
 {
@@ -60,6 +61,7 @@ namespace CostAccounting
          *************************************************************/
         private void Form_Common_SelectYear_FormClosing(object sender, FormClosingEventArgs e)
         {
+            // DBファイルのバキューム処理
             string dbPath = System.Configuration.ConfigurationManager.AppSettings["dbPath"];
             using (SQLiteConnection connection = new SQLiteConnection("Data Source=" + dbPath))
             {
@@ -70,6 +72,36 @@ namespace CostAccounting
                     command.ExecuteNonQuery();
                 }
             }
+
+            // DBサイズの記録
+            using (var context = new CostAccountingEntities())
+            {
+                // 登録データのオブジェクトを作成
+                DateTime dt = DateTime.Now;
+                var entity = new DbSize()
+                {
+                    year = dt.Year,
+                    month = dt.Month,
+                    daytime = dt.ToString("ddHHmmss"),
+                    size = new FileInfo(dbPath).Length / 1024,  // KB単位でDBファイルのサイズを記録
+                    update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
+                    update_date = DateTime.Now
+                };
+
+                // データ登録
+                context.DbSize.Add(entity);
+                context.SaveChanges();
+            }
+
+            Logger.Info(Message.INF002);
+        }
+
+        /*************************************************************
+         * フォームロード時の処理
+         *************************************************************/
+        private void Form_Common_SelectYear_Load(object sender, EventArgs e)
+        {
+            Logger.Info(Message.INF001);
         }
     }
 }

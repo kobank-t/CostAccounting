@@ -1370,6 +1370,8 @@ namespace CostAccounting
 
             setSupplierData();
             setOperationKbn();
+
+            Logger.Info(Message.INF003, new string[] { this.Text, Message.create(productCode, suppllierCode) + radioText });
             Program.MessageBoxAfter("登録しました。");
         }
 
@@ -1405,6 +1407,8 @@ namespace CostAccounting
 
             setSupplierData();
             setOperationKbn();
+
+            Logger.Info(Message.INF004, new string[] { this.Text, Message.create(productCode, suppllierCode) + radioText });
             Program.MessageBoxAfter("修正しました。");
         }
 
@@ -1431,6 +1435,8 @@ namespace CostAccounting
             setProductData();
             setSupplierData();
             setOperationKbn();
+
+            Logger.Info(Message.INF005, new string[] { this.Text, Message.create(productCode, suppllierCode) + radioText });
             Program.MessageBoxAfter("削除しました。");
         }
 

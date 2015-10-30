@@ -717,7 +717,6 @@ namespace CostAccounting
         public static void Info(string message)
         {
             logger.Info(message);
-            logger.InfoFormat("mymethod:今日の日付 Date:{0}", DateTime.Now);
         }
 
         /// -----------------------------------------------------------------------------
@@ -756,5 +755,23 @@ namespace CostAccounting
     /// -----------------------------------------------------------------------------
     public static class Message
     {
+        public static string INF001 = "INF001：原価計算ソフトが起動しました。";
+        public static string INF002 = "INF002：原価計算ソフトが終了しました。";
+        public static string INF003 = "INF003：登録しました。画面名=[{0}]　内容=[{1}]";
+        public static string INF004 = "INF004：修正しました。画面名=[{0}]　内容=[{1}]";
+        public static string INF005 = "INF005：削除しました。画面名=[{0}]　内容=[{1}]";
+
+        public static string ERR001 = "ERR001：予期しないエラーが発生しました。";
+
+        public static string create(params Control[] controls)
+        {
+            string ret = string.Empty;
+
+            ret = string.Concat("targetYear=", Const.TARGET_YEAR, " ");
+            foreach (Control control in controls)
+                ret += string.Concat(control.Name, "=", control.Text, " ");
+
+            return ret;
+        }
     }
 }

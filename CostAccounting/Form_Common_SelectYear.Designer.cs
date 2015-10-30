@@ -107,6 +107,7 @@
             this.Name = "Form_Common_SelectYear";
             this.Text = "年度入力";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Common_SelectYear_FormClosing);
+            this.Load += new System.EventHandler(this.Form_Common_SelectYear_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -118,6 +118,7 @@ namespace CostAccounting
         private void btnAppend_Click(object sender, EventArgs e)
         {
             base.btnAppend_Click(sender, e, Const.CATEGORY_TYPE.Actual);
+            Logger.Info(Message.INF003, new string[] { this.Text, Message.create(targetMonth, labelFilePath) });
         }
 
         /*************************************************************

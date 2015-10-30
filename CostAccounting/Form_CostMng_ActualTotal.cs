@@ -133,9 +133,12 @@ namespace CostAccounting
                              join m_supplier in context.Supplier
                                   on new { t_supplier.year, code = t_supplier.supplier_code } equals new { m_supplier.year, m_supplier.code }
                              join t_product in context.Product
-                                  on new { t_supplier.year, code = t_supplier.product_code, t_supplier.category } equals new { t_product.year, t_product.code, t_product.category }
+                                  on new { t_supplier.year, code = t_supplier.product_code, t_supplier.category, t_supplier.type }
+                                       equals
+                                     new { t_product.year, t_product.code, t_product.category, t_product.type }
                              join m_item in context.Item
-                                  on t_product.item_code equals m_item.code
+                                  on new { t_product.year, code = t_product.item_code } equals new { m_item.year, m_item.code }
+
                              where t_supplier.year.Equals(Const.TARGET_YEAR)
                                 && t_supplier.category.Equals((int)category)
                              group new { t_product, t_supplier } by m_item.name;
@@ -227,9 +230,12 @@ namespace CostAccounting
                              join m_supplier in context.Supplier
                                   on new { t_supplier.year, code = t_supplier.supplier_code } equals new { m_supplier.year, m_supplier.code }
                              join t_product in context.Product
-                                  on new { t_supplier.year, code = t_supplier.product_code, t_supplier.category } equals new { t_product.year, t_product.code, t_product.category }
+                                  on new { t_supplier.year, code = t_supplier.product_code, t_supplier.category, t_supplier.type } 
+                                       equals 
+                                     new { t_product.year, t_product.code, t_product.category, t_product.type }
                              join m_item in context.Item
-                                  on t_product.item_code equals m_item.code
+                                  on new { t_product.year, code = t_product.item_code } equals new { m_item.year, m_item.code }
+
                              where t_supplier.year.Equals(Const.TARGET_YEAR)
                                 && t_supplier.category.Equals((int)category)
                              orderby t_supplier.supplier_code, t_supplier.product_code

@@ -167,6 +167,7 @@ namespace CostAccounting
                 context.SaveChanges();
             }
 
+            Logger.Info(Message.INF003, new string[] { this.Text, "-" });
             Program.MessageBoxAfter("登録しました。");
         }
 

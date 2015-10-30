@@ -500,7 +500,7 @@ namespace CostAccounting
                              join m_supplier in context.Supplier
                                   on new { t.supplier.year, code = t.supplier.supplier_code } equals new { m_supplier.year, m_supplier.code }
                              join m_item in context.Item
-                                  on t.product.item_code equals m_item.code
+                                  on new { t.product.year, code = t.product.item_code } equals new { m_item.year, m_item.code }
                              orderby t.supplier.supplier_code, t.product.code, t.supplier.type
                              select new { t_product = t.product, t_supplier = t.supplier, m_product, m_supplier, m_item };
 
@@ -515,7 +515,6 @@ namespace CostAccounting
                     dataGridView.Rows[i].Cells[2].Value = dataList[i].m_supplier.name;
                     dataGridView.Rows[i].Cells[3].Value = dataList[i].m_product.name;
                     dataGridView.Rows[i].Cells[4].Value = dataList[i].t_supplier.unit_price.ToString("N");
-
                     dataGridView.Rows[i].Cells[5].Value = dataList[i].t_product.material_cost.ToString("N");
                     dataGridView.Rows[i].Cells[6].Value = dataList[i].t_product.labor_cost_direct.ToString("N");
                     dataGridView.Rows[i].Cells[7].Value = dataList[i].t_product.contractors_cost.ToString("N");

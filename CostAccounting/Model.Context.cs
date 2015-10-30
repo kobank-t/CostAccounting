@@ -44,5 +44,6 @@ namespace CostAccounting
         public virtual DbSet<ProductSupplier> ProductSupplier { get; set; }
         public virtual DbSet<RowMaterial> RowMaterial { get; set; }
         public virtual DbSet<Supplier> Supplier { get; set; }
+        public virtual DbSet<DbSize> DbSize { get; set; }
     }
 }

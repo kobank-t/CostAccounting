@@ -103,6 +103,9 @@
     <Compile Include="CostMngTotal.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="DbSize.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Divergence.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

@@ -84,7 +84,10 @@ namespace CostAccounting
                     {
                         context.Fare.Add(entity);
                         context.SaveChanges();
+
+                        Logger.Info(Message.INF003, new string[] { this.Text, Message.create(textRegCode, textRegName) });
                         Program.MessageBoxAfter("登録しました。");
+
                         Form_Prepare_FareReg_Load(sender, e);
                     }
                     else
@@ -123,6 +126,7 @@ namespace CostAccounting
                     context.SaveChanges();
                 }
 
+                Logger.Info(Message.INF004, new string[] { this.Text, Message.create(textRegCode, textRegName) });
                 Program.MessageBoxAfter("更新しました。");
                 Form_Prepare_FareReg_Load(sender, e);
             }
@@ -150,6 +154,7 @@ namespace CostAccounting
                     context.SaveChanges();
                 }
 
+                Logger.Info(Message.INF005, new string[] { this.Text, Message.create(textRegCode, textRegName) });
                 Program.MessageBoxAfter("削除しました。");
                 Form_Prepare_FareReg_Load(sender, e);
             }

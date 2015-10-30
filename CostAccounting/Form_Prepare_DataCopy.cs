@@ -80,6 +80,7 @@ namespace CostAccounting
                         context.SaveChanges();
                     }
 
+                    Logger.Info(Message.INF003, new string[] { this.Text, "-" });
                     Program.MessageBoxAfter("データコピーが完了しました。");
                 }
             }
