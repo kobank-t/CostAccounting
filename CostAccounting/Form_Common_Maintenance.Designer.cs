@@ -61,7 +61,7 @@
             // 
             // saveFileDialogLog
             // 
-            this.saveFileDialogLog.Filter = "ログファイル(*.log)|*.log";
+            this.saveFileDialogLog.Filter = "ログファイル(*.zip)|*.zip";
             this.saveFileDialogLog.Title = "DBファイルhの保存先を選択してください";
             // 
             // Form_Common_Maintenance
