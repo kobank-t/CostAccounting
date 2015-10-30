@@ -103,5 +103,12 @@ namespace CostAccounting
         {
             Logger.Info(Message.INF001);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form_Common_Maintenance form = new Form_Common_Maintenance();
+            form.ShowDialog();
+            form.Dispose();
+        }
     }
 }

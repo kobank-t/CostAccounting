@@ -124,6 +124,12 @@
     <Compile Include="Form_Common_SelectData.Designer.cs">
       <DependentUpon>Form_Common_SelectData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Common_Maintenance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Common_Maintenance.Designer.cs">
+      <DependentUpon>Form_Common_Maintenance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Prepare_DataCopy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Common_SelectData.resx">
       <DependentUpon>Form_Common_SelectData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Common_Maintenance.resx">
+      <DependentUpon>Form_Common_Maintenance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Prepare_DataCopy.resx">
       <DependentUpon>Form_Prepare_DataCopy.cs</DependentUpon>

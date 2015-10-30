@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using log4net;
+using log4net.Appender;
+using log4net.Repository.Hierarchy;
 
 namespace CostAccounting
 {
@@ -703,9 +706,24 @@ namespace CostAccounting
     ///    ログ出力をサポートした静的クラスです。
     /// </summary>
     /// -----------------------------------------------------------------------------
+    /// 
+
     public static class Logger
     {
-        private static readonly log4net.ILog logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly ILog logger = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+        /// -----------------------------------------------------------------------------
+        /// <summary>
+        ///     ログファイルのパスを返却します。</summary>
+        /// <returns>ログファイルのパス</returns>
+        /// -----------------------------------------------------------------------------
+        public static string filePath()
+        {
+            var rootLogger = ((Hierarchy)logger.Logger.Repository).Root;
+            var appender = rootLogger.GetAppender("RollingFileAppender_Size") as FileAppender;
+
+            return appender.File;
+        }
 
         /// -----------------------------------------------------------------------------
         /// <summary>
