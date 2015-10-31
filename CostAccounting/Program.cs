@@ -9,6 +9,7 @@ using System.IO;
 using log4net;
 using log4net.Appender;
 using log4net.Repository.Hierarchy;
+using System.Threading;
 
 namespace CostAccounting
 {
@@ -21,9 +22,24 @@ namespace CostAccounting
         [STAThread]
         static void Main()
         {
+            // ThreadExceptionイベント・ハンドラを登録する
+            Application.ThreadException += new
+              ThreadExceptionEventHandler(Application_ThreadException);
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Common_SelectYear());
+        }
+
+        // 未処理例外をキャッチするイベント・ハンドラ
+        public static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
+        {
+            Program.MessageBoxError(string.Concat("予期しないエラーが発生しました。"
+                                               , Environment.NewLine
+                                               , "お手数ですが、ログファイルの送付をお願いします。"
+                                               , Environment.NewLine
+                                               , "_(._.)_"));
+            Logger.Error(Message.ERR001, e.Exception);
         }
 
         /*************************************************************

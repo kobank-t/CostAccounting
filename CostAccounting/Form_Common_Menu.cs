@@ -3,6 +3,7 @@ using System.Windows.Forms;
 
 namespace CostAccounting
 {
+
     public partial class Form_Common_Menu : Form
     {
         /*************************************************************
@@ -223,22 +224,10 @@ namespace CostAccounting
          *************************************************************/
         private void openForm(Form target)
         {
-            try
-            {
-                target.ShowDialog();
-                target.Dispose();
-                DataTableSupport.refresh();
-                Parameters.refresh();
-            }
-            catch (Exception e)
-            {
-                Program.MessageBoxError(string.Concat("予期しないエラーが発生しました。"
-                                              , Environment.NewLine
-                                              , "お手数ですが、ログファイルの送付をお願いします。"
-                                              , Environment.NewLine
-                                              , "_(._.)_"));
-                Logger.Error(Message.ERR001, e);
-            }
+            target.ShowDialog();
+            target.Dispose();
+            DataTableSupport.refresh();
+            Parameters.refresh();
         }
     }
 }
