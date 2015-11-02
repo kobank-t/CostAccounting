@@ -15,6 +15,7 @@ namespace CostAccounting
                 { 36, "8月" }, { 38, "9月" }, { 40, "10月" }, { 42, "11月" },
                 { 44, "12月" }, { 46, "1月" }, { 48, "2月" }, { 50, "3月" }
             };
+        private Dictionary<CheckBox, int> checkBoxMonthDic = new Dictionary<CheckBox, int>();
 
         /*************************************************************
          * コンストラクタ
@@ -29,6 +30,7 @@ namespace CostAccounting
                 {
                     CheckBox checkbox = (CheckBox)control;
                     checkBoxDic.Add(checkbox.Text, checkbox);
+                    checkBoxMonthDic.Add(checkbox, int.Parse(checkbox.Text.Replace("月", "")));
                 }
             }
         }
@@ -46,6 +48,7 @@ namespace CostAccounting
 
             // データを設定する
             setData();
+            setDataFixedCost();
 
             // 設定内容で計算する
             calcAll();
@@ -363,8 +366,21 @@ namespace CostAccounting
             foreach (var control in controls)
             {
                 if (control is CheckBox)
-                    ((CheckBox)control).Checked = state;
+                {
+                    CheckBox target = (CheckBox)control;
+
+                    target.CheckedChanged -= new EventHandler(checkBox_CheckedChanged);
+                    target.Checked = state;
+                    target.CheckedChanged += new EventHandler(checkBox_CheckedChanged);
+
+                    int index = monthDic.First(x => x.Value.Equals(target.Text)).Key;
+                    dataGridViewHeader.Columns[index].Visible = state;
+                    dataGridView.Columns[index].Visible = state;
+                    dataGridViewTotal.Columns[index].Visible = state;
+                }
             }
+
+            setDataFixedCost();
             calcAll();
             resetScrollBars();
         }
@@ -388,6 +404,7 @@ namespace CostAccounting
                     dataGridViewTotal.Columns[index + offset].Visible = state;
                 }
 
+                setDataFixedCost();
                 calcAll();
                 resetScrollBars();
             }
@@ -531,43 +548,60 @@ namespace CostAccounting
                     }
                 }
             }
+        }
 
-            //------------------------------------------------------------------------------ 合計行の入力値を設定
+        /*************************************************************
+         * 固定費データを画面に設定
+         *************************************************************/
+        private void setDataFixedCost()
+        {
+            for (int columnIdx = 76; columnIdx <= 95; columnIdx++)
+                dataGridViewTotal.Rows[0].Cells[columnIdx].Value = decimal.Zero.ToString("N");
+
             using (var context = new CostAccountingEntities())
             {
-                for (int i = 76; i <= 95; i++)
-                    dataGridViewTotal.Rows[0].Cells[i].Value = decimal.Zero.ToString("N");
+                string inStr = string.Empty;
+                foreach (CheckBox target in checkBoxMonthDic.Keys)
+                {
+                    if (target.Checked)
+                        inStr += string.Concat(checkBoxMonthDic[target], ",");
+                }
 
-                var target = from t in context.CostMngTotal
-                             where t.year.Equals(Const.TARGET_YEAR)
-                             select t;
-                foreach (var data in target.ToList())
+                inStr = inStr.TrimEnd(',');
+
+                var targetData = from t in context.CostMngTotal
+                                 where t.year.Equals(Const.TARGET_YEAR)
+                                    && inStr.Contains(t.month.ToString())
+                                    && t.del_flg.Equals(Const.FLG_OFF)
+                                 select t;
+
+                foreach (var data in targetData.ToList())
                 {
                     if (data.category.Equals((int)Const.CATEGORY_TYPE.Budget))
                     {
-                        dataGridViewTotal.Rows[0].Cells[76].Value = data.manufacturing_personnel.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[78].Value = data.manufacturing_depreciation.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[80].Value = data.manufacturing_rent.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[82].Value = data.manufacturing_repair.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[84].Value = data.manufacturing_stock.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[86].Value = data.manufacturing_other.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[88].Value = data.selling_personnel.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[90].Value = data.selling_depreciation.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[92].Value = data.selling_other.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[94].Value = data.operating_expenses.ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[76].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[76].Value), data.manufacturing_personnel).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[78].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[78].Value), data.manufacturing_depreciation).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[80].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[80].Value), data.manufacturing_rent).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[82].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[82].Value), data.manufacturing_repair).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[84].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[84].Value), data.manufacturing_stock).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[86].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[86].Value), data.manufacturing_other).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[88].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[88].Value), data.selling_personnel).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[90].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[90].Value), data.selling_depreciation).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[92].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[92].Value), data.selling_other).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[94].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[94].Value), data.operating_expenses).ToString("N");
                     }
                     else if (data.category.Equals((int)Const.CATEGORY_TYPE.Actual))
                     {
-                        dataGridViewTotal.Rows[0].Cells[77].Value = data.manufacturing_personnel.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[79].Value = data.manufacturing_depreciation.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[81].Value = data.manufacturing_rent.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[83].Value = data.manufacturing_repair.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[85].Value = data.manufacturing_stock.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[87].Value = data.manufacturing_other.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[89].Value = data.selling_personnel.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[91].Value = data.selling_depreciation.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[93].Value = data.selling_other.ToString("N");
-                        dataGridViewTotal.Rows[0].Cells[95].Value = data.operating_expenses.ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[77].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[77].Value), data.manufacturing_personnel).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[79].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[79].Value), data.manufacturing_depreciation).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[81].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[81].Value), data.manufacturing_rent).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[83].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[83].Value), data.manufacturing_repair).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[85].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[85].Value), data.manufacturing_stock).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[87].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[87].Value), data.manufacturing_other).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[89].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[89].Value), data.selling_personnel).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[91].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[91].Value), data.selling_depreciation).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[93].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[93].Value), data.selling_other).ToString("N");
+                        dataGridViewTotal.Rows[0].Cells[95].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[95].Value), data.operating_expenses).ToString("N");
                     }
                     else
                     {

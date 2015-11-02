@@ -9,77 +9,60 @@ namespace CostAccounting
 {
     public partial class Form_CostMng_FixedCostReg : Form
     {
-        private List<Label[]> labelDic;
+        // 検索タイプ
+        private Const.CATEGORY_TYPE category;
+
         private Dictionary<int, TextBox[]> monthPairText;
-        private Dictionary<CheckBox, TextBox[]> checkboxPairText;
-        private Dictionary<CheckBox, int> checkboxPairMonth;
+        private Dictionary<int, Label> monthPairTotal;
 
         /*************************************************************
          * コンストラクタ
          *************************************************************/
-        public Form_CostMng_FixedCostReg()
+        public Form_CostMng_FixedCostReg(Const.CATEGORY_TYPE category)
         {
             InitializeComponent();
+            this.category = category;
 
-            labelDic = new List<Label[]>()
-            { 
-                new Label[]{ materialCost, materialCost_db, materialCost_diff, materialCost_rate } 
-              , new Label[]{ laborCost, laborCost_db,laborCost_diff,laborCost_rate }
-              , new Label[]{ contractorsCost, contractorsCost_db, contractorsCost_diff, contractorsCost_rate }
-              , new Label[]{ materialsFare, materialsFare_db, materialsFare_diff, materialsFare_rate }
-              , new Label[]{ packingCost, packingCost_db, packingCost_diff, packingCost_rate }
-              , new Label[]{ utilitiesCost, utilitiesCost_db, utilitiesCost_diff, utilitiesCost_rate }
-              , new Label[]{ otherCost, otherCost_db, otherCost_diff, otherCost_rate }
-              , new Label[]{ packingFare, packingFare_db, packingFare_diff, packingFare_rate }
-            };
-
+            switch (category)
+            {
+                case Const.CATEGORY_TYPE.Budget:
+                    this.Text = "固定費登録(予定)";
+                    break;
+                case Const.CATEGORY_TYPE.Actual:
+                    this.Text = "固定費登録(実績)";
+                    break;
+            }
 
             monthPairText = new Dictionary<int, TextBox[]>() 
             { 
-                { 4 , new TextBox[] { materialCost_Apr, laborCost_Apr, contractorsCost_Apr, materialsFare_Apr, packingCost_Apr, utilitiesCost_Apr, otherCost_Apr, packingFare_Apr } }
-              , { 5 , new TextBox[] { materialCost_May, laborCost_May, contractorsCost_May, materialsFare_May, packingCost_May, utilitiesCost_May, otherCost_May, packingFare_May } }
-              , { 6 , new TextBox[] { materialCost_Jun, laborCost_Jun, contractorsCost_Jun, materialsFare_Jun, packingCost_Jun, utilitiesCost_Jun, otherCost_Jun, packingFare_Jun } }
-              , { 7 , new TextBox[] { materialCost_Jul, laborCost_Jul, contractorsCost_Jul, materialsFare_Jul, packingCost_Jul, utilitiesCost_Jul, otherCost_Jul, packingFare_Jul } }
-              , { 8 , new TextBox[] { materialCost_Aug, laborCost_Aug, contractorsCost_Aug, materialsFare_Aug, packingCost_Aug, utilitiesCost_Aug, otherCost_Aug, packingFare_Aug } }
-              , { 9 , new TextBox[] { materialCost_Sep, laborCost_Sep, contractorsCost_Sep, materialsFare_Sep, packingCost_Sep, utilitiesCost_Sep, otherCost_Sep, packingFare_Sep } }
-              , { 10, new TextBox[] { materialCost_Oct, laborCost_Oct, contractorsCost_Oct, materialsFare_Oct, packingCost_Oct, utilitiesCost_Oct, otherCost_Oct, packingFare_Oct } }
-              , { 11, new TextBox[] { materialCost_Nov, laborCost_Nov, contractorsCost_Nov, materialsFare_Nov, packingCost_Nov, utilitiesCost_Nov, otherCost_Nov, packingFare_Nov } }
-              , { 12, new TextBox[] { materialCost_Dec, laborCost_Dec, contractorsCost_Dec, materialsFare_Dec, packingCost_Dec, utilitiesCost_Dec, otherCost_Dec, packingFare_Dec } }
-              , { 1 , new TextBox[] { materialCost_Jan, laborCost_Jan, contractorsCost_Jan, materialsFare_Jan, packingCost_Jan, utilitiesCost_Jan, otherCost_Jan, packingFare_Jan } }
-              , { 2 , new TextBox[] { materialCost_Feb, laborCost_Feb, contractorsCost_Feb, materialsFare_Feb, packingCost_Feb, utilitiesCost_Feb, otherCost_Feb, packingFare_Feb } }
-              , { 3 , new TextBox[] { materialCost_Mar, laborCost_Mar, contractorsCost_Mar, materialsFare_Mar, packingCost_Mar, utilitiesCost_Mar, otherCost_Mar, packingFare_Mar } } 
+                { 4 , new TextBox[] { manufacturing_personnel_Apr, manufacturing_depreciation_Apr, manufacturing_rent_Apr, manufacturing_repair_Apr, manufacturing_stock_Apr, manufacturing_other_Apr, selling_personnel_Apr, selling_depreciation_Apr, selling_other_Apr, operating_expenses_Apr } }
+              , { 5 , new TextBox[] { manufacturing_personnel_May, manufacturing_depreciation_May, manufacturing_rent_May, manufacturing_repair_May, manufacturing_stock_May, manufacturing_other_May, selling_personnel_May, selling_depreciation_May, selling_other_May, operating_expenses_May } }
+              , { 6 , new TextBox[] { manufacturing_personnel_Jun, manufacturing_depreciation_Jun, manufacturing_rent_Jun, manufacturing_repair_Jun, manufacturing_stock_Jun, manufacturing_other_Jun, selling_personnel_Jun, selling_depreciation_Jun, selling_other_Jun, operating_expenses_Jun } }
+              , { 7 , new TextBox[] { manufacturing_personnel_Jul, manufacturing_depreciation_Jul, manufacturing_rent_Jul, manufacturing_repair_Jul, manufacturing_stock_Jul, manufacturing_other_Jul, selling_personnel_Jul, selling_depreciation_Jul, selling_other_Jul, operating_expenses_Jul } }
+              , { 8 , new TextBox[] { manufacturing_personnel_Aug, manufacturing_depreciation_Aug, manufacturing_rent_Aug, manufacturing_repair_Aug, manufacturing_stock_Aug, manufacturing_other_Aug, selling_personnel_Aug, selling_depreciation_Aug, selling_other_Aug, operating_expenses_Aug } }
+              , { 9 , new TextBox[] { manufacturing_personnel_Sep, manufacturing_depreciation_Sep, manufacturing_rent_Sep, manufacturing_repair_Sep, manufacturing_stock_Sep, manufacturing_other_Sep, selling_personnel_Sep, selling_depreciation_Sep, selling_other_Sep, operating_expenses_Sep } }
+              , { 10, new TextBox[] { manufacturing_personnel_Oct, manufacturing_depreciation_Oct, manufacturing_rent_Oct, manufacturing_repair_Oct, manufacturing_stock_Oct, manufacturing_other_Oct, selling_personnel_Oct, selling_depreciation_Oct, selling_other_Oct, operating_expenses_Oct } }
+              , { 11, new TextBox[] { manufacturing_personnel_Nov, manufacturing_depreciation_Nov, manufacturing_rent_Nov, manufacturing_repair_Nov, manufacturing_stock_Nov, manufacturing_other_Nov, selling_personnel_Nov, selling_depreciation_Nov, selling_other_Nov, operating_expenses_Nov } }
+              , { 12, new TextBox[] { manufacturing_personnel_Dec, manufacturing_depreciation_Dec, manufacturing_rent_Dec, manufacturing_repair_Dec, manufacturing_stock_Dec, manufacturing_other_Dec, selling_personnel_Dec, selling_depreciation_Dec, selling_other_Dec, operating_expenses_Dec } }
+              , { 1 , new TextBox[] { manufacturing_personnel_Jan, manufacturing_depreciation_Jan, manufacturing_rent_Jan, manufacturing_repair_Jan, manufacturing_stock_Jan, manufacturing_other_Jan, selling_personnel_Jan, selling_depreciation_Jan, selling_other_Jan, operating_expenses_Jan } }
+              , { 2 , new TextBox[] { manufacturing_personnel_Feb, manufacturing_depreciation_Feb, manufacturing_rent_Feb, manufacturing_repair_Feb, manufacturing_stock_Feb, manufacturing_other_Feb, selling_personnel_Feb, selling_depreciation_Feb, selling_other_Feb, operating_expenses_Feb } }
+              , { 3 , new TextBox[] { manufacturing_personnel_Mar, manufacturing_depreciation_Mar, manufacturing_rent_Mar, manufacturing_repair_Mar, manufacturing_stock_Mar, manufacturing_other_Mar, selling_personnel_Mar, selling_depreciation_Mar, selling_other_Mar, operating_expenses_Mar } } 
             };
 
-            checkboxPairText = new Dictionary<CheckBox, TextBox[]>() 
+            monthPairTotal = new Dictionary<int, Label>() 
             { 
-                { checkBoxApr, new TextBox[] { materialCost_Apr, laborCost_Apr, contractorsCost_Apr, materialsFare_Apr, packingCost_Apr, utilitiesCost_Apr, otherCost_Apr, packingFare_Apr } }
-              , { checkBoxMay, new TextBox[] { materialCost_May, laborCost_May, contractorsCost_May, materialsFare_May, packingCost_May, utilitiesCost_May, otherCost_May, packingFare_May } }
-              , { checkBoxJun, new TextBox[] { materialCost_Jun, laborCost_Jun, contractorsCost_Jun, materialsFare_Jun, packingCost_Jun, utilitiesCost_Jun, otherCost_Jun, packingFare_Jun } }
-              , { checkBoxJul, new TextBox[] { materialCost_Jul, laborCost_Jul, contractorsCost_Jul, materialsFare_Jul, packingCost_Jul, utilitiesCost_Jul, otherCost_Jul, packingFare_Jul } }
-              , { checkBoxAug, new TextBox[] { materialCost_Aug, laborCost_Aug, contractorsCost_Aug, materialsFare_Aug, packingCost_Aug, utilitiesCost_Aug, otherCost_Aug, packingFare_Aug } }
-              , { checkBoxSep, new TextBox[] { materialCost_Sep, laborCost_Sep, contractorsCost_Sep, materialsFare_Sep, packingCost_Sep, utilitiesCost_Sep, otherCost_Sep, packingFare_Sep } }
-              , { checkBoxOct, new TextBox[] { materialCost_Oct, laborCost_Oct, contractorsCost_Oct, materialsFare_Oct, packingCost_Oct, utilitiesCost_Oct, otherCost_Oct, packingFare_Oct } }
-              , { checkBoxNov, new TextBox[] { materialCost_Nov, laborCost_Nov, contractorsCost_Nov, materialsFare_Nov, packingCost_Nov, utilitiesCost_Nov, otherCost_Nov, packingFare_Nov } }
-              , { checkBoxDec, new TextBox[] { materialCost_Dec, laborCost_Dec, contractorsCost_Dec, materialsFare_Dec, packingCost_Dec, utilitiesCost_Dec, otherCost_Dec, packingFare_Dec } }
-              , { checkBoxJan, new TextBox[] { materialCost_Jan, laborCost_Jan, contractorsCost_Jan, materialsFare_Jan, packingCost_Jan, utilitiesCost_Jan, otherCost_Jan, packingFare_Jan } }
-              , { checkBoxFeb, new TextBox[] { materialCost_Feb, laborCost_Feb, contractorsCost_Feb, materialsFare_Feb, packingCost_Feb, utilitiesCost_Feb, otherCost_Feb, packingFare_Feb } }
-              , { checkBoxMar, new TextBox[] { materialCost_Mar, laborCost_Mar, contractorsCost_Mar, materialsFare_Mar, packingCost_Mar, utilitiesCost_Mar, otherCost_Mar, packingFare_Mar } } 
-            };
-
-            checkboxPairMonth = new Dictionary<CheckBox, int>() 
-            { 
-                { checkBoxApr, 4  }
-              , { checkBoxMay, 5  }
-              , { checkBoxJun, 6  }
-              , { checkBoxJul, 7  }
-              , { checkBoxAug, 8  }
-              , { checkBoxSep, 9  }
-              , { checkBoxOct, 10 }
-              , { checkBoxNov, 11 }
-              , { checkBoxDec, 12 }
-              , { checkBoxJan, 1  }
-              , { checkBoxFeb, 2  }
-              , { checkBoxMar, 3  } 
+                { 4 , total_Apr }
+              , { 5 , total_May }
+              , { 6 , total_Jun }
+              , { 7 , total_Jul }
+              , { 8 , total_Aug }
+              , { 9 , total_Sep }
+              , { 10, total_Oct }
+              , { 11, total_Nov }
+              , { 12, total_Dec }
+              , { 1 , total_Jan }
+              , { 2 , total_Feb }
+              , { 3 , total_Mar } 
             };
         }
 
@@ -88,8 +71,8 @@ namespace CostAccounting
          *************************************************************/
         private void Form_CostMng_Divergence_Load(object sender, EventArgs e)
         {
-            // 決算書実績データを設定する
-            set決算書実績データ();
+            // 固定費データを設定する
+            setData();
 
             // 計算を行う
             calcAll();
@@ -109,100 +92,7 @@ namespace CostAccounting
         private void textBox_Leave(object sender, EventArgs e)
         {
             Event.textBox_Leave_format(sender, e);
-            calc決算書実績();
-            calc乖離幅();
-        }
-
-        /*************************************************************
-         * チェックボックスの状態から、決算書実績の計上対象月の値を集計する
-         *************************************************************/
-        private void calc決算書実績()
-        {
-            foreach (Label[] target in labelDic)
-                target[0].Text = decimal.Zero.ToString("N");
-
-            foreach (CheckBox target in checkboxPairText.Keys)
-            {
-                if (target.Checked)
-                {
-                    materialCost.Text = decimal.Add(Conversion.Parse(materialCost.Text), Conversion.Parse(checkboxPairText[target][0].Text)).ToString("N");
-                    laborCost.Text = decimal.Add(Conversion.Parse(laborCost.Text), Conversion.Parse(checkboxPairText[target][1].Text)).ToString("N");
-                    contractorsCost.Text = decimal.Add(Conversion.Parse(contractorsCost.Text), Conversion.Parse(checkboxPairText[target][2].Text)).ToString("N");
-                    materialsFare.Text = decimal.Add(Conversion.Parse(materialsFare.Text), Conversion.Parse(checkboxPairText[target][3].Text)).ToString("N");
-                    packingCost.Text = decimal.Add(Conversion.Parse(packingCost.Text), Conversion.Parse(checkboxPairText[target][4].Text)).ToString("N");
-                    utilitiesCost.Text = decimal.Add(Conversion.Parse(utilitiesCost.Text), Conversion.Parse(checkboxPairText[target][5].Text)).ToString("N");
-                    otherCost.Text = decimal.Add(Conversion.Parse(otherCost.Text), Conversion.Parse(checkboxPairText[target][6].Text)).ToString("N");
-                    packingFare.Text = decimal.Add(Conversion.Parse(packingFare.Text), Conversion.Parse(checkboxPairText[target][7].Text)).ToString("N");
-                }
-            }
-        }
-
-        /*************************************************************
-         * チェックボックスの状態から、原価計算実績の値を設定する
-         *************************************************************/
-        private void calc原価計算表実績()
-        {
-            foreach (Label[] target in labelDic)
-                target[1].Text = decimal.Zero.ToString("N");
-
-            using (var context = new CostAccountingEntities())
-            {
-                string inStr = string.Empty;
-                foreach (CheckBox target in checkboxPairText.Keys)
-                {
-                    if (target.Checked)
-                        inStr += string.Concat(checkboxPairMonth[target], ",");
-                }
-
-                inStr = inStr.TrimEnd(',');
-                var targetData = from t in context.Divergence
-                                 where t.year.Equals(Const.TARGET_YEAR)
-                                    && inStr.Contains(t.month.ToString())
-                                    && t.del_flg.Equals(Const.FLG_OFF)
-                                 select t;
-
-                foreach (var data in targetData.ToList())
-                {
-                    materialCost_db.Text = decimal.Add(Conversion.Parse(materialCost_db.Text), data.materialCost_costing).ToString("N");
-                    laborCost_db.Text = decimal.Add(Conversion.Parse(laborCost_db.Text), data.laborCost_costing).ToString("N");
-                    contractorsCost_db.Text = decimal.Add(Conversion.Parse(contractorsCost_db.Text), data.contractorsCost_costing).ToString("N");
-                    materialsFare_db.Text = decimal.Add(Conversion.Parse(materialsFare_db.Text), data.materialsFare_costing).ToString("N");
-                    packingCost_db.Text = decimal.Add(Conversion.Parse(packingCost_db.Text), data.packingCost_costing).ToString("N");
-                    utilitiesCost_db.Text = decimal.Add(Conversion.Parse(utilitiesCost_db.Text), data.utilitiesCost_costing).ToString("N");
-                    otherCost_db.Text = decimal.Add(Conversion.Parse(otherCost_db.Text), data.otherCost_costing).ToString("N");
-                    packingFare_db.Text = decimal.Add(Conversion.Parse(packingFare_db.Text), data.packingFare_costing).ToString("N");
-                }
-            }
-        }
-
-        /*************************************************************
-         * 乖離幅を計算する
-         *************************************************************/
-        private void calc乖離幅()
-        {
-            decimal total = decimal.Zero;
-            decimal total_db = decimal.Zero;
-            foreach (Label[] target in labelDic)
-            {
-                decimal value = Conversion.Parse(target[0].Text);
-                decimal db = Conversion.Parse(target[1].Text);
-                decimal diff = decimal.Subtract(value, db);
-                decimal rate = db != decimal.Zero ? decimal.Divide(diff, db) : decimal.Zero;
-
-                target[2].Text = diff.ToString("N");
-                target[3].Text = rate.ToString("P");
-
-                total += value;
-                total_db += db;
-            }
-
-            decimal total_diff = decimal.Subtract(total, total_db);
-            decimal total_rate = total_db != decimal.Zero ? decimal.Divide(total_diff, total_db) : decimal.Zero;
-
-            this.total.Text = total.ToString("N");
-            this.total_db.Text = total_db.ToString("N");
-            this.total_diff.Text = total_diff.ToString("N");
-            this.total_rate.Text = total_rate.ToString("P");
+            calcAll();
         }
 
         /*************************************************************
@@ -210,41 +100,83 @@ namespace CostAccounting
          *************************************************************/
         private void calcAll()
         {
-            // チェックボックスの状態から、決算書実績の計上対象月の値を集計する
-            calc決算書実績();
+            decimal manufacturing_personnel = decimal.Zero;
+            decimal manufacturing_depreciation = decimal.Zero;
+            decimal manufacturing_rent = decimal.Zero;
+            decimal manufacturing_repair = decimal.Zero;
+            decimal manufacturing_stock = decimal.Zero;
+            decimal manufacturing_other = decimal.Zero;
+            decimal selling_personnel = decimal.Zero;
+            decimal selling_depreciation = decimal.Zero;
+            decimal selling_other = decimal.Zero;
+            decimal operating_expenses = decimal.Zero;
+            decimal all_total = decimal.Zero;
 
-            // チェックボックスの状態から、原価計算実績の値を設定する
-            calc原価計算表実績();
+            foreach (int targetKey in monthPairText.Keys)
+            {
+                // 各月の合計値を算出
+                decimal monthTotal = decimal.Zero;
 
-            // 乖離幅を計算する
-            calc乖離幅();
+                foreach (TextBox text in monthPairText[targetKey])
+                    monthTotal += Conversion.Parse(text.Text);
+
+                monthPairTotal[targetKey].Text = monthTotal.ToString("N");
+                all_total += monthTotal;
+
+                // 項目毎の合計値を算出
+                manufacturing_personnel += Conversion.Parse((string)monthPairText[targetKey][0].Text);
+                manufacturing_depreciation += Conversion.Parse((string)monthPairText[targetKey][1].Text);
+                manufacturing_rent += Conversion.Parse((string)monthPairText[targetKey][2].Text);
+                manufacturing_repair += Conversion.Parse((string)monthPairText[targetKey][3].Text);
+                manufacturing_stock += Conversion.Parse((string)monthPairText[targetKey][4].Text);
+                manufacturing_other += Conversion.Parse((string)monthPairText[targetKey][5].Text);
+                selling_personnel += Conversion.Parse((string)monthPairText[targetKey][6].Text);
+                selling_depreciation += Conversion.Parse((string)monthPairText[targetKey][7].Text);
+                selling_other += Conversion.Parse((string)monthPairText[targetKey][8].Text);
+                operating_expenses += Conversion.Parse((string)monthPairText[targetKey][9].Text);
+            }
+
+            manufacturing_personnel_total.Text = manufacturing_personnel.ToString("N");
+            manufacturing_depreciation_total.Text = manufacturing_depreciation.ToString("N");
+            manufacturing_rent_total.Text = manufacturing_rent.ToString("N");
+            manufacturing_repair_total.Text = manufacturing_repair.ToString("N");
+            manufacturing_stock_total.Text = manufacturing_stock.ToString("N");
+            manufacturing_other_total.Text = manufacturing_other.ToString("N");
+            selling_personnel_total.Text = selling_personnel.ToString("N");
+            selling_depreciation_total.Text = selling_depreciation.ToString("N");
+            selling_other_total.Text = selling_other.ToString("N");
+            operating_expenses_total.Text = operating_expenses.ToString("N");
+            total.Text = all_total.ToString("N");
         }
 
         /*************************************************************
-         * 決算書実績データを設定する
+         * 固定費データを設定する
          *************************************************************/
-        private void set決算書実績データ()
+        private void setData()
         {
             using (var context = new CostAccountingEntities())
             {
                 foreach (int month in monthPairText.Keys)
                 {
-                    var target = from t in context.Divergence
+                    var target = from t in context.CostMngTotal
                                  where t.year.Equals(Const.TARGET_YEAR)
                                     && t.month.Equals(month)
+                                    && t.category.Equals((int)category)
                                     && t.del_flg.Equals(Const.FLG_OFF)
                                  select t;
 
                     if (target.Count() == decimal.One)
                     {
-                        monthPairText[month][0].Text = target.First().materialCost.ToString("N");
-                        monthPairText[month][1].Text = target.First().laborCost.ToString("N");
-                        monthPairText[month][2].Text = target.First().contractorsCost.ToString("N");
-                        monthPairText[month][3].Text = target.First().materialsFare.ToString("N");
-                        monthPairText[month][4].Text = target.First().packingCost.ToString("N");
-                        monthPairText[month][5].Text = target.First().utilitiesCost.ToString("N");
-                        monthPairText[month][6].Text = target.First().otherCost.ToString("N");
-                        monthPairText[month][7].Text = target.First().packingFare.ToString("N");
+                        monthPairText[month][0].Text = target.First().manufacturing_personnel.ToString("N");
+                        monthPairText[month][1].Text = target.First().manufacturing_depreciation.ToString("N");
+                        monthPairText[month][2].Text = target.First().manufacturing_rent.ToString("N");
+                        monthPairText[month][3].Text = target.First().manufacturing_repair.ToString("N");
+                        monthPairText[month][4].Text = target.First().manufacturing_stock.ToString("N");
+                        monthPairText[month][5].Text = target.First().manufacturing_other.ToString("N");
+                        monthPairText[month][6].Text = target.First().selling_personnel.ToString("N");
+                        monthPairText[month][7].Text = target.First().selling_depreciation.ToString("N");
+                        monthPairText[month][8].Text = target.First().selling_other.ToString("N");
+                        monthPairText[month][9].Text = target.First().operating_expenses.ToString("N");
                     }
                     else
                     {
@@ -263,49 +195,54 @@ namespace CostAccounting
             if (Program.MessageBoxBefore("登録しますか？") != DialogResult.Yes)
                 return;
 
-            // データ登録処理（削除→登録をおこなう）
             using (var context = new CostAccountingEntities())
             {
                 foreach (int month in monthPairText.Keys)
                 {
-                    var target = from t in context.Divergence
+                    var target = from t in context.CostMngTotal
                                  where t.year.Equals(Const.TARGET_YEAR)
                                     && t.month.Equals(month)
+                                    && t.category.Equals((int)category)
                                     && t.del_flg.Equals(Const.FLG_OFF)
                                  select t;
 
                     if (target.Count() == decimal.Zero)
                     {
                         // 登録処理
-                        var entity = new Divergence()
+                        var entity = new CostMngTotal()
                         {
                             year = Const.TARGET_YEAR,
                             month = month,
-                            materialCost = Conversion.Parse(monthPairText[month][0].Text),
-                            laborCost = Conversion.Parse(monthPairText[month][1].Text),
-                            contractorsCost = Conversion.Parse(monthPairText[month][2].Text),
-                            materialsFare = Conversion.Parse(monthPairText[month][3].Text),
-                            packingCost = Conversion.Parse(monthPairText[month][4].Text),
-                            utilitiesCost = Conversion.Parse(monthPairText[month][5].Text),
-                            otherCost = Conversion.Parse(monthPairText[month][6].Text),
-                            packingFare = Conversion.Parse(monthPairText[month][7].Text),
+                            category = (int)category,
+                            manufacturing_personnel = Conversion.Parse(monthPairText[month][0].Text),
+                            manufacturing_depreciation = Conversion.Parse(monthPairText[month][1].Text),
+                            manufacturing_rent = Conversion.Parse(monthPairText[month][2].Text),
+                            manufacturing_repair = Conversion.Parse(monthPairText[month][3].Text),
+                            manufacturing_stock = Conversion.Parse(monthPairText[month][4].Text),
+                            manufacturing_other = Conversion.Parse(monthPairText[month][5].Text),
+                            selling_personnel = Conversion.Parse(monthPairText[month][6].Text),
+                            selling_depreciation = Conversion.Parse(monthPairText[month][7].Text),
+                            selling_other = Conversion.Parse(monthPairText[month][8].Text),
+                            operating_expenses = Conversion.Parse(monthPairText[month][9].Text),
                             update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
                             update_date = DateTime.Now,
                             del_flg = Const.FLG_OFF
                         };
-                        context.Divergence.Add(entity);
+                        context.CostMngTotal.Add(entity);
                     }
                     else
                     {
                         // 修正処理
-                        target.First().materialCost = Conversion.Parse(monthPairText[month][0].Text);
-                        target.First().laborCost = Conversion.Parse(monthPairText[month][1].Text);
-                        target.First().contractorsCost = Conversion.Parse(monthPairText[month][2].Text);
-                        target.First().materialsFare = Conversion.Parse(monthPairText[month][3].Text);
-                        target.First().packingCost = Conversion.Parse(monthPairText[month][4].Text);
-                        target.First().utilitiesCost = Conversion.Parse(monthPairText[month][5].Text);
-                        target.First().otherCost = Conversion.Parse(monthPairText[month][6].Text);
-                        target.First().packingFare = Conversion.Parse(monthPairText[month][7].Text);
+                        target.First().manufacturing_personnel = Conversion.Parse(monthPairText[month][0].Text);
+                        target.First().manufacturing_depreciation = Conversion.Parse(monthPairText[month][1].Text);
+                        target.First().manufacturing_rent = Conversion.Parse(monthPairText[month][2].Text);
+                        target.First().manufacturing_repair = Conversion.Parse(monthPairText[month][3].Text);
+                        target.First().manufacturing_stock = Conversion.Parse(monthPairText[month][4].Text);
+                        target.First().manufacturing_other = Conversion.Parse(monthPairText[month][5].Text);
+                        target.First().selling_personnel = Conversion.Parse(monthPairText[month][6].Text);
+                        target.First().selling_depreciation = Conversion.Parse(monthPairText[month][7].Text);
+                        target.First().selling_other = Conversion.Parse(monthPairText[month][8].Text);
+                        target.First().operating_expenses = Conversion.Parse(monthPairText[month][9].Text);
                         target.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
                         target.First().update_date = DateTime.Now;
                     }
@@ -315,48 +252,6 @@ namespace CostAccounting
 
             Logger.Info(Message.INF003, new string[] { this.Text, "-" });
             Program.MessageBoxAfter("登録しました。");
-        }
-
-        /*************************************************************
-         * チェックボックスのON/OFFに従い、計算を行う
-         *************************************************************/
-        private void checkBox_CheckedChanged(object sender, EventArgs e)
-        {
-            calcAll();
-        }
-
-        /*************************************************************
-         * 月のチェックボックスを全てONにする
-         *************************************************************/
-        private void btnAllCheck_Click(object sender, EventArgs e)
-        {
-            changeCheckBoxState(groupMonth.Controls, true);
-        }
-
-        /*************************************************************
-         * 月のチェックボックスを全てOFFにする
-         *************************************************************/
-        private void btnAllClear_Click(object sender, EventArgs e)
-        {
-            changeCheckBoxState(groupMonth.Controls, false);
-        }
-
-        /*************************************************************
-         * チェックボックスの状態を変更する
-         *************************************************************/
-        private void changeCheckBoxState(Control.ControlCollection controls, bool state)
-        {
-            foreach (var control in controls)
-            {
-                if (control is CheckBox)
-                {
-                    CheckBox target = (CheckBox)control;
-                    target.CheckedChanged -= new EventHandler(checkBox_CheckedChanged);
-                    target.Checked = state;
-                    target.CheckedChanged += new EventHandler(checkBox_CheckedChanged);
-                }
-            }
-            calcAll();
         }
     }
 }

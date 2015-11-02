@@ -19,6 +19,7 @@ namespace CostAccounting
         {
             InitializeComponent();
             base.ChecBoxControls = this.groupMonth.Controls;
+            base.setCategory(Const.CATEGORY_TYPE.Budget);
         }
 
         /*************************************************************
@@ -26,7 +27,7 @@ namespace CostAccounting
          *************************************************************/
         private void Form_CostMng_BudgetReg_Load(object sender, EventArgs e)
         {
-            base.Form_Load(sender, e, Const.CATEGORY_TYPE.Budget);
+            base.Form_Load(sender, e);
         }
 
         /*************************************************************
@@ -115,9 +116,9 @@ namespace CostAccounting
         /*************************************************************
          * 登録ボタン押下時の処理
          *************************************************************/
-        private void btnAppend_Click(object sender, EventArgs e)
+        private new void btnAppend_Click(object sender, EventArgs e)
         {
-            base.btnAppend_Click(sender, e, Const.CATEGORY_TYPE.Budget);
+            base.btnAppend_Click(sender, e);
             Logger.Info(Message.INF003, new string[] { this.Text, "-" });
         }
 
@@ -143,6 +144,14 @@ namespace CostAccounting
         private new void checkBox_CheckedChanged(object sender, EventArgs e)
         {
             base.checkBox_CheckedChanged(sender, e);
+        }
+
+        /*************************************************************
+         * 固定費登録ボタン押下時の処理
+         *************************************************************/
+        private void btnFixedCost_Click(object sender, EventArgs e)
+        {
+            base.btnFixedCost_Click();
         }
     }
 }

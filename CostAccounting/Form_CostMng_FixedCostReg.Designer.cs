@@ -36,7 +36,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
@@ -45,14 +44,14 @@
             this.label30 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.materialCost_May = new System.Windows.Forms.TextBox();
-            this.laborCost_May = new System.Windows.Forms.TextBox();
-            this.contractorsCost_May = new System.Windows.Forms.TextBox();
-            this.materialsFare_May = new System.Windows.Forms.TextBox();
-            this.packingCost_May = new System.Windows.Forms.TextBox();
-            this.utilitiesCost_May = new System.Windows.Forms.TextBox();
-            this.otherCost_May = new System.Windows.Forms.TextBox();
-            this.packingFare_May = new System.Windows.Forms.TextBox();
+            this.manufacturing_personnel_May = new System.Windows.Forms.TextBox();
+            this.manufacturing_depreciation_May = new System.Windows.Forms.TextBox();
+            this.manufacturing_rent_May = new System.Windows.Forms.TextBox();
+            this.manufacturing_repair_May = new System.Windows.Forms.TextBox();
+            this.manufacturing_stock_May = new System.Windows.Forms.TextBox();
+            this.manufacturing_other_May = new System.Windows.Forms.TextBox();
+            this.selling_personnel_May = new System.Windows.Forms.TextBox();
+            this.selling_depreciation_May = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
@@ -61,100 +60,152 @@
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
-            this.materialCost_Apr = new System.Windows.Forms.TextBox();
-            this.laborCost_Apr = new System.Windows.Forms.TextBox();
-            this.contractorsCost_Apr = new System.Windows.Forms.TextBox();
-            this.materialsFare_Apr = new System.Windows.Forms.TextBox();
-            this.packingCost_Apr = new System.Windows.Forms.TextBox();
-            this.utilitiesCost_Apr = new System.Windows.Forms.TextBox();
-            this.otherCost_Apr = new System.Windows.Forms.TextBox();
-            this.packingFare_Apr = new System.Windows.Forms.TextBox();
-            this.materialCost_Jun = new System.Windows.Forms.TextBox();
-            this.materialCost_Jul = new System.Windows.Forms.TextBox();
-            this.materialCost_Aug = new System.Windows.Forms.TextBox();
-            this.materialCost_Sep = new System.Windows.Forms.TextBox();
-            this.materialCost_Oct = new System.Windows.Forms.TextBox();
-            this.materialCost_Nov = new System.Windows.Forms.TextBox();
-            this.materialCost_Dec = new System.Windows.Forms.TextBox();
-            this.materialCost_Jan = new System.Windows.Forms.TextBox();
-            this.materialCost_Feb = new System.Windows.Forms.TextBox();
-            this.materialCost_Mar = new System.Windows.Forms.TextBox();
-            this.laborCost_Jun = new System.Windows.Forms.TextBox();
-            this.laborCost_Jul = new System.Windows.Forms.TextBox();
-            this.laborCost_Aug = new System.Windows.Forms.TextBox();
-            this.laborCost_Sep = new System.Windows.Forms.TextBox();
-            this.laborCost_Oct = new System.Windows.Forms.TextBox();
-            this.laborCost_Nov = new System.Windows.Forms.TextBox();
-            this.laborCost_Dec = new System.Windows.Forms.TextBox();
-            this.laborCost_Jan = new System.Windows.Forms.TextBox();
-            this.laborCost_Feb = new System.Windows.Forms.TextBox();
-            this.laborCost_Mar = new System.Windows.Forms.TextBox();
-            this.contractorsCost_Jun = new System.Windows.Forms.TextBox();
-            this.contractorsCost_Jul = new System.Windows.Forms.TextBox();
-            this.contractorsCost_Aug = new System.Windows.Forms.TextBox();
-            this.contractorsCost_Sep = new System.Windows.Forms.TextBox();
-            this.contractorsCost_Oct = new System.Windows.Forms.TextBox();
-            this.contractorsCost_Nov = new System.Windows.Forms.TextBox();
-            this.contractorsCost_Dec = new System.Windows.Forms.TextBox();
-            this.contractorsCost_Jan = new System.Windows.Forms.TextBox();
-            this.contractorsCost_Feb = new System.Windows.Forms.TextBox();
-            this.contractorsCost_Mar = new System.Windows.Forms.TextBox();
-            this.materialsFare_Jun = new System.Windows.Forms.TextBox();
-            this.materialsFare_Jul = new System.Windows.Forms.TextBox();
-            this.materialsFare_Aug = new System.Windows.Forms.TextBox();
-            this.materialsFare_Sep = new System.Windows.Forms.TextBox();
-            this.materialsFare_Oct = new System.Windows.Forms.TextBox();
-            this.materialsFare_Nov = new System.Windows.Forms.TextBox();
-            this.materialsFare_Dec = new System.Windows.Forms.TextBox();
-            this.materialsFare_Jan = new System.Windows.Forms.TextBox();
-            this.materialsFare_Feb = new System.Windows.Forms.TextBox();
-            this.materialsFare_Mar = new System.Windows.Forms.TextBox();
-            this.packingCost_Jun = new System.Windows.Forms.TextBox();
-            this.packingCost_Jul = new System.Windows.Forms.TextBox();
-            this.packingCost_Aug = new System.Windows.Forms.TextBox();
-            this.packingCost_Sep = new System.Windows.Forms.TextBox();
-            this.packingCost_Oct = new System.Windows.Forms.TextBox();
-            this.packingCost_Nov = new System.Windows.Forms.TextBox();
-            this.packingCost_Dec = new System.Windows.Forms.TextBox();
-            this.packingCost_Jan = new System.Windows.Forms.TextBox();
-            this.packingCost_Feb = new System.Windows.Forms.TextBox();
-            this.packingCost_Mar = new System.Windows.Forms.TextBox();
-            this.utilitiesCost_Jun = new System.Windows.Forms.TextBox();
-            this.utilitiesCost_Jul = new System.Windows.Forms.TextBox();
-            this.utilitiesCost_Aug = new System.Windows.Forms.TextBox();
-            this.utilitiesCost_Sep = new System.Windows.Forms.TextBox();
-            this.utilitiesCost_Oct = new System.Windows.Forms.TextBox();
-            this.utilitiesCost_Nov = new System.Windows.Forms.TextBox();
-            this.utilitiesCost_Dec = new System.Windows.Forms.TextBox();
-            this.utilitiesCost_Jan = new System.Windows.Forms.TextBox();
-            this.utilitiesCost_Feb = new System.Windows.Forms.TextBox();
-            this.utilitiesCost_Mar = new System.Windows.Forms.TextBox();
-            this.otherCost_Jun = new System.Windows.Forms.TextBox();
-            this.otherCost_Jul = new System.Windows.Forms.TextBox();
-            this.otherCost_Aug = new System.Windows.Forms.TextBox();
-            this.otherCost_Sep = new System.Windows.Forms.TextBox();
-            this.otherCost_Oct = new System.Windows.Forms.TextBox();
-            this.otherCost_Nov = new System.Windows.Forms.TextBox();
-            this.otherCost_Dec = new System.Windows.Forms.TextBox();
-            this.otherCost_Jan = new System.Windows.Forms.TextBox();
-            this.otherCost_Feb = new System.Windows.Forms.TextBox();
-            this.otherCost_Mar = new System.Windows.Forms.TextBox();
-            this.packingFare_Mar = new System.Windows.Forms.TextBox();
-            this.packingFare_Feb = new System.Windows.Forms.TextBox();
-            this.packingFare_Jan = new System.Windows.Forms.TextBox();
-            this.packingFare_Dec = new System.Windows.Forms.TextBox();
-            this.packingFare_Nov = new System.Windows.Forms.TextBox();
-            this.packingFare_Oct = new System.Windows.Forms.TextBox();
-            this.packingFare_Sep = new System.Windows.Forms.TextBox();
-            this.packingFare_Aug = new System.Windows.Forms.TextBox();
-            this.packingFare_Jul = new System.Windows.Forms.TextBox();
-            this.packingFare_Jun = new System.Windows.Forms.TextBox();
+            this.manufacturing_personnel_Apr = new System.Windows.Forms.TextBox();
+            this.manufacturing_depreciation_Apr = new System.Windows.Forms.TextBox();
+            this.manufacturing_rent_Apr = new System.Windows.Forms.TextBox();
+            this.manufacturing_repair_Apr = new System.Windows.Forms.TextBox();
+            this.manufacturing_stock_Apr = new System.Windows.Forms.TextBox();
+            this.manufacturing_other_Apr = new System.Windows.Forms.TextBox();
+            this.selling_personnel_Apr = new System.Windows.Forms.TextBox();
+            this.selling_depreciation_Apr = new System.Windows.Forms.TextBox();
+            this.manufacturing_personnel_Jun = new System.Windows.Forms.TextBox();
+            this.manufacturing_personnel_Jul = new System.Windows.Forms.TextBox();
+            this.manufacturing_personnel_Aug = new System.Windows.Forms.TextBox();
+            this.manufacturing_personnel_Sep = new System.Windows.Forms.TextBox();
+            this.manufacturing_personnel_Oct = new System.Windows.Forms.TextBox();
+            this.manufacturing_personnel_Nov = new System.Windows.Forms.TextBox();
+            this.manufacturing_personnel_Dec = new System.Windows.Forms.TextBox();
+            this.manufacturing_personnel_Jan = new System.Windows.Forms.TextBox();
+            this.manufacturing_personnel_Feb = new System.Windows.Forms.TextBox();
+            this.manufacturing_personnel_Mar = new System.Windows.Forms.TextBox();
+            this.manufacturing_depreciation_Jun = new System.Windows.Forms.TextBox();
+            this.manufacturing_depreciation_Jul = new System.Windows.Forms.TextBox();
+            this.manufacturing_depreciation_Aug = new System.Windows.Forms.TextBox();
+            this.manufacturing_depreciation_Sep = new System.Windows.Forms.TextBox();
+            this.manufacturing_depreciation_Oct = new System.Windows.Forms.TextBox();
+            this.manufacturing_depreciation_Nov = new System.Windows.Forms.TextBox();
+            this.manufacturing_depreciation_Dec = new System.Windows.Forms.TextBox();
+            this.manufacturing_depreciation_Jan = new System.Windows.Forms.TextBox();
+            this.manufacturing_depreciation_Feb = new System.Windows.Forms.TextBox();
+            this.manufacturing_depreciation_Mar = new System.Windows.Forms.TextBox();
+            this.manufacturing_rent_Jun = new System.Windows.Forms.TextBox();
+            this.manufacturing_rent_Jul = new System.Windows.Forms.TextBox();
+            this.manufacturing_rent_Aug = new System.Windows.Forms.TextBox();
+            this.manufacturing_rent_Sep = new System.Windows.Forms.TextBox();
+            this.manufacturing_rent_Oct = new System.Windows.Forms.TextBox();
+            this.manufacturing_rent_Nov = new System.Windows.Forms.TextBox();
+            this.manufacturing_rent_Dec = new System.Windows.Forms.TextBox();
+            this.manufacturing_rent_Jan = new System.Windows.Forms.TextBox();
+            this.manufacturing_rent_Feb = new System.Windows.Forms.TextBox();
+            this.manufacturing_rent_Mar = new System.Windows.Forms.TextBox();
+            this.manufacturing_repair_Jun = new System.Windows.Forms.TextBox();
+            this.manufacturing_repair_Jul = new System.Windows.Forms.TextBox();
+            this.manufacturing_repair_Aug = new System.Windows.Forms.TextBox();
+            this.manufacturing_repair_Sep = new System.Windows.Forms.TextBox();
+            this.manufacturing_repair_Oct = new System.Windows.Forms.TextBox();
+            this.manufacturing_repair_Nov = new System.Windows.Forms.TextBox();
+            this.manufacturing_repair_Dec = new System.Windows.Forms.TextBox();
+            this.manufacturing_repair_Jan = new System.Windows.Forms.TextBox();
+            this.manufacturing_repair_Feb = new System.Windows.Forms.TextBox();
+            this.manufacturing_repair_Mar = new System.Windows.Forms.TextBox();
+            this.manufacturing_stock_Jun = new System.Windows.Forms.TextBox();
+            this.manufacturing_stock_Jul = new System.Windows.Forms.TextBox();
+            this.manufacturing_stock_Aug = new System.Windows.Forms.TextBox();
+            this.manufacturing_stock_Sep = new System.Windows.Forms.TextBox();
+            this.manufacturing_stock_Oct = new System.Windows.Forms.TextBox();
+            this.manufacturing_stock_Nov = new System.Windows.Forms.TextBox();
+            this.manufacturing_stock_Dec = new System.Windows.Forms.TextBox();
+            this.manufacturing_stock_Jan = new System.Windows.Forms.TextBox();
+            this.manufacturing_stock_Feb = new System.Windows.Forms.TextBox();
+            this.manufacturing_stock_Mar = new System.Windows.Forms.TextBox();
+            this.manufacturing_other_Jun = new System.Windows.Forms.TextBox();
+            this.manufacturing_other_Jul = new System.Windows.Forms.TextBox();
+            this.manufacturing_other_Aug = new System.Windows.Forms.TextBox();
+            this.manufacturing_other_Sep = new System.Windows.Forms.TextBox();
+            this.manufacturing_other_Oct = new System.Windows.Forms.TextBox();
+            this.manufacturing_other_Nov = new System.Windows.Forms.TextBox();
+            this.manufacturing_other_Dec = new System.Windows.Forms.TextBox();
+            this.manufacturing_other_Jan = new System.Windows.Forms.TextBox();
+            this.manufacturing_other_Feb = new System.Windows.Forms.TextBox();
+            this.manufacturing_other_Mar = new System.Windows.Forms.TextBox();
+            this.selling_personnel_Jun = new System.Windows.Forms.TextBox();
+            this.selling_personnel_Jul = new System.Windows.Forms.TextBox();
+            this.selling_personnel_Aug = new System.Windows.Forms.TextBox();
+            this.selling_personnel_Sep = new System.Windows.Forms.TextBox();
+            this.selling_personnel_Oct = new System.Windows.Forms.TextBox();
+            this.selling_personnel_Nov = new System.Windows.Forms.TextBox();
+            this.selling_personnel_Dec = new System.Windows.Forms.TextBox();
+            this.selling_personnel_Jan = new System.Windows.Forms.TextBox();
+            this.selling_personnel_Feb = new System.Windows.Forms.TextBox();
+            this.selling_personnel_Mar = new System.Windows.Forms.TextBox();
+            this.selling_depreciation_Mar = new System.Windows.Forms.TextBox();
+            this.selling_depreciation_Feb = new System.Windows.Forms.TextBox();
+            this.selling_depreciation_Jan = new System.Windows.Forms.TextBox();
+            this.selling_depreciation_Dec = new System.Windows.Forms.TextBox();
+            this.selling_depreciation_Nov = new System.Windows.Forms.TextBox();
+            this.selling_depreciation_Oct = new System.Windows.Forms.TextBox();
+            this.selling_depreciation_Sep = new System.Windows.Forms.TextBox();
+            this.selling_depreciation_Aug = new System.Windows.Forms.TextBox();
+            this.selling_depreciation_Jul = new System.Windows.Forms.TextBox();
+            this.selling_depreciation_Jun = new System.Windows.Forms.TextBox();
+            this.selling_other_Apr = new System.Windows.Forms.TextBox();
+            this.operating_expenses_Apr = new System.Windows.Forms.TextBox();
+            this.selling_other_May = new System.Windows.Forms.TextBox();
+            this.selling_other_Jun = new System.Windows.Forms.TextBox();
+            this.selling_other_Jul = new System.Windows.Forms.TextBox();
+            this.selling_other_Aug = new System.Windows.Forms.TextBox();
+            this.selling_other_Sep = new System.Windows.Forms.TextBox();
+            this.selling_other_Oct = new System.Windows.Forms.TextBox();
+            this.selling_other_Nov = new System.Windows.Forms.TextBox();
+            this.selling_other_Dec = new System.Windows.Forms.TextBox();
+            this.selling_other_Jan = new System.Windows.Forms.TextBox();
+            this.selling_other_Feb = new System.Windows.Forms.TextBox();
+            this.selling_other_Mar = new System.Windows.Forms.TextBox();
+            this.operating_expenses_May = new System.Windows.Forms.TextBox();
+            this.operating_expenses_Jun = new System.Windows.Forms.TextBox();
+            this.operating_expenses_Jul = new System.Windows.Forms.TextBox();
+            this.operating_expenses_Aug = new System.Windows.Forms.TextBox();
+            this.operating_expenses_Sep = new System.Windows.Forms.TextBox();
+            this.operating_expenses_Oct = new System.Windows.Forms.TextBox();
+            this.operating_expenses_Nov = new System.Windows.Forms.TextBox();
+            this.operating_expenses_Dec = new System.Windows.Forms.TextBox();
+            this.operating_expenses_Jan = new System.Windows.Forms.TextBox();
+            this.operating_expenses_Feb = new System.Windows.Forms.TextBox();
+            this.operating_expenses_Mar = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.manufacturing_personnel_total = new System.Windows.Forms.Label();
+            this.manufacturing_depreciation_total = new System.Windows.Forms.Label();
+            this.manufacturing_rent_total = new System.Windows.Forms.Label();
+            this.manufacturing_repair_total = new System.Windows.Forms.Label();
+            this.manufacturing_stock_total = new System.Windows.Forms.Label();
+            this.manufacturing_other_total = new System.Windows.Forms.Label();
+            this.selling_personnel_total = new System.Windows.Forms.Label();
+            this.selling_depreciation_total = new System.Windows.Forms.Label();
+            this.selling_other_total = new System.Windows.Forms.Label();
+            this.operating_expenses_total = new System.Windows.Forms.Label();
+            this.total_Mar = new System.Windows.Forms.Label();
+            this.total_Feb = new System.Windows.Forms.Label();
+            this.total_Jan = new System.Windows.Forms.Label();
+            this.total_Dec = new System.Windows.Forms.Label();
+            this.total_Nov = new System.Windows.Forms.Label();
+            this.total_Oct = new System.Windows.Forms.Label();
+            this.total_Sep = new System.Windows.Forms.Label();
+            this.total_Aug = new System.Windows.Forms.Label();
+            this.total_Jul = new System.Windows.Forms.Label();
+            this.total_Jun = new System.Windows.Forms.Label();
+            this.total_May = new System.Windows.Forms.Label();
+            this.total_Apr = new System.Windows.Forms.Label();
+            this.total = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAppend
             // 
-            this.btnAppend.Location = new System.Drawing.Point(1189, 209);
+            this.btnAppend.Location = new System.Drawing.Point(1220, 363);
             this.btnAppend.Name = "btnAppend";
             this.btnAppend.Size = new System.Drawing.Size(75, 23);
             this.btnAppend.TabIndex = 0;
@@ -164,23 +215,25 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 9;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
+            this.tableLayoutPanel2.ColumnCount = 12;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.5F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 8.5F));
             this.tableLayoutPanel2.Controls.Add(this.label17, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.label18, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label19, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.label20, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.label21, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.label22, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.label23, 8, 0);
             this.tableLayoutPanel2.Controls.Add(this.label25, 8, 1);
             this.tableLayoutPanel2.Controls.Add(this.label26, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.label27, 2, 1);
@@ -189,14 +242,14 @@
             this.tableLayoutPanel2.Controls.Add(this.label30, 5, 1);
             this.tableLayoutPanel2.Controls.Add(this.label31, 6, 1);
             this.tableLayoutPanel2.Controls.Add(this.label32, 7, 1);
-            this.tableLayoutPanel2.Controls.Add(this.materialCost_May, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.laborCost_May, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.contractorsCost_May, 3, 3);
-            this.tableLayoutPanel2.Controls.Add(this.materialsFare_May, 4, 3);
-            this.tableLayoutPanel2.Controls.Add(this.packingCost_May, 5, 3);
-            this.tableLayoutPanel2.Controls.Add(this.utilitiesCost_May, 6, 3);
-            this.tableLayoutPanel2.Controls.Add(this.otherCost_May, 7, 3);
-            this.tableLayoutPanel2.Controls.Add(this.packingFare_May, 8, 3);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_personnel_May, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_depreciation_May, 2, 3);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_rent_May, 3, 3);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_repair_May, 4, 3);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_stock_May, 5, 3);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_other_May, 6, 3);
+            this.tableLayoutPanel2.Controls.Add(this.selling_personnel_May, 7, 3);
+            this.tableLayoutPanel2.Controls.Add(this.selling_depreciation_May, 8, 3);
             this.tableLayoutPanel2.Controls.Add(this.label24, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.label33, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.label34, 0, 8);
@@ -205,97 +258,149 @@
             this.tableLayoutPanel2.Controls.Add(this.label37, 0, 11);
             this.tableLayoutPanel2.Controls.Add(this.label38, 0, 12);
             this.tableLayoutPanel2.Controls.Add(this.label39, 0, 13);
-            this.tableLayoutPanel2.Controls.Add(this.materialCost_Apr, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.laborCost_Apr, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.contractorsCost_Apr, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.materialsFare_Apr, 4, 2);
-            this.tableLayoutPanel2.Controls.Add(this.packingCost_Apr, 5, 2);
-            this.tableLayoutPanel2.Controls.Add(this.utilitiesCost_Apr, 6, 2);
-            this.tableLayoutPanel2.Controls.Add(this.otherCost_Apr, 7, 2);
-            this.tableLayoutPanel2.Controls.Add(this.packingFare_Apr, 8, 2);
-            this.tableLayoutPanel2.Controls.Add(this.materialCost_Jun, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.materialCost_Jul, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.materialCost_Aug, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.materialCost_Sep, 1, 7);
-            this.tableLayoutPanel2.Controls.Add(this.materialCost_Oct, 1, 8);
-            this.tableLayoutPanel2.Controls.Add(this.materialCost_Nov, 1, 9);
-            this.tableLayoutPanel2.Controls.Add(this.materialCost_Dec, 1, 10);
-            this.tableLayoutPanel2.Controls.Add(this.materialCost_Jan, 1, 11);
-            this.tableLayoutPanel2.Controls.Add(this.materialCost_Feb, 1, 12);
-            this.tableLayoutPanel2.Controls.Add(this.materialCost_Mar, 1, 13);
-            this.tableLayoutPanel2.Controls.Add(this.laborCost_Jun, 2, 4);
-            this.tableLayoutPanel2.Controls.Add(this.laborCost_Jul, 2, 5);
-            this.tableLayoutPanel2.Controls.Add(this.laborCost_Aug, 2, 6);
-            this.tableLayoutPanel2.Controls.Add(this.laborCost_Sep, 2, 7);
-            this.tableLayoutPanel2.Controls.Add(this.laborCost_Oct, 2, 8);
-            this.tableLayoutPanel2.Controls.Add(this.laborCost_Nov, 2, 9);
-            this.tableLayoutPanel2.Controls.Add(this.laborCost_Dec, 2, 10);
-            this.tableLayoutPanel2.Controls.Add(this.laborCost_Jan, 2, 11);
-            this.tableLayoutPanel2.Controls.Add(this.laborCost_Feb, 2, 12);
-            this.tableLayoutPanel2.Controls.Add(this.laborCost_Mar, 2, 13);
-            this.tableLayoutPanel2.Controls.Add(this.contractorsCost_Jun, 3, 4);
-            this.tableLayoutPanel2.Controls.Add(this.contractorsCost_Jul, 3, 5);
-            this.tableLayoutPanel2.Controls.Add(this.contractorsCost_Aug, 3, 6);
-            this.tableLayoutPanel2.Controls.Add(this.contractorsCost_Sep, 3, 7);
-            this.tableLayoutPanel2.Controls.Add(this.contractorsCost_Oct, 3, 8);
-            this.tableLayoutPanel2.Controls.Add(this.contractorsCost_Nov, 3, 9);
-            this.tableLayoutPanel2.Controls.Add(this.contractorsCost_Dec, 3, 10);
-            this.tableLayoutPanel2.Controls.Add(this.contractorsCost_Jan, 3, 11);
-            this.tableLayoutPanel2.Controls.Add(this.contractorsCost_Feb, 3, 12);
-            this.tableLayoutPanel2.Controls.Add(this.contractorsCost_Mar, 3, 13);
-            this.tableLayoutPanel2.Controls.Add(this.materialsFare_Jun, 4, 4);
-            this.tableLayoutPanel2.Controls.Add(this.materialsFare_Jul, 4, 5);
-            this.tableLayoutPanel2.Controls.Add(this.materialsFare_Aug, 4, 6);
-            this.tableLayoutPanel2.Controls.Add(this.materialsFare_Sep, 4, 7);
-            this.tableLayoutPanel2.Controls.Add(this.materialsFare_Oct, 4, 8);
-            this.tableLayoutPanel2.Controls.Add(this.materialsFare_Nov, 4, 9);
-            this.tableLayoutPanel2.Controls.Add(this.materialsFare_Dec, 4, 10);
-            this.tableLayoutPanel2.Controls.Add(this.materialsFare_Jan, 4, 11);
-            this.tableLayoutPanel2.Controls.Add(this.materialsFare_Feb, 4, 12);
-            this.tableLayoutPanel2.Controls.Add(this.materialsFare_Mar, 4, 13);
-            this.tableLayoutPanel2.Controls.Add(this.packingCost_Jun, 5, 4);
-            this.tableLayoutPanel2.Controls.Add(this.packingCost_Jul, 5, 5);
-            this.tableLayoutPanel2.Controls.Add(this.packingCost_Aug, 5, 6);
-            this.tableLayoutPanel2.Controls.Add(this.packingCost_Sep, 5, 7);
-            this.tableLayoutPanel2.Controls.Add(this.packingCost_Oct, 5, 8);
-            this.tableLayoutPanel2.Controls.Add(this.packingCost_Nov, 5, 9);
-            this.tableLayoutPanel2.Controls.Add(this.packingCost_Dec, 5, 10);
-            this.tableLayoutPanel2.Controls.Add(this.packingCost_Jan, 5, 11);
-            this.tableLayoutPanel2.Controls.Add(this.packingCost_Feb, 5, 12);
-            this.tableLayoutPanel2.Controls.Add(this.packingCost_Mar, 5, 13);
-            this.tableLayoutPanel2.Controls.Add(this.utilitiesCost_Jun, 6, 4);
-            this.tableLayoutPanel2.Controls.Add(this.utilitiesCost_Jul, 6, 5);
-            this.tableLayoutPanel2.Controls.Add(this.utilitiesCost_Aug, 6, 6);
-            this.tableLayoutPanel2.Controls.Add(this.utilitiesCost_Sep, 6, 7);
-            this.tableLayoutPanel2.Controls.Add(this.utilitiesCost_Oct, 6, 8);
-            this.tableLayoutPanel2.Controls.Add(this.utilitiesCost_Nov, 6, 9);
-            this.tableLayoutPanel2.Controls.Add(this.utilitiesCost_Dec, 6, 10);
-            this.tableLayoutPanel2.Controls.Add(this.utilitiesCost_Jan, 6, 11);
-            this.tableLayoutPanel2.Controls.Add(this.utilitiesCost_Feb, 6, 12);
-            this.tableLayoutPanel2.Controls.Add(this.utilitiesCost_Mar, 6, 13);
-            this.tableLayoutPanel2.Controls.Add(this.otherCost_Jun, 7, 4);
-            this.tableLayoutPanel2.Controls.Add(this.otherCost_Jul, 7, 5);
-            this.tableLayoutPanel2.Controls.Add(this.otherCost_Aug, 7, 6);
-            this.tableLayoutPanel2.Controls.Add(this.otherCost_Sep, 7, 7);
-            this.tableLayoutPanel2.Controls.Add(this.otherCost_Oct, 7, 8);
-            this.tableLayoutPanel2.Controls.Add(this.otherCost_Nov, 7, 9);
-            this.tableLayoutPanel2.Controls.Add(this.otherCost_Dec, 7, 10);
-            this.tableLayoutPanel2.Controls.Add(this.otherCost_Jan, 7, 11);
-            this.tableLayoutPanel2.Controls.Add(this.otherCost_Feb, 7, 12);
-            this.tableLayoutPanel2.Controls.Add(this.otherCost_Mar, 7, 13);
-            this.tableLayoutPanel2.Controls.Add(this.packingFare_Mar, 8, 13);
-            this.tableLayoutPanel2.Controls.Add(this.packingFare_Feb, 8, 12);
-            this.tableLayoutPanel2.Controls.Add(this.packingFare_Jan, 8, 11);
-            this.tableLayoutPanel2.Controls.Add(this.packingFare_Dec, 8, 10);
-            this.tableLayoutPanel2.Controls.Add(this.packingFare_Nov, 8, 9);
-            this.tableLayoutPanel2.Controls.Add(this.packingFare_Oct, 8, 8);
-            this.tableLayoutPanel2.Controls.Add(this.packingFare_Sep, 8, 7);
-            this.tableLayoutPanel2.Controls.Add(this.packingFare_Aug, 8, 6);
-            this.tableLayoutPanel2.Controls.Add(this.packingFare_Jul, 8, 5);
-            this.tableLayoutPanel2.Controls.Add(this.packingFare_Jun, 8, 4);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_personnel_Apr, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_depreciation_Apr, 2, 2);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_rent_Apr, 3, 2);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_repair_Apr, 4, 2);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_stock_Apr, 5, 2);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_other_Apr, 6, 2);
+            this.tableLayoutPanel2.Controls.Add(this.selling_personnel_Apr, 7, 2);
+            this.tableLayoutPanel2.Controls.Add(this.selling_depreciation_Apr, 8, 2);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_personnel_Jun, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_personnel_Jul, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_personnel_Aug, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_personnel_Sep, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_personnel_Oct, 1, 8);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_personnel_Nov, 1, 9);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_personnel_Dec, 1, 10);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_personnel_Jan, 1, 11);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_personnel_Feb, 1, 12);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_personnel_Mar, 1, 13);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_depreciation_Jun, 2, 4);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_depreciation_Jul, 2, 5);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_depreciation_Aug, 2, 6);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_depreciation_Sep, 2, 7);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_depreciation_Oct, 2, 8);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_depreciation_Nov, 2, 9);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_depreciation_Dec, 2, 10);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_depreciation_Jan, 2, 11);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_depreciation_Feb, 2, 12);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_depreciation_Mar, 2, 13);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_rent_Jun, 3, 4);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_rent_Jul, 3, 5);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_rent_Aug, 3, 6);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_rent_Sep, 3, 7);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_rent_Oct, 3, 8);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_rent_Nov, 3, 9);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_rent_Dec, 3, 10);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_rent_Jan, 3, 11);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_rent_Feb, 3, 12);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_rent_Mar, 3, 13);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_repair_Jun, 4, 4);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_repair_Jul, 4, 5);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_repair_Aug, 4, 6);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_repair_Sep, 4, 7);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_repair_Oct, 4, 8);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_repair_Nov, 4, 9);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_repair_Dec, 4, 10);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_repair_Jan, 4, 11);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_repair_Feb, 4, 12);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_repair_Mar, 4, 13);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_stock_Jun, 5, 4);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_stock_Jul, 5, 5);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_stock_Aug, 5, 6);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_stock_Sep, 5, 7);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_stock_Oct, 5, 8);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_stock_Nov, 5, 9);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_stock_Dec, 5, 10);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_stock_Jan, 5, 11);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_stock_Feb, 5, 12);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_stock_Mar, 5, 13);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_other_Jun, 6, 4);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_other_Jul, 6, 5);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_other_Aug, 6, 6);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_other_Sep, 6, 7);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_other_Oct, 6, 8);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_other_Nov, 6, 9);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_other_Dec, 6, 10);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_other_Jan, 6, 11);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_other_Feb, 6, 12);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_other_Mar, 6, 13);
+            this.tableLayoutPanel2.Controls.Add(this.selling_personnel_Jun, 7, 4);
+            this.tableLayoutPanel2.Controls.Add(this.selling_personnel_Jul, 7, 5);
+            this.tableLayoutPanel2.Controls.Add(this.selling_personnel_Aug, 7, 6);
+            this.tableLayoutPanel2.Controls.Add(this.selling_personnel_Sep, 7, 7);
+            this.tableLayoutPanel2.Controls.Add(this.selling_personnel_Oct, 7, 8);
+            this.tableLayoutPanel2.Controls.Add(this.selling_personnel_Nov, 7, 9);
+            this.tableLayoutPanel2.Controls.Add(this.selling_personnel_Dec, 7, 10);
+            this.tableLayoutPanel2.Controls.Add(this.selling_personnel_Jan, 7, 11);
+            this.tableLayoutPanel2.Controls.Add(this.selling_personnel_Feb, 7, 12);
+            this.tableLayoutPanel2.Controls.Add(this.selling_personnel_Mar, 7, 13);
+            this.tableLayoutPanel2.Controls.Add(this.selling_depreciation_Mar, 8, 13);
+            this.tableLayoutPanel2.Controls.Add(this.selling_depreciation_Feb, 8, 12);
+            this.tableLayoutPanel2.Controls.Add(this.selling_depreciation_Jan, 8, 11);
+            this.tableLayoutPanel2.Controls.Add(this.selling_depreciation_Dec, 8, 10);
+            this.tableLayoutPanel2.Controls.Add(this.selling_depreciation_Nov, 8, 9);
+            this.tableLayoutPanel2.Controls.Add(this.selling_depreciation_Oct, 8, 8);
+            this.tableLayoutPanel2.Controls.Add(this.selling_depreciation_Sep, 8, 7);
+            this.tableLayoutPanel2.Controls.Add(this.selling_depreciation_Aug, 8, 6);
+            this.tableLayoutPanel2.Controls.Add(this.selling_depreciation_Jul, 8, 5);
+            this.tableLayoutPanel2.Controls.Add(this.selling_depreciation_Jun, 8, 4);
+            this.tableLayoutPanel2.Controls.Add(this.selling_other_Apr, 9, 2);
+            this.tableLayoutPanel2.Controls.Add(this.operating_expenses_Apr, 10, 2);
+            this.tableLayoutPanel2.Controls.Add(this.selling_other_May, 9, 3);
+            this.tableLayoutPanel2.Controls.Add(this.selling_other_Jun, 9, 4);
+            this.tableLayoutPanel2.Controls.Add(this.selling_other_Jul, 9, 5);
+            this.tableLayoutPanel2.Controls.Add(this.selling_other_Aug, 9, 6);
+            this.tableLayoutPanel2.Controls.Add(this.selling_other_Sep, 9, 7);
+            this.tableLayoutPanel2.Controls.Add(this.selling_other_Oct, 9, 8);
+            this.tableLayoutPanel2.Controls.Add(this.selling_other_Nov, 9, 9);
+            this.tableLayoutPanel2.Controls.Add(this.selling_other_Dec, 9, 10);
+            this.tableLayoutPanel2.Controls.Add(this.selling_other_Jan, 9, 11);
+            this.tableLayoutPanel2.Controls.Add(this.selling_other_Feb, 9, 12);
+            this.tableLayoutPanel2.Controls.Add(this.selling_other_Mar, 9, 13);
+            this.tableLayoutPanel2.Controls.Add(this.operating_expenses_May, 10, 3);
+            this.tableLayoutPanel2.Controls.Add(this.operating_expenses_Jun, 10, 4);
+            this.tableLayoutPanel2.Controls.Add(this.operating_expenses_Jul, 10, 5);
+            this.tableLayoutPanel2.Controls.Add(this.operating_expenses_Aug, 10, 6);
+            this.tableLayoutPanel2.Controls.Add(this.operating_expenses_Sep, 10, 7);
+            this.tableLayoutPanel2.Controls.Add(this.operating_expenses_Oct, 10, 8);
+            this.tableLayoutPanel2.Controls.Add(this.operating_expenses_Nov, 10, 9);
+            this.tableLayoutPanel2.Controls.Add(this.operating_expenses_Dec, 10, 10);
+            this.tableLayoutPanel2.Controls.Add(this.operating_expenses_Jan, 10, 11);
+            this.tableLayoutPanel2.Controls.Add(this.operating_expenses_Feb, 10, 12);
+            this.tableLayoutPanel2.Controls.Add(this.operating_expenses_Mar, 10, 13);
+            this.tableLayoutPanel2.Controls.Add(this.label1, 10, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label2, 9, 1);
+            this.tableLayoutPanel2.Controls.Add(this.label23, 7, 0);
+            this.tableLayoutPanel2.Controls.Add(this.label3, 0, 14);
+            this.tableLayoutPanel2.Controls.Add(this.label4, 11, 0);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_personnel_total, 1, 14);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_depreciation_total, 2, 14);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_rent_total, 3, 14);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_repair_total, 4, 14);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_stock_total, 5, 14);
+            this.tableLayoutPanel2.Controls.Add(this.manufacturing_other_total, 6, 14);
+            this.tableLayoutPanel2.Controls.Add(this.selling_personnel_total, 7, 14);
+            this.tableLayoutPanel2.Controls.Add(this.selling_depreciation_total, 8, 14);
+            this.tableLayoutPanel2.Controls.Add(this.selling_other_total, 9, 14);
+            this.tableLayoutPanel2.Controls.Add(this.operating_expenses_total, 10, 14);
+            this.tableLayoutPanel2.Controls.Add(this.total_Mar, 11, 13);
+            this.tableLayoutPanel2.Controls.Add(this.total_Feb, 11, 12);
+            this.tableLayoutPanel2.Controls.Add(this.total_Jan, 11, 11);
+            this.tableLayoutPanel2.Controls.Add(this.total_Dec, 11, 10);
+            this.tableLayoutPanel2.Controls.Add(this.total_Nov, 11, 9);
+            this.tableLayoutPanel2.Controls.Add(this.total_Oct, 11, 8);
+            this.tableLayoutPanel2.Controls.Add(this.total_Sep, 11, 7);
+            this.tableLayoutPanel2.Controls.Add(this.total_Aug, 11, 6);
+            this.tableLayoutPanel2.Controls.Add(this.total_Jul, 11, 5);
+            this.tableLayoutPanel2.Controls.Add(this.total_Jun, 11, 4);
+            this.tableLayoutPanel2.Controls.Add(this.total_May, 11, 3);
+            this.tableLayoutPanel2.Controls.Add(this.total_Apr, 11, 2);
+            this.tableLayoutPanel2.Controls.Add(this.total, 11, 14);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(12, 12);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 14;
+            this.tableLayoutPanel2.RowCount = 15;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
@@ -310,7 +415,9 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1125, 322);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 23F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1283, 345);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // label17
@@ -322,7 +429,7 @@
             this.label17.Margin = new System.Windows.Forms.Padding(0);
             this.label17.Name = "label17";
             this.tableLayoutPanel2.SetRowSpan(this.label17, 2);
-            this.label17.Size = new System.Drawing.Size(125, 46);
+            this.label17.Size = new System.Drawing.Size(83, 46);
             this.label17.TabIndex = 0;
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -334,7 +441,7 @@
             this.label18.Location = new System.Drawing.Point(0, 46);
             this.label18.Margin = new System.Windows.Forms.Padding(0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(125, 23);
+            this.label18.Size = new System.Drawing.Size(83, 23);
             this.label18.TabIndex = 0;
             this.label18.Text = "4月";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -347,7 +454,7 @@
             this.label19.Location = new System.Drawing.Point(0, 69);
             this.label19.Margin = new System.Windows.Forms.Padding(0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(125, 23);
+            this.label19.Size = new System.Drawing.Size(83, 23);
             this.label19.TabIndex = 0;
             this.label19.Text = "5月";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -360,7 +467,7 @@
             this.label20.Location = new System.Drawing.Point(0, 92);
             this.label20.Margin = new System.Windows.Forms.Padding(0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(125, 23);
+            this.label20.Size = new System.Drawing.Size(83, 23);
             this.label20.TabIndex = 0;
             this.label20.Text = "6月";
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -373,7 +480,7 @@
             this.label21.Location = new System.Drawing.Point(0, 115);
             this.label21.Margin = new System.Windows.Forms.Padding(0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(125, 23);
+            this.label21.Size = new System.Drawing.Size(83, 23);
             this.label21.TabIndex = 0;
             this.label21.Text = "7月";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -383,29 +490,15 @@
             this.label22.AutoSize = true;
             this.label22.BackColor = System.Drawing.Color.Gold;
             this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tableLayoutPanel2.SetColumnSpan(this.label22, 7);
+            this.tableLayoutPanel2.SetColumnSpan(this.label22, 6);
             this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Location = new System.Drawing.Point(125, 0);
+            this.label22.Location = new System.Drawing.Point(83, 0);
             this.label22.Margin = new System.Windows.Forms.Padding(0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(875, 23);
+            this.label22.Size = new System.Drawing.Size(654, 23);
             this.label22.TabIndex = 0;
             this.label22.Text = "製造原価";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Gold;
-            this.label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Location = new System.Drawing.Point(1000, 0);
-            this.label23.Margin = new System.Windows.Forms.Padding(0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(125, 23);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "販売費";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label25
             // 
@@ -413,12 +506,12 @@
             this.label25.BackColor = System.Drawing.Color.Gold;
             this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label25.Location = new System.Drawing.Point(1000, 23);
+            this.label25.Location = new System.Drawing.Point(846, 23);
             this.label25.Margin = new System.Windows.Forms.Padding(0);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(125, 23);
+            this.label25.Size = new System.Drawing.Size(109, 23);
             this.label25.TabIndex = 0;
-            this.label25.Text = "⑧荷造運賃(円)";
+            this.label25.Text = "減価償却費";
             this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label26
@@ -427,10 +520,10 @@
             this.label26.BackColor = System.Drawing.Color.Gold;
             this.label26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label26.Location = new System.Drawing.Point(125, 23);
+            this.label26.Location = new System.Drawing.Point(83, 23);
             this.label26.Margin = new System.Windows.Forms.Padding(0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(125, 23);
+            this.label26.Size = new System.Drawing.Size(109, 23);
             this.label26.TabIndex = 0;
             this.label26.Text = "人件費";
             this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -441,10 +534,10 @@
             this.label27.BackColor = System.Drawing.Color.Gold;
             this.label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label27.Location = new System.Drawing.Point(250, 23);
+            this.label27.Location = new System.Drawing.Point(192, 23);
             this.label27.Margin = new System.Windows.Forms.Padding(0);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(125, 23);
+            this.label27.Size = new System.Drawing.Size(109, 23);
             this.label27.TabIndex = 0;
             this.label27.Text = "減価償却費";
             this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -455,10 +548,10 @@
             this.label28.BackColor = System.Drawing.Color.Gold;
             this.label28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label28.Location = new System.Drawing.Point(375, 23);
+            this.label28.Location = new System.Drawing.Point(301, 23);
             this.label28.Margin = new System.Windows.Forms.Padding(0);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(125, 23);
+            this.label28.Size = new System.Drawing.Size(109, 23);
             this.label28.TabIndex = 0;
             this.label28.Text = "賃借料";
             this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -469,10 +562,10 @@
             this.label29.BackColor = System.Drawing.Color.Gold;
             this.label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label29.Location = new System.Drawing.Point(500, 23);
+            this.label29.Location = new System.Drawing.Point(410, 23);
             this.label29.Margin = new System.Windows.Forms.Padding(0);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(125, 23);
+            this.label29.Size = new System.Drawing.Size(109, 23);
             this.label29.TabIndex = 0;
             this.label29.Text = "修繕費";
             this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -483,12 +576,12 @@
             this.label30.BackColor = System.Drawing.Color.Gold;
             this.label30.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label30.Location = new System.Drawing.Point(625, 23);
+            this.label30.Location = new System.Drawing.Point(519, 23);
             this.label30.Margin = new System.Windows.Forms.Padding(0);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(125, 23);
+            this.label30.Size = new System.Drawing.Size(109, 23);
             this.label30.TabIndex = 0;
-            this.label30.Text = "⑤包装資材費(円)";
+            this.label30.Text = "在庫増減";
             this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label31
@@ -497,12 +590,12 @@
             this.label31.BackColor = System.Drawing.Color.Gold;
             this.label31.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label31.Location = new System.Drawing.Point(750, 23);
+            this.label31.Location = new System.Drawing.Point(628, 23);
             this.label31.Margin = new System.Windows.Forms.Padding(0);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(125, 23);
+            this.label31.Size = new System.Drawing.Size(109, 23);
             this.label31.TabIndex = 0;
-            this.label31.Text = "⑥水道光熱費(円)";
+            this.label31.Text = "その他経費";
             this.label31.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label32
@@ -511,133 +604,133 @@
             this.label32.BackColor = System.Drawing.Color.Gold;
             this.label32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label32.Location = new System.Drawing.Point(875, 23);
+            this.label32.Location = new System.Drawing.Point(737, 23);
             this.label32.Margin = new System.Windows.Forms.Padding(0);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(125, 23);
+            this.label32.Size = new System.Drawing.Size(109, 23);
             this.label32.TabIndex = 0;
-            this.label32.Text = "⑦消耗品費(円)";
+            this.label32.Text = "人件費";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialCost_May
+            // manufacturing_personnel_May
             // 
-            this.materialCost_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialCost_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCost_May.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCost_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialCost_May.Location = new System.Drawing.Point(125, 69);
-            this.materialCost_May.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCost_May.Name = "materialCost_May";
-            this.materialCost_May.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_May.TabIndex = 8;
-            this.materialCost_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialCost_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialCost_May.Leave += new System.EventHandler(this.textBox_Leave);
+            this.manufacturing_personnel_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_personnel_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_personnel_May.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_personnel_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_personnel_May.Location = new System.Drawing.Point(83, 69);
+            this.manufacturing_personnel_May.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_personnel_May.Name = "manufacturing_personnel_May";
+            this.manufacturing_personnel_May.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_personnel_May.TabIndex = 10;
+            this.manufacturing_personnel_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_personnel_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
-            // laborCost_May
+            // manufacturing_depreciation_May
             // 
-            this.laborCost_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.laborCost_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.laborCost_May.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laborCost_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.laborCost_May.Location = new System.Drawing.Point(250, 69);
-            this.laborCost_May.Margin = new System.Windows.Forms.Padding(0);
-            this.laborCost_May.Name = "laborCost_May";
-            this.laborCost_May.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_May.TabIndex = 9;
-            this.laborCost_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.laborCost_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.laborCost_May.Leave += new System.EventHandler(this.textBox_Leave);
+            this.manufacturing_depreciation_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_depreciation_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_depreciation_May.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_depreciation_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_depreciation_May.Location = new System.Drawing.Point(192, 69);
+            this.manufacturing_depreciation_May.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_depreciation_May.Name = "manufacturing_depreciation_May";
+            this.manufacturing_depreciation_May.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_depreciation_May.TabIndex = 11;
+            this.manufacturing_depreciation_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_depreciation_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
-            // contractorsCost_May
+            // manufacturing_rent_May
             // 
-            this.contractorsCost_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.contractorsCost_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contractorsCost_May.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractorsCost_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.contractorsCost_May.Location = new System.Drawing.Point(375, 69);
-            this.contractorsCost_May.Margin = new System.Windows.Forms.Padding(0);
-            this.contractorsCost_May.Name = "contractorsCost_May";
-            this.contractorsCost_May.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_May.TabIndex = 10;
-            this.contractorsCost_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.contractorsCost_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.contractorsCost_May.Leave += new System.EventHandler(this.textBox_Leave);
+            this.manufacturing_rent_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_rent_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_rent_May.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_rent_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_rent_May.Location = new System.Drawing.Point(301, 69);
+            this.manufacturing_rent_May.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_rent_May.Name = "manufacturing_rent_May";
+            this.manufacturing_rent_May.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_rent_May.TabIndex = 12;
+            this.manufacturing_rent_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_rent_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
-            // materialsFare_May
+            // manufacturing_repair_May
             // 
-            this.materialsFare_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialsFare_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsFare_May.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsFare_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialsFare_May.Location = new System.Drawing.Point(500, 69);
-            this.materialsFare_May.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsFare_May.Name = "materialsFare_May";
-            this.materialsFare_May.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_May.TabIndex = 11;
-            this.materialsFare_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialsFare_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialsFare_May.Leave += new System.EventHandler(this.textBox_Leave);
+            this.manufacturing_repair_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_repair_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_repair_May.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_repair_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_repair_May.Location = new System.Drawing.Point(410, 69);
+            this.manufacturing_repair_May.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_repair_May.Name = "manufacturing_repair_May";
+            this.manufacturing_repair_May.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_repair_May.TabIndex = 13;
+            this.manufacturing_repair_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_repair_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
-            // packingCost_May
+            // manufacturing_stock_May
             // 
-            this.packingCost_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingCost_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingCost_May.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingCost_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingCost_May.Location = new System.Drawing.Point(625, 69);
-            this.packingCost_May.Margin = new System.Windows.Forms.Padding(0);
-            this.packingCost_May.Name = "packingCost_May";
-            this.packingCost_May.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_May.TabIndex = 12;
-            this.packingCost_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingCost_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingCost_May.Leave += new System.EventHandler(this.textBox_Leave);
+            this.manufacturing_stock_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_stock_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_stock_May.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_stock_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_stock_May.Location = new System.Drawing.Point(519, 69);
+            this.manufacturing_stock_May.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_stock_May.Name = "manufacturing_stock_May";
+            this.manufacturing_stock_May.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_stock_May.TabIndex = 14;
+            this.manufacturing_stock_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_stock_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
-            // utilitiesCost_May
+            // manufacturing_other_May
             // 
-            this.utilitiesCost_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.utilitiesCost_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.utilitiesCost_May.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesCost_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.utilitiesCost_May.Location = new System.Drawing.Point(750, 69);
-            this.utilitiesCost_May.Margin = new System.Windows.Forms.Padding(0);
-            this.utilitiesCost_May.Name = "utilitiesCost_May";
-            this.utilitiesCost_May.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_May.TabIndex = 13;
-            this.utilitiesCost_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.utilitiesCost_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.utilitiesCost_May.Leave += new System.EventHandler(this.textBox_Leave);
+            this.manufacturing_other_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_other_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_other_May.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_other_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_other_May.Location = new System.Drawing.Point(628, 69);
+            this.manufacturing_other_May.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_other_May.Name = "manufacturing_other_May";
+            this.manufacturing_other_May.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_other_May.TabIndex = 15;
+            this.manufacturing_other_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_other_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
-            // otherCost_May
+            // selling_personnel_May
             // 
-            this.otherCost_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.otherCost_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherCost_May.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherCost_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.otherCost_May.Location = new System.Drawing.Point(875, 69);
-            this.otherCost_May.Margin = new System.Windows.Forms.Padding(0);
-            this.otherCost_May.Name = "otherCost_May";
-            this.otherCost_May.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_May.TabIndex = 14;
-            this.otherCost_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otherCost_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.otherCost_May.Leave += new System.EventHandler(this.textBox_Leave);
+            this.selling_personnel_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_personnel_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_personnel_May.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_personnel_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_personnel_May.Location = new System.Drawing.Point(737, 69);
+            this.selling_personnel_May.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_personnel_May.Name = "selling_personnel_May";
+            this.selling_personnel_May.Size = new System.Drawing.Size(109, 23);
+            this.selling_personnel_May.TabIndex = 16;
+            this.selling_personnel_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_personnel_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
-            // packingFare_May
+            // selling_depreciation_May
             // 
-            this.packingFare_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingFare_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingFare_May.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingFare_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingFare_May.Location = new System.Drawing.Point(1000, 69);
-            this.packingFare_May.Margin = new System.Windows.Forms.Padding(0);
-            this.packingFare_May.Name = "packingFare_May";
-            this.packingFare_May.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_May.TabIndex = 15;
-            this.packingFare_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingFare_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingFare_May.Leave += new System.EventHandler(this.textBox_Leave);
+            this.selling_depreciation_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_depreciation_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_depreciation_May.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_depreciation_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_depreciation_May.Location = new System.Drawing.Point(846, 69);
+            this.selling_depreciation_May.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_depreciation_May.Name = "selling_depreciation_May";
+            this.selling_depreciation_May.Size = new System.Drawing.Size(109, 23);
+            this.selling_depreciation_May.TabIndex = 17;
+            this.selling_depreciation_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_depreciation_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
             // label24
             // 
@@ -647,7 +740,7 @@
             this.label24.Location = new System.Drawing.Point(0, 138);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(125, 23);
+            this.label24.Size = new System.Drawing.Size(83, 23);
             this.label24.TabIndex = 0;
             this.label24.Text = "8月";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -660,7 +753,7 @@
             this.label33.Location = new System.Drawing.Point(0, 161);
             this.label33.Margin = new System.Windows.Forms.Padding(0);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(125, 23);
+            this.label33.Size = new System.Drawing.Size(83, 23);
             this.label33.TabIndex = 0;
             this.label33.Text = "9月";
             this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -673,7 +766,7 @@
             this.label34.Location = new System.Drawing.Point(0, 184);
             this.label34.Margin = new System.Windows.Forms.Padding(0);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(125, 23);
+            this.label34.Size = new System.Drawing.Size(83, 23);
             this.label34.TabIndex = 0;
             this.label34.Text = "10月";
             this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -686,7 +779,7 @@
             this.label35.Location = new System.Drawing.Point(0, 207);
             this.label35.Margin = new System.Windows.Forms.Padding(0);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(125, 23);
+            this.label35.Size = new System.Drawing.Size(83, 23);
             this.label35.TabIndex = 0;
             this.label35.Text = "11月";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -699,7 +792,7 @@
             this.label36.Location = new System.Drawing.Point(0, 230);
             this.label36.Margin = new System.Windows.Forms.Padding(0);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(125, 23);
+            this.label36.Size = new System.Drawing.Size(83, 23);
             this.label36.TabIndex = 0;
             this.label36.Text = "12月";
             this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -712,7 +805,7 @@
             this.label37.Location = new System.Drawing.Point(0, 253);
             this.label37.Margin = new System.Windows.Forms.Padding(0);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(125, 23);
+            this.label37.Size = new System.Drawing.Size(83, 23);
             this.label37.TabIndex = 0;
             this.label37.Text = "1月";
             this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -725,7 +818,7 @@
             this.label38.Location = new System.Drawing.Point(0, 276);
             this.label38.Margin = new System.Windows.Forms.Padding(0);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(125, 23);
+            this.label38.Size = new System.Drawing.Size(83, 23);
             this.label38.TabIndex = 0;
             this.label38.Text = "2月";
             this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -738,1336 +831,2093 @@
             this.label39.Location = new System.Drawing.Point(0, 299);
             this.label39.Margin = new System.Windows.Forms.Padding(0);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(125, 23);
+            this.label39.Size = new System.Drawing.Size(83, 23);
             this.label39.TabIndex = 0;
             this.label39.Text = "3月";
             this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // materialCost_Apr
-            // 
-            this.materialCost_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialCost_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCost_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCost_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialCost_Apr.Location = new System.Drawing.Point(125, 46);
-            this.materialCost_Apr.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCost_Apr.Name = "materialCost_Apr";
-            this.materialCost_Apr.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Apr.TabIndex = 0;
-            this.materialCost_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialCost_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialCost_Apr.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // laborCost_Apr
-            // 
-            this.laborCost_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.laborCost_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.laborCost_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laborCost_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.laborCost_Apr.Location = new System.Drawing.Point(250, 46);
-            this.laborCost_Apr.Margin = new System.Windows.Forms.Padding(0);
-            this.laborCost_Apr.Name = "laborCost_Apr";
-            this.laborCost_Apr.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Apr.TabIndex = 1;
-            this.laborCost_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.laborCost_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.laborCost_Apr.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // contractorsCost_Apr
-            // 
-            this.contractorsCost_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.contractorsCost_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contractorsCost_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractorsCost_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.contractorsCost_Apr.Location = new System.Drawing.Point(375, 46);
-            this.contractorsCost_Apr.Margin = new System.Windows.Forms.Padding(0);
-            this.contractorsCost_Apr.Name = "contractorsCost_Apr";
-            this.contractorsCost_Apr.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Apr.TabIndex = 2;
-            this.contractorsCost_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.contractorsCost_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.contractorsCost_Apr.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialsFare_Apr
-            // 
-            this.materialsFare_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialsFare_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsFare_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsFare_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialsFare_Apr.Location = new System.Drawing.Point(500, 46);
-            this.materialsFare_Apr.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsFare_Apr.Name = "materialsFare_Apr";
-            this.materialsFare_Apr.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Apr.TabIndex = 3;
-            this.materialsFare_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialsFare_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialsFare_Apr.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingCost_Apr
-            // 
-            this.packingCost_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingCost_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingCost_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingCost_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingCost_Apr.Location = new System.Drawing.Point(625, 46);
-            this.packingCost_Apr.Margin = new System.Windows.Forms.Padding(0);
-            this.packingCost_Apr.Name = "packingCost_Apr";
-            this.packingCost_Apr.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Apr.TabIndex = 4;
-            this.packingCost_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingCost_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingCost_Apr.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // utilitiesCost_Apr
-            // 
-            this.utilitiesCost_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.utilitiesCost_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.utilitiesCost_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesCost_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.utilitiesCost_Apr.Location = new System.Drawing.Point(750, 46);
-            this.utilitiesCost_Apr.Margin = new System.Windows.Forms.Padding(0);
-            this.utilitiesCost_Apr.Name = "utilitiesCost_Apr";
-            this.utilitiesCost_Apr.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Apr.TabIndex = 5;
-            this.utilitiesCost_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.utilitiesCost_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.utilitiesCost_Apr.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // otherCost_Apr
-            // 
-            this.otherCost_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.otherCost_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherCost_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherCost_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.otherCost_Apr.Location = new System.Drawing.Point(875, 46);
-            this.otherCost_Apr.Margin = new System.Windows.Forms.Padding(0);
-            this.otherCost_Apr.Name = "otherCost_Apr";
-            this.otherCost_Apr.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Apr.TabIndex = 6;
-            this.otherCost_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otherCost_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.otherCost_Apr.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingFare_Apr
-            // 
-            this.packingFare_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingFare_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingFare_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingFare_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingFare_Apr.Location = new System.Drawing.Point(1000, 46);
-            this.packingFare_Apr.Margin = new System.Windows.Forms.Padding(0);
-            this.packingFare_Apr.Name = "packingFare_Apr";
-            this.packingFare_Apr.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Apr.TabIndex = 7;
-            this.packingFare_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingFare_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingFare_Apr.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialCost_Jun
-            // 
-            this.materialCost_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialCost_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCost_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCost_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialCost_Jun.Location = new System.Drawing.Point(125, 92);
-            this.materialCost_Jun.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCost_Jun.Name = "materialCost_Jun";
-            this.materialCost_Jun.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Jun.TabIndex = 16;
-            this.materialCost_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialCost_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialCost_Jun.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialCost_Jul
-            // 
-            this.materialCost_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialCost_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCost_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCost_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialCost_Jul.Location = new System.Drawing.Point(125, 115);
-            this.materialCost_Jul.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCost_Jul.Name = "materialCost_Jul";
-            this.materialCost_Jul.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Jul.TabIndex = 24;
-            this.materialCost_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialCost_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialCost_Jul.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialCost_Aug
-            // 
-            this.materialCost_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialCost_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCost_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCost_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialCost_Aug.Location = new System.Drawing.Point(125, 138);
-            this.materialCost_Aug.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCost_Aug.Name = "materialCost_Aug";
-            this.materialCost_Aug.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Aug.TabIndex = 32;
-            this.materialCost_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialCost_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialCost_Aug.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialCost_Sep
-            // 
-            this.materialCost_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialCost_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCost_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCost_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialCost_Sep.Location = new System.Drawing.Point(125, 161);
-            this.materialCost_Sep.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCost_Sep.Name = "materialCost_Sep";
-            this.materialCost_Sep.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Sep.TabIndex = 40;
-            this.materialCost_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialCost_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialCost_Sep.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialCost_Oct
-            // 
-            this.materialCost_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialCost_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCost_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCost_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialCost_Oct.Location = new System.Drawing.Point(125, 184);
-            this.materialCost_Oct.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCost_Oct.Name = "materialCost_Oct";
-            this.materialCost_Oct.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Oct.TabIndex = 48;
-            this.materialCost_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialCost_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialCost_Oct.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialCost_Nov
-            // 
-            this.materialCost_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialCost_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCost_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCost_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialCost_Nov.Location = new System.Drawing.Point(125, 207);
-            this.materialCost_Nov.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCost_Nov.Name = "materialCost_Nov";
-            this.materialCost_Nov.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Nov.TabIndex = 56;
-            this.materialCost_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialCost_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialCost_Nov.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialCost_Dec
-            // 
-            this.materialCost_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialCost_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCost_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCost_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialCost_Dec.Location = new System.Drawing.Point(125, 230);
-            this.materialCost_Dec.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCost_Dec.Name = "materialCost_Dec";
-            this.materialCost_Dec.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Dec.TabIndex = 64;
-            this.materialCost_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialCost_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialCost_Dec.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialCost_Jan
-            // 
-            this.materialCost_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialCost_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCost_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCost_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialCost_Jan.Location = new System.Drawing.Point(125, 253);
-            this.materialCost_Jan.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCost_Jan.Name = "materialCost_Jan";
-            this.materialCost_Jan.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Jan.TabIndex = 72;
-            this.materialCost_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialCost_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialCost_Jan.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialCost_Feb
-            // 
-            this.materialCost_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialCost_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCost_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCost_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialCost_Feb.Location = new System.Drawing.Point(125, 276);
-            this.materialCost_Feb.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCost_Feb.Name = "materialCost_Feb";
-            this.materialCost_Feb.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Feb.TabIndex = 80;
-            this.materialCost_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialCost_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialCost_Feb.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialCost_Mar
-            // 
-            this.materialCost_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialCost_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialCost_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialCost_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialCost_Mar.Location = new System.Drawing.Point(125, 299);
-            this.materialCost_Mar.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCost_Mar.Name = "materialCost_Mar";
-            this.materialCost_Mar.Size = new System.Drawing.Size(125, 23);
-            this.materialCost_Mar.TabIndex = 88;
-            this.materialCost_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialCost_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialCost_Mar.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // laborCost_Jun
-            // 
-            this.laborCost_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.laborCost_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.laborCost_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laborCost_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.laborCost_Jun.Location = new System.Drawing.Point(250, 92);
-            this.laborCost_Jun.Margin = new System.Windows.Forms.Padding(0);
-            this.laborCost_Jun.Name = "laborCost_Jun";
-            this.laborCost_Jun.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Jun.TabIndex = 17;
-            this.laborCost_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.laborCost_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.laborCost_Jun.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // laborCost_Jul
-            // 
-            this.laborCost_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.laborCost_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.laborCost_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laborCost_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.laborCost_Jul.Location = new System.Drawing.Point(250, 115);
-            this.laborCost_Jul.Margin = new System.Windows.Forms.Padding(0);
-            this.laborCost_Jul.Name = "laborCost_Jul";
-            this.laborCost_Jul.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Jul.TabIndex = 25;
-            this.laborCost_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.laborCost_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.laborCost_Jul.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // laborCost_Aug
-            // 
-            this.laborCost_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.laborCost_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.laborCost_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laborCost_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.laborCost_Aug.Location = new System.Drawing.Point(250, 138);
-            this.laborCost_Aug.Margin = new System.Windows.Forms.Padding(0);
-            this.laborCost_Aug.Name = "laborCost_Aug";
-            this.laborCost_Aug.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Aug.TabIndex = 33;
-            this.laborCost_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.laborCost_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.laborCost_Aug.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // laborCost_Sep
-            // 
-            this.laborCost_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.laborCost_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.laborCost_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laborCost_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.laborCost_Sep.Location = new System.Drawing.Point(250, 161);
-            this.laborCost_Sep.Margin = new System.Windows.Forms.Padding(0);
-            this.laborCost_Sep.Name = "laborCost_Sep";
-            this.laborCost_Sep.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Sep.TabIndex = 41;
-            this.laborCost_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.laborCost_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.laborCost_Sep.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // laborCost_Oct
-            // 
-            this.laborCost_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.laborCost_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.laborCost_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laborCost_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.laborCost_Oct.Location = new System.Drawing.Point(250, 184);
-            this.laborCost_Oct.Margin = new System.Windows.Forms.Padding(0);
-            this.laborCost_Oct.Name = "laborCost_Oct";
-            this.laborCost_Oct.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Oct.TabIndex = 49;
-            this.laborCost_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.laborCost_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.laborCost_Oct.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // laborCost_Nov
-            // 
-            this.laborCost_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.laborCost_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.laborCost_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laborCost_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.laborCost_Nov.Location = new System.Drawing.Point(250, 207);
-            this.laborCost_Nov.Margin = new System.Windows.Forms.Padding(0);
-            this.laborCost_Nov.Name = "laborCost_Nov";
-            this.laborCost_Nov.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Nov.TabIndex = 57;
-            this.laborCost_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.laborCost_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.laborCost_Nov.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // laborCost_Dec
-            // 
-            this.laborCost_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.laborCost_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.laborCost_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laborCost_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.laborCost_Dec.Location = new System.Drawing.Point(250, 230);
-            this.laborCost_Dec.Margin = new System.Windows.Forms.Padding(0);
-            this.laborCost_Dec.Name = "laborCost_Dec";
-            this.laborCost_Dec.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Dec.TabIndex = 65;
-            this.laborCost_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.laborCost_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.laborCost_Dec.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // laborCost_Jan
-            // 
-            this.laborCost_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.laborCost_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.laborCost_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laborCost_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.laborCost_Jan.Location = new System.Drawing.Point(250, 253);
-            this.laborCost_Jan.Margin = new System.Windows.Forms.Padding(0);
-            this.laborCost_Jan.Name = "laborCost_Jan";
-            this.laborCost_Jan.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Jan.TabIndex = 73;
-            this.laborCost_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.laborCost_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.laborCost_Jan.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // laborCost_Feb
-            // 
-            this.laborCost_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.laborCost_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.laborCost_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laborCost_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.laborCost_Feb.Location = new System.Drawing.Point(250, 276);
-            this.laborCost_Feb.Margin = new System.Windows.Forms.Padding(0);
-            this.laborCost_Feb.Name = "laborCost_Feb";
-            this.laborCost_Feb.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Feb.TabIndex = 81;
-            this.laborCost_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.laborCost_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.laborCost_Feb.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // laborCost_Mar
-            // 
-            this.laborCost_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.laborCost_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.laborCost_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.laborCost_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.laborCost_Mar.Location = new System.Drawing.Point(250, 299);
-            this.laborCost_Mar.Margin = new System.Windows.Forms.Padding(0);
-            this.laborCost_Mar.Name = "laborCost_Mar";
-            this.laborCost_Mar.Size = new System.Drawing.Size(125, 23);
-            this.laborCost_Mar.TabIndex = 89;
-            this.laborCost_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.laborCost_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.laborCost_Mar.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // contractorsCost_Jun
-            // 
-            this.contractorsCost_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.contractorsCost_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contractorsCost_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractorsCost_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.contractorsCost_Jun.Location = new System.Drawing.Point(375, 92);
-            this.contractorsCost_Jun.Margin = new System.Windows.Forms.Padding(0);
-            this.contractorsCost_Jun.Name = "contractorsCost_Jun";
-            this.contractorsCost_Jun.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Jun.TabIndex = 18;
-            this.contractorsCost_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.contractorsCost_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.contractorsCost_Jun.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // contractorsCost_Jul
-            // 
-            this.contractorsCost_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.contractorsCost_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contractorsCost_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractorsCost_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.contractorsCost_Jul.Location = new System.Drawing.Point(375, 115);
-            this.contractorsCost_Jul.Margin = new System.Windows.Forms.Padding(0);
-            this.contractorsCost_Jul.Name = "contractorsCost_Jul";
-            this.contractorsCost_Jul.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Jul.TabIndex = 26;
-            this.contractorsCost_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.contractorsCost_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.contractorsCost_Jul.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // contractorsCost_Aug
-            // 
-            this.contractorsCost_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.contractorsCost_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contractorsCost_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractorsCost_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.contractorsCost_Aug.Location = new System.Drawing.Point(375, 138);
-            this.contractorsCost_Aug.Margin = new System.Windows.Forms.Padding(0);
-            this.contractorsCost_Aug.Name = "contractorsCost_Aug";
-            this.contractorsCost_Aug.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Aug.TabIndex = 34;
-            this.contractorsCost_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.contractorsCost_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.contractorsCost_Aug.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // contractorsCost_Sep
-            // 
-            this.contractorsCost_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.contractorsCost_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contractorsCost_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractorsCost_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.contractorsCost_Sep.Location = new System.Drawing.Point(375, 161);
-            this.contractorsCost_Sep.Margin = new System.Windows.Forms.Padding(0);
-            this.contractorsCost_Sep.Name = "contractorsCost_Sep";
-            this.contractorsCost_Sep.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Sep.TabIndex = 42;
-            this.contractorsCost_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.contractorsCost_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.contractorsCost_Sep.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // contractorsCost_Oct
-            // 
-            this.contractorsCost_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.contractorsCost_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contractorsCost_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractorsCost_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.contractorsCost_Oct.Location = new System.Drawing.Point(375, 184);
-            this.contractorsCost_Oct.Margin = new System.Windows.Forms.Padding(0);
-            this.contractorsCost_Oct.Name = "contractorsCost_Oct";
-            this.contractorsCost_Oct.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Oct.TabIndex = 50;
-            this.contractorsCost_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.contractorsCost_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.contractorsCost_Oct.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // contractorsCost_Nov
-            // 
-            this.contractorsCost_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.contractorsCost_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contractorsCost_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractorsCost_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.contractorsCost_Nov.Location = new System.Drawing.Point(375, 207);
-            this.contractorsCost_Nov.Margin = new System.Windows.Forms.Padding(0);
-            this.contractorsCost_Nov.Name = "contractorsCost_Nov";
-            this.contractorsCost_Nov.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Nov.TabIndex = 58;
-            this.contractorsCost_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.contractorsCost_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.contractorsCost_Nov.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // contractorsCost_Dec
-            // 
-            this.contractorsCost_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.contractorsCost_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contractorsCost_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractorsCost_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.contractorsCost_Dec.Location = new System.Drawing.Point(375, 230);
-            this.contractorsCost_Dec.Margin = new System.Windows.Forms.Padding(0);
-            this.contractorsCost_Dec.Name = "contractorsCost_Dec";
-            this.contractorsCost_Dec.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Dec.TabIndex = 66;
-            this.contractorsCost_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.contractorsCost_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.contractorsCost_Dec.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // contractorsCost_Jan
-            // 
-            this.contractorsCost_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.contractorsCost_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contractorsCost_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractorsCost_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.contractorsCost_Jan.Location = new System.Drawing.Point(375, 253);
-            this.contractorsCost_Jan.Margin = new System.Windows.Forms.Padding(0);
-            this.contractorsCost_Jan.Name = "contractorsCost_Jan";
-            this.contractorsCost_Jan.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Jan.TabIndex = 74;
-            this.contractorsCost_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.contractorsCost_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.contractorsCost_Jan.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // contractorsCost_Feb
-            // 
-            this.contractorsCost_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.contractorsCost_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contractorsCost_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractorsCost_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.contractorsCost_Feb.Location = new System.Drawing.Point(375, 276);
-            this.contractorsCost_Feb.Margin = new System.Windows.Forms.Padding(0);
-            this.contractorsCost_Feb.Name = "contractorsCost_Feb";
-            this.contractorsCost_Feb.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Feb.TabIndex = 82;
-            this.contractorsCost_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.contractorsCost_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.contractorsCost_Feb.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // contractorsCost_Mar
-            // 
-            this.contractorsCost_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.contractorsCost_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.contractorsCost_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.contractorsCost_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.contractorsCost_Mar.Location = new System.Drawing.Point(375, 299);
-            this.contractorsCost_Mar.Margin = new System.Windows.Forms.Padding(0);
-            this.contractorsCost_Mar.Name = "contractorsCost_Mar";
-            this.contractorsCost_Mar.Size = new System.Drawing.Size(125, 23);
-            this.contractorsCost_Mar.TabIndex = 90;
-            this.contractorsCost_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.contractorsCost_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.contractorsCost_Mar.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialsFare_Jun
-            // 
-            this.materialsFare_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialsFare_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsFare_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsFare_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialsFare_Jun.Location = new System.Drawing.Point(500, 92);
-            this.materialsFare_Jun.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsFare_Jun.Name = "materialsFare_Jun";
-            this.materialsFare_Jun.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Jun.TabIndex = 19;
-            this.materialsFare_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialsFare_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialsFare_Jun.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialsFare_Jul
-            // 
-            this.materialsFare_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialsFare_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsFare_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsFare_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialsFare_Jul.Location = new System.Drawing.Point(500, 115);
-            this.materialsFare_Jul.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsFare_Jul.Name = "materialsFare_Jul";
-            this.materialsFare_Jul.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Jul.TabIndex = 27;
-            this.materialsFare_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialsFare_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialsFare_Jul.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialsFare_Aug
-            // 
-            this.materialsFare_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialsFare_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsFare_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsFare_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialsFare_Aug.Location = new System.Drawing.Point(500, 138);
-            this.materialsFare_Aug.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsFare_Aug.Name = "materialsFare_Aug";
-            this.materialsFare_Aug.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Aug.TabIndex = 35;
-            this.materialsFare_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialsFare_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialsFare_Aug.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialsFare_Sep
-            // 
-            this.materialsFare_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialsFare_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsFare_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsFare_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialsFare_Sep.Location = new System.Drawing.Point(500, 161);
-            this.materialsFare_Sep.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsFare_Sep.Name = "materialsFare_Sep";
-            this.materialsFare_Sep.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Sep.TabIndex = 43;
-            this.materialsFare_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialsFare_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialsFare_Sep.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialsFare_Oct
-            // 
-            this.materialsFare_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialsFare_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsFare_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsFare_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialsFare_Oct.Location = new System.Drawing.Point(500, 184);
-            this.materialsFare_Oct.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsFare_Oct.Name = "materialsFare_Oct";
-            this.materialsFare_Oct.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Oct.TabIndex = 51;
-            this.materialsFare_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialsFare_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialsFare_Oct.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialsFare_Nov
-            // 
-            this.materialsFare_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialsFare_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsFare_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsFare_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialsFare_Nov.Location = new System.Drawing.Point(500, 207);
-            this.materialsFare_Nov.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsFare_Nov.Name = "materialsFare_Nov";
-            this.materialsFare_Nov.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Nov.TabIndex = 59;
-            this.materialsFare_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialsFare_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialsFare_Nov.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialsFare_Dec
-            // 
-            this.materialsFare_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialsFare_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsFare_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsFare_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialsFare_Dec.Location = new System.Drawing.Point(500, 230);
-            this.materialsFare_Dec.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsFare_Dec.Name = "materialsFare_Dec";
-            this.materialsFare_Dec.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Dec.TabIndex = 67;
-            this.materialsFare_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialsFare_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialsFare_Dec.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialsFare_Jan
-            // 
-            this.materialsFare_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialsFare_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsFare_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsFare_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialsFare_Jan.Location = new System.Drawing.Point(500, 253);
-            this.materialsFare_Jan.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsFare_Jan.Name = "materialsFare_Jan";
-            this.materialsFare_Jan.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Jan.TabIndex = 75;
-            this.materialsFare_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialsFare_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialsFare_Jan.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialsFare_Feb
-            // 
-            this.materialsFare_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialsFare_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsFare_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsFare_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialsFare_Feb.Location = new System.Drawing.Point(500, 276);
-            this.materialsFare_Feb.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsFare_Feb.Name = "materialsFare_Feb";
-            this.materialsFare_Feb.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Feb.TabIndex = 83;
-            this.materialsFare_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialsFare_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialsFare_Feb.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // materialsFare_Mar
-            // 
-            this.materialsFare_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.materialsFare_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.materialsFare_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.materialsFare_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.materialsFare_Mar.Location = new System.Drawing.Point(500, 299);
-            this.materialsFare_Mar.Margin = new System.Windows.Forms.Padding(0);
-            this.materialsFare_Mar.Name = "materialsFare_Mar";
-            this.materialsFare_Mar.Size = new System.Drawing.Size(125, 23);
-            this.materialsFare_Mar.TabIndex = 91;
-            this.materialsFare_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.materialsFare_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.materialsFare_Mar.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingCost_Jun
-            // 
-            this.packingCost_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingCost_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingCost_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingCost_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingCost_Jun.Location = new System.Drawing.Point(625, 92);
-            this.packingCost_Jun.Margin = new System.Windows.Forms.Padding(0);
-            this.packingCost_Jun.Name = "packingCost_Jun";
-            this.packingCost_Jun.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Jun.TabIndex = 20;
-            this.packingCost_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingCost_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingCost_Jun.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingCost_Jul
-            // 
-            this.packingCost_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingCost_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingCost_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingCost_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingCost_Jul.Location = new System.Drawing.Point(625, 115);
-            this.packingCost_Jul.Margin = new System.Windows.Forms.Padding(0);
-            this.packingCost_Jul.Name = "packingCost_Jul";
-            this.packingCost_Jul.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Jul.TabIndex = 28;
-            this.packingCost_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingCost_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingCost_Jul.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingCost_Aug
-            // 
-            this.packingCost_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingCost_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingCost_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingCost_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingCost_Aug.Location = new System.Drawing.Point(625, 138);
-            this.packingCost_Aug.Margin = new System.Windows.Forms.Padding(0);
-            this.packingCost_Aug.Name = "packingCost_Aug";
-            this.packingCost_Aug.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Aug.TabIndex = 36;
-            this.packingCost_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingCost_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingCost_Aug.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingCost_Sep
-            // 
-            this.packingCost_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingCost_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingCost_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingCost_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingCost_Sep.Location = new System.Drawing.Point(625, 161);
-            this.packingCost_Sep.Margin = new System.Windows.Forms.Padding(0);
-            this.packingCost_Sep.Name = "packingCost_Sep";
-            this.packingCost_Sep.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Sep.TabIndex = 44;
-            this.packingCost_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingCost_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingCost_Sep.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingCost_Oct
-            // 
-            this.packingCost_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingCost_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingCost_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingCost_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingCost_Oct.Location = new System.Drawing.Point(625, 184);
-            this.packingCost_Oct.Margin = new System.Windows.Forms.Padding(0);
-            this.packingCost_Oct.Name = "packingCost_Oct";
-            this.packingCost_Oct.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Oct.TabIndex = 52;
-            this.packingCost_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingCost_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingCost_Oct.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingCost_Nov
-            // 
-            this.packingCost_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingCost_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingCost_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingCost_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingCost_Nov.Location = new System.Drawing.Point(625, 207);
-            this.packingCost_Nov.Margin = new System.Windows.Forms.Padding(0);
-            this.packingCost_Nov.Name = "packingCost_Nov";
-            this.packingCost_Nov.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Nov.TabIndex = 60;
-            this.packingCost_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingCost_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingCost_Nov.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingCost_Dec
-            // 
-            this.packingCost_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingCost_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingCost_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingCost_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingCost_Dec.Location = new System.Drawing.Point(625, 230);
-            this.packingCost_Dec.Margin = new System.Windows.Forms.Padding(0);
-            this.packingCost_Dec.Name = "packingCost_Dec";
-            this.packingCost_Dec.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Dec.TabIndex = 68;
-            this.packingCost_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingCost_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingCost_Dec.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingCost_Jan
-            // 
-            this.packingCost_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingCost_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingCost_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingCost_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingCost_Jan.Location = new System.Drawing.Point(625, 253);
-            this.packingCost_Jan.Margin = new System.Windows.Forms.Padding(0);
-            this.packingCost_Jan.Name = "packingCost_Jan";
-            this.packingCost_Jan.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Jan.TabIndex = 76;
-            this.packingCost_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingCost_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingCost_Jan.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingCost_Feb
-            // 
-            this.packingCost_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingCost_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingCost_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingCost_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingCost_Feb.Location = new System.Drawing.Point(625, 276);
-            this.packingCost_Feb.Margin = new System.Windows.Forms.Padding(0);
-            this.packingCost_Feb.Name = "packingCost_Feb";
-            this.packingCost_Feb.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Feb.TabIndex = 84;
-            this.packingCost_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingCost_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingCost_Feb.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingCost_Mar
-            // 
-            this.packingCost_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingCost_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingCost_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingCost_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingCost_Mar.Location = new System.Drawing.Point(625, 299);
-            this.packingCost_Mar.Margin = new System.Windows.Forms.Padding(0);
-            this.packingCost_Mar.Name = "packingCost_Mar";
-            this.packingCost_Mar.Size = new System.Drawing.Size(125, 23);
-            this.packingCost_Mar.TabIndex = 92;
-            this.packingCost_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingCost_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingCost_Mar.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // utilitiesCost_Jun
-            // 
-            this.utilitiesCost_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.utilitiesCost_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.utilitiesCost_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesCost_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.utilitiesCost_Jun.Location = new System.Drawing.Point(750, 92);
-            this.utilitiesCost_Jun.Margin = new System.Windows.Forms.Padding(0);
-            this.utilitiesCost_Jun.Name = "utilitiesCost_Jun";
-            this.utilitiesCost_Jun.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Jun.TabIndex = 21;
-            this.utilitiesCost_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.utilitiesCost_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.utilitiesCost_Jun.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // utilitiesCost_Jul
-            // 
-            this.utilitiesCost_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.utilitiesCost_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.utilitiesCost_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesCost_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.utilitiesCost_Jul.Location = new System.Drawing.Point(750, 115);
-            this.utilitiesCost_Jul.Margin = new System.Windows.Forms.Padding(0);
-            this.utilitiesCost_Jul.Name = "utilitiesCost_Jul";
-            this.utilitiesCost_Jul.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Jul.TabIndex = 29;
-            this.utilitiesCost_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.utilitiesCost_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.utilitiesCost_Jul.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // utilitiesCost_Aug
-            // 
-            this.utilitiesCost_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.utilitiesCost_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.utilitiesCost_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesCost_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.utilitiesCost_Aug.Location = new System.Drawing.Point(750, 138);
-            this.utilitiesCost_Aug.Margin = new System.Windows.Forms.Padding(0);
-            this.utilitiesCost_Aug.Name = "utilitiesCost_Aug";
-            this.utilitiesCost_Aug.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Aug.TabIndex = 37;
-            this.utilitiesCost_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.utilitiesCost_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.utilitiesCost_Aug.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // utilitiesCost_Sep
-            // 
-            this.utilitiesCost_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.utilitiesCost_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.utilitiesCost_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesCost_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.utilitiesCost_Sep.Location = new System.Drawing.Point(750, 161);
-            this.utilitiesCost_Sep.Margin = new System.Windows.Forms.Padding(0);
-            this.utilitiesCost_Sep.Name = "utilitiesCost_Sep";
-            this.utilitiesCost_Sep.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Sep.TabIndex = 45;
-            this.utilitiesCost_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.utilitiesCost_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.utilitiesCost_Sep.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // utilitiesCost_Oct
-            // 
-            this.utilitiesCost_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.utilitiesCost_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.utilitiesCost_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesCost_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.utilitiesCost_Oct.Location = new System.Drawing.Point(750, 184);
-            this.utilitiesCost_Oct.Margin = new System.Windows.Forms.Padding(0);
-            this.utilitiesCost_Oct.Name = "utilitiesCost_Oct";
-            this.utilitiesCost_Oct.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Oct.TabIndex = 53;
-            this.utilitiesCost_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.utilitiesCost_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.utilitiesCost_Oct.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // utilitiesCost_Nov
-            // 
-            this.utilitiesCost_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.utilitiesCost_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.utilitiesCost_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesCost_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.utilitiesCost_Nov.Location = new System.Drawing.Point(750, 207);
-            this.utilitiesCost_Nov.Margin = new System.Windows.Forms.Padding(0);
-            this.utilitiesCost_Nov.Name = "utilitiesCost_Nov";
-            this.utilitiesCost_Nov.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Nov.TabIndex = 61;
-            this.utilitiesCost_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.utilitiesCost_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.utilitiesCost_Nov.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // utilitiesCost_Dec
-            // 
-            this.utilitiesCost_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.utilitiesCost_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.utilitiesCost_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesCost_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.utilitiesCost_Dec.Location = new System.Drawing.Point(750, 230);
-            this.utilitiesCost_Dec.Margin = new System.Windows.Forms.Padding(0);
-            this.utilitiesCost_Dec.Name = "utilitiesCost_Dec";
-            this.utilitiesCost_Dec.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Dec.TabIndex = 69;
-            this.utilitiesCost_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.utilitiesCost_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.utilitiesCost_Dec.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // utilitiesCost_Jan
-            // 
-            this.utilitiesCost_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.utilitiesCost_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.utilitiesCost_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesCost_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.utilitiesCost_Jan.Location = new System.Drawing.Point(750, 253);
-            this.utilitiesCost_Jan.Margin = new System.Windows.Forms.Padding(0);
-            this.utilitiesCost_Jan.Name = "utilitiesCost_Jan";
-            this.utilitiesCost_Jan.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Jan.TabIndex = 77;
-            this.utilitiesCost_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.utilitiesCost_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.utilitiesCost_Jan.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // utilitiesCost_Feb
-            // 
-            this.utilitiesCost_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.utilitiesCost_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.utilitiesCost_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesCost_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.utilitiesCost_Feb.Location = new System.Drawing.Point(750, 276);
-            this.utilitiesCost_Feb.Margin = new System.Windows.Forms.Padding(0);
-            this.utilitiesCost_Feb.Name = "utilitiesCost_Feb";
-            this.utilitiesCost_Feb.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Feb.TabIndex = 85;
-            this.utilitiesCost_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.utilitiesCost_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.utilitiesCost_Feb.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // utilitiesCost_Mar
-            // 
-            this.utilitiesCost_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.utilitiesCost_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.utilitiesCost_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.utilitiesCost_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.utilitiesCost_Mar.Location = new System.Drawing.Point(750, 299);
-            this.utilitiesCost_Mar.Margin = new System.Windows.Forms.Padding(0);
-            this.utilitiesCost_Mar.Name = "utilitiesCost_Mar";
-            this.utilitiesCost_Mar.Size = new System.Drawing.Size(125, 23);
-            this.utilitiesCost_Mar.TabIndex = 93;
-            this.utilitiesCost_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.utilitiesCost_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.utilitiesCost_Mar.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // otherCost_Jun
-            // 
-            this.otherCost_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.otherCost_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherCost_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherCost_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.otherCost_Jun.Location = new System.Drawing.Point(875, 92);
-            this.otherCost_Jun.Margin = new System.Windows.Forms.Padding(0);
-            this.otherCost_Jun.Name = "otherCost_Jun";
-            this.otherCost_Jun.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Jun.TabIndex = 22;
-            this.otherCost_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otherCost_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.otherCost_Jun.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // otherCost_Jul
-            // 
-            this.otherCost_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.otherCost_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherCost_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherCost_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.otherCost_Jul.Location = new System.Drawing.Point(875, 115);
-            this.otherCost_Jul.Margin = new System.Windows.Forms.Padding(0);
-            this.otherCost_Jul.Name = "otherCost_Jul";
-            this.otherCost_Jul.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Jul.TabIndex = 30;
-            this.otherCost_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otherCost_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.otherCost_Jul.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // otherCost_Aug
-            // 
-            this.otherCost_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.otherCost_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherCost_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherCost_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.otherCost_Aug.Location = new System.Drawing.Point(875, 138);
-            this.otherCost_Aug.Margin = new System.Windows.Forms.Padding(0);
-            this.otherCost_Aug.Name = "otherCost_Aug";
-            this.otherCost_Aug.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Aug.TabIndex = 38;
-            this.otherCost_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otherCost_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.otherCost_Aug.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // otherCost_Sep
-            // 
-            this.otherCost_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.otherCost_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherCost_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherCost_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.otherCost_Sep.Location = new System.Drawing.Point(875, 161);
-            this.otherCost_Sep.Margin = new System.Windows.Forms.Padding(0);
-            this.otherCost_Sep.Name = "otherCost_Sep";
-            this.otherCost_Sep.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Sep.TabIndex = 46;
-            this.otherCost_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otherCost_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.otherCost_Sep.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // otherCost_Oct
-            // 
-            this.otherCost_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.otherCost_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherCost_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherCost_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.otherCost_Oct.Location = new System.Drawing.Point(875, 184);
-            this.otherCost_Oct.Margin = new System.Windows.Forms.Padding(0);
-            this.otherCost_Oct.Name = "otherCost_Oct";
-            this.otherCost_Oct.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Oct.TabIndex = 54;
-            this.otherCost_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otherCost_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.otherCost_Oct.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // otherCost_Nov
-            // 
-            this.otherCost_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.otherCost_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherCost_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherCost_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.otherCost_Nov.Location = new System.Drawing.Point(875, 207);
-            this.otherCost_Nov.Margin = new System.Windows.Forms.Padding(0);
-            this.otherCost_Nov.Name = "otherCost_Nov";
-            this.otherCost_Nov.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Nov.TabIndex = 62;
-            this.otherCost_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otherCost_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.otherCost_Nov.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // otherCost_Dec
-            // 
-            this.otherCost_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.otherCost_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherCost_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherCost_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.otherCost_Dec.Location = new System.Drawing.Point(875, 230);
-            this.otherCost_Dec.Margin = new System.Windows.Forms.Padding(0);
-            this.otherCost_Dec.Name = "otherCost_Dec";
-            this.otherCost_Dec.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Dec.TabIndex = 70;
-            this.otherCost_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otherCost_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.otherCost_Dec.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // otherCost_Jan
-            // 
-            this.otherCost_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.otherCost_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherCost_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherCost_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.otherCost_Jan.Location = new System.Drawing.Point(875, 253);
-            this.otherCost_Jan.Margin = new System.Windows.Forms.Padding(0);
-            this.otherCost_Jan.Name = "otherCost_Jan";
-            this.otherCost_Jan.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Jan.TabIndex = 78;
-            this.otherCost_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otherCost_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.otherCost_Jan.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // otherCost_Feb
-            // 
-            this.otherCost_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.otherCost_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherCost_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherCost_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.otherCost_Feb.Location = new System.Drawing.Point(875, 276);
-            this.otherCost_Feb.Margin = new System.Windows.Forms.Padding(0);
-            this.otherCost_Feb.Name = "otherCost_Feb";
-            this.otherCost_Feb.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Feb.TabIndex = 86;
-            this.otherCost_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otherCost_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.otherCost_Feb.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // otherCost_Mar
-            // 
-            this.otherCost_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.otherCost_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.otherCost_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherCost_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.otherCost_Mar.Location = new System.Drawing.Point(875, 299);
-            this.otherCost_Mar.Margin = new System.Windows.Forms.Padding(0);
-            this.otherCost_Mar.Name = "otherCost_Mar";
-            this.otherCost_Mar.Size = new System.Drawing.Size(125, 23);
-            this.otherCost_Mar.TabIndex = 94;
-            this.otherCost_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otherCost_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.otherCost_Mar.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingFare_Mar
-            // 
-            this.packingFare_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingFare_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingFare_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingFare_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingFare_Mar.Location = new System.Drawing.Point(1000, 299);
-            this.packingFare_Mar.Margin = new System.Windows.Forms.Padding(0);
-            this.packingFare_Mar.Name = "packingFare_Mar";
-            this.packingFare_Mar.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Mar.TabIndex = 95;
-            this.packingFare_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingFare_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingFare_Mar.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingFare_Feb
-            // 
-            this.packingFare_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingFare_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingFare_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingFare_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingFare_Feb.Location = new System.Drawing.Point(1000, 276);
-            this.packingFare_Feb.Margin = new System.Windows.Forms.Padding(0);
-            this.packingFare_Feb.Name = "packingFare_Feb";
-            this.packingFare_Feb.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Feb.TabIndex = 87;
-            this.packingFare_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingFare_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingFare_Feb.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingFare_Jan
-            // 
-            this.packingFare_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingFare_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingFare_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingFare_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingFare_Jan.Location = new System.Drawing.Point(1000, 253);
-            this.packingFare_Jan.Margin = new System.Windows.Forms.Padding(0);
-            this.packingFare_Jan.Name = "packingFare_Jan";
-            this.packingFare_Jan.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Jan.TabIndex = 79;
-            this.packingFare_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingFare_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingFare_Jan.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingFare_Dec
-            // 
-            this.packingFare_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingFare_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingFare_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingFare_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingFare_Dec.Location = new System.Drawing.Point(1000, 230);
-            this.packingFare_Dec.Margin = new System.Windows.Forms.Padding(0);
-            this.packingFare_Dec.Name = "packingFare_Dec";
-            this.packingFare_Dec.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Dec.TabIndex = 71;
-            this.packingFare_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingFare_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingFare_Dec.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingFare_Nov
-            // 
-            this.packingFare_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingFare_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingFare_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingFare_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingFare_Nov.Location = new System.Drawing.Point(1000, 207);
-            this.packingFare_Nov.Margin = new System.Windows.Forms.Padding(0);
-            this.packingFare_Nov.Name = "packingFare_Nov";
-            this.packingFare_Nov.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Nov.TabIndex = 63;
-            this.packingFare_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingFare_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingFare_Nov.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingFare_Oct
-            // 
-            this.packingFare_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingFare_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingFare_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingFare_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingFare_Oct.Location = new System.Drawing.Point(1000, 184);
-            this.packingFare_Oct.Margin = new System.Windows.Forms.Padding(0);
-            this.packingFare_Oct.Name = "packingFare_Oct";
-            this.packingFare_Oct.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Oct.TabIndex = 55;
-            this.packingFare_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingFare_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingFare_Oct.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingFare_Sep
-            // 
-            this.packingFare_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingFare_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingFare_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingFare_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingFare_Sep.Location = new System.Drawing.Point(1000, 161);
-            this.packingFare_Sep.Margin = new System.Windows.Forms.Padding(0);
-            this.packingFare_Sep.Name = "packingFare_Sep";
-            this.packingFare_Sep.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Sep.TabIndex = 47;
-            this.packingFare_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingFare_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingFare_Sep.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingFare_Aug
-            // 
-            this.packingFare_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingFare_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingFare_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingFare_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingFare_Aug.Location = new System.Drawing.Point(1000, 138);
-            this.packingFare_Aug.Margin = new System.Windows.Forms.Padding(0);
-            this.packingFare_Aug.Name = "packingFare_Aug";
-            this.packingFare_Aug.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Aug.TabIndex = 39;
-            this.packingFare_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingFare_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingFare_Aug.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingFare_Jul
-            // 
-            this.packingFare_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingFare_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingFare_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingFare_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingFare_Jul.Location = new System.Drawing.Point(1000, 115);
-            this.packingFare_Jul.Margin = new System.Windows.Forms.Padding(0);
-            this.packingFare_Jul.Name = "packingFare_Jul";
-            this.packingFare_Jul.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Jul.TabIndex = 31;
-            this.packingFare_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingFare_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingFare_Jul.Leave += new System.EventHandler(this.textBox_Leave);
-            // 
-            // packingFare_Jun
-            // 
-            this.packingFare_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.packingFare_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.packingFare_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.packingFare_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.packingFare_Jun.Location = new System.Drawing.Point(1000, 92);
-            this.packingFare_Jun.Margin = new System.Windows.Forms.Padding(0);
-            this.packingFare_Jun.Name = "packingFare_Jun";
-            this.packingFare_Jun.Size = new System.Drawing.Size(125, 23);
-            this.packingFare_Jun.TabIndex = 23;
-            this.packingFare_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.packingFare_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
-            this.packingFare_Jun.Leave += new System.EventHandler(this.textBox_Leave);
+            // manufacturing_personnel_Apr
+            // 
+            this.manufacturing_personnel_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_personnel_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_personnel_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_personnel_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_personnel_Apr.Location = new System.Drawing.Point(83, 46);
+            this.manufacturing_personnel_Apr.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_personnel_Apr.Name = "manufacturing_personnel_Apr";
+            this.manufacturing_personnel_Apr.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_personnel_Apr.TabIndex = 0;
+            this.manufacturing_personnel_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_personnel_Apr.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_depreciation_Apr
+            // 
+            this.manufacturing_depreciation_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_depreciation_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_depreciation_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_depreciation_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_depreciation_Apr.Location = new System.Drawing.Point(192, 46);
+            this.manufacturing_depreciation_Apr.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_depreciation_Apr.Name = "manufacturing_depreciation_Apr";
+            this.manufacturing_depreciation_Apr.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_depreciation_Apr.TabIndex = 1;
+            this.manufacturing_depreciation_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_depreciation_Apr.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_rent_Apr
+            // 
+            this.manufacturing_rent_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_rent_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_rent_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_rent_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_rent_Apr.Location = new System.Drawing.Point(301, 46);
+            this.manufacturing_rent_Apr.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_rent_Apr.Name = "manufacturing_rent_Apr";
+            this.manufacturing_rent_Apr.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_rent_Apr.TabIndex = 2;
+            this.manufacturing_rent_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_rent_Apr.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_repair_Apr
+            // 
+            this.manufacturing_repair_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_repair_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_repair_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_repair_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_repair_Apr.Location = new System.Drawing.Point(410, 46);
+            this.manufacturing_repair_Apr.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_repair_Apr.Name = "manufacturing_repair_Apr";
+            this.manufacturing_repair_Apr.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_repair_Apr.TabIndex = 3;
+            this.manufacturing_repair_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_repair_Apr.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_stock_Apr
+            // 
+            this.manufacturing_stock_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_stock_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_stock_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_stock_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_stock_Apr.Location = new System.Drawing.Point(519, 46);
+            this.manufacturing_stock_Apr.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_stock_Apr.Name = "manufacturing_stock_Apr";
+            this.manufacturing_stock_Apr.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_stock_Apr.TabIndex = 4;
+            this.manufacturing_stock_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_stock_Apr.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_other_Apr
+            // 
+            this.manufacturing_other_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_other_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_other_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_other_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_other_Apr.Location = new System.Drawing.Point(628, 46);
+            this.manufacturing_other_Apr.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_other_Apr.Name = "manufacturing_other_Apr";
+            this.manufacturing_other_Apr.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_other_Apr.TabIndex = 5;
+            this.manufacturing_other_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_other_Apr.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_personnel_Apr
+            // 
+            this.selling_personnel_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_personnel_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_personnel_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_personnel_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_personnel_Apr.Location = new System.Drawing.Point(737, 46);
+            this.selling_personnel_Apr.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_personnel_Apr.Name = "selling_personnel_Apr";
+            this.selling_personnel_Apr.Size = new System.Drawing.Size(109, 23);
+            this.selling_personnel_Apr.TabIndex = 6;
+            this.selling_personnel_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_personnel_Apr.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_depreciation_Apr
+            // 
+            this.selling_depreciation_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_depreciation_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_depreciation_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_depreciation_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_depreciation_Apr.Location = new System.Drawing.Point(846, 46);
+            this.selling_depreciation_Apr.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_depreciation_Apr.Name = "selling_depreciation_Apr";
+            this.selling_depreciation_Apr.Size = new System.Drawing.Size(109, 23);
+            this.selling_depreciation_Apr.TabIndex = 7;
+            this.selling_depreciation_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_depreciation_Apr.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_personnel_Jun
+            // 
+            this.manufacturing_personnel_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_personnel_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_personnel_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_personnel_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_personnel_Jun.Location = new System.Drawing.Point(83, 92);
+            this.manufacturing_personnel_Jun.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_personnel_Jun.Name = "manufacturing_personnel_Jun";
+            this.manufacturing_personnel_Jun.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_personnel_Jun.TabIndex = 20;
+            this.manufacturing_personnel_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_personnel_Jun.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_personnel_Jul
+            // 
+            this.manufacturing_personnel_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_personnel_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_personnel_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_personnel_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_personnel_Jul.Location = new System.Drawing.Point(83, 115);
+            this.manufacturing_personnel_Jul.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_personnel_Jul.Name = "manufacturing_personnel_Jul";
+            this.manufacturing_personnel_Jul.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_personnel_Jul.TabIndex = 30;
+            this.manufacturing_personnel_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_personnel_Jul.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_personnel_Aug
+            // 
+            this.manufacturing_personnel_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_personnel_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_personnel_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_personnel_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_personnel_Aug.Location = new System.Drawing.Point(83, 138);
+            this.manufacturing_personnel_Aug.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_personnel_Aug.Name = "manufacturing_personnel_Aug";
+            this.manufacturing_personnel_Aug.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_personnel_Aug.TabIndex = 40;
+            this.manufacturing_personnel_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_personnel_Aug.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_personnel_Sep
+            // 
+            this.manufacturing_personnel_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_personnel_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_personnel_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_personnel_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_personnel_Sep.Location = new System.Drawing.Point(83, 161);
+            this.manufacturing_personnel_Sep.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_personnel_Sep.Name = "manufacturing_personnel_Sep";
+            this.manufacturing_personnel_Sep.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_personnel_Sep.TabIndex = 50;
+            this.manufacturing_personnel_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_personnel_Sep.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_personnel_Oct
+            // 
+            this.manufacturing_personnel_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_personnel_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_personnel_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_personnel_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_personnel_Oct.Location = new System.Drawing.Point(83, 184);
+            this.manufacturing_personnel_Oct.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_personnel_Oct.Name = "manufacturing_personnel_Oct";
+            this.manufacturing_personnel_Oct.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_personnel_Oct.TabIndex = 60;
+            this.manufacturing_personnel_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_personnel_Oct.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_personnel_Nov
+            // 
+            this.manufacturing_personnel_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_personnel_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_personnel_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_personnel_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_personnel_Nov.Location = new System.Drawing.Point(83, 207);
+            this.manufacturing_personnel_Nov.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_personnel_Nov.Name = "manufacturing_personnel_Nov";
+            this.manufacturing_personnel_Nov.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_personnel_Nov.TabIndex = 70;
+            this.manufacturing_personnel_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_personnel_Nov.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_personnel_Dec
+            // 
+            this.manufacturing_personnel_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_personnel_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_personnel_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_personnel_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_personnel_Dec.Location = new System.Drawing.Point(83, 230);
+            this.manufacturing_personnel_Dec.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_personnel_Dec.Name = "manufacturing_personnel_Dec";
+            this.manufacturing_personnel_Dec.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_personnel_Dec.TabIndex = 80;
+            this.manufacturing_personnel_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_personnel_Dec.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_personnel_Jan
+            // 
+            this.manufacturing_personnel_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_personnel_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_personnel_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_personnel_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_personnel_Jan.Location = new System.Drawing.Point(83, 253);
+            this.manufacturing_personnel_Jan.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_personnel_Jan.Name = "manufacturing_personnel_Jan";
+            this.manufacturing_personnel_Jan.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_personnel_Jan.TabIndex = 90;
+            this.manufacturing_personnel_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_personnel_Jan.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_personnel_Feb
+            // 
+            this.manufacturing_personnel_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_personnel_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_personnel_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_personnel_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_personnel_Feb.Location = new System.Drawing.Point(83, 276);
+            this.manufacturing_personnel_Feb.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_personnel_Feb.Name = "manufacturing_personnel_Feb";
+            this.manufacturing_personnel_Feb.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_personnel_Feb.TabIndex = 100;
+            this.manufacturing_personnel_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_personnel_Feb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_personnel_Mar
+            // 
+            this.manufacturing_personnel_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_personnel_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_personnel_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_personnel_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_personnel_Mar.Location = new System.Drawing.Point(83, 299);
+            this.manufacturing_personnel_Mar.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_personnel_Mar.Name = "manufacturing_personnel_Mar";
+            this.manufacturing_personnel_Mar.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_personnel_Mar.TabIndex = 110;
+            this.manufacturing_personnel_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_personnel_Mar.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_depreciation_Jun
+            // 
+            this.manufacturing_depreciation_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_depreciation_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_depreciation_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_depreciation_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_depreciation_Jun.Location = new System.Drawing.Point(192, 92);
+            this.manufacturing_depreciation_Jun.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_depreciation_Jun.Name = "manufacturing_depreciation_Jun";
+            this.manufacturing_depreciation_Jun.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_depreciation_Jun.TabIndex = 21;
+            this.manufacturing_depreciation_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_depreciation_Jun.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_depreciation_Jul
+            // 
+            this.manufacturing_depreciation_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_depreciation_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_depreciation_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_depreciation_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_depreciation_Jul.Location = new System.Drawing.Point(192, 115);
+            this.manufacturing_depreciation_Jul.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_depreciation_Jul.Name = "manufacturing_depreciation_Jul";
+            this.manufacturing_depreciation_Jul.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_depreciation_Jul.TabIndex = 31;
+            this.manufacturing_depreciation_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_depreciation_Jul.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_depreciation_Aug
+            // 
+            this.manufacturing_depreciation_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_depreciation_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_depreciation_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_depreciation_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_depreciation_Aug.Location = new System.Drawing.Point(192, 138);
+            this.manufacturing_depreciation_Aug.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_depreciation_Aug.Name = "manufacturing_depreciation_Aug";
+            this.manufacturing_depreciation_Aug.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_depreciation_Aug.TabIndex = 41;
+            this.manufacturing_depreciation_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_depreciation_Aug.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_depreciation_Sep
+            // 
+            this.manufacturing_depreciation_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_depreciation_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_depreciation_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_depreciation_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_depreciation_Sep.Location = new System.Drawing.Point(192, 161);
+            this.manufacturing_depreciation_Sep.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_depreciation_Sep.Name = "manufacturing_depreciation_Sep";
+            this.manufacturing_depreciation_Sep.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_depreciation_Sep.TabIndex = 51;
+            this.manufacturing_depreciation_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_depreciation_Sep.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_depreciation_Oct
+            // 
+            this.manufacturing_depreciation_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_depreciation_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_depreciation_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_depreciation_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_depreciation_Oct.Location = new System.Drawing.Point(192, 184);
+            this.manufacturing_depreciation_Oct.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_depreciation_Oct.Name = "manufacturing_depreciation_Oct";
+            this.manufacturing_depreciation_Oct.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_depreciation_Oct.TabIndex = 61;
+            this.manufacturing_depreciation_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_depreciation_Oct.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_depreciation_Nov
+            // 
+            this.manufacturing_depreciation_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_depreciation_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_depreciation_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_depreciation_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_depreciation_Nov.Location = new System.Drawing.Point(192, 207);
+            this.manufacturing_depreciation_Nov.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_depreciation_Nov.Name = "manufacturing_depreciation_Nov";
+            this.manufacturing_depreciation_Nov.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_depreciation_Nov.TabIndex = 71;
+            this.manufacturing_depreciation_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_depreciation_Nov.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_depreciation_Dec
+            // 
+            this.manufacturing_depreciation_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_depreciation_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_depreciation_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_depreciation_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_depreciation_Dec.Location = new System.Drawing.Point(192, 230);
+            this.manufacturing_depreciation_Dec.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_depreciation_Dec.Name = "manufacturing_depreciation_Dec";
+            this.manufacturing_depreciation_Dec.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_depreciation_Dec.TabIndex = 81;
+            this.manufacturing_depreciation_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_depreciation_Dec.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_depreciation_Jan
+            // 
+            this.manufacturing_depreciation_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_depreciation_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_depreciation_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_depreciation_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_depreciation_Jan.Location = new System.Drawing.Point(192, 253);
+            this.manufacturing_depreciation_Jan.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_depreciation_Jan.Name = "manufacturing_depreciation_Jan";
+            this.manufacturing_depreciation_Jan.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_depreciation_Jan.TabIndex = 91;
+            this.manufacturing_depreciation_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_depreciation_Jan.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_depreciation_Feb
+            // 
+            this.manufacturing_depreciation_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_depreciation_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_depreciation_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_depreciation_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_depreciation_Feb.Location = new System.Drawing.Point(192, 276);
+            this.manufacturing_depreciation_Feb.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_depreciation_Feb.Name = "manufacturing_depreciation_Feb";
+            this.manufacturing_depreciation_Feb.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_depreciation_Feb.TabIndex = 101;
+            this.manufacturing_depreciation_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_depreciation_Feb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_depreciation_Mar
+            // 
+            this.manufacturing_depreciation_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_depreciation_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_depreciation_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_depreciation_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_depreciation_Mar.Location = new System.Drawing.Point(192, 299);
+            this.manufacturing_depreciation_Mar.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_depreciation_Mar.Name = "manufacturing_depreciation_Mar";
+            this.manufacturing_depreciation_Mar.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_depreciation_Mar.TabIndex = 111;
+            this.manufacturing_depreciation_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_depreciation_Mar.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_rent_Jun
+            // 
+            this.manufacturing_rent_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_rent_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_rent_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_rent_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_rent_Jun.Location = new System.Drawing.Point(301, 92);
+            this.manufacturing_rent_Jun.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_rent_Jun.Name = "manufacturing_rent_Jun";
+            this.manufacturing_rent_Jun.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_rent_Jun.TabIndex = 22;
+            this.manufacturing_rent_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_rent_Jun.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_rent_Jul
+            // 
+            this.manufacturing_rent_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_rent_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_rent_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_rent_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_rent_Jul.Location = new System.Drawing.Point(301, 115);
+            this.manufacturing_rent_Jul.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_rent_Jul.Name = "manufacturing_rent_Jul";
+            this.manufacturing_rent_Jul.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_rent_Jul.TabIndex = 32;
+            this.manufacturing_rent_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_rent_Jul.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_rent_Aug
+            // 
+            this.manufacturing_rent_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_rent_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_rent_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_rent_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_rent_Aug.Location = new System.Drawing.Point(301, 138);
+            this.manufacturing_rent_Aug.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_rent_Aug.Name = "manufacturing_rent_Aug";
+            this.manufacturing_rent_Aug.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_rent_Aug.TabIndex = 42;
+            this.manufacturing_rent_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_rent_Aug.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_rent_Sep
+            // 
+            this.manufacturing_rent_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_rent_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_rent_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_rent_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_rent_Sep.Location = new System.Drawing.Point(301, 161);
+            this.manufacturing_rent_Sep.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_rent_Sep.Name = "manufacturing_rent_Sep";
+            this.manufacturing_rent_Sep.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_rent_Sep.TabIndex = 52;
+            this.manufacturing_rent_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_rent_Sep.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_rent_Oct
+            // 
+            this.manufacturing_rent_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_rent_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_rent_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_rent_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_rent_Oct.Location = new System.Drawing.Point(301, 184);
+            this.manufacturing_rent_Oct.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_rent_Oct.Name = "manufacturing_rent_Oct";
+            this.manufacturing_rent_Oct.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_rent_Oct.TabIndex = 62;
+            this.manufacturing_rent_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_rent_Oct.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_rent_Nov
+            // 
+            this.manufacturing_rent_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_rent_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_rent_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_rent_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_rent_Nov.Location = new System.Drawing.Point(301, 207);
+            this.manufacturing_rent_Nov.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_rent_Nov.Name = "manufacturing_rent_Nov";
+            this.manufacturing_rent_Nov.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_rent_Nov.TabIndex = 72;
+            this.manufacturing_rent_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_rent_Nov.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_rent_Dec
+            // 
+            this.manufacturing_rent_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_rent_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_rent_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_rent_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_rent_Dec.Location = new System.Drawing.Point(301, 230);
+            this.manufacturing_rent_Dec.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_rent_Dec.Name = "manufacturing_rent_Dec";
+            this.manufacturing_rent_Dec.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_rent_Dec.TabIndex = 82;
+            this.manufacturing_rent_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_rent_Dec.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_rent_Jan
+            // 
+            this.manufacturing_rent_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_rent_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_rent_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_rent_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_rent_Jan.Location = new System.Drawing.Point(301, 253);
+            this.manufacturing_rent_Jan.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_rent_Jan.Name = "manufacturing_rent_Jan";
+            this.manufacturing_rent_Jan.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_rent_Jan.TabIndex = 92;
+            this.manufacturing_rent_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_rent_Jan.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_rent_Feb
+            // 
+            this.manufacturing_rent_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_rent_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_rent_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_rent_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_rent_Feb.Location = new System.Drawing.Point(301, 276);
+            this.manufacturing_rent_Feb.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_rent_Feb.Name = "manufacturing_rent_Feb";
+            this.manufacturing_rent_Feb.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_rent_Feb.TabIndex = 102;
+            this.manufacturing_rent_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_rent_Feb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_rent_Mar
+            // 
+            this.manufacturing_rent_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_rent_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_rent_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_rent_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_rent_Mar.Location = new System.Drawing.Point(301, 299);
+            this.manufacturing_rent_Mar.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_rent_Mar.Name = "manufacturing_rent_Mar";
+            this.manufacturing_rent_Mar.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_rent_Mar.TabIndex = 112;
+            this.manufacturing_rent_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_rent_Mar.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_repair_Jun
+            // 
+            this.manufacturing_repair_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_repair_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_repair_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_repair_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_repair_Jun.Location = new System.Drawing.Point(410, 92);
+            this.manufacturing_repair_Jun.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_repair_Jun.Name = "manufacturing_repair_Jun";
+            this.manufacturing_repair_Jun.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_repair_Jun.TabIndex = 23;
+            this.manufacturing_repair_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_repair_Jun.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_repair_Jul
+            // 
+            this.manufacturing_repair_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_repair_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_repair_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_repair_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_repair_Jul.Location = new System.Drawing.Point(410, 115);
+            this.manufacturing_repair_Jul.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_repair_Jul.Name = "manufacturing_repair_Jul";
+            this.manufacturing_repair_Jul.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_repair_Jul.TabIndex = 33;
+            this.manufacturing_repair_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_repair_Jul.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_repair_Aug
+            // 
+            this.manufacturing_repair_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_repair_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_repair_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_repair_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_repair_Aug.Location = new System.Drawing.Point(410, 138);
+            this.manufacturing_repair_Aug.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_repair_Aug.Name = "manufacturing_repair_Aug";
+            this.manufacturing_repair_Aug.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_repair_Aug.TabIndex = 43;
+            this.manufacturing_repair_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_repair_Aug.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_repair_Sep
+            // 
+            this.manufacturing_repair_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_repair_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_repair_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_repair_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_repair_Sep.Location = new System.Drawing.Point(410, 161);
+            this.manufacturing_repair_Sep.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_repair_Sep.Name = "manufacturing_repair_Sep";
+            this.manufacturing_repair_Sep.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_repair_Sep.TabIndex = 53;
+            this.manufacturing_repair_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_repair_Sep.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_repair_Oct
+            // 
+            this.manufacturing_repair_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_repair_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_repair_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_repair_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_repair_Oct.Location = new System.Drawing.Point(410, 184);
+            this.manufacturing_repair_Oct.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_repair_Oct.Name = "manufacturing_repair_Oct";
+            this.manufacturing_repair_Oct.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_repair_Oct.TabIndex = 63;
+            this.manufacturing_repair_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_repair_Oct.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_repair_Nov
+            // 
+            this.manufacturing_repair_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_repair_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_repair_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_repair_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_repair_Nov.Location = new System.Drawing.Point(410, 207);
+            this.manufacturing_repair_Nov.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_repair_Nov.Name = "manufacturing_repair_Nov";
+            this.manufacturing_repair_Nov.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_repair_Nov.TabIndex = 73;
+            this.manufacturing_repair_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_repair_Nov.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_repair_Dec
+            // 
+            this.manufacturing_repair_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_repair_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_repair_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_repair_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_repair_Dec.Location = new System.Drawing.Point(410, 230);
+            this.manufacturing_repair_Dec.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_repair_Dec.Name = "manufacturing_repair_Dec";
+            this.manufacturing_repair_Dec.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_repair_Dec.TabIndex = 83;
+            this.manufacturing_repair_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_repair_Dec.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_repair_Jan
+            // 
+            this.manufacturing_repair_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_repair_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_repair_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_repair_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_repair_Jan.Location = new System.Drawing.Point(410, 253);
+            this.manufacturing_repair_Jan.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_repair_Jan.Name = "manufacturing_repair_Jan";
+            this.manufacturing_repair_Jan.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_repair_Jan.TabIndex = 93;
+            this.manufacturing_repair_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_repair_Jan.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_repair_Feb
+            // 
+            this.manufacturing_repair_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_repair_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_repair_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_repair_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_repair_Feb.Location = new System.Drawing.Point(410, 276);
+            this.manufacturing_repair_Feb.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_repair_Feb.Name = "manufacturing_repair_Feb";
+            this.manufacturing_repair_Feb.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_repair_Feb.TabIndex = 103;
+            this.manufacturing_repair_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_repair_Feb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_repair_Mar
+            // 
+            this.manufacturing_repair_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_repair_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_repair_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_repair_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_repair_Mar.Location = new System.Drawing.Point(410, 299);
+            this.manufacturing_repair_Mar.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_repair_Mar.Name = "manufacturing_repair_Mar";
+            this.manufacturing_repair_Mar.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_repair_Mar.TabIndex = 113;
+            this.manufacturing_repair_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_repair_Mar.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_stock_Jun
+            // 
+            this.manufacturing_stock_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_stock_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_stock_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_stock_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_stock_Jun.Location = new System.Drawing.Point(519, 92);
+            this.manufacturing_stock_Jun.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_stock_Jun.Name = "manufacturing_stock_Jun";
+            this.manufacturing_stock_Jun.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_stock_Jun.TabIndex = 24;
+            this.manufacturing_stock_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_stock_Jun.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_stock_Jul
+            // 
+            this.manufacturing_stock_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_stock_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_stock_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_stock_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_stock_Jul.Location = new System.Drawing.Point(519, 115);
+            this.manufacturing_stock_Jul.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_stock_Jul.Name = "manufacturing_stock_Jul";
+            this.manufacturing_stock_Jul.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_stock_Jul.TabIndex = 34;
+            this.manufacturing_stock_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_stock_Jul.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_stock_Aug
+            // 
+            this.manufacturing_stock_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_stock_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_stock_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_stock_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_stock_Aug.Location = new System.Drawing.Point(519, 138);
+            this.manufacturing_stock_Aug.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_stock_Aug.Name = "manufacturing_stock_Aug";
+            this.manufacturing_stock_Aug.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_stock_Aug.TabIndex = 44;
+            this.manufacturing_stock_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_stock_Aug.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_stock_Sep
+            // 
+            this.manufacturing_stock_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_stock_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_stock_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_stock_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_stock_Sep.Location = new System.Drawing.Point(519, 161);
+            this.manufacturing_stock_Sep.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_stock_Sep.Name = "manufacturing_stock_Sep";
+            this.manufacturing_stock_Sep.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_stock_Sep.TabIndex = 54;
+            this.manufacturing_stock_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_stock_Sep.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_stock_Oct
+            // 
+            this.manufacturing_stock_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_stock_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_stock_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_stock_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_stock_Oct.Location = new System.Drawing.Point(519, 184);
+            this.manufacturing_stock_Oct.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_stock_Oct.Name = "manufacturing_stock_Oct";
+            this.manufacturing_stock_Oct.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_stock_Oct.TabIndex = 64;
+            this.manufacturing_stock_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_stock_Oct.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_stock_Nov
+            // 
+            this.manufacturing_stock_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_stock_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_stock_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_stock_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_stock_Nov.Location = new System.Drawing.Point(519, 207);
+            this.manufacturing_stock_Nov.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_stock_Nov.Name = "manufacturing_stock_Nov";
+            this.manufacturing_stock_Nov.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_stock_Nov.TabIndex = 74;
+            this.manufacturing_stock_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_stock_Nov.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_stock_Dec
+            // 
+            this.manufacturing_stock_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_stock_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_stock_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_stock_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_stock_Dec.Location = new System.Drawing.Point(519, 230);
+            this.manufacturing_stock_Dec.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_stock_Dec.Name = "manufacturing_stock_Dec";
+            this.manufacturing_stock_Dec.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_stock_Dec.TabIndex = 84;
+            this.manufacturing_stock_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_stock_Dec.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_stock_Jan
+            // 
+            this.manufacturing_stock_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_stock_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_stock_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_stock_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_stock_Jan.Location = new System.Drawing.Point(519, 253);
+            this.manufacturing_stock_Jan.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_stock_Jan.Name = "manufacturing_stock_Jan";
+            this.manufacturing_stock_Jan.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_stock_Jan.TabIndex = 94;
+            this.manufacturing_stock_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_stock_Jan.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_stock_Feb
+            // 
+            this.manufacturing_stock_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_stock_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_stock_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_stock_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_stock_Feb.Location = new System.Drawing.Point(519, 276);
+            this.manufacturing_stock_Feb.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_stock_Feb.Name = "manufacturing_stock_Feb";
+            this.manufacturing_stock_Feb.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_stock_Feb.TabIndex = 104;
+            this.manufacturing_stock_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_stock_Feb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_stock_Mar
+            // 
+            this.manufacturing_stock_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_stock_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_stock_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_stock_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_stock_Mar.Location = new System.Drawing.Point(519, 299);
+            this.manufacturing_stock_Mar.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_stock_Mar.Name = "manufacturing_stock_Mar";
+            this.manufacturing_stock_Mar.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_stock_Mar.TabIndex = 114;
+            this.manufacturing_stock_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_stock_Mar.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_other_Jun
+            // 
+            this.manufacturing_other_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_other_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_other_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_other_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_other_Jun.Location = new System.Drawing.Point(628, 92);
+            this.manufacturing_other_Jun.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_other_Jun.Name = "manufacturing_other_Jun";
+            this.manufacturing_other_Jun.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_other_Jun.TabIndex = 25;
+            this.manufacturing_other_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_other_Jun.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_other_Jul
+            // 
+            this.manufacturing_other_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_other_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_other_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_other_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_other_Jul.Location = new System.Drawing.Point(628, 115);
+            this.manufacturing_other_Jul.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_other_Jul.Name = "manufacturing_other_Jul";
+            this.manufacturing_other_Jul.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_other_Jul.TabIndex = 35;
+            this.manufacturing_other_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_other_Jul.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_other_Aug
+            // 
+            this.manufacturing_other_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_other_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_other_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_other_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_other_Aug.Location = new System.Drawing.Point(628, 138);
+            this.manufacturing_other_Aug.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_other_Aug.Name = "manufacturing_other_Aug";
+            this.manufacturing_other_Aug.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_other_Aug.TabIndex = 45;
+            this.manufacturing_other_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_other_Aug.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_other_Sep
+            // 
+            this.manufacturing_other_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_other_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_other_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_other_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_other_Sep.Location = new System.Drawing.Point(628, 161);
+            this.manufacturing_other_Sep.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_other_Sep.Name = "manufacturing_other_Sep";
+            this.manufacturing_other_Sep.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_other_Sep.TabIndex = 55;
+            this.manufacturing_other_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_other_Sep.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_other_Oct
+            // 
+            this.manufacturing_other_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_other_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_other_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_other_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_other_Oct.Location = new System.Drawing.Point(628, 184);
+            this.manufacturing_other_Oct.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_other_Oct.Name = "manufacturing_other_Oct";
+            this.manufacturing_other_Oct.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_other_Oct.TabIndex = 65;
+            this.manufacturing_other_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_other_Oct.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_other_Nov
+            // 
+            this.manufacturing_other_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_other_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_other_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_other_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_other_Nov.Location = new System.Drawing.Point(628, 207);
+            this.manufacturing_other_Nov.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_other_Nov.Name = "manufacturing_other_Nov";
+            this.manufacturing_other_Nov.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_other_Nov.TabIndex = 75;
+            this.manufacturing_other_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_other_Nov.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_other_Dec
+            // 
+            this.manufacturing_other_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_other_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_other_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_other_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_other_Dec.Location = new System.Drawing.Point(628, 230);
+            this.manufacturing_other_Dec.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_other_Dec.Name = "manufacturing_other_Dec";
+            this.manufacturing_other_Dec.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_other_Dec.TabIndex = 85;
+            this.manufacturing_other_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_other_Dec.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_other_Jan
+            // 
+            this.manufacturing_other_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_other_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_other_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_other_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_other_Jan.Location = new System.Drawing.Point(628, 253);
+            this.manufacturing_other_Jan.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_other_Jan.Name = "manufacturing_other_Jan";
+            this.manufacturing_other_Jan.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_other_Jan.TabIndex = 95;
+            this.manufacturing_other_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_other_Jan.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_other_Feb
+            // 
+            this.manufacturing_other_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_other_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_other_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_other_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_other_Feb.Location = new System.Drawing.Point(628, 276);
+            this.manufacturing_other_Feb.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_other_Feb.Name = "manufacturing_other_Feb";
+            this.manufacturing_other_Feb.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_other_Feb.TabIndex = 105;
+            this.manufacturing_other_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_other_Feb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // manufacturing_other_Mar
+            // 
+            this.manufacturing_other_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.manufacturing_other_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_other_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_other_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.manufacturing_other_Mar.Location = new System.Drawing.Point(628, 299);
+            this.manufacturing_other_Mar.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_other_Mar.Name = "manufacturing_other_Mar";
+            this.manufacturing_other_Mar.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_other_Mar.TabIndex = 115;
+            this.manufacturing_other_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.manufacturing_other_Mar.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_personnel_Jun
+            // 
+            this.selling_personnel_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_personnel_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_personnel_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_personnel_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_personnel_Jun.Location = new System.Drawing.Point(737, 92);
+            this.selling_personnel_Jun.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_personnel_Jun.Name = "selling_personnel_Jun";
+            this.selling_personnel_Jun.Size = new System.Drawing.Size(109, 23);
+            this.selling_personnel_Jun.TabIndex = 26;
+            this.selling_personnel_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_personnel_Jun.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_personnel_Jul
+            // 
+            this.selling_personnel_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_personnel_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_personnel_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_personnel_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_personnel_Jul.Location = new System.Drawing.Point(737, 115);
+            this.selling_personnel_Jul.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_personnel_Jul.Name = "selling_personnel_Jul";
+            this.selling_personnel_Jul.Size = new System.Drawing.Size(109, 23);
+            this.selling_personnel_Jul.TabIndex = 36;
+            this.selling_personnel_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_personnel_Jul.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_personnel_Aug
+            // 
+            this.selling_personnel_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_personnel_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_personnel_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_personnel_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_personnel_Aug.Location = new System.Drawing.Point(737, 138);
+            this.selling_personnel_Aug.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_personnel_Aug.Name = "selling_personnel_Aug";
+            this.selling_personnel_Aug.Size = new System.Drawing.Size(109, 23);
+            this.selling_personnel_Aug.TabIndex = 46;
+            this.selling_personnel_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_personnel_Aug.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_personnel_Sep
+            // 
+            this.selling_personnel_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_personnel_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_personnel_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_personnel_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_personnel_Sep.Location = new System.Drawing.Point(737, 161);
+            this.selling_personnel_Sep.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_personnel_Sep.Name = "selling_personnel_Sep";
+            this.selling_personnel_Sep.Size = new System.Drawing.Size(109, 23);
+            this.selling_personnel_Sep.TabIndex = 56;
+            this.selling_personnel_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_personnel_Sep.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_personnel_Oct
+            // 
+            this.selling_personnel_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_personnel_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_personnel_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_personnel_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_personnel_Oct.Location = new System.Drawing.Point(737, 184);
+            this.selling_personnel_Oct.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_personnel_Oct.Name = "selling_personnel_Oct";
+            this.selling_personnel_Oct.Size = new System.Drawing.Size(109, 23);
+            this.selling_personnel_Oct.TabIndex = 66;
+            this.selling_personnel_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_personnel_Oct.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_personnel_Nov
+            // 
+            this.selling_personnel_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_personnel_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_personnel_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_personnel_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_personnel_Nov.Location = new System.Drawing.Point(737, 207);
+            this.selling_personnel_Nov.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_personnel_Nov.Name = "selling_personnel_Nov";
+            this.selling_personnel_Nov.Size = new System.Drawing.Size(109, 23);
+            this.selling_personnel_Nov.TabIndex = 76;
+            this.selling_personnel_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_personnel_Nov.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_personnel_Dec
+            // 
+            this.selling_personnel_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_personnel_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_personnel_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_personnel_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_personnel_Dec.Location = new System.Drawing.Point(737, 230);
+            this.selling_personnel_Dec.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_personnel_Dec.Name = "selling_personnel_Dec";
+            this.selling_personnel_Dec.Size = new System.Drawing.Size(109, 23);
+            this.selling_personnel_Dec.TabIndex = 86;
+            this.selling_personnel_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_personnel_Dec.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_personnel_Jan
+            // 
+            this.selling_personnel_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_personnel_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_personnel_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_personnel_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_personnel_Jan.Location = new System.Drawing.Point(737, 253);
+            this.selling_personnel_Jan.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_personnel_Jan.Name = "selling_personnel_Jan";
+            this.selling_personnel_Jan.Size = new System.Drawing.Size(109, 23);
+            this.selling_personnel_Jan.TabIndex = 96;
+            this.selling_personnel_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_personnel_Jan.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_personnel_Feb
+            // 
+            this.selling_personnel_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_personnel_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_personnel_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_personnel_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_personnel_Feb.Location = new System.Drawing.Point(737, 276);
+            this.selling_personnel_Feb.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_personnel_Feb.Name = "selling_personnel_Feb";
+            this.selling_personnel_Feb.Size = new System.Drawing.Size(109, 23);
+            this.selling_personnel_Feb.TabIndex = 106;
+            this.selling_personnel_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_personnel_Feb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_personnel_Mar
+            // 
+            this.selling_personnel_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_personnel_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_personnel_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_personnel_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_personnel_Mar.Location = new System.Drawing.Point(737, 299);
+            this.selling_personnel_Mar.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_personnel_Mar.Name = "selling_personnel_Mar";
+            this.selling_personnel_Mar.Size = new System.Drawing.Size(109, 23);
+            this.selling_personnel_Mar.TabIndex = 116;
+            this.selling_personnel_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_personnel_Mar.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_depreciation_Mar
+            // 
+            this.selling_depreciation_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_depreciation_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_depreciation_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_depreciation_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_depreciation_Mar.Location = new System.Drawing.Point(846, 299);
+            this.selling_depreciation_Mar.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_depreciation_Mar.Name = "selling_depreciation_Mar";
+            this.selling_depreciation_Mar.Size = new System.Drawing.Size(109, 23);
+            this.selling_depreciation_Mar.TabIndex = 117;
+            this.selling_depreciation_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_depreciation_Mar.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_depreciation_Feb
+            // 
+            this.selling_depreciation_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_depreciation_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_depreciation_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_depreciation_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_depreciation_Feb.Location = new System.Drawing.Point(846, 276);
+            this.selling_depreciation_Feb.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_depreciation_Feb.Name = "selling_depreciation_Feb";
+            this.selling_depreciation_Feb.Size = new System.Drawing.Size(109, 23);
+            this.selling_depreciation_Feb.TabIndex = 107;
+            this.selling_depreciation_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_depreciation_Feb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_depreciation_Jan
+            // 
+            this.selling_depreciation_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_depreciation_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_depreciation_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_depreciation_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_depreciation_Jan.Location = new System.Drawing.Point(846, 253);
+            this.selling_depreciation_Jan.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_depreciation_Jan.Name = "selling_depreciation_Jan";
+            this.selling_depreciation_Jan.Size = new System.Drawing.Size(109, 23);
+            this.selling_depreciation_Jan.TabIndex = 97;
+            this.selling_depreciation_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_depreciation_Jan.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_depreciation_Dec
+            // 
+            this.selling_depreciation_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_depreciation_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_depreciation_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_depreciation_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_depreciation_Dec.Location = new System.Drawing.Point(846, 230);
+            this.selling_depreciation_Dec.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_depreciation_Dec.Name = "selling_depreciation_Dec";
+            this.selling_depreciation_Dec.Size = new System.Drawing.Size(109, 23);
+            this.selling_depreciation_Dec.TabIndex = 87;
+            this.selling_depreciation_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_depreciation_Dec.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_depreciation_Nov
+            // 
+            this.selling_depreciation_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_depreciation_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_depreciation_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_depreciation_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_depreciation_Nov.Location = new System.Drawing.Point(846, 207);
+            this.selling_depreciation_Nov.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_depreciation_Nov.Name = "selling_depreciation_Nov";
+            this.selling_depreciation_Nov.Size = new System.Drawing.Size(109, 23);
+            this.selling_depreciation_Nov.TabIndex = 77;
+            this.selling_depreciation_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_depreciation_Nov.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_depreciation_Oct
+            // 
+            this.selling_depreciation_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_depreciation_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_depreciation_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_depreciation_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_depreciation_Oct.Location = new System.Drawing.Point(846, 184);
+            this.selling_depreciation_Oct.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_depreciation_Oct.Name = "selling_depreciation_Oct";
+            this.selling_depreciation_Oct.Size = new System.Drawing.Size(109, 23);
+            this.selling_depreciation_Oct.TabIndex = 67;
+            this.selling_depreciation_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_depreciation_Oct.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_depreciation_Sep
+            // 
+            this.selling_depreciation_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_depreciation_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_depreciation_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_depreciation_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_depreciation_Sep.Location = new System.Drawing.Point(846, 161);
+            this.selling_depreciation_Sep.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_depreciation_Sep.Name = "selling_depreciation_Sep";
+            this.selling_depreciation_Sep.Size = new System.Drawing.Size(109, 23);
+            this.selling_depreciation_Sep.TabIndex = 57;
+            this.selling_depreciation_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_depreciation_Sep.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_depreciation_Aug
+            // 
+            this.selling_depreciation_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_depreciation_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_depreciation_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_depreciation_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_depreciation_Aug.Location = new System.Drawing.Point(846, 138);
+            this.selling_depreciation_Aug.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_depreciation_Aug.Name = "selling_depreciation_Aug";
+            this.selling_depreciation_Aug.Size = new System.Drawing.Size(109, 23);
+            this.selling_depreciation_Aug.TabIndex = 47;
+            this.selling_depreciation_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_depreciation_Aug.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_depreciation_Jul
+            // 
+            this.selling_depreciation_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_depreciation_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_depreciation_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_depreciation_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_depreciation_Jul.Location = new System.Drawing.Point(846, 115);
+            this.selling_depreciation_Jul.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_depreciation_Jul.Name = "selling_depreciation_Jul";
+            this.selling_depreciation_Jul.Size = new System.Drawing.Size(109, 23);
+            this.selling_depreciation_Jul.TabIndex = 37;
+            this.selling_depreciation_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_depreciation_Jul.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_depreciation_Jun
+            // 
+            this.selling_depreciation_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_depreciation_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_depreciation_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_depreciation_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_depreciation_Jun.Location = new System.Drawing.Point(846, 92);
+            this.selling_depreciation_Jun.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_depreciation_Jun.Name = "selling_depreciation_Jun";
+            this.selling_depreciation_Jun.Size = new System.Drawing.Size(109, 23);
+            this.selling_depreciation_Jun.TabIndex = 27;
+            this.selling_depreciation_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_depreciation_Jun.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_other_Apr
+            // 
+            this.selling_other_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_other_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_other_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_other_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_other_Apr.Location = new System.Drawing.Point(955, 46);
+            this.selling_other_Apr.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_other_Apr.Name = "selling_other_Apr";
+            this.selling_other_Apr.Size = new System.Drawing.Size(109, 23);
+            this.selling_other_Apr.TabIndex = 8;
+            this.selling_other_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_other_Apr.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // operating_expenses_Apr
+            // 
+            this.operating_expenses_Apr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.operating_expenses_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.operating_expenses_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operating_expenses_Apr.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.operating_expenses_Apr.Location = new System.Drawing.Point(1064, 46);
+            this.operating_expenses_Apr.Margin = new System.Windows.Forms.Padding(0);
+            this.operating_expenses_Apr.Name = "operating_expenses_Apr";
+            this.operating_expenses_Apr.Size = new System.Drawing.Size(109, 23);
+            this.operating_expenses_Apr.TabIndex = 9;
+            this.operating_expenses_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.operating_expenses_Apr.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_other_May
+            // 
+            this.selling_other_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_other_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_other_May.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_other_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_other_May.Location = new System.Drawing.Point(955, 69);
+            this.selling_other_May.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_other_May.Name = "selling_other_May";
+            this.selling_other_May.Size = new System.Drawing.Size(109, 23);
+            this.selling_other_May.TabIndex = 18;
+            this.selling_other_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_other_May.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_other_Jun
+            // 
+            this.selling_other_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_other_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_other_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_other_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_other_Jun.Location = new System.Drawing.Point(955, 92);
+            this.selling_other_Jun.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_other_Jun.Name = "selling_other_Jun";
+            this.selling_other_Jun.Size = new System.Drawing.Size(109, 23);
+            this.selling_other_Jun.TabIndex = 28;
+            this.selling_other_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_other_Jun.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_other_Jul
+            // 
+            this.selling_other_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_other_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_other_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_other_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_other_Jul.Location = new System.Drawing.Point(955, 115);
+            this.selling_other_Jul.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_other_Jul.Name = "selling_other_Jul";
+            this.selling_other_Jul.Size = new System.Drawing.Size(109, 23);
+            this.selling_other_Jul.TabIndex = 38;
+            this.selling_other_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_other_Jul.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_other_Aug
+            // 
+            this.selling_other_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_other_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_other_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_other_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_other_Aug.Location = new System.Drawing.Point(955, 138);
+            this.selling_other_Aug.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_other_Aug.Name = "selling_other_Aug";
+            this.selling_other_Aug.Size = new System.Drawing.Size(109, 23);
+            this.selling_other_Aug.TabIndex = 48;
+            this.selling_other_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_other_Aug.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_other_Sep
+            // 
+            this.selling_other_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_other_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_other_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_other_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_other_Sep.Location = new System.Drawing.Point(955, 161);
+            this.selling_other_Sep.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_other_Sep.Name = "selling_other_Sep";
+            this.selling_other_Sep.Size = new System.Drawing.Size(109, 23);
+            this.selling_other_Sep.TabIndex = 58;
+            this.selling_other_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_other_Sep.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_other_Oct
+            // 
+            this.selling_other_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_other_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_other_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_other_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_other_Oct.Location = new System.Drawing.Point(955, 184);
+            this.selling_other_Oct.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_other_Oct.Name = "selling_other_Oct";
+            this.selling_other_Oct.Size = new System.Drawing.Size(109, 23);
+            this.selling_other_Oct.TabIndex = 68;
+            this.selling_other_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_other_Oct.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_other_Nov
+            // 
+            this.selling_other_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_other_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_other_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_other_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_other_Nov.Location = new System.Drawing.Point(955, 207);
+            this.selling_other_Nov.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_other_Nov.Name = "selling_other_Nov";
+            this.selling_other_Nov.Size = new System.Drawing.Size(109, 23);
+            this.selling_other_Nov.TabIndex = 78;
+            this.selling_other_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_other_Nov.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_other_Dec
+            // 
+            this.selling_other_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_other_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_other_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_other_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_other_Dec.Location = new System.Drawing.Point(955, 230);
+            this.selling_other_Dec.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_other_Dec.Name = "selling_other_Dec";
+            this.selling_other_Dec.Size = new System.Drawing.Size(109, 23);
+            this.selling_other_Dec.TabIndex = 88;
+            this.selling_other_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_other_Dec.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_other_Jan
+            // 
+            this.selling_other_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_other_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_other_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_other_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_other_Jan.Location = new System.Drawing.Point(955, 253);
+            this.selling_other_Jan.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_other_Jan.Name = "selling_other_Jan";
+            this.selling_other_Jan.Size = new System.Drawing.Size(109, 23);
+            this.selling_other_Jan.TabIndex = 98;
+            this.selling_other_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_other_Jan.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_other_Feb
+            // 
+            this.selling_other_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_other_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_other_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_other_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_other_Feb.Location = new System.Drawing.Point(955, 276);
+            this.selling_other_Feb.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_other_Feb.Name = "selling_other_Feb";
+            this.selling_other_Feb.Size = new System.Drawing.Size(109, 23);
+            this.selling_other_Feb.TabIndex = 108;
+            this.selling_other_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_other_Feb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // selling_other_Mar
+            // 
+            this.selling_other_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.selling_other_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_other_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_other_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.selling_other_Mar.Location = new System.Drawing.Point(955, 299);
+            this.selling_other_Mar.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_other_Mar.Name = "selling_other_Mar";
+            this.selling_other_Mar.Size = new System.Drawing.Size(109, 23);
+            this.selling_other_Mar.TabIndex = 118;
+            this.selling_other_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.selling_other_Mar.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // operating_expenses_May
+            // 
+            this.operating_expenses_May.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.operating_expenses_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.operating_expenses_May.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operating_expenses_May.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.operating_expenses_May.Location = new System.Drawing.Point(1064, 69);
+            this.operating_expenses_May.Margin = new System.Windows.Forms.Padding(0);
+            this.operating_expenses_May.Name = "operating_expenses_May";
+            this.operating_expenses_May.Size = new System.Drawing.Size(109, 23);
+            this.operating_expenses_May.TabIndex = 19;
+            this.operating_expenses_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.operating_expenses_May.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // operating_expenses_Jun
+            // 
+            this.operating_expenses_Jun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.operating_expenses_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.operating_expenses_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operating_expenses_Jun.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.operating_expenses_Jun.Location = new System.Drawing.Point(1064, 92);
+            this.operating_expenses_Jun.Margin = new System.Windows.Forms.Padding(0);
+            this.operating_expenses_Jun.Name = "operating_expenses_Jun";
+            this.operating_expenses_Jun.Size = new System.Drawing.Size(109, 23);
+            this.operating_expenses_Jun.TabIndex = 29;
+            this.operating_expenses_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.operating_expenses_Jun.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // operating_expenses_Jul
+            // 
+            this.operating_expenses_Jul.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.operating_expenses_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.operating_expenses_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operating_expenses_Jul.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.operating_expenses_Jul.Location = new System.Drawing.Point(1064, 115);
+            this.operating_expenses_Jul.Margin = new System.Windows.Forms.Padding(0);
+            this.operating_expenses_Jul.Name = "operating_expenses_Jul";
+            this.operating_expenses_Jul.Size = new System.Drawing.Size(109, 23);
+            this.operating_expenses_Jul.TabIndex = 39;
+            this.operating_expenses_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.operating_expenses_Jul.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // operating_expenses_Aug
+            // 
+            this.operating_expenses_Aug.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.operating_expenses_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.operating_expenses_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operating_expenses_Aug.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.operating_expenses_Aug.Location = new System.Drawing.Point(1064, 138);
+            this.operating_expenses_Aug.Margin = new System.Windows.Forms.Padding(0);
+            this.operating_expenses_Aug.Name = "operating_expenses_Aug";
+            this.operating_expenses_Aug.Size = new System.Drawing.Size(109, 23);
+            this.operating_expenses_Aug.TabIndex = 49;
+            this.operating_expenses_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.operating_expenses_Aug.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // operating_expenses_Sep
+            // 
+            this.operating_expenses_Sep.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.operating_expenses_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.operating_expenses_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operating_expenses_Sep.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.operating_expenses_Sep.Location = new System.Drawing.Point(1064, 161);
+            this.operating_expenses_Sep.Margin = new System.Windows.Forms.Padding(0);
+            this.operating_expenses_Sep.Name = "operating_expenses_Sep";
+            this.operating_expenses_Sep.Size = new System.Drawing.Size(109, 23);
+            this.operating_expenses_Sep.TabIndex = 59;
+            this.operating_expenses_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.operating_expenses_Sep.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // operating_expenses_Oct
+            // 
+            this.operating_expenses_Oct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.operating_expenses_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.operating_expenses_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operating_expenses_Oct.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.operating_expenses_Oct.Location = new System.Drawing.Point(1064, 184);
+            this.operating_expenses_Oct.Margin = new System.Windows.Forms.Padding(0);
+            this.operating_expenses_Oct.Name = "operating_expenses_Oct";
+            this.operating_expenses_Oct.Size = new System.Drawing.Size(109, 23);
+            this.operating_expenses_Oct.TabIndex = 69;
+            this.operating_expenses_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.operating_expenses_Oct.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // operating_expenses_Nov
+            // 
+            this.operating_expenses_Nov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.operating_expenses_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.operating_expenses_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operating_expenses_Nov.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.operating_expenses_Nov.Location = new System.Drawing.Point(1064, 207);
+            this.operating_expenses_Nov.Margin = new System.Windows.Forms.Padding(0);
+            this.operating_expenses_Nov.Name = "operating_expenses_Nov";
+            this.operating_expenses_Nov.Size = new System.Drawing.Size(109, 23);
+            this.operating_expenses_Nov.TabIndex = 79;
+            this.operating_expenses_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.operating_expenses_Nov.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // operating_expenses_Dec
+            // 
+            this.operating_expenses_Dec.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.operating_expenses_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.operating_expenses_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operating_expenses_Dec.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.operating_expenses_Dec.Location = new System.Drawing.Point(1064, 230);
+            this.operating_expenses_Dec.Margin = new System.Windows.Forms.Padding(0);
+            this.operating_expenses_Dec.Name = "operating_expenses_Dec";
+            this.operating_expenses_Dec.Size = new System.Drawing.Size(109, 23);
+            this.operating_expenses_Dec.TabIndex = 89;
+            this.operating_expenses_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.operating_expenses_Dec.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // operating_expenses_Jan
+            // 
+            this.operating_expenses_Jan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.operating_expenses_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.operating_expenses_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operating_expenses_Jan.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.operating_expenses_Jan.Location = new System.Drawing.Point(1064, 253);
+            this.operating_expenses_Jan.Margin = new System.Windows.Forms.Padding(0);
+            this.operating_expenses_Jan.Name = "operating_expenses_Jan";
+            this.operating_expenses_Jan.Size = new System.Drawing.Size(109, 23);
+            this.operating_expenses_Jan.TabIndex = 99;
+            this.operating_expenses_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.operating_expenses_Jan.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // operating_expenses_Feb
+            // 
+            this.operating_expenses_Feb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.operating_expenses_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.operating_expenses_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operating_expenses_Feb.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.operating_expenses_Feb.Location = new System.Drawing.Point(1064, 276);
+            this.operating_expenses_Feb.Margin = new System.Windows.Forms.Padding(0);
+            this.operating_expenses_Feb.Name = "operating_expenses_Feb";
+            this.operating_expenses_Feb.Size = new System.Drawing.Size(109, 23);
+            this.operating_expenses_Feb.TabIndex = 109;
+            this.operating_expenses_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.operating_expenses_Feb.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // operating_expenses_Mar
+            // 
+            this.operating_expenses_Mar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.operating_expenses_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.operating_expenses_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operating_expenses_Mar.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.operating_expenses_Mar.Location = new System.Drawing.Point(1064, 299);
+            this.operating_expenses_Mar.Margin = new System.Windows.Forms.Padding(0);
+            this.operating_expenses_Mar.Name = "operating_expenses_Mar";
+            this.operating_expenses_Mar.Size = new System.Drawing.Size(109, 23);
+            this.operating_expenses_Mar.TabIndex = 119;
+            this.operating_expenses_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
+            this.operating_expenses_Mar.Leave += new System.EventHandler(this.textBox_Leave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Gold;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(1064, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.tableLayoutPanel2.SetRowSpan(this.label1, 2);
+            this.label1.Size = new System.Drawing.Size(109, 46);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "営業外費用/収益";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Gold;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(955, 23);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(109, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "その他販管費";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Gold;
+            this.label23.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tableLayoutPanel2.SetColumnSpan(this.label23, 3);
+            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label23.Location = new System.Drawing.Point(737, 0);
+            this.label23.Margin = new System.Windows.Forms.Padding(0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(327, 23);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "販売費";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Lavender;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label3.Location = new System.Drawing.Point(0, 322);
+            this.label3.Margin = new System.Windows.Forms.Padding(0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 23);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "縦計";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Lavender;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label4.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label4.Location = new System.Drawing.Point(1173, 0);
+            this.label4.Margin = new System.Windows.Forms.Padding(0);
+            this.label4.Name = "label4";
+            this.tableLayoutPanel2.SetRowSpan(this.label4, 2);
+            this.label4.Size = new System.Drawing.Size(110, 46);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "横計";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // manufacturing_personnel_total
+            // 
+            this.manufacturing_personnel_total.AutoSize = true;
+            this.manufacturing_personnel_total.BackColor = System.Drawing.Color.Lavender;
+            this.manufacturing_personnel_total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_personnel_total.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_personnel_total.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.manufacturing_personnel_total.Location = new System.Drawing.Point(83, 322);
+            this.manufacturing_personnel_total.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_personnel_total.Name = "manufacturing_personnel_total";
+            this.manufacturing_personnel_total.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_personnel_total.TabIndex = 0;
+            this.manufacturing_personnel_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // manufacturing_depreciation_total
+            // 
+            this.manufacturing_depreciation_total.AutoSize = true;
+            this.manufacturing_depreciation_total.BackColor = System.Drawing.Color.Lavender;
+            this.manufacturing_depreciation_total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_depreciation_total.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_depreciation_total.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.manufacturing_depreciation_total.Location = new System.Drawing.Point(192, 322);
+            this.manufacturing_depreciation_total.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_depreciation_total.Name = "manufacturing_depreciation_total";
+            this.manufacturing_depreciation_total.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_depreciation_total.TabIndex = 0;
+            this.manufacturing_depreciation_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // manufacturing_rent_total
+            // 
+            this.manufacturing_rent_total.AutoSize = true;
+            this.manufacturing_rent_total.BackColor = System.Drawing.Color.Lavender;
+            this.manufacturing_rent_total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_rent_total.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_rent_total.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.manufacturing_rent_total.Location = new System.Drawing.Point(301, 322);
+            this.manufacturing_rent_total.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_rent_total.Name = "manufacturing_rent_total";
+            this.manufacturing_rent_total.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_rent_total.TabIndex = 0;
+            this.manufacturing_rent_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // manufacturing_repair_total
+            // 
+            this.manufacturing_repair_total.AutoSize = true;
+            this.manufacturing_repair_total.BackColor = System.Drawing.Color.Lavender;
+            this.manufacturing_repair_total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_repair_total.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_repair_total.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.manufacturing_repair_total.Location = new System.Drawing.Point(410, 322);
+            this.manufacturing_repair_total.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_repair_total.Name = "manufacturing_repair_total";
+            this.manufacturing_repair_total.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_repair_total.TabIndex = 0;
+            this.manufacturing_repair_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // manufacturing_stock_total
+            // 
+            this.manufacturing_stock_total.AutoSize = true;
+            this.manufacturing_stock_total.BackColor = System.Drawing.Color.Lavender;
+            this.manufacturing_stock_total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_stock_total.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_stock_total.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.manufacturing_stock_total.Location = new System.Drawing.Point(519, 322);
+            this.manufacturing_stock_total.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_stock_total.Name = "manufacturing_stock_total";
+            this.manufacturing_stock_total.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_stock_total.TabIndex = 0;
+            this.manufacturing_stock_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // manufacturing_other_total
+            // 
+            this.manufacturing_other_total.AutoSize = true;
+            this.manufacturing_other_total.BackColor = System.Drawing.Color.Lavender;
+            this.manufacturing_other_total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.manufacturing_other_total.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.manufacturing_other_total.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.manufacturing_other_total.Location = new System.Drawing.Point(628, 322);
+            this.manufacturing_other_total.Margin = new System.Windows.Forms.Padding(0);
+            this.manufacturing_other_total.Name = "manufacturing_other_total";
+            this.manufacturing_other_total.Size = new System.Drawing.Size(109, 23);
+            this.manufacturing_other_total.TabIndex = 0;
+            this.manufacturing_other_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // selling_personnel_total
+            // 
+            this.selling_personnel_total.AutoSize = true;
+            this.selling_personnel_total.BackColor = System.Drawing.Color.Lavender;
+            this.selling_personnel_total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_personnel_total.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_personnel_total.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.selling_personnel_total.Location = new System.Drawing.Point(737, 322);
+            this.selling_personnel_total.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_personnel_total.Name = "selling_personnel_total";
+            this.selling_personnel_total.Size = new System.Drawing.Size(109, 23);
+            this.selling_personnel_total.TabIndex = 0;
+            this.selling_personnel_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // selling_depreciation_total
+            // 
+            this.selling_depreciation_total.AutoSize = true;
+            this.selling_depreciation_total.BackColor = System.Drawing.Color.Lavender;
+            this.selling_depreciation_total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_depreciation_total.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_depreciation_total.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.selling_depreciation_total.Location = new System.Drawing.Point(846, 322);
+            this.selling_depreciation_total.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_depreciation_total.Name = "selling_depreciation_total";
+            this.selling_depreciation_total.Size = new System.Drawing.Size(109, 23);
+            this.selling_depreciation_total.TabIndex = 0;
+            this.selling_depreciation_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // selling_other_total
+            // 
+            this.selling_other_total.AutoSize = true;
+            this.selling_other_total.BackColor = System.Drawing.Color.Lavender;
+            this.selling_other_total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.selling_other_total.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selling_other_total.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.selling_other_total.Location = new System.Drawing.Point(955, 322);
+            this.selling_other_total.Margin = new System.Windows.Forms.Padding(0);
+            this.selling_other_total.Name = "selling_other_total";
+            this.selling_other_total.Size = new System.Drawing.Size(109, 23);
+            this.selling_other_total.TabIndex = 0;
+            this.selling_other_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // operating_expenses_total
+            // 
+            this.operating_expenses_total.AutoSize = true;
+            this.operating_expenses_total.BackColor = System.Drawing.Color.Lavender;
+            this.operating_expenses_total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.operating_expenses_total.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operating_expenses_total.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.operating_expenses_total.Location = new System.Drawing.Point(1064, 322);
+            this.operating_expenses_total.Margin = new System.Windows.Forms.Padding(0);
+            this.operating_expenses_total.Name = "operating_expenses_total";
+            this.operating_expenses_total.Size = new System.Drawing.Size(109, 23);
+            this.operating_expenses_total.TabIndex = 0;
+            this.operating_expenses_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // total_Mar
+            // 
+            this.total_Mar.AutoSize = true;
+            this.total_Mar.BackColor = System.Drawing.Color.Lavender;
+            this.total_Mar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.total_Mar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.total_Mar.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.total_Mar.Location = new System.Drawing.Point(1173, 299);
+            this.total_Mar.Margin = new System.Windows.Forms.Padding(0);
+            this.total_Mar.Name = "total_Mar";
+            this.total_Mar.Size = new System.Drawing.Size(110, 23);
+            this.total_Mar.TabIndex = 0;
+            this.total_Mar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // total_Feb
+            // 
+            this.total_Feb.AutoSize = true;
+            this.total_Feb.BackColor = System.Drawing.Color.Lavender;
+            this.total_Feb.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.total_Feb.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.total_Feb.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.total_Feb.Location = new System.Drawing.Point(1173, 276);
+            this.total_Feb.Margin = new System.Windows.Forms.Padding(0);
+            this.total_Feb.Name = "total_Feb";
+            this.total_Feb.Size = new System.Drawing.Size(110, 23);
+            this.total_Feb.TabIndex = 0;
+            this.total_Feb.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // total_Jan
+            // 
+            this.total_Jan.AutoSize = true;
+            this.total_Jan.BackColor = System.Drawing.Color.Lavender;
+            this.total_Jan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.total_Jan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.total_Jan.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.total_Jan.Location = new System.Drawing.Point(1173, 253);
+            this.total_Jan.Margin = new System.Windows.Forms.Padding(0);
+            this.total_Jan.Name = "total_Jan";
+            this.total_Jan.Size = new System.Drawing.Size(110, 23);
+            this.total_Jan.TabIndex = 0;
+            this.total_Jan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // total_Dec
+            // 
+            this.total_Dec.AutoSize = true;
+            this.total_Dec.BackColor = System.Drawing.Color.Lavender;
+            this.total_Dec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.total_Dec.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.total_Dec.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.total_Dec.Location = new System.Drawing.Point(1173, 230);
+            this.total_Dec.Margin = new System.Windows.Forms.Padding(0);
+            this.total_Dec.Name = "total_Dec";
+            this.total_Dec.Size = new System.Drawing.Size(110, 23);
+            this.total_Dec.TabIndex = 0;
+            this.total_Dec.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // total_Nov
+            // 
+            this.total_Nov.AutoSize = true;
+            this.total_Nov.BackColor = System.Drawing.Color.Lavender;
+            this.total_Nov.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.total_Nov.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.total_Nov.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.total_Nov.Location = new System.Drawing.Point(1173, 207);
+            this.total_Nov.Margin = new System.Windows.Forms.Padding(0);
+            this.total_Nov.Name = "total_Nov";
+            this.total_Nov.Size = new System.Drawing.Size(110, 23);
+            this.total_Nov.TabIndex = 0;
+            this.total_Nov.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // total_Oct
+            // 
+            this.total_Oct.AutoSize = true;
+            this.total_Oct.BackColor = System.Drawing.Color.Lavender;
+            this.total_Oct.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.total_Oct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.total_Oct.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.total_Oct.Location = new System.Drawing.Point(1173, 184);
+            this.total_Oct.Margin = new System.Windows.Forms.Padding(0);
+            this.total_Oct.Name = "total_Oct";
+            this.total_Oct.Size = new System.Drawing.Size(110, 23);
+            this.total_Oct.TabIndex = 0;
+            this.total_Oct.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // total_Sep
+            // 
+            this.total_Sep.AutoSize = true;
+            this.total_Sep.BackColor = System.Drawing.Color.Lavender;
+            this.total_Sep.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.total_Sep.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.total_Sep.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.total_Sep.Location = new System.Drawing.Point(1173, 161);
+            this.total_Sep.Margin = new System.Windows.Forms.Padding(0);
+            this.total_Sep.Name = "total_Sep";
+            this.total_Sep.Size = new System.Drawing.Size(110, 23);
+            this.total_Sep.TabIndex = 0;
+            this.total_Sep.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // total_Aug
+            // 
+            this.total_Aug.AutoSize = true;
+            this.total_Aug.BackColor = System.Drawing.Color.Lavender;
+            this.total_Aug.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.total_Aug.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.total_Aug.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.total_Aug.Location = new System.Drawing.Point(1173, 138);
+            this.total_Aug.Margin = new System.Windows.Forms.Padding(0);
+            this.total_Aug.Name = "total_Aug";
+            this.total_Aug.Size = new System.Drawing.Size(110, 23);
+            this.total_Aug.TabIndex = 0;
+            this.total_Aug.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // total_Jul
+            // 
+            this.total_Jul.AutoSize = true;
+            this.total_Jul.BackColor = System.Drawing.Color.Lavender;
+            this.total_Jul.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.total_Jul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.total_Jul.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.total_Jul.Location = new System.Drawing.Point(1173, 115);
+            this.total_Jul.Margin = new System.Windows.Forms.Padding(0);
+            this.total_Jul.Name = "total_Jul";
+            this.total_Jul.Size = new System.Drawing.Size(110, 23);
+            this.total_Jul.TabIndex = 0;
+            this.total_Jul.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // total_Jun
+            // 
+            this.total_Jun.AutoSize = true;
+            this.total_Jun.BackColor = System.Drawing.Color.Lavender;
+            this.total_Jun.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.total_Jun.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.total_Jun.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.total_Jun.Location = new System.Drawing.Point(1173, 92);
+            this.total_Jun.Margin = new System.Windows.Forms.Padding(0);
+            this.total_Jun.Name = "total_Jun";
+            this.total_Jun.Size = new System.Drawing.Size(110, 23);
+            this.total_Jun.TabIndex = 0;
+            this.total_Jun.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // total_May
+            // 
+            this.total_May.AutoSize = true;
+            this.total_May.BackColor = System.Drawing.Color.Lavender;
+            this.total_May.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.total_May.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.total_May.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.total_May.Location = new System.Drawing.Point(1173, 69);
+            this.total_May.Margin = new System.Windows.Forms.Padding(0);
+            this.total_May.Name = "total_May";
+            this.total_May.Size = new System.Drawing.Size(110, 23);
+            this.total_May.TabIndex = 0;
+            this.total_May.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // total_Apr
+            // 
+            this.total_Apr.AutoSize = true;
+            this.total_Apr.BackColor = System.Drawing.Color.Lavender;
+            this.total_Apr.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.total_Apr.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.total_Apr.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.total_Apr.Location = new System.Drawing.Point(1173, 46);
+            this.total_Apr.Margin = new System.Windows.Forms.Padding(0);
+            this.total_Apr.Name = "total_Apr";
+            this.total_Apr.Size = new System.Drawing.Size(110, 23);
+            this.total_Apr.TabIndex = 0;
+            this.total_Apr.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // total
+            // 
+            this.total.AutoSize = true;
+            this.total.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.total.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.total.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.total.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.total.Location = new System.Drawing.Point(1173, 322);
+            this.total.Margin = new System.Windows.Forms.Padding(0);
+            this.total.Name = "total";
+            this.total.Size = new System.Drawing.Size(110, 23);
+            this.total.TabIndex = 0;
+            this.total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Form_CostMng_FixedCostReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1306, 637);
+            this.ClientSize = new System.Drawing.Size(1310, 396);
             this.Controls.Add(this.btnAppend);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -2075,7 +2925,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "Form_CostMng_FixedCostReg";
-            this.Text = "ｘｘｘｘｘ";
+            this.Text = "固定費登録";
             this.Load += new System.EventHandler(this.Form_CostMng_Divergence_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -2102,14 +2952,14 @@
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.TextBox materialCost_May;
-        private System.Windows.Forms.TextBox laborCost_May;
-        private System.Windows.Forms.TextBox contractorsCost_May;
-        private System.Windows.Forms.TextBox materialsFare_May;
-        private System.Windows.Forms.TextBox packingCost_May;
-        private System.Windows.Forms.TextBox utilitiesCost_May;
-        private System.Windows.Forms.TextBox otherCost_May;
-        private System.Windows.Forms.TextBox packingFare_May;
+        private System.Windows.Forms.TextBox manufacturing_personnel_May;
+        private System.Windows.Forms.TextBox manufacturing_depreciation_May;
+        private System.Windows.Forms.TextBox manufacturing_rent_May;
+        private System.Windows.Forms.TextBox manufacturing_repair_May;
+        private System.Windows.Forms.TextBox manufacturing_stock_May;
+        private System.Windows.Forms.TextBox manufacturing_other_May;
+        private System.Windows.Forms.TextBox selling_personnel_May;
+        private System.Windows.Forms.TextBox selling_depreciation_May;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
@@ -2118,94 +2968,145 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.TextBox materialCost_Apr;
-        private System.Windows.Forms.TextBox laborCost_Apr;
-        private System.Windows.Forms.TextBox contractorsCost_Apr;
-        private System.Windows.Forms.TextBox materialsFare_Apr;
-        private System.Windows.Forms.TextBox packingCost_Apr;
-        private System.Windows.Forms.TextBox utilitiesCost_Apr;
-        private System.Windows.Forms.TextBox otherCost_Apr;
-        private System.Windows.Forms.TextBox packingFare_Apr;
-        private System.Windows.Forms.TextBox materialCost_Jun;
-        private System.Windows.Forms.TextBox materialCost_Jul;
-        private System.Windows.Forms.TextBox materialCost_Aug;
-        private System.Windows.Forms.TextBox materialCost_Sep;
-        private System.Windows.Forms.TextBox materialCost_Oct;
-        private System.Windows.Forms.TextBox materialCost_Nov;
-        private System.Windows.Forms.TextBox materialCost_Dec;
-        private System.Windows.Forms.TextBox materialCost_Jan;
-        private System.Windows.Forms.TextBox materialCost_Feb;
-        private System.Windows.Forms.TextBox materialCost_Mar;
-        private System.Windows.Forms.TextBox laborCost_Jun;
-        private System.Windows.Forms.TextBox laborCost_Jul;
-        private System.Windows.Forms.TextBox laborCost_Aug;
-        private System.Windows.Forms.TextBox laborCost_Sep;
-        private System.Windows.Forms.TextBox laborCost_Oct;
-        private System.Windows.Forms.TextBox laborCost_Nov;
-        private System.Windows.Forms.TextBox laborCost_Dec;
-        private System.Windows.Forms.TextBox laborCost_Jan;
-        private System.Windows.Forms.TextBox laborCost_Feb;
-        private System.Windows.Forms.TextBox laborCost_Mar;
-        private System.Windows.Forms.TextBox contractorsCost_Jun;
-        private System.Windows.Forms.TextBox contractorsCost_Jul;
-        private System.Windows.Forms.TextBox contractorsCost_Aug;
-        private System.Windows.Forms.TextBox contractorsCost_Sep;
-        private System.Windows.Forms.TextBox contractorsCost_Oct;
-        private System.Windows.Forms.TextBox contractorsCost_Nov;
-        private System.Windows.Forms.TextBox contractorsCost_Dec;
-        private System.Windows.Forms.TextBox contractorsCost_Jan;
-        private System.Windows.Forms.TextBox contractorsCost_Feb;
-        private System.Windows.Forms.TextBox contractorsCost_Mar;
-        private System.Windows.Forms.TextBox materialsFare_Jun;
-        private System.Windows.Forms.TextBox materialsFare_Jul;
-        private System.Windows.Forms.TextBox materialsFare_Aug;
-        private System.Windows.Forms.TextBox materialsFare_Sep;
-        private System.Windows.Forms.TextBox materialsFare_Oct;
-        private System.Windows.Forms.TextBox materialsFare_Nov;
-        private System.Windows.Forms.TextBox materialsFare_Dec;
-        private System.Windows.Forms.TextBox materialsFare_Jan;
-        private System.Windows.Forms.TextBox materialsFare_Feb;
-        private System.Windows.Forms.TextBox materialsFare_Mar;
-        private System.Windows.Forms.TextBox packingCost_Jun;
-        private System.Windows.Forms.TextBox packingCost_Jul;
-        private System.Windows.Forms.TextBox packingCost_Aug;
-        private System.Windows.Forms.TextBox packingCost_Sep;
-        private System.Windows.Forms.TextBox packingCost_Oct;
-        private System.Windows.Forms.TextBox packingCost_Nov;
-        private System.Windows.Forms.TextBox packingCost_Dec;
-        private System.Windows.Forms.TextBox packingCost_Jan;
-        private System.Windows.Forms.TextBox packingCost_Feb;
-        private System.Windows.Forms.TextBox packingCost_Mar;
-        private System.Windows.Forms.TextBox utilitiesCost_Jun;
-        private System.Windows.Forms.TextBox utilitiesCost_Jul;
-        private System.Windows.Forms.TextBox utilitiesCost_Aug;
-        private System.Windows.Forms.TextBox utilitiesCost_Sep;
-        private System.Windows.Forms.TextBox utilitiesCost_Oct;
-        private System.Windows.Forms.TextBox utilitiesCost_Nov;
-        private System.Windows.Forms.TextBox utilitiesCost_Dec;
-        private System.Windows.Forms.TextBox utilitiesCost_Jan;
-        private System.Windows.Forms.TextBox utilitiesCost_Feb;
-        private System.Windows.Forms.TextBox utilitiesCost_Mar;
-        private System.Windows.Forms.TextBox otherCost_Jun;
-        private System.Windows.Forms.TextBox otherCost_Jul;
-        private System.Windows.Forms.TextBox otherCost_Aug;
-        private System.Windows.Forms.TextBox otherCost_Sep;
-        private System.Windows.Forms.TextBox otherCost_Oct;
-        private System.Windows.Forms.TextBox otherCost_Nov;
-        private System.Windows.Forms.TextBox otherCost_Dec;
-        private System.Windows.Forms.TextBox otherCost_Jan;
-        private System.Windows.Forms.TextBox otherCost_Feb;
-        private System.Windows.Forms.TextBox otherCost_Mar;
-        private System.Windows.Forms.TextBox packingFare_Mar;
-        private System.Windows.Forms.TextBox packingFare_Feb;
-        private System.Windows.Forms.TextBox packingFare_Jan;
-        private System.Windows.Forms.TextBox packingFare_Dec;
-        private System.Windows.Forms.TextBox packingFare_Nov;
-        private System.Windows.Forms.TextBox packingFare_Oct;
-        private System.Windows.Forms.TextBox packingFare_Sep;
-        private System.Windows.Forms.TextBox packingFare_Aug;
-        private System.Windows.Forms.TextBox packingFare_Jul;
-        private System.Windows.Forms.TextBox packingFare_Jun;
+        private System.Windows.Forms.TextBox manufacturing_personnel_Apr;
+        private System.Windows.Forms.TextBox manufacturing_depreciation_Apr;
+        private System.Windows.Forms.TextBox manufacturing_rent_Apr;
+        private System.Windows.Forms.TextBox manufacturing_repair_Apr;
+        private System.Windows.Forms.TextBox manufacturing_stock_Apr;
+        private System.Windows.Forms.TextBox manufacturing_other_Apr;
+        private System.Windows.Forms.TextBox selling_personnel_Apr;
+        private System.Windows.Forms.TextBox selling_depreciation_Apr;
+        private System.Windows.Forms.TextBox manufacturing_personnel_Jun;
+        private System.Windows.Forms.TextBox manufacturing_personnel_Jul;
+        private System.Windows.Forms.TextBox manufacturing_personnel_Aug;
+        private System.Windows.Forms.TextBox manufacturing_personnel_Sep;
+        private System.Windows.Forms.TextBox manufacturing_personnel_Oct;
+        private System.Windows.Forms.TextBox manufacturing_personnel_Nov;
+        private System.Windows.Forms.TextBox manufacturing_personnel_Dec;
+        private System.Windows.Forms.TextBox manufacturing_personnel_Jan;
+        private System.Windows.Forms.TextBox manufacturing_personnel_Feb;
+        private System.Windows.Forms.TextBox manufacturing_personnel_Mar;
+        private System.Windows.Forms.TextBox manufacturing_depreciation_Jun;
+        private System.Windows.Forms.TextBox manufacturing_depreciation_Jul;
+        private System.Windows.Forms.TextBox manufacturing_depreciation_Aug;
+        private System.Windows.Forms.TextBox manufacturing_depreciation_Sep;
+        private System.Windows.Forms.TextBox manufacturing_depreciation_Oct;
+        private System.Windows.Forms.TextBox manufacturing_depreciation_Nov;
+        private System.Windows.Forms.TextBox manufacturing_depreciation_Dec;
+        private System.Windows.Forms.TextBox manufacturing_depreciation_Jan;
+        private System.Windows.Forms.TextBox manufacturing_depreciation_Feb;
+        private System.Windows.Forms.TextBox manufacturing_depreciation_Mar;
+        private System.Windows.Forms.TextBox manufacturing_rent_Jun;
+        private System.Windows.Forms.TextBox manufacturing_rent_Jul;
+        private System.Windows.Forms.TextBox manufacturing_rent_Aug;
+        private System.Windows.Forms.TextBox manufacturing_rent_Sep;
+        private System.Windows.Forms.TextBox manufacturing_rent_Oct;
+        private System.Windows.Forms.TextBox manufacturing_rent_Nov;
+        private System.Windows.Forms.TextBox manufacturing_rent_Dec;
+        private System.Windows.Forms.TextBox manufacturing_rent_Jan;
+        private System.Windows.Forms.TextBox manufacturing_rent_Feb;
+        private System.Windows.Forms.TextBox manufacturing_rent_Mar;
+        private System.Windows.Forms.TextBox manufacturing_repair_Jun;
+        private System.Windows.Forms.TextBox manufacturing_repair_Jul;
+        private System.Windows.Forms.TextBox manufacturing_repair_Aug;
+        private System.Windows.Forms.TextBox manufacturing_repair_Sep;
+        private System.Windows.Forms.TextBox manufacturing_repair_Oct;
+        private System.Windows.Forms.TextBox manufacturing_repair_Nov;
+        private System.Windows.Forms.TextBox manufacturing_repair_Dec;
+        private System.Windows.Forms.TextBox manufacturing_repair_Jan;
+        private System.Windows.Forms.TextBox manufacturing_repair_Feb;
+        private System.Windows.Forms.TextBox manufacturing_repair_Mar;
+        private System.Windows.Forms.TextBox manufacturing_stock_Jun;
+        private System.Windows.Forms.TextBox manufacturing_stock_Jul;
+        private System.Windows.Forms.TextBox manufacturing_stock_Aug;
+        private System.Windows.Forms.TextBox manufacturing_stock_Sep;
+        private System.Windows.Forms.TextBox manufacturing_stock_Oct;
+        private System.Windows.Forms.TextBox manufacturing_stock_Nov;
+        private System.Windows.Forms.TextBox manufacturing_stock_Dec;
+        private System.Windows.Forms.TextBox manufacturing_stock_Jan;
+        private System.Windows.Forms.TextBox manufacturing_stock_Feb;
+        private System.Windows.Forms.TextBox manufacturing_stock_Mar;
+        private System.Windows.Forms.TextBox manufacturing_other_Jun;
+        private System.Windows.Forms.TextBox manufacturing_other_Jul;
+        private System.Windows.Forms.TextBox manufacturing_other_Aug;
+        private System.Windows.Forms.TextBox manufacturing_other_Sep;
+        private System.Windows.Forms.TextBox manufacturing_other_Oct;
+        private System.Windows.Forms.TextBox manufacturing_other_Nov;
+        private System.Windows.Forms.TextBox manufacturing_other_Dec;
+        private System.Windows.Forms.TextBox manufacturing_other_Jan;
+        private System.Windows.Forms.TextBox manufacturing_other_Feb;
+        private System.Windows.Forms.TextBox manufacturing_other_Mar;
+        private System.Windows.Forms.TextBox selling_personnel_Jun;
+        private System.Windows.Forms.TextBox selling_personnel_Jul;
+        private System.Windows.Forms.TextBox selling_personnel_Aug;
+        private System.Windows.Forms.TextBox selling_personnel_Sep;
+        private System.Windows.Forms.TextBox selling_personnel_Oct;
+        private System.Windows.Forms.TextBox selling_personnel_Nov;
+        private System.Windows.Forms.TextBox selling_personnel_Dec;
+        private System.Windows.Forms.TextBox selling_personnel_Jan;
+        private System.Windows.Forms.TextBox selling_personnel_Feb;
+        private System.Windows.Forms.TextBox selling_personnel_Mar;
+        private System.Windows.Forms.TextBox selling_depreciation_Mar;
+        private System.Windows.Forms.TextBox selling_depreciation_Feb;
+        private System.Windows.Forms.TextBox selling_depreciation_Jan;
+        private System.Windows.Forms.TextBox selling_depreciation_Dec;
+        private System.Windows.Forms.TextBox selling_depreciation_Nov;
+        private System.Windows.Forms.TextBox selling_depreciation_Oct;
+        private System.Windows.Forms.TextBox selling_depreciation_Sep;
+        private System.Windows.Forms.TextBox selling_depreciation_Aug;
+        private System.Windows.Forms.TextBox selling_depreciation_Jul;
+        private System.Windows.Forms.TextBox selling_depreciation_Jun;
+        private System.Windows.Forms.TextBox selling_other_Apr;
+        private System.Windows.Forms.TextBox operating_expenses_Apr;
+        private System.Windows.Forms.TextBox selling_other_May;
+        private System.Windows.Forms.TextBox selling_other_Jun;
+        private System.Windows.Forms.TextBox selling_other_Jul;
+        private System.Windows.Forms.TextBox selling_other_Aug;
+        private System.Windows.Forms.TextBox selling_other_Sep;
+        private System.Windows.Forms.TextBox selling_other_Oct;
+        private System.Windows.Forms.TextBox selling_other_Nov;
+        private System.Windows.Forms.TextBox selling_other_Dec;
+        private System.Windows.Forms.TextBox selling_other_Jan;
+        private System.Windows.Forms.TextBox selling_other_Feb;
+        private System.Windows.Forms.TextBox selling_other_Mar;
+        private System.Windows.Forms.TextBox operating_expenses_May;
+        private System.Windows.Forms.TextBox operating_expenses_Jun;
+        private System.Windows.Forms.TextBox operating_expenses_Jul;
+        private System.Windows.Forms.TextBox operating_expenses_Aug;
+        private System.Windows.Forms.TextBox operating_expenses_Sep;
+        private System.Windows.Forms.TextBox operating_expenses_Oct;
+        private System.Windows.Forms.TextBox operating_expenses_Nov;
+        private System.Windows.Forms.TextBox operating_expenses_Dec;
+        private System.Windows.Forms.TextBox operating_expenses_Jan;
+        private System.Windows.Forms.TextBox operating_expenses_Feb;
+        private System.Windows.Forms.TextBox operating_expenses_Mar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label manufacturing_personnel_total;
+        private System.Windows.Forms.Label manufacturing_depreciation_total;
+        private System.Windows.Forms.Label manufacturing_rent_total;
+        private System.Windows.Forms.Label manufacturing_repair_total;
+        private System.Windows.Forms.Label manufacturing_stock_total;
+        private System.Windows.Forms.Label manufacturing_other_total;
+        private System.Windows.Forms.Label selling_personnel_total;
+        private System.Windows.Forms.Label selling_depreciation_total;
+        private System.Windows.Forms.Label selling_other_total;
+        private System.Windows.Forms.Label operating_expenses_total;
+        private System.Windows.Forms.Label total_Mar;
+        private System.Windows.Forms.Label total_Feb;
+        private System.Windows.Forms.Label total_Jan;
+        private System.Windows.Forms.Label total_Dec;
+        private System.Windows.Forms.Label total_Nov;
+        private System.Windows.Forms.Label total_Oct;
+        private System.Windows.Forms.Label total_Sep;
+        private System.Windows.Forms.Label total_Aug;
+        private System.Windows.Forms.Label total_Jul;
+        private System.Windows.Forms.Label total_Jun;
+        private System.Windows.Forms.Label total_May;
+        private System.Windows.Forms.Label total_Apr;
+        private System.Windows.Forms.Label total;
 
 
     }

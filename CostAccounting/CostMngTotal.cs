@@ -16,6 +16,7 @@ namespace CostAccounting
     {
         public int year { get; set; }
         public int category { get; set; }
+        public int month { get; set; }
         public decimal manufacturing_personnel { get; set; }
         public decimal manufacturing_depreciation { get; set; }
         public decimal manufacturing_rent { get; set; }

@@ -20,6 +20,7 @@ namespace CostAccounting
         {
             InitializeComponent();
             base.ChecBoxControls = this.groupMonth.Controls;
+            base.setCategory(Program.judgeCategory(radioBudget, radioActual));
         }
 
         /*************************************************************
@@ -89,11 +90,12 @@ namespace CostAccounting
             // 前回集計時の表示内容をクリア
             dataGridView.Rows.Clear();
 
-            // データの設定
+            // 品種別または取り引き先別の集計データを設定する
             Const.CATEGORY_TYPE category = Program.judgeCategory(radioBudget, radioActual);
+
             if (radioItem.Checked)
             {
-                setData_Item(category);
+                setData_Item();
                 dataGridViewHeader.Columns[1].Visible = true;
                 dataGridView.Columns[1].Visible = true;
                 dataGridViewTotal.Columns[1].Visible = true;
@@ -103,7 +105,7 @@ namespace CostAccounting
             }
             else if (radioSuppliers.Checked)
             {
-                setData_Supplier(category);
+                setData_Supplier();
                 dataGridViewHeader.Columns[1].Visible = false;
                 dataGridView.Columns[1].Visible = false;
                 dataGridViewTotal.Columns[1].Visible = false;
@@ -111,7 +113,9 @@ namespace CostAccounting
                 dataGridView.Columns[2].Visible = true;
                 dataGridViewTotal.Columns[2].Visible = true;
             }
-            setData_TotalRow(category);
+
+            // 固定費データを設定する
+            setDataFixedCost();
 
             // 設定内容で計算する
             base.calcAll();
@@ -123,8 +127,10 @@ namespace CostAccounting
         /*************************************************************
          * データを画面に設定（品種でのグルーピング）
          *************************************************************/
-        private void setData_Item(Const.CATEGORY_TYPE category)
+        private void setData_Item()
         {
+            Const.CATEGORY_TYPE category = Program.judgeCategory(radioBudget, radioActual);
+
             using (var context = new CostAccountingEntities())
             {
                 var target = from t_supplier in context.ProductSupplier
@@ -220,8 +226,10 @@ namespace CostAccounting
         /*************************************************************
          * データを画面に設定（取引先でのグルーピング）
          *************************************************************/
-        private void setData_Supplier(Const.CATEGORY_TYPE category)
+        private void setData_Supplier()
         {
+            Const.CATEGORY_TYPE category = Program.judgeCategory(radioBudget, radioActual);
+
             using (var context = new CostAccountingEntities())
             {
                 var target = from t_supplier in context.ProductSupplier
@@ -230,8 +238,8 @@ namespace CostAccounting
                              join m_supplier in context.Supplier
                                   on new { t_supplier.year, code = t_supplier.supplier_code } equals new { m_supplier.year, m_supplier.code }
                              join t_product in context.Product
-                                  on new { t_supplier.year, code = t_supplier.product_code, t_supplier.category, t_supplier.type } 
-                                       equals 
+                                  on new { t_supplier.year, code = t_supplier.product_code, t_supplier.category, t_supplier.type }
+                                       equals
                                      new { t_product.year, t_product.code, t_product.category, t_product.type }
                              join m_item in context.Item
                                   on new { t_product.year, code = t_product.item_code } equals new { m_item.year, m_item.code }
@@ -316,45 +324,12 @@ namespace CostAccounting
         }
 
         /*************************************************************
-         * 合計行のデータ値を画面に設定
+         * 固定費データを画面に設定
          *************************************************************/
-        public void setData_TotalRow(Const.CATEGORY_TYPE category)
+        private new void setDataFixedCost()
         {
-
-            using (var context = new CostAccountingEntities())
-            {
-
-                var total = from t in context.CostMngTotal
-                            where t.year.Equals(Const.TARGET_YEAR)
-                               && t.category.Equals((int)category)
-                            select t;
-                if (total.Count() > decimal.Zero)
-                {
-                    dataGridViewTotal.Rows[0].Cells[40].Value = total.First().manufacturing_personnel.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[41].Value = total.First().manufacturing_depreciation.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[42].Value = total.First().manufacturing_rent.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[43].Value = total.First().manufacturing_repair.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[44].Value = total.First().manufacturing_stock.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[45].Value = total.First().manufacturing_other.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[46].Value = total.First().selling_personnel.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[47].Value = total.First().selling_depreciation.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[48].Value = total.First().selling_other.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[49].Value = total.First().operating_expenses.ToString("N");
-                }
-                else
-                {
-                    dataGridViewTotal.Rows[0].Cells[40].Value = decimal.Zero.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[41].Value = decimal.Zero.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[42].Value = decimal.Zero.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[43].Value = decimal.Zero.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[44].Value = decimal.Zero.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[45].Value = decimal.Zero.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[46].Value = decimal.Zero.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[47].Value = decimal.Zero.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[48].Value = decimal.Zero.ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[49].Value = decimal.Zero.ToString("N");
-                }
-            }
+            base.setCategory(Program.judgeCategory(radioBudget, radioActual));
+            base.setDataFixedCost();
         }
 
         /*************************************************************
@@ -362,6 +337,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnAllCheck_Click(object sender, EventArgs e)
         {
+            base.setCategory(Program.judgeCategory(radioBudget, radioActual));
             base.changeCheckBoxState(groupMonth.Controls, true);
         }
 
@@ -370,6 +346,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnAllClear_Click(object sender, EventArgs e)
         {
+            base.setCategory(Program.judgeCategory(radioBudget, radioActual));
             base.changeCheckBoxState(groupMonth.Controls, false);
         }
 
@@ -378,6 +355,7 @@ namespace CostAccounting
          *************************************************************/
         private new void checkBox_CheckedChanged(object sender, EventArgs e)
         {
+            base.setCategory(Program.judgeCategory(radioBudget, radioActual));
             base.checkBox_CheckedChanged(sender, e);
         }
 

@@ -40,18 +40,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewHeader = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -173,6 +163,29 @@
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAppend = new System.Windows.Forms.Button();
             this.dataGridViewTotal = new System.Windows.Forms.DataGridView();
+            this.labelFilePath = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.targetMonth = new System.Windows.Forms.NumericUpDown();
+            this.btnFileOpen = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.groupMonth = new System.Windows.Forms.GroupBox();
+            this.btnAllClear = new System.Windows.Forms.Button();
+            this.btnAllCheck = new System.Windows.Forms.Button();
+            this.checkBoxMar = new System.Windows.Forms.CheckBox();
+            this.checkBoxFeb = new System.Windows.Forms.CheckBox();
+            this.checkBoxJan = new System.Windows.Forms.CheckBox();
+            this.checkBoxDec = new System.Windows.Forms.CheckBox();
+            this.checkBoxNov = new System.Windows.Forms.CheckBox();
+            this.checkBoxOct = new System.Windows.Forms.CheckBox();
+            this.checkBoxSep = new System.Windows.Forms.CheckBox();
+            this.checkBoxAug = new System.Windows.Forms.CheckBox();
+            this.checkBoxJul = new System.Windows.Forms.CheckBox();
+            this.checkBoxJun = new System.Windows.Forms.CheckBox();
+            this.checkBoxMay = new System.Windows.Forms.CheckBox();
+            this.checkBoxApr = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnFixedCost = new System.Windows.Forms.Button();
             this.dgvMaterialCostNameTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvMaterialCostQuantityTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvMaterialCostPriceTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -230,28 +243,6 @@
             this.Column114 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column115 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column116 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labelFilePath = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.targetMonth = new System.Windows.Forms.NumericUpDown();
-            this.btnFileOpen = new System.Windows.Forms.Button();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.groupMonth = new System.Windows.Forms.GroupBox();
-            this.btnAllClear = new System.Windows.Forms.Button();
-            this.btnAllCheck = new System.Windows.Forms.Button();
-            this.checkBoxMar = new System.Windows.Forms.CheckBox();
-            this.checkBoxFeb = new System.Windows.Forms.CheckBox();
-            this.checkBoxJan = new System.Windows.Forms.CheckBox();
-            this.checkBoxDec = new System.Windows.Forms.CheckBox();
-            this.checkBoxNov = new System.Windows.Forms.CheckBox();
-            this.checkBoxOct = new System.Windows.Forms.CheckBox();
-            this.checkBoxSep = new System.Windows.Forms.CheckBox();
-            this.checkBoxAug = new System.Windows.Forms.CheckBox();
-            this.checkBoxJul = new System.Windows.Forms.CheckBox();
-            this.checkBoxJun = new System.Windows.Forms.CheckBox();
-            this.checkBoxMay = new System.Windows.Forms.CheckBox();
-            this.checkBoxApr = new System.Windows.Forms.CheckBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHeader)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTotal)).BeginInit();
@@ -1241,21 +1232,21 @@
             this.Column114,
             this.Column115,
             this.Column116});
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTotal.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTotal.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewTotal.Location = new System.Drawing.Point(12, 604);
             this.dataGridViewTotal.MultiSelect = false;
             this.dataGridViewTotal.Name = "dataGridViewTotal";
             this.dataGridViewTotal.RowHeadersVisible = false;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewTotal.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewTotal.RowsDefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewTotal.RowTemplate.Height = 21;
             this.dataGridViewTotal.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridViewTotal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
@@ -1266,6 +1257,289 @@
             this.dataGridViewTotal.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellEnter);
             this.dataGridViewTotal.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewTotal_CellPainting);
             this.dataGridViewTotal.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView_EditingControlShowing);
+            // 
+            // labelFilePath
+            // 
+            this.labelFilePath.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelFilePath.Location = new System.Drawing.Point(345, 77);
+            this.labelFilePath.Name = "labelFilePath";
+            this.labelFilePath.Size = new System.Drawing.Size(908, 18);
+            this.labelFilePath.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 78);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 15);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "登録月";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(244, 78);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(95, 15);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "選択したファイル：";
+            // 
+            // targetMonth
+            // 
+            this.targetMonth.Location = new System.Drawing.Point(61, 76);
+            this.targetMonth.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.targetMonth.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.targetMonth.Name = "targetMonth";
+            this.targetMonth.Size = new System.Drawing.Size(48, 23);
+            this.targetMonth.TabIndex = 3;
+            this.targetMonth.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // btnFileOpen
+            // 
+            this.btnFileOpen.Location = new System.Drawing.Point(126, 74);
+            this.btnFileOpen.Name = "btnFileOpen";
+            this.btnFileOpen.Size = new System.Drawing.Size(112, 23);
+            this.btnFileOpen.TabIndex = 4;
+            this.btnFileOpen.Text = "CSVファイル参照";
+            this.btnFileOpen.UseVisualStyleBackColor = true;
+            this.btnFileOpen.Click += new System.EventHandler(this.btnFileOpen_Click);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.Filter = "CSVファイル|*.csv";
+            this.openFileDialog.Title = "CSVファイルの選択";
+            // 
+            // groupMonth
+            // 
+            this.groupMonth.Controls.Add(this.btnAllClear);
+            this.groupMonth.Controls.Add(this.btnAllCheck);
+            this.groupMonth.Controls.Add(this.checkBoxMar);
+            this.groupMonth.Controls.Add(this.checkBoxFeb);
+            this.groupMonth.Controls.Add(this.checkBoxJan);
+            this.groupMonth.Controls.Add(this.checkBoxDec);
+            this.groupMonth.Controls.Add(this.checkBoxNov);
+            this.groupMonth.Controls.Add(this.checkBoxOct);
+            this.groupMonth.Controls.Add(this.checkBoxSep);
+            this.groupMonth.Controls.Add(this.checkBoxAug);
+            this.groupMonth.Controls.Add(this.checkBoxJul);
+            this.groupMonth.Controls.Add(this.checkBoxJun);
+            this.groupMonth.Controls.Add(this.checkBoxMay);
+            this.groupMonth.Controls.Add(this.checkBoxApr);
+            this.groupMonth.Location = new System.Drawing.Point(12, 10);
+            this.groupMonth.Name = "groupMonth";
+            this.groupMonth.Size = new System.Drawing.Size(796, 55);
+            this.groupMonth.TabIndex = 0;
+            this.groupMonth.TabStop = false;
+            this.groupMonth.Text = "表示対象月";
+            // 
+            // btnAllClear
+            // 
+            this.btnAllClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAllClear.Location = new System.Drawing.Point(708, 21);
+            this.btnAllClear.Name = "btnAllClear";
+            this.btnAllClear.Size = new System.Drawing.Size(75, 23);
+            this.btnAllClear.TabIndex = 13;
+            this.btnAllClear.Text = "全て外す";
+            this.btnAllClear.UseVisualStyleBackColor = true;
+            this.btnAllClear.Click += new System.EventHandler(this.btnAllClear_Click);
+            // 
+            // btnAllCheck
+            // 
+            this.btnAllCheck.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAllCheck.Location = new System.Drawing.Point(627, 21);
+            this.btnAllCheck.Name = "btnAllCheck";
+            this.btnAllCheck.Size = new System.Drawing.Size(75, 23);
+            this.btnAllCheck.TabIndex = 12;
+            this.btnAllCheck.Text = "全てチェック";
+            this.btnAllCheck.UseVisualStyleBackColor = true;
+            this.btnAllCheck.Click += new System.EventHandler(this.btnAllCheck_Click);
+            // 
+            // checkBoxMar
+            // 
+            this.checkBoxMar.AutoSize = true;
+            this.checkBoxMar.Checked = true;
+            this.checkBoxMar.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxMar.Location = new System.Drawing.Point(576, 25);
+            this.checkBoxMar.Name = "checkBoxMar";
+            this.checkBoxMar.Size = new System.Drawing.Size(45, 19);
+            this.checkBoxMar.TabIndex = 11;
+            this.checkBoxMar.Text = "3月";
+            this.checkBoxMar.UseVisualStyleBackColor = true;
+            this.checkBoxMar.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxFeb
+            // 
+            this.checkBoxFeb.AutoSize = true;
+            this.checkBoxFeb.Checked = true;
+            this.checkBoxFeb.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxFeb.Location = new System.Drawing.Point(527, 25);
+            this.checkBoxFeb.Name = "checkBoxFeb";
+            this.checkBoxFeb.Size = new System.Drawing.Size(45, 19);
+            this.checkBoxFeb.TabIndex = 10;
+            this.checkBoxFeb.Text = "2月";
+            this.checkBoxFeb.UseVisualStyleBackColor = true;
+            this.checkBoxFeb.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxJan
+            // 
+            this.checkBoxJan.AutoSize = true;
+            this.checkBoxJan.Checked = true;
+            this.checkBoxJan.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxJan.Location = new System.Drawing.Point(478, 25);
+            this.checkBoxJan.Name = "checkBoxJan";
+            this.checkBoxJan.Size = new System.Drawing.Size(45, 19);
+            this.checkBoxJan.TabIndex = 9;
+            this.checkBoxJan.Text = "1月";
+            this.checkBoxJan.UseVisualStyleBackColor = true;
+            this.checkBoxJan.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxDec
+            // 
+            this.checkBoxDec.AutoSize = true;
+            this.checkBoxDec.Checked = true;
+            this.checkBoxDec.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxDec.Location = new System.Drawing.Point(422, 25);
+            this.checkBoxDec.Name = "checkBoxDec";
+            this.checkBoxDec.Size = new System.Drawing.Size(52, 19);
+            this.checkBoxDec.TabIndex = 8;
+            this.checkBoxDec.Text = "12月";
+            this.checkBoxDec.UseVisualStyleBackColor = true;
+            this.checkBoxDec.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxNov
+            // 
+            this.checkBoxNov.AutoSize = true;
+            this.checkBoxNov.Checked = true;
+            this.checkBoxNov.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxNov.Location = new System.Drawing.Point(366, 25);
+            this.checkBoxNov.Name = "checkBoxNov";
+            this.checkBoxNov.Size = new System.Drawing.Size(52, 19);
+            this.checkBoxNov.TabIndex = 7;
+            this.checkBoxNov.Text = "11月";
+            this.checkBoxNov.UseVisualStyleBackColor = true;
+            this.checkBoxNov.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxOct
+            // 
+            this.checkBoxOct.AutoSize = true;
+            this.checkBoxOct.Checked = true;
+            this.checkBoxOct.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxOct.Location = new System.Drawing.Point(310, 25);
+            this.checkBoxOct.Name = "checkBoxOct";
+            this.checkBoxOct.Size = new System.Drawing.Size(52, 19);
+            this.checkBoxOct.TabIndex = 6;
+            this.checkBoxOct.Text = "10月";
+            this.checkBoxOct.UseVisualStyleBackColor = true;
+            this.checkBoxOct.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxSep
+            // 
+            this.checkBoxSep.AutoSize = true;
+            this.checkBoxSep.Checked = true;
+            this.checkBoxSep.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxSep.Location = new System.Drawing.Point(261, 25);
+            this.checkBoxSep.Name = "checkBoxSep";
+            this.checkBoxSep.Size = new System.Drawing.Size(45, 19);
+            this.checkBoxSep.TabIndex = 5;
+            this.checkBoxSep.Text = "9月";
+            this.checkBoxSep.UseVisualStyleBackColor = true;
+            this.checkBoxSep.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxAug
+            // 
+            this.checkBoxAug.AutoSize = true;
+            this.checkBoxAug.Checked = true;
+            this.checkBoxAug.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxAug.Location = new System.Drawing.Point(212, 25);
+            this.checkBoxAug.Name = "checkBoxAug";
+            this.checkBoxAug.Size = new System.Drawing.Size(45, 19);
+            this.checkBoxAug.TabIndex = 4;
+            this.checkBoxAug.Text = "8月";
+            this.checkBoxAug.UseVisualStyleBackColor = true;
+            this.checkBoxAug.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxJul
+            // 
+            this.checkBoxJul.AutoSize = true;
+            this.checkBoxJul.Checked = true;
+            this.checkBoxJul.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxJul.Location = new System.Drawing.Point(163, 25);
+            this.checkBoxJul.Name = "checkBoxJul";
+            this.checkBoxJul.Size = new System.Drawing.Size(45, 19);
+            this.checkBoxJul.TabIndex = 3;
+            this.checkBoxJul.Text = "7月";
+            this.checkBoxJul.UseVisualStyleBackColor = true;
+            this.checkBoxJul.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxJun
+            // 
+            this.checkBoxJun.AutoSize = true;
+            this.checkBoxJun.Checked = true;
+            this.checkBoxJun.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxJun.Location = new System.Drawing.Point(114, 25);
+            this.checkBoxJun.Name = "checkBoxJun";
+            this.checkBoxJun.Size = new System.Drawing.Size(45, 19);
+            this.checkBoxJun.TabIndex = 2;
+            this.checkBoxJun.Text = "6月";
+            this.checkBoxJun.UseVisualStyleBackColor = true;
+            this.checkBoxJun.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxMay
+            // 
+            this.checkBoxMay.AutoSize = true;
+            this.checkBoxMay.Checked = true;
+            this.checkBoxMay.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxMay.Location = new System.Drawing.Point(65, 25);
+            this.checkBoxMay.Name = "checkBoxMay";
+            this.checkBoxMay.Size = new System.Drawing.Size(45, 19);
+            this.checkBoxMay.TabIndex = 1;
+            this.checkBoxMay.Text = "5月";
+            this.checkBoxMay.UseVisualStyleBackColor = true;
+            this.checkBoxMay.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // checkBoxApr
+            // 
+            this.checkBoxApr.AutoSize = true;
+            this.checkBoxApr.Checked = true;
+            this.checkBoxApr.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBoxApr.Location = new System.Drawing.Point(16, 25);
+            this.checkBoxApr.Name = "checkBoxApr";
+            this.checkBoxApr.Size = new System.Drawing.Size(45, 19);
+            this.checkBoxApr.TabIndex = 0;
+            this.checkBoxApr.Text = "4月";
+            this.checkBoxApr.UseVisualStyleBackColor = true;
+            this.checkBoxApr.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label2.Font = new System.Drawing.Font("Meiryo UI", 0.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Location = new System.Drawing.Point(12, 70);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(1243, 2);
+            this.label2.TabIndex = 1;
+            // 
+            // btnFixedCost
+            // 
+            this.btnFixedCost.Location = new System.Drawing.Point(1146, 42);
+            this.btnFixedCost.Name = "btnFixedCost";
+            this.btnFixedCost.Size = new System.Drawing.Size(107, 23);
+            this.btnFixedCost.TabIndex = 11;
+            this.btnFixedCost.Text = "固定費登録";
+            this.btnFixedCost.UseVisualStyleBackColor = true;
+            this.btnFixedCost.Click += new System.EventHandler(this.btnFixedCost_Click);
             // 
             // dgvMaterialCostNameTotal
             // 
@@ -1563,84 +1837,72 @@
             // 
             // Column100
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            this.Column100.DefaultCellStyle = dataGridViewCellStyle13;
             this.Column100.HeaderText = "Column41";
             this.Column100.Name = "Column100";
+            this.Column100.ReadOnly = true;
             this.Column100.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column101
             // 
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column101.DefaultCellStyle = dataGridViewCellStyle14;
             this.Column101.HeaderText = "Column42";
             this.Column101.Name = "Column101";
+            this.Column101.ReadOnly = true;
             this.Column101.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column102
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column102.DefaultCellStyle = dataGridViewCellStyle15;
             this.Column102.HeaderText = "Column43";
             this.Column102.Name = "Column102";
+            this.Column102.ReadOnly = true;
             this.Column102.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column103
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column103.DefaultCellStyle = dataGridViewCellStyle16;
             this.Column103.HeaderText = "Column44";
             this.Column103.Name = "Column103";
+            this.Column103.ReadOnly = true;
             this.Column103.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column104
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column104.DefaultCellStyle = dataGridViewCellStyle17;
             this.Column104.HeaderText = "Column45";
             this.Column104.Name = "Column104";
+            this.Column104.ReadOnly = true;
             this.Column104.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column105
             // 
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column105.DefaultCellStyle = dataGridViewCellStyle18;
             this.Column105.HeaderText = "Column46";
             this.Column105.Name = "Column105";
+            this.Column105.ReadOnly = true;
             this.Column105.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column106
             // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column106.DefaultCellStyle = dataGridViewCellStyle19;
             this.Column106.HeaderText = "Column47";
             this.Column106.Name = "Column106";
+            this.Column106.ReadOnly = true;
             this.Column106.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column107
             // 
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column107.DefaultCellStyle = dataGridViewCellStyle20;
             this.Column107.HeaderText = "Column48";
             this.Column107.Name = "Column107";
+            this.Column107.ReadOnly = true;
             this.Column107.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column108
             // 
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column108.DefaultCellStyle = dataGridViewCellStyle21;
             this.Column108.HeaderText = "Column49";
             this.Column108.Name = "Column108";
+            this.Column108.ReadOnly = true;
             this.Column108.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column109
             // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.Column109.DefaultCellStyle = dataGridViewCellStyle22;
             this.Column109.HeaderText = "Column50";
             this.Column109.Name = "Column109";
+            this.Column109.ReadOnly = true;
             this.Column109.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // Column110
@@ -1692,284 +1954,12 @@
             this.Column116.ReadOnly = true;
             this.Column116.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // labelFilePath
-            // 
-            this.labelFilePath.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.labelFilePath.Location = new System.Drawing.Point(345, 77);
-            this.labelFilePath.Name = "labelFilePath";
-            this.labelFilePath.Size = new System.Drawing.Size(908, 18);
-            this.labelFilePath.TabIndex = 6;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 78);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "登録月";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(244, 78);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 15);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "選択したファイル：";
-            // 
-            // targetMonth
-            // 
-            this.targetMonth.Location = new System.Drawing.Point(61, 76);
-            this.targetMonth.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.targetMonth.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.targetMonth.Name = "targetMonth";
-            this.targetMonth.Size = new System.Drawing.Size(48, 23);
-            this.targetMonth.TabIndex = 3;
-            this.targetMonth.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // btnFileOpen
-            // 
-            this.btnFileOpen.Location = new System.Drawing.Point(126, 74);
-            this.btnFileOpen.Name = "btnFileOpen";
-            this.btnFileOpen.Size = new System.Drawing.Size(112, 23);
-            this.btnFileOpen.TabIndex = 4;
-            this.btnFileOpen.Text = "CSVファイル参照";
-            this.btnFileOpen.UseVisualStyleBackColor = true;
-            this.btnFileOpen.Click += new System.EventHandler(this.btnFileOpen_Click);
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.Filter = "CSVファイル|*.csv";
-            this.openFileDialog.Title = "CSVファイルの選択";
-            // 
-            // groupMonth
-            // 
-            this.groupMonth.Controls.Add(this.btnAllClear);
-            this.groupMonth.Controls.Add(this.btnAllCheck);
-            this.groupMonth.Controls.Add(this.checkBoxMar);
-            this.groupMonth.Controls.Add(this.checkBoxFeb);
-            this.groupMonth.Controls.Add(this.checkBoxJan);
-            this.groupMonth.Controls.Add(this.checkBoxDec);
-            this.groupMonth.Controls.Add(this.checkBoxNov);
-            this.groupMonth.Controls.Add(this.checkBoxOct);
-            this.groupMonth.Controls.Add(this.checkBoxSep);
-            this.groupMonth.Controls.Add(this.checkBoxAug);
-            this.groupMonth.Controls.Add(this.checkBoxJul);
-            this.groupMonth.Controls.Add(this.checkBoxJun);
-            this.groupMonth.Controls.Add(this.checkBoxMay);
-            this.groupMonth.Controls.Add(this.checkBoxApr);
-            this.groupMonth.Location = new System.Drawing.Point(12, 10);
-            this.groupMonth.Name = "groupMonth";
-            this.groupMonth.Size = new System.Drawing.Size(796, 55);
-            this.groupMonth.TabIndex = 0;
-            this.groupMonth.TabStop = false;
-            this.groupMonth.Text = "表示対象月";
-            // 
-            // btnAllClear
-            // 
-            this.btnAllClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAllClear.Location = new System.Drawing.Point(708, 21);
-            this.btnAllClear.Name = "btnAllClear";
-            this.btnAllClear.Size = new System.Drawing.Size(75, 23);
-            this.btnAllClear.TabIndex = 13;
-            this.btnAllClear.Text = "全て外す";
-            this.btnAllClear.UseVisualStyleBackColor = true;
-            this.btnAllClear.Click += new System.EventHandler(this.btnAllClear_Click);
-            // 
-            // btnAllCheck
-            // 
-            this.btnAllCheck.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAllCheck.Location = new System.Drawing.Point(627, 21);
-            this.btnAllCheck.Name = "btnAllCheck";
-            this.btnAllCheck.Size = new System.Drawing.Size(75, 23);
-            this.btnAllCheck.TabIndex = 12;
-            this.btnAllCheck.Text = "全てチェック";
-            this.btnAllCheck.UseVisualStyleBackColor = true;
-            this.btnAllCheck.Click += new System.EventHandler(this.btnAllCheck_Click);
-            // 
-            // checkBoxMar
-            // 
-            this.checkBoxMar.AutoSize = true;
-            this.checkBoxMar.Checked = true;
-            this.checkBoxMar.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxMar.Location = new System.Drawing.Point(576, 25);
-            this.checkBoxMar.Name = "checkBoxMar";
-            this.checkBoxMar.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxMar.TabIndex = 11;
-            this.checkBoxMar.Text = "3月";
-            this.checkBoxMar.UseVisualStyleBackColor = true;
-            this.checkBoxMar.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxFeb
-            // 
-            this.checkBoxFeb.AutoSize = true;
-            this.checkBoxFeb.Checked = true;
-            this.checkBoxFeb.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxFeb.Location = new System.Drawing.Point(527, 25);
-            this.checkBoxFeb.Name = "checkBoxFeb";
-            this.checkBoxFeb.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxFeb.TabIndex = 10;
-            this.checkBoxFeb.Text = "2月";
-            this.checkBoxFeb.UseVisualStyleBackColor = true;
-            this.checkBoxFeb.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxJan
-            // 
-            this.checkBoxJan.AutoSize = true;
-            this.checkBoxJan.Checked = true;
-            this.checkBoxJan.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxJan.Location = new System.Drawing.Point(478, 25);
-            this.checkBoxJan.Name = "checkBoxJan";
-            this.checkBoxJan.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxJan.TabIndex = 9;
-            this.checkBoxJan.Text = "1月";
-            this.checkBoxJan.UseVisualStyleBackColor = true;
-            this.checkBoxJan.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxDec
-            // 
-            this.checkBoxDec.AutoSize = true;
-            this.checkBoxDec.Checked = true;
-            this.checkBoxDec.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxDec.Location = new System.Drawing.Point(422, 25);
-            this.checkBoxDec.Name = "checkBoxDec";
-            this.checkBoxDec.Size = new System.Drawing.Size(52, 19);
-            this.checkBoxDec.TabIndex = 8;
-            this.checkBoxDec.Text = "12月";
-            this.checkBoxDec.UseVisualStyleBackColor = true;
-            this.checkBoxDec.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxNov
-            // 
-            this.checkBoxNov.AutoSize = true;
-            this.checkBoxNov.Checked = true;
-            this.checkBoxNov.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxNov.Location = new System.Drawing.Point(366, 25);
-            this.checkBoxNov.Name = "checkBoxNov";
-            this.checkBoxNov.Size = new System.Drawing.Size(52, 19);
-            this.checkBoxNov.TabIndex = 7;
-            this.checkBoxNov.Text = "11月";
-            this.checkBoxNov.UseVisualStyleBackColor = true;
-            this.checkBoxNov.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxOct
-            // 
-            this.checkBoxOct.AutoSize = true;
-            this.checkBoxOct.Checked = true;
-            this.checkBoxOct.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxOct.Location = new System.Drawing.Point(310, 25);
-            this.checkBoxOct.Name = "checkBoxOct";
-            this.checkBoxOct.Size = new System.Drawing.Size(52, 19);
-            this.checkBoxOct.TabIndex = 6;
-            this.checkBoxOct.Text = "10月";
-            this.checkBoxOct.UseVisualStyleBackColor = true;
-            this.checkBoxOct.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxSep
-            // 
-            this.checkBoxSep.AutoSize = true;
-            this.checkBoxSep.Checked = true;
-            this.checkBoxSep.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxSep.Location = new System.Drawing.Point(261, 25);
-            this.checkBoxSep.Name = "checkBoxSep";
-            this.checkBoxSep.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxSep.TabIndex = 5;
-            this.checkBoxSep.Text = "9月";
-            this.checkBoxSep.UseVisualStyleBackColor = true;
-            this.checkBoxSep.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxAug
-            // 
-            this.checkBoxAug.AutoSize = true;
-            this.checkBoxAug.Checked = true;
-            this.checkBoxAug.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxAug.Location = new System.Drawing.Point(212, 25);
-            this.checkBoxAug.Name = "checkBoxAug";
-            this.checkBoxAug.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxAug.TabIndex = 4;
-            this.checkBoxAug.Text = "8月";
-            this.checkBoxAug.UseVisualStyleBackColor = true;
-            this.checkBoxAug.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxJul
-            // 
-            this.checkBoxJul.AutoSize = true;
-            this.checkBoxJul.Checked = true;
-            this.checkBoxJul.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxJul.Location = new System.Drawing.Point(163, 25);
-            this.checkBoxJul.Name = "checkBoxJul";
-            this.checkBoxJul.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxJul.TabIndex = 3;
-            this.checkBoxJul.Text = "7月";
-            this.checkBoxJul.UseVisualStyleBackColor = true;
-            this.checkBoxJul.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxJun
-            // 
-            this.checkBoxJun.AutoSize = true;
-            this.checkBoxJun.Checked = true;
-            this.checkBoxJun.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxJun.Location = new System.Drawing.Point(114, 25);
-            this.checkBoxJun.Name = "checkBoxJun";
-            this.checkBoxJun.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxJun.TabIndex = 2;
-            this.checkBoxJun.Text = "6月";
-            this.checkBoxJun.UseVisualStyleBackColor = true;
-            this.checkBoxJun.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxMay
-            // 
-            this.checkBoxMay.AutoSize = true;
-            this.checkBoxMay.Checked = true;
-            this.checkBoxMay.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxMay.Location = new System.Drawing.Point(65, 25);
-            this.checkBoxMay.Name = "checkBoxMay";
-            this.checkBoxMay.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxMay.TabIndex = 1;
-            this.checkBoxMay.Text = "5月";
-            this.checkBoxMay.UseVisualStyleBackColor = true;
-            this.checkBoxMay.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // checkBoxApr
-            // 
-            this.checkBoxApr.AutoSize = true;
-            this.checkBoxApr.Checked = true;
-            this.checkBoxApr.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBoxApr.Location = new System.Drawing.Point(16, 25);
-            this.checkBoxApr.Name = "checkBoxApr";
-            this.checkBoxApr.Size = new System.Drawing.Size(45, 19);
-            this.checkBoxApr.TabIndex = 0;
-            this.checkBoxApr.Text = "4月";
-            this.checkBoxApr.UseVisualStyleBackColor = true;
-            this.checkBoxApr.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
-            // 
-            // label2
-            // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Meiryo UI", 0.1F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label2.Location = new System.Drawing.Point(12, 70);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1243, 2);
-            this.label2.TabIndex = 1;
-            // 
             // Form_CostMng_ActualReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 689);
+            this.Controls.Add(this.btnFixedCost);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupMonth);
             this.Controls.Add(this.labelFilePath);
@@ -2062,63 +2052,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column56;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column57;
         private System.Windows.Forms.DataGridView dataGridViewTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaterialCostNameTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaterialCostQuantityTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaterialCostPriceTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaterialCostAmountTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaterialCostKgPerAmountTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaterialCostRatioTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column66;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column67;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column68;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column69;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column70;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column71;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column72;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column73;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column74;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column75;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column76;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column77;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column78;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column79;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column80;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column81;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column82;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column83;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column84;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column85;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column86;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column87;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column88;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column89;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column90;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column91;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column92;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column93;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column94;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column95;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column96;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column97;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column98;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column99;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column100;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column101;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column102;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column103;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column104;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column105;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column106;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column107;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column108;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column109;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column110;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column111;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column112;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column113;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column114;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column115;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column116;
         private System.Windows.Forms.Label labelFilePath;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
@@ -2201,5 +2134,63 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn product_code;
         private System.Windows.Forms.DataGridViewTextBoxColumn supplier_code;
         private System.Windows.Forms.DataGridViewTextBoxColumn type;
+        private System.Windows.Forms.Button btnFixedCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaterialCostNameTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaterialCostQuantityTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaterialCostPriceTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaterialCostAmountTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaterialCostKgPerAmountTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvMaterialCostRatioTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column66;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column67;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column68;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column69;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column70;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column71;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column72;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column73;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column74;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column75;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column76;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column77;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column78;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column79;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column80;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column81;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column82;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column83;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column84;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column85;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column86;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column87;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column88;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column89;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column90;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column91;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column92;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column93;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column94;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column95;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column96;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column97;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column98;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column99;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column100;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column101;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column102;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column103;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column104;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column105;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column106;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column107;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column108;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column109;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column110;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column111;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column112;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column113;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column114;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column115;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column116;
     }
 }

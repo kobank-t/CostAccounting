@@ -26,6 +26,7 @@ namespace CostAccounting
         }
     
         public virtual DbSet<CostMngTotal> CostMngTotal { get; set; }
+        public virtual DbSet<DbSize> DbSize { get; set; }
         public virtual DbSet<Divergence> Divergence { get; set; }
         public virtual DbSet<Fare> Fare { get; set; }
         public virtual DbSet<Item> Item { get; set; }
@@ -44,6 +45,5 @@ namespace CostAccounting
         public virtual DbSet<ProductSupplier> ProductSupplier { get; set; }
         public virtual DbSet<RowMaterial> RowMaterial { get; set; }
         public virtual DbSet<Supplier> Supplier { get; set; }
-        public virtual DbSet<DbSize> DbSize { get; set; }
     }
 }

@@ -9,9 +9,11 @@
           <Key>
             <PropertyRef Name="year" />
             <PropertyRef Name="category" />
+            <PropertyRef Name="month" />
           </Key>
           <Property Name="year" Type="int" Nullable="false" />
           <Property Name="category" Type="int" Nullable="false" />
+          <Property Name="month" Type="int" Nullable="false" />
           <Property Name="manufacturing_personnel" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="manufacturing_depreciation" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="manufacturing_rent" Type="decimal" Precision="10" Scale="2" Nullable="false" />
@@ -415,6 +417,7 @@
       <Schema Namespace="CostAccountingModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="CostAccountingEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CostMngTotal" EntityType="CostAccountingModel.CostMngTotal" />
+          <EntitySet Name="DbSize" EntityType="CostAccountingModel.DbSize" />
           <EntitySet Name="Divergence" EntityType="CostAccountingModel.Divergence" />
           <EntitySet Name="Fare" EntityType="CostAccountingModel.Fare" />
           <EntitySet Name="Item" EntityType="CostAccountingModel.Item" />
@@ -433,15 +436,16 @@
           <EntitySet Name="ProductSupplier" EntityType="CostAccountingModel.ProductSupplier" />
           <EntitySet Name="RowMaterial" EntityType="CostAccountingModel.RowMaterial" />
           <EntitySet Name="Supplier" EntityType="CostAccountingModel.Supplier" />
-          <EntitySet Name="DbSize" EntityType="CostAccountingModel.DbSize" />
         </EntityContainer>
         <EntityType Name="CostMngTotal">
           <Key>
             <PropertyRef Name="year" />
             <PropertyRef Name="category" />
+            <PropertyRef Name="month" />
           </Key>
           <Property Name="year" Type="Int32" Nullable="false" />
           <Property Name="category" Type="Int32" Nullable="false" />
+          <Property Name="month" Type="Int32" Nullable="false" />
           <Property Name="manufacturing_personnel" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="manufacturing_depreciation" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="manufacturing_rent" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
@@ -455,6 +459,19 @@
           <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="DbSize">
+          <Key>
+            <PropertyRef Name="year" />
+            <PropertyRef Name="month" />
+            <PropertyRef Name="daytime" />
+          </Key>
+          <Property Name="year" Type="Int32" Nullable="false" />
+          <Property Name="month" Type="Int32" Nullable="false" />
+          <Property Name="daytime" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="size" Type="Int64" Nullable="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_date" Type="DateTime" Nullable="false" />
         </EntityType>
         <EntityType Name="Divergence">
           <Key>
@@ -804,19 +821,6 @@
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
-        <EntityType Name="DbSize">
-          <Key>
-            <PropertyRef Name="year" />
-            <PropertyRef Name="month" />
-            <PropertyRef Name="daytime" />
-          </Key>
-          <Property Name="year" Type="Int32" Nullable="false" />
-          <Property Name="month" Type="Int32" Nullable="false" />
-          <Property Name="daytime" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
-          <Property Name="size" Type="Int64" Nullable="false" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="update_date" Type="DateTime" Nullable="false" />
-        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -839,7 +843,20 @@
                 <ScalarProperty Name="manufacturing_rent" ColumnName="manufacturing_rent" />
                 <ScalarProperty Name="manufacturing_depreciation" ColumnName="manufacturing_depreciation" />
                 <ScalarProperty Name="manufacturing_personnel" ColumnName="manufacturing_personnel" />
+                <ScalarProperty Name="month" ColumnName="month" />
                 <ScalarProperty Name="category" ColumnName="category" />
+                <ScalarProperty Name="year" ColumnName="year" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DbSize">
+            <EntityTypeMapping TypeName="CostAccountingModel.DbSize">
+              <MappingFragment StoreEntitySet="DbSize">
+                <ScalarProperty Name="update_date" ColumnName="update_date" />
+                <ScalarProperty Name="update_user" ColumnName="update_user" />
+                <ScalarProperty Name="size" ColumnName="size" />
+                <ScalarProperty Name="daytime" ColumnName="daytime" />
+                <ScalarProperty Name="month" ColumnName="month" />
                 <ScalarProperty Name="year" ColumnName="year" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1170,18 +1187,6 @@
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="year" ColumnName="year" />
                 <ScalarProperty Name="code" ColumnName="code" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="DbSize">
-            <EntityTypeMapping TypeName="CostAccountingModel.DbSize">
-              <MappingFragment StoreEntitySet="DbSize">
-                <ScalarProperty Name="update_date" ColumnName="update_date" />
-                <ScalarProperty Name="update_user" ColumnName="update_user" />
-                <ScalarProperty Name="size" ColumnName="size" />
-                <ScalarProperty Name="daytime" ColumnName="daytime" />
-                <ScalarProperty Name="month" ColumnName="month" />
-                <ScalarProperty Name="year" ColumnName="year" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
