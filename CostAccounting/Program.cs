@@ -40,6 +40,7 @@ namespace CostAccounting
                                                , Environment.NewLine
                                                , "_(._.)_"));
             Logger.Error(Message.ERR001, e.Exception);
+            Environment.Exit(-1);
         }
 
         /*************************************************************
