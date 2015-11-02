@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="bkfileStoragePeriod" xml:space="preserve">
+    <value>31</value>
+  </data>
   <data name="defaultFareData" xml:space="preserve">
     <value>F0001#ｷｭｰｿｰ流通ｼｽﾃﾑ管内冷凍便,F0002#佐川急便関西,F0003#佐川急便関東,F0004#佐川急便九州,F0005#佐川急便四国,F0006#佐川急便信越,F0007#佐川急便中国,F0008#佐川急便東海,F0009#佐川急便道内,F0010#佐川急便東北,F0011#佐川急便北陸,F0012#燦～大島食品さけぱっぱ直送費,F0013#燦～丸美屋食品（MA3）,F0014#燦～浦幌ﾌﾘｰｽﾞﾄﾞﾗｲ(七草),F0015#ﾔﾏﾄ運輸沖縄,F0016#ﾔﾏﾄ運輸関西・中国,F0017#ﾔﾏﾄ運輸関東・信越,F0018#ﾔﾏﾄ運輸九州,F0019#ﾔﾏﾄ運輸四国,F0020#ﾔﾏﾄ運輸道内,F0021#ﾔﾏﾄ運輸東北,F0022#ﾔﾏﾄ運輸北陸・中部,F0023#ﾔﾏﾄ運輸冷蔵・冷凍便加算料金10～15kg,F0024#ﾔﾏﾄ運輸冷蔵・冷凍便加算料金5～10kg,F0025#ﾔﾏﾄ運輸冷蔵・冷凍便加算料金5kg以下,F0026#ライオン菓子～浦幌FD（パレット返却配送費）</value>
   </data>

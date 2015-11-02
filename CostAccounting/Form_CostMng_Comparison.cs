@@ -553,7 +553,7 @@ namespace CostAccounting
         /*************************************************************
          * 固定費データを画面に設定
          *************************************************************/
-        private void setDataFixedCost()
+        private new void setDataFixedCost()
         {
             for (int columnIdx = 76; columnIdx <= 95; columnIdx++)
                 dataGridViewTotal.Rows[0].Cells[columnIdx].Value = decimal.Zero.ToString("N");

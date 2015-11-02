@@ -14,9 +14,7 @@ namespace CostAccounting
     
     [Serializable] public partial class DbSize
     {
-        public int year { get; set; }
-        public int month { get; set; }
-        public string daytime { get; set; }
+        public string ymd { get; set; }
         public long size { get; set; }
         public string update_user { get; set; }
         public System.DateTime update_date { get; set; }

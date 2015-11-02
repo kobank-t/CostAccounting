@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace CostAccounting
 {
@@ -74,23 +75,63 @@ namespace CostAccounting
             }
 
             // DBサイズの記録
+            string today = DateTime.Now.ToString("yyyyMMdd");
+
             using (var context = new CostAccountingEntities())
             {
-                // 登録データのオブジェクトを作成
-                DateTime dt = DateTime.Now;
-                var entity = new DbSize()
-                {
-                    year = dt.Year,
-                    month = dt.Month,
-                    daytime = dt.ToString("ddHHmmss"),
-                    size = new FileInfo(dbPath).Length / 1024,  // KB単位でDBファイルのサイズを記録
-                    update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
-                    update_date = DateTime.Now
-                };
+                var target = from t in context.DbSize
+                             where t.ymd.Equals(today)
+                             select t;
 
-                // データ登録
-                context.DbSize.Add(entity);
+                if (target.Count() == decimal.Zero)
+                {
+
+                    // 登録データのオブジェクトを作成
+                    DateTime dt = DateTime.Now;
+                    var entity = new DbSize()
+                    {
+                        ymd = today,
+                        size = new FileInfo(dbPath).Length / 1024,  // KB単位でDBファイルのサイズを記録
+                        update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
+                        update_date = DateTime.Now
+                    };
+
+                    // データ登録
+                    context.DbSize.Add(entity);
+                }
+                else
+                {
+                    target.First().size = new FileInfo(dbPath).Length / 1024;  // KB単位でDBファイルのサイズを記録
+                    target.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
+                    target.First().update_date = DateTime.Now;
+                }
+
                 context.SaveChanges();
+            }
+
+            // DBファイルのバックアップ
+            string bkDir = new FileInfo(dbPath).DirectoryName + @"\" + "backup";
+
+            if (!Directory.Exists(bkDir))
+                Directory.CreateDirectory(bkDir);
+
+            FileInfo dbFile = new FileInfo(dbPath);
+            string bkFile = bkDir + @"\" + dbFile.Name + "." + today;
+            dbFile.CopyTo(bkFile, true);
+
+            // 一定期間を過ぎたDBのバックアップファイルを削除する
+            foreach (string file in Directory.GetFiles(bkDir))
+            {
+                FileInfo target = new FileInfo(file);
+                string ymd = target.Extension.TrimStart('.');
+
+                today = Regex.Replace(today, @"(\d{4})(\d{2})(\d{2})", @"$1/$2/$3");
+                ymd = Regex.Replace(ymd, @"(\d{4})(\d{2})(\d{2})", @"$1/$2/$3");
+ 
+                TimeSpan span = DateTime.Parse(today) - DateTime.Parse(ymd);
+
+                if (span.Days > Conversion.Parse(Properties.Resources.bkfileStoragePeriod))
+                    target.Delete();
             }
 
             Logger.Info(Message.INF002);

@@ -30,13 +30,9 @@
         </EntityType>
         <EntityType Name="DbSize">
           <Key>
-            <PropertyRef Name="year" />
-            <PropertyRef Name="month" />
-            <PropertyRef Name="daytime" />
+            <PropertyRef Name="ymd" />
           </Key>
-          <Property Name="year" Type="int" Nullable="false" />
-          <Property Name="month" Type="int" Nullable="false" />
-          <Property Name="daytime" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="ymd" Type="char" MaxLength="8" Nullable="false" />
           <Property Name="size" Type="integer" Nullable="false" />
           <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
@@ -462,13 +458,9 @@
         </EntityType>
         <EntityType Name="DbSize">
           <Key>
-            <PropertyRef Name="year" />
-            <PropertyRef Name="month" />
-            <PropertyRef Name="daytime" />
+            <PropertyRef Name="ymd" />
           </Key>
-          <Property Name="year" Type="Int32" Nullable="false" />
-          <Property Name="month" Type="Int32" Nullable="false" />
-          <Property Name="daytime" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="ymd" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
           <Property Name="size" Type="Int64" Nullable="false" />
           <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
@@ -855,9 +847,7 @@
                 <ScalarProperty Name="update_date" ColumnName="update_date" />
                 <ScalarProperty Name="update_user" ColumnName="update_user" />
                 <ScalarProperty Name="size" ColumnName="size" />
-                <ScalarProperty Name="daytime" ColumnName="daytime" />
-                <ScalarProperty Name="month" ColumnName="month" />
-                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="ymd" ColumnName="ymd" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
