@@ -420,6 +420,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="release\ver1.0\CostAccounting.db" />
+    <None Include="release\ver1.0\CostAccounting.exe.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -446,6 +448,14 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="release\ver1.0\CostAccounting.exe" />
+    <Content Include="release\ver1.0\EntityFramework.dll" />
+    <Content Include="release\ver1.0\log4net.dll" />
+    <Content Include="release\ver1.0\SQLite.Interop.dll" />
+    <Content Include="release\ver1.0\System.Data.SQLite.dll" />
+    <Content Include="release\ver1.0\System.Data.SQLite.EF6.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
