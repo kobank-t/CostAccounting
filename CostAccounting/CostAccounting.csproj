@@ -395,6 +395,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="docs\浦幌フリーズドライ株式会社_原価計算ソフト_導入手順書.docx" />
     <None Include="Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>
@@ -456,6 +457,9 @@
     <Content Include="release\ver1.0\SQLite.Interop.dll" />
     <Content Include="release\ver1.0\System.Data.SQLite.dll" />
     <Content Include="release\ver1.0\System.Data.SQLite.EF6.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="db\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
