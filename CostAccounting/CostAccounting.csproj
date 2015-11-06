@@ -395,6 +395,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="db\CostAccounting.db" />
     <None Include="docs\浦幌フリーズドライ株式会社_原価計算ソフト_導入手順書.docx" />
     <None Include="Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -422,7 +423,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="release\ver1.0\CostAccounting.db" />
-    <None Include="release\ver1.0\CostAccounting.exe.config" />
+    <None Include="release\ver1.0\原価ソフトver1.0.zip" />
+    <None Include="release\ver1.0\浦幌フリーズドライ株式会社_原価計算ソフト_導入手順書_ver1.0.pdf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -450,17 +452,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="release\ver1.0\CostAccounting.exe" />
-    <Content Include="release\ver1.0\EntityFramework.dll" />
-    <Content Include="release\ver1.0\log4net.dll" />
-    <Content Include="release\ver1.0\SQLite.Interop.dll" />
-    <Content Include="release\ver1.0\System.Data.SQLite.dll" />
-    <Content Include="release\ver1.0\System.Data.SQLite.EF6.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="db\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
