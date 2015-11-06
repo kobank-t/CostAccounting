@@ -54,7 +54,7 @@
             // saveFileDialogDB
             // 
             this.saveFileDialogDB.Filter = "dbファイル(*.db)|*.db";
-            this.saveFileDialogDB.Title = "DBファイルhの保存先を選択してください";
+            this.saveFileDialogDB.Title = "DBファイルの保存先を選択してください";
             // 
             // btnGetDbFile
             // 
@@ -72,7 +72,7 @@
             // saveFileDialogLog
             // 
             this.saveFileDialogLog.Filter = "ログファイル(*.zip)|*.zip";
-            this.saveFileDialogLog.Title = "DBファイルhの保存先を選択してください";
+            this.saveFileDialogLog.Title = "ログファイルの保存先を選択してください";
             // 
             // tableLayoutPanel2
             // 
