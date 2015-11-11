@@ -79,6 +79,19 @@ namespace CostAccounting
             else
                 throw new ArgumentException("予算または実績のラジオボタンはチェックしましょう。");
         }
+
+        /*************************************************************
+         * ラジオボタンのチェック状態が商品かブレンド品かを判定する
+         *************************************************************/
+        public static Const.PRODUCT_TYPE judgeProductType(RadioButton product, RadioButton blend)
+        {
+            if (product.Checked)
+                return Const.PRODUCT_TYPE.Normal;
+            else if (blend.Checked)
+                return Const.PRODUCT_TYPE.Blend;
+            else
+                throw new ArgumentException("商品またはブレンドのラジオボタンはチェックしましょう。");
+        }
     }
 
     /// -----------------------------------------------------------------------------
@@ -795,6 +808,7 @@ namespace CostAccounting
         public static string INF003 = "INF003：登録しました。画面名=[{0}]　内容=[{1}]";
         public static string INF004 = "INF004：修正しました。画面名=[{0}]　内容=[{1}]";
         public static string INF005 = "INF005：削除しました。画面名=[{0}]　内容=[{1}]";
+        public static string INF006 = "INF006：出力しました。画面名=[{0}]　内容=[{1}]";
 
         public static string ERR001 = "ERR001：予期しないエラーが発生しました。";
 

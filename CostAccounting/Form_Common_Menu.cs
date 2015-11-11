@@ -35,6 +35,7 @@ namespace CostAccounting
             this.btnSubActualTotal.Visible = false;
             this.btnSubComparison.Visible = false;
             this.btnSubDivergence.Visible = false;
+            this.btnSubProductPrint.Visible = false;
         }
 
         /*************************************************************
@@ -58,6 +59,7 @@ namespace CostAccounting
             this.btnSubActualTotal.Visible = false;
             this.btnSubComparison.Visible = false;
             this.btnSubDivergence.Visible = false;
+            this.btnSubProductPrint.Visible = false;
         }
 
         /*************************************************************
@@ -81,6 +83,31 @@ namespace CostAccounting
             this.btnSubActualTotal.Visible = true;
             this.btnSubComparison.Visible = true;
             this.btnSubDivergence.Visible = true;
+            this.btnSubProductPrint.Visible = false;
+        }
+
+        /*************************************************************
+         * 帳票出力ボタン押下時の処理
+         *************************************************************/
+        private void btnMainPrint_Click(object sender, EventArgs e)
+        {
+            this.btnSubRawMaterialsReg.Visible = false;
+            this.btnSubMaterialsReg.Visible = false;
+            this.btnSubMachineReg.Visible = false;
+            this.btnSubFareReg.Visible = false;
+            this.btnSubProductCdReg.Visible = false;
+            this.btnSubSupplierReg.Visible = false;
+            this.btnSubItemReg.Visible = false;
+            this.btnSubOtherReg.Visible = false;
+            this.btnSubDataCopy.Visible = false;
+            this.btnSubProductReg.Visible = false;
+            this.btnSubBlendReg.Visible = false;
+            this.btnSubBudgetReg.Visible = false;
+            this.btnSubActualReg.Visible = false;
+            this.btnSubActualTotal.Visible = false;
+            this.btnSubComparison.Visible = false;
+            this.btnSubDivergence.Visible = false;
+            this.btnSubProductPrint.Visible = true;
         }
 
         /*************************************************************
@@ -212,6 +239,14 @@ namespace CostAccounting
         }
 
         /*************************************************************
+         * 帳票出力－商品帳票出力ボタン押下時の処理
+         *************************************************************/
+        private void btnSubProductPrint_Click(object sender, EventArgs e)
+        {
+            openForm(new Form_Print_Product());
+        }
+
+        /*************************************************************
          * フォームロード時の処理
          *************************************************************/
         private void Form_Menu_Load(object sender, EventArgs e)
@@ -229,5 +264,6 @@ namespace CostAccounting
             DataTableSupport.refresh();
             Parameters.refresh();
         }
+
     }
 }

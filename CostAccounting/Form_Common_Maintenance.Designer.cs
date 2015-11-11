@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnGetLogFile = new System.Windows.Forms.Button();
             this.saveFileDialogDB = new System.Windows.Forms.SaveFileDialog();
             this.btnGetDbFile = new System.Windows.Forms.Button();
             this.saveFileDialogLog = new System.Windows.Forms.SaveFileDialog();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -115,7 +113,6 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialogDB;
         private System.Windows.Forms.Button btnGetDbFile;
         private System.Windows.Forms.SaveFileDialog saveFileDialogLog;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
 
 

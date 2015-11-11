@@ -109,6 +109,7 @@
             this.recordCnt.Name = "recordCnt";
             this.recordCnt.Size = new System.Drawing.Size(71, 18);
             this.recordCnt.TabIndex = 1;
+            this.recordCnt.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 

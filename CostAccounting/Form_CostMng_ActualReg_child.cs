@@ -120,7 +120,7 @@ namespace CostAccounting
                         listView.Items.Add(item);
                     }
                 }
-                recordCnt.Text = listView.Items.Count.ToString();
+                recordCnt.Text = listView.Items.Count.ToString("#,0");
             }
             finally
             {

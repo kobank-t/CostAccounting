@@ -53,6 +53,8 @@
             this.btnSubMaterialsReg = new System.Windows.Forms.Button();
             this.btnSubMachineReg = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnMainPrint = new System.Windows.Forms.Button();
+            this.btnSubProductPrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -71,6 +73,7 @@
             // 
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.btnMainPrint);
             this.splitContainer1.Panel1.Controls.Add(this.btnMainCostMng);
             this.splitContainer1.Panel1.Controls.Add(this.btnMainProductMng);
             this.splitContainer1.Panel1.Controls.Add(this.btnMainPrepare);
@@ -83,6 +86,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnSubComparison);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubActualTotal);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubDivergence);
+            this.splitContainer1.Panel2.Controls.Add(this.btnSubProductPrint);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubBudgetReg);
             this.splitContainer1.Panel2.Controls.Add(this.label4);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
@@ -379,6 +383,29 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "浦幌フリーズドライ株式会社　原価計算ソフト";
             // 
+            // btnMainPrint
+            // 
+            this.btnMainPrint.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnMainPrint.Location = new System.Drawing.Point(35, 280);
+            this.btnMainPrint.Name = "btnMainPrint";
+            this.btnMainPrint.Size = new System.Drawing.Size(220, 44);
+            this.btnMainPrint.TabIndex = 4;
+            this.btnMainPrint.Text = "帳票出力";
+            this.btnMainPrint.UseVisualStyleBackColor = false;
+            this.btnMainPrint.Click += new System.EventHandler(this.btnMainPrint_Click);
+            // 
+            // btnSubProductPrint
+            // 
+            this.btnSubProductPrint.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSubProductPrint.Font = new System.Drawing.Font("Meiryo UI", 12F);
+            this.btnSubProductPrint.Location = new System.Drawing.Point(33, 64);
+            this.btnSubProductPrint.Name = "btnSubProductPrint";
+            this.btnSubProductPrint.Size = new System.Drawing.Size(220, 44);
+            this.btnSubProductPrint.TabIndex = 10;
+            this.btnSubProductPrint.Text = "商品帳票出力";
+            this.btnSubProductPrint.UseVisualStyleBackColor = false;
+            this.btnSubProductPrint.Click += new System.EventHandler(this.btnSubProductPrint_Click);
+            // 
             // Form_Common_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -432,6 +459,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSubOtherReg;
         private System.Windows.Forms.Button btnSubDataCopy;
+        private System.Windows.Forms.Button btnMainPrint;
+        private System.Windows.Forms.Button btnSubProductPrint;
 
     }
 }
