@@ -122,33 +122,50 @@ namespace CostAccounting
             if (Program.MessageBoxBefore("出力条件の内容でExcelファイルを出力しますか？") != DialogResult.Yes)
                 return;
 
-            // 出力条件を取得
-            Const.PRODUCT_TYPE productType = Program.judgeProductType(radioProduct, radioBlend);
-            Const.CATEGORY_TYPE category = Program.judgeCategory(radioBudget, radioActual);
-
             // テンプレートのファイル
             var template = new FileInfo(string.Concat(System.Configuration.ConfigurationManager.AppSettings["templateFolder"], @"\product.xltx"));
             // 出力ファイル
             var outputFile = new FileInfo(string.Concat(Application.StartupPath, @"\商品帳票_", DateTime.Now.ToString("yyyyMMddHHmmss"), ".xlsx"));
 
-
             using (var package = new ExcelPackage(outputFile, template))
             {
-                ExcelWorksheet worksheet = package.Workbook.Worksheets["template"];
+                ExcelWorksheet summarySheet = package.Workbook.Worksheets["summary"];
+                ExcelWorksheet templateSheet = package.Workbook.Worksheets["template"];
 
-                // セルを二次元配列で指定する場合1次元目がY方向、2次元目がX方向となります。
-                worksheet.Cells[2, 2].Value = "テンプレートのサンプル";
-                worksheet.Cells[2, 2].Style.Font.Color.SetColor(Color.Red);
+                summarySheet.InsertRow(2, listView.Items.Count);
 
-                for (int i = 0; i < 14; i++)
+                for (int i = 0; i < listView.Items.Count; i++)
                 {
-                    worksheet.Cells[4 + i, 2].Value = DateTime.Now.Hour;
-                    worksheet.Cells[4 + i, 3].Value = DateTime.Now.Minute;
-                    worksheet.Cells[4 + i, 4].Value = DateTime.Now.Second;
-                    worksheet.Cells[4 + i, 5].Value = DateTime.Now.Millisecond;
+                    ListViewItem item = listView.Items[i];
+                    string supplierCode = item.SubItems[0].Text;
+                    string supplierName = item.SubItems[1].Text;
+                    string productCode = item.SubItems[2].Text;
+                    string productName = item.SubItems[3].Text;
+                    string sheetName = string.Concat(supplierCode, "-", productCode);
+
+                    // summaryシートの設定
+                    int targetRow = i + 2;
+                    summarySheet.Cells[targetRow, 1].Value = (i + 1);
+                    summarySheet.Cells[targetRow, 2].Value = supplierCode;
+                    summarySheet.Cells[targetRow, 3].Value = supplierName;
+                    summarySheet.Cells[targetRow, 4].Value = productCode;
+                    summarySheet.Cells[targetRow, 5].Value = productName;
+                    summarySheet.Cells[targetRow, 6].Style.Font.UnderLine = true;
+                    summarySheet.Cells[targetRow, 6].Style.Font.Color.SetColor(Color.Blue);
+
+                    // テンプレートシートをコピー
+                    ExcelWorksheet targetSheet = package.Workbook.Worksheets.Add(string.Concat(supplierCode, "-", productCode), templateSheet);
+                    addHyperLink(summarySheet, summarySheet.Cells[(i + 2), 6], targetSheet.Cells["A1"], sheetName);
+
+                    // コピーしたシートに対して値を設定
+                    setProductData(targetSheet, supplierCode, supplierName, productCode, productName);
+
                 }
 
-                // Excelファイルのセーブ
+                // テンプレートシートを削除の上、Excelファイルを保存する
+                summarySheet.Calculate();
+                package.Workbook.Worksheets.Delete(templateSheet);
+                package.Workbook.Worksheets.First().Select();
                 package.Save();
             }
 
@@ -162,5 +179,58 @@ namespace CostAccounting
             System.Diagnostics.Process.Start(outputDir.Text);
         }
 
+        /*************************************************************
+         * ハイパーリンクのを設定
+         *************************************************************/
+        private void addHyperLink(ExcelWorksheet ws, ExcelRange source, ExcelRange destination, string displayText)
+        {
+            source.Formula = "HYPERLINK(\"[\"&MID(CELL(\"filename\"),SEARCH(\"[\",CELL(\"filename\"))+1, SEARCH(\"]\",CELL(\"filename\"))-SEARCH(\"[\",CELL(\"filename\"))-1)&\"]" + destination.FullAddress + "\",\"" + displayText + "\")";
+        }
+
+        /*************************************************************
+         * 商品の原価計算データを設定
+         *************************************************************/
+        private void setProductData(ExcelWorksheet ws, string supplierCode, string supplierName, string productCode, string productName)
+        {
+            Const.PRODUCT_TYPE productType = Program.judgeProductType(radioProduct, radioBlend);
+            Const.CATEGORY_TYPE category = Program.judgeCategory(radioBudget, radioActual);
+
+            ws.Cells["AH2"].Value = productName;
+            ws.Cells["S2"].Value = supplierName;
+
+            using (var context = new CostAccountingEntities())
+            {
+                var product = from t_product in context.Product
+                              join t_supplier in context.ProductSupplier on
+                                   new { t_product.year, t_product.code, t_product.category, t_product.type }
+                                     equals
+                                   new { t_supplier.year, code = t_supplier.product_code, t_supplier.category, t_supplier.type }
+                              where t_product.year.Equals(Const.TARGET_YEAR)
+                                 && t_product.code.Equals(productCode)
+                                 && t_supplier.supplier_code.Equals(supplierCode)
+                                 && t_product.category.Equals((int)category)
+                                 && t_product.type.Equals((int)Const.PRODUCT_TYPE.Normal)
+                              select new { t_product, t_supplier };
+
+                ws.Cells["S3"].Value = product.First().t_product.packing;
+                ws.Cells["AR2"].Value = product.First().t_product.volume;
+                ws.Cells["AZ2"].Value = product.First().t_product.tray_num;
+                ws.Cells["L3"].Value = product.First().t_supplier.unit_price;
+
+                // ③労務費の設定------------------------------------------------------------
+                ws.Cells["AG28"].Value = product.First().t_product.preprocess_time_m;
+                ws.Cells["AI29"].Value = product.First().t_product.night_time_m;
+                ws.Cells["AK28"].Value = product.First().t_product.dry_time_m;
+                ws.Cells["AM28"].Value = product.First().t_product.selection_time_m;
+                ws.Cells["AG30"].Value = product.First().t_product.preprocess_time_f;
+                ws.Cells["AI30"].Value = product.First().t_product.night_time_f;
+                ws.Cells["AK30"].Value = product.First().t_product.dry_time_f;
+                ws.Cells["AM30"].Value = product.First().t_product.selection_time_f;
+
+            }
+
+
+            ws.Calculate();
+        }
     }
 }
