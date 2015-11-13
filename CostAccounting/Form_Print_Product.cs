@@ -125,7 +125,11 @@ namespace CostAccounting
             // テンプレートのファイル
             var template = new FileInfo(string.Concat(System.Configuration.ConfigurationManager.AppSettings["templateFolder"], @"\product.xltx"));
             // 出力ファイル
-            var outputFile = new FileInfo(string.Concat(Application.StartupPath, @"\商品帳票_", DateTime.Now.ToString("yyyyMMddHHmmss"), ".xlsx"));
+            var outputFile = new FileInfo(string.Concat(Application.StartupPath
+                                                        , @"\商品帳票"
+                                                        , radioBudget.Checked ? "【予定】_" : "【実績】_"
+                                                        , DateTime.Now.ToString("yyyyMMddHHmmss")
+                                                        , ".xlsx"));
 
             using (var package = new ExcelPackage(outputFile, template))
             {
@@ -216,6 +220,49 @@ namespace CostAccounting
                 ws.Cells["AR2"].Value = product.First().t_product.volume;
                 ws.Cells["AZ2"].Value = product.First().t_product.tray_num;
                 ws.Cells["L3"].Value = product.First().t_supplier.unit_price;
+                ws.Cells["P31"].Value = product.First().t_product.note;
+                ws.Cells["G35"].Value = product.First().t_supplier.update_user;
+                ws.Cells["G36"].Value = product.First().t_supplier.update_date;
+
+                ws.Cells["R7"].Value = Parameters.getInstance(category).rateLoss;
+                ws.Cells["T20"].Value = Parameters.getInstance(category).allocationSale;
+                ws.Cells["W21"].Value = Parameters.getInstance(category).allocationMng;
+                ws.Cells["U22"].Value = Parameters.getInstance(category).allocationExt;
+
+                // ①原料費の設定------------------------------------------------------------
+                var material = from t in context.ProductMaterial
+                               join m in context.RowMaterial on
+                                    new { t.year, t.code } equals new { m.year, m.code }
+                               where t.year.Equals(Const.TARGET_YEAR)
+                                  && t.product_code.Equals(productCode)
+                                  && t.category.Equals((int)category)
+                               orderby t.no
+                               select new { t.code, t.quantity, m.name };
+
+                int startRow = 4;
+                foreach (var data in material.ToList())
+                {
+                    ws.Cells["AB" + startRow].Value = data.name;
+                    ws.Cells["AI" + startRow].Value = data.quantity;
+                    ws.Cells["AM" + startRow].Value = DataTableSupport.getPrice(DataTableSupport.getInstance(category).rowMaterial, data.code);
+                    ++startRow;
+                }
+
+                // ②外注費の設定------------------------------------------------------------
+                var contractor = from t in context.ProductContractor
+                                 where t.year.Equals(Const.TARGET_YEAR)
+                                    && t.product_code.Equals(productCode)
+                                    && t.category.Equals((int)category)
+                                 orderby t.no
+                                 select t;
+                startRow = 20;
+                foreach (var data in contractor.ToList())
+                {
+                    ws.Cells["AB" + startRow].Value = data.name;
+                    ws.Cells["AI" + startRow].Value = data.cost;
+                    ws.Cells["AL" + startRow].Value = data.quantity;
+                    ++startRow;
+                }
 
                 // ③労務費の設定------------------------------------------------------------
                 ws.Cells["AG28"].Value = product.First().t_product.preprocess_time_m;
@@ -227,8 +274,93 @@ namespace CostAccounting
                 ws.Cells["AK30"].Value = product.First().t_product.dry_time_f;
                 ws.Cells["AM30"].Value = product.First().t_product.selection_time_f;
 
-            }
+                ws.Cells["AR28"].Value = Parameters.getInstance(category).wageM;
+                ws.Cells["AR29"].Value = Parameters.getInstance(category).wageIndirect;
+                ws.Cells["AR30"].Value = Parameters.getInstance(category).wageF;
+                ws.Cells["AO32"].Value = Parameters.getInstance(category).trayNum;
 
+                // ④製造経費の設定------------------------------------------------------------
+                // 《原料運賃》
+                var materialFare = from t in context.ProductMaterialsFare
+                                   where t.year.Equals(Const.TARGET_YEAR)
+                                      && t.product_code.Equals(productCode)
+                                      && t.category.Equals((int)category)
+                                   orderby t.no
+                                   select t;
+                startRow = 36;
+                foreach (var data in materialFare.ToList())
+                {
+                    ws.Cells["AB" + startRow].Value = data.name;
+                    ws.Cells["AK" + startRow].Value = data.quantity;
+                    ws.Cells["AO" + startRow].Value = data.cost;
+                    ++startRow;
+                }
+
+                // 《包装資材費》
+                var packing = from t in context.ProductPacking
+                              join m in context.Material on
+                                   new { t.year, t.code } equals new { m.year, m.code }
+                              where t.year.Equals(Const.TARGET_YEAR)
+                                 && t.product_code.Equals(productCode)
+                                 && t.category.Equals((int)category)
+                              orderby t.no
+                              select new { t.code, t.quantity, m.name };
+
+                startRow = 44;
+                foreach (var data in packing.ToList())
+                {
+                    ws.Cells["AB" + startRow].Value = data.name;
+                    ws.Cells["AK" + startRow].Value = data.quantity;
+                    ws.Cells["AO" + startRow].Value = DataTableSupport.getPrice(DataTableSupport.getInstance(category).material, data.code);
+                    ++startRow;
+                }
+
+                // 《設備費》
+                var machine = from t in context.ProductMachine
+                              join m in context.Machine on
+                                   new { t.year, t.code } equals new { m.year, m.code }
+                              where t.year.Equals(Const.TARGET_YEAR)
+                                 && t.product_code.Equals(productCode)
+                                 && t.category.Equals((int)category)
+                              orderby t.no
+                              select new { t.code, t.time, m.name };
+                startRow = 56;
+                foreach (var data in machine.ToList())
+                {
+                    ws.Cells["AB" + startRow].Value = string.Concat(data.code, " ", data.name);
+                    ws.Cells["AK" + startRow].Value = data.time;
+                    ws.Cells["AO" + startRow].Value = DataTableSupport.getPrice(DataTableSupport.getInstance(category).machine, data.code);
+                    ++startRow;
+                }
+                ws.Cells["AI56"].Value = product.First().t_product.tray_num;
+
+                // 《水道光熱費》
+                ws.Cells["AL70"].Value = Parameters.getInstance(category).utilitiesAD;
+                ws.Cells["AL71"].Value = Parameters.getInstance(category).utilitiesFD;
+
+                // 《その他経費》
+                ws.Cells["AL76"].Value = Parameters.getInstance(category).allocationFD;
+                ws.Cells["AL77"].Value = Parameters.getInstance(category).allocationAD;
+                ws.Cells["AL78"].Value = Parameters.getInstance(category).allocationLabor;
+
+                // 《荷造運賃》
+                var packingFare = from t in context.ProductPackingFare
+                                  join m in context.Fare on
+                                       new { t.year, t.code } equals new { m.year, m.code }
+                                  where t.year.Equals(Const.TARGET_YEAR)
+                                     && t.product_code.Equals(productCode)
+                                     && t.category.Equals((int)category)
+                                  orderby t.no
+                                  select new { t.code, t.quantity, m.name };
+                startRow = 84;
+                foreach (var data in packingFare.ToList())
+                {
+                    ws.Cells["AB" + startRow].Value = data.name;
+                    ws.Cells["AK" + startRow].Value = data.quantity;
+                    ws.Cells["AO" + startRow].Value = DataTableSupport.getPrice(DataTableSupport.getInstance(category).fare, data.code);
+                    ++startRow;
+                }
+            }
 
             ws.Calculate();
         }
