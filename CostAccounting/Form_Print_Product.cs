@@ -123,15 +123,17 @@ namespace CostAccounting
                 return;
 
             // テンプレートのファイル
-            var template = new FileInfo(string.Concat(System.Configuration.ConfigurationManager.AppSettings["templateFolder"], @"\product.xltx"));
+            var template = radioProduct.Checked ? @"\product.xltx" : @"\blend.xltx";
+            var templateFile = new FileInfo(string.Concat(System.Configuration.ConfigurationManager.AppSettings["templateFolder"], template));
+
             // 出力ファイル
             var outputFile = new FileInfo(string.Concat(Application.StartupPath
-                                                        , @"\商品帳票"
+                                                        , radioProduct.Checked ? @"\商品帳票" : @"\ブレンド品帳票"
                                                         , radioBudget.Checked ? "【予定】_" : "【実績】_"
                                                         , DateTime.Now.ToString("yyyyMMddHHmmss")
                                                         , ".xlsx"));
 
-            using (var package = new ExcelPackage(outputFile, template))
+            using (var package = new ExcelPackage(outputFile, templateFile))
             {
                 ExcelWorksheet summarySheet = package.Workbook.Worksheets["summary"];
                 ExcelWorksheet templateSheet = package.Workbook.Worksheets["template"];
@@ -162,7 +164,12 @@ namespace CostAccounting
                     addHyperLink(summarySheet, summarySheet.Cells[(i + 2), 6], targetSheet.Cells["A1"], sheetName);
 
                     // コピーしたシートに対して値を設定
-                    setProductData(targetSheet, supplierCode, supplierName, productCode, productName);
+                    if (radioProduct.Checked)
+                        setProductData(targetSheet, supplierCode, supplierName, productCode, productName);
+                    else if (radioBlend.Checked)
+                        setBlendData(targetSheet, supplierCode, supplierName, productCode, productName);
+                    else
+                        Program.MessageBoxError("商品かブレンド品のラジオボタンを選択してください。");
 
                 }
 
@@ -196,7 +203,6 @@ namespace CostAccounting
          *************************************************************/
         private void setProductData(ExcelWorksheet ws, string supplierCode, string supplierName, string productCode, string productName)
         {
-            Const.PRODUCT_TYPE productType = Program.judgeProductType(radioProduct, radioBlend);
             Const.CATEGORY_TYPE category = Program.judgeCategory(radioBudget, radioActual);
 
             ws.Cells["AH2"].Value = productName;
@@ -362,6 +368,84 @@ namespace CostAccounting
                 }
             }
 
+            ws.Calculate();
+        }
+
+        /*************************************************************
+         * ブレンド品の原価計算データを設定
+         *************************************************************/
+        private void setBlendData(ExcelWorksheet ws, string supplierCode, string supplierName, string productCode, string productName)
+        {
+            Const.CATEGORY_TYPE category = Program.judgeCategory(radioBudget, radioActual);
+
+            ws.Cells["E2"].Value = productName;
+            ws.Cells["S2"].Value = supplierName;
+
+            using (var context = new CostAccountingEntities())
+            {
+                var product = from t_product in context.Product
+                              join t_supplier in context.ProductSupplier on
+                                   new { t_product.year, t_product.code, t_product.category, t_product.type }
+                                     equals
+                                   new { t_supplier.year, code = t_supplier.product_code, t_supplier.category, t_supplier.type }
+                              where t_product.year.Equals(Const.TARGET_YEAR)
+                                 && t_product.code.Equals(productCode)
+                                 && t_supplier.supplier_code.Equals(supplierCode)
+                                 && t_product.category.Equals((int)category)
+                                 && t_product.type.Equals((int)Const.PRODUCT_TYPE.Blend)
+                              select new { t_product, t_supplier };
+
+                ws.Cells["S3"].Value = product.First().t_product.packing;
+                ws.Cells["L3"].Value = product.First().t_supplier.unit_price;
+                ws.Cells["P31"].Value = product.First().t_product.note;
+                ws.Cells["G35"].Value = product.First().t_supplier.update_user;
+                ws.Cells["G36"].Value = product.First().t_supplier.update_date;
+
+                // ブレンド品の設定------------------------------------------------------------
+                var blend = from t in
+                                (from t_product in context.Product
+                                 join t_blend in context.ProductBlend
+                                 on new { t_product.year, t_product.code, t_product.category }
+                                    equals
+                                    new { t_blend.year, code = t_blend.product_code, t_blend.category }
+                                 where t_product.year.Equals(Const.TARGET_YEAR)
+                                    && t_product.code.Equals(productCode)
+                                    && t_product.category.Equals((int)category)
+                                    && t_product.type.Equals((int)Const.PRODUCT_TYPE.Blend)
+                                 select new { product = t_product, blend = t_blend }
+                                )
+                            join m in context.ProductCode on
+                            new { t.product.year, t.product.code } equals new { m.year, m.code }
+                            orderby t.blend.no
+                            select new { t.product, t.blend, m.name };
+
+                var blendList = blend.ToList();
+                int startColumm = 14;
+                int add = 5;
+
+                for (int i = 0; i < blendList.Count; i++)
+                {
+                    var data = blendList[i];
+                    ws.Cells[5, startColumm + (add * i)].Value = data.blend.blend_rate;
+                    ws.Cells[6, startColumm + (add * i)].Value = data.name;
+                    ws.Cells[7, startColumm + (add * i)].Value = data.product.material_cost;
+                    ws.Cells[8, startColumm + (add * i)].Value = data.product.contractors_cost;
+                    ws.Cells[9, startColumm + (add * i)].Value = data.product.labor_cost;
+                    ws.Cells[10, startColumm + (add * i)].Value = data.product.labor_cost_direct;
+                    ws.Cells[11, startColumm + (add * i)].Value = data.product.labor_cost_indirect;
+                    ws.Cells[12, startColumm + (add * i)].Value = data.product.manufacturing_cost;
+                    ws.Cells[13, startColumm + (add * i)].Value = data.product.materials_fare;
+                    ws.Cells[14, startColumm + (add * i)].Value = data.product.packing_cost;
+                    ws.Cells[15, startColumm + (add * i)].Value = data.product.machine_cost;
+                    ws.Cells[16, startColumm + (add * i)].Value = data.product.utilities_cost;
+                    ws.Cells[17, startColumm + (add * i)].Value = data.product.other_cost;
+                    ws.Cells[18, startColumm + (add * i)].Value = data.product.product_cost;
+                    ws.Cells[19, startColumm + (add * i)].Value = data.product.packing_fare;
+                    ws.Cells[20, startColumm + (add * i)].Value = data.product.selling_cost;
+                    ws.Cells[21, startColumm + (add * i)].Value = data.product.management_cost;
+                    ws.Cells[23, startColumm + (add * i)].Value = data.product.overall_cost;
+                }
+            }
             ws.Calculate();
         }
     }

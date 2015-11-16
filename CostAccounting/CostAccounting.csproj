@@ -134,6 +134,12 @@
     <Compile Include="Form_Common_Maintenance.Designer.cs">
       <DependentUpon>Form_Common_Maintenance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Print_Rate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Print_Rate.Designer.cs">
+      <DependentUpon>Form_Print_Rate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Print_Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +338,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Common_Maintenance.resx">
       <DependentUpon>Form_Common_Maintenance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Print_Rate.resx">
+      <DependentUpon>Form_Print_Rate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Print_Product.resx">
       <DependentUpon>Form_Print_Product.cs</DependentUpon>

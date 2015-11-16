@@ -36,6 +36,7 @@ namespace CostAccounting
             this.btnSubComparison.Visible = false;
             this.btnSubDivergence.Visible = false;
             this.btnSubProductPrint.Visible = false;
+            this.btnSubRatePrint.Visible = false;
         }
 
         /*************************************************************
@@ -60,6 +61,7 @@ namespace CostAccounting
             this.btnSubComparison.Visible = false;
             this.btnSubDivergence.Visible = false;
             this.btnSubProductPrint.Visible = false;
+            this.btnSubRatePrint.Visible = false;
         }
 
         /*************************************************************
@@ -84,6 +86,7 @@ namespace CostAccounting
             this.btnSubComparison.Visible = true;
             this.btnSubDivergence.Visible = true;
             this.btnSubProductPrint.Visible = false;
+            this.btnSubRatePrint.Visible = false;
         }
 
         /*************************************************************
@@ -108,6 +111,7 @@ namespace CostAccounting
             this.btnSubComparison.Visible = false;
             this.btnSubDivergence.Visible = false;
             this.btnSubProductPrint.Visible = true;
+            this.btnSubRatePrint.Visible = true;
         }
 
         /*************************************************************
@@ -244,6 +248,14 @@ namespace CostAccounting
         private void btnSubProductPrint_Click(object sender, EventArgs e)
         {
             openForm(new Form_Print_Product());
+        }
+
+        /*************************************************************
+         * 帳票出力－レート表出力ボタン押下時の処理
+         *************************************************************/
+        private void btnSubRatePrint_Click(object sender, EventArgs e)
+        {
+            openForm(new Form_Print_Rate());
         }
 
         /*************************************************************

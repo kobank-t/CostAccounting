@@ -31,6 +31,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnMainPrint = new System.Windows.Forms.Button();
             this.btnMainCostMng = new System.Windows.Forms.Button();
             this.btnMainProductMng = new System.Windows.Forms.Button();
             this.btnMainPrepare = new System.Windows.Forms.Button();
@@ -38,6 +39,7 @@
             this.btnSubComparison = new System.Windows.Forms.Button();
             this.btnSubActualTotal = new System.Windows.Forms.Button();
             this.btnSubDivergence = new System.Windows.Forms.Button();
+            this.btnSubProductPrint = new System.Windows.Forms.Button();
             this.btnSubBudgetReg = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,8 +55,7 @@
             this.btnSubMaterialsReg = new System.Windows.Forms.Button();
             this.btnSubMachineReg = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnMainPrint = new System.Windows.Forms.Button();
-            this.btnSubProductPrint = new System.Windows.Forms.Button();
+            this.btnSubRatePrint = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -82,6 +83,7 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.btnSubRatePrint);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubActualReg);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubComparison);
             this.splitContainer1.Panel2.Controls.Add(this.btnSubActualTotal);
@@ -125,6 +127,17 @@
             this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "メインメニュー";
+            // 
+            // btnMainPrint
+            // 
+            this.btnMainPrint.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnMainPrint.Location = new System.Drawing.Point(35, 280);
+            this.btnMainPrint.Name = "btnMainPrint";
+            this.btnMainPrint.Size = new System.Drawing.Size(220, 44);
+            this.btnMainPrint.TabIndex = 4;
+            this.btnMainPrint.Text = "帳票出力";
+            this.btnMainPrint.UseVisualStyleBackColor = false;
+            this.btnMainPrint.Click += new System.EventHandler(this.btnMainPrint_Click);
             // 
             // btnMainCostMng
             // 
@@ -207,6 +220,18 @@
             this.btnSubDivergence.Text = "乖離幅測定";
             this.btnSubDivergence.UseVisualStyleBackColor = false;
             this.btnSubDivergence.Click += new System.EventHandler(this.btnSubDivergence_Click);
+            // 
+            // btnSubProductPrint
+            // 
+            this.btnSubProductPrint.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSubProductPrint.Font = new System.Drawing.Font("Meiryo UI", 12F);
+            this.btnSubProductPrint.Location = new System.Drawing.Point(33, 64);
+            this.btnSubProductPrint.Name = "btnSubProductPrint";
+            this.btnSubProductPrint.Size = new System.Drawing.Size(220, 44);
+            this.btnSubProductPrint.TabIndex = 10;
+            this.btnSubProductPrint.Text = "商品帳票出力";
+            this.btnSubProductPrint.UseVisualStyleBackColor = false;
+            this.btnSubProductPrint.Click += new System.EventHandler(this.btnSubProductPrint_Click);
             // 
             // btnSubBudgetReg
             // 
@@ -383,28 +408,17 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "浦幌フリーズドライ株式会社　原価計算ソフト";
             // 
-            // btnMainPrint
+            // btnSubRatePrint
             // 
-            this.btnMainPrint.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnMainPrint.Location = new System.Drawing.Point(35, 280);
-            this.btnMainPrint.Name = "btnMainPrint";
-            this.btnMainPrint.Size = new System.Drawing.Size(220, 44);
-            this.btnMainPrint.TabIndex = 4;
-            this.btnMainPrint.Text = "帳票出力";
-            this.btnMainPrint.UseVisualStyleBackColor = false;
-            this.btnMainPrint.Click += new System.EventHandler(this.btnMainPrint_Click);
-            // 
-            // btnSubProductPrint
-            // 
-            this.btnSubProductPrint.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnSubProductPrint.Font = new System.Drawing.Font("Meiryo UI", 12F);
-            this.btnSubProductPrint.Location = new System.Drawing.Point(33, 64);
-            this.btnSubProductPrint.Name = "btnSubProductPrint";
-            this.btnSubProductPrint.Size = new System.Drawing.Size(220, 44);
-            this.btnSubProductPrint.TabIndex = 10;
-            this.btnSubProductPrint.Text = "商品帳票出力";
-            this.btnSubProductPrint.UseVisualStyleBackColor = false;
-            this.btnSubProductPrint.Click += new System.EventHandler(this.btnSubProductPrint_Click);
+            this.btnSubRatePrint.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnSubRatePrint.Font = new System.Drawing.Font("Meiryo UI", 12F);
+            this.btnSubRatePrint.Location = new System.Drawing.Point(33, 114);
+            this.btnSubRatePrint.Name = "btnSubRatePrint";
+            this.btnSubRatePrint.Size = new System.Drawing.Size(220, 44);
+            this.btnSubRatePrint.TabIndex = 15;
+            this.btnSubRatePrint.Text = "レート表出力";
+            this.btnSubRatePrint.UseVisualStyleBackColor = false;
+            this.btnSubRatePrint.Click += new System.EventHandler(this.btnSubRatePrint_Click);
             // 
             // Form_Common_Menu
             // 
@@ -461,6 +475,7 @@
         private System.Windows.Forms.Button btnSubDataCopy;
         private System.Windows.Forms.Button btnMainPrint;
         private System.Windows.Forms.Button btnSubProductPrint;
+        private System.Windows.Forms.Button btnSubRatePrint;
 
     }
 }
