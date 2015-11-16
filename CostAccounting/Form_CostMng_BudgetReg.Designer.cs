@@ -59,6 +59,63 @@
             this.checkBoxApr = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewTotal = new System.Windows.Forms.DataGridView();
+            this.dgvMaterialCostNameTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMaterialCostQuantityTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMaterialCostPriceTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMaterialCostAmountTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMaterialCostKgPerAmountTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMaterialCostRatioTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column76 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column78 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column79 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column82 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column83 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column84 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column85 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column86 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column87 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column88 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column89 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column91 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column92 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column93 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column94 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column95 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column96 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column97 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column98 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column99 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column100 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column101 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column102 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column103 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column104 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column105 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column106 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column107 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column108 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column109 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column110 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column111 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column112 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column113 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column114 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column115 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column116 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAppend = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -180,63 +237,11 @@
             this.Column56 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column57 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnFixedCost = new System.Windows.Forms.Button();
-            this.dgvMaterialCostNameTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMaterialCostQuantityTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMaterialCostPriceTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMaterialCostAmountTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMaterialCostKgPerAmountTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMaterialCostRatioTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column66 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column67 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column68 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column69 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column70 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column71 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column72 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column73 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column74 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column75 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column76 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column77 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column78 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column79 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column80 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column81 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column82 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column83 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column84 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column85 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column86 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column87 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column88 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column89 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column90 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column91 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column92 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column93 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column94 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column95 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column96 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column97 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column98 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column99 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column100 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column101 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column102 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column103 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column104 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column105 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column106 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column107 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column108 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column109 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column110 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column111 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column112 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column113 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column114 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column115 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column116 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnOutput = new System.Windows.Forms.Button();
+            this.outputDir = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnRefOutputDir = new System.Windows.Forms.Button();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.groupMonth.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -545,6 +550,419 @@
             this.dataGridViewTotal.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellEnter);
             this.dataGridViewTotal.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewTotal_CellPainting);
             this.dataGridViewTotal.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView_EditingControlShowing);
+            // 
+            // dgvMaterialCostNameTotal
+            // 
+            this.dgvMaterialCostNameTotal.Frozen = true;
+            this.dgvMaterialCostNameTotal.HeaderText = "Column1";
+            this.dgvMaterialCostNameTotal.Name = "dgvMaterialCostNameTotal";
+            this.dgvMaterialCostNameTotal.ReadOnly = true;
+            this.dgvMaterialCostNameTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMaterialCostNameTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgvMaterialCostNameTotal.Width = 40;
+            // 
+            // dgvMaterialCostQuantityTotal
+            // 
+            this.dgvMaterialCostQuantityTotal.Frozen = true;
+            this.dgvMaterialCostQuantityTotal.HeaderText = "Column2";
+            this.dgvMaterialCostQuantityTotal.Name = "dgvMaterialCostQuantityTotal";
+            this.dgvMaterialCostQuantityTotal.ReadOnly = true;
+            this.dgvMaterialCostQuantityTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMaterialCostQuantityTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgvMaterialCostQuantityTotal.Width = 80;
+            // 
+            // dgvMaterialCostPriceTotal
+            // 
+            this.dgvMaterialCostPriceTotal.Frozen = true;
+            this.dgvMaterialCostPriceTotal.HeaderText = "Column3";
+            this.dgvMaterialCostPriceTotal.Name = "dgvMaterialCostPriceTotal";
+            this.dgvMaterialCostPriceTotal.ReadOnly = true;
+            this.dgvMaterialCostPriceTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMaterialCostPriceTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgvMaterialCostPriceTotal.Width = 180;
+            // 
+            // dgvMaterialCostAmountTotal
+            // 
+            this.dgvMaterialCostAmountTotal.Frozen = true;
+            this.dgvMaterialCostAmountTotal.HeaderText = "Column4";
+            this.dgvMaterialCostAmountTotal.Name = "dgvMaterialCostAmountTotal";
+            this.dgvMaterialCostAmountTotal.ReadOnly = true;
+            this.dgvMaterialCostAmountTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMaterialCostAmountTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dgvMaterialCostAmountTotal.Width = 200;
+            // 
+            // dgvMaterialCostKgPerAmountTotal
+            // 
+            this.dgvMaterialCostKgPerAmountTotal.HeaderText = "Column5";
+            this.dgvMaterialCostKgPerAmountTotal.Name = "dgvMaterialCostKgPerAmountTotal";
+            this.dgvMaterialCostKgPerAmountTotal.ReadOnly = true;
+            this.dgvMaterialCostKgPerAmountTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMaterialCostKgPerAmountTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // dgvMaterialCostRatioTotal
+            // 
+            this.dgvMaterialCostRatioTotal.HeaderText = "Column6";
+            this.dgvMaterialCostRatioTotal.Name = "dgvMaterialCostRatioTotal";
+            this.dgvMaterialCostRatioTotal.ReadOnly = true;
+            this.dgvMaterialCostRatioTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvMaterialCostRatioTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column66
+            // 
+            this.Column66.HeaderText = "Column7";
+            this.Column66.Name = "Column66";
+            this.Column66.ReadOnly = true;
+            this.Column66.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column67
+            // 
+            this.Column67.HeaderText = "Column8";
+            this.Column67.Name = "Column67";
+            this.Column67.ReadOnly = true;
+            this.Column67.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column68
+            // 
+            this.Column68.HeaderText = "Column9";
+            this.Column68.Name = "Column68";
+            this.Column68.ReadOnly = true;
+            this.Column68.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column69
+            // 
+            this.Column69.HeaderText = "Column10";
+            this.Column69.Name = "Column69";
+            this.Column69.ReadOnly = true;
+            this.Column69.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column70
+            // 
+            this.Column70.HeaderText = "Column11";
+            this.Column70.Name = "Column70";
+            this.Column70.ReadOnly = true;
+            this.Column70.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column71
+            // 
+            this.Column71.HeaderText = "Column12";
+            this.Column71.Name = "Column71";
+            this.Column71.ReadOnly = true;
+            this.Column71.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column72
+            // 
+            this.Column72.HeaderText = "Column13";
+            this.Column72.Name = "Column72";
+            this.Column72.ReadOnly = true;
+            this.Column72.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column73
+            // 
+            this.Column73.HeaderText = "Column14";
+            this.Column73.Name = "Column73";
+            this.Column73.ReadOnly = true;
+            this.Column73.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column74
+            // 
+            this.Column74.HeaderText = "Column15";
+            this.Column74.Name = "Column74";
+            this.Column74.ReadOnly = true;
+            this.Column74.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column75
+            // 
+            this.Column75.HeaderText = "Column16";
+            this.Column75.Name = "Column75";
+            this.Column75.ReadOnly = true;
+            this.Column75.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column76
+            // 
+            this.Column76.HeaderText = "Column17";
+            this.Column76.Name = "Column76";
+            this.Column76.ReadOnly = true;
+            this.Column76.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column77
+            // 
+            this.Column77.HeaderText = "Column18";
+            this.Column77.Name = "Column77";
+            this.Column77.ReadOnly = true;
+            this.Column77.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column78
+            // 
+            this.Column78.HeaderText = "Column19";
+            this.Column78.Name = "Column78";
+            this.Column78.ReadOnly = true;
+            this.Column78.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column79
+            // 
+            this.Column79.HeaderText = "Column20";
+            this.Column79.Name = "Column79";
+            this.Column79.ReadOnly = true;
+            this.Column79.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column80
+            // 
+            this.Column80.HeaderText = "Column21";
+            this.Column80.Name = "Column80";
+            this.Column80.ReadOnly = true;
+            this.Column80.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column81
+            // 
+            this.Column81.HeaderText = "Column22";
+            this.Column81.Name = "Column81";
+            this.Column81.ReadOnly = true;
+            this.Column81.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column82
+            // 
+            this.Column82.HeaderText = "Column23";
+            this.Column82.Name = "Column82";
+            this.Column82.ReadOnly = true;
+            this.Column82.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column83
+            // 
+            this.Column83.HeaderText = "Column24";
+            this.Column83.Name = "Column83";
+            this.Column83.ReadOnly = true;
+            this.Column83.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column84
+            // 
+            this.Column84.HeaderText = "Column25";
+            this.Column84.Name = "Column84";
+            this.Column84.ReadOnly = true;
+            this.Column84.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column85
+            // 
+            this.Column85.HeaderText = "Column26";
+            this.Column85.Name = "Column85";
+            this.Column85.ReadOnly = true;
+            this.Column85.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column86
+            // 
+            this.Column86.HeaderText = "Column27";
+            this.Column86.Name = "Column86";
+            this.Column86.ReadOnly = true;
+            this.Column86.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column87
+            // 
+            this.Column87.HeaderText = "Column28";
+            this.Column87.Name = "Column87";
+            this.Column87.ReadOnly = true;
+            this.Column87.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column88
+            // 
+            this.Column88.HeaderText = "Column29";
+            this.Column88.Name = "Column88";
+            this.Column88.ReadOnly = true;
+            this.Column88.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column89
+            // 
+            this.Column89.HeaderText = "Column30";
+            this.Column89.Name = "Column89";
+            this.Column89.ReadOnly = true;
+            this.Column89.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column90
+            // 
+            this.Column90.HeaderText = "Column31";
+            this.Column90.Name = "Column90";
+            this.Column90.ReadOnly = true;
+            this.Column90.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column91
+            // 
+            this.Column91.HeaderText = "Column32";
+            this.Column91.Name = "Column91";
+            this.Column91.ReadOnly = true;
+            this.Column91.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column92
+            // 
+            this.Column92.HeaderText = "Column33";
+            this.Column92.Name = "Column92";
+            this.Column92.ReadOnly = true;
+            this.Column92.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column93
+            // 
+            this.Column93.HeaderText = "Column34";
+            this.Column93.Name = "Column93";
+            this.Column93.ReadOnly = true;
+            this.Column93.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column94
+            // 
+            this.Column94.HeaderText = "Column35";
+            this.Column94.Name = "Column94";
+            this.Column94.ReadOnly = true;
+            this.Column94.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column95
+            // 
+            this.Column95.HeaderText = "Column36";
+            this.Column95.Name = "Column95";
+            this.Column95.ReadOnly = true;
+            this.Column95.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column96
+            // 
+            this.Column96.HeaderText = "Column37";
+            this.Column96.Name = "Column96";
+            this.Column96.ReadOnly = true;
+            this.Column96.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column97
+            // 
+            this.Column97.HeaderText = "Column38";
+            this.Column97.Name = "Column97";
+            this.Column97.ReadOnly = true;
+            this.Column97.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column98
+            // 
+            this.Column98.HeaderText = "Column39";
+            this.Column98.Name = "Column98";
+            this.Column98.ReadOnly = true;
+            this.Column98.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column99
+            // 
+            this.Column99.HeaderText = "Column40";
+            this.Column99.Name = "Column99";
+            this.Column99.ReadOnly = true;
+            this.Column99.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column100
+            // 
+            this.Column100.HeaderText = "Column41";
+            this.Column100.Name = "Column100";
+            this.Column100.ReadOnly = true;
+            this.Column100.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column101
+            // 
+            this.Column101.HeaderText = "Column42";
+            this.Column101.Name = "Column101";
+            this.Column101.ReadOnly = true;
+            this.Column101.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column102
+            // 
+            this.Column102.HeaderText = "Column43";
+            this.Column102.Name = "Column102";
+            this.Column102.ReadOnly = true;
+            this.Column102.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column103
+            // 
+            this.Column103.HeaderText = "Column44";
+            this.Column103.Name = "Column103";
+            this.Column103.ReadOnly = true;
+            this.Column103.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column104
+            // 
+            this.Column104.HeaderText = "Column45";
+            this.Column104.Name = "Column104";
+            this.Column104.ReadOnly = true;
+            this.Column104.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column105
+            // 
+            this.Column105.HeaderText = "Column46";
+            this.Column105.Name = "Column105";
+            this.Column105.ReadOnly = true;
+            this.Column105.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column106
+            // 
+            this.Column106.HeaderText = "Column47";
+            this.Column106.Name = "Column106";
+            this.Column106.ReadOnly = true;
+            this.Column106.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column107
+            // 
+            this.Column107.HeaderText = "Column48";
+            this.Column107.Name = "Column107";
+            this.Column107.ReadOnly = true;
+            this.Column107.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column108
+            // 
+            this.Column108.HeaderText = "Column49";
+            this.Column108.Name = "Column108";
+            this.Column108.ReadOnly = true;
+            this.Column108.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column109
+            // 
+            this.Column109.HeaderText = "Column50";
+            this.Column109.Name = "Column109";
+            this.Column109.ReadOnly = true;
+            this.Column109.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column110
+            // 
+            this.Column110.HeaderText = "Column51";
+            this.Column110.Name = "Column110";
+            this.Column110.ReadOnly = true;
+            this.Column110.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column111
+            // 
+            this.Column111.HeaderText = "Column52";
+            this.Column111.Name = "Column111";
+            this.Column111.ReadOnly = true;
+            this.Column111.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column112
+            // 
+            this.Column112.HeaderText = "Column53";
+            this.Column112.Name = "Column112";
+            this.Column112.ReadOnly = true;
+            this.Column112.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column113
+            // 
+            this.Column113.HeaderText = "Column54";
+            this.Column113.Name = "Column113";
+            this.Column113.ReadOnly = true;
+            this.Column113.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column114
+            // 
+            this.Column114.HeaderText = "Column55";
+            this.Column114.Name = "Column114";
+            this.Column114.ReadOnly = true;
+            this.Column114.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column115
+            // 
+            this.Column115.HeaderText = "Column56";
+            this.Column115.Name = "Column115";
+            this.Column115.ReadOnly = true;
+            this.Column115.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // Column116
+            // 
+            this.Column116.HeaderText = "Column57";
+            this.Column116.Name = "Column116";
+            this.Column116.ReadOnly = true;
+            this.Column116.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // btnAppend
             // 
@@ -1471,424 +1889,56 @@
             this.btnFixedCost.UseVisualStyleBackColor = true;
             this.btnFixedCost.Click += new System.EventHandler(this.btnFixedCost_Click);
             // 
-            // dgvMaterialCostNameTotal
-            // 
-            this.dgvMaterialCostNameTotal.Frozen = true;
-            this.dgvMaterialCostNameTotal.HeaderText = "Column1";
-            this.dgvMaterialCostNameTotal.Name = "dgvMaterialCostNameTotal";
-            this.dgvMaterialCostNameTotal.ReadOnly = true;
-            this.dgvMaterialCostNameTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMaterialCostNameTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgvMaterialCostNameTotal.Width = 40;
-            // 
-            // dgvMaterialCostQuantityTotal
-            // 
-            this.dgvMaterialCostQuantityTotal.Frozen = true;
-            this.dgvMaterialCostQuantityTotal.HeaderText = "Column2";
-            this.dgvMaterialCostQuantityTotal.Name = "dgvMaterialCostQuantityTotal";
-            this.dgvMaterialCostQuantityTotal.ReadOnly = true;
-            this.dgvMaterialCostQuantityTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMaterialCostQuantityTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgvMaterialCostQuantityTotal.Width = 80;
-            // 
-            // dgvMaterialCostPriceTotal
-            // 
-            this.dgvMaterialCostPriceTotal.Frozen = true;
-            this.dgvMaterialCostPriceTotal.HeaderText = "Column3";
-            this.dgvMaterialCostPriceTotal.Name = "dgvMaterialCostPriceTotal";
-            this.dgvMaterialCostPriceTotal.ReadOnly = true;
-            this.dgvMaterialCostPriceTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMaterialCostPriceTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgvMaterialCostPriceTotal.Width = 180;
-            // 
-            // dgvMaterialCostAmountTotal
-            // 
-            this.dgvMaterialCostAmountTotal.Frozen = true;
-            this.dgvMaterialCostAmountTotal.HeaderText = "Column4";
-            this.dgvMaterialCostAmountTotal.Name = "dgvMaterialCostAmountTotal";
-            this.dgvMaterialCostAmountTotal.ReadOnly = true;
-            this.dgvMaterialCostAmountTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMaterialCostAmountTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dgvMaterialCostAmountTotal.Width = 200;
-            // 
-            // dgvMaterialCostKgPerAmountTotal
-            // 
-            this.dgvMaterialCostKgPerAmountTotal.HeaderText = "Column5";
-            this.dgvMaterialCostKgPerAmountTotal.Name = "dgvMaterialCostKgPerAmountTotal";
-            this.dgvMaterialCostKgPerAmountTotal.ReadOnly = true;
-            this.dgvMaterialCostKgPerAmountTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMaterialCostKgPerAmountTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dgvMaterialCostRatioTotal
-            // 
-            this.dgvMaterialCostRatioTotal.HeaderText = "Column6";
-            this.dgvMaterialCostRatioTotal.Name = "dgvMaterialCostRatioTotal";
-            this.dgvMaterialCostRatioTotal.ReadOnly = true;
-            this.dgvMaterialCostRatioTotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvMaterialCostRatioTotal.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column66
-            // 
-            this.Column66.HeaderText = "Column7";
-            this.Column66.Name = "Column66";
-            this.Column66.ReadOnly = true;
-            this.Column66.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column67
-            // 
-            this.Column67.HeaderText = "Column8";
-            this.Column67.Name = "Column67";
-            this.Column67.ReadOnly = true;
-            this.Column67.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column68
-            // 
-            this.Column68.HeaderText = "Column9";
-            this.Column68.Name = "Column68";
-            this.Column68.ReadOnly = true;
-            this.Column68.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column69
-            // 
-            this.Column69.HeaderText = "Column10";
-            this.Column69.Name = "Column69";
-            this.Column69.ReadOnly = true;
-            this.Column69.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column70
-            // 
-            this.Column70.HeaderText = "Column11";
-            this.Column70.Name = "Column70";
-            this.Column70.ReadOnly = true;
-            this.Column70.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column71
-            // 
-            this.Column71.HeaderText = "Column12";
-            this.Column71.Name = "Column71";
-            this.Column71.ReadOnly = true;
-            this.Column71.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column72
-            // 
-            this.Column72.HeaderText = "Column13";
-            this.Column72.Name = "Column72";
-            this.Column72.ReadOnly = true;
-            this.Column72.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column73
-            // 
-            this.Column73.HeaderText = "Column14";
-            this.Column73.Name = "Column73";
-            this.Column73.ReadOnly = true;
-            this.Column73.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column74
-            // 
-            this.Column74.HeaderText = "Column15";
-            this.Column74.Name = "Column74";
-            this.Column74.ReadOnly = true;
-            this.Column74.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column75
-            // 
-            this.Column75.HeaderText = "Column16";
-            this.Column75.Name = "Column75";
-            this.Column75.ReadOnly = true;
-            this.Column75.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column76
-            // 
-            this.Column76.HeaderText = "Column17";
-            this.Column76.Name = "Column76";
-            this.Column76.ReadOnly = true;
-            this.Column76.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column77
-            // 
-            this.Column77.HeaderText = "Column18";
-            this.Column77.Name = "Column77";
-            this.Column77.ReadOnly = true;
-            this.Column77.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column78
-            // 
-            this.Column78.HeaderText = "Column19";
-            this.Column78.Name = "Column78";
-            this.Column78.ReadOnly = true;
-            this.Column78.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column79
-            // 
-            this.Column79.HeaderText = "Column20";
-            this.Column79.Name = "Column79";
-            this.Column79.ReadOnly = true;
-            this.Column79.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column80
-            // 
-            this.Column80.HeaderText = "Column21";
-            this.Column80.Name = "Column80";
-            this.Column80.ReadOnly = true;
-            this.Column80.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column81
-            // 
-            this.Column81.HeaderText = "Column22";
-            this.Column81.Name = "Column81";
-            this.Column81.ReadOnly = true;
-            this.Column81.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column82
-            // 
-            this.Column82.HeaderText = "Column23";
-            this.Column82.Name = "Column82";
-            this.Column82.ReadOnly = true;
-            this.Column82.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column83
-            // 
-            this.Column83.HeaderText = "Column24";
-            this.Column83.Name = "Column83";
-            this.Column83.ReadOnly = true;
-            this.Column83.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column84
-            // 
-            this.Column84.HeaderText = "Column25";
-            this.Column84.Name = "Column84";
-            this.Column84.ReadOnly = true;
-            this.Column84.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column85
-            // 
-            this.Column85.HeaderText = "Column26";
-            this.Column85.Name = "Column85";
-            this.Column85.ReadOnly = true;
-            this.Column85.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column86
-            // 
-            this.Column86.HeaderText = "Column27";
-            this.Column86.Name = "Column86";
-            this.Column86.ReadOnly = true;
-            this.Column86.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column87
-            // 
-            this.Column87.HeaderText = "Column28";
-            this.Column87.Name = "Column87";
-            this.Column87.ReadOnly = true;
-            this.Column87.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column88
-            // 
-            this.Column88.HeaderText = "Column29";
-            this.Column88.Name = "Column88";
-            this.Column88.ReadOnly = true;
-            this.Column88.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column89
-            // 
-            this.Column89.HeaderText = "Column30";
-            this.Column89.Name = "Column89";
-            this.Column89.ReadOnly = true;
-            this.Column89.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column90
-            // 
-            this.Column90.HeaderText = "Column31";
-            this.Column90.Name = "Column90";
-            this.Column90.ReadOnly = true;
-            this.Column90.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column91
-            // 
-            this.Column91.HeaderText = "Column32";
-            this.Column91.Name = "Column91";
-            this.Column91.ReadOnly = true;
-            this.Column91.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column92
-            // 
-            this.Column92.HeaderText = "Column33";
-            this.Column92.Name = "Column92";
-            this.Column92.ReadOnly = true;
-            this.Column92.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column93
-            // 
-            this.Column93.HeaderText = "Column34";
-            this.Column93.Name = "Column93";
-            this.Column93.ReadOnly = true;
-            this.Column93.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column94
-            // 
-            this.Column94.HeaderText = "Column35";
-            this.Column94.Name = "Column94";
-            this.Column94.ReadOnly = true;
-            this.Column94.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column95
-            // 
-            this.Column95.HeaderText = "Column36";
-            this.Column95.Name = "Column95";
-            this.Column95.ReadOnly = true;
-            this.Column95.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column96
-            // 
-            this.Column96.HeaderText = "Column37";
-            this.Column96.Name = "Column96";
-            this.Column96.ReadOnly = true;
-            this.Column96.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column97
-            // 
-            this.Column97.HeaderText = "Column38";
-            this.Column97.Name = "Column97";
-            this.Column97.ReadOnly = true;
-            this.Column97.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column98
-            // 
-            this.Column98.HeaderText = "Column39";
-            this.Column98.Name = "Column98";
-            this.Column98.ReadOnly = true;
-            this.Column98.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column99
-            // 
-            this.Column99.HeaderText = "Column40";
-            this.Column99.Name = "Column99";
-            this.Column99.ReadOnly = true;
-            this.Column99.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column100
-            // 
-            this.Column100.HeaderText = "Column41";
-            this.Column100.Name = "Column100";
-            this.Column100.ReadOnly = true;
-            this.Column100.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column101
-            // 
-            this.Column101.HeaderText = "Column42";
-            this.Column101.Name = "Column101";
-            this.Column101.ReadOnly = true;
-            this.Column101.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column102
-            // 
-            this.Column102.HeaderText = "Column43";
-            this.Column102.Name = "Column102";
-            this.Column102.ReadOnly = true;
-            this.Column102.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column103
-            // 
-            this.Column103.HeaderText = "Column44";
-            this.Column103.Name = "Column103";
-            this.Column103.ReadOnly = true;
-            this.Column103.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column104
-            // 
-            this.Column104.HeaderText = "Column45";
-            this.Column104.Name = "Column104";
-            this.Column104.ReadOnly = true;
-            this.Column104.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column105
-            // 
-            this.Column105.HeaderText = "Column46";
-            this.Column105.Name = "Column105";
-            this.Column105.ReadOnly = true;
-            this.Column105.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column106
-            // 
-            this.Column106.HeaderText = "Column47";
-            this.Column106.Name = "Column106";
-            this.Column106.ReadOnly = true;
-            this.Column106.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column107
-            // 
-            this.Column107.HeaderText = "Column48";
-            this.Column107.Name = "Column107";
-            this.Column107.ReadOnly = true;
-            this.Column107.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column108
-            // 
-            this.Column108.HeaderText = "Column49";
-            this.Column108.Name = "Column108";
-            this.Column108.ReadOnly = true;
-            this.Column108.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column109
-            // 
-            this.Column109.HeaderText = "Column50";
-            this.Column109.Name = "Column109";
-            this.Column109.ReadOnly = true;
-            this.Column109.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column110
-            // 
-            this.Column110.HeaderText = "Column51";
-            this.Column110.Name = "Column110";
-            this.Column110.ReadOnly = true;
-            this.Column110.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column111
-            // 
-            this.Column111.HeaderText = "Column52";
-            this.Column111.Name = "Column111";
-            this.Column111.ReadOnly = true;
-            this.Column111.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column112
-            // 
-            this.Column112.HeaderText = "Column53";
-            this.Column112.Name = "Column112";
-            this.Column112.ReadOnly = true;
-            this.Column112.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column113
-            // 
-            this.Column113.HeaderText = "Column54";
-            this.Column113.Name = "Column113";
-            this.Column113.ReadOnly = true;
-            this.Column113.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column114
-            // 
-            this.Column114.HeaderText = "Column55";
-            this.Column114.Name = "Column114";
-            this.Column114.ReadOnly = true;
-            this.Column114.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column115
-            // 
-            this.Column115.HeaderText = "Column56";
-            this.Column115.Name = "Column115";
-            this.Column115.ReadOnly = true;
-            this.Column115.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // Column116
-            // 
-            this.Column116.HeaderText = "Column57";
-            this.Column116.Name = "Column116";
-            this.Column116.ReadOnly = true;
-            this.Column116.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // btnOutput
+            // 
+            this.btnOutput.Location = new System.Drawing.Point(708, 654);
+            this.btnOutput.Name = "btnOutput";
+            this.btnOutput.Size = new System.Drawing.Size(75, 23);
+            this.btnOutput.TabIndex = 7;
+            this.btnOutput.Text = "Excel出力";
+            this.btnOutput.UseVisualStyleBackColor = true;
+            this.btnOutput.Click += new System.EventHandler(this.btnOutput_Click);
+            // 
+            // outputDir
+            // 
+            this.outputDir.Location = new System.Drawing.Point(96, 655);
+            this.outputDir.Name = "outputDir";
+            this.outputDir.ReadOnly = true;
+            this.outputDir.Size = new System.Drawing.Size(525, 23);
+            this.outputDir.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 658);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 15);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "出力フォルダ：";
+            // 
+            // btnRefOutputDir
+            // 
+            this.btnRefOutputDir.Location = new System.Drawing.Point(627, 654);
+            this.btnRefOutputDir.Name = "btnRefOutputDir";
+            this.btnRefOutputDir.Size = new System.Drawing.Size(75, 23);
+            this.btnRefOutputDir.TabIndex = 8;
+            this.btnRefOutputDir.Text = "変更";
+            this.btnRefOutputDir.UseVisualStyleBackColor = true;
+            this.btnRefOutputDir.Click += new System.EventHandler(this.btnRefOutputDir_Click);
+            // 
+            // folderBrowserDialog
+            // 
+            this.folderBrowserDialog.Description = "出力フォルダを指定してください。";
             // 
             // Form_CostMng_BudgetReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 689);
+            this.Controls.Add(this.outputDir);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnRefOutputDir);
+            this.Controls.Add(this.btnOutput);
             this.Controls.Add(this.btnFixedCost);
             this.Controls.Add(this.groupMonth);
             this.Controls.Add(this.label3);
@@ -1909,6 +1959,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHeader)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -2109,5 +2160,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column114;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column115;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column116;
+        private System.Windows.Forms.Button btnOutput;
+        private System.Windows.Forms.TextBox outputDir;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnRefOutputDir;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
     }
 }

@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using OfficeOpenXml;
+using OfficeOpenXml.Style;
+
 
 namespace CostAccounting
 {
@@ -63,7 +67,8 @@ namespace CostAccounting
         // 予算か実績のカテゴリタイプ
         private Const.CATEGORY_TYPE category;
 
-        protected void setCategory(Const.CATEGORY_TYPE category) {
+        protected void setCategory(Const.CATEGORY_TYPE category)
+        {
             this.category = category;
         }
 
@@ -1037,6 +1042,47 @@ namespace CostAccounting
                     dataGridViewTotal.Rows[0].Cells[49].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[49].Value), data.operating_expenses).ToString("N");
                 }
             }
+        }
+
+        /*************************************************************
+         * Excel出力ボタン押下時の処理
+         *************************************************************/
+        protected void btnOutput_Click(string outputDir)
+        {
+            if (Program.MessageBoxBefore("画面の表示内容でExcelファイルを出力しますか？") != DialogResult.Yes)
+                return;
+
+            // テンプレートのファイル
+            var template = @"\list.xltx";
+            var templateFile = new FileInfo(string.Concat(System.Configuration.ConfigurationManager.AppSettings["templateFolder"], template));
+
+            // 出力ファイル
+            var outputFile = new FileInfo(string.Concat(Application.StartupPath
+                                                        , @"\xxxxxx帳票"
+                                                        , Const.CATEGORY_TYPE.Budget.Equals(category) ? "【予定】_" : "【実績】_"
+                                                        , DateTime.Now.ToString("yyyyMMddHHmmss")
+                                                        , ".xlsx"));
+
+            using (var package = new ExcelPackage(outputFile, templateFile))
+            {
+                ExcelWorksheet ws = package.Workbook.Worksheets["template"];
+
+                ws.InsertRow(5, dataGridView.RowCount - 2, 4);
+                
+                // Excelファイルを保存する
+                ws.Calculate();
+                package.Workbook.Worksheets.First().Select();
+                package.Save();
+            }
+
+            Logger.Info(Message.INF006, new string[] { this.Text, outputDir + " " + outputFile.Name });
+
+            Program.MessageBoxAfter(
+                    string.Concat("以下のExcelファイルを出力しました。出力先のフォルダを開きます。"
+                                  , Environment.NewLine
+                                  , outputFile.Name));
+
+            System.Diagnostics.Process.Start(outputDir);
         }
     }
 }
