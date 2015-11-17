@@ -703,12 +703,12 @@ namespace CostAccounting
                                    , Conversion.Parse((string)row.Cells[15].Value)).ToString("P");
 
                 row.Cells[55].Value = Conversion.Parse((string)row.Cells[28].Value) == decimal.Zero ?
-                    decimal.Zero.ToString("P") :
+                    decimal.Zero.ToString("N") :
                     decimal.Divide(Conversion.Parse((string)row.Cells[52].Value)
-                                   , Conversion.Parse((string)row.Cells[28].Value)).ToString("P");
+                                   , Conversion.Parse((string)row.Cells[28].Value)).ToString("N");
 
                 row.Cells[56].Value = Conversion.Parse((string)row.Cells[28].Value) == decimal.Zero ?
-                    decimal.Zero.ToString("P") :
+                    decimal.Zero.ToString("N") :
                     decimal.Divide(Conversion.Parse((string)row.Cells[29].Value)
                                    + decimal.Divide(Conversion.Parse((string)row.Cells[30].Value), 2)
                                    + Conversion.Parse((string)row.Cells[32].Value)
@@ -720,7 +720,7 @@ namespace CostAccounting
                                                     + Conversion.Parse((string)row.Cells[43].Value)
                                                     + Conversion.Parse((string)row.Cells[44].Value)
                                                     + Conversion.Parse((string)row.Cells[45].Value), 2)
-                                   , Conversion.Parse((string)row.Cells[28].Value)).ToString("P");
+                                   , Conversion.Parse((string)row.Cells[28].Value)).ToString("N");
 
                 totalCost += Conversion.Parse((string)row.Cells[52].Value);
                 totalProfit += Conversion.Parse((string)row.Cells[53].Value);
@@ -1047,19 +1047,17 @@ namespace CostAccounting
         /*************************************************************
          * Excel出力ボタン押下時の処理
          *************************************************************/
-        protected void btnOutput_Click(string outputDir)
+        protected void btnOutput_Click(string outputDir, string fileName, string template)
         {
             if (Program.MessageBoxBefore("画面の表示内容でExcelファイルを出力しますか？") != DialogResult.Yes)
                 return;
 
             // テンプレートのファイル
-            var template = @"\list.xltx";
-            var templateFile = new FileInfo(string.Concat(System.Configuration.ConfigurationManager.AppSettings["templateFolder"], template));
+            var templateFile = new FileInfo(string.Concat(System.Configuration.ConfigurationManager.AppSettings["templateFolder"], @"\", template));
 
             // 出力ファイル
             var outputFile = new FileInfo(string.Concat(Application.StartupPath
-                                                        , @"\xxxxxx帳票"
-                                                        , Const.CATEGORY_TYPE.Budget.Equals(category) ? "【予定】_" : "【実績】_"
+                                                        , string.Concat(@"\", fileName, "_")
                                                         , DateTime.Now.ToString("yyyyMMddHHmmss")
                                                         , ".xlsx"));
 
@@ -1067,8 +1065,68 @@ namespace CostAccounting
             {
                 ExcelWorksheet ws = package.Workbook.Worksheets["template"];
 
-                ws.InsertRow(5, dataGridView.RowCount - 2, 4);
-                
+                // 各行の設定
+                int startRow = 4;
+                ws.InsertRow(startRow + 1, dataGridView.RowCount - 2, startRow);
+
+                foreach (DataGridViewRow row in dataGridView.Rows)
+                {
+                    for (int columnIndex = 0; columnIndex < row.Cells.Count - 3; columnIndex++)
+                    {
+                        DataGridViewCell cell = row.Cells[columnIndex];
+
+                        if (cell.Value == null)
+                            continue;
+
+                        string value = cell.Value.ToString();
+                        decimal num;
+
+                        if (value.Contains("%"))
+                        {
+                            value = value.Replace("%", string.Empty);
+                            value = decimal.Divide(Conversion.Parse(value), 100).ToString();
+                        }
+
+                        if (decimal.TryParse(value, out num))
+                            ws.Cells[cell.RowIndex + 4, cell.ColumnIndex + 1].Value = num;
+                        else
+                            ws.Cells[cell.RowIndex + 4, cell.ColumnIndex + 1].Value = value;
+                    }
+                }
+
+                // 合計行の設定
+                startRow = startRow + dataGridView.RowCount;
+                foreach (DataGridViewCell cell in dataGridViewTotal.Rows[0].Cells)
+                {
+                    if (cell.Value == null)
+                        continue;
+
+                    string value = cell.Value.ToString();
+                    decimal num;
+                    if (value.Contains("%"))
+                    {
+                        value = value.Replace("%", string.Empty);
+                        value = decimal.Divide(Conversion.Parse(value), 100).ToString();
+                    }
+
+                    if (decimal.TryParse(value, out num))
+                        ws.Cells[startRow, cell.ColumnIndex + 1].Value = num;
+                    else
+                        ws.Cells[startRow, cell.ColumnIndex + 1].Value = value;
+
+                }
+                ws.Cells[startRow + 1, 16].Value = Conversion.Parse((string)dataGridViewTotal.Rows[1].Cells[15].Value);
+
+                // どの月を計算対象としたかを設定
+                string dispStr = "計算対象月【";
+                foreach (CheckBox checkbox in checkBoxDic.Values)
+                {
+                    if (checkbox.Checked)
+                        dispStr = string.Concat(dispStr, checkbox.Text, "、");
+                }
+                dispStr = dispStr.TrimEnd('、') + "】";
+                ws.Cells["A1"].Value = dispStr;
+
                 // Excelファイルを保存する
                 ws.Calculate();
                 package.Workbook.Worksheets.First().Select();

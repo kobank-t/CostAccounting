@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioSuppliers = new System.Windows.Forms.RadioButton();
             this.radioItem = new System.Windows.Forms.RadioButton();
@@ -230,6 +230,11 @@
             this.checkBoxJun = new System.Windows.Forms.CheckBox();
             this.checkBoxMay = new System.Windows.Forms.CheckBox();
             this.checkBoxApr = new System.Windows.Forms.CheckBox();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.outputDir = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnRefOutputDir = new System.Windows.Forms.Button();
+            this.btnOutput = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -349,21 +354,21 @@
             this.Column114,
             this.Column115,
             this.Column116});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTotal.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTotal.DefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridViewTotal.Location = new System.Drawing.Point(12, 638);
             this.dataGridViewTotal.MultiSelect = false;
             this.dataGridViewTotal.Name = "dataGridViewTotal";
             this.dataGridViewTotal.RowHeadersVisible = false;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridViewTotal.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridViewTotal.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridViewTotal.RowTemplate.Height = 21;
             this.dataGridViewTotal.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dataGridViewTotal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect;
@@ -791,8 +796,8 @@
             this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.AllowUserToResizeColumns = false;
             this.dataGridView.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Azure;
-            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Azure;
+            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.ColumnHeadersVisible = false;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1914,11 +1919,56 @@
             this.checkBoxApr.UseVisualStyleBackColor = true;
             this.checkBoxApr.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
             // 
+            // folderBrowserDialog
+            // 
+            this.folderBrowserDialog.Description = "出力フォルダを指定してください。";
+            // 
+            // outputDir
+            // 
+            this.outputDir.Location = new System.Drawing.Point(96, 690);
+            this.outputDir.Name = "outputDir";
+            this.outputDir.ReadOnly = true;
+            this.outputDir.Size = new System.Drawing.Size(525, 23);
+            this.outputDir.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 693);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 15);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "出力フォルダ：";
+            // 
+            // btnRefOutputDir
+            // 
+            this.btnRefOutputDir.Location = new System.Drawing.Point(627, 689);
+            this.btnRefOutputDir.Name = "btnRefOutputDir";
+            this.btnRefOutputDir.Size = new System.Drawing.Size(75, 23);
+            this.btnRefOutputDir.TabIndex = 12;
+            this.btnRefOutputDir.Text = "変更";
+            this.btnRefOutputDir.UseVisualStyleBackColor = true;
+            this.btnRefOutputDir.Click += new System.EventHandler(this.btnRefOutputDir_Click);
+            // 
+            // btnOutput
+            // 
+            this.btnOutput.Location = new System.Drawing.Point(708, 689);
+            this.btnOutput.Name = "btnOutput";
+            this.btnOutput.Size = new System.Drawing.Size(75, 23);
+            this.btnOutput.TabIndex = 11;
+            this.btnOutput.Text = "Excel出力";
+            this.btnOutput.UseVisualStyleBackColor = true;
+            this.btnOutput.Click += new System.EventHandler(this.btnOutput_Click);
+            // 
             // Form_CostMng_ActualTotal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1267, 689);
+            this.ClientSize = new System.Drawing.Size(1267, 723);
+            this.Controls.Add(this.outputDir);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnRefOutputDir);
+            this.Controls.Add(this.btnOutput);
             this.Controls.Add(this.groupMonth);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewTotal);
@@ -1943,6 +1993,7 @@
             this.groupMonth.ResumeLayout(false);
             this.groupMonth.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -2147,5 +2198,10 @@
         private System.Windows.Forms.CheckBox checkBoxApr;
         private System.Windows.Forms.Button btnAllClear;
         private System.Windows.Forms.Button btnAllCheck;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
+        private System.Windows.Forms.TextBox outputDir;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnRefOutputDir;
+        private System.Windows.Forms.Button btnOutput;
     }
 }

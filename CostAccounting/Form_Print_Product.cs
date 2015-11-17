@@ -128,7 +128,9 @@ namespace CostAccounting
             progressBar.Step = 1;
 
             // テンプレートのファイル
-            var template = radioProduct.Checked ? @"\product.xltx" : @"\blend.xltx";
+            var template = radioProduct.Checked ? @"\" + Properties.Resources.template_product 
+                                                : @"\" + Properties.Resources.template_blend;
+
             var templateFile = new FileInfo(string.Concat(System.Configuration.ConfigurationManager.AppSettings["templateFolder"], template));
 
             // 出力ファイル
@@ -181,7 +183,7 @@ namespace CostAccounting
                     labelStatus.Text = string.Format("・・・ ( {0} / {1} )"
                                                      , (i + 1).ToString("#,0")
                                                      , listView.Items.Count.ToString("#,0"));
-                    
+
                     progressBar.PerformStep();
                 }
 

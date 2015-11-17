@@ -28,6 +28,10 @@ namespace CostAccounting
         private void Form_CostMng_ActualReg_Load(object sender, EventArgs e)
         {
             base.Form_Load(sender, e);
+
+            // 出力フォルダのデフォルトはアプリケーションの実行フォルダを指定
+            outputDir.Text = Application.StartupPath;
+            folderBrowserDialog.SelectedPath = Application.StartupPath;
         }
 
         /*************************************************************
@@ -212,6 +216,25 @@ namespace CostAccounting
         private void btnFixedCost_Click(object sender, EventArgs e)
         {
             base.btnFixedCost_Click();
+        }
+
+        /*************************************************************
+         * 出力フォルダの変更ボタン押下時の処理
+         *************************************************************/
+        private void btnRefOutputDir_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                outputDir.Text = folderBrowserDialog.SelectedPath;
+            }
+        }
+
+        /*************************************************************
+         * Excel出力ボタン押下時の処理
+         *************************************************************/
+        private void btnOutput_Click(object sender, EventArgs e)
+        {
+            base.btnOutput_Click(outputDir.Text, "実績帳票", Properties.Resources.template_list);
         }
     }
 }

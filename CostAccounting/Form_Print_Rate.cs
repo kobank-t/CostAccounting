@@ -48,7 +48,7 @@ namespace CostAccounting
                 return;
 
             // テンプレートのファイル
-            var template = @"\rate.xltx";
+            var template = @"\" + Properties.Resources.template_rate;
             var templateFile = new FileInfo(string.Concat(System.Configuration.ConfigurationManager.AppSettings["templateFolder"], template));
 
             // 出力ファイル

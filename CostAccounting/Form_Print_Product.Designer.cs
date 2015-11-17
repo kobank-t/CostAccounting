@@ -276,7 +276,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "Form_Print_Product";
-            this.Text = "帳票出力";
+            this.Text = "商品帳票出力";
             this.Load += new System.EventHandler(this.Form_Print_Product_Load);
             this.groupBox1.ResumeLayout(false);
             this.category.ResumeLayout(false);

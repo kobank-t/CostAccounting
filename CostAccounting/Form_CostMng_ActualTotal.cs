@@ -45,6 +45,10 @@ namespace CostAccounting
 
             // 集計データを表示する
             showTotalizationData();
+
+            // 出力フォルダのデフォルトはアプリケーションの実行フォルダを指定
+            outputDir.Text = Application.StartupPath;
+            folderBrowserDialog.SelectedPath = Application.StartupPath;
         }
 
         /*************************************************************
@@ -370,6 +374,29 @@ namespace CostAccounting
                 return;
 
             showTotalizationData();
+        }
+
+        /*************************************************************
+         * 出力フォルダの変更ボタン押下時の処理
+         *************************************************************/
+        private void btnRefOutputDir_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                outputDir.Text = folderBrowserDialog.SelectedPath;
+            }
+        }
+
+        /*************************************************************
+         * Excel出力ボタン押下時の処理
+         *************************************************************/
+        private void btnOutput_Click(object sender, EventArgs e)
+        {
+            string fileName = "集計帳票";
+            fileName += radioItem.Checked ? "品種別" : "取引先別";
+            fileName += radioBudget.Checked ? "【予算】" : "【実績】";
+            string template = radioItem.Checked ? Properties.Resources.template_total_item : Properties.Resources.template_total_supplier;
+            base.btnOutput_Click(outputDir.Text, fileName, template);
         }
     }
 }

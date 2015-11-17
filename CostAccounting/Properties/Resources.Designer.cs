@@ -95,5 +95,59 @@ namespace CostAccounting.Properties {
                 return ResourceManager.GetString("defaultMachineData", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   blend.xltx に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string template_blend {
+            get {
+                return ResourceManager.GetString("template_blend", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   list.xltx に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string template_list {
+            get {
+                return ResourceManager.GetString("template_list", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   product.xltx に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string template_product {
+            get {
+                return ResourceManager.GetString("template_product", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   rate.xltx に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string template_rate {
+            get {
+                return ResourceManager.GetString("template_rate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   total_item.xltx に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string template_total_item {
+            get {
+                return ResourceManager.GetString("template_total_item", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   total_supplier.xltx に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string template_total_supplier {
+            get {
+                return ResourceManager.GetString("template_total_supplier", resourceCulture);
+            }
+        }
     }
 }

@@ -450,6 +450,8 @@
     <None Include="template\list.xltx" />
     <None Include="template\product.xltx" />
     <None Include="template\rate.xltx" />
+    <None Include="template\total_item.xltx" />
+    <None Include="template\total_supplier.xltx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">

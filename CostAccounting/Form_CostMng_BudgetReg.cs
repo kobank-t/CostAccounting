@@ -174,7 +174,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnOutput_Click(object sender, EventArgs e)
         {
-            base.btnOutput_Click(outputDir.Text);
+            base.btnOutput_Click(outputDir.Text, "予算帳票", Properties.Resources.template_list);
         }
     }
 }
