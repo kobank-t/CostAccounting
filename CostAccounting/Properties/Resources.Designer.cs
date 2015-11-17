@@ -106,6 +106,15 @@ namespace CostAccounting.Properties {
         }
         
         /// <summary>
+        ///   compare.xltx に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        internal static string template_compare {
+            get {
+                return ResourceManager.GetString("template_compare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   divergence.xltx に類似しているローカライズされた文字列を検索します。
         /// </summary>
         internal static string template_divergence {

@@ -132,6 +132,9 @@
   <data name="template_blend" xml:space="preserve">
     <value>blend.xltx</value>
   </data>
+  <data name="template_compare" xml:space="preserve">
+    <value>compare.xltx</value>
+  </data>
   <data name="template_divergence" xml:space="preserve">
     <value>divergence.xltx</value>
   </data>
