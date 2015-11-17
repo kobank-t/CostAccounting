@@ -35,6 +35,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnEnter = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.labelVersion = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -98,7 +99,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(389, 87);
+            this.button1.Location = new System.Drawing.Point(390, 103);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(38, 35);
@@ -106,13 +107,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // labelVersion
+            // 
+            this.labelVersion.AutoSize = true;
+            this.labelVersion.Font = new System.Drawing.Font("Meiryo UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.labelVersion.ForeColor = System.Drawing.Color.Gray;
+            this.labelVersion.Location = new System.Drawing.Point(5, 119);
+            this.labelVersion.Name = "labelVersion";
+            this.labelVersion.Size = new System.Drawing.Size(54, 15);
+            this.labelVersion.TabIndex = 3;
+            this.labelVersion.Text = "version";
+            // 
             // Form_Common_SelectYear
             // 
             this.AcceptButton = this.btnEnter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(429, 123);
+            this.ClientSize = new System.Drawing.Size(429, 139);
+            this.Controls.Add(this.labelVersion);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox1);
@@ -139,6 +152,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnEnter;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label labelVersion;
 
     }
 }

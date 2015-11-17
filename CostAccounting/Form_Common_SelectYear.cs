@@ -127,7 +127,7 @@ namespace CostAccounting
 
                 today = Regex.Replace(today, @"(\d{4})(\d{2})(\d{2})", @"$1/$2/$3");
                 ymd = Regex.Replace(ymd, @"(\d{4})(\d{2})(\d{2})", @"$1/$2/$3");
- 
+
                 TimeSpan span = DateTime.Parse(today) - DateTime.Parse(ymd);
 
                 if (span.Days > Conversion.Parse(Properties.Resources.bkfileStoragePeriod))
@@ -143,6 +143,9 @@ namespace CostAccounting
         private void Form_Common_SelectYear_Load(object sender, EventArgs e)
         {
             Logger.Info(Message.INF001);
+
+            System.Reflection.Assembly asm = System.Reflection.Assembly.GetExecutingAssembly();
+            labelVersion.Text = string.Concat("Version：", asm.GetName().Version);
         }
 
         private void button1_Click(object sender, EventArgs e)
