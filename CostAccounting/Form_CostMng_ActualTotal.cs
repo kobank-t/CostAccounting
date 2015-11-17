@@ -392,7 +392,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnOutput_Click(object sender, EventArgs e)
         {
-            string fileName = "集計帳票";
+            string fileName = "集計表_";
             fileName += radioItem.Checked ? "品種別" : "取引先別";
             fileName += radioBudget.Checked ? "【予算】" : "【実績】";
             string template = radioItem.Checked ? Properties.Resources.template_total_item : Properties.Resources.template_total_supplier;

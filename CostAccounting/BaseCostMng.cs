@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using OfficeOpenXml;
-using OfficeOpenXml.Style;
 
 
 namespace CostAccounting
@@ -1049,6 +1044,12 @@ namespace CostAccounting
          *************************************************************/
         protected void btnOutput_Click(string outputDir, string fileName, string template)
         {
+            if (dataGridView.RowCount == 0)
+            {
+                Program.MessageBoxError("出力対象のレコードがありません。");
+                return;
+            }
+
             if (Program.MessageBoxBefore("画面の表示内容でExcelファイルを出力しますか？") != DialogResult.Yes)
                 return;
 
@@ -1064,9 +1065,10 @@ namespace CostAccounting
             using (var package = new ExcelPackage(outputFile, templateFile))
             {
                 ExcelWorksheet ws = package.Workbook.Worksheets["template"];
+                ws.Name = fileName;
 
                 // 各行の設定
-                int startRow = 4;
+                int startRow = 5;
                 ws.InsertRow(startRow + 1, dataGridView.RowCount - 2, startRow);
 
                 foreach (DataGridViewRow row in dataGridView.Rows)
@@ -1088,34 +1090,36 @@ namespace CostAccounting
                         }
 
                         if (decimal.TryParse(value, out num))
-                            ws.Cells[cell.RowIndex + 4, cell.ColumnIndex + 1].Value = num;
+                            ws.Cells[cell.RowIndex + startRow, cell.ColumnIndex + 1].Value = num;
                         else
-                            ws.Cells[cell.RowIndex + 4, cell.ColumnIndex + 1].Value = value;
+                            ws.Cells[cell.RowIndex + startRow, cell.ColumnIndex + 1].Value = value;
                     }
                 }
 
                 // 合計行の設定
                 startRow = startRow + dataGridView.RowCount;
-                foreach (DataGridViewCell cell in dataGridViewTotal.Rows[0].Cells)
+                foreach (DataGridViewRow row in dataGridViewTotal.Rows)
                 {
-                    if (cell.Value == null)
-                        continue;
-
-                    string value = cell.Value.ToString();
-                    decimal num;
-                    if (value.Contains("%"))
+                    foreach (DataGridViewCell cell in row.Cells)
                     {
-                        value = value.Replace("%", string.Empty);
-                        value = decimal.Divide(Conversion.Parse(value), 100).ToString();
+                        if (cell.Value == null)
+                            continue;
+
+                        string value = cell.Value.ToString();
+                        decimal num;
+                        if (value.Contains("%"))
+                        {
+                            value = value.Replace("%", string.Empty);
+                            value = decimal.Divide(Conversion.Parse(value), 100).ToString();
+                        }
+
+                        if (decimal.TryParse(value, out num))
+                            ws.Cells[cell.RowIndex + startRow, cell.ColumnIndex + 1].Value = num;
+                        else
+                            ws.Cells[cell.RowIndex + startRow, cell.ColumnIndex + 1].Value = value;
+
                     }
-
-                    if (decimal.TryParse(value, out num))
-                        ws.Cells[startRow, cell.ColumnIndex + 1].Value = num;
-                    else
-                        ws.Cells[startRow, cell.ColumnIndex + 1].Value = value;
-
                 }
-                ws.Cells[startRow + 1, 16].Value = Conversion.Parse((string)dataGridViewTotal.Rows[1].Cells[15].Value);
 
                 // どの月を計算対象としたかを設定
                 string dispStr = "計算対象月【";

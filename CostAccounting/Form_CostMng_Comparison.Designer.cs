@@ -48,118 +48,6 @@
             this.checkBoxApr = new System.Windows.Forms.CheckBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewSuppliers = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column117 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column118 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column119 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column120 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column121 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column122 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column123 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column124 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column125 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column126 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column127 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column128 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column129 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column130 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column131 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column132 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column133 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column134 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column135 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column136 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column137 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column138 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column139 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column140 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column141 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column142 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column143 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column144 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column145 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column146 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column147 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column148 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column149 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column150 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column151 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column152 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column153 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column154 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column155 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column156 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column157 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column158 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column159 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column160 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column161 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column162 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column163 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column164 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column165 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column166 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column167 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column168 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column169 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column170 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column171 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column172 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column173 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column174 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column175 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column176 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column177 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column178 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column179 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column180 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column181 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column182 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column183 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column184 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column185 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column186 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column187 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column188 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column189 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column190 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column191 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column192 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column193 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column194 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column195 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column196 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column197 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column198 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column199 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column200 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column201 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column202 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column203 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column204 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column205 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column206 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column207 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column208 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column209 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column210 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column211 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column212 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column213 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.product_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.supplier_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewHeader = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -388,6 +276,124 @@
             this.dataGridViewTextBoxColumn227 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkedListBox = new System.Windows.Forms.CheckedListBox();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
+            this.outputDir = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnRefOutputDir = new System.Windows.Forms.Button();
+            this.btnOutput = new System.Windows.Forms.Button();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewItem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewSuppliers = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column58 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column59 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column60 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column61 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column62 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column63 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column64 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column65 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column117 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column118 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column119 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column120 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column121 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column122 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column123 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column124 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column125 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column126 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column127 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column128 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column129 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column130 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column131 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column132 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column133 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column134 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column135 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column136 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column137 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column138 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column139 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column140 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column141 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column142 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column143 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column144 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column145 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column146 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column147 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column148 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column149 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column150 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column151 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column152 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column153 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column154 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column155 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column156 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column157 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column158 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column159 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column160 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column161 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column162 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column163 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column164 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column165 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column166 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column167 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column168 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column169 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column170 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column171 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column172 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column173 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column174 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column175 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column176 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column177 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column178 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column179 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column180 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column181 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column182 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column183 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column184 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column185 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column186 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column187 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column188 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column189 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column190 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column191 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column192 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column193 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column194 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column195 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column196 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column197 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column198 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column199 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column200 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column201 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column202 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column203 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column204 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column205 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column206 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column207 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column208 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column209 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column210 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column211 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column212 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column213 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.product_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.supplier_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupMonth.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHeader)).BeginInit();
@@ -728,703 +734,17 @@
             this.Column212,
             this.Column213,
             this.product_code,
-            this.supplier_code});
+            this.supplier_code,
+            this.type});
             this.dataGridView.Location = new System.Drawing.Point(12, 140);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowTemplate.Height = 21;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dataGridView.Size = new System.Drawing.Size(1035, 548);
+            this.dataGridView.Size = new System.Drawing.Size(1035, 510);
             this.dataGridView.TabIndex = 4;
             this.dataGridView.Scroll += new System.Windows.Forms.ScrollEventHandler(this.dataGridView_Scroll);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Column1";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.Width = 40;
-            // 
-            // dataGridViewItem
-            // 
-            this.dataGridViewItem.Frozen = true;
-            this.dataGridViewItem.HeaderText = "Column2";
-            this.dataGridViewItem.Name = "dataGridViewItem";
-            this.dataGridViewItem.ReadOnly = true;
-            this.dataGridViewItem.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewItem.Width = 80;
-            // 
-            // dataGridViewSuppliers
-            // 
-            this.dataGridViewSuppliers.Frozen = true;
-            this.dataGridViewSuppliers.HeaderText = "Column3";
-            this.dataGridViewSuppliers.Name = "dataGridViewSuppliers";
-            this.dataGridViewSuppliers.ReadOnly = true;
-            this.dataGridViewSuppliers.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewSuppliers.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.dataGridViewSuppliers.Width = 180;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.Frozen = true;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Column4";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 200;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Column5";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // Column58
-            // 
-            this.Column58.HeaderText = "Column6";
-            this.Column58.Name = "Column58";
-            this.Column58.ReadOnly = true;
-            // 
-            // Column59
-            // 
-            this.Column59.HeaderText = "Column7";
-            this.Column59.Name = "Column59";
-            this.Column59.ReadOnly = true;
-            // 
-            // Column60
-            // 
-            this.Column60.HeaderText = "Column8";
-            this.Column60.Name = "Column60";
-            this.Column60.ReadOnly = true;
-            // 
-            // Column61
-            // 
-            this.Column61.HeaderText = "Column9";
-            this.Column61.Name = "Column61";
-            this.Column61.ReadOnly = true;
-            // 
-            // Column62
-            // 
-            this.Column62.HeaderText = "Column10";
-            this.Column62.Name = "Column62";
-            this.Column62.ReadOnly = true;
-            // 
-            // Column63
-            // 
-            this.Column63.HeaderText = "Column11";
-            this.Column63.Name = "Column63";
-            this.Column63.ReadOnly = true;
-            // 
-            // Column64
-            // 
-            this.Column64.HeaderText = "Column12";
-            this.Column64.Name = "Column64";
-            this.Column64.ReadOnly = true;
-            // 
-            // Column65
-            // 
-            this.Column65.HeaderText = "Column13";
-            this.Column65.Name = "Column65";
-            this.Column65.ReadOnly = true;
-            // 
-            // Column117
-            // 
-            this.Column117.HeaderText = "Column14";
-            this.Column117.Name = "Column117";
-            this.Column117.ReadOnly = true;
-            // 
-            // Column118
-            // 
-            this.Column118.HeaderText = "Column15";
-            this.Column118.Name = "Column118";
-            this.Column118.ReadOnly = true;
-            // 
-            // Column119
-            // 
-            this.Column119.HeaderText = "Column16";
-            this.Column119.Name = "Column119";
-            this.Column119.ReadOnly = true;
-            // 
-            // Column120
-            // 
-            this.Column120.HeaderText = "Column17";
-            this.Column120.Name = "Column120";
-            this.Column120.ReadOnly = true;
-            // 
-            // Column121
-            // 
-            this.Column121.HeaderText = "Column18";
-            this.Column121.Name = "Column121";
-            this.Column121.ReadOnly = true;
-            // 
-            // Column122
-            // 
-            this.Column122.HeaderText = "Column19";
-            this.Column122.Name = "Column122";
-            this.Column122.ReadOnly = true;
-            // 
-            // Column123
-            // 
-            this.Column123.HeaderText = "Column20";
-            this.Column123.Name = "Column123";
-            this.Column123.ReadOnly = true;
-            // 
-            // Column124
-            // 
-            this.Column124.HeaderText = "Column21";
-            this.Column124.Name = "Column124";
-            this.Column124.ReadOnly = true;
-            // 
-            // Column125
-            // 
-            this.Column125.HeaderText = "Column22";
-            this.Column125.Name = "Column125";
-            this.Column125.ReadOnly = true;
-            // 
-            // Column126
-            // 
-            this.Column126.HeaderText = "Column23";
-            this.Column126.Name = "Column126";
-            this.Column126.ReadOnly = true;
-            // 
-            // Column127
-            // 
-            this.Column127.HeaderText = "Column24";
-            this.Column127.Name = "Column127";
-            this.Column127.ReadOnly = true;
-            // 
-            // Column128
-            // 
-            this.Column128.HeaderText = "Column25";
-            this.Column128.Name = "Column128";
-            this.Column128.ReadOnly = true;
-            // 
-            // Column129
-            // 
-            this.Column129.HeaderText = "Column26";
-            this.Column129.Name = "Column129";
-            this.Column129.ReadOnly = true;
-            // 
-            // Column130
-            // 
-            this.Column130.HeaderText = "Column27";
-            this.Column130.Name = "Column130";
-            this.Column130.ReadOnly = true;
-            // 
-            // Column131
-            // 
-            this.Column131.HeaderText = "Column28";
-            this.Column131.Name = "Column131";
-            this.Column131.ReadOnly = true;
-            // 
-            // Column132
-            // 
-            this.Column132.HeaderText = "Column29";
-            this.Column132.Name = "Column132";
-            this.Column132.ReadOnly = true;
-            // 
-            // Column133
-            // 
-            this.Column133.HeaderText = "Column30";
-            this.Column133.Name = "Column133";
-            this.Column133.ReadOnly = true;
-            // 
-            // Column134
-            // 
-            this.Column134.HeaderText = "Column31";
-            this.Column134.Name = "Column134";
-            this.Column134.ReadOnly = true;
-            // 
-            // Column135
-            // 
-            this.Column135.HeaderText = "Column32";
-            this.Column135.Name = "Column135";
-            this.Column135.ReadOnly = true;
-            // 
-            // Column136
-            // 
-            this.Column136.HeaderText = "Column33";
-            this.Column136.Name = "Column136";
-            this.Column136.ReadOnly = true;
-            // 
-            // Column137
-            // 
-            this.Column137.HeaderText = "Column34";
-            this.Column137.Name = "Column137";
-            this.Column137.ReadOnly = true;
-            // 
-            // Column138
-            // 
-            this.Column138.HeaderText = "Column35";
-            this.Column138.Name = "Column138";
-            this.Column138.ReadOnly = true;
-            // 
-            // Column139
-            // 
-            this.Column139.HeaderText = "Column36";
-            this.Column139.Name = "Column139";
-            this.Column139.ReadOnly = true;
-            // 
-            // Column140
-            // 
-            this.Column140.HeaderText = "Column37";
-            this.Column140.Name = "Column140";
-            this.Column140.ReadOnly = true;
-            // 
-            // Column141
-            // 
-            this.Column141.HeaderText = "Column38";
-            this.Column141.Name = "Column141";
-            this.Column141.ReadOnly = true;
-            // 
-            // Column142
-            // 
-            this.Column142.HeaderText = "Column39";
-            this.Column142.Name = "Column142";
-            this.Column142.ReadOnly = true;
-            // 
-            // Column143
-            // 
-            this.Column143.HeaderText = "Column40";
-            this.Column143.Name = "Column143";
-            this.Column143.ReadOnly = true;
-            // 
-            // Column144
-            // 
-            this.Column144.HeaderText = "Column41";
-            this.Column144.Name = "Column144";
-            this.Column144.ReadOnly = true;
-            // 
-            // Column145
-            // 
-            this.Column145.HeaderText = "Column42";
-            this.Column145.Name = "Column145";
-            this.Column145.ReadOnly = true;
-            // 
-            // Column146
-            // 
-            this.Column146.HeaderText = "Column43";
-            this.Column146.Name = "Column146";
-            this.Column146.ReadOnly = true;
-            // 
-            // Column147
-            // 
-            this.Column147.HeaderText = "Column44";
-            this.Column147.Name = "Column147";
-            this.Column147.ReadOnly = true;
-            // 
-            // Column148
-            // 
-            this.Column148.HeaderText = "Column45";
-            this.Column148.Name = "Column148";
-            this.Column148.ReadOnly = true;
-            // 
-            // Column149
-            // 
-            this.Column149.HeaderText = "Column46";
-            this.Column149.Name = "Column149";
-            this.Column149.ReadOnly = true;
-            // 
-            // Column150
-            // 
-            this.Column150.HeaderText = "Column47";
-            this.Column150.Name = "Column150";
-            this.Column150.ReadOnly = true;
-            // 
-            // Column151
-            // 
-            this.Column151.HeaderText = "Column48";
-            this.Column151.Name = "Column151";
-            this.Column151.ReadOnly = true;
-            // 
-            // Column152
-            // 
-            this.Column152.HeaderText = "Column49";
-            this.Column152.Name = "Column152";
-            this.Column152.ReadOnly = true;
-            // 
-            // Column153
-            // 
-            this.Column153.HeaderText = "Column50";
-            this.Column153.Name = "Column153";
-            this.Column153.ReadOnly = true;
-            // 
-            // Column154
-            // 
-            this.Column154.HeaderText = "Column51";
-            this.Column154.Name = "Column154";
-            this.Column154.ReadOnly = true;
-            // 
-            // Column155
-            // 
-            this.Column155.HeaderText = "Column52";
-            this.Column155.Name = "Column155";
-            this.Column155.ReadOnly = true;
-            // 
-            // Column156
-            // 
-            this.Column156.HeaderText = "Column53";
-            this.Column156.Name = "Column156";
-            this.Column156.ReadOnly = true;
-            // 
-            // Column157
-            // 
-            this.Column157.HeaderText = "Column54";
-            this.Column157.Name = "Column157";
-            this.Column157.ReadOnly = true;
-            // 
-            // Column158
-            // 
-            this.Column158.HeaderText = "Column55";
-            this.Column158.Name = "Column158";
-            this.Column158.ReadOnly = true;
-            // 
-            // Column159
-            // 
-            this.Column159.HeaderText = "Column56";
-            this.Column159.Name = "Column159";
-            this.Column159.ReadOnly = true;
-            // 
-            // Column160
-            // 
-            this.Column160.HeaderText = "Column57";
-            this.Column160.Name = "Column160";
-            this.Column160.ReadOnly = true;
-            // 
-            // Column161
-            // 
-            this.Column161.HeaderText = "Column58";
-            this.Column161.Name = "Column161";
-            this.Column161.ReadOnly = true;
-            // 
-            // Column162
-            // 
-            this.Column162.HeaderText = "Column59";
-            this.Column162.Name = "Column162";
-            this.Column162.ReadOnly = true;
-            // 
-            // Column163
-            // 
-            this.Column163.HeaderText = "Column60";
-            this.Column163.Name = "Column163";
-            this.Column163.ReadOnly = true;
-            // 
-            // Column164
-            // 
-            this.Column164.HeaderText = "Column61";
-            this.Column164.Name = "Column164";
-            this.Column164.ReadOnly = true;
-            // 
-            // Column165
-            // 
-            this.Column165.HeaderText = "Column62";
-            this.Column165.Name = "Column165";
-            this.Column165.ReadOnly = true;
-            // 
-            // Column166
-            // 
-            this.Column166.HeaderText = "Column63";
-            this.Column166.Name = "Column166";
-            this.Column166.ReadOnly = true;
-            // 
-            // Column167
-            // 
-            this.Column167.HeaderText = "Column64";
-            this.Column167.Name = "Column167";
-            this.Column167.ReadOnly = true;
-            // 
-            // Column168
-            // 
-            this.Column168.HeaderText = "Column65";
-            this.Column168.Name = "Column168";
-            this.Column168.ReadOnly = true;
-            // 
-            // Column169
-            // 
-            this.Column169.HeaderText = "Column66";
-            this.Column169.Name = "Column169";
-            this.Column169.ReadOnly = true;
-            // 
-            // Column170
-            // 
-            this.Column170.HeaderText = "Column67";
-            this.Column170.Name = "Column170";
-            this.Column170.ReadOnly = true;
-            // 
-            // Column171
-            // 
-            this.Column171.HeaderText = "Column68";
-            this.Column171.Name = "Column171";
-            this.Column171.ReadOnly = true;
-            // 
-            // Column172
-            // 
-            this.Column172.HeaderText = "Column69";
-            this.Column172.Name = "Column172";
-            this.Column172.ReadOnly = true;
-            // 
-            // Column173
-            // 
-            this.Column173.HeaderText = "Column70";
-            this.Column173.Name = "Column173";
-            this.Column173.ReadOnly = true;
-            // 
-            // Column174
-            // 
-            this.Column174.HeaderText = "Column71";
-            this.Column174.Name = "Column174";
-            this.Column174.ReadOnly = true;
-            // 
-            // Column175
-            // 
-            this.Column175.HeaderText = "Column72";
-            this.Column175.Name = "Column175";
-            this.Column175.ReadOnly = true;
-            // 
-            // Column176
-            // 
-            this.Column176.HeaderText = "Column73";
-            this.Column176.Name = "Column176";
-            this.Column176.ReadOnly = true;
-            // 
-            // Column177
-            // 
-            this.Column177.HeaderText = "Column74";
-            this.Column177.Name = "Column177";
-            this.Column177.ReadOnly = true;
-            // 
-            // Column178
-            // 
-            this.Column178.HeaderText = "Column75";
-            this.Column178.Name = "Column178";
-            this.Column178.ReadOnly = true;
-            // 
-            // Column179
-            // 
-            this.Column179.HeaderText = "Column76";
-            this.Column179.Name = "Column179";
-            this.Column179.ReadOnly = true;
-            // 
-            // Column180
-            // 
-            this.Column180.HeaderText = "Column77";
-            this.Column180.Name = "Column180";
-            this.Column180.ReadOnly = true;
-            // 
-            // Column181
-            // 
-            this.Column181.HeaderText = "Column78";
-            this.Column181.Name = "Column181";
-            this.Column181.ReadOnly = true;
-            // 
-            // Column182
-            // 
-            this.Column182.HeaderText = "Column79";
-            this.Column182.Name = "Column182";
-            this.Column182.ReadOnly = true;
-            // 
-            // Column183
-            // 
-            this.Column183.HeaderText = "Column80";
-            this.Column183.Name = "Column183";
-            this.Column183.ReadOnly = true;
-            // 
-            // Column184
-            // 
-            this.Column184.HeaderText = "Column81";
-            this.Column184.Name = "Column184";
-            this.Column184.ReadOnly = true;
-            // 
-            // Column185
-            // 
-            this.Column185.HeaderText = "Column82";
-            this.Column185.Name = "Column185";
-            this.Column185.ReadOnly = true;
-            // 
-            // Column186
-            // 
-            this.Column186.HeaderText = "Column83";
-            this.Column186.Name = "Column186";
-            this.Column186.ReadOnly = true;
-            // 
-            // Column187
-            // 
-            this.Column187.HeaderText = "Column84";
-            this.Column187.Name = "Column187";
-            this.Column187.ReadOnly = true;
-            // 
-            // Column188
-            // 
-            this.Column188.HeaderText = "Column85";
-            this.Column188.Name = "Column188";
-            this.Column188.ReadOnly = true;
-            // 
-            // Column189
-            // 
-            this.Column189.HeaderText = "Column86";
-            this.Column189.Name = "Column189";
-            this.Column189.ReadOnly = true;
-            // 
-            // Column190
-            // 
-            this.Column190.HeaderText = "Column87";
-            this.Column190.Name = "Column190";
-            this.Column190.ReadOnly = true;
-            // 
-            // Column191
-            // 
-            this.Column191.HeaderText = "Column88";
-            this.Column191.Name = "Column191";
-            this.Column191.ReadOnly = true;
-            // 
-            // Column192
-            // 
-            this.Column192.HeaderText = "Column89";
-            this.Column192.Name = "Column192";
-            this.Column192.ReadOnly = true;
-            // 
-            // Column193
-            // 
-            this.Column193.HeaderText = "Column90";
-            this.Column193.Name = "Column193";
-            this.Column193.ReadOnly = true;
-            // 
-            // Column194
-            // 
-            this.Column194.HeaderText = "Column91";
-            this.Column194.Name = "Column194";
-            this.Column194.ReadOnly = true;
-            // 
-            // Column195
-            // 
-            this.Column195.HeaderText = "Column92";
-            this.Column195.Name = "Column195";
-            this.Column195.ReadOnly = true;
-            // 
-            // Column196
-            // 
-            this.Column196.HeaderText = "Column93";
-            this.Column196.Name = "Column196";
-            this.Column196.ReadOnly = true;
-            // 
-            // Column197
-            // 
-            this.Column197.HeaderText = "Column94";
-            this.Column197.Name = "Column197";
-            this.Column197.ReadOnly = true;
-            // 
-            // Column198
-            // 
-            this.Column198.HeaderText = "Column95";
-            this.Column198.Name = "Column198";
-            this.Column198.ReadOnly = true;
-            // 
-            // Column199
-            // 
-            this.Column199.HeaderText = "Column96";
-            this.Column199.Name = "Column199";
-            this.Column199.ReadOnly = true;
-            // 
-            // Column200
-            // 
-            this.Column200.HeaderText = "Column97";
-            this.Column200.Name = "Column200";
-            this.Column200.ReadOnly = true;
-            // 
-            // Column201
-            // 
-            this.Column201.HeaderText = "Column98";
-            this.Column201.Name = "Column201";
-            this.Column201.ReadOnly = true;
-            // 
-            // Column202
-            // 
-            this.Column202.HeaderText = "Column99";
-            this.Column202.Name = "Column202";
-            this.Column202.ReadOnly = true;
-            // 
-            // Column203
-            // 
-            this.Column203.HeaderText = "Column100";
-            this.Column203.Name = "Column203";
-            this.Column203.ReadOnly = true;
-            // 
-            // Column204
-            // 
-            this.Column204.HeaderText = "Column101";
-            this.Column204.Name = "Column204";
-            this.Column204.ReadOnly = true;
-            // 
-            // Column205
-            // 
-            this.Column205.HeaderText = "Column102";
-            this.Column205.Name = "Column205";
-            this.Column205.ReadOnly = true;
-            // 
-            // Column206
-            // 
-            this.Column206.HeaderText = "Column103";
-            this.Column206.Name = "Column206";
-            this.Column206.ReadOnly = true;
-            // 
-            // Column207
-            // 
-            this.Column207.HeaderText = "Column104";
-            this.Column207.Name = "Column207";
-            this.Column207.ReadOnly = true;
-            // 
-            // Column208
-            // 
-            this.Column208.HeaderText = "Column105";
-            this.Column208.Name = "Column208";
-            this.Column208.ReadOnly = true;
-            // 
-            // Column209
-            // 
-            this.Column209.HeaderText = "Column106";
-            this.Column209.Name = "Column209";
-            this.Column209.ReadOnly = true;
-            // 
-            // Column210
-            // 
-            this.Column210.HeaderText = "Column107";
-            this.Column210.Name = "Column210";
-            this.Column210.ReadOnly = true;
-            // 
-            // Column211
-            // 
-            this.Column211.HeaderText = "Column108";
-            this.Column211.Name = "Column211";
-            this.Column211.ReadOnly = true;
-            // 
-            // Column212
-            // 
-            this.Column212.HeaderText = "Column109";
-            this.Column212.Name = "Column212";
-            this.Column212.ReadOnly = true;
-            // 
-            // Column213
-            // 
-            this.Column213.HeaderText = "Column110";
-            this.Column213.Name = "Column213";
-            this.Column213.ReadOnly = true;
-            // 
-            // product_code
-            // 
-            this.product_code.HeaderText = "product_code";
-            this.product_code.Name = "product_code";
-            this.product_code.ReadOnly = true;
-            this.product_code.Visible = false;
-            // 
-            // supplier_code
-            // 
-            this.supplier_code.HeaderText = "supplier_code";
-            this.supplier_code.Name = "supplier_code";
-            this.supplier_code.ReadOnly = true;
-            this.supplier_code.Visible = false;
             // 
             // dataGridViewHeader
             // 
@@ -2377,7 +1697,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTotal.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewTotal.Location = new System.Drawing.Point(12, 687);
+            this.dataGridViewTotal.Location = new System.Drawing.Point(12, 649);
             this.dataGridViewTotal.MultiSelect = false;
             this.dataGridViewTotal.Name = "dataGridViewTotal";
             this.dataGridViewTotal.RowHeadersVisible = false;
@@ -3247,11 +2567,750 @@
             this.checkedListBox.TabIndex = 0;
             this.checkedListBox.SelectedIndexChanged += new System.EventHandler(this.checkedListBox_SelectedIndexChanged);
             // 
+            // folderBrowserDialog
+            // 
+            this.folderBrowserDialog.Description = "出力フォルダを指定してください。";
+            // 
+            // outputDir
+            // 
+            this.outputDir.Location = new System.Drawing.Point(96, 701);
+            this.outputDir.Name = "outputDir";
+            this.outputDir.ReadOnly = true;
+            this.outputDir.Size = new System.Drawing.Size(525, 23);
+            this.outputDir.TabIndex = 14;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 704);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(78, 15);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "出力フォルダ：";
+            // 
+            // btnRefOutputDir
+            // 
+            this.btnRefOutputDir.Location = new System.Drawing.Point(627, 700);
+            this.btnRefOutputDir.Name = "btnRefOutputDir";
+            this.btnRefOutputDir.Size = new System.Drawing.Size(75, 23);
+            this.btnRefOutputDir.TabIndex = 12;
+            this.btnRefOutputDir.Text = "変更";
+            this.btnRefOutputDir.UseVisualStyleBackColor = true;
+            this.btnRefOutputDir.Click += new System.EventHandler(this.btnRefOutputDir_Click);
+            // 
+            // btnOutput
+            // 
+            this.btnOutput.Location = new System.Drawing.Point(708, 700);
+            this.btnOutput.Name = "btnOutput";
+            this.btnOutput.Size = new System.Drawing.Size(75, 23);
+            this.btnOutput.TabIndex = 11;
+            this.btnOutput.Text = "Excel出力";
+            this.btnOutput.UseVisualStyleBackColor = true;
+            this.btnOutput.Click += new System.EventHandler(this.btnOutput_Click);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Column1";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.Width = 40;
+            // 
+            // dataGridViewItem
+            // 
+            this.dataGridViewItem.Frozen = true;
+            this.dataGridViewItem.HeaderText = "Column2";
+            this.dataGridViewItem.Name = "dataGridViewItem";
+            this.dataGridViewItem.ReadOnly = true;
+            this.dataGridViewItem.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewItem.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewItem.Width = 80;
+            // 
+            // dataGridViewSuppliers
+            // 
+            this.dataGridViewSuppliers.Frozen = true;
+            this.dataGridViewSuppliers.HeaderText = "Column3";
+            this.dataGridViewSuppliers.Name = "dataGridViewSuppliers";
+            this.dataGridViewSuppliers.ReadOnly = true;
+            this.dataGridViewSuppliers.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewSuppliers.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewSuppliers.Width = 180;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.Frozen = true;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Column4";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 200;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Column5";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // Column58
+            // 
+            this.Column58.HeaderText = "Column6";
+            this.Column58.Name = "Column58";
+            this.Column58.ReadOnly = true;
+            // 
+            // Column59
+            // 
+            this.Column59.HeaderText = "Column7";
+            this.Column59.Name = "Column59";
+            this.Column59.ReadOnly = true;
+            // 
+            // Column60
+            // 
+            this.Column60.HeaderText = "Column8";
+            this.Column60.Name = "Column60";
+            this.Column60.ReadOnly = true;
+            // 
+            // Column61
+            // 
+            this.Column61.HeaderText = "Column9";
+            this.Column61.Name = "Column61";
+            this.Column61.ReadOnly = true;
+            // 
+            // Column62
+            // 
+            this.Column62.HeaderText = "Column10";
+            this.Column62.Name = "Column62";
+            this.Column62.ReadOnly = true;
+            // 
+            // Column63
+            // 
+            this.Column63.HeaderText = "Column11";
+            this.Column63.Name = "Column63";
+            this.Column63.ReadOnly = true;
+            // 
+            // Column64
+            // 
+            this.Column64.HeaderText = "Column12";
+            this.Column64.Name = "Column64";
+            this.Column64.ReadOnly = true;
+            // 
+            // Column65
+            // 
+            this.Column65.HeaderText = "Column13";
+            this.Column65.Name = "Column65";
+            this.Column65.ReadOnly = true;
+            // 
+            // Column117
+            // 
+            this.Column117.HeaderText = "Column14";
+            this.Column117.Name = "Column117";
+            this.Column117.ReadOnly = true;
+            // 
+            // Column118
+            // 
+            this.Column118.HeaderText = "Column15";
+            this.Column118.Name = "Column118";
+            this.Column118.ReadOnly = true;
+            // 
+            // Column119
+            // 
+            this.Column119.HeaderText = "Column16";
+            this.Column119.Name = "Column119";
+            this.Column119.ReadOnly = true;
+            // 
+            // Column120
+            // 
+            this.Column120.HeaderText = "Column17";
+            this.Column120.Name = "Column120";
+            this.Column120.ReadOnly = true;
+            // 
+            // Column121
+            // 
+            this.Column121.HeaderText = "Column18";
+            this.Column121.Name = "Column121";
+            this.Column121.ReadOnly = true;
+            // 
+            // Column122
+            // 
+            this.Column122.HeaderText = "Column19";
+            this.Column122.Name = "Column122";
+            this.Column122.ReadOnly = true;
+            // 
+            // Column123
+            // 
+            this.Column123.HeaderText = "Column20";
+            this.Column123.Name = "Column123";
+            this.Column123.ReadOnly = true;
+            // 
+            // Column124
+            // 
+            this.Column124.HeaderText = "Column21";
+            this.Column124.Name = "Column124";
+            this.Column124.ReadOnly = true;
+            // 
+            // Column125
+            // 
+            this.Column125.HeaderText = "Column22";
+            this.Column125.Name = "Column125";
+            this.Column125.ReadOnly = true;
+            // 
+            // Column126
+            // 
+            this.Column126.HeaderText = "Column23";
+            this.Column126.Name = "Column126";
+            this.Column126.ReadOnly = true;
+            // 
+            // Column127
+            // 
+            this.Column127.HeaderText = "Column24";
+            this.Column127.Name = "Column127";
+            this.Column127.ReadOnly = true;
+            // 
+            // Column128
+            // 
+            this.Column128.HeaderText = "Column25";
+            this.Column128.Name = "Column128";
+            this.Column128.ReadOnly = true;
+            // 
+            // Column129
+            // 
+            this.Column129.HeaderText = "Column26";
+            this.Column129.Name = "Column129";
+            this.Column129.ReadOnly = true;
+            // 
+            // Column130
+            // 
+            this.Column130.HeaderText = "Column27";
+            this.Column130.Name = "Column130";
+            this.Column130.ReadOnly = true;
+            // 
+            // Column131
+            // 
+            this.Column131.HeaderText = "Column28";
+            this.Column131.Name = "Column131";
+            this.Column131.ReadOnly = true;
+            // 
+            // Column132
+            // 
+            this.Column132.HeaderText = "Column29";
+            this.Column132.Name = "Column132";
+            this.Column132.ReadOnly = true;
+            // 
+            // Column133
+            // 
+            this.Column133.HeaderText = "Column30";
+            this.Column133.Name = "Column133";
+            this.Column133.ReadOnly = true;
+            // 
+            // Column134
+            // 
+            this.Column134.HeaderText = "Column31";
+            this.Column134.Name = "Column134";
+            this.Column134.ReadOnly = true;
+            // 
+            // Column135
+            // 
+            this.Column135.HeaderText = "Column32";
+            this.Column135.Name = "Column135";
+            this.Column135.ReadOnly = true;
+            // 
+            // Column136
+            // 
+            this.Column136.HeaderText = "Column33";
+            this.Column136.Name = "Column136";
+            this.Column136.ReadOnly = true;
+            // 
+            // Column137
+            // 
+            this.Column137.HeaderText = "Column34";
+            this.Column137.Name = "Column137";
+            this.Column137.ReadOnly = true;
+            // 
+            // Column138
+            // 
+            this.Column138.HeaderText = "Column35";
+            this.Column138.Name = "Column138";
+            this.Column138.ReadOnly = true;
+            // 
+            // Column139
+            // 
+            this.Column139.HeaderText = "Column36";
+            this.Column139.Name = "Column139";
+            this.Column139.ReadOnly = true;
+            // 
+            // Column140
+            // 
+            this.Column140.HeaderText = "Column37";
+            this.Column140.Name = "Column140";
+            this.Column140.ReadOnly = true;
+            // 
+            // Column141
+            // 
+            this.Column141.HeaderText = "Column38";
+            this.Column141.Name = "Column141";
+            this.Column141.ReadOnly = true;
+            // 
+            // Column142
+            // 
+            this.Column142.HeaderText = "Column39";
+            this.Column142.Name = "Column142";
+            this.Column142.ReadOnly = true;
+            // 
+            // Column143
+            // 
+            this.Column143.HeaderText = "Column40";
+            this.Column143.Name = "Column143";
+            this.Column143.ReadOnly = true;
+            // 
+            // Column144
+            // 
+            this.Column144.HeaderText = "Column41";
+            this.Column144.Name = "Column144";
+            this.Column144.ReadOnly = true;
+            // 
+            // Column145
+            // 
+            this.Column145.HeaderText = "Column42";
+            this.Column145.Name = "Column145";
+            this.Column145.ReadOnly = true;
+            // 
+            // Column146
+            // 
+            this.Column146.HeaderText = "Column43";
+            this.Column146.Name = "Column146";
+            this.Column146.ReadOnly = true;
+            // 
+            // Column147
+            // 
+            this.Column147.HeaderText = "Column44";
+            this.Column147.Name = "Column147";
+            this.Column147.ReadOnly = true;
+            // 
+            // Column148
+            // 
+            this.Column148.HeaderText = "Column45";
+            this.Column148.Name = "Column148";
+            this.Column148.ReadOnly = true;
+            // 
+            // Column149
+            // 
+            this.Column149.HeaderText = "Column46";
+            this.Column149.Name = "Column149";
+            this.Column149.ReadOnly = true;
+            // 
+            // Column150
+            // 
+            this.Column150.HeaderText = "Column47";
+            this.Column150.Name = "Column150";
+            this.Column150.ReadOnly = true;
+            // 
+            // Column151
+            // 
+            this.Column151.HeaderText = "Column48";
+            this.Column151.Name = "Column151";
+            this.Column151.ReadOnly = true;
+            // 
+            // Column152
+            // 
+            this.Column152.HeaderText = "Column49";
+            this.Column152.Name = "Column152";
+            this.Column152.ReadOnly = true;
+            // 
+            // Column153
+            // 
+            this.Column153.HeaderText = "Column50";
+            this.Column153.Name = "Column153";
+            this.Column153.ReadOnly = true;
+            // 
+            // Column154
+            // 
+            this.Column154.HeaderText = "Column51";
+            this.Column154.Name = "Column154";
+            this.Column154.ReadOnly = true;
+            // 
+            // Column155
+            // 
+            this.Column155.HeaderText = "Column52";
+            this.Column155.Name = "Column155";
+            this.Column155.ReadOnly = true;
+            // 
+            // Column156
+            // 
+            this.Column156.HeaderText = "Column53";
+            this.Column156.Name = "Column156";
+            this.Column156.ReadOnly = true;
+            // 
+            // Column157
+            // 
+            this.Column157.HeaderText = "Column54";
+            this.Column157.Name = "Column157";
+            this.Column157.ReadOnly = true;
+            // 
+            // Column158
+            // 
+            this.Column158.HeaderText = "Column55";
+            this.Column158.Name = "Column158";
+            this.Column158.ReadOnly = true;
+            // 
+            // Column159
+            // 
+            this.Column159.HeaderText = "Column56";
+            this.Column159.Name = "Column159";
+            this.Column159.ReadOnly = true;
+            // 
+            // Column160
+            // 
+            this.Column160.HeaderText = "Column57";
+            this.Column160.Name = "Column160";
+            this.Column160.ReadOnly = true;
+            // 
+            // Column161
+            // 
+            this.Column161.HeaderText = "Column58";
+            this.Column161.Name = "Column161";
+            this.Column161.ReadOnly = true;
+            // 
+            // Column162
+            // 
+            this.Column162.HeaderText = "Column59";
+            this.Column162.Name = "Column162";
+            this.Column162.ReadOnly = true;
+            // 
+            // Column163
+            // 
+            this.Column163.HeaderText = "Column60";
+            this.Column163.Name = "Column163";
+            this.Column163.ReadOnly = true;
+            // 
+            // Column164
+            // 
+            this.Column164.HeaderText = "Column61";
+            this.Column164.Name = "Column164";
+            this.Column164.ReadOnly = true;
+            // 
+            // Column165
+            // 
+            this.Column165.HeaderText = "Column62";
+            this.Column165.Name = "Column165";
+            this.Column165.ReadOnly = true;
+            // 
+            // Column166
+            // 
+            this.Column166.HeaderText = "Column63";
+            this.Column166.Name = "Column166";
+            this.Column166.ReadOnly = true;
+            // 
+            // Column167
+            // 
+            this.Column167.HeaderText = "Column64";
+            this.Column167.Name = "Column167";
+            this.Column167.ReadOnly = true;
+            // 
+            // Column168
+            // 
+            this.Column168.HeaderText = "Column65";
+            this.Column168.Name = "Column168";
+            this.Column168.ReadOnly = true;
+            // 
+            // Column169
+            // 
+            this.Column169.HeaderText = "Column66";
+            this.Column169.Name = "Column169";
+            this.Column169.ReadOnly = true;
+            // 
+            // Column170
+            // 
+            this.Column170.HeaderText = "Column67";
+            this.Column170.Name = "Column170";
+            this.Column170.ReadOnly = true;
+            // 
+            // Column171
+            // 
+            this.Column171.HeaderText = "Column68";
+            this.Column171.Name = "Column171";
+            this.Column171.ReadOnly = true;
+            // 
+            // Column172
+            // 
+            this.Column172.HeaderText = "Column69";
+            this.Column172.Name = "Column172";
+            this.Column172.ReadOnly = true;
+            // 
+            // Column173
+            // 
+            this.Column173.HeaderText = "Column70";
+            this.Column173.Name = "Column173";
+            this.Column173.ReadOnly = true;
+            // 
+            // Column174
+            // 
+            this.Column174.HeaderText = "Column71";
+            this.Column174.Name = "Column174";
+            this.Column174.ReadOnly = true;
+            // 
+            // Column175
+            // 
+            this.Column175.HeaderText = "Column72";
+            this.Column175.Name = "Column175";
+            this.Column175.ReadOnly = true;
+            // 
+            // Column176
+            // 
+            this.Column176.HeaderText = "Column73";
+            this.Column176.Name = "Column176";
+            this.Column176.ReadOnly = true;
+            // 
+            // Column177
+            // 
+            this.Column177.HeaderText = "Column74";
+            this.Column177.Name = "Column177";
+            this.Column177.ReadOnly = true;
+            // 
+            // Column178
+            // 
+            this.Column178.HeaderText = "Column75";
+            this.Column178.Name = "Column178";
+            this.Column178.ReadOnly = true;
+            // 
+            // Column179
+            // 
+            this.Column179.HeaderText = "Column76";
+            this.Column179.Name = "Column179";
+            this.Column179.ReadOnly = true;
+            // 
+            // Column180
+            // 
+            this.Column180.HeaderText = "Column77";
+            this.Column180.Name = "Column180";
+            this.Column180.ReadOnly = true;
+            // 
+            // Column181
+            // 
+            this.Column181.HeaderText = "Column78";
+            this.Column181.Name = "Column181";
+            this.Column181.ReadOnly = true;
+            // 
+            // Column182
+            // 
+            this.Column182.HeaderText = "Column79";
+            this.Column182.Name = "Column182";
+            this.Column182.ReadOnly = true;
+            // 
+            // Column183
+            // 
+            this.Column183.HeaderText = "Column80";
+            this.Column183.Name = "Column183";
+            this.Column183.ReadOnly = true;
+            // 
+            // Column184
+            // 
+            this.Column184.HeaderText = "Column81";
+            this.Column184.Name = "Column184";
+            this.Column184.ReadOnly = true;
+            // 
+            // Column185
+            // 
+            this.Column185.HeaderText = "Column82";
+            this.Column185.Name = "Column185";
+            this.Column185.ReadOnly = true;
+            // 
+            // Column186
+            // 
+            this.Column186.HeaderText = "Column83";
+            this.Column186.Name = "Column186";
+            this.Column186.ReadOnly = true;
+            // 
+            // Column187
+            // 
+            this.Column187.HeaderText = "Column84";
+            this.Column187.Name = "Column187";
+            this.Column187.ReadOnly = true;
+            // 
+            // Column188
+            // 
+            this.Column188.HeaderText = "Column85";
+            this.Column188.Name = "Column188";
+            this.Column188.ReadOnly = true;
+            // 
+            // Column189
+            // 
+            this.Column189.HeaderText = "Column86";
+            this.Column189.Name = "Column189";
+            this.Column189.ReadOnly = true;
+            // 
+            // Column190
+            // 
+            this.Column190.HeaderText = "Column87";
+            this.Column190.Name = "Column190";
+            this.Column190.ReadOnly = true;
+            // 
+            // Column191
+            // 
+            this.Column191.HeaderText = "Column88";
+            this.Column191.Name = "Column191";
+            this.Column191.ReadOnly = true;
+            // 
+            // Column192
+            // 
+            this.Column192.HeaderText = "Column89";
+            this.Column192.Name = "Column192";
+            this.Column192.ReadOnly = true;
+            // 
+            // Column193
+            // 
+            this.Column193.HeaderText = "Column90";
+            this.Column193.Name = "Column193";
+            this.Column193.ReadOnly = true;
+            // 
+            // Column194
+            // 
+            this.Column194.HeaderText = "Column91";
+            this.Column194.Name = "Column194";
+            this.Column194.ReadOnly = true;
+            // 
+            // Column195
+            // 
+            this.Column195.HeaderText = "Column92";
+            this.Column195.Name = "Column195";
+            this.Column195.ReadOnly = true;
+            // 
+            // Column196
+            // 
+            this.Column196.HeaderText = "Column93";
+            this.Column196.Name = "Column196";
+            this.Column196.ReadOnly = true;
+            // 
+            // Column197
+            // 
+            this.Column197.HeaderText = "Column94";
+            this.Column197.Name = "Column197";
+            this.Column197.ReadOnly = true;
+            // 
+            // Column198
+            // 
+            this.Column198.HeaderText = "Column95";
+            this.Column198.Name = "Column198";
+            this.Column198.ReadOnly = true;
+            // 
+            // Column199
+            // 
+            this.Column199.HeaderText = "Column96";
+            this.Column199.Name = "Column199";
+            this.Column199.ReadOnly = true;
+            // 
+            // Column200
+            // 
+            this.Column200.HeaderText = "Column97";
+            this.Column200.Name = "Column200";
+            this.Column200.ReadOnly = true;
+            // 
+            // Column201
+            // 
+            this.Column201.HeaderText = "Column98";
+            this.Column201.Name = "Column201";
+            this.Column201.ReadOnly = true;
+            // 
+            // Column202
+            // 
+            this.Column202.HeaderText = "Column99";
+            this.Column202.Name = "Column202";
+            this.Column202.ReadOnly = true;
+            // 
+            // Column203
+            // 
+            this.Column203.HeaderText = "Column100";
+            this.Column203.Name = "Column203";
+            this.Column203.ReadOnly = true;
+            // 
+            // Column204
+            // 
+            this.Column204.HeaderText = "Column101";
+            this.Column204.Name = "Column204";
+            this.Column204.ReadOnly = true;
+            // 
+            // Column205
+            // 
+            this.Column205.HeaderText = "Column102";
+            this.Column205.Name = "Column205";
+            this.Column205.ReadOnly = true;
+            // 
+            // Column206
+            // 
+            this.Column206.HeaderText = "Column103";
+            this.Column206.Name = "Column206";
+            this.Column206.ReadOnly = true;
+            // 
+            // Column207
+            // 
+            this.Column207.HeaderText = "Column104";
+            this.Column207.Name = "Column207";
+            this.Column207.ReadOnly = true;
+            // 
+            // Column208
+            // 
+            this.Column208.HeaderText = "Column105";
+            this.Column208.Name = "Column208";
+            this.Column208.ReadOnly = true;
+            // 
+            // Column209
+            // 
+            this.Column209.HeaderText = "Column106";
+            this.Column209.Name = "Column209";
+            this.Column209.ReadOnly = true;
+            // 
+            // Column210
+            // 
+            this.Column210.HeaderText = "Column107";
+            this.Column210.Name = "Column210";
+            this.Column210.ReadOnly = true;
+            // 
+            // Column211
+            // 
+            this.Column211.HeaderText = "Column108";
+            this.Column211.Name = "Column211";
+            this.Column211.ReadOnly = true;
+            // 
+            // Column212
+            // 
+            this.Column212.HeaderText = "Column109";
+            this.Column212.Name = "Column212";
+            this.Column212.ReadOnly = true;
+            // 
+            // Column213
+            // 
+            this.Column213.HeaderText = "Column110";
+            this.Column213.Name = "Column213";
+            this.Column213.ReadOnly = true;
+            // 
+            // product_code
+            // 
+            this.product_code.HeaderText = "product_code";
+            this.product_code.Name = "product_code";
+            this.product_code.ReadOnly = true;
+            this.product_code.Visible = false;
+            // 
+            // supplier_code
+            // 
+            this.supplier_code.HeaderText = "supplier_code";
+            this.supplier_code.Name = "supplier_code";
+            this.supplier_code.ReadOnly = true;
+            this.supplier_code.Visible = false;
+            // 
+            // type
+            // 
+            this.type.HeaderText = "type";
+            this.type.Name = "type";
+            this.type.ReadOnly = true;
+            this.type.Visible = false;
+            // 
             // Form_CostMng_Comparison
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1267, 735);
+            this.Controls.Add(this.outputDir);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnRefOutputDir);
+            this.Controls.Add(this.btnOutput);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridViewTotal);
             this.Controls.Add(this.dataGridViewHeader);
@@ -3272,6 +3331,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTotal)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -3294,118 +3354,6 @@
         private System.Windows.Forms.CheckBox checkBoxApr;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewSuppliers;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column58;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column59;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column60;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column61;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column62;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column63;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column64;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column65;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column117;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column118;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column119;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column120;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column121;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column122;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column123;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column124;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column125;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column126;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column127;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column128;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column129;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column130;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column131;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column132;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column133;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column134;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column135;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column136;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column137;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column138;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column139;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column140;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column141;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column142;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column143;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column144;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column145;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column146;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column147;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column148;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column149;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column150;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column151;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column152;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column153;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column154;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column155;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column156;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column157;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column158;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column159;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column160;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column161;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column162;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column163;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column164;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column165;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column166;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column167;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column168;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column169;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column170;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column171;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column172;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column173;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column174;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column175;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column176;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column177;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column178;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column179;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column180;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column181;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column182;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column183;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column184;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column185;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column186;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column187;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column188;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column189;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column190;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column191;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column192;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column193;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column194;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column195;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column196;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column197;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column198;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column199;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column200;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column201;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column202;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column203;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column204;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column205;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column206;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column207;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column208;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column209;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column210;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column211;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column212;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column213;
-        private System.Windows.Forms.DataGridViewTextBoxColumn product_code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn supplier_code;
         private System.Windows.Forms.DataGridView dataGridViewHeader;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -3634,6 +3582,124 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn227;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckedListBox checkedListBox;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
+        private System.Windows.Forms.TextBox outputDir;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnRefOutputDir;
+        private System.Windows.Forms.Button btnOutput;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewSuppliers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column58;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column59;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column60;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column61;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column62;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column63;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column64;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column65;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column117;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column118;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column119;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column120;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column121;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column122;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column123;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column124;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column125;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column126;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column127;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column128;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column129;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column130;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column131;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column132;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column133;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column134;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column135;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column136;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column137;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column138;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column139;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column140;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column141;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column142;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column143;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column144;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column145;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column146;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column147;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column148;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column149;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column150;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column151;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column152;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column153;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column154;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column155;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column156;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column157;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column158;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column159;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column160;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column161;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column162;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column163;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column164;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column165;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column166;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column167;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column168;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column169;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column170;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column171;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column172;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column173;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column174;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column175;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column176;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column177;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column178;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column179;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column180;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column181;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column182;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column183;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column184;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column185;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column186;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column187;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column188;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column189;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column190;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column191;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column192;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column193;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column194;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column195;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column196;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column197;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column198;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column199;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column200;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column201;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column202;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column203;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column204;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column205;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column206;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column207;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column208;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column209;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column210;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column211;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column212;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column213;
+        private System.Windows.Forms.DataGridViewTextBoxColumn product_code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn supplier_code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn type;
 
     }
 }

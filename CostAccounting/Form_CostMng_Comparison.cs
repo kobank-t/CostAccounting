@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
+using System.IO;
+using OfficeOpenXml;
 
 namespace CostAccounting
 {
@@ -23,6 +25,7 @@ namespace CostAccounting
         public Form_CostMng_Comparison()
         {
             InitializeComponent();
+            base.ChecBoxControls = this.groupMonth.Controls;
 
             foreach (var control in groupMonth.Controls)
             {
@@ -62,6 +65,10 @@ namespace CostAccounting
 
             //スクロールバーの状態をリセットする
             resetScrollBars();
+
+            // 出力フォルダのデフォルトはアプリケーションの実行フォルダを指定
+            outputDir.Text = Application.StartupPath;
+            folderBrowserDialog.SelectedPath = Application.StartupPath;
         }
 
         /*************************************************************
@@ -897,6 +904,25 @@ namespace CostAccounting
                 }
             }
             resetScrollBars();
+        }
+
+        /*************************************************************
+         * 出力フォルダの変更ボタン押下時の処理
+         *************************************************************/
+        private void btnRefOutputDir_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                outputDir.Text = folderBrowserDialog.SelectedPath;
+            }
+        }
+
+        /*************************************************************
+         * Excel出力ボタン押下時の処理
+         *************************************************************/
+        private void btnOutput_Click(object sender, EventArgs e)
+        {
+            base.btnOutput_Click(outputDir.Text, "予算実績対比表", Properties.Resources.template_compare);
         }
     }
 }

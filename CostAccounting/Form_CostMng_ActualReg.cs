@@ -234,7 +234,7 @@ namespace CostAccounting
          *************************************************************/
         private void btnOutput_Click(object sender, EventArgs e)
         {
-            base.btnOutput_Click(outputDir.Text, "実績帳票", Properties.Resources.template_list);
+            base.btnOutput_Click(outputDir.Text, "実績表", Properties.Resources.template_list);
         }
     }
 }
