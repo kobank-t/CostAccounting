@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
 using System.Linq;
 using OfficeOpenXml;
-using OfficeOpenXml.Style;
 
 namespace CostAccounting
 {

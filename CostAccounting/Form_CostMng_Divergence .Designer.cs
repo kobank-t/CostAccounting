@@ -219,6 +219,11 @@
             this.utilitiesCost = new System.Windows.Forms.Label();
             this.otherCost = new System.Windows.Forms.Label();
             this.packingFare = new System.Windows.Forms.Label();
+            this.outputDir = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.btnRefOutputDir = new System.Windows.Forms.Button();
+            this.btnOutput = new System.Windows.Forms.Button();
+            this.folderBrowserDialog = new System.Windows.Forms.FolderBrowserDialog();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -240,7 +245,7 @@
             // 
             this.groupBox1.Controls.Add(this.tableLayoutPanel2);
             this.groupBox1.Controls.Add(this.btnAppend);
-            this.groupBox1.Location = new System.Drawing.Point(12, 265);
+            this.groupBox1.Location = new System.Drawing.Point(12, 284);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1282, 357);
             this.groupBox1.TabIndex = 1;
@@ -2150,11 +2155,15 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.outputDir);
+            this.groupBox2.Controls.Add(this.label40);
+            this.groupBox2.Controls.Add(this.btnRefOutputDir);
+            this.groupBox2.Controls.Add(this.btnOutput);
             this.groupBox2.Controls.Add(this.groupMonth);
             this.groupBox2.Controls.Add(this.tableLayoutPanel1);
             this.groupBox2.Location = new System.Drawing.Point(12, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1282, 236);
+            this.groupBox2.Size = new System.Drawing.Size(1282, 266);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "乖離幅測定";
@@ -3126,11 +3135,52 @@
             this.packingFare.Text = "0.00";
             this.packingFare.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // outputDir
+            // 
+            this.outputDir.Location = new System.Drawing.Point(113, 231);
+            this.outputDir.Name = "outputDir";
+            this.outputDir.ReadOnly = true;
+            this.outputDir.Size = new System.Drawing.Size(525, 23);
+            this.outputDir.TabIndex = 14;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(29, 234);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(78, 15);
+            this.label40.TabIndex = 13;
+            this.label40.Text = "出力フォルダ：";
+            // 
+            // btnRefOutputDir
+            // 
+            this.btnRefOutputDir.Location = new System.Drawing.Point(644, 230);
+            this.btnRefOutputDir.Name = "btnRefOutputDir";
+            this.btnRefOutputDir.Size = new System.Drawing.Size(75, 23);
+            this.btnRefOutputDir.TabIndex = 12;
+            this.btnRefOutputDir.Text = "変更";
+            this.btnRefOutputDir.UseVisualStyleBackColor = true;
+            this.btnRefOutputDir.Click += new System.EventHandler(this.btnRefOutputDir_Click);
+            // 
+            // btnOutput
+            // 
+            this.btnOutput.Location = new System.Drawing.Point(725, 230);
+            this.btnOutput.Name = "btnOutput";
+            this.btnOutput.Size = new System.Drawing.Size(75, 23);
+            this.btnOutput.TabIndex = 11;
+            this.btnOutput.Text = "Excel出力";
+            this.btnOutput.UseVisualStyleBackColor = true;
+            this.btnOutput.Click += new System.EventHandler(this.btnOutput_Click);
+            // 
+            // folderBrowserDialog
+            // 
+            this.folderBrowserDialog.Description = "出力フォルダを指定してください。";
+            // 
             // Form_CostMng_Divergence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1306, 637);
+            this.ClientSize = new System.Drawing.Size(1306, 651);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -3144,6 +3194,7 @@
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupMonth.ResumeLayout(false);
             this.groupMonth.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -3345,6 +3396,11 @@
         private System.Windows.Forms.Label utilitiesCost;
         private System.Windows.Forms.Label otherCost;
         private System.Windows.Forms.Label packingFare;
+        private System.Windows.Forms.TextBox outputDir;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Button btnRefOutputDir;
+        private System.Windows.Forms.Button btnOutput;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog;
 
 
     }

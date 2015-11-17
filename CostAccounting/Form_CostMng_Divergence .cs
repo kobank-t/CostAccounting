@@ -1,9 +1,9 @@
-﻿using System;
-using System.Drawing;
+﻿using OfficeOpenXml;
+using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-using System.IO;
-using System.Collections.Generic;
 
 namespace CostAccounting
 {
@@ -93,6 +93,10 @@ namespace CostAccounting
 
             // 計算を行う
             calcAll();
+
+            // 出力フォルダのデフォルトはアプリケーションの実行フォルダを指定
+            outputDir.Text = Application.StartupPath;
+            folderBrowserDialog.SelectedPath = Application.StartupPath;
         }
 
         /*************************************************************
@@ -357,6 +361,80 @@ namespace CostAccounting
                 }
             }
             calcAll();
+        }
+
+        /*************************************************************
+         * 出力フォルダの変更ボタン押下時の処理
+         *************************************************************/
+        private void btnRefOutputDir_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+            {
+                outputDir.Text = folderBrowserDialog.SelectedPath;
+            }
+        }
+
+        /*************************************************************
+         * Excel出力ボタン押下時の処理
+         *************************************************************/
+        private void btnOutput_Click(object sender, EventArgs e)
+        {
+            if (Program.MessageBoxBefore("画面の表示内容でExcelファイルを出力しますか？") != DialogResult.Yes)
+                return;
+
+            // テンプレートのファイル
+            var template = @"\" + Properties.Resources.template_divergence;
+            var templateFile = new FileInfo(string.Concat(System.Configuration.ConfigurationManager.AppSettings["templateFolder"], template));
+
+            // 出力ファイル
+            var outputFile = new FileInfo(string.Concat(Application.StartupPath
+                                                        , @"\乖離幅測定_"
+                                                        , DateTime.Now.ToString("yyyyMMddHHmmss")
+                                                        , ".xlsx"));
+
+            using (var package = new ExcelPackage(outputFile, templateFile))
+            {
+                ExcelWorksheet ws = package.Workbook.Worksheets["template"];
+
+                int columnIndex = 2;
+                foreach (Label[] target in labelDic)
+                {
+                    decimal value = Conversion.Parse(target[0].Text);
+                    decimal db = Conversion.Parse(target[1].Text);
+
+                    ws.Cells[6, columnIndex].Value = value;
+                    ws.Cells[5, columnIndex].Value = db;
+                    ++columnIndex;
+                }
+
+                // どの月を計算対象としたかを設定
+                string dispStr = "計算対象月【";
+                foreach (var control in groupMonth.Controls)
+                {
+                    if (control is CheckBox)
+                    {
+                        CheckBox target = (CheckBox)control;
+                        if (target.Checked)
+                            dispStr = string.Concat(dispStr, target.Text, "、");
+                    }
+                }
+                dispStr = dispStr.TrimEnd('、') + "】";
+                ws.Cells["A1"].Value = dispStr;
+
+                // Excelファイルを保存する
+                ws.Calculate();
+                package.Workbook.Worksheets.First().Select();
+                package.Save();
+            }
+
+            Logger.Info(Message.INF006, new string[] { this.Text, Message.create(outputDir) + outputFile.Name });
+
+            Program.MessageBoxAfter(
+                    string.Concat("以下のExcelファイルを出力しました。出力先のフォルダを開きます。"
+                                  , Environment.NewLine
+                                  , outputFile.Name));
+
+            System.Diagnostics.Process.Start(outputDir.Text);
         }
     }
 }
