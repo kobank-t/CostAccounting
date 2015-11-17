@@ -159,6 +159,7 @@ namespace CostAccounting
         {
             budget = new DataTableSupport(Const.CATEGORY_TYPE.Budget);
             actual = new DataTableSupport(Const.CATEGORY_TYPE.Actual);
+            item = createItem();
         }
 
         /// -----------------------------------------------------------------------------

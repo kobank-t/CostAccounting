@@ -443,9 +443,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="release\ver1.0\CostAccounting.db" />
-    <None Include="release\ver1.0\原価ソフトver1.0.zip" />
-    <None Include="release\ver1.0\浦幌フリーズドライ株式会社_原価計算ソフト_導入手順書_ver1.0.pdf" />
+    <None Include="release\ver1.0.zip" />
+    <None Include="release\ver1.1.zip" />
     <None Include="template\blend.xltx" />
     <None Include="template\compare.xltx" />
     <None Include="template\divergence.xltx" />
