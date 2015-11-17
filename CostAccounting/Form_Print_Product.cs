@@ -122,6 +122,11 @@ namespace CostAccounting
             if (Program.MessageBoxBefore("出力条件の内容でExcelファイルを出力しますか？") != DialogResult.Yes)
                 return;
 
+            progressBar.Minimum = 0;
+            progressBar.Maximum = listView.Items.Count;
+            progressBar.Value = 0;
+            progressBar.Step = 1;
+
             // テンプレートのファイル
             var template = radioProduct.Checked ? @"\product.xltx" : @"\blend.xltx";
             var templateFile = new FileInfo(string.Concat(System.Configuration.ConfigurationManager.AppSettings["templateFolder"], template));
@@ -171,6 +176,13 @@ namespace CostAccounting
                     else
                         Program.MessageBoxError("商品かブレンド品のラジオボタンを選択してください。");
 
+                    // プログレスバーの値を更新
+                    labelStatus.Refresh();
+                    labelStatus.Text = string.Format("・・・ ( {0} / {1} )"
+                                                     , (i + 1).ToString("#,0")
+                                                     , listView.Items.Count.ToString("#,0"));
+                    
+                    progressBar.PerformStep();
                 }
 
                 // テンプレートシートを削除の上、Excelファイルを保存する
@@ -178,6 +190,7 @@ namespace CostAccounting
                 package.Workbook.Worksheets.Delete(templateSheet);
                 package.Workbook.Worksheets.First().Select();
                 package.Save();
+
             }
 
             Logger.Info(Message.INF006, new string[] { this.Text, Message.create(outputDir, recordCnt) + outputFile.Name });

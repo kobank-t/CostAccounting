@@ -48,6 +48,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnOutput = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.labelStatus = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.category.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -238,11 +240,28 @@
             this.label3.Size = new System.Drawing.Size(690, 2);
             this.label3.TabIndex = 11;
             // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(12, 634);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(336, 10);
+            this.progressBar.TabIndex = 12;
+            // 
+            // labelStatus
+            // 
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.Location = new System.Drawing.Point(351, 630);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(0, 15);
+            this.labelStatus.TabIndex = 13;
+            // 
             // Form_Print_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 635);
+            this.ClientSize = new System.Drawing.Size(714, 653);
+            this.Controls.Add(this.labelStatus);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnOutput);
             this.Controls.Add(this.recordCnt);
@@ -291,6 +310,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnOutput;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Label labelStatus;
 
     }
 }
