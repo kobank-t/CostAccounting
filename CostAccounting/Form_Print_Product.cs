@@ -430,7 +430,7 @@ namespace CostAccounting
                                  select new { product = t_product, blend = t_blend }
                                 )
                             join m in context.ProductCode on
-                            new { t.product.year, t.product.code } equals new { m.year, m.code }
+                            new { t.blend.year, t.blend.code } equals new { m.year, m.code }
                             orderby t.blend.no
                             select new { t.product, t.blend, m.name };
 
