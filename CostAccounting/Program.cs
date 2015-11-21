@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
@@ -91,6 +89,30 @@ namespace CostAccounting
                 return Const.PRODUCT_TYPE.Blend;
             else
                 throw new ArgumentException("商品またはブレンドのラジオボタンはチェックしましょう。");
+        }
+
+        /*************************************************************
+         * 指定されたファイルをエクセルで開きます
+         *************************************************************/
+        public static void openExcel(string filePath)
+        {
+            Program.MessageBoxAfter(
+                    string.Concat("出力したExcelファイルを開きます。"
+                                  , Environment.NewLine
+                                  , filePath));
+
+            //Processオブジェクトを作成する
+            System.Diagnostics.Process p = new System.Diagnostics.Process();
+
+            //起動する実行ファイルのパスを設定する
+            p.StartInfo.FileName = "excel.exe";
+
+            //コマンドライン引数を指定する
+            p.StartInfo.Arguments = @"""" + filePath + @"""";
+
+            //起動する。プロセスが起動した時はTrueを返す。
+            //bool result = p.Start();
+            p.Start();
         }
     }
 

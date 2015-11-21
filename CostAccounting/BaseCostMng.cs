@@ -1138,13 +1138,7 @@ namespace CostAccounting
             }
 
             Logger.Info(Message.INF006, new string[] { this.Text, outputDir + " " + outputFile.Name });
-
-            Program.MessageBoxAfter(
-                    string.Concat("以下のExcelファイルを出力しました。出力先のフォルダを開きます。"
-                                  , Environment.NewLine
-                                  , outputFile.Name));
-
-            System.Diagnostics.Process.Start(outputDir);
+            Program.openExcel(outputFile.FullName);
         }
     }
 }

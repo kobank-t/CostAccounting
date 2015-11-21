@@ -192,17 +192,10 @@ namespace CostAccounting
                 package.Workbook.Worksheets.Delete(templateSheet);
                 package.Workbook.Worksheets.First().Select();
                 package.Save();
-
             }
 
             Logger.Info(Message.INF006, new string[] { this.Text, Message.create(outputDir, recordCnt) + outputFile.Name });
-
-            Program.MessageBoxAfter(
-                    string.Concat("以下のExcelファイルを出力しました。出力先のフォルダを開きます。"
-                                  , Environment.NewLine
-                                  , outputFile.Name));
-
-            System.Diagnostics.Process.Start(outputDir.Text);
+            Program.openExcel(outputFile.FullName);
         }
 
         /*************************************************************
