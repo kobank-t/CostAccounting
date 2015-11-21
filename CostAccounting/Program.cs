@@ -569,6 +569,23 @@ namespace CostAccounting
                 target.Text = Conversion.Parse(target.Text).ToString("N");
             }
         }
+
+        /// -----------------------------------------------------------------------------
+        /// <summary>
+        ///     テキストボックスのロストフォーカス時にフォーマットします。</summary>
+        /// <param name="sender">
+        ///     イベント発生元のオブジェクト。<param>
+        /// <param name="e">
+        ///     イベント引数。<param>
+        /// -----------------------------------------------------------------------------
+        public static void textBox_Leave_formatNum(object sender, EventArgs e)
+        {
+            if (sender is TextBox)
+            {
+                TextBox target = (TextBox)sender;
+                target.Text = Conversion.Parse(target.Text).ToString("#,0");
+            }
+        }
     }
 
     /// -----------------------------------------------------------------------------

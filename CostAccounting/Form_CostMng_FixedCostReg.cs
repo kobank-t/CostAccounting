@@ -91,7 +91,7 @@ namespace CostAccounting
          *************************************************************/
         private void textBox_Leave(object sender, EventArgs e)
         {
-            Event.textBox_Leave_format(sender, e);
+            Event.textBox_Leave_formatNum(sender, e);
             calcAll();
         }
 
@@ -120,7 +120,7 @@ namespace CostAccounting
                 foreach (TextBox text in monthPairText[targetKey])
                     monthTotal += Conversion.Parse(text.Text);
 
-                monthPairTotal[targetKey].Text = monthTotal.ToString("N");
+                monthPairTotal[targetKey].Text = monthTotal.ToString("#,0");
                 all_total += monthTotal;
 
                 // 項目毎の合計値を算出
@@ -136,17 +136,17 @@ namespace CostAccounting
                 operating_expenses += Conversion.Parse((string)monthPairText[targetKey][9].Text);
             }
 
-            manufacturing_personnel_total.Text = manufacturing_personnel.ToString("N");
-            manufacturing_depreciation_total.Text = manufacturing_depreciation.ToString("N");
-            manufacturing_rent_total.Text = manufacturing_rent.ToString("N");
-            manufacturing_repair_total.Text = manufacturing_repair.ToString("N");
-            manufacturing_stock_total.Text = manufacturing_stock.ToString("N");
-            manufacturing_other_total.Text = manufacturing_other.ToString("N");
-            selling_personnel_total.Text = selling_personnel.ToString("N");
-            selling_depreciation_total.Text = selling_depreciation.ToString("N");
-            selling_other_total.Text = selling_other.ToString("N");
-            operating_expenses_total.Text = operating_expenses.ToString("N");
-            total.Text = all_total.ToString("N");
+            manufacturing_personnel_total.Text = manufacturing_personnel.ToString("#,0");
+            manufacturing_depreciation_total.Text = manufacturing_depreciation.ToString("#,0");
+            manufacturing_rent_total.Text = manufacturing_rent.ToString("#,0");
+            manufacturing_repair_total.Text = manufacturing_repair.ToString("#,0");
+            manufacturing_stock_total.Text = manufacturing_stock.ToString("#,0");
+            manufacturing_other_total.Text = manufacturing_other.ToString("#,0");
+            selling_personnel_total.Text = selling_personnel.ToString("#,0");
+            selling_depreciation_total.Text = selling_depreciation.ToString("#,0");
+            selling_other_total.Text = selling_other.ToString("#,0");
+            operating_expenses_total.Text = operating_expenses.ToString("#,0");
+            total.Text = all_total.ToString("#,0");
         }
 
         /*************************************************************
@@ -167,21 +167,21 @@ namespace CostAccounting
 
                     if (target.Count() == decimal.One)
                     {
-                        monthPairText[month][0].Text = target.First().manufacturing_personnel.ToString("N");
-                        monthPairText[month][1].Text = target.First().manufacturing_depreciation.ToString("N");
-                        monthPairText[month][2].Text = target.First().manufacturing_rent.ToString("N");
-                        monthPairText[month][3].Text = target.First().manufacturing_repair.ToString("N");
-                        monthPairText[month][4].Text = target.First().manufacturing_stock.ToString("N");
-                        monthPairText[month][5].Text = target.First().manufacturing_other.ToString("N");
-                        monthPairText[month][6].Text = target.First().selling_personnel.ToString("N");
-                        monthPairText[month][7].Text = target.First().selling_depreciation.ToString("N");
-                        monthPairText[month][8].Text = target.First().selling_other.ToString("N");
-                        monthPairText[month][9].Text = target.First().operating_expenses.ToString("N");
+                        monthPairText[month][0].Text = target.First().manufacturing_personnel.ToString("#,0");
+                        monthPairText[month][1].Text = target.First().manufacturing_depreciation.ToString("#,0");
+                        monthPairText[month][2].Text = target.First().manufacturing_rent.ToString("#,0");
+                        monthPairText[month][3].Text = target.First().manufacturing_repair.ToString("#,0");
+                        monthPairText[month][4].Text = target.First().manufacturing_stock.ToString("#,0");
+                        monthPairText[month][5].Text = target.First().manufacturing_other.ToString("#,0");
+                        monthPairText[month][6].Text = target.First().selling_personnel.ToString("#,0");
+                        monthPairText[month][7].Text = target.First().selling_depreciation.ToString("#,0");
+                        monthPairText[month][8].Text = target.First().selling_other.ToString("#,0");
+                        monthPairText[month][9].Text = target.First().operating_expenses.ToString("#,0");
                     }
                     else
                     {
                         foreach (TextBox textbox in monthPairText[month])
-                            textbox.Text = decimal.Zero.ToString("N");
+                            textbox.Text = decimal.Zero.ToString("#,0");
                     }
                 }
             }

@@ -112,7 +112,7 @@ namespace CostAccounting
          *************************************************************/
         private void textBox_Leave(object sender, EventArgs e)
         {
-            Event.textBox_Leave_format(sender, e);
+            Event.textBox_Leave_formatNum(sender, e);
             calc決算書実績();
             calc乖離幅();
         }
@@ -123,20 +123,20 @@ namespace CostAccounting
         private void calc決算書実績()
         {
             foreach (Label[] target in labelDic)
-                target[0].Text = decimal.Zero.ToString("N");
+                target[0].Text = decimal.Zero.ToString("#,0");
 
             foreach (CheckBox target in checkboxPairText.Keys)
             {
                 if (target.Checked)
                 {
-                    materialCost.Text = decimal.Add(Conversion.Parse(materialCost.Text), Conversion.Parse(checkboxPairText[target][0].Text)).ToString("N");
-                    laborCost.Text = decimal.Add(Conversion.Parse(laborCost.Text), Conversion.Parse(checkboxPairText[target][1].Text)).ToString("N");
-                    contractorsCost.Text = decimal.Add(Conversion.Parse(contractorsCost.Text), Conversion.Parse(checkboxPairText[target][2].Text)).ToString("N");
-                    materialsFare.Text = decimal.Add(Conversion.Parse(materialsFare.Text), Conversion.Parse(checkboxPairText[target][3].Text)).ToString("N");
-                    packingCost.Text = decimal.Add(Conversion.Parse(packingCost.Text), Conversion.Parse(checkboxPairText[target][4].Text)).ToString("N");
-                    utilitiesCost.Text = decimal.Add(Conversion.Parse(utilitiesCost.Text), Conversion.Parse(checkboxPairText[target][5].Text)).ToString("N");
-                    otherCost.Text = decimal.Add(Conversion.Parse(otherCost.Text), Conversion.Parse(checkboxPairText[target][6].Text)).ToString("N");
-                    packingFare.Text = decimal.Add(Conversion.Parse(packingFare.Text), Conversion.Parse(checkboxPairText[target][7].Text)).ToString("N");
+                    materialCost.Text = decimal.Add(Conversion.Parse(materialCost.Text), Conversion.Parse(checkboxPairText[target][0].Text)).ToString("#,0");
+                    laborCost.Text = decimal.Add(Conversion.Parse(laborCost.Text), Conversion.Parse(checkboxPairText[target][1].Text)).ToString("#,0");
+                    contractorsCost.Text = decimal.Add(Conversion.Parse(contractorsCost.Text), Conversion.Parse(checkboxPairText[target][2].Text)).ToString("#,0");
+                    materialsFare.Text = decimal.Add(Conversion.Parse(materialsFare.Text), Conversion.Parse(checkboxPairText[target][3].Text)).ToString("#,0");
+                    packingCost.Text = decimal.Add(Conversion.Parse(packingCost.Text), Conversion.Parse(checkboxPairText[target][4].Text)).ToString("#,0");
+                    utilitiesCost.Text = decimal.Add(Conversion.Parse(utilitiesCost.Text), Conversion.Parse(checkboxPairText[target][5].Text)).ToString("#,0");
+                    otherCost.Text = decimal.Add(Conversion.Parse(otherCost.Text), Conversion.Parse(checkboxPairText[target][6].Text)).ToString("#,0");
+                    packingFare.Text = decimal.Add(Conversion.Parse(packingFare.Text), Conversion.Parse(checkboxPairText[target][7].Text)).ToString("#,0");
                 }
             }
         }
@@ -147,7 +147,7 @@ namespace CostAccounting
         private void calc原価計算表実績()
         {
             foreach (Label[] target in labelDic)
-                target[1].Text = decimal.Zero.ToString("N");
+                target[1].Text = decimal.Zero.ToString("#,0");
 
             using (var context = new CostAccountingEntities())
             {
@@ -167,14 +167,14 @@ namespace CostAccounting
 
                 foreach (var data in targetData.ToList())
                 {
-                    materialCost_db.Text = decimal.Add(Conversion.Parse(materialCost_db.Text), data.materialCost_costing).ToString("N");
-                    laborCost_db.Text = decimal.Add(Conversion.Parse(laborCost_db.Text), data.laborCost_costing).ToString("N");
-                    contractorsCost_db.Text = decimal.Add(Conversion.Parse(contractorsCost_db.Text), data.contractorsCost_costing).ToString("N");
-                    materialsFare_db.Text = decimal.Add(Conversion.Parse(materialsFare_db.Text), data.materialsFare_costing).ToString("N");
-                    packingCost_db.Text = decimal.Add(Conversion.Parse(packingCost_db.Text), data.packingCost_costing).ToString("N");
-                    utilitiesCost_db.Text = decimal.Add(Conversion.Parse(utilitiesCost_db.Text), data.utilitiesCost_costing).ToString("N");
-                    otherCost_db.Text = decimal.Add(Conversion.Parse(otherCost_db.Text), data.otherCost_costing).ToString("N");
-                    packingFare_db.Text = decimal.Add(Conversion.Parse(packingFare_db.Text), data.packingFare_costing).ToString("N");
+                    materialCost_db.Text = decimal.Add(Conversion.Parse(materialCost_db.Text), data.materialCost_costing).ToString("#,0");
+                    laborCost_db.Text = decimal.Add(Conversion.Parse(laborCost_db.Text), data.laborCost_costing).ToString("#,0");
+                    contractorsCost_db.Text = decimal.Add(Conversion.Parse(contractorsCost_db.Text), data.contractorsCost_costing).ToString("#,0");
+                    materialsFare_db.Text = decimal.Add(Conversion.Parse(materialsFare_db.Text), data.materialsFare_costing).ToString("#,0");
+                    packingCost_db.Text = decimal.Add(Conversion.Parse(packingCost_db.Text), data.packingCost_costing).ToString("#,0");
+                    utilitiesCost_db.Text = decimal.Add(Conversion.Parse(utilitiesCost_db.Text), data.utilitiesCost_costing).ToString("#,0");
+                    otherCost_db.Text = decimal.Add(Conversion.Parse(otherCost_db.Text), data.otherCost_costing).ToString("#,0");
+                    packingFare_db.Text = decimal.Add(Conversion.Parse(packingFare_db.Text), data.packingFare_costing).ToString("#,0");
                 }
             }
         }
@@ -193,7 +193,7 @@ namespace CostAccounting
                 decimal diff = decimal.Subtract(value, db);
                 decimal rate = db != decimal.Zero ? decimal.Divide(diff, db) : decimal.Zero;
 
-                target[2].Text = diff.ToString("N");
+                target[2].Text = diff.ToString("#,0");
                 target[3].Text = rate.ToString("P");
 
                 total += value;
@@ -203,9 +203,9 @@ namespace CostAccounting
             decimal total_diff = decimal.Subtract(total, total_db);
             decimal total_rate = total_db != decimal.Zero ? decimal.Divide(total_diff, total_db) : decimal.Zero;
 
-            this.total.Text = total.ToString("N");
-            this.total_db.Text = total_db.ToString("N");
-            this.total_diff.Text = total_diff.ToString("N");
+            this.total.Text = total.ToString("#,0");
+            this.total_db.Text = total_db.ToString("#,0");
+            this.total_diff.Text = total_diff.ToString("#,0");
             this.total_rate.Text = total_rate.ToString("P");
         }
 
@@ -241,19 +241,19 @@ namespace CostAccounting
 
                     if (target.Count() == decimal.One)
                     {
-                        monthPairText[month][0].Text = target.First().materialCost.ToString("N");
-                        monthPairText[month][1].Text = target.First().laborCost.ToString("N");
-                        monthPairText[month][2].Text = target.First().contractorsCost.ToString("N");
-                        monthPairText[month][3].Text = target.First().materialsFare.ToString("N");
-                        monthPairText[month][4].Text = target.First().packingCost.ToString("N");
-                        monthPairText[month][5].Text = target.First().utilitiesCost.ToString("N");
-                        monthPairText[month][6].Text = target.First().otherCost.ToString("N");
-                        monthPairText[month][7].Text = target.First().packingFare.ToString("N");
+                        monthPairText[month][0].Text = target.First().materialCost.ToString("#,0");
+                        monthPairText[month][1].Text = target.First().laborCost.ToString("#,0");
+                        monthPairText[month][2].Text = target.First().contractorsCost.ToString("#,0");
+                        monthPairText[month][3].Text = target.First().materialsFare.ToString("#,0");
+                        monthPairText[month][4].Text = target.First().packingCost.ToString("#,0");
+                        monthPairText[month][5].Text = target.First().utilitiesCost.ToString("#,0");
+                        monthPairText[month][6].Text = target.First().otherCost.ToString("#,0");
+                        monthPairText[month][7].Text = target.First().packingFare.ToString("#,0");
                     }
                     else
                     {
                         foreach (TextBox textbox in monthPairText[month])
-                            textbox.Text = decimal.Zero.ToString("N");
+                            textbox.Text = decimal.Zero.ToString("#,0");
                     }
                 }
             }

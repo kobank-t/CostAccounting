@@ -110,14 +110,6 @@ namespace CostAccounting
         }
 
         /*************************************************************
-         * データグリッドビュー（合計）のテキストのロストフォーカス時に計算する
-         *************************************************************/
-        private new void dataGridViewTotal_Leave(object sender, EventArgs e)
-        {
-            base.dataGridViewTotal_Leave(sender, e);
-        }
-
-        /*************************************************************
          * 登録ボタン押下時の処理
          *************************************************************/
         private new void btnAppend_Click(object sender, EventArgs e)

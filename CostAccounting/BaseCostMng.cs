@@ -351,8 +351,6 @@ namespace CostAccounting
 
                 if (dgv.Name.Equals(dataGridView.Name))
                     dgvTextBox.Leave += new EventHandler(dataGridView_Leave);
-                else if (dgv.Name.Equals(dataGridViewTotal.Name))
-                    dgvTextBox.Leave += new EventHandler(dataGridViewTotal_Leave);
             }
         }
 
@@ -370,8 +368,6 @@ namespace CostAccounting
 
                 if (dgv.Name.Equals(dataGridView.Name))
                     dgvTextBox.Leave -= new EventHandler(dataGridView_Leave);
-                else if (dgv.Name.Equals(dataGridViewTotal.Name))
-                    dgvTextBox.Leave -= new EventHandler(dataGridViewTotal_Leave);
 
                 dgvTextBox = null;
             }
@@ -430,8 +426,9 @@ namespace CostAccounting
             int[] columnIndexTotal = { 40, 41, 42, 43, 44, 45, 46, 47, 48, 49 };
             foreach (int index in columnIndexTotal)
             {
-                dataGridViewTotal.Columns[index].Selected = true;
-                dataGridViewTotal_Leave(null, null);
+                calcTotal(index);
+                calcManagementProfit();
+                calcProfit();
             }
         }
 
@@ -465,21 +462,7 @@ namespace CostAccounting
             calcManagementProfit();
             calcProfit();
 
-            dataGridView.Rows[rowIndex].Cells[columnIndex].Value = Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[columnIndex].Value).ToString("N");
-        }
-
-        /*************************************************************
-         * データグリッドビュー（合計）のテキストのロストフォーカス時に計算する
-         *************************************************************/
-        protected void dataGridViewTotal_Leave(object sender, EventArgs e)
-        {
-            int columnIndex = dataGridViewTotal.SelectedColumns[0].Index;
-
-            calcTotal(columnIndex);
-            calcManagementProfit();
-            calcProfit();
-
-            dataGridViewTotal.Rows[0].Cells[columnIndex].Value = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[columnIndex].Value).ToString("N");
+            dataGridView.Rows[rowIndex].Cells[columnIndex].Value = Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[columnIndex].Value).ToString("#,0");
         }
 
         /*************************************************************
@@ -520,15 +503,15 @@ namespace CostAccounting
                     dataGridView.Rows[i].Cells[1].Value = dataList[i].m_item.name;
                     dataGridView.Rows[i].Cells[2].Value = dataList[i].m_supplier.name;
                     dataGridView.Rows[i].Cells[3].Value = dataList[i].m_product.name;
-                    dataGridView.Rows[i].Cells[4].Value = dataList[i].t_supplier.unit_price.ToString("N");
-                    dataGridView.Rows[i].Cells[5].Value = dataList[i].t_product.material_cost.ToString("N");
-                    dataGridView.Rows[i].Cells[6].Value = dataList[i].t_product.labor_cost_direct.ToString("N");
-                    dataGridView.Rows[i].Cells[7].Value = dataList[i].t_product.contractors_cost.ToString("N");
-                    dataGridView.Rows[i].Cells[8].Value = dataList[i].t_product.materials_fare.ToString("N");
-                    dataGridView.Rows[i].Cells[9].Value = dataList[i].t_product.packing_cost.ToString("N");
-                    dataGridView.Rows[i].Cells[10].Value = dataList[i].t_product.utilities_cost.ToString("N");
-                    dataGridView.Rows[i].Cells[11].Value = decimal.Multiply(dataList[i].t_product.other_cost, rateExpend).ToString("N");
-                    dataGridView.Rows[i].Cells[12].Value = dataList[i].t_product.packing_fare.ToString("N");
+                    dataGridView.Rows[i].Cells[4].Value = dataList[i].t_supplier.unit_price.ToString("#,0");
+                    dataGridView.Rows[i].Cells[5].Value = dataList[i].t_product.material_cost.ToString("#,0");
+                    dataGridView.Rows[i].Cells[6].Value = dataList[i].t_product.labor_cost_direct.ToString("#,0");
+                    dataGridView.Rows[i].Cells[7].Value = dataList[i].t_product.contractors_cost.ToString("#,0");
+                    dataGridView.Rows[i].Cells[8].Value = dataList[i].t_product.materials_fare.ToString("#,0");
+                    dataGridView.Rows[i].Cells[9].Value = dataList[i].t_product.packing_cost.ToString("#,0");
+                    dataGridView.Rows[i].Cells[10].Value = dataList[i].t_product.utilities_cost.ToString("#,0");
+                    dataGridView.Rows[i].Cells[11].Value = decimal.Multiply(dataList[i].t_product.other_cost, rateExpend).ToString("#,0");
+                    dataGridView.Rows[i].Cells[12].Value = dataList[i].t_product.packing_fare.ToString("#,0");
 
                     dataGridView.Rows[i].Cells[13].Value = (dataList[i].t_product.material_cost
                                                             + dataList[i].t_product.labor_cost_direct
@@ -537,23 +520,23 @@ namespace CostAccounting
                                                             + dataList[i].t_product.packing_cost
                                                             + dataList[i].t_product.utilities_cost
                                                             + decimal.Multiply(dataList[i].t_product.other_cost, rateExpend)
-                                                            + dataList[i].t_product.packing_fare).ToString("N");
+                                                            + dataList[i].t_product.packing_fare).ToString("#,0");
 
                     dataGridView.Rows[i].Cells[14].Value = decimal.Subtract(Conversion.Parse((string)dataGridView.Rows[i].Cells[4].Value)
-                                                                            , Conversion.Parse((string)dataGridView.Rows[i].Cells[13].Value)).ToString("N");
+                                                                            , Conversion.Parse((string)dataGridView.Rows[i].Cells[13].Value)).ToString("#,0");
 
-                    dataGridView.Rows[i].Cells[16].Value = dataList[i].t_supplier.month_04.ToString("N");
-                    dataGridView.Rows[i].Cells[17].Value = dataList[i].t_supplier.month_05.ToString("N");
-                    dataGridView.Rows[i].Cells[18].Value = dataList[i].t_supplier.month_06.ToString("N");
-                    dataGridView.Rows[i].Cells[19].Value = dataList[i].t_supplier.month_07.ToString("N");
-                    dataGridView.Rows[i].Cells[20].Value = dataList[i].t_supplier.month_08.ToString("N");
-                    dataGridView.Rows[i].Cells[21].Value = dataList[i].t_supplier.month_09.ToString("N");
-                    dataGridView.Rows[i].Cells[22].Value = dataList[i].t_supplier.month_10.ToString("N");
-                    dataGridView.Rows[i].Cells[23].Value = dataList[i].t_supplier.month_11.ToString("N");
-                    dataGridView.Rows[i].Cells[24].Value = dataList[i].t_supplier.month_12.ToString("N");
-                    dataGridView.Rows[i].Cells[25].Value = dataList[i].t_supplier.month_01.ToString("N");
-                    dataGridView.Rows[i].Cells[26].Value = dataList[i].t_supplier.month_02.ToString("N");
-                    dataGridView.Rows[i].Cells[27].Value = dataList[i].t_supplier.month_03.ToString("N");
+                    dataGridView.Rows[i].Cells[16].Value = dataList[i].t_supplier.month_04.ToString("#,0");
+                    dataGridView.Rows[i].Cells[17].Value = dataList[i].t_supplier.month_05.ToString("#,0");
+                    dataGridView.Rows[i].Cells[18].Value = dataList[i].t_supplier.month_06.ToString("#,0");
+                    dataGridView.Rows[i].Cells[19].Value = dataList[i].t_supplier.month_07.ToString("#,0");
+                    dataGridView.Rows[i].Cells[20].Value = dataList[i].t_supplier.month_08.ToString("#,0");
+                    dataGridView.Rows[i].Cells[21].Value = dataList[i].t_supplier.month_09.ToString("#,0");
+                    dataGridView.Rows[i].Cells[22].Value = dataList[i].t_supplier.month_10.ToString("#,0");
+                    dataGridView.Rows[i].Cells[23].Value = dataList[i].t_supplier.month_11.ToString("#,0");
+                    dataGridView.Rows[i].Cells[24].Value = dataList[i].t_supplier.month_12.ToString("#,0");
+                    dataGridView.Rows[i].Cells[25].Value = dataList[i].t_supplier.month_01.ToString("#,0");
+                    dataGridView.Rows[i].Cells[26].Value = dataList[i].t_supplier.month_02.ToString("#,0");
+                    dataGridView.Rows[i].Cells[27].Value = dataList[i].t_supplier.month_03.ToString("#,0");
                     dataGridView.Rows[i].Cells["product_code"].Value = dataList[i].t_supplier.product_code;
                     dataGridView.Rows[i].Cells["supplier_code"].Value = dataList[i].t_supplier.supplier_code;
                     dataGridView.Rows[i].Cells["type"].Value = dataList[i].t_supplier.type;
@@ -608,8 +591,8 @@ namespace CostAccounting
                     excludeResaleTotal += Conversion.Parse((string)row.Cells[15].Value);
                 total += Conversion.Parse((string)row.Cells[15].Value);
             }
-            dataGridViewTotal.Rows[0].Cells[15].Value = total.ToString("N");
-            dataGridViewTotal.Rows[1].Cells[15].Value = excludeResaleTotal.ToString("N");
+            dataGridViewTotal.Rows[0].Cells[15].Value = total.ToString("#,0");
+            dataGridViewTotal.Rows[1].Cells[15].Value = excludeResaleTotal.ToString("#,0");
 
             // 固定費配賦率の計算
             foreach (DataGridViewRow row in dataGridView.Rows)
@@ -636,7 +619,7 @@ namespace CostAccounting
                 if (!string.IsNullOrEmpty(rateStr))
                     rateStr = rateStr.Replace("%", "");
                 decimal rate = decimal.Divide(Conversion.Parse(rateStr), 100);
-                row.Cells[columnIndex].Value = decimal.Multiply(targetCost, rate).ToString("N");
+                row.Cells[columnIndex].Value = decimal.Multiply(targetCost, rate).ToString("#,0");
 
                 row.Cells[50].Value = (Conversion.Parse((string)row.Cells[40].Value)
                                        + Conversion.Parse((string)row.Cells[41].Value)
@@ -647,10 +630,10 @@ namespace CostAccounting
                                        + Conversion.Parse((string)row.Cells[46].Value)
                                        + Conversion.Parse((string)row.Cells[47].Value)
                                        + Conversion.Parse((string)row.Cells[48].Value)
-                                       + Conversion.Parse((string)row.Cells[49].Value)).ToString("N");
+                                       + Conversion.Parse((string)row.Cells[49].Value)).ToString("#,0");
                 total += Conversion.Parse((string)row.Cells[50].Value);
             }
-            dataGridViewTotal.Rows[0].Cells[50].Value = total.ToString("N");
+            dataGridViewTotal.Rows[0].Cells[50].Value = total.ToString("#,0");
         }
 
         /*************************************************************
@@ -662,10 +645,10 @@ namespace CostAccounting
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
                 row.Cells[51].Value = decimal.Subtract(Conversion.Parse((string)row.Cells[38].Value)
-                                                       , Conversion.Parse((string)row.Cells[50].Value)).ToString("N");
+                                                       , Conversion.Parse((string)row.Cells[50].Value)).ToString("#,0");
                 total += Conversion.Parse((string)row.Cells[51].Value);
             }
-            dataGridViewTotal.Rows[0].Cells[51].Value = total.ToString("N");
+            dataGridViewTotal.Rows[0].Cells[51].Value = total.ToString("#,0");
         }
 
         /*************************************************************
@@ -689,21 +672,21 @@ namespace CostAccounting
                                        + Conversion.Parse((string)row.Cells[42].Value)
                                        + Conversion.Parse((string)row.Cells[43].Value)
                                        + Conversion.Parse((string)row.Cells[44].Value)
-                                       + Conversion.Parse((string)row.Cells[45].Value)).ToString("N");
+                                       + Conversion.Parse((string)row.Cells[45].Value)).ToString("#,0");
                 row.Cells[53].Value = decimal.Subtract(Conversion.Parse((string)row.Cells[15].Value)
-                                                       , Conversion.Parse((string)row.Cells[52].Value)).ToString("N");
+                                                       , Conversion.Parse((string)row.Cells[52].Value)).ToString("#,0");
                 row.Cells[54].Value = Conversion.Parse((string)row.Cells[15].Value) == decimal.Zero ?
                     decimal.Zero.ToString("P") :
                     decimal.Divide(Conversion.Parse((string)row.Cells[53].Value)
                                    , Conversion.Parse((string)row.Cells[15].Value)).ToString("P");
 
                 row.Cells[55].Value = Conversion.Parse((string)row.Cells[28].Value) == decimal.Zero ?
-                    decimal.Zero.ToString("N") :
+                    decimal.Zero.ToString("#,0") :
                     decimal.Divide(Conversion.Parse((string)row.Cells[52].Value)
-                                   , Conversion.Parse((string)row.Cells[28].Value)).ToString("N");
+                                   , Conversion.Parse((string)row.Cells[28].Value)).ToString("#,0");
 
                 row.Cells[56].Value = Conversion.Parse((string)row.Cells[28].Value) == decimal.Zero ?
-                    decimal.Zero.ToString("N") :
+                    decimal.Zero.ToString("#,0") :
                     decimal.Divide(Conversion.Parse((string)row.Cells[29].Value)
                                    + decimal.Divide(Conversion.Parse((string)row.Cells[30].Value), 2)
                                    + Conversion.Parse((string)row.Cells[32].Value)
@@ -715,13 +698,13 @@ namespace CostAccounting
                                                     + Conversion.Parse((string)row.Cells[43].Value)
                                                     + Conversion.Parse((string)row.Cells[44].Value)
                                                     + Conversion.Parse((string)row.Cells[45].Value), 2)
-                                   , Conversion.Parse((string)row.Cells[28].Value)).ToString("N");
+                                   , Conversion.Parse((string)row.Cells[28].Value)).ToString("#,0");
 
                 totalCost += Conversion.Parse((string)row.Cells[52].Value);
                 totalProfit += Conversion.Parse((string)row.Cells[53].Value);
             }
-            dataGridViewTotal.Rows[0].Cells[52].Value = totalCost.ToString("N");
-            dataGridViewTotal.Rows[0].Cells[53].Value = totalProfit.ToString("N");
+            dataGridViewTotal.Rows[0].Cells[52].Value = totalCost.ToString("#,0");
+            dataGridViewTotal.Rows[0].Cells[53].Value = totalProfit.ToString("#,0");
             dataGridViewTotal.Rows[0].Cells[54].Value =
                 Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[15].Value) == decimal.Zero ?
                 decimal.Zero.ToString("P") :
@@ -746,7 +729,7 @@ namespace CostAccounting
                  + containCalc((string)dataGridView.Rows[rowIndex].Cells[24].Value, 24)
                  + containCalc((string)dataGridView.Rows[rowIndex].Cells[25].Value, 25)
                  + containCalc((string)dataGridView.Rows[rowIndex].Cells[26].Value, 26)
-                 + containCalc((string)dataGridView.Rows[rowIndex].Cells[27].Value, 27)).ToString("N");
+                 + containCalc((string)dataGridView.Rows[rowIndex].Cells[27].Value, 27)).ToString("#,0");
 
             dataGridView.Rows[rowIndex].Cells[28].Value =
                         Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[4].Value) == decimal.Zero ?
@@ -755,21 +738,21 @@ namespace CostAccounting
                                        , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[4].Value)).ToString("N");
 
             dataGridView.Rows[rowIndex].Cells[29].Value = decimal.Multiply(Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[28].Value)
-                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[5].Value)).ToString("N");
+                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[5].Value)).ToString("#,0");
             dataGridView.Rows[rowIndex].Cells[30].Value = decimal.Multiply(Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[28].Value)
-                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[6].Value)).ToString("N");
+                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[6].Value)).ToString("#,0");
             dataGridView.Rows[rowIndex].Cells[31].Value = decimal.Multiply(Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[28].Value)
-                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[7].Value)).ToString("N");
+                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[7].Value)).ToString("#,0");
             dataGridView.Rows[rowIndex].Cells[32].Value = decimal.Multiply(Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[28].Value)
-                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[8].Value)).ToString("N");
+                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[8].Value)).ToString("#,0");
             dataGridView.Rows[rowIndex].Cells[33].Value = decimal.Multiply(Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[28].Value)
-                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[9].Value)).ToString("N");
+                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[9].Value)).ToString("#,0");
             dataGridView.Rows[rowIndex].Cells[34].Value = decimal.Multiply(Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[28].Value)
-                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[10].Value)).ToString("N");
+                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[10].Value)).ToString("#,0");
             dataGridView.Rows[rowIndex].Cells[35].Value = decimal.Multiply(Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[28].Value)
-                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[11].Value)).ToString("N");
+                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[11].Value)).ToString("#,0");
             dataGridView.Rows[rowIndex].Cells[36].Value = decimal.Multiply(Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[28].Value)
-                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[12].Value)).ToString("N");
+                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[12].Value)).ToString("#,0");
             dataGridView.Rows[rowIndex].Cells[37].Value = (Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[29].Value)
                                                            + Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[30].Value)
                                                            + Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[31].Value)
@@ -777,9 +760,9 @@ namespace CostAccounting
                                                            + Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[33].Value)
                                                            + Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[34].Value)
                                                            + Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[35].Value)
-                                                           + Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[36].Value)).ToString("N");
+                                                           + Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[36].Value)).ToString("#,0");
             dataGridView.Rows[rowIndex].Cells[38].Value = decimal.Subtract(Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[15].Value)
-                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[37].Value)).ToString("N");
+                                                                           , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[37].Value)).ToString("#,0");
         }
 
         /*************************************************************
@@ -797,7 +780,7 @@ namespace CostAccounting
             }
 
             for (int i = 0; i < columnIndex.Count(); i++)
-                dataGridViewTotal.Rows[0].Cells[columnIndex[i]].Value = total[i].ToString("N");
+                dataGridViewTotal.Rows[0].Cells[columnIndex[i]].Value = total[i].ToString("#,0");
         }
 
         /*************************************************************
@@ -1003,7 +986,7 @@ namespace CostAccounting
         protected void setDataFixedCost()
         {
             for (int columnIdx = 40; columnIdx <= 49; columnIdx++)
-                dataGridViewTotal.Rows[0].Cells[columnIdx].Value = decimal.Zero.ToString("N");
+                dataGridViewTotal.Rows[0].Cells[columnIdx].Value = decimal.Zero.ToString("#,0");
 
             using (var context = new CostAccountingEntities())
             {
@@ -1025,16 +1008,16 @@ namespace CostAccounting
 
                 foreach (var data in targetData.ToList())
                 {
-                    dataGridViewTotal.Rows[0].Cells[40].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[40].Value), data.manufacturing_personnel).ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[41].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[41].Value), data.manufacturing_depreciation).ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[42].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[42].Value), data.manufacturing_rent).ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[43].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[43].Value), data.manufacturing_repair).ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[44].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[44].Value), data.manufacturing_stock).ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[45].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[45].Value), data.manufacturing_other).ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[46].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[46].Value), data.selling_personnel).ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[47].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[47].Value), data.selling_depreciation).ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[48].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[48].Value), data.selling_other).ToString("N");
-                    dataGridViewTotal.Rows[0].Cells[49].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[49].Value), data.operating_expenses).ToString("N");
+                    dataGridViewTotal.Rows[0].Cells[40].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[40].Value), data.manufacturing_personnel).ToString("#,0");
+                    dataGridViewTotal.Rows[0].Cells[41].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[41].Value), data.manufacturing_depreciation).ToString("#,0");
+                    dataGridViewTotal.Rows[0].Cells[42].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[42].Value), data.manufacturing_rent).ToString("#,0");
+                    dataGridViewTotal.Rows[0].Cells[43].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[43].Value), data.manufacturing_repair).ToString("#,0");
+                    dataGridViewTotal.Rows[0].Cells[44].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[44].Value), data.manufacturing_stock).ToString("#,0");
+                    dataGridViewTotal.Rows[0].Cells[45].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[45].Value), data.manufacturing_other).ToString("#,0");
+                    dataGridViewTotal.Rows[0].Cells[46].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[46].Value), data.selling_personnel).ToString("#,0");
+                    dataGridViewTotal.Rows[0].Cells[47].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[47].Value), data.selling_depreciation).ToString("#,0");
+                    dataGridViewTotal.Rows[0].Cells[48].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[48].Value), data.selling_other).ToString("#,0");
+                    dataGridViewTotal.Rows[0].Cells[49].Value = decimal.Add(Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[49].Value), data.operating_expenses).ToString("#,0");
                 }
             }
         }

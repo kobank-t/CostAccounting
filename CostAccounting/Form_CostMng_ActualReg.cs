@@ -110,14 +110,6 @@ namespace CostAccounting
         }
 
         /*************************************************************
-         * データグリッドビュー（合計）のテキストのロストフォーカス時に計算する
-         *************************************************************/
-        private new void dataGridViewTotal_Leave(object sender, EventArgs e)
-        {
-            base.dataGridViewTotal_Leave(sender, e);
-        }
-
-        /*************************************************************
          * 登録ボタン押下時の処理
          *************************************************************/
         private new void btnAppend_Click(object sender, EventArgs e)
@@ -164,7 +156,7 @@ namespace CostAccounting
                         if (supplier_code.Equals(row.Cells["supplier_code"].Value)
                             && product_code.Equals(row.Cells["product_code"].Value))
                         {
-                            row.Cells[targetIndex[targetMonth.Value]].Value = Conversion.Parse(item.SubItems[4].Text).ToString("N");
+                            row.Cells[targetIndex[targetMonth.Value]].Value = Conversion.Parse(item.SubItems[4].Text).ToString("#,0");
                             item.Tag = Const.FLG_ON;
                             break;
                         }
