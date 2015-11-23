@@ -19,28 +19,6 @@ namespace CostAccounting
         }
 
         /*************************************************************
-         * リストビューのヘッダ描画はデフォルトのまま
-         *************************************************************/
-        private void listView_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
-        {
-            e.DrawDefault = true;
-        }
-
-        /*************************************************************
-         * リストビューを縞模様に描画
-         *************************************************************/
-        private void listView_DrawSubItem(object sender, DrawListViewSubItemEventArgs e)
-        {
-            // 奇数行の場合は背景色を変更し、縞々に見えるようにする
-            if (e.ItemIndex % 2 > 0)
-            {
-                e.Graphics.FillRectangle(Brushes.Azure, e.Bounds);
-            }
-            // テキストを忘れずに描画する
-            e.DrawText();
-        }
-
-        /*************************************************************
          * フォームロード時の処理
          *************************************************************/
         private void Form_Print_Product_Load(object sender, EventArgs e)
@@ -83,10 +61,11 @@ namespace CostAccounting
                     item.SubItems.Add(data.supplier_name);
                     item.SubItems.Add(data.product_code);
                     item.SubItems.Add(data.product_name);
+                    item.Checked = true;
                     listView.Items.Add(item);
                 }
 
-                recordCnt.Text = target.Count().ToString("#,0");
+                recordCnt.Text = listView.CheckedItems.Count.ToString("#,0");
             }
         }
 
@@ -119,16 +98,16 @@ namespace CostAccounting
          *************************************************************/
         private void btnOutput_Click(object sender, EventArgs e)
         {
-            if (Program.MessageBoxBefore("出力条件の内容でExcelファイルを出力しますか？") != DialogResult.Yes)
+            if (Program.MessageBoxBefore("出力条件の内容で" + listView.CheckedItems.Count + "件のデータをExcelファイルに出力しますか？") != DialogResult.Yes)
                 return;
 
             progressBar.Minimum = 0;
-            progressBar.Maximum = listView.Items.Count;
+            progressBar.Maximum = listView.CheckedItems.Count;
             progressBar.Value = 0;
             progressBar.Step = 1;
 
             // テンプレートのファイル
-            var template = radioProduct.Checked ? @"\" + Properties.Resources.template_product 
+            var template = radioProduct.Checked ? @"\" + Properties.Resources.template_product
                                                 : @"\" + Properties.Resources.template_blend;
 
             var templateFile = new FileInfo(string.Concat(System.Configuration.ConfigurationManager.AppSettings["templateFolder"], template));
@@ -145,11 +124,11 @@ namespace CostAccounting
                 ExcelWorksheet summarySheet = package.Workbook.Worksheets["summary"];
                 ExcelWorksheet templateSheet = package.Workbook.Worksheets["template"];
 
-                summarySheet.InsertRow(2, listView.Items.Count);
+                summarySheet.InsertRow(2, listView.CheckedItems.Count);
 
-                for (int i = 0; i < listView.Items.Count; i++)
+                for (int i = 0; i < listView.CheckedItems.Count; i++)
                 {
-                    ListViewItem item = listView.Items[i];
+                    ListViewItem item = listView.CheckedItems[i];
                     string supplierCode = item.SubItems[0].Text;
                     string supplierName = item.SubItems[1].Text;
                     string productCode = item.SubItems[2].Text;
@@ -182,7 +161,7 @@ namespace CostAccounting
                     labelStatus.Refresh();
                     labelStatus.Text = string.Format("・・・ ( {0} / {1} )"
                                                      , (i + 1).ToString("#,0")
-                                                     , listView.Items.Count.ToString("#,0"));
+                                                     , listView.CheckedItems.Count.ToString("#,0"));
 
                     progressBar.PerformStep();
                 }
@@ -455,6 +434,43 @@ namespace CostAccounting
                 }
             }
             ws.Calculate();
+        }
+
+        /*************************************************************
+         * チェックボックスの状態を変更する
+         *************************************************************/
+        private void changeCheckBoxState(bool state)
+        {
+            listView.ItemChecked -= new ItemCheckedEventHandler(listView_ItemChecked);
+            foreach (ListViewItem item in listView.Items)
+                item.Checked = state;
+            listView.ItemChecked += new ItemCheckedEventHandler(listView_ItemChecked);
+ 
+            recordCnt.Text = listView.CheckedItems.Count.ToString("#,0");
+        }
+
+        /*************************************************************
+         * リストビューのチェックボックスのチェック状態変更時の処理
+         *************************************************************/
+        private void listView_ItemChecked(object sender, ItemCheckedEventArgs e)
+        {
+            recordCnt.Text = listView.CheckedItems.Count.ToString("#,0");
+        }
+
+        /*************************************************************
+         * リストビューのチェックボックスを全てONにする
+         *************************************************************/
+        private void btnAllCheck_Click(object sender, EventArgs e)
+        {
+            changeCheckBoxState(true);
+        }
+
+        /*************************************************************
+         * リストビューのチェックボックスを全てOFFにする
+         *************************************************************/
+        private void btnAllClear_Click(object sender, EventArgs e)
+        {
+            changeCheckBoxState(false);
         }
     }
 }

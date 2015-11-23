@@ -50,6 +50,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.labelStatus = new System.Windows.Forms.Label();
+            this.btnAllClear = new System.Windows.Forms.Button();
+            this.btnAllCheck = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.category.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -88,6 +90,7 @@
             // 
             // listView
             // 
+            this.listView.CheckBoxes = true;
             this.listView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -96,13 +99,11 @@
             this.listView.GridLines = true;
             this.listView.Location = new System.Drawing.Point(12, 120);
             this.listView.Name = "listView";
-            this.listView.OwnerDraw = true;
             this.listView.Size = new System.Drawing.Size(690, 504);
             this.listView.TabIndex = 6;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
-            this.listView.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.listView_DrawColumnHeader);
-            this.listView.DrawSubItem += new System.Windows.Forms.DrawListViewSubItemEventHandler(this.listView_DrawSubItem);
+            this.listView.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.listView_ItemChecked);
             // 
             // columnHeader1
             // 
@@ -255,11 +256,35 @@
             this.labelStatus.Size = new System.Drawing.Size(0, 15);
             this.labelStatus.TabIndex = 13;
             // 
+            // btnAllClear
+            // 
+            this.btnAllClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAllClear.Location = new System.Drawing.Point(479, 91);
+            this.btnAllClear.Name = "btnAllClear";
+            this.btnAllClear.Size = new System.Drawing.Size(75, 23);
+            this.btnAllClear.TabIndex = 15;
+            this.btnAllClear.Text = "全て外す";
+            this.btnAllClear.UseVisualStyleBackColor = true;
+            this.btnAllClear.Click += new System.EventHandler(this.btnAllClear_Click);
+            // 
+            // btnAllCheck
+            // 
+            this.btnAllCheck.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAllCheck.Location = new System.Drawing.Point(398, 91);
+            this.btnAllCheck.Name = "btnAllCheck";
+            this.btnAllCheck.Size = new System.Drawing.Size(75, 23);
+            this.btnAllCheck.TabIndex = 14;
+            this.btnAllCheck.Text = "全てチェック";
+            this.btnAllCheck.UseVisualStyleBackColor = true;
+            this.btnAllCheck.Click += new System.EventHandler(this.btnAllCheck_Click);
+            // 
             // Form_Print_Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 653);
+            this.Controls.Add(this.btnAllClear);
+            this.Controls.Add(this.btnAllCheck);
             this.Controls.Add(this.labelStatus);
             this.Controls.Add(this.progressBar);
             this.Controls.Add(this.label3);
@@ -312,6 +337,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label labelStatus;
+        private System.Windows.Forms.Button btnAllClear;
+        private System.Windows.Forms.Button btnAllCheck;
 
     }
 }
