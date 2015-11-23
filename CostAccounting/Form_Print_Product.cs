@@ -98,6 +98,12 @@ namespace CostAccounting
          *************************************************************/
         private void btnOutput_Click(object sender, EventArgs e)
         {
+            if (listView.CheckedItems.Count == 0)
+            {
+                Program.MessageBoxError("出力対象のレコードがありません。");
+                return;
+            }
+
             if (Program.MessageBoxBefore("出力条件の内容で" + listView.CheckedItems.Count + "件のデータをExcelファイルに出力しますか？") != DialogResult.Yes)
                 return;
 

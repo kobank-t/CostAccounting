@@ -444,6 +444,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="release\ver1.0.zip" />
+    <None Include="release\ver1.1.1.zip" />
     <None Include="release\ver1.1.zip" />
     <None Include="template\blend.xltx" />
     <None Include="template\compare.xltx" />
