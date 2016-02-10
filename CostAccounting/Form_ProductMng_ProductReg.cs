@@ -1224,9 +1224,9 @@ namespace CostAccounting
          *************************************************************/
         private void calcUtilitiesCost()
         {
-            decimal machineUseTimeB = decimal.Divide(Conversion.Parse((string)dgvMachine.Rows[0].Cells["dgvMachineTime"].Value), 60);
+            decimal machineUseTimeB = decimal.Divide(Conversion.Parse((string)dgvMachine.Rows[1].Cells["dgvMachineTime"].Value), 60);
             decimal machineUseTimeA = decimal.Divide(decimal.Multiply(Conversion.Parse(trayNum.Text)
-                                                     , Conversion.Parse((string)dgvMachine.Rows[1].Cells["dgvMachineTime"].Value)), 60);
+                                                     , Conversion.Parse((string)dgvMachine.Rows[0].Cells["dgvMachineTime"].Value)), 60);
             decimal utilitiesAmountB = decimal.Multiply(machineUseTimeB, Conversion.Parse(fuelAmountPerHourB.Text));
             decimal utilitiesAmountA = decimal.Multiply(machineUseTimeA, Conversion.Parse(fuelAmountPerHourA.Text));
 
