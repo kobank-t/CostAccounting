@@ -1794,5 +1794,21 @@ namespace CostAccounting
             Event.textBox_KeyPress_numeric(sender, e);
         }
 
+        private void preprocessTimeM_KeyDown(object sender, KeyEventArgs e)
+        {
+            //Enterキーが押されているか確認
+            //AltかCtrlキーが押されている時は無視する
+            if ((e.KeyCode == Keys.Enter)
+                && !e.Alt && !e.Control)
+            {
+                //あたかもTabキーが押されたかのようにする
+                //Shiftが押されている時は前のコントロールのフォーカスを移動
+                this.ProcessTabKey(!e.Shift);
+
+                e.Handled = true;
+                //.NET Framework 2.0以降
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }
