@@ -1794,7 +1794,10 @@ namespace CostAccounting
             Event.textBox_KeyPress_numeric(sender, e);
         }
 
-        private void preprocessTimeM_KeyDown(object sender, KeyEventArgs e)
+        /*************************************************************
+         * Enterキー押下にてタブ移動する
+         *************************************************************/
+        private void preprocess_KeyDown(object sender, KeyEventArgs e)
         {
             //Enterキーが押されているか確認
             //AltかCtrlキーが押されている時は無視する

@@ -1135,9 +1135,9 @@
             this.preprocessTimeM.Name = "preprocessTimeM";
             this.tableLayoutPanel4.SetRowSpan(this.preprocessTimeM, 2);
             this.preprocessTimeM.Size = new System.Drawing.Size(76, 46);
-            this.preprocessTimeM.TabIndex = 5;
+            this.preprocessTimeM.TabIndex = 0;
             this.preprocessTimeM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.preprocessTimeM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocessTimeM_KeyDown);
+            this.preprocessTimeM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.preprocessTimeM.Leave += new System.EventHandler(this.control_Leave_calc);
             // 
             // nightTimeM_indirect
@@ -1150,8 +1150,9 @@
             this.nightTimeM_indirect.Multiline = true;
             this.nightTimeM_indirect.Name = "nightTimeM_indirect";
             this.nightTimeM_indirect.Size = new System.Drawing.Size(76, 23);
-            this.nightTimeM_indirect.TabIndex = 5;
+            this.nightTimeM_indirect.TabIndex = 2;
             this.nightTimeM_indirect.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nightTimeM_indirect.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.nightTimeM_indirect.Leave += new System.EventHandler(this.control_Leave_calc);
             // 
             // preprocessTimeF
@@ -1164,8 +1165,9 @@
             this.preprocessTimeF.Multiline = true;
             this.preprocessTimeF.Name = "preprocessTimeF";
             this.preprocessTimeF.Size = new System.Drawing.Size(76, 23);
-            this.preprocessTimeF.TabIndex = 5;
+            this.preprocessTimeF.TabIndex = 1;
             this.preprocessTimeF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.preprocessTimeF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.preprocessTimeF.Leave += new System.EventHandler(this.control_Leave_calc);
             // 
             // nightTimeF
@@ -1178,8 +1180,9 @@
             this.nightTimeF.Multiline = true;
             this.nightTimeF.Name = "nightTimeF";
             this.nightTimeF.Size = new System.Drawing.Size(76, 23);
-            this.nightTimeF.TabIndex = 5;
+            this.nightTimeF.TabIndex = 3;
             this.nightTimeF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nightTimeF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.nightTimeF.Leave += new System.EventHandler(this.control_Leave_calc);
             // 
             // dryTimeM
@@ -1193,8 +1196,9 @@
             this.dryTimeM.Name = "dryTimeM";
             this.tableLayoutPanel4.SetRowSpan(this.dryTimeM, 2);
             this.dryTimeM.Size = new System.Drawing.Size(76, 46);
-            this.dryTimeM.TabIndex = 5;
+            this.dryTimeM.TabIndex = 4;
             this.dryTimeM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.dryTimeM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.dryTimeM.Leave += new System.EventHandler(this.control_Leave_calc);
             // 
             // dryTimeF
@@ -1209,6 +1213,7 @@
             this.dryTimeF.Size = new System.Drawing.Size(76, 23);
             this.dryTimeF.TabIndex = 5;
             this.dryTimeF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.dryTimeF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.dryTimeF.Leave += new System.EventHandler(this.control_Leave_calc);
             // 
             // selectionTimeF
@@ -1221,8 +1226,9 @@
             this.selectionTimeF.Multiline = true;
             this.selectionTimeF.Name = "selectionTimeF";
             this.selectionTimeF.Size = new System.Drawing.Size(76, 23);
-            this.selectionTimeF.TabIndex = 5;
+            this.selectionTimeF.TabIndex = 7;
             this.selectionTimeF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selectionTimeF.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selectionTimeF.Leave += new System.EventHandler(this.control_Leave_calc);
             // 
             // nightTimeM_direct
@@ -1472,8 +1478,9 @@
             this.selectionTimeM.Name = "selectionTimeM";
             this.tableLayoutPanel4.SetRowSpan(this.selectionTimeM, 2);
             this.selectionTimeM.Size = new System.Drawing.Size(76, 46);
-            this.selectionTimeM.TabIndex = 5;
+            this.selectionTimeM.TabIndex = 6;
             this.selectionTimeM.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selectionTimeM.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selectionTimeM.Leave += new System.EventHandler(this.control_Leave_calc);
             // 
             // tabPage4

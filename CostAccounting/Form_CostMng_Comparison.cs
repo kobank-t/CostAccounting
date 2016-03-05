@@ -381,9 +381,12 @@ namespace CostAccounting
                     target.CheckedChanged += new EventHandler(checkBox_CheckedChanged);
 
                     int index = monthDic.First(x => x.Value.Equals(target.Text)).Key;
-                    dataGridViewHeader.Columns[index].Visible = state;
-                    dataGridView.Columns[index].Visible = state;
-                    dataGridViewTotal.Columns[index].Visible = state;
+                    for (int offset = 0; offset < 2; offset++)
+                    {
+                        dataGridViewHeader.Columns[index + offset].Visible = state;
+                        dataGridView.Columns[index + offset].Visible = state;
+                        dataGridViewTotal.Columns[index + offset].Visible = state;
+                    }
                 }
             }
 
