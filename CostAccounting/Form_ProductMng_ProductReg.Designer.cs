@@ -28,52 +28,52 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle46 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle139 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle140 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle141 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle142 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle143 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle144 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle145 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle146 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle147 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle148 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle149 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle150 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle151 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle152 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle153 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle154 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle155 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle156 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle157 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle158 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle159 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle160 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle161 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle162 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle163 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle164 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle165 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle166 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle167 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle168 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle169 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle170 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle171 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle172 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle173 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle174 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle175 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle176 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle177 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle178 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle179 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle180 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle181 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle182 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle183 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle184 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgvMaterialCostTotal = new System.Windows.Forms.DataGridView();
@@ -451,8 +451,8 @@
             this.dgvMaterialCostTotal.AllowUserToDeleteRows = false;
             this.dgvMaterialCostTotal.AllowUserToResizeColumns = false;
             this.dgvMaterialCostTotal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvMaterialCostTotal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle139.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvMaterialCostTotal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle139;
             this.dgvMaterialCostTotal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMaterialCostTotal.ColumnHeadersVisible = false;
             this.dgvMaterialCostTotal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -466,9 +466,9 @@
             this.dgvMaterialCostTotal.MultiSelect = false;
             this.dgvMaterialCostTotal.Name = "dgvMaterialCostTotal";
             this.dgvMaterialCostTotal.ReadOnly = true;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvMaterialCostTotal.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle140.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle140.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvMaterialCostTotal.RowsDefaultCellStyle = dataGridViewCellStyle140;
             this.dgvMaterialCostTotal.RowTemplate.Height = 21;
             this.dgvMaterialCostTotal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMaterialCostTotal.Size = new System.Drawing.Size(802, 24);
@@ -546,8 +546,8 @@
             // 
             // dgvMaterialCostName
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvMaterialCostName.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle141.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvMaterialCostName.DefaultCellStyle = dataGridViewCellStyle141;
             this.dgvMaterialCostName.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.dgvMaterialCostName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dgvMaterialCostName.HeaderText = "原料名";
@@ -558,9 +558,9 @@
             // 
             // dgvMaterialCostBtn
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.NullValue = "検索";
-            this.dgvMaterialCostBtn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle142.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle142.NullValue = "検索";
+            this.dgvMaterialCostBtn.DefaultCellStyle = dataGridViewCellStyle142;
             this.dgvMaterialCostBtn.HeaderText = "";
             this.dgvMaterialCostBtn.Name = "dgvMaterialCostBtn";
             this.dgvMaterialCostBtn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -569,16 +569,16 @@
             // 
             // dgvMaterialCostQuantity
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvMaterialCostQuantity.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle143.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvMaterialCostQuantity.DefaultCellStyle = dataGridViewCellStyle143;
             this.dgvMaterialCostQuantity.HeaderText = "予定数量";
             this.dgvMaterialCostQuantity.Name = "dgvMaterialCostQuantity";
             this.dgvMaterialCostQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dgvMaterialCostPrice
             // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvMaterialCostPrice.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle144.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvMaterialCostPrice.DefaultCellStyle = dataGridViewCellStyle144;
             this.dgvMaterialCostPrice.HeaderText = "原価(税抜)";
             this.dgvMaterialCostPrice.Name = "dgvMaterialCostPrice";
             this.dgvMaterialCostPrice.ReadOnly = true;
@@ -586,8 +586,8 @@
             // 
             // dgvMaterialCostAmount
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvMaterialCostAmount.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle145.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvMaterialCostAmount.DefaultCellStyle = dataGridViewCellStyle145;
             this.dgvMaterialCostAmount.HeaderText = "金額";
             this.dgvMaterialCostAmount.Name = "dgvMaterialCostAmount";
             this.dgvMaterialCostAmount.ReadOnly = true;
@@ -595,8 +595,8 @@
             // 
             // dgvMaterialCostKgPerAmount
             // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvMaterialCostKgPerAmount.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle146.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvMaterialCostKgPerAmount.DefaultCellStyle = dataGridViewCellStyle146;
             this.dgvMaterialCostKgPerAmount.HeaderText = "kg当り金額";
             this.dgvMaterialCostKgPerAmount.Name = "dgvMaterialCostKgPerAmount";
             this.dgvMaterialCostKgPerAmount.ReadOnly = true;
@@ -604,8 +604,8 @@
             // 
             // dgvMaterialCostRatio
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvMaterialCostRatio.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle147.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvMaterialCostRatio.DefaultCellStyle = dataGridViewCellStyle147;
             this.dgvMaterialCostRatio.HeaderText = "構成比";
             this.dgvMaterialCostRatio.Name = "dgvMaterialCostRatio";
             this.dgvMaterialCostRatio.ReadOnly = true;
@@ -631,8 +631,8 @@
             this.dgvContractorsTotal.AllowUserToDeleteRows = false;
             this.dgvContractorsTotal.AllowUserToResizeColumns = false;
             this.dgvContractorsTotal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvContractorsTotal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle148.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvContractorsTotal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle148;
             this.dgvContractorsTotal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvContractorsTotal.ColumnHeadersVisible = false;
             this.dgvContractorsTotal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -646,9 +646,9 @@
             this.dgvContractorsTotal.MultiSelect = false;
             this.dgvContractorsTotal.Name = "dgvContractorsTotal";
             this.dgvContractorsTotal.ReadOnly = true;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvContractorsTotal.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle149.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle149.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvContractorsTotal.RowsDefaultCellStyle = dataGridViewCellStyle149;
             this.dgvContractorsTotal.RowTemplate.Height = 21;
             this.dgvContractorsTotal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvContractorsTotal.Size = new System.Drawing.Size(802, 24);
@@ -723,8 +723,8 @@
             // 
             // dgvContractorsName
             // 
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvContractorsName.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle150.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvContractorsName.DefaultCellStyle = dataGridViewCellStyle150;
             this.dgvContractorsName.HeaderText = "委託先・委託作業など";
             this.dgvContractorsName.Name = "dgvContractorsName";
             this.dgvContractorsName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -732,24 +732,24 @@
             // 
             // dgvContractorsQuantity
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvContractorsQuantity.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle151.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvContractorsQuantity.DefaultCellStyle = dataGridViewCellStyle151;
             this.dgvContractorsQuantity.HeaderText = "予定数量";
             this.dgvContractorsQuantity.Name = "dgvContractorsQuantity";
             this.dgvContractorsQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dgvContractorsCost
             // 
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvContractorsCost.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle152.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvContractorsCost.DefaultCellStyle = dataGridViewCellStyle152;
             this.dgvContractorsCost.HeaderText = "予定単価";
             this.dgvContractorsCost.Name = "dgvContractorsCost";
             this.dgvContractorsCost.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // dgvContractorsAmount
             // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvContractorsAmount.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle153.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvContractorsAmount.DefaultCellStyle = dataGridViewCellStyle153;
             this.dgvContractorsAmount.HeaderText = "金額";
             this.dgvContractorsAmount.Name = "dgvContractorsAmount";
             this.dgvContractorsAmount.ReadOnly = true;
@@ -757,8 +757,8 @@
             // 
             // dgvContractorsKgPerAmount
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvContractorsKgPerAmount.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle154.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvContractorsKgPerAmount.DefaultCellStyle = dataGridViewCellStyle154;
             this.dgvContractorsKgPerAmount.HeaderText = "kg当り金額";
             this.dgvContractorsKgPerAmount.Name = "dgvContractorsKgPerAmount";
             this.dgvContractorsKgPerAmount.ReadOnly = true;
@@ -766,8 +766,8 @@
             // 
             // dgvContractorsRatio
             // 
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvContractorsRatio.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle155.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvContractorsRatio.DefaultCellStyle = dataGridViewCellStyle155;
             this.dgvContractorsRatio.HeaderText = "構成比";
             this.dgvContractorsRatio.Name = "dgvContractorsRatio";
             this.dgvContractorsRatio.ReadOnly = true;
@@ -1526,8 +1526,8 @@
             this.dgvMaterialsFareTotal.AllowUserToDeleteRows = false;
             this.dgvMaterialsFareTotal.AllowUserToResizeColumns = false;
             this.dgvMaterialsFareTotal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvMaterialsFareTotal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle156.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvMaterialsFareTotal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle156;
             this.dgvMaterialsFareTotal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMaterialsFareTotal.ColumnHeadersVisible = false;
             this.dgvMaterialsFareTotal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1540,9 +1540,9 @@
             this.dgvMaterialsFareTotal.MultiSelect = false;
             this.dgvMaterialsFareTotal.Name = "dgvMaterialsFareTotal";
             this.dgvMaterialsFareTotal.ReadOnly = true;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvMaterialsFareTotal.RowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle157.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle157.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvMaterialsFareTotal.RowsDefaultCellStyle = dataGridViewCellStyle157;
             this.dgvMaterialsFareTotal.RowTemplate.Height = 21;
             this.dgvMaterialsFareTotal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMaterialsFareTotal.Size = new System.Drawing.Size(761, 24);
@@ -1613,8 +1613,8 @@
             // 
             // dgvMaterialsFareName
             // 
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvMaterialsFareName.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle158.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvMaterialsFareName.DefaultCellStyle = dataGridViewCellStyle158;
             this.dgvMaterialsFareName.HeaderText = "原料";
             this.dgvMaterialsFareName.Name = "dgvMaterialsFareName";
             this.dgvMaterialsFareName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1622,9 +1622,9 @@
             // 
             // dgvMaterialsFareQuantity
             // 
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle21.NullValue = null;
-            this.dgvMaterialsFareQuantity.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle159.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle159.NullValue = null;
+            this.dgvMaterialsFareQuantity.DefaultCellStyle = dataGridViewCellStyle159;
             this.dgvMaterialsFareQuantity.HeaderText = "数量";
             this.dgvMaterialsFareQuantity.Name = "dgvMaterialsFareQuantity";
             this.dgvMaterialsFareQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1632,9 +1632,9 @@
             // 
             // dgvMaterialsFareCost
             // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle22.NullValue = null;
-            this.dgvMaterialsFareCost.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle160.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle160.NullValue = null;
+            this.dgvMaterialsFareCost.DefaultCellStyle = dataGridViewCellStyle160;
             this.dgvMaterialsFareCost.HeaderText = "単価";
             this.dgvMaterialsFareCost.Name = "dgvMaterialsFareCost";
             this.dgvMaterialsFareCost.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1642,9 +1642,9 @@
             // 
             // dgvMaterialsFareAmount
             // 
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle23.NullValue = null;
-            this.dgvMaterialsFareAmount.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle161.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle161.NullValue = null;
+            this.dgvMaterialsFareAmount.DefaultCellStyle = dataGridViewCellStyle161;
             this.dgvMaterialsFareAmount.HeaderText = "金額";
             this.dgvMaterialsFareAmount.Name = "dgvMaterialsFareAmount";
             this.dgvMaterialsFareAmount.ReadOnly = true;
@@ -1653,8 +1653,8 @@
             // 
             // dgvMaterialsFareKgPerAmount
             // 
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvMaterialsFareKgPerAmount.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle162.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvMaterialsFareKgPerAmount.DefaultCellStyle = dataGridViewCellStyle162;
             this.dgvMaterialsFareKgPerAmount.HeaderText = "kg当り金額";
             this.dgvMaterialsFareKgPerAmount.Name = "dgvMaterialsFareKgPerAmount";
             this.dgvMaterialsFareKgPerAmount.ReadOnly = true;
@@ -1680,8 +1680,8 @@
             this.dgvPackingTotal.AllowUserToDeleteRows = false;
             this.dgvPackingTotal.AllowUserToResizeColumns = false;
             this.dgvPackingTotal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvPackingTotal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle163.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvPackingTotal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle163;
             this.dgvPackingTotal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPackingTotal.ColumnHeadersVisible = false;
             this.dgvPackingTotal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1694,9 +1694,9 @@
             this.dgvPackingTotal.MultiSelect = false;
             this.dgvPackingTotal.Name = "dgvPackingTotal";
             this.dgvPackingTotal.ReadOnly = true;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPackingTotal.RowsDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle164.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle164.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPackingTotal.RowsDefaultCellStyle = dataGridViewCellStyle164;
             this.dgvPackingTotal.RowTemplate.Height = 21;
             this.dgvPackingTotal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPackingTotal.Size = new System.Drawing.Size(761, 24);
@@ -1769,8 +1769,8 @@
             // 
             // dgvPackingName
             // 
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvPackingName.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle165.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvPackingName.DefaultCellStyle = dataGridViewCellStyle165;
             this.dgvPackingName.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.dgvPackingName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dgvPackingName.HeaderText = "資材";
@@ -1781,9 +1781,9 @@
             // 
             // dgvPackingBtn
             // 
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle28.NullValue = "検索";
-            this.dgvPackingBtn.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle166.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle166.NullValue = "検索";
+            this.dgvPackingBtn.DefaultCellStyle = dataGridViewCellStyle166;
             this.dgvPackingBtn.HeaderText = "";
             this.dgvPackingBtn.Name = "dgvPackingBtn";
             this.dgvPackingBtn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -1792,8 +1792,8 @@
             // 
             // dgvPackingQuantity
             // 
-            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvPackingQuantity.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle167.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvPackingQuantity.DefaultCellStyle = dataGridViewCellStyle167;
             this.dgvPackingQuantity.HeaderText = "数量";
             this.dgvPackingQuantity.Name = "dgvPackingQuantity";
             this.dgvPackingQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1801,8 +1801,8 @@
             // 
             // dgvPackingCost
             // 
-            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPackingCost.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle168.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPackingCost.DefaultCellStyle = dataGridViewCellStyle168;
             this.dgvPackingCost.HeaderText = "単価";
             this.dgvPackingCost.Name = "dgvPackingCost";
             this.dgvPackingCost.ReadOnly = true;
@@ -1811,8 +1811,8 @@
             // 
             // dgvPackingAmount
             // 
-            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPackingAmount.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle169.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPackingAmount.DefaultCellStyle = dataGridViewCellStyle169;
             this.dgvPackingAmount.HeaderText = "金額";
             this.dgvPackingAmount.Name = "dgvPackingAmount";
             this.dgvPackingAmount.ReadOnly = true;
@@ -1821,8 +1821,8 @@
             // 
             // dgvPackingKgPerAmount
             // 
-            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPackingKgPerAmount.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle170.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPackingKgPerAmount.DefaultCellStyle = dataGridViewCellStyle170;
             this.dgvPackingKgPerAmount.HeaderText = "kg当り金額";
             this.dgvPackingKgPerAmount.Name = "dgvPackingKgPerAmount";
             this.dgvPackingKgPerAmount.ReadOnly = true;
@@ -1868,8 +1868,8 @@
             this.dgvMachineTotal.AllowUserToDeleteRows = false;
             this.dgvMachineTotal.AllowUserToResizeColumns = false;
             this.dgvMachineTotal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvMachineTotal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle171.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvMachineTotal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle171;
             this.dgvMachineTotal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMachineTotal.ColumnHeadersVisible = false;
             this.dgvMachineTotal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -1882,9 +1882,9 @@
             this.dgvMachineTotal.MultiSelect = false;
             this.dgvMachineTotal.Name = "dgvMachineTotal";
             this.dgvMachineTotal.ReadOnly = true;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvMachineTotal.RowsDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle172.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle172.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvMachineTotal.RowsDefaultCellStyle = dataGridViewCellStyle172;
             this.dgvMachineTotal.RowTemplate.Height = 21;
             this.dgvMachineTotal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMachineTotal.Size = new System.Drawing.Size(761, 24);
@@ -1956,8 +1956,8 @@
             // 
             // dgvMachineName
             // 
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvMachineName.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle173.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvMachineName.DefaultCellStyle = dataGridViewCellStyle173;
             this.dgvMachineName.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.dgvMachineName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dgvMachineName.HeaderText = "設備名";
@@ -1968,8 +1968,8 @@
             // 
             // dgvMachineTime
             // 
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvMachineTime.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle174.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvMachineTime.DefaultCellStyle = dataGridViewCellStyle174;
             this.dgvMachineTime.HeaderText = "使用時間";
             this.dgvMachineTime.Name = "dgvMachineTime";
             this.dgvMachineTime.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -1977,8 +1977,8 @@
             // 
             // dgvMachineRate
             // 
-            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvMachineRate.DefaultCellStyle = dataGridViewCellStyle37;
+            dataGridViewCellStyle175.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvMachineRate.DefaultCellStyle = dataGridViewCellStyle175;
             this.dgvMachineRate.HeaderText = "レート";
             this.dgvMachineRate.Name = "dgvMachineRate";
             this.dgvMachineRate.ReadOnly = true;
@@ -1987,8 +1987,8 @@
             // 
             // dgvMachineAmount
             // 
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvMachineAmount.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridViewCellStyle176.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvMachineAmount.DefaultCellStyle = dataGridViewCellStyle176;
             this.dgvMachineAmount.HeaderText = "金額";
             this.dgvMachineAmount.Name = "dgvMachineAmount";
             this.dgvMachineAmount.ReadOnly = true;
@@ -1997,8 +1997,8 @@
             // 
             // dgvMachineKgPerAmount
             // 
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvMachineKgPerAmount.DefaultCellStyle = dataGridViewCellStyle39;
+            dataGridViewCellStyle177.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvMachineKgPerAmount.DefaultCellStyle = dataGridViewCellStyle177;
             this.dgvMachineKgPerAmount.HeaderText = "kg当り金額";
             this.dgvMachineKgPerAmount.Name = "dgvMachineKgPerAmount";
             this.dgvMachineKgPerAmount.ReadOnly = true;
@@ -2737,8 +2737,8 @@
             this.dgvPackingFareTotal.AllowUserToDeleteRows = false;
             this.dgvPackingFareTotal.AllowUserToResizeColumns = false;
             this.dgvPackingFareTotal.AllowUserToResizeRows = false;
-            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvPackingFareTotal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle40;
+            dataGridViewCellStyle178.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvPackingFareTotal.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle178;
             this.dgvPackingFareTotal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPackingFareTotal.ColumnHeadersVisible = false;
             this.dgvPackingFareTotal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -2751,9 +2751,9 @@
             this.dgvPackingFareTotal.MultiSelect = false;
             this.dgvPackingFareTotal.Name = "dgvPackingFareTotal";
             this.dgvPackingFareTotal.ReadOnly = true;
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgvPackingFareTotal.RowsDefaultCellStyle = dataGridViewCellStyle41;
+            dataGridViewCellStyle179.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle179.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgvPackingFareTotal.RowsDefaultCellStyle = dataGridViewCellStyle179;
             this.dgvPackingFareTotal.RowTemplate.Height = 21;
             this.dgvPackingFareTotal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPackingFareTotal.Size = new System.Drawing.Size(761, 24);
@@ -2825,8 +2825,8 @@
             // 
             // dgvPackingFareName
             // 
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvPackingFareName.DefaultCellStyle = dataGridViewCellStyle42;
+            dataGridViewCellStyle180.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvPackingFareName.DefaultCellStyle = dataGridViewCellStyle180;
             this.dgvPackingFareName.DisplayStyle = System.Windows.Forms.DataGridViewComboBoxDisplayStyle.ComboBox;
             this.dgvPackingFareName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dgvPackingFareName.HeaderText = "配送会社";
@@ -2837,8 +2837,8 @@
             // 
             // dgvPackingFareQuantity
             // 
-            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvPackingFareQuantity.DefaultCellStyle = dataGridViewCellStyle43;
+            dataGridViewCellStyle181.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvPackingFareQuantity.DefaultCellStyle = dataGridViewCellStyle181;
             this.dgvPackingFareQuantity.HeaderText = "数量";
             this.dgvPackingFareQuantity.Name = "dgvPackingFareQuantity";
             this.dgvPackingFareQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -2846,8 +2846,8 @@
             // 
             // dgvPackingFareCost
             // 
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPackingFareCost.DefaultCellStyle = dataGridViewCellStyle44;
+            dataGridViewCellStyle182.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPackingFareCost.DefaultCellStyle = dataGridViewCellStyle182;
             this.dgvPackingFareCost.HeaderText = "単価";
             this.dgvPackingFareCost.Name = "dgvPackingFareCost";
             this.dgvPackingFareCost.ReadOnly = true;
@@ -2856,8 +2856,8 @@
             // 
             // dgvPackingFareAmount
             // 
-            dataGridViewCellStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPackingFareAmount.DefaultCellStyle = dataGridViewCellStyle45;
+            dataGridViewCellStyle183.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPackingFareAmount.DefaultCellStyle = dataGridViewCellStyle183;
             this.dgvPackingFareAmount.HeaderText = "金額";
             this.dgvPackingFareAmount.Name = "dgvPackingFareAmount";
             this.dgvPackingFareAmount.ReadOnly = true;
@@ -2866,8 +2866,8 @@
             // 
             // dgvPackingFareKgPerAmount
             // 
-            dataGridViewCellStyle46.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvPackingFareKgPerAmount.DefaultCellStyle = dataGridViewCellStyle46;
+            dataGridViewCellStyle184.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvPackingFareKgPerAmount.DefaultCellStyle = dataGridViewCellStyle184;
             this.dgvPackingFareKgPerAmount.HeaderText = "kg当り金額";
             this.dgvPackingFareKgPerAmount.Name = "dgvPackingFareKgPerAmount";
             this.dgvPackingFareKgPerAmount.ReadOnly = true;
@@ -4565,6 +4565,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(855, 813);
             this.Controls.Add(this.category);
             this.Controls.Add(this.packing);
@@ -4598,7 +4599,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("Meiryo UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "Form_ProductMng_ProductReg";
