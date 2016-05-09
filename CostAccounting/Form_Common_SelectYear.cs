@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using System.Data.SQLite;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Data.Entity.Validation;
 
 namespace CostAccounting
 {
@@ -105,7 +106,6 @@ namespace CostAccounting
                     target.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
                     target.First().update_date = DateTime.Now;
                 }
-
                 context.SaveChanges();
             }
 

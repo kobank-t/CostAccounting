@@ -16,6 +16,7 @@ namespace CostAccounting
     {
         public int year { get; set; }
         public string product_code { get; set; }
+        public string supplier_code { get; set; }
         public int category { get; set; }
         public int no { get; set; }
         public string code { get; set; }

@@ -451,6 +451,23 @@ namespace CostAccounting
                     updateTime.Text = String.Empty;
                     updatePC.Text = String.Empty;
                 }
+
+                // 製造経費－荷造運賃データ
+                dgvPackingFare.Rows.Clear();
+                List<ProductPackingFare> packingFare = (from t in context.ProductPackingFare
+                                                        where t.year.Equals(Const.TARGET_YEAR)
+                                                           && t.product_code.Equals(productCode.Text)
+                                                           && t.supplier_code.Equals(suppllierCode.Text)
+                                                           && t.category.Equals(category)
+                                                        orderby t.no
+                                                        select t).ToList();
+                dgvPackingFare.RowCount = packingFare.Count() + 1;
+                for (int i = 0; i < packingFare.Count(); i++)
+                {
+                    dgvPackingFare.Rows[i].Cells["dgvPackingFareName"].Value = packingFare[i].code;
+                    dgvPackingFare.Rows[i].Cells["dgvPackingFareQuantity"].Value = packingFare[i].quantity.ToString();
+                    dgvPackingFare.Rows[i].Cells["dgvPackingFareCost"].Value = DataTableSupport.getPrice((DataTable)dgvPackingFareName.DataSource, packingFare[i].code).ToString("N");
+                }
             }
         }
 
@@ -565,6 +582,7 @@ namespace CostAccounting
                         dgvMachine.Rows[i].Cells["dgvMachineRate"].Value = DataTableSupport.getPrice((DataTable)dgvMachineName.DataSource, machine[i].code).ToString("N");
                     }
 
+                    /** 2016.4.30 荷造運賃は取引先単位に登録できるように修正を行う。 start----                      
                     // 製造経費－荷造運賃データ
                     List<ProductPackingFare> packingFare = (from t in context.ProductPackingFare
                                                             where t.year.Equals(Const.TARGET_YEAR)
@@ -579,6 +597,8 @@ namespace CostAccounting
                         dgvPackingFare.Rows[i].Cells["dgvPackingFareQuantity"].Value = packingFare[i].quantity.ToString();
                         dgvPackingFare.Rows[i].Cells["dgvPackingFareCost"].Value = DataTableSupport.getPrice((DataTable)dgvPackingFareName.DataSource, packingFare[i].code).ToString("N");
                     }
+                    ----end */
+
                 }
                 else
                 {
@@ -1371,6 +1391,9 @@ namespace CostAccounting
             setSupplierData();
             setOperationKbn();
 
+            // 念のため各種計算を行う
+            calcAll();
+
             Logger.Info(Message.INF003, new string[] { this.Text, Message.create(productCode, suppllierCode) + radioText });
             Program.MessageBoxAfter("登録しました。");
         }
@@ -1407,6 +1430,9 @@ namespace CostAccounting
 
             setSupplierData();
             setOperationKbn();
+
+            // 念のため各種計算を行う
+            calcAll();
 
             Logger.Info(Message.INF004, new string[] { this.Text, Message.create(productCode, suppllierCode) + radioText });
             Program.MessageBoxAfter("修正しました。");
@@ -1472,6 +1498,30 @@ namespace CostAccounting
                 del_flg = Const.FLG_OFF
             };
             context.ProductSupplier.Add(entitySupplier);
+
+            // 荷造運賃
+            int no = 0;
+            foreach (DataGridViewRow row in dgvPackingFare.Rows)
+            {
+                string code = (string)row.Cells["dgvPackingFareName"].Value;
+                if (!String.IsNullOrEmpty(code))
+                {
+                    var entity = new ProductPackingFare()
+                    {
+                        year = Const.TARGET_YEAR,
+                        product_code = productCode.Text,
+                        supplier_code = suppllierCode.Text,
+                        category = category,
+                        no = no++,
+                        code = code,
+                        quantity = Conversion.Parse((string)row.Cells["dgvPackingFareQuantity"].Value),
+                        update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
+                        update_date = DateTime.Now,
+                        del_flg = Const.FLG_OFF
+                    };
+                    context.ProductPackingFare.Add(entity);
+                }
+            }
         }
 
         /*************************************************************
@@ -1495,6 +1545,40 @@ namespace CostAccounting
                 target.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
                 target.First().update_date = DateTime.Now;
             }
+
+            // 荷造運賃データは、削除→登録により修正とみなす。
+            // 削除
+            var packingFare = from t in context.ProductPackingFare
+                              where t.year.Equals(Const.TARGET_YEAR)
+                                 && t.product_code.Equals(productCode.Text)
+                                 && t.supplier_code.Equals(suppllierCode.Text)
+                                 && t.category.Equals(category)
+                              select t;
+            context.ProductPackingFare.RemoveRange(packingFare);
+
+            // 登録
+            int no = 0;
+            foreach (DataGridViewRow row in dgvPackingFare.Rows)
+            {
+                string code = (string)row.Cells["dgvPackingFareName"].Value;
+                if (!String.IsNullOrEmpty(code))
+                {
+                    var entity = new ProductPackingFare()
+                    {
+                        year = Const.TARGET_YEAR,
+                        product_code = productCode.Text,
+                        supplier_code = suppllierCode.Text,
+                        category = category,
+                        no = no++,
+                        code = code,
+                        quantity = Conversion.Parse((string)row.Cells["dgvPackingFareQuantity"].Value),
+                        update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
+                        update_date = DateTime.Now,
+                        del_flg = Const.FLG_OFF
+                    };
+                    context.ProductPackingFare.Add(entity);
+                }
+            }
         }
 
         /*************************************************************
@@ -1513,6 +1597,16 @@ namespace CostAccounting
                          select t;
 
             context.ProductSupplier.RemoveRange(target);
+
+
+            // 製造経費－荷造運賃データ
+            var packingFare = from t in context.ProductPackingFare
+                              where t.year.Equals(Const.TARGET_YEAR)
+                                 && t.product_code.Equals(productCode.Text)
+                                 && t.supplier_code.Equals(suppllierCode.Text)
+                                 && t.category.Equals(category)
+                              select t;
+            context.ProductPackingFare.RemoveRange(packingFare);
         }
 
         /*************************************************************
@@ -1681,6 +1775,7 @@ namespace CostAccounting
                 }
             }
 
+            /** 2016.4.30 荷造運賃は取引先単位に登録できるように修正を行う。 start----
             // 荷造運賃
             no = 0;
             foreach (DataGridViewRow row in dgvPackingFare.Rows)
@@ -1692,6 +1787,7 @@ namespace CostAccounting
                     {
                         year = Const.TARGET_YEAR,
                         product_code = productCode.Text,
+                        supplier_code = suppllierCode.Text,
                         category = category,
                         no = no++,
                         code = code,
@@ -1703,6 +1799,7 @@ namespace CostAccounting
                     context.ProductPackingFare.Add(entity);
                 }
             }
+            ----end */
         }
 
         /*************************************************************
@@ -1777,13 +1874,16 @@ namespace CostAccounting
                           select t;
             context.ProductMachine.RemoveRange(machine);
 
+            /** 2016.4.30 荷造運賃は取引先単位に登録できるように修正を行う。 start----
             // 製造経費－荷造運賃データ
             var packingFare = from t in context.ProductPackingFare
                               where t.year.Equals(Const.TARGET_YEAR)
                                  && t.product_code.Equals(productCode.Text)
+                                 && t.supplier_code.Equals(suppllierCode.Text)
                                  && t.category.Equals(category)
                               select t;
             context.ProductPackingFare.RemoveRange(packingFare);
+            ----end */
         }
 
         /*************************************************************

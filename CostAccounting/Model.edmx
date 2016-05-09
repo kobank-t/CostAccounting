@@ -24,7 +24,7 @@
           <Property Name="selling_depreciation" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="selling_other" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="operating_expenses" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -34,7 +34,7 @@
           </Key>
           <Property Name="ymd" Type="char" MaxLength="8" Nullable="false" />
           <Property Name="size" Type="integer" Nullable="false" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Divergence">
@@ -60,7 +60,7 @@
           <Property Name="utilitiesCost_costing" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="otherCost_costing" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="packingFare_costing" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -75,7 +75,7 @@
           <Property Name="price_budget" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="price_actual" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="note" Type="nvarchar" MaxLength="50" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -88,7 +88,7 @@
           <Property Name="year" Type="int" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="note" Type="nvarchar" MaxLength="50" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -103,7 +103,7 @@
           <Property Name="rate_budget" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="rate_actual" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="note" Type="nvarchar" MaxLength="50" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -118,7 +118,7 @@
           <Property Name="price_budget" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="price_actual" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="note" Type="nvarchar" MaxLength="50" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -143,7 +143,7 @@
           <Property Name="rate_expend" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="rate_loss" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="tray_num" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -187,7 +187,7 @@
           <Property Name="selection_time_m" Type="decimal" Precision="10" Scale="0" Nullable="false" />
           <Property Name="selection_time_f" Type="decimal" Precision="10" Scale="0" Nullable="false" />
           <Property Name="tray_num" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -204,7 +204,7 @@
           <Property Name="no" Type="int" Nullable="false" />
           <Property Name="code" Type="char" MaxLength="6" Nullable="false" />
           <Property Name="blend_rate" Type="decimal" Precision="5" Scale="2" Nullable="false" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -219,7 +219,7 @@
           <Property Name="unit" Type="varchar" MaxLength="10" />
           <Property Name="note" Type="nvarchar" MaxLength="50" />
           <Property Name="kbn" Type="nvarchar" MaxLength="10" Nullable="false" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -237,7 +237,7 @@
           <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="quantity" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="cost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -254,7 +254,7 @@
           <Property Name="no" Type="int" Nullable="false" />
           <Property Name="code" Type="char" MaxLength="1" Nullable="false" />
           <Property Name="time" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -271,7 +271,7 @@
           <Property Name="no" Type="int" Nullable="false" />
           <Property Name="code" Type="char" MaxLength="6" Nullable="false" />
           <Property Name="quantity" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -289,7 +289,7 @@
           <Property Name="name" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="quantity" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="cost" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -306,7 +306,7 @@
           <Property Name="no" Type="int" Nullable="false" />
           <Property Name="code" Type="char" MaxLength="6" Nullable="false" />
           <Property Name="quantity" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -314,11 +314,13 @@
           <Key>
             <PropertyRef Name="year" />
             <PropertyRef Name="product_code" />
+            <PropertyRef Name="supplier_code" />
             <PropertyRef Name="category" />
             <PropertyRef Name="no" />
           </Key>
           <Property Name="year" Type="int" Nullable="false" />
           <Property Name="product_code" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="supplier_code" Type="char" MaxLength="6" Nullable="false" />
           <Property Name="category" Type="int" Nullable="false" />
           <Property Name="no" Type="int" Nullable="false" />
           <Property Name="code" Type="char" MaxLength="5" Nullable="false" />
@@ -353,7 +355,7 @@
           <Property Name="month_10" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="month_11" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="month_12" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -368,7 +370,7 @@
           <Property Name="price_budget" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="price_actual" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="note" Type="nvarchar" MaxLength="50" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -381,7 +383,7 @@
           <Property Name="year" Type="int" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="note" Type="nvarchar" MaxLength="50" />
-          <Property Name="update_user" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="update_user" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="update_date" Type="datetime" Nullable="false" />
           <Property Name="del_flg" Type="char" MaxLength="1" Nullable="false" />
         </EntityType>
@@ -452,7 +454,7 @@
           <Property Name="selling_depreciation" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="selling_other" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="operating_expenses" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -462,7 +464,7 @@
           </Key>
           <Property Name="ymd" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
           <Property Name="size" Type="Int64" Nullable="false" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
         </EntityType>
         <EntityType Name="Divergence">
@@ -488,7 +490,7 @@
           <Property Name="utilitiesCost_costing" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="otherCost_costing" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="packingFare_costing" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -503,7 +505,7 @@
           <Property Name="price_budget" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="price_actual" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -516,7 +518,7 @@
           <Property Name="year" Type="Int32" Nullable="false" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -531,7 +533,7 @@
           <Property Name="rate_budget" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="rate_actual" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -546,7 +548,7 @@
           <Property Name="price_budget" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="price_actual" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -571,7 +573,7 @@
           <Property Name="rate_expend" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="rate_loss" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="tray_num" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -615,7 +617,7 @@
           <Property Name="selection_time_m" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
           <Property Name="selection_time_f" Type="Decimal" Nullable="false" Precision="10" Scale="0" />
           <Property Name="tray_num" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -632,7 +634,7 @@
           <Property Name="no" Type="Int32" Nullable="false" />
           <Property Name="code" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
           <Property Name="blend_rate" Type="Decimal" Nullable="false" Precision="5" Scale="2" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -647,7 +649,7 @@
           <Property Name="unit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
           <Property Name="note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="kbn" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -665,7 +667,7 @@
           <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="quantity" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="cost" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -682,7 +684,7 @@
           <Property Name="no" Type="Int32" Nullable="false" />
           <Property Name="code" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="time" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -699,7 +701,7 @@
           <Property Name="no" Type="Int32" Nullable="false" />
           <Property Name="code" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
           <Property Name="quantity" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -717,7 +719,7 @@
           <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="quantity" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="cost" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -734,7 +736,7 @@
           <Property Name="no" Type="Int32" Nullable="false" />
           <Property Name="code" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
           <Property Name="quantity" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -742,11 +744,13 @@
           <Key>
             <PropertyRef Name="year" />
             <PropertyRef Name="product_code" />
+            <PropertyRef Name="supplier_code" />
             <PropertyRef Name="category" />
             <PropertyRef Name="no" />
           </Key>
           <Property Name="year" Type="Int32" Nullable="false" />
           <Property Name="product_code" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="supplier_code" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
           <Property Name="category" Type="Int32" Nullable="false" />
           <Property Name="no" Type="Int32" Nullable="false" />
           <Property Name="code" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
@@ -781,7 +785,7 @@
           <Property Name="month_10" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="month_11" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="month_12" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -796,7 +800,7 @@
           <Property Name="price_budget" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="price_actual" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -809,7 +813,7 @@
           <Property Name="year" Type="Int32" Nullable="false" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
@@ -1120,6 +1124,7 @@
                 <ScalarProperty Name="code" ColumnName="code" />
                 <ScalarProperty Name="no" ColumnName="no" />
                 <ScalarProperty Name="category" ColumnName="category" />
+                <ScalarProperty Name="supplier_code" ColumnName="supplier_code" />
                 <ScalarProperty Name="product_code" ColumnName="product_code" />
                 <ScalarProperty Name="year" ColumnName="year" />
               </MappingFragment>

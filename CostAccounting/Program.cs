@@ -8,6 +8,7 @@ using log4net;
 using log4net.Appender;
 using log4net.Repository.Hierarchy;
 using System.Threading;
+using System.Data.Entity.Validation;
 
 namespace CostAccounting
 {
@@ -32,11 +33,29 @@ namespace CostAccounting
         // 未処理例外をキャッチするイベント・ハンドラ
         public static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
         {
+
             Program.MessageBoxError(string.Concat("予期しないエラーが発生しました。"
                                                , Environment.NewLine
                                                , "お手数ですが、ログファイルの送付をお願いします。"
                                                , Environment.NewLine
                                                , "_(._.)_"));
+
+
+            if (e.Exception is DbEntityValidationException)
+            {
+                DbEntityValidationException error = (DbEntityValidationException)e.Exception;
+                foreach (var validationErrors in error.EntityValidationErrors)
+                {
+                    foreach (var validationError in validationErrors.ValidationErrors)
+                    {
+                        Logger.Info(
+                              "Class: {0}, Property: {1}, Error: {2}",
+                              validationErrors.Entry.Entity.GetType().FullName,
+                              validationError.PropertyName,
+                              validationError.ErrorMessage);
+                    }
+                }
+            }
             Logger.Error(Message.ERR001, e.Exception);
             Environment.Exit(-1);
         }
