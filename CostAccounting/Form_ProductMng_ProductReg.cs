@@ -1506,6 +1506,11 @@ namespace CostAccounting
                 string code = (string)row.Cells["dgvPackingFareName"].Value;
                 if (!String.IsNullOrEmpty(code))
                 {
+
+                    string updateUser = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
+                    if(updateUser.Length > 20) {
+                        updateUser = updateUser.Remove(20);
+                    }
                     var entity = new ProductPackingFare()
                     {
                         year = Const.TARGET_YEAR,
@@ -1515,7 +1520,8 @@ namespace CostAccounting
                         no = no++,
                         code = code,
                         quantity = Conversion.Parse((string)row.Cells["dgvPackingFareQuantity"].Value),
-                        update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
+                        //update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName),
+                        update_user = updateUser,
                         update_date = DateTime.Now,
                         del_flg = Const.FLG_OFF
                     };
