@@ -360,6 +360,13 @@ namespace CostAccounting
                            where t.year.Equals(srcYear)
                               && t.category.Equals((int)Const.CATEGORY_TYPE.Actual)
                            select t;
+
+            // ★TODO: updateUserのDB定義を修正するまでの暫定対処★
+            string updateUser = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
+            if (updateUser.Length > 20)
+            {
+                updateUser = updateUser.Remove(20);
+            }
             foreach (var data in target16.ToList())
             {
                 foreach (int category in Enum.GetValues(typeof(Const.CATEGORY_TYPE)))
@@ -367,7 +374,7 @@ namespace CostAccounting
                     var entity = DeepCopyHelper.DeepCopy<ProductPackingFare>(data);
                     entity.year = Const.TARGET_YEAR;
                     entity.category = category;
-                    entity.update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
+                    entity.update_user = updateUser;
                     entity.update_date = DateTime.Now;
                     context.ProductPackingFare.Add(entity);
                 }

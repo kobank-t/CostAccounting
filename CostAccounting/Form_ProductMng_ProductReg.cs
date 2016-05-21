@@ -1506,9 +1506,10 @@ namespace CostAccounting
                 string code = (string)row.Cells["dgvPackingFareName"].Value;
                 if (!String.IsNullOrEmpty(code))
                 {
-
+                    // ★TODO: updateUserのDB定義を修正するまでの暫定対処★
                     string updateUser = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
-                    if(updateUser.Length > 20) {
+                    if (updateUser.Length > 20)
+                    {
                         updateUser = updateUser.Remove(20);
                     }
                     var entity = new ProductPackingFare()
@@ -1569,6 +1570,7 @@ namespace CostAccounting
                 string code = (string)row.Cells["dgvPackingFareName"].Value;
                 if (!String.IsNullOrEmpty(code))
                 {
+                    // ★TODO: updateUserのDB定義を修正するまでの暫定対処★
                     string updateUser = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
                     if (updateUser.Length > 20)
                     {
