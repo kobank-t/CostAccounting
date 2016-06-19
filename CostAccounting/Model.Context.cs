@@ -42,8 +42,8 @@ namespace CostAccounting
         public virtual DbSet<ProductMaterialsFare> ProductMaterialsFare { get; set; }
         public virtual DbSet<ProductPacking> ProductPacking { get; set; }
         public virtual DbSet<ProductPackingFare> ProductPackingFare { get; set; }
-        public virtual DbSet<ProductSupplier> ProductSupplier { get; set; }
         public virtual DbSet<RowMaterial> RowMaterial { get; set; }
         public virtual DbSet<Supplier> Supplier { get; set; }
+        public virtual DbSet<ProductSupplier> ProductSupplier { get; set; }
     }
 }

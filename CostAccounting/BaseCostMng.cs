@@ -42,6 +42,7 @@ namespace CostAccounting
                 { 24 , "12月" }, { 25, "1月" }, { 26, "2月" }, { 27, "3月" }
             };
         private Dictionary<CheckBox, int> checkBoxMonthDic = new Dictionary<CheckBox, int>();
+        private Dictionary<CheckBox, string> checkBoxNumDic = new Dictionary<CheckBox, string>();
 
         protected Control.ControlCollection ChecBoxControls
         {
@@ -54,6 +55,7 @@ namespace CostAccounting
                         CheckBox checkbox = (CheckBox)control;
                         checkBoxDic.Add(checkbox.Text, checkbox);
                         checkBoxMonthDic.Add(checkbox, int.Parse(checkbox.Text.Replace("月", "")));
+                        checkBoxNumDic.Add(checkbox, "num" + String.Format("{0:00}", int.Parse(checkbox.Text.Replace("月", ""))));
                     }
                 }
             }
@@ -540,6 +542,18 @@ namespace CostAccounting
                     dataGridView.Rows[i].Cells["product_code"].Value = dataList[i].t_supplier.product_code;
                     dataGridView.Rows[i].Cells["supplier_code"].Value = dataList[i].t_supplier.supplier_code;
                     dataGridView.Rows[i].Cells["type"].Value = dataList[i].t_supplier.type;
+                    dataGridView.Rows[i].Cells["num04"].Value = dataList[i].t_supplier.num04.ToString("N");
+                    dataGridView.Rows[i].Cells["num05"].Value = dataList[i].t_supplier.num05.ToString("N");
+                    dataGridView.Rows[i].Cells["num06"].Value = dataList[i].t_supplier.num06.ToString("N");
+                    dataGridView.Rows[i].Cells["num07"].Value = dataList[i].t_supplier.num07.ToString("N");
+                    dataGridView.Rows[i].Cells["num08"].Value = dataList[i].t_supplier.num08.ToString("N");
+                    dataGridView.Rows[i].Cells["num09"].Value = dataList[i].t_supplier.num09.ToString("N");
+                    dataGridView.Rows[i].Cells["num10"].Value = dataList[i].t_supplier.num10.ToString("N");
+                    dataGridView.Rows[i].Cells["num11"].Value = dataList[i].t_supplier.num11.ToString("N");
+                    dataGridView.Rows[i].Cells["num12"].Value = dataList[i].t_supplier.num12.ToString("N");
+                    dataGridView.Rows[i].Cells["num01"].Value = dataList[i].t_supplier.num01.ToString("N");
+                    dataGridView.Rows[i].Cells["num02"].Value = dataList[i].t_supplier.num02.ToString("N");
+                    dataGridView.Rows[i].Cells["num03"].Value = dataList[i].t_supplier.num03.ToString("N");
                 }
 
                 //------------------------------------------------------------------------------ 固定費を設定
@@ -731,11 +745,29 @@ namespace CostAccounting
                  + containCalc((string)dataGridView.Rows[rowIndex].Cells[26].Value, 26)
                  + containCalc((string)dataGridView.Rows[rowIndex].Cells[27].Value, 27)).ToString("#,0");
 
-            dataGridView.Rows[rowIndex].Cells[28].Value =
+
+            // 実績の場合の数量は、各月の数量を集計
+            if (Const.CATEGORY_TYPE.Actual.Equals(category))
+            {
+                decimal numTotal = decimal.Zero;
+                foreach (CheckBox checkbox in checkBoxNumDic.Keys)
+                {
+                    if (checkbox.Checked)
+                    { 
+                        numTotal += Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[checkBoxNumDic[checkbox]].Value);
+                    }  
+                }
+                dataGridView.Rows[rowIndex].Cells[28].Value = numTotal.ToString("N");
+            }
+            // 予算の場合の数量は、売り上げから割返し
+            else
+            {
+                dataGridView.Rows[rowIndex].Cells[28].Value =
                         Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[4].Value) == decimal.Zero ?
                         decimal.Zero.ToString("N") :
                         decimal.Divide(Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[15].Value)
                                        , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[4].Value)).ToString("N");
+            }
 
             dataGridView.Rows[rowIndex].Cells[29].Value = decimal.Multiply(Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[28].Value)
                                                                            , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[5].Value)).ToString("#,0");
@@ -832,6 +864,18 @@ namespace CostAccounting
                         target.First().month_01 = Conversion.Parse((string)row.Cells[25].Value);
                         target.First().month_02 = Conversion.Parse((string)row.Cells[26].Value);
                         target.First().month_03 = Conversion.Parse((string)row.Cells[27].Value);
+                        target.First().num01 = Conversion.Parse((string)row.Cells["num01"].Value);
+                        target.First().num02 = Conversion.Parse((string)row.Cells["num02"].Value);
+                        target.First().num03 = Conversion.Parse((string)row.Cells["num03"].Value);
+                        target.First().num04 = Conversion.Parse((string)row.Cells["num04"].Value);
+                        target.First().num05 = Conversion.Parse((string)row.Cells["num05"].Value);
+                        target.First().num06 = Conversion.Parse((string)row.Cells["num06"].Value);
+                        target.First().num07 = Conversion.Parse((string)row.Cells["num07"].Value);
+                        target.First().num08 = Conversion.Parse((string)row.Cells["num08"].Value);
+                        target.First().num09 = Conversion.Parse((string)row.Cells["num09"].Value);
+                        target.First().num10 = Conversion.Parse((string)row.Cells["num10"].Value);
+                        target.First().num11 = Conversion.Parse((string)row.Cells["num11"].Value);
+                        target.First().num12 = Conversion.Parse((string)row.Cells["num12"].Value);
                         target.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
                         target.First().update_date = DateTime.Now;
                     }

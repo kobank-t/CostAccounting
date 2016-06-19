@@ -146,6 +146,14 @@ namespace CostAccounting
                     { 10, 22 }, { 11, 23 }, { 12, 24 }, { 1, 25 }, { 2, 26 }, { 3, 27 }
                 };
 
+                Dictionary<decimal, string> numIndex = new Dictionary<decimal, string>
+                {
+                    { 4, "num04" }, { 5, "num05" }, { 6, "num06" },
+                    { 7, "num07" }, { 8, "num08" }, { 9, "num09" },
+                    { 10, "num10" }, { 11, "num11" }, { 12, "num12" },
+                    { 1, "num01" }, { 2, "num02" }, { 3, "num03" }
+                };
+
                 bool allok = true;
                 foreach (ListViewItem item in form.listView.Items)
                 {
@@ -158,6 +166,7 @@ namespace CostAccounting
                             && product_code.Equals(row.Cells["product_code"].Value))
                         {
                             row.Cells[targetIndex[targetMonth.Value]].Value = Conversion.Parse(item.SubItems[4].Text).ToString("#,0");
+                            row.Cells[numIndex[targetMonth.Value]].Value = Conversion.Parse(item.SubItems[5].Text);
                             base.calcRow(row.Index);
                             item.Tag = Const.FLG_ON;
                             break;

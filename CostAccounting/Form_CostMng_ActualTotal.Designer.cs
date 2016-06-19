@@ -236,6 +236,18 @@
             this.product_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.supplier_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.type = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num04 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num05 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num06 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num07 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num08 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num09 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num01 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num02 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.num03 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTotal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -861,7 +873,19 @@
             this.dataGridViewTextBoxColumn49,
             this.product_code,
             this.supplier_code,
-            this.type});
+            this.type,
+            this.num04,
+            this.num05,
+            this.num06,
+            this.num07,
+            this.num08,
+            this.num09,
+            this.num10,
+            this.num11,
+            this.num12,
+            this.num01,
+            this.num02,
+            this.num03});
             this.dataGridView.Location = new System.Drawing.Point(12, 117);
             this.dataGridView.MultiSelect = false;
             this.dataGridView.Name = "dataGridView";
@@ -1969,6 +1993,78 @@
             this.type.ReadOnly = true;
             this.type.Visible = false;
             // 
+            // num04
+            // 
+            this.num04.HeaderText = "num04";
+            this.num04.Name = "num04";
+            this.num04.Visible = false;
+            // 
+            // num05
+            // 
+            this.num05.HeaderText = "num05";
+            this.num05.Name = "num05";
+            this.num05.Visible = false;
+            // 
+            // num06
+            // 
+            this.num06.HeaderText = "num06";
+            this.num06.Name = "num06";
+            this.num06.Visible = false;
+            // 
+            // num07
+            // 
+            this.num07.HeaderText = "num07";
+            this.num07.Name = "num07";
+            this.num07.Visible = false;
+            // 
+            // num08
+            // 
+            this.num08.HeaderText = "num08";
+            this.num08.Name = "num08";
+            this.num08.Visible = false;
+            // 
+            // num09
+            // 
+            this.num09.HeaderText = "num09";
+            this.num09.Name = "num09";
+            this.num09.Visible = false;
+            // 
+            // num10
+            // 
+            this.num10.HeaderText = "num10";
+            this.num10.Name = "num10";
+            this.num10.Visible = false;
+            // 
+            // num11
+            // 
+            this.num11.HeaderText = "num11";
+            this.num11.Name = "num11";
+            this.num11.Visible = false;
+            // 
+            // num12
+            // 
+            this.num12.HeaderText = "num12";
+            this.num12.Name = "num12";
+            this.num12.Visible = false;
+            // 
+            // num01
+            // 
+            this.num01.HeaderText = "num01";
+            this.num01.Name = "num01";
+            this.num01.Visible = false;
+            // 
+            // num02
+            // 
+            this.num02.HeaderText = "num02";
+            this.num02.Name = "num02";
+            this.num02.Visible = false;
+            // 
+            // num03
+            // 
+            this.num03.HeaderText = "num03";
+            this.num03.Name = "num03";
+            this.num03.Visible = false;
+            // 
             // Form_CostMng_ActualTotal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -2213,5 +2309,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn product_code;
         private System.Windows.Forms.DataGridViewTextBoxColumn supplier_code;
         private System.Windows.Forms.DataGridViewTextBoxColumn type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num04;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num05;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num06;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num07;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num08;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num09;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num01;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num02;
+        private System.Windows.Forms.DataGridViewTextBoxColumn num03;
     }
 }

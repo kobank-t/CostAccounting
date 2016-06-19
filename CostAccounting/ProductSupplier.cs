@@ -35,5 +35,17 @@ namespace CostAccounting
         public string update_user { get; set; }
         public System.DateTime update_date { get; set; }
         public string del_flg { get; set; }
+        public decimal num01 { get; set; }
+        public decimal num02 { get; set; }
+        public decimal num03 { get; set; }
+        public decimal num04 { get; set; }
+        public decimal num05 { get; set; }
+        public decimal num06 { get; set; }
+        public decimal num07 { get; set; }
+        public decimal num08 { get; set; }
+        public decimal num09 { get; set; }
+        public decimal num10 { get; set; }
+        public decimal num11 { get; set; }
+        public decimal num12 { get; set; }
     }
 }
