@@ -18,6 +18,7 @@ namespace CostAccounting
                 { 44, "12月" }, { 46, "1月" }, { 48, "2月" }, { 50, "3月" }
             };
         private Dictionary<CheckBox, int> checkBoxMonthDic = new Dictionary<CheckBox, int>();
+        private Dictionary<CheckBox, string> checkBoxNumDic = new Dictionary<CheckBox, string>();
 
         /*************************************************************
          * コンストラクタ
@@ -34,6 +35,7 @@ namespace CostAccounting
                     CheckBox checkbox = (CheckBox)control;
                     checkBoxDic.Add(checkbox.Text, checkbox);
                     checkBoxMonthDic.Add(checkbox, int.Parse(checkbox.Text.Replace("月", "")));
+                    checkBoxNumDic.Add(checkbox, "num" + String.Format("{0:00}", int.Parse(checkbox.Text.Replace("月", ""))));
                 }
             }
         }
@@ -512,6 +514,18 @@ namespace CostAccounting
                     dataGridView.Rows[i].Cells[51].Value = dataList[i].t_actual.t_supplier.month_03.ToString("#,0");
                     dataGridView.Rows[i].Cells["product_code"].Value = dataList[i].t_actual.t_supplier.product_code;
                     dataGridView.Rows[i].Cells["supplier_code"].Value = dataList[i].t_actual.t_supplier.supplier_code;
+                    dataGridView.Rows[i].Cells["num04"].Value = dataList[i].t_actual.t_supplier.num04.ToString("N");
+                    dataGridView.Rows[i].Cells["num05"].Value = dataList[i].t_actual.t_supplier.num05.ToString("N");
+                    dataGridView.Rows[i].Cells["num06"].Value = dataList[i].t_actual.t_supplier.num06.ToString("N");
+                    dataGridView.Rows[i].Cells["num07"].Value = dataList[i].t_actual.t_supplier.num07.ToString("N");
+                    dataGridView.Rows[i].Cells["num08"].Value = dataList[i].t_actual.t_supplier.num08.ToString("N");
+                    dataGridView.Rows[i].Cells["num09"].Value = dataList[i].t_actual.t_supplier.num09.ToString("N");
+                    dataGridView.Rows[i].Cells["num10"].Value = dataList[i].t_actual.t_supplier.num10.ToString("N");
+                    dataGridView.Rows[i].Cells["num11"].Value = dataList[i].t_actual.t_supplier.num11.ToString("N");
+                    dataGridView.Rows[i].Cells["num12"].Value = dataList[i].t_actual.t_supplier.num12.ToString("N");
+                    dataGridView.Rows[i].Cells["num01"].Value = dataList[i].t_actual.t_supplier.num01.ToString("N");
+                    dataGridView.Rows[i].Cells["num02"].Value = dataList[i].t_actual.t_supplier.num02.ToString("N");
+                    dataGridView.Rows[i].Cells["num03"].Value = dataList[i].t_actual.t_supplier.num03.ToString("N");
 
                     if (dataList[i].t_budget != null)
                     {
@@ -665,7 +679,7 @@ namespace CostAccounting
         /*************************************************************
          * 指定行の計算を行う
          *************************************************************/
-        private void calcRow(int rowIndex)
+        private new void calcRow(int rowIndex)
         {
             for (int offset = 0; offset < 2; offset++)
             {
@@ -683,11 +697,28 @@ namespace CostAccounting
                      + containCalc((string)dataGridView.Rows[rowIndex].Cells[48 + offset].Value, 48)
                      + containCalc((string)dataGridView.Rows[rowIndex].Cells[50 + offset].Value, 50)).ToString("#,0");
 
-                dataGridView.Rows[rowIndex].Cells[52 + offset].Value =
+
+                // 予算の場合の数量は、売り上げから割返し
+                if (offset == 0) {
+                    dataGridView.Rows[rowIndex].Cells[52].Value =
                             Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[4 + offset].Value) == decimal.Zero ?
                             decimal.Zero.ToString("N") :
                             decimal.Divide(Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[26 + offset].Value)
                                            , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[4 + offset].Value)).ToString("N");
+                }
+                // 実績の場合の数量は、各月の数量を集計
+                else
+                {
+                    decimal numTotal = decimal.Zero;
+                    foreach (CheckBox checkbox in checkBoxNumDic.Keys)
+                    {
+                        if (checkbox.Checked)
+                        {
+                            numTotal += Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[checkBoxNumDic[checkbox]].Value);
+                        }
+                    }
+                    dataGridView.Rows[rowIndex].Cells[53].Value = numTotal.ToString("N");
+                }
 
                 dataGridView.Rows[rowIndex].Cells[54 + offset].Value = decimal.Multiply(Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[52 + offset].Value)
                                                                                , Conversion.Parse((string)dataGridView.Rows[rowIndex].Cells[6 + offset].Value)).ToString("#,0");

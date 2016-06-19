@@ -166,7 +166,7 @@ namespace CostAccounting
                             && product_code.Equals(row.Cells["product_code"].Value))
                         {
                             row.Cells[targetIndex[targetMonth.Value]].Value = Conversion.Parse(item.SubItems[4].Text).ToString("#,0");
-                            row.Cells[numIndex[targetMonth.Value]].Value = Conversion.Parse(item.SubItems[5].Text);
+                            row.Cells[numIndex[targetMonth.Value]].Value = Conversion.Parse(item.SubItems[5].Text).ToString("N");
                             base.calcRow(row.Index);
                             item.Tag = Const.FLG_ON;
                             break;
