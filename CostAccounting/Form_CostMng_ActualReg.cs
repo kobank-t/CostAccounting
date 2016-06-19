@@ -151,12 +151,14 @@ namespace CostAccounting
                 {
                     string supplier_code = item.SubItems[0].Text;
                     string product_code = item.SubItems[2].Text;
+
                     foreach (DataGridViewRow row in dataGridView.Rows)
                     {
                         if (supplier_code.Equals(row.Cells["supplier_code"].Value)
                             && product_code.Equals(row.Cells["product_code"].Value))
                         {
                             row.Cells[targetIndex[targetMonth.Value]].Value = Conversion.Parse(item.SubItems[4].Text).ToString("#,0");
+                            base.calcRow(row.Index);
                             item.Tag = Const.FLG_ON;
                             break;
                         }
@@ -167,6 +169,7 @@ namespace CostAccounting
                         allok = false;
                     }
                 }
+                base.calcColumn(targetIndex[targetMonth.Value]);
 
                 if (!allok)
                 {

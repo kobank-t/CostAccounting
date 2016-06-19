@@ -715,7 +715,7 @@ namespace CostAccounting
         /*************************************************************
          * 指定行の計算を行う
          *************************************************************/
-        private void calcRow(int rowIndex)
+        protected void calcRow(int rowIndex)
         {
             dataGridView.Rows[rowIndex].Cells[15].Value =
                 (containCalc((string)dataGridView.Rows[rowIndex].Cells[16].Value, 16)
