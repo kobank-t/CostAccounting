@@ -443,9 +443,9 @@
           <EntitySet Name="ProductMaterialsFare" EntityType="CostAccountingModel.ProductMaterialsFare" />
           <EntitySet Name="ProductPacking" EntityType="CostAccountingModel.ProductPacking" />
           <EntitySet Name="ProductPackingFare" EntityType="CostAccountingModel.ProductPackingFare" />
+          <EntitySet Name="ProductSupplier" EntityType="CostAccountingModel.ProductSupplier" />
           <EntitySet Name="RowMaterial" EntityType="CostAccountingModel.RowMaterial" />
           <EntitySet Name="Supplier" EntityType="CostAccountingModel.Supplier" />
-          <EntitySet Name="ProductSupplier" EntityType="CostAccountingModel.ProductSupplier" />
         </EntityContainer>
         <EntityType Name="CostMngTotal">
           <Key>
@@ -767,34 +767,6 @@
           <Property Name="no" Type="Int32" Nullable="false" />
           <Property Name="code" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
           <Property Name="quantity" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="update_date" Type="DateTime" Nullable="false" />
-          <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-        </EntityType>
-        <EntityType Name="RowMaterial">
-          <Key>
-            <PropertyRef Name="code" />
-            <PropertyRef Name="year" />
-          </Key>
-          <Property Name="code" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
-          <Property Name="year" Type="Int32" Nullable="false" />
-          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="price_budget" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="price_actual" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
-          <Property Name="note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="update_date" Type="DateTime" Nullable="false" />
-          <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
-        </EntityType>
-        <EntityType Name="Supplier">
-          <Key>
-            <PropertyRef Name="code" />
-            <PropertyRef Name="year" />
-          </Key>
-          <Property Name="code" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
-          <Property Name="year" Type="Int32" Nullable="false" />
-          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="update_date" Type="DateTime" Nullable="false" />
           <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
@@ -840,6 +812,34 @@
           <Property Name="num10" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="num11" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
           <Property Name="num12" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="RowMaterial">
+          <Key>
+            <PropertyRef Name="code" />
+            <PropertyRef Name="year" />
+          </Key>
+          <Property Name="code" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="year" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="price_budget" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="price_actual" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
+          <Property Name="note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="update_date" Type="DateTime" Nullable="false" />
+          <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Supplier">
+          <Key>
+            <PropertyRef Name="code" />
+            <PropertyRef Name="year" />
+          </Key>
+          <Property Name="code" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="year" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="update_user" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="update_date" Type="DateTime" Nullable="false" />
+          <Property Name="del_flg" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -1154,34 +1154,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="RowMaterial">
-            <EntityTypeMapping TypeName="CostAccountingModel.RowMaterial">
-              <MappingFragment StoreEntitySet="RowMaterial">
-                <ScalarProperty Name="del_flg" ColumnName="del_flg" />
-                <ScalarProperty Name="update_date" ColumnName="update_date" />
-                <ScalarProperty Name="update_user" ColumnName="update_user" />
-                <ScalarProperty Name="note" ColumnName="note" />
-                <ScalarProperty Name="price_actual" ColumnName="price_actual" />
-                <ScalarProperty Name="price_budget" ColumnName="price_budget" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="year" ColumnName="year" />
-                <ScalarProperty Name="code" ColumnName="code" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Supplier">
-            <EntityTypeMapping TypeName="CostAccountingModel.Supplier">
-              <MappingFragment StoreEntitySet="Supplier">
-                <ScalarProperty Name="del_flg" ColumnName="del_flg" />
-                <ScalarProperty Name="update_date" ColumnName="update_date" />
-                <ScalarProperty Name="update_user" ColumnName="update_user" />
-                <ScalarProperty Name="note" ColumnName="note" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="year" ColumnName="year" />
-                <ScalarProperty Name="code" ColumnName="code" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="ProductSupplier">
             <EntityTypeMapping TypeName="CostAccountingModel.ProductSupplier">
               <MappingFragment StoreEntitySet="ProductSupplier">
@@ -1218,6 +1190,34 @@
                 <ScalarProperty Name="supplier_code" ColumnName="supplier_code" />
                 <ScalarProperty Name="product_code" ColumnName="product_code" />
                 <ScalarProperty Name="year" ColumnName="year" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RowMaterial">
+            <EntityTypeMapping TypeName="CostAccountingModel.RowMaterial">
+              <MappingFragment StoreEntitySet="RowMaterial">
+                <ScalarProperty Name="del_flg" ColumnName="del_flg" />
+                <ScalarProperty Name="update_date" ColumnName="update_date" />
+                <ScalarProperty Name="update_user" ColumnName="update_user" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="price_actual" ColumnName="price_actual" />
+                <ScalarProperty Name="price_budget" ColumnName="price_budget" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="code" ColumnName="code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Supplier">
+            <EntityTypeMapping TypeName="CostAccountingModel.Supplier">
+              <MappingFragment StoreEntitySet="Supplier">
+                <ScalarProperty Name="del_flg" ColumnName="del_flg" />
+                <ScalarProperty Name="update_date" ColumnName="update_date" />
+                <ScalarProperty Name="update_user" ColumnName="update_user" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="year" ColumnName="year" />
+                <ScalarProperty Name="code" ColumnName="code" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

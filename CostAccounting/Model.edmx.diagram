@@ -15,16 +15,16 @@
         <EntityTypeShape EntityType="CostAccountingModel.Other" Width="1.5" PointX="8.75" PointY="0.75" />
         <EntityTypeShape EntityType="CostAccountingModel.Product" Width="1.5" PointX="4.75" PointY="8.75" />
         <EntityTypeShape EntityType="CostAccountingModel.ProductBlend" Width="1.5" PointX="8.75" PointY="6.75" />
-        <EntityTypeShape EntityType="CostAccountingModel.ProductCode" Width="1.5" PointX="0.75" PointY="9.75" />
-        <EntityTypeShape EntityType="CostAccountingModel.ProductContractor" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.ProductCode" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.ProductContractor" Width="1.5" PointX="0.75" PointY="10.75" />
         <EntityTypeShape EntityType="CostAccountingModel.ProductMachine" Width="1.5" PointX="10.75" PointY="4.75" />
         <EntityTypeShape EntityType="CostAccountingModel.ProductMaterial" Width="1.5" PointX="6.75" PointY="10.75" />
         <EntityTypeShape EntityType="CostAccountingModel.ProductMaterialsFare" Width="1.5" PointX="10.75" PointY="8.75" />
         <EntityTypeShape EntityType="CostAccountingModel.ProductPacking" Width="1.5" PointX="12.75" PointY="0.75" />
         <EntityTypeShape EntityType="CostAccountingModel.ProductPackingFare" Width="1.5" PointX="12.75" PointY="4.75" />
-        <EntityTypeShape EntityType="CostAccountingModel.RowMaterial" Width="1.5" PointX="8.75" PointY="12.75" />
-        <EntityTypeShape EntityType="CostAccountingModel.Supplier" Width="1.5" PointX="0.75" PointY="13.75" />
         <EntityTypeShape EntityType="CostAccountingModel.ProductSupplier" Width="1.5" PointX="12.75" PointY="8.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.RowMaterial" Width="1.5" PointX="8.75" PointY="12.75" />
+        <EntityTypeShape EntityType="CostAccountingModel.Supplier" Width="1.5" PointX="14.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
