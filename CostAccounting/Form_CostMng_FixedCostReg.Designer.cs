@@ -624,6 +624,7 @@
             this.manufacturing_personnel_May.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_personnel_May.TabIndex = 10;
             this.manufacturing_personnel_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_May.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_personnel_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_personnel_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -639,6 +640,7 @@
             this.manufacturing_depreciation_May.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_depreciation_May.TabIndex = 11;
             this.manufacturing_depreciation_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_May.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_depreciation_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_depreciation_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -654,6 +656,7 @@
             this.manufacturing_rent_May.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_rent_May.TabIndex = 12;
             this.manufacturing_rent_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_May.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_rent_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_rent_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -669,6 +672,7 @@
             this.manufacturing_repair_May.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_repair_May.TabIndex = 13;
             this.manufacturing_repair_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_May.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_repair_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_repair_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -684,6 +688,7 @@
             this.manufacturing_stock_May.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_stock_May.TabIndex = 14;
             this.manufacturing_stock_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_May.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_stock_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_stock_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -699,6 +704,7 @@
             this.manufacturing_other_May.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_other_May.TabIndex = 15;
             this.manufacturing_other_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_May.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_other_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_other_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -714,6 +720,7 @@
             this.selling_personnel_May.Size = new System.Drawing.Size(109, 23);
             this.selling_personnel_May.TabIndex = 16;
             this.selling_personnel_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_May.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_personnel_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_personnel_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -729,6 +736,7 @@
             this.selling_depreciation_May.Size = new System.Drawing.Size(109, 23);
             this.selling_depreciation_May.TabIndex = 17;
             this.selling_depreciation_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_May.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_depreciation_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_depreciation_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -848,6 +856,7 @@
             this.manufacturing_personnel_Apr.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_personnel_Apr.TabIndex = 0;
             this.manufacturing_personnel_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Apr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_personnel_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_personnel_Apr.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -863,6 +872,7 @@
             this.manufacturing_depreciation_Apr.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_depreciation_Apr.TabIndex = 1;
             this.manufacturing_depreciation_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Apr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_depreciation_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_depreciation_Apr.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -878,6 +888,7 @@
             this.manufacturing_rent_Apr.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_rent_Apr.TabIndex = 2;
             this.manufacturing_rent_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Apr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_rent_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_rent_Apr.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -893,6 +904,7 @@
             this.manufacturing_repair_Apr.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_repair_Apr.TabIndex = 3;
             this.manufacturing_repair_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Apr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_repair_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_repair_Apr.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -908,6 +920,7 @@
             this.manufacturing_stock_Apr.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_stock_Apr.TabIndex = 4;
             this.manufacturing_stock_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Apr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_stock_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_stock_Apr.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -923,6 +936,7 @@
             this.manufacturing_other_Apr.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_other_Apr.TabIndex = 5;
             this.manufacturing_other_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Apr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_other_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_other_Apr.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -938,6 +952,7 @@
             this.selling_personnel_Apr.Size = new System.Drawing.Size(109, 23);
             this.selling_personnel_Apr.TabIndex = 6;
             this.selling_personnel_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Apr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_personnel_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_personnel_Apr.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -953,6 +968,7 @@
             this.selling_depreciation_Apr.Size = new System.Drawing.Size(109, 23);
             this.selling_depreciation_Apr.TabIndex = 7;
             this.selling_depreciation_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Apr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_depreciation_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_depreciation_Apr.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -968,6 +984,7 @@
             this.manufacturing_personnel_Jun.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_personnel_Jun.TabIndex = 20;
             this.manufacturing_personnel_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Jun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_personnel_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_personnel_Jun.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -983,6 +1000,7 @@
             this.manufacturing_personnel_Jul.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_personnel_Jul.TabIndex = 30;
             this.manufacturing_personnel_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Jul.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_personnel_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_personnel_Jul.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -998,6 +1016,7 @@
             this.manufacturing_personnel_Aug.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_personnel_Aug.TabIndex = 40;
             this.manufacturing_personnel_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Aug.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_personnel_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_personnel_Aug.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1013,6 +1032,7 @@
             this.manufacturing_personnel_Sep.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_personnel_Sep.TabIndex = 50;
             this.manufacturing_personnel_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Sep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_personnel_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_personnel_Sep.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1028,6 +1048,7 @@
             this.manufacturing_personnel_Oct.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_personnel_Oct.TabIndex = 60;
             this.manufacturing_personnel_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Oct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_personnel_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_personnel_Oct.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1043,6 +1064,7 @@
             this.manufacturing_personnel_Nov.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_personnel_Nov.TabIndex = 70;
             this.manufacturing_personnel_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Nov.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_personnel_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_personnel_Nov.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1058,6 +1080,7 @@
             this.manufacturing_personnel_Dec.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_personnel_Dec.TabIndex = 80;
             this.manufacturing_personnel_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Dec.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_personnel_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_personnel_Dec.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1073,6 +1096,7 @@
             this.manufacturing_personnel_Jan.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_personnel_Jan.TabIndex = 90;
             this.manufacturing_personnel_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Jan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_personnel_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_personnel_Jan.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1088,6 +1112,7 @@
             this.manufacturing_personnel_Feb.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_personnel_Feb.TabIndex = 100;
             this.manufacturing_personnel_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Feb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_personnel_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_personnel_Feb.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1103,6 +1128,7 @@
             this.manufacturing_personnel_Mar.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_personnel_Mar.TabIndex = 110;
             this.manufacturing_personnel_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_personnel_Mar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_personnel_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_personnel_Mar.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1118,6 +1144,7 @@
             this.manufacturing_depreciation_Jun.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_depreciation_Jun.TabIndex = 21;
             this.manufacturing_depreciation_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Jun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_depreciation_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_depreciation_Jun.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1133,6 +1160,7 @@
             this.manufacturing_depreciation_Jul.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_depreciation_Jul.TabIndex = 31;
             this.manufacturing_depreciation_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Jul.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_depreciation_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_depreciation_Jul.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1148,6 +1176,7 @@
             this.manufacturing_depreciation_Aug.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_depreciation_Aug.TabIndex = 41;
             this.manufacturing_depreciation_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Aug.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_depreciation_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_depreciation_Aug.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1163,6 +1192,7 @@
             this.manufacturing_depreciation_Sep.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_depreciation_Sep.TabIndex = 51;
             this.manufacturing_depreciation_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Sep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_depreciation_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_depreciation_Sep.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1178,6 +1208,7 @@
             this.manufacturing_depreciation_Oct.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_depreciation_Oct.TabIndex = 61;
             this.manufacturing_depreciation_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Oct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_depreciation_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_depreciation_Oct.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1193,6 +1224,7 @@
             this.manufacturing_depreciation_Nov.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_depreciation_Nov.TabIndex = 71;
             this.manufacturing_depreciation_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Nov.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_depreciation_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_depreciation_Nov.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1208,6 +1240,7 @@
             this.manufacturing_depreciation_Dec.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_depreciation_Dec.TabIndex = 81;
             this.manufacturing_depreciation_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Dec.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_depreciation_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_depreciation_Dec.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1223,6 +1256,7 @@
             this.manufacturing_depreciation_Jan.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_depreciation_Jan.TabIndex = 91;
             this.manufacturing_depreciation_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Jan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_depreciation_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_depreciation_Jan.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1238,6 +1272,7 @@
             this.manufacturing_depreciation_Feb.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_depreciation_Feb.TabIndex = 101;
             this.manufacturing_depreciation_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Feb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_depreciation_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_depreciation_Feb.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1253,6 +1288,7 @@
             this.manufacturing_depreciation_Mar.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_depreciation_Mar.TabIndex = 111;
             this.manufacturing_depreciation_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_depreciation_Mar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_depreciation_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_depreciation_Mar.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1268,6 +1304,7 @@
             this.manufacturing_rent_Jun.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_rent_Jun.TabIndex = 22;
             this.manufacturing_rent_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Jun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_rent_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_rent_Jun.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1283,6 +1320,7 @@
             this.manufacturing_rent_Jul.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_rent_Jul.TabIndex = 32;
             this.manufacturing_rent_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Jul.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_rent_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_rent_Jul.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1298,6 +1336,7 @@
             this.manufacturing_rent_Aug.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_rent_Aug.TabIndex = 42;
             this.manufacturing_rent_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Aug.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_rent_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_rent_Aug.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1313,6 +1352,7 @@
             this.manufacturing_rent_Sep.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_rent_Sep.TabIndex = 52;
             this.manufacturing_rent_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Sep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_rent_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_rent_Sep.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1328,6 +1368,7 @@
             this.manufacturing_rent_Oct.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_rent_Oct.TabIndex = 62;
             this.manufacturing_rent_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Oct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_rent_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_rent_Oct.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1343,6 +1384,7 @@
             this.manufacturing_rent_Nov.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_rent_Nov.TabIndex = 72;
             this.manufacturing_rent_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Nov.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_rent_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_rent_Nov.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1358,6 +1400,7 @@
             this.manufacturing_rent_Dec.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_rent_Dec.TabIndex = 82;
             this.manufacturing_rent_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Dec.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_rent_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_rent_Dec.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1373,6 +1416,7 @@
             this.manufacturing_rent_Jan.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_rent_Jan.TabIndex = 92;
             this.manufacturing_rent_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Jan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_rent_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_rent_Jan.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1388,6 +1432,7 @@
             this.manufacturing_rent_Feb.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_rent_Feb.TabIndex = 102;
             this.manufacturing_rent_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Feb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_rent_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_rent_Feb.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1403,6 +1448,7 @@
             this.manufacturing_rent_Mar.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_rent_Mar.TabIndex = 112;
             this.manufacturing_rent_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_rent_Mar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_rent_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_rent_Mar.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1418,6 +1464,7 @@
             this.manufacturing_repair_Jun.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_repair_Jun.TabIndex = 23;
             this.manufacturing_repair_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Jun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_repair_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_repair_Jun.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1433,6 +1480,7 @@
             this.manufacturing_repair_Jul.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_repair_Jul.TabIndex = 33;
             this.manufacturing_repair_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Jul.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_repair_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_repair_Jul.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1448,6 +1496,7 @@
             this.manufacturing_repair_Aug.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_repair_Aug.TabIndex = 43;
             this.manufacturing_repair_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Aug.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_repair_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_repair_Aug.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1463,6 +1512,7 @@
             this.manufacturing_repair_Sep.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_repair_Sep.TabIndex = 53;
             this.manufacturing_repair_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Sep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_repair_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_repair_Sep.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1478,6 +1528,7 @@
             this.manufacturing_repair_Oct.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_repair_Oct.TabIndex = 63;
             this.manufacturing_repair_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Oct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_repair_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_repair_Oct.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1493,6 +1544,7 @@
             this.manufacturing_repair_Nov.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_repair_Nov.TabIndex = 73;
             this.manufacturing_repair_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Nov.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_repair_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_repair_Nov.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1508,6 +1560,7 @@
             this.manufacturing_repair_Dec.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_repair_Dec.TabIndex = 83;
             this.manufacturing_repair_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Dec.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_repair_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_repair_Dec.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1523,6 +1576,7 @@
             this.manufacturing_repair_Jan.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_repair_Jan.TabIndex = 93;
             this.manufacturing_repair_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Jan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_repair_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_repair_Jan.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1538,6 +1592,7 @@
             this.manufacturing_repair_Feb.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_repair_Feb.TabIndex = 103;
             this.manufacturing_repair_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Feb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_repair_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_repair_Feb.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1553,6 +1608,7 @@
             this.manufacturing_repair_Mar.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_repair_Mar.TabIndex = 113;
             this.manufacturing_repair_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_repair_Mar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_repair_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_repair_Mar.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1568,6 +1624,7 @@
             this.manufacturing_stock_Jun.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_stock_Jun.TabIndex = 24;
             this.manufacturing_stock_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Jun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_stock_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_stock_Jun.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1583,6 +1640,7 @@
             this.manufacturing_stock_Jul.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_stock_Jul.TabIndex = 34;
             this.manufacturing_stock_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Jul.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_stock_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_stock_Jul.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1598,6 +1656,7 @@
             this.manufacturing_stock_Aug.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_stock_Aug.TabIndex = 44;
             this.manufacturing_stock_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Aug.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_stock_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_stock_Aug.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1613,6 +1672,7 @@
             this.manufacturing_stock_Sep.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_stock_Sep.TabIndex = 54;
             this.manufacturing_stock_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Sep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_stock_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_stock_Sep.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1628,6 +1688,7 @@
             this.manufacturing_stock_Oct.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_stock_Oct.TabIndex = 64;
             this.manufacturing_stock_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Oct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_stock_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_stock_Oct.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1643,6 +1704,7 @@
             this.manufacturing_stock_Nov.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_stock_Nov.TabIndex = 74;
             this.manufacturing_stock_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Nov.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_stock_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_stock_Nov.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1658,6 +1720,7 @@
             this.manufacturing_stock_Dec.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_stock_Dec.TabIndex = 84;
             this.manufacturing_stock_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Dec.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_stock_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_stock_Dec.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1673,6 +1736,7 @@
             this.manufacturing_stock_Jan.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_stock_Jan.TabIndex = 94;
             this.manufacturing_stock_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Jan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_stock_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_stock_Jan.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1688,6 +1752,7 @@
             this.manufacturing_stock_Feb.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_stock_Feb.TabIndex = 104;
             this.manufacturing_stock_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Feb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_stock_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_stock_Feb.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1703,6 +1768,7 @@
             this.manufacturing_stock_Mar.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_stock_Mar.TabIndex = 114;
             this.manufacturing_stock_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_stock_Mar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_stock_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_stock_Mar.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1718,6 +1784,7 @@
             this.manufacturing_other_Jun.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_other_Jun.TabIndex = 25;
             this.manufacturing_other_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Jun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_other_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_other_Jun.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1733,6 +1800,7 @@
             this.manufacturing_other_Jul.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_other_Jul.TabIndex = 35;
             this.manufacturing_other_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Jul.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_other_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_other_Jul.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1748,6 +1816,7 @@
             this.manufacturing_other_Aug.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_other_Aug.TabIndex = 45;
             this.manufacturing_other_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Aug.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_other_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_other_Aug.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1763,6 +1832,7 @@
             this.manufacturing_other_Sep.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_other_Sep.TabIndex = 55;
             this.manufacturing_other_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Sep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_other_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_other_Sep.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1778,6 +1848,7 @@
             this.manufacturing_other_Oct.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_other_Oct.TabIndex = 65;
             this.manufacturing_other_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Oct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_other_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_other_Oct.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1793,6 +1864,7 @@
             this.manufacturing_other_Nov.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_other_Nov.TabIndex = 75;
             this.manufacturing_other_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Nov.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_other_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_other_Nov.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1808,6 +1880,7 @@
             this.manufacturing_other_Dec.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_other_Dec.TabIndex = 85;
             this.manufacturing_other_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Dec.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_other_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_other_Dec.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1823,6 +1896,7 @@
             this.manufacturing_other_Jan.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_other_Jan.TabIndex = 95;
             this.manufacturing_other_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Jan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_other_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_other_Jan.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1838,6 +1912,7 @@
             this.manufacturing_other_Feb.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_other_Feb.TabIndex = 105;
             this.manufacturing_other_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Feb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_other_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_other_Feb.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1853,6 +1928,7 @@
             this.manufacturing_other_Mar.Size = new System.Drawing.Size(109, 23);
             this.manufacturing_other_Mar.TabIndex = 115;
             this.manufacturing_other_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.manufacturing_other_Mar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.manufacturing_other_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.manufacturing_other_Mar.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1868,6 +1944,7 @@
             this.selling_personnel_Jun.Size = new System.Drawing.Size(109, 23);
             this.selling_personnel_Jun.TabIndex = 26;
             this.selling_personnel_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Jun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_personnel_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_personnel_Jun.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1883,6 +1960,7 @@
             this.selling_personnel_Jul.Size = new System.Drawing.Size(109, 23);
             this.selling_personnel_Jul.TabIndex = 36;
             this.selling_personnel_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Jul.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_personnel_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_personnel_Jul.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1898,6 +1976,7 @@
             this.selling_personnel_Aug.Size = new System.Drawing.Size(109, 23);
             this.selling_personnel_Aug.TabIndex = 46;
             this.selling_personnel_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Aug.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_personnel_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_personnel_Aug.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1913,6 +1992,7 @@
             this.selling_personnel_Sep.Size = new System.Drawing.Size(109, 23);
             this.selling_personnel_Sep.TabIndex = 56;
             this.selling_personnel_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Sep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_personnel_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_personnel_Sep.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1928,6 +2008,7 @@
             this.selling_personnel_Oct.Size = new System.Drawing.Size(109, 23);
             this.selling_personnel_Oct.TabIndex = 66;
             this.selling_personnel_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Oct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_personnel_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_personnel_Oct.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1943,6 +2024,7 @@
             this.selling_personnel_Nov.Size = new System.Drawing.Size(109, 23);
             this.selling_personnel_Nov.TabIndex = 76;
             this.selling_personnel_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Nov.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_personnel_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_personnel_Nov.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1958,6 +2040,7 @@
             this.selling_personnel_Dec.Size = new System.Drawing.Size(109, 23);
             this.selling_personnel_Dec.TabIndex = 86;
             this.selling_personnel_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Dec.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_personnel_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_personnel_Dec.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1973,6 +2056,7 @@
             this.selling_personnel_Jan.Size = new System.Drawing.Size(109, 23);
             this.selling_personnel_Jan.TabIndex = 96;
             this.selling_personnel_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Jan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_personnel_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_personnel_Jan.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -1988,6 +2072,7 @@
             this.selling_personnel_Feb.Size = new System.Drawing.Size(109, 23);
             this.selling_personnel_Feb.TabIndex = 106;
             this.selling_personnel_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Feb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_personnel_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_personnel_Feb.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2003,6 +2088,7 @@
             this.selling_personnel_Mar.Size = new System.Drawing.Size(109, 23);
             this.selling_personnel_Mar.TabIndex = 116;
             this.selling_personnel_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_personnel_Mar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_personnel_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_personnel_Mar.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2018,6 +2104,7 @@
             this.selling_depreciation_Mar.Size = new System.Drawing.Size(109, 23);
             this.selling_depreciation_Mar.TabIndex = 117;
             this.selling_depreciation_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Mar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_depreciation_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_depreciation_Mar.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2033,6 +2120,7 @@
             this.selling_depreciation_Feb.Size = new System.Drawing.Size(109, 23);
             this.selling_depreciation_Feb.TabIndex = 107;
             this.selling_depreciation_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Feb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_depreciation_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_depreciation_Feb.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2048,6 +2136,7 @@
             this.selling_depreciation_Jan.Size = new System.Drawing.Size(109, 23);
             this.selling_depreciation_Jan.TabIndex = 97;
             this.selling_depreciation_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Jan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_depreciation_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_depreciation_Jan.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2063,6 +2152,7 @@
             this.selling_depreciation_Dec.Size = new System.Drawing.Size(109, 23);
             this.selling_depreciation_Dec.TabIndex = 87;
             this.selling_depreciation_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Dec.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_depreciation_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_depreciation_Dec.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2078,6 +2168,7 @@
             this.selling_depreciation_Nov.Size = new System.Drawing.Size(109, 23);
             this.selling_depreciation_Nov.TabIndex = 77;
             this.selling_depreciation_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Nov.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_depreciation_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_depreciation_Nov.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2093,6 +2184,7 @@
             this.selling_depreciation_Oct.Size = new System.Drawing.Size(109, 23);
             this.selling_depreciation_Oct.TabIndex = 67;
             this.selling_depreciation_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Oct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_depreciation_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_depreciation_Oct.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2108,6 +2200,7 @@
             this.selling_depreciation_Sep.Size = new System.Drawing.Size(109, 23);
             this.selling_depreciation_Sep.TabIndex = 57;
             this.selling_depreciation_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Sep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_depreciation_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_depreciation_Sep.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2123,6 +2216,7 @@
             this.selling_depreciation_Aug.Size = new System.Drawing.Size(109, 23);
             this.selling_depreciation_Aug.TabIndex = 47;
             this.selling_depreciation_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Aug.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_depreciation_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_depreciation_Aug.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2138,6 +2232,7 @@
             this.selling_depreciation_Jul.Size = new System.Drawing.Size(109, 23);
             this.selling_depreciation_Jul.TabIndex = 37;
             this.selling_depreciation_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Jul.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_depreciation_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_depreciation_Jul.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2153,6 +2248,7 @@
             this.selling_depreciation_Jun.Size = new System.Drawing.Size(109, 23);
             this.selling_depreciation_Jun.TabIndex = 27;
             this.selling_depreciation_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_depreciation_Jun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_depreciation_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_depreciation_Jun.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2168,6 +2264,7 @@
             this.selling_other_Apr.Size = new System.Drawing.Size(109, 23);
             this.selling_other_Apr.TabIndex = 8;
             this.selling_other_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Apr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_other_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_other_Apr.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2183,6 +2280,7 @@
             this.operating_expenses_Apr.Size = new System.Drawing.Size(109, 23);
             this.operating_expenses_Apr.TabIndex = 9;
             this.operating_expenses_Apr.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Apr.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.operating_expenses_Apr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.operating_expenses_Apr.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2198,6 +2296,7 @@
             this.selling_other_May.Size = new System.Drawing.Size(109, 23);
             this.selling_other_May.TabIndex = 18;
             this.selling_other_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_May.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_other_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_other_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2213,6 +2312,7 @@
             this.selling_other_Jun.Size = new System.Drawing.Size(109, 23);
             this.selling_other_Jun.TabIndex = 28;
             this.selling_other_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Jun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_other_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_other_Jun.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2228,6 +2328,7 @@
             this.selling_other_Jul.Size = new System.Drawing.Size(109, 23);
             this.selling_other_Jul.TabIndex = 38;
             this.selling_other_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Jul.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_other_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_other_Jul.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2243,6 +2344,7 @@
             this.selling_other_Aug.Size = new System.Drawing.Size(109, 23);
             this.selling_other_Aug.TabIndex = 48;
             this.selling_other_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Aug.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_other_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_other_Aug.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2258,6 +2360,7 @@
             this.selling_other_Sep.Size = new System.Drawing.Size(109, 23);
             this.selling_other_Sep.TabIndex = 58;
             this.selling_other_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Sep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_other_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_other_Sep.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2273,6 +2376,7 @@
             this.selling_other_Oct.Size = new System.Drawing.Size(109, 23);
             this.selling_other_Oct.TabIndex = 68;
             this.selling_other_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Oct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_other_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_other_Oct.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2288,6 +2392,7 @@
             this.selling_other_Nov.Size = new System.Drawing.Size(109, 23);
             this.selling_other_Nov.TabIndex = 78;
             this.selling_other_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Nov.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_other_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_other_Nov.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2303,6 +2408,7 @@
             this.selling_other_Dec.Size = new System.Drawing.Size(109, 23);
             this.selling_other_Dec.TabIndex = 88;
             this.selling_other_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Dec.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_other_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_other_Dec.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2318,6 +2424,7 @@
             this.selling_other_Jan.Size = new System.Drawing.Size(109, 23);
             this.selling_other_Jan.TabIndex = 98;
             this.selling_other_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Jan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_other_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_other_Jan.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2333,6 +2440,7 @@
             this.selling_other_Feb.Size = new System.Drawing.Size(109, 23);
             this.selling_other_Feb.TabIndex = 108;
             this.selling_other_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Feb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_other_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_other_Feb.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2348,6 +2456,7 @@
             this.selling_other_Mar.Size = new System.Drawing.Size(109, 23);
             this.selling_other_Mar.TabIndex = 118;
             this.selling_other_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.selling_other_Mar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.selling_other_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.selling_other_Mar.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2363,6 +2472,7 @@
             this.operating_expenses_May.Size = new System.Drawing.Size(109, 23);
             this.operating_expenses_May.TabIndex = 19;
             this.operating_expenses_May.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_May.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.operating_expenses_May.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.operating_expenses_May.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2378,6 +2488,7 @@
             this.operating_expenses_Jun.Size = new System.Drawing.Size(109, 23);
             this.operating_expenses_Jun.TabIndex = 29;
             this.operating_expenses_Jun.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Jun.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.operating_expenses_Jun.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.operating_expenses_Jun.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2393,6 +2504,7 @@
             this.operating_expenses_Jul.Size = new System.Drawing.Size(109, 23);
             this.operating_expenses_Jul.TabIndex = 39;
             this.operating_expenses_Jul.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Jul.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.operating_expenses_Jul.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.operating_expenses_Jul.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2408,6 +2520,7 @@
             this.operating_expenses_Aug.Size = new System.Drawing.Size(109, 23);
             this.operating_expenses_Aug.TabIndex = 49;
             this.operating_expenses_Aug.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Aug.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.operating_expenses_Aug.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.operating_expenses_Aug.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2423,6 +2536,7 @@
             this.operating_expenses_Sep.Size = new System.Drawing.Size(109, 23);
             this.operating_expenses_Sep.TabIndex = 59;
             this.operating_expenses_Sep.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Sep.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.operating_expenses_Sep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.operating_expenses_Sep.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2438,6 +2552,7 @@
             this.operating_expenses_Oct.Size = new System.Drawing.Size(109, 23);
             this.operating_expenses_Oct.TabIndex = 69;
             this.operating_expenses_Oct.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Oct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.operating_expenses_Oct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.operating_expenses_Oct.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2453,6 +2568,7 @@
             this.operating_expenses_Nov.Size = new System.Drawing.Size(109, 23);
             this.operating_expenses_Nov.TabIndex = 79;
             this.operating_expenses_Nov.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Nov.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.operating_expenses_Nov.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.operating_expenses_Nov.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2468,6 +2584,7 @@
             this.operating_expenses_Dec.Size = new System.Drawing.Size(109, 23);
             this.operating_expenses_Dec.TabIndex = 89;
             this.operating_expenses_Dec.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Dec.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.operating_expenses_Dec.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.operating_expenses_Dec.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2483,6 +2600,7 @@
             this.operating_expenses_Jan.Size = new System.Drawing.Size(109, 23);
             this.operating_expenses_Jan.TabIndex = 99;
             this.operating_expenses_Jan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Jan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.operating_expenses_Jan.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.operating_expenses_Jan.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2498,6 +2616,7 @@
             this.operating_expenses_Feb.Size = new System.Drawing.Size(109, 23);
             this.operating_expenses_Feb.TabIndex = 109;
             this.operating_expenses_Feb.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Feb.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.operating_expenses_Feb.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.operating_expenses_Feb.Leave += new System.EventHandler(this.textBox_Leave);
             // 
@@ -2513,6 +2632,7 @@
             this.operating_expenses_Mar.Size = new System.Drawing.Size(109, 23);
             this.operating_expenses_Mar.TabIndex = 119;
             this.operating_expenses_Mar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.operating_expenses_Mar.KeyDown += new System.Windows.Forms.KeyEventHandler(this.preprocess_KeyDown);
             this.operating_expenses_Mar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_KeyPress_numeric);
             this.operating_expenses_Mar.Leave += new System.EventHandler(this.textBox_Leave);
             // 

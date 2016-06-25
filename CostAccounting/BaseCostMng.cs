@@ -573,7 +573,7 @@ namespace CostAccounting
                 total += Conversion.Parse((string)row.Cells[columnIndex].Value);
             }
 
-            dataGridViewTotal.Rows[0].Cells[columnIndex].Value = total;
+            dataGridViewTotal.Rows[0].Cells[columnIndex].Value = total.ToString("#,0");
         }
 
         /*************************************************************
@@ -612,11 +612,11 @@ namespace CostAccounting
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
                 if ("転売品".Equals(row.Cells[1].Value))
-                    row.Cells[39].Value = decimal.Zero.ToString("P");
+                    row.Cells[39].Value = decimal.Zero.ToString("P6");
                 else
                     row.Cells[39].Value = excludeResaleTotal == decimal.Zero ?
-                        decimal.Zero.ToString("P") :
-                        decimal.Divide(Conversion.Parse((string)row.Cells[15].Value), excludeResaleTotal).ToString("P");
+                        decimal.Zero.ToString("P6") :
+                        decimal.Divide(Conversion.Parse((string)row.Cells[15].Value), excludeResaleTotal).ToString("P6");
             }
         }
 
@@ -633,7 +633,7 @@ namespace CostAccounting
                 if (!string.IsNullOrEmpty(rateStr))
                     rateStr = rateStr.Replace("%", "");
                 decimal rate = decimal.Divide(Conversion.Parse(rateStr), 100);
-                row.Cells[columnIndex].Value = decimal.Multiply(targetCost, rate).ToString("#,0");
+                row.Cells[columnIndex].Value = decimal.Multiply(targetCost, rate).ToString("N6");
 
                 row.Cells[50].Value = (Conversion.Parse((string)row.Cells[40].Value)
                                        + Conversion.Parse((string)row.Cells[41].Value)
@@ -644,10 +644,10 @@ namespace CostAccounting
                                        + Conversion.Parse((string)row.Cells[46].Value)
                                        + Conversion.Parse((string)row.Cells[47].Value)
                                        + Conversion.Parse((string)row.Cells[48].Value)
-                                       + Conversion.Parse((string)row.Cells[49].Value)).ToString("#,0");
+                                       + Conversion.Parse((string)row.Cells[49].Value)).ToString("N6");
                 total += Conversion.Parse((string)row.Cells[50].Value);
             }
-            dataGridViewTotal.Rows[0].Cells[50].Value = total.ToString("#,0");
+            dataGridViewTotal.Rows[0].Cells[50].Value = total.ToString("N6");
         }
 
         /*************************************************************

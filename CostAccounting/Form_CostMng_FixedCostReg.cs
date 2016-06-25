@@ -253,5 +253,25 @@ namespace CostAccounting
             Logger.Info(Message.INF003, new string[] { this.Text, "-" });
             Program.MessageBoxAfter("登録しました。");
         }
+
+        /*************************************************************
+         * Enterキー押下にてタブ移動する
+         *************************************************************/
+        private void preprocess_KeyDown(object sender, KeyEventArgs e)
+        {
+            //Enterキーが押されているか確認
+            //AltかCtrlキーが押されている時は無視する
+            if ((e.KeyCode == Keys.Enter)
+                && !e.Alt && !e.Control)
+            {
+                //あたかもTabキーが押されたかのようにする
+                //Shiftが押されている時は前のコントロールのフォーカスを移動
+                this.ProcessTabKey(!e.Shift);
+
+                e.Handled = true;
+                //.NET Framework 2.0以降
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

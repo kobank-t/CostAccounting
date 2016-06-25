@@ -774,11 +774,11 @@ namespace CostAccounting
                 foreach (DataGridViewRow row in dataGridView.Rows)
                 {
                     if ("転売品".Equals(row.Cells[1].Value))
-                        row.Cells[74 + offset].Value = decimal.Zero.ToString("P");
+                        row.Cells[74 + offset].Value = decimal.Zero.ToString("P6");
                     else
                         row.Cells[74 + offset].Value = excludeResaleTotal == decimal.Zero ?
-                            decimal.Zero.ToString("P") :
-                            decimal.Divide(Conversion.Parse((string)row.Cells[26 + offset].Value), excludeResaleTotal).ToString("P");
+                            decimal.Zero.ToString("P6") :
+                            decimal.Divide(Conversion.Parse((string)row.Cells[26 + offset].Value), excludeResaleTotal).ToString("P6");
                 }
             }
         }
@@ -826,10 +826,10 @@ namespace CostAccounting
                                                 + Conversion.Parse((string)row.Cells[88 + offset].Value)
                                                 + Conversion.Parse((string)row.Cells[90 + offset].Value)
                                                 + Conversion.Parse((string)row.Cells[92 + offset].Value)
-                                                + Conversion.Parse((string)row.Cells[94 + offset].Value)).ToString("#,0");
+                                                + Conversion.Parse((string)row.Cells[94 + offset].Value)).ToString("N6");
                 total += Conversion.Parse((string)row.Cells[96 + offset].Value);
             }
-            dataGridViewTotal.Rows[0].Cells[96 + offset].Value = total.ToString("#,0");
+            dataGridViewTotal.Rows[0].Cells[96 + offset].Value = total.ToString("N6");
         }
 
         /*************************************************************
