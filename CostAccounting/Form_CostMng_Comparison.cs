@@ -826,10 +826,10 @@ namespace CostAccounting
                                                 + Conversion.Parse((string)row.Cells[88 + offset].Value)
                                                 + Conversion.Parse((string)row.Cells[90 + offset].Value)
                                                 + Conversion.Parse((string)row.Cells[92 + offset].Value)
-                                                + Conversion.Parse((string)row.Cells[94 + offset].Value)).ToString("N6");
+                                                + Conversion.Parse((string)row.Cells[94 + offset].Value)).ToString("#,0");
                 total += Conversion.Parse((string)row.Cells[96 + offset].Value);
             }
-            dataGridViewTotal.Rows[0].Cells[96 + offset].Value = total.ToString("N6");
+            dataGridViewTotal.Rows[0].Cells[96 + offset].Value = total.ToString("#,0");
         }
 
         /*************************************************************

@@ -633,7 +633,7 @@ namespace CostAccounting
                 if (!string.IsNullOrEmpty(rateStr))
                     rateStr = rateStr.Replace("%", "");
                 decimal rate = decimal.Divide(Conversion.Parse(rateStr), 100);
-                row.Cells[columnIndex].Value = decimal.Multiply(targetCost, rate).ToString("N6");
+                row.Cells[columnIndex].Value = decimal.Multiply(targetCost, rate).ToString("#,0");
 
                 row.Cells[50].Value = (Conversion.Parse((string)row.Cells[40].Value)
                                        + Conversion.Parse((string)row.Cells[41].Value)
@@ -644,10 +644,10 @@ namespace CostAccounting
                                        + Conversion.Parse((string)row.Cells[46].Value)
                                        + Conversion.Parse((string)row.Cells[47].Value)
                                        + Conversion.Parse((string)row.Cells[48].Value)
-                                       + Conversion.Parse((string)row.Cells[49].Value)).ToString("N6");
+                                       + Conversion.Parse((string)row.Cells[49].Value)).ToString("#,0");
                 total += Conversion.Parse((string)row.Cells[50].Value);
             }
-            dataGridViewTotal.Rows[0].Cells[50].Value = total.ToString("N6");
+            dataGridViewTotal.Rows[0].Cells[50].Value = total.ToString("#,0");
         }
 
         /*************************************************************
