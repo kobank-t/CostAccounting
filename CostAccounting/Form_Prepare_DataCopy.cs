@@ -397,6 +397,11 @@ namespace CostAccounting
                         entity.month_04 = decimal.Zero; entity.month_05 = decimal.Zero; entity.month_06 = decimal.Zero;
                         entity.month_07 = decimal.Zero; entity.month_08 = decimal.Zero; entity.month_09 = decimal.Zero;
                         entity.month_10 = decimal.Zero; entity.month_11 = decimal.Zero; entity.month_12 = decimal.Zero;
+
+                        entity.num01 = decimal.Zero; entity.num02 = decimal.Zero; entity.num03 = decimal.Zero;
+                        entity.num04 = decimal.Zero; entity.num05 = decimal.Zero; entity.num06 = decimal.Zero;
+                        entity.num07 = decimal.Zero; entity.num08 = decimal.Zero; entity.num09 = decimal.Zero;
+                        entity.num10 = decimal.Zero; entity.num11 = decimal.Zero; entity.num12 = decimal.Zero;
                     }
 
                     context.ProductSupplier.Add(entity);
