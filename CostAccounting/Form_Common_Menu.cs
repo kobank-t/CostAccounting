@@ -271,10 +271,10 @@ namespace CostAccounting
          *************************************************************/
         private void openForm(Form target)
         {
-            target.ShowDialog();
-            target.Dispose();
             DataTableSupport.refresh();
             Parameters.refresh();
+            target.ShowDialog();
+            target.Dispose();
         }
 
     }
