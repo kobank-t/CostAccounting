@@ -154,6 +154,16 @@ namespace CostAccounting
                     { 1, "num01" }, { 2, "num02" }, { 3, "num03" }
                 };
 
+
+                // CSVデータを反映する前に、登録済みデータを削除
+                foreach (DataGridViewRow row in dataGridView.Rows)
+                {
+                    row.Cells[targetIndex[targetMonth.Value]].Value = decimal.Zero.ToString("#,0");
+                    row.Cells[numIndex[targetMonth.Value]].Value = decimal.Zero.ToString("N");
+                    base.calcRow(row.Index);
+                }
+
+                // CSVデータの反映
                 bool allok = true;
                 foreach (ListViewItem item in form.listView.Items)
                 {
