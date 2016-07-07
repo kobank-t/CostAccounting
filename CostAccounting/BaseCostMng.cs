@@ -36,7 +36,7 @@ namespace CostAccounting
 
         // チェックボックスのコントロール定義
         private Dictionary<string, CheckBox> checkBoxDic = new Dictionary<string, CheckBox>();
-        private Dictionary<int, string> monthDic = new Dictionary<int, string> {
+        protected Dictionary<int, string> monthDic = new Dictionary<int, string> {
                 { 16, "4月" }, { 17, "5月" }, { 18, "6月" }, { 19, "7月" },
                 { 20, "8月" }, { 21, "9月" }, { 22, "10月" }, { 23, "11月" },
                 { 24 , "12月" }, { 25, "1月" }, { 26, "2月" }, { 27, "3月" }
@@ -593,7 +593,7 @@ namespace CostAccounting
         /*************************************************************
          * 売り上げ列を計算する
          *************************************************************/
-        private void calcProceeds()
+        protected void calcProceeds()
         {
             // 売り上げの計算
             decimal total = decimal.Zero;
@@ -623,7 +623,7 @@ namespace CostAccounting
         /*************************************************************
          * 合計行の計算を行う
          *************************************************************/
-        private void calcTotal(int columnIndex)
+        protected void calcTotal(int columnIndex)
         {
             decimal total = decimal.Zero;
             decimal targetCost = Conversion.Parse((string)dataGridViewTotal.Rows[0].Cells[columnIndex].Value);
@@ -653,7 +653,7 @@ namespace CostAccounting
         /*************************************************************
          * 経営利益の計算を行う
          *************************************************************/
-        private void calcManagementProfit()
+        protected void calcManagementProfit()
         {
             decimal total = decimal.Zero;
             foreach (DataGridViewRow row in dataGridView.Rows)
@@ -668,7 +668,7 @@ namespace CostAccounting
         /*************************************************************
          * 製造原価・粗利益・粗利益率の計算を行う
          *************************************************************/
-        private void calcProfit()
+        protected void calcProfit()
         {
             decimal totalCost = decimal.Zero;
             decimal totalProfit = decimal.Zero;
@@ -800,7 +800,7 @@ namespace CostAccounting
         /*************************************************************
          * 合計値の算出のみ必要な列の計算を行う
          *************************************************************/
-        private void calcOnlyTotal()
+        protected void calcOnlyTotal()
         {
             int[] columnIndex = { 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 };
             decimal[] total = new decimal[columnIndex.Count()];

@@ -97,6 +97,10 @@ namespace CostAccounting
             // 品種別または取り引き先別の集計データを設定する
             Const.CATEGORY_TYPE category = Program.judgeCategory(radioBudget, radioActual);
 
+            // 固定費データを設定する
+            setDataFixedCost();
+            
+            // 品種または取引先での集計データを設定する
             if (radioItem.Checked)
             {
                 setData_Item();
@@ -118,11 +122,24 @@ namespace CostAccounting
                 dataGridViewTotal.Columns[2].Visible = true;
             }
 
-            // 固定費データを設定する
-            setDataFixedCost();
-
             // 設定内容で計算する
-            base.calcAll();
+            int[] columnIndex = { 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27 };
+
+            foreach (int index in columnIndex)
+                base.calcColumn(index);
+
+            base.calcProceeds();
+            base.calcOnlyTotal();
+            base.calcManagementProfit();
+            base.calcProfit();
+
+            int[] columnIndexTotal = { 40, 41, 42, 43, 44, 45, 46, 47, 48, 49 };
+            foreach (int index in columnIndexTotal)
+            {
+                base.calcTotal(index);
+                base.calcManagementProfit();
+                base.calcProfit();
+            }
 
             //スクロールバーの状態をリセットする
             base.resetScrollBars();
@@ -156,96 +173,75 @@ namespace CostAccounting
                 var dataList = target.ToList();
                 dataGridView.RowCount = dataList.Count;
 
+                int[] saveColIndex = { 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 };
+
                 for (int i = 0; i < dataList.Count; i++)
                 {
                     dataGridView.Rows[i].Cells[0].Value = (i + 1).ToString();
                     dataGridView.Rows[i].Cells[1].Value = dataList[i].Key;
 
                     decimal rateExpend = decimal.Divide(Parameters.getInstance(category).rateExpend, 100);
+                    decimal[] saveVal = new decimal[saveColIndex.Length];
+
                     foreach (var data in dataList[i])
                     {
-                        dataGridView.Rows[i].Cells[4].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[4].Value)
-                                                               + data.t_supplier.unit_price).ToString("#,0");
-                        dataGridView.Rows[i].Cells[5].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[5].Value)
-                                                               + data.t_product.material_cost).ToString("#,0");
-                        dataGridView.Rows[i].Cells[6].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[6].Value)
-                                                               + data.t_product.labor_cost_direct).ToString("#,0");
-                        dataGridView.Rows[i].Cells[7].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[7].Value)
-                                                               + data.t_product.contractors_cost).ToString("#,0");
-                        dataGridView.Rows[i].Cells[8].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[8].Value)
-                                                               + data.t_product.materials_fare).ToString("#,0");
-                        dataGridView.Rows[i].Cells[9].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[9].Value)
-                                                               + data.t_product.packing_cost).ToString("#,0");
-                        dataGridView.Rows[i].Cells[10].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[10].Value)
-                                                                + data.t_product.utilities_cost).ToString("#,0");
-                        dataGridView.Rows[i].Cells[11].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[11].Value)
-                                                                + decimal.Multiply(data.t_product.other_cost, rateExpend)).ToString("#,0");
-                        dataGridView.Rows[i].Cells[12].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[12].Value)
-                                                                + data.t_product.packing_fare).ToString("#,0");
+                        dataGridView.Rows[i].Cells[4].Value = data.t_supplier.unit_price.ToString("#,0");
+                        dataGridView.Rows[i].Cells[5].Value = data.t_product.material_cost.ToString("#,0");
+                        dataGridView.Rows[i].Cells[6].Value = data.t_product.labor_cost_direct.ToString("#,0");
+                        dataGridView.Rows[i].Cells[7].Value = data.t_product.contractors_cost.ToString("#,0");
+                        dataGridView.Rows[i].Cells[8].Value = data.t_product.materials_fare.ToString("#,0");
+                        dataGridView.Rows[i].Cells[9].Value = data.t_product.packing_cost.ToString("#,0");
+                        dataGridView.Rows[i].Cells[10].Value = data.t_product.utilities_cost.ToString("#,0");
+                        dataGridView.Rows[i].Cells[11].Value = decimal.Multiply(data.t_product.other_cost, rateExpend).ToString("#,0");
+                        dataGridView.Rows[i].Cells[12].Value = data.t_product.packing_fare.ToString("#,0");
 
-                        dataGridView.Rows[i].Cells[13].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[13].Value)
-                                                                + (data.t_product.material_cost
+                        dataGridView.Rows[i].Cells[13].Value = (data.t_product.material_cost
                                                                    + data.t_product.labor_cost_direct
                                                                    + data.t_product.contractors_cost
                                                                    + data.t_product.materials_fare
                                                                    + data.t_product.packing_cost
                                                                    + data.t_product.utilities_cost
                                                                    + decimal.Multiply(data.t_product.other_cost, rateExpend)
-                                                                   + data.t_product.packing_fare)
-                                                                ).ToString("#,0");
+                                                                   + data.t_product.packing_fare).ToString("#,0");
 
-                        dataGridView.Rows[i].Cells[14].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[14].Value)
-                                                                + decimal.Subtract(Conversion.Parse((string)dataGridView.Rows[i].Cells[4].Value)
-                                                                                 , Conversion.Parse((string)dataGridView.Rows[i].Cells[13].Value))
-                                                                ).ToString("#,0");
-                        dataGridView.Rows[i].Cells[16].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[16].Value)
-                                                                + data.t_supplier.month_04).ToString("#,0");
-                        dataGridView.Rows[i].Cells[17].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[17].Value)
-                                                                + data.t_supplier.month_05).ToString("#,0");
-                        dataGridView.Rows[i].Cells[18].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[18].Value)
-                                                                + data.t_supplier.month_06).ToString("#,0");
-                        dataGridView.Rows[i].Cells[19].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[19].Value)
-                                                                + data.t_supplier.month_07).ToString("#,0");
-                        dataGridView.Rows[i].Cells[20].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[20].Value)
-                                                                + data.t_supplier.month_08).ToString("#,0");
-                        dataGridView.Rows[i].Cells[21].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[21].Value)
-                                                                + data.t_supplier.month_09).ToString("#,0");
-                        dataGridView.Rows[i].Cells[22].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[22].Value)
-                                                                + data.t_supplier.month_10).ToString("#,0");
-                        dataGridView.Rows[i].Cells[23].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[23].Value)
-                                                                + data.t_supplier.month_11).ToString("#,0");
-                        dataGridView.Rows[i].Cells[24].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[24].Value)
-                                                                + data.t_supplier.month_12).ToString("#,0");
-                        dataGridView.Rows[i].Cells[25].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[25].Value)
-                                                                + data.t_supplier.month_01).ToString("#,0");
-                        dataGridView.Rows[i].Cells[26].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[26].Value)
-                                                                + data.t_supplier.month_02).ToString("#,0");
-                        dataGridView.Rows[i].Cells[27].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[27].Value)
-                                                                + data.t_supplier.month_03).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num04"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num04"].Value)
-                                                                + data.t_supplier.num04).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num05"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num05"].Value)
-                                                                + data.t_supplier.num05).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num06"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num06"].Value)
-                                                                + data.t_supplier.num06).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num07"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num07"].Value)
-                                                                + data.t_supplier.num07).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num08"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num08"].Value)
-                                                                + data.t_supplier.num08).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num09"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num09"].Value)
-                                                                + data.t_supplier.num09).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num10"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num10"].Value)
-                                                                + data.t_supplier.num10).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num11"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num11"].Value)
-                                                                + data.t_supplier.num11).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num12"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num12"].Value)
-                                                                + data.t_supplier.num12).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num01"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num01"].Value)
-                                                                + data.t_supplier.num01).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num02"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num02"].Value)
-                                                                + data.t_supplier.num02).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num03"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num03"].Value)
-                                                                + data.t_supplier.num03).ToString("#,0");
+                        dataGridView.Rows[i].Cells[14].Value = decimal.Subtract(Conversion.Parse((string)dataGridView.Rows[i].Cells[4].Value)
+                                                                                , Conversion.Parse((string)dataGridView.Rows[i].Cells[13].Value)).ToString("#,0");
+
+                        dataGridView.Rows[i].Cells[16].Value = checkBoxApr.Checked ? data.t_supplier.month_04.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[17].Value = checkBoxMay.Checked ? data.t_supplier.month_05.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[18].Value = checkBoxJun.Checked ? data.t_supplier.month_06.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[19].Value = checkBoxJul.Checked ? data.t_supplier.month_07.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[20].Value = checkBoxAug.Checked ? data.t_supplier.month_08.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[21].Value = checkBoxSep.Checked ? data.t_supplier.month_09.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[22].Value = checkBoxOct.Checked ? data.t_supplier.month_10.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[23].Value = checkBoxNov.Checked ? data.t_supplier.month_11.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[24].Value = checkBoxDec.Checked ? data.t_supplier.month_12.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[25].Value = checkBoxJan.Checked ? data.t_supplier.month_01.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[26].Value = checkBoxFeb.Checked ? data.t_supplier.month_02.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[27].Value = checkBoxMar.Checked ? data.t_supplier.month_03.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells["num04"].Value = data.t_supplier.num04.ToString("N");
+                        dataGridView.Rows[i].Cells["num05"].Value = data.t_supplier.num05.ToString("N");
+                        dataGridView.Rows[i].Cells["num06"].Value = data.t_supplier.num06.ToString("N");
+                        dataGridView.Rows[i].Cells["num07"].Value = data.t_supplier.num07.ToString("N");
+                        dataGridView.Rows[i].Cells["num08"].Value = data.t_supplier.num08.ToString("N");
+                        dataGridView.Rows[i].Cells["num09"].Value = data.t_supplier.num09.ToString("N");
+                        dataGridView.Rows[i].Cells["num10"].Value = data.t_supplier.num10.ToString("N");
+                        dataGridView.Rows[i].Cells["num11"].Value = data.t_supplier.num11.ToString("N");
+                        dataGridView.Rows[i].Cells["num12"].Value = data.t_supplier.num12.ToString("N");
+                        dataGridView.Rows[i].Cells["num01"].Value = data.t_supplier.num01.ToString("N");
+                        dataGridView.Rows[i].Cells["num02"].Value = data.t_supplier.num02.ToString("N");
+                        dataGridView.Rows[i].Cells["num03"].Value = data.t_supplier.num03.ToString("N");
+                        base.calcRow(i);
+
+                        for (int j = 0; j < saveColIndex.Length; j++)
+                        {
+                            saveVal[j] += Conversion.Parse((string)dataGridView.Rows[i].Cells[saveColIndex[j]].Value);
+                        }
+                    }
+
+                    for (int j = 0; j < saveColIndex.Length; j++)
+                    {
+                        dataGridView.Rows[i].Cells[saveColIndex[j]].Value = saveVal[j].ToString("#,0");
                     }
                 }
             }
@@ -280,96 +276,75 @@ namespace CostAccounting
                 var dataList = target.ToList();
                 dataGridView.RowCount = dataList.Count;
 
+                int[] saveColIndex = { 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38 };
+
                 for (int i = 0; i < dataList.Count; i++)
                 {
                     dataGridView.Rows[i].Cells[0].Value = (i + 1).ToString();
                     dataGridView.Rows[i].Cells[2].Value = dataList[i].Key;
 
                     decimal rateExpend = decimal.Divide(Parameters.getInstance(category).rateExpend, 100);
+                    decimal[] saveVal = new decimal[saveColIndex.Length];
+
                     foreach (var data in dataList[i])
                     {
-                        dataGridView.Rows[i].Cells[4].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[4].Value)
-                                                               + data.t_supplier.unit_price).ToString("#,0");
-                        dataGridView.Rows[i].Cells[5].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[5].Value)
-                                                               + data.t_product.material_cost).ToString("#,0");
-                        dataGridView.Rows[i].Cells[6].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[6].Value)
-                                                               + data.t_product.labor_cost_direct).ToString("#,0");
-                        dataGridView.Rows[i].Cells[7].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[7].Value)
-                                                               + data.t_product.contractors_cost).ToString("#,0");
-                        dataGridView.Rows[i].Cells[8].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[8].Value)
-                                                               + data.t_product.materials_fare).ToString("#,0");
-                        dataGridView.Rows[i].Cells[9].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[9].Value)
-                                                               + data.t_product.packing_cost).ToString("#,0");
-                        dataGridView.Rows[i].Cells[10].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[10].Value)
-                                                                + data.t_product.utilities_cost).ToString("#,0");
-                        dataGridView.Rows[i].Cells[11].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[11].Value)
-                                                                + decimal.Multiply(data.t_product.other_cost, rateExpend)).ToString("#,0");
-                        dataGridView.Rows[i].Cells[12].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[12].Value)
-                                                                + data.t_product.packing_fare).ToString("#,0");
+                        dataGridView.Rows[i].Cells[4].Value = data.t_supplier.unit_price.ToString("#,0");
+                        dataGridView.Rows[i].Cells[5].Value = data.t_product.material_cost.ToString("#,0");
+                        dataGridView.Rows[i].Cells[6].Value = data.t_product.labor_cost_direct.ToString("#,0");
+                        dataGridView.Rows[i].Cells[7].Value = data.t_product.contractors_cost.ToString("#,0");
+                        dataGridView.Rows[i].Cells[8].Value = data.t_product.materials_fare.ToString("#,0");
+                        dataGridView.Rows[i].Cells[9].Value = data.t_product.packing_cost.ToString("#,0");
+                        dataGridView.Rows[i].Cells[10].Value = data.t_product.utilities_cost.ToString("#,0");
+                        dataGridView.Rows[i].Cells[11].Value = decimal.Multiply(data.t_product.other_cost, rateExpend).ToString("#,0");
+                        dataGridView.Rows[i].Cells[12].Value = data.t_product.packing_fare.ToString("#,0");
 
-                        dataGridView.Rows[i].Cells[13].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[13].Value)
-                                                                + (data.t_product.material_cost
+                        dataGridView.Rows[i].Cells[13].Value = (data.t_product.material_cost
                                                                    + data.t_product.labor_cost_direct
                                                                    + data.t_product.contractors_cost
                                                                    + data.t_product.materials_fare
                                                                    + data.t_product.packing_cost
                                                                    + data.t_product.utilities_cost
                                                                    + decimal.Multiply(data.t_product.other_cost, rateExpend)
-                                                                   + data.t_product.packing_fare)
-                                                                ).ToString("#,0");
+                                                                   + data.t_product.packing_fare).ToString("#,0");
 
-                        dataGridView.Rows[i].Cells[14].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[14].Value)
-                                                                + decimal.Subtract(Conversion.Parse((string)dataGridView.Rows[i].Cells[4].Value)
-                                                                                 , Conversion.Parse((string)dataGridView.Rows[i].Cells[13].Value))
-                                                                ).ToString("#,0");
-                        dataGridView.Rows[i].Cells[16].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[16].Value)
-                                                                + data.t_supplier.month_04).ToString("#,0");
-                        dataGridView.Rows[i].Cells[17].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[17].Value)
-                                                                + data.t_supplier.month_05).ToString("#,0");
-                        dataGridView.Rows[i].Cells[18].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[18].Value)
-                                                                + data.t_supplier.month_06).ToString("#,0");
-                        dataGridView.Rows[i].Cells[19].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[19].Value)
-                                                                + data.t_supplier.month_07).ToString("#,0");
-                        dataGridView.Rows[i].Cells[20].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[20].Value)
-                                                                + data.t_supplier.month_08).ToString("#,0");
-                        dataGridView.Rows[i].Cells[21].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[21].Value)
-                                                                + data.t_supplier.month_09).ToString("#,0");
-                        dataGridView.Rows[i].Cells[22].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[22].Value)
-                                                                + data.t_supplier.month_10).ToString("#,0");
-                        dataGridView.Rows[i].Cells[23].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[23].Value)
-                                                                + data.t_supplier.month_11).ToString("#,0");
-                        dataGridView.Rows[i].Cells[24].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[24].Value)
-                                                                + data.t_supplier.month_12).ToString("#,0");
-                        dataGridView.Rows[i].Cells[25].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[25].Value)
-                                                                + data.t_supplier.month_01).ToString("#,0");
-                        dataGridView.Rows[i].Cells[26].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[26].Value)
-                                                                + data.t_supplier.month_02).ToString("#,0");
-                        dataGridView.Rows[i].Cells[27].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells[27].Value)
-                                                                + data.t_supplier.month_03).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num04"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num04"].Value)
-                                                                + data.t_supplier.num04).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num05"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num05"].Value)
-                                                                + data.t_supplier.num05).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num06"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num06"].Value)
-                                                                + data.t_supplier.num06).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num07"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num07"].Value)
-                                                                + data.t_supplier.num07).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num08"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num08"].Value)
-                                                                + data.t_supplier.num08).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num09"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num09"].Value)
-                                                                + data.t_supplier.num09).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num10"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num10"].Value)
-                                                                + data.t_supplier.num10).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num11"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num11"].Value)
-                                                                + data.t_supplier.num11).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num12"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num12"].Value)
-                                                                + data.t_supplier.num12).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num01"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num01"].Value)
-                                                                + data.t_supplier.num01).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num02"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num02"].Value)
-                                                                + data.t_supplier.num02).ToString("#,0");
-                        dataGridView.Rows[i].Cells["num03"].Value = (Conversion.Parse((string)dataGridView.Rows[i].Cells["num03"].Value)
-                                                                + data.t_supplier.num03).ToString("#,0");
+                        dataGridView.Rows[i].Cells[14].Value = decimal.Subtract(Conversion.Parse((string)dataGridView.Rows[i].Cells[4].Value)
+                                                                                , Conversion.Parse((string)dataGridView.Rows[i].Cells[13].Value)).ToString("#,0");
+
+                        dataGridView.Rows[i].Cells[16].Value = checkBoxApr.Checked ? data.t_supplier.month_04.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[17].Value = checkBoxMay.Checked ? data.t_supplier.month_05.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[18].Value = checkBoxJun.Checked ? data.t_supplier.month_06.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[19].Value = checkBoxJul.Checked ? data.t_supplier.month_07.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[20].Value = checkBoxAug.Checked ? data.t_supplier.month_08.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[21].Value = checkBoxSep.Checked ? data.t_supplier.month_09.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[22].Value = checkBoxOct.Checked ? data.t_supplier.month_10.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[23].Value = checkBoxNov.Checked ? data.t_supplier.month_11.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[24].Value = checkBoxDec.Checked ? data.t_supplier.month_12.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[25].Value = checkBoxJan.Checked ? data.t_supplier.month_01.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[26].Value = checkBoxFeb.Checked ? data.t_supplier.month_02.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells[27].Value = checkBoxMar.Checked ? data.t_supplier.month_03.ToString("#,0") : decimal.Zero.ToString();
+                        dataGridView.Rows[i].Cells["num04"].Value = data.t_supplier.num04.ToString("N");
+                        dataGridView.Rows[i].Cells["num05"].Value = data.t_supplier.num05.ToString("N");
+                        dataGridView.Rows[i].Cells["num06"].Value = data.t_supplier.num06.ToString("N");
+                        dataGridView.Rows[i].Cells["num07"].Value = data.t_supplier.num07.ToString("N");
+                        dataGridView.Rows[i].Cells["num08"].Value = data.t_supplier.num08.ToString("N");
+                        dataGridView.Rows[i].Cells["num09"].Value = data.t_supplier.num09.ToString("N");
+                        dataGridView.Rows[i].Cells["num10"].Value = data.t_supplier.num10.ToString("N");
+                        dataGridView.Rows[i].Cells["num11"].Value = data.t_supplier.num11.ToString("N");
+                        dataGridView.Rows[i].Cells["num12"].Value = data.t_supplier.num12.ToString("N");
+                        dataGridView.Rows[i].Cells["num01"].Value = data.t_supplier.num01.ToString("N");
+                        dataGridView.Rows[i].Cells["num02"].Value = data.t_supplier.num02.ToString("N");
+                        dataGridView.Rows[i].Cells["num03"].Value = data.t_supplier.num03.ToString("N");
+                        base.calcRow(i);
+
+                        for (int j = 0; j < saveColIndex.Length; j++)
+                        {
+                            saveVal[j] += Conversion.Parse((string)dataGridView.Rows[i].Cells[saveColIndex[j]].Value);
+                        }
+                    }
+
+                    for (int j = 0; j < saveColIndex.Length; j++)
+                    {
+                        dataGridView.Rows[i].Cells[saveColIndex[j]].Value = saveVal[j].ToString("#,0");
                     }
                 }
             }
@@ -389,8 +364,8 @@ namespace CostAccounting
          *************************************************************/
         private void btnAllCheck_Click(object sender, EventArgs e)
         {
-            base.setCategory(Program.judgeCategory(radioBudget, radioActual));
-            base.changeCheckBoxState(groupMonth.Controls, true);
+            changeCheckBoxState(true);
+            showTotalizationData();
         }
 
         /*************************************************************
@@ -398,8 +373,8 @@ namespace CostAccounting
          *************************************************************/
         private void btnAllClear_Click(object sender, EventArgs e)
         {
-            base.setCategory(Program.judgeCategory(radioBudget, radioActual));
-            base.changeCheckBoxState(groupMonth.Controls, false);
+            changeCheckBoxState(false);
+            showTotalizationData();
         }
 
         /*************************************************************
@@ -407,8 +382,40 @@ namespace CostAccounting
          *************************************************************/
         private new void checkBox_CheckedChanged(object sender, EventArgs e)
         {
-            base.setCategory(Program.judgeCategory(radioBudget, radioActual));
-            base.checkBox_CheckedChanged(sender, e);
+            CheckBox target = (CheckBox)sender;
+            int index = monthDic.First(x => x.Value.Equals(target.Text)).Key;
+            bool state = target.Checked;
+
+            dataGridViewHeader.Columns[index].Visible = state;
+            dataGridView.Columns[index].Visible = state;
+            dataGridViewTotal.Columns[index].Visible = state;
+
+            resetScrollBars();
+            showTotalizationData();
+        }
+
+        /*************************************************************
+         * チェックボックスの状態を変更する
+         *************************************************************/
+        private void changeCheckBoxState(bool state)
+        {
+            foreach (var control in groupMonth.Controls)
+            {
+                if (control is CheckBox)
+                {
+                    CheckBox target = (CheckBox)control;
+
+                    target.CheckedChanged -= new EventHandler(checkBox_CheckedChanged);
+                    target.Checked = state;
+                    target.CheckedChanged += new EventHandler(checkBox_CheckedChanged);
+
+                    int index = monthDic.First(x => x.Value.Equals(target.Text)).Key;
+                    dataGridViewHeader.Columns[index].Visible = state;
+                    dataGridView.Columns[index].Visible = state;
+                    dataGridViewTotal.Columns[index].Visible = state;
+                }
+            }
+            resetScrollBars();
         }
 
         /*************************************************************
