@@ -134,7 +134,7 @@ namespace CostAccounting
 
             Dictionary<String, decimal[]> aggregate = new Dictionary<string, decimal[]>();
             int[] columnlIndex = { 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27
-                                     , 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38
+                                     , 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39
                                      , 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50 };
 
             foreach (DataGridViewRow row in dataGridView.Rows)
@@ -144,7 +144,19 @@ namespace CostAccounting
 
                 for (int i = 0; i < columnlIndex.Length; i++)
                 {
-                    aggregateRow[i] += Conversion.Parse((string)row.Cells[columnlIndex[i]].Value);
+                    if (columnlIndex[i] != 39)
+                    {
+                        aggregateRow[i] += Conversion.Parse((string)row.Cells[columnlIndex[i]].Value);
+                    }
+                    else
+                    {
+                        // 固定配賦率はパーセントを考慮した集計
+                        string rateStr = (string)row.Cells[columnlIndex[i]].Value;
+                        if (!string.IsNullOrEmpty(rateStr))
+                            rateStr = rateStr.Replace("%", "");
+                        decimal rate = decimal.Divide(Conversion.Parse(rateStr), 100);
+                        aggregateRow[i] += rate;
+                    }
                 }
 
                 // 値の置き換え
@@ -172,14 +184,19 @@ namespace CostAccounting
 
                 for (int i = 0; i < columnlIndex.Length; i++)
                 {
-                    if (columnlIndex[i] != 28)
+                    if (columnlIndex[i] != 28 && columnlIndex[i] != 39)
                     {
                         dataGridView.Rows[index].Cells[columnlIndex[i]].Value = aggregateRow[i].ToString("#,0");
                     }
                     else
                     {
                         // 数量は小数ありのフォーマットで表示
-                        dataGridView.Rows[index].Cells[columnlIndex[i]].Value = aggregateRow[i].ToString("N");
+                        if (columnlIndex[i] == 28)
+                          dataGridView.Rows[index].Cells[columnlIndex[i]].Value = aggregateRow[i].ToString("N");
+
+                        // 固定配賦率はパーセントのフォーマットで表示
+                        if (columnlIndex[i] == 39)
+                            dataGridView.Rows[index].Cells[columnlIndex[i]].Value = aggregateRow[i].ToString("P6");
                     }
                 }
                 ++index;
