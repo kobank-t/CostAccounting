@@ -200,7 +200,7 @@ namespace CostAccounting
          *************************************************************/
         private void textBox_KeyPress_numeric(object sender, KeyPressEventArgs e)
         {
-            Event.textBox_KeyPress_numeric(sender, e);
+            Event.textBox_KeyPress_alphanum(sender, e);
         }
 
         /*************************************************************

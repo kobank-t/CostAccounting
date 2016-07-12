@@ -9,6 +9,7 @@ using log4net.Appender;
 using log4net.Repository.Hierarchy;
 using System.Threading;
 using System.Data.Entity.Validation;
+using System.Text.RegularExpressions;
 
 namespace CostAccounting
 {
@@ -574,6 +575,34 @@ namespace CostAccounting
 
         /// -----------------------------------------------------------------------------
         /// <summary>
+        ///     テキストボックスにて数値とアルファベットのみ入力可能にします。</summary>
+        /// <param name="sender">
+        ///     イベント発生元のオブジェクト。<param>
+        /// <param name="e">
+        ///     キーイベント引数。<param>
+        /// -----------------------------------------------------------------------------
+        public static void textBox_KeyPress_alphanum(object sender, KeyPressEventArgs e)
+        {
+            // 制御文字は入力可
+            if (char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+                return;
+            }
+
+            // 半角英数は入力可能
+            if ((Regex.Match(e.KeyChar.ToString(), "^[a-zA-Z0-9]+$")).Success)
+            {
+                e.Handled = false;
+                return;
+            }
+
+            // 上記以外は入力不可
+            e.Handled = true;
+        }
+
+        /// -----------------------------------------------------------------------------
+        /// <summary>
         ///     テキストボックスのロストフォーカス時にフォーマットします。</summary>
         /// <param name="sender">
         ///     イベント発生元のオブジェクト。<param>
@@ -868,6 +897,7 @@ namespace CostAccounting
         public static string INF004 = "INF004：修正しました。画面名=[{0}]　内容=[{1}]";
         public static string INF005 = "INF005：削除しました。画面名=[{0}]　内容=[{1}]";
         public static string INF006 = "INF006：出力しました。画面名=[{0}]　内容=[{1}]";
+        public static string INF007 = "INF007：再計算しました。画面名=[{0}]　内容=[{1}]";
 
         public static string ERR001 = "ERR001：予期しないエラーが発生しました。";
 

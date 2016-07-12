@@ -873,5 +873,82 @@ namespace CostAccounting
             Event.textBox_KeyPress_numeric(sender, e);
         }
 
+        /*************************************************************
+         * 再計算ボタン押下時の処理
+         *************************************************************/
+        private void btnAllCalc_Click(object sender, EventArgs e)
+        {
+            string radioText = radioBudget.Checked ? "【予定】" : "【実績】";
+            if (Program.MessageBoxBefore(radioText + "の全ブレンド品の再計算を行いますか？"
+                                         + Environment.NewLine
+                                         + "※ブレンド品の数におうじて時間がかかります。") != DialogResult.Yes)
+            {
+                return;
+            }
+
+            using (var context = new CostAccountingEntities())
+            {
+                int category = (int)Program.judgeCategory(radioBudget, radioActual);
+
+                // 商品データの検索
+                var target = from t in context.ProductSupplier
+                             where t.year.Equals(Const.TARGET_YEAR)
+                                && t.category.Equals((int)category)
+                                && t.type.Equals((int)Const.PRODUCT_TYPE.Blend)
+                             orderby t.product_code, t.supplier_code
+                             select t;
+                var dataList = target.ToList();
+                HashSet<string> already = new HashSet<string>();
+
+                // プログレスバーの初期値を設定
+                progressBar.Minimum = 0;
+                progressBar.Maximum = dataList.Count;
+                progressBar.Value = 0;
+                progressBar.Step = 1;
+                for (int i = 0; i < dataList.Count; i++)
+                {
+                    productCode.Text = dataList[i].product_code;
+                    suppllierCode.Text = dataList[i].supplier_code;
+
+                    // データを設定の上、再計算
+                    setProductData();
+                    setSupplierData();
+                    calcAll();
+
+                    // 再計算結果をDBに反映する。
+                    if (!already.Contains(productCode.Text))
+                    {
+                        // 商品は未計算のデータのみ反映対象とする
+                        executeDelete(context, true);
+                        executeAppend(context);
+                        already.Add(productCode.Text);
+                    }
+                    executeChangeSupplier(context);
+
+                    // プログレスバーの値を更新
+                    labelStatus.Refresh();
+                    labelStatus.Text = string.Format("・・・ ( {0} / {1} )"
+                                                     , (i + 1).ToString("#,0")
+                                                     , progressBar.Maximum.ToString("#,0"));
+                    progressBar.PerformStep();
+                }
+
+                context.SaveChanges();
+                Logger.Info(Message.INF007, new string[] { this.Text, Message.create(labelStatus) + radioText });
+                Program.MessageBoxAfter("再計算しました。");
+
+                // データクリア
+                productCode.Text = string.Empty;
+                suppllierCode.Text = string.Empty;
+                itemCode.SelectedIndex = 0;
+                packing.Text = string.Empty;
+                unitPrice.Text = string.Empty;
+                updateTime.Text = string.Empty;
+                updatePC.Text = string.Empty;
+                note.Text = string.Empty;
+                dgvProduct.Rows.Clear();
+                calcAll();
+            }
+        }
     }
 }

@@ -144,6 +144,9 @@
             this.radioBudget = new System.Windows.Forms.RadioButton();
             this.packing = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.labelStatus = new System.Windows.Forms.Label();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
+            this.btnAllCalc = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
@@ -847,7 +850,7 @@
             // 
             // btnAppend
             // 
-            this.btnAppend.Location = new System.Drawing.Point(400, 781);
+            this.btnAppend.Location = new System.Drawing.Point(400, 755);
             this.btnAppend.Name = "btnAppend";
             this.btnAppend.Size = new System.Drawing.Size(75, 23);
             this.btnAppend.TabIndex = 24;
@@ -857,7 +860,7 @@
             // 
             // btnChange
             // 
-            this.btnChange.Location = new System.Drawing.Point(481, 781);
+            this.btnChange.Location = new System.Drawing.Point(481, 755);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(75, 23);
             this.btnChange.TabIndex = 25;
@@ -867,7 +870,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(562, 781);
+            this.btnDelete.Location = new System.Drawing.Point(562, 755);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 26;
@@ -902,7 +905,7 @@
             this.dgvProduct.Location = new System.Drawing.Point(15, 489);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.RowTemplate.Height = 21;
-            this.dgvProduct.Size = new System.Drawing.Size(622, 286);
+            this.dgvProduct.Size = new System.Drawing.Size(622, 263);
             this.dgvProduct.TabIndex = 27;
             this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             this.dgvProduct.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellEndEdit);
@@ -1442,7 +1445,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(197, 784);
+            this.label4.Location = new System.Drawing.Point(197, 758);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 15);
             this.label4.TabIndex = 28;
@@ -1450,7 +1453,7 @@
             // 
             // blendRateTotal
             // 
-            this.blendRateTotal.Location = new System.Drawing.Point(293, 781);
+            this.blendRateTotal.Location = new System.Drawing.Point(293, 755);
             this.blendRateTotal.Name = "blendRateTotal";
             this.blendRateTotal.ReadOnly = true;
             this.blendRateTotal.Size = new System.Drawing.Size(95, 23);
@@ -1463,7 +1466,7 @@
             this.operationKbn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.operationKbn.Font = new System.Drawing.Font("Meiryo UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.operationKbn.ForeColor = System.Drawing.Color.White;
-            this.operationKbn.Location = new System.Drawing.Point(15, 781);
+            this.operationKbn.Location = new System.Drawing.Point(15, 755);
             this.operationKbn.Name = "operationKbn";
             this.operationKbn.Size = new System.Drawing.Size(162, 26);
             this.operationKbn.TabIndex = 30;
@@ -1521,12 +1524,40 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "荷姿";
             // 
+            // labelStatus
+            // 
+            this.labelStatus.AutoSize = true;
+            this.labelStatus.Location = new System.Drawing.Point(322, 789);
+            this.labelStatus.Name = "labelStatus";
+            this.labelStatus.Size = new System.Drawing.Size(0, 15);
+            this.labelStatus.TabIndex = 35;
+            // 
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(96, 794);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(220, 10);
+            this.progressBar.TabIndex = 34;
+            // 
+            // btnAllCalc
+            // 
+            this.btnAllCalc.Location = new System.Drawing.Point(15, 784);
+            this.btnAllCalc.Name = "btnAllCalc";
+            this.btnAllCalc.Size = new System.Drawing.Size(75, 23);
+            this.btnAllCalc.TabIndex = 33;
+            this.btnAllCalc.Text = "再計算";
+            this.btnAllCalc.UseVisualStyleBackColor = true;
+            this.btnAllCalc.Click += new System.EventHandler(this.btnAllCalc_Click);
+            // 
             // Form_ProductMng_BlendReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(652, 813);
+            this.Controls.Add(this.labelStatus);
+            this.Controls.Add(this.progressBar);
+            this.Controls.Add(this.btnAllCalc);
             this.Controls.Add(this.packing);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.category);
@@ -1691,6 +1722,9 @@
         private System.Windows.Forms.RadioButton radioBudget;
         private System.Windows.Forms.TextBox packing;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelStatus;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Button btnAllCalc;
 
 
     }
