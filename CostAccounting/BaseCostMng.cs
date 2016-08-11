@@ -876,8 +876,10 @@ namespace CostAccounting
                         target.First().num10 = Conversion.Parse((string)row.Cells["num10"].Value);
                         target.First().num11 = Conversion.Parse((string)row.Cells["num11"].Value);
                         target.First().num12 = Conversion.Parse((string)row.Cells["num12"].Value);
-                        target.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
-                        target.First().update_date = DateTime.Now;
+                        
+                        // 商品登録時の登録ユーザと更新日時を維持するため、ここでは更新対象外とする
+                        // target.First().update_user = string.Concat(SystemInformation.ComputerName, "/", SystemInformation.UserName);
+                        // target.First().update_date = DateTime.Now;
                     }
                 }
 
