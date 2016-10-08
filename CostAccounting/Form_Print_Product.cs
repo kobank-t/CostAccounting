@@ -348,6 +348,7 @@ namespace CostAccounting
                                        new { t.year, t.code } equals new { m.year, m.code }
                                   where t.year.Equals(Const.TARGET_YEAR)
                                      && t.product_code.Equals(productCode)
+                                     && t.supplier_code.Equals(supplierCode)
                                      && t.category.Equals((int)category)
                                   orderby t.no
                                   select new { t.code, t.quantity, m.name };
