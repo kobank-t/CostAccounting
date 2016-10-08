@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -513,8 +514,35 @@ namespace CostAccounting
                     dataGridView.Rows[i].Cells[9].Value = dataList[i].t_product.packing_cost.ToString("#,0");
                     dataGridView.Rows[i].Cells[10].Value = dataList[i].t_product.utilities_cost.ToString("#,0");
                     dataGridView.Rows[i].Cells[11].Value = decimal.Multiply(dataList[i].t_product.other_cost, rateExpend).ToString("#,0");
-                    dataGridView.Rows[i].Cells[12].Value = dataList[i].t_product.packing_fare.ToString("#,0");
 
+                    
+                    //----------------------------------------------------------------------------------------------
+                    // 荷造運賃は、取引先単位に計算した金額を設定するよう修正（2016/10/09）
+                    // ↓ここから
+                    //----------------------------------------------------------------------------------------------
+                    // dataGridView.Rows[i].Cells[12].Value = dataList[i].t_product.packing_fare.ToString("#,0");
+
+                    string product_code = dataList[i].m_product.code;
+                    string supplier_code = dataList[i].m_supplier.code;
+                    var packingFare = from t in context.ProductPackingFare
+                                      where t.year.Equals(Const.TARGET_YEAR)
+                                         && t.product_code.Equals(product_code)
+                                         && t.supplier_code.Equals(supplier_code)
+                                         && t.category.Equals((int)category)
+                                      select t;
+
+                    decimal sumAmount = 0;
+                    DataTable fare = DataTableSupport.getInstance(category).fare;
+                    foreach (var data in packingFare)
+                    {
+                        decimal amount = decimal.Multiply(data.quantity, DataTableSupport.getPrice(fare, data.code));
+                        sumAmount += amount;
+                    }
+                    dataGridView.Rows[i].Cells[12].Value = sumAmount.ToString("#,0");
+                    //----------------------------------------------------------------------------------------------
+                    // ↑ここまで
+                    //----------------------------------------------------------------------------------------------
+    
                     dataGridView.Rows[i].Cells[13].Value = (dataList[i].t_product.material_cost
                                                             + dataList[i].t_product.labor_cost_direct
                                                             + dataList[i].t_product.contractors_cost

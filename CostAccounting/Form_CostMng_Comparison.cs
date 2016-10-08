@@ -12,7 +12,7 @@ namespace CostAccounting
     {
         // チェックボックスのコントロール定義
         private Dictionary<string, CheckBox> checkBoxDic = new Dictionary<string, CheckBox>();
-        private Dictionary<int, string> monthDic = new Dictionary<int, string> {
+        private new Dictionary<int, string> monthDic = new Dictionary<int, string> {
                 { 28, "4月" }, { 30, "5月" }, { 32, "6月" }, { 34, "7月" },
                 { 36, "8月" }, { 38, "9月" }, { 40, "10月" }, { 42, "11月" },
                 { 44, "12月" }, { 46, "1月" }, { 48, "2月" }, { 50, "3月" }
@@ -753,7 +753,7 @@ namespace CostAccounting
         /*************************************************************
          * 売り上げ列を計算する
          *************************************************************/
-        private void calcProceeds()
+        private new void calcProceeds()
         {
             for (int offset = 0; offset < 2; offset++)
             {
@@ -786,7 +786,7 @@ namespace CostAccounting
         /*************************************************************
          * 合計値の算出のみ必要な列の計算を行う
          *************************************************************/
-        private void calcOnlyTotal()
+        private new void calcOnlyTotal()
         {
             int[] columnIndex = { 52, 54, 56, 58, 60, 62, 64, 66, 68, 70, 72,
                                   53, 55, 57, 59, 61, 63, 65, 67, 69, 71, 73 };
@@ -835,7 +835,7 @@ namespace CostAccounting
         /*************************************************************
          * 経営利益の計算を行う
          *************************************************************/
-        private void calcManagementProfit()
+        private new void calcManagementProfit()
         {
             for (int offset = 0; offset < 2; offset++)
             {
@@ -853,7 +853,7 @@ namespace CostAccounting
         /*************************************************************
          * 製造原価・粗利益・粗利益率の計算を行う
          *************************************************************/
-        private void calcProfit()
+        private new void calcProfit()
         {
             for (int offset = 0; offset < 2; offset++)
             {
