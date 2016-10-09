@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -486,7 +487,16 @@ namespace CostAccounting
                     dataGridView.Rows[i].Cells[15].Value = dataList[i].t_actual.t_product.packing_cost.ToString("#,0");
                     dataGridView.Rows[i].Cells[17].Value = dataList[i].t_actual.t_product.utilities_cost.ToString("#,0");
                     dataGridView.Rows[i].Cells[19].Value = decimal.Multiply(dataList[i].t_actual.t_product.other_cost, rateExpend_actual).ToString("#,0");
-                    dataGridView.Rows[i].Cells[21].Value = dataList[i].t_actual.t_product.packing_fare.ToString("#,0");
+
+                    //----------------------------------------------------------------------------------------------
+                    // 荷造運賃は、取引先単位に計算した金額を設定するよう修正（2016/10/09）
+                    // ↓ここから
+                    //----------------------------------------------------------------------------------------------
+                    // dataGridView.Rows[i].Cells[21].Value = dataList[i].t_actual.t_product.packing_fare.ToString("#,0");
+                    dataGridView.Rows[i].Cells[21].Value = getPackingFare(context, Const.CATEGORY_TYPE.Actual, dataList[i].m_product.code, dataList[i].m_supplier.code);
+                    //----------------------------------------------------------------------------------------------
+                    // ↑ここまで
+                    //----------------------------------------------------------------------------------------------
 
                     dataGridView.Rows[i].Cells[23].Value = (dataList[i].t_actual.t_product.material_cost
                                                             + dataList[i].t_actual.t_product.labor_cost_direct
@@ -537,7 +547,16 @@ namespace CostAccounting
                         dataGridView.Rows[i].Cells[14].Value = dataList[i].t_budget.t_product.packing_cost.ToString("#,0");
                         dataGridView.Rows[i].Cells[16].Value = dataList[i].t_budget.t_product.utilities_cost.ToString("#,0");
                         dataGridView.Rows[i].Cells[18].Value = decimal.Multiply(dataList[i].t_budget.t_product.other_cost, rateExpend_budget).ToString("#,0");
-                        dataGridView.Rows[i].Cells[20].Value = dataList[i].t_budget.t_product.packing_fare.ToString("#,0");
+
+                        //----------------------------------------------------------------------------------------------
+                        // 荷造運賃は、取引先単位に計算した金額を設定するよう修正（2016/10/09）
+                        // ↓ここから
+                        //----------------------------------------------------------------------------------------------
+                        // dataGridView.Rows[i].Cells[20].Value = dataList[i].t_budget.t_product.packing_fare.ToString("#,0");
+                        dataGridView.Rows[i].Cells[20].Value = getPackingFare(context, Const.CATEGORY_TYPE.Budget, dataList[i].m_product.code, dataList[i].m_supplier.code);
+                        //----------------------------------------------------------------------------------------------
+                        // ↑ここまで
+                        //----------------------------------------------------------------------------------------------
 
                         dataGridView.Rows[i].Cells[22].Value = (dataList[i].t_budget.t_product.material_cost
                                                                 + dataList[i].t_budget.t_product.labor_cost_direct
@@ -572,6 +591,30 @@ namespace CostAccounting
                     }
                 }
             }
+        }
+
+        /*************************************************************
+         * 指定した取引先の荷造運賃を返却する
+         *************************************************************/
+        private string getPackingFare(CostAccountingEntities context, Const.CATEGORY_TYPE category, string productCode, string supplierCode)
+        {
+            string product_code = productCode;
+            string supplier_code = supplierCode;
+            var packingFare = from t in context.ProductPackingFare
+                              where t.year.Equals(Const.TARGET_YEAR)
+                                 && t.product_code.Equals(product_code)
+                                 && t.supplier_code.Equals(supplier_code)
+                                 && t.category.Equals((int)category)
+                              select t;
+
+            decimal sumAmount = 0;
+            DataTable fare = DataTableSupport.getInstance(category).fare;
+            foreach (var data in packingFare)
+            {
+                decimal amount = decimal.Multiply(data.quantity, DataTableSupport.getPrice(fare, data.code));
+                sumAmount += amount;
+            }
+            return sumAmount.ToString("#,0");
         }
 
         /*************************************************************
