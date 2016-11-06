@@ -43,6 +43,9 @@ namespace CostAccounting
             Const.PRODUCT_TYPE productType = Program.judgeProductType(radioProduct, radioBlend);
             Const.CATEGORY_TYPE category = Program.judgeCategory(radioBudget, radioActual);
 
+            string supplier = textSupplier.Text;
+            string product = textProduct.Text;
+
             // 出力条件に従い、印刷対象データを検索し、リストビューに設定する
             using (var context = new CostAccountingEntities())
             {
@@ -57,6 +60,12 @@ namespace CostAccounting
 
                 foreach (var data in target.ToList())
                 {
+                    if (!string.IsNullOrEmpty(supplier) && !data.supplier_name.Contains(supplier))
+                        continue;
+
+                    if (!string.IsNullOrEmpty(product) && !data.product_name.Contains(product))
+                        continue;
+
                     ListViewItem item = new ListViewItem(data.supplier_code);
                     item.SubItems.Add(data.supplier_name);
                     item.SubItems.Add(data.product_code);
@@ -479,5 +488,17 @@ namespace CostAccounting
         {
             changeCheckBoxState(false);
         }
+
+        /*************************************************************
+         * 取引先略称と商品名のあいまい検索（Enterキー押下時）
+         *************************************************************/
+        private void textSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                setTargetData();
+            }
+        }
+
     }
 }

@@ -521,24 +521,7 @@ namespace CostAccounting
                     // ↓ここから
                     //----------------------------------------------------------------------------------------------
                     // dataGridView.Rows[i].Cells[12].Value = dataList[i].t_product.packing_fare.ToString("#,0");
-
-                    string product_code = dataList[i].m_product.code;
-                    string supplier_code = dataList[i].m_supplier.code;
-                    var packingFare = from t in context.ProductPackingFare
-                                      where t.year.Equals(Const.TARGET_YEAR)
-                                         && t.product_code.Equals(product_code)
-                                         && t.supplier_code.Equals(supplier_code)
-                                         && t.category.Equals((int)category)
-                                      select t;
-
-                    decimal sumAmount = 0;
-                    DataTable fare = DataTableSupport.getInstance(category).fare;
-                    foreach (var data in packingFare)
-                    {
-                        decimal amount = decimal.Multiply(data.quantity, DataTableSupport.getPrice(fare, data.code));
-                        sumAmount += amount;
-                    }
-                    dataGridView.Rows[i].Cells[12].Value = sumAmount.ToString("#,0");
+                    dataGridView.Rows[i].Cells[12].Value = getPackingFare(context, category, dataList[i].m_product.code, dataList[i].m_supplier.code, dataList[i].t_product.volume);
                     //----------------------------------------------------------------------------------------------
                     // ↑ここまで
                     //----------------------------------------------------------------------------------------------
@@ -587,6 +570,31 @@ namespace CostAccounting
                 //------------------------------------------------------------------------------ 固定費を設定
                 setDataFixedCost();
             }
+        }
+
+        /*************************************************************
+         * 指定した取引先の荷造運賃を返却する
+         *************************************************************/
+        protected string getPackingFare(CostAccountingEntities context, Const.CATEGORY_TYPE category, string productCode, string supplierCode, decimal volume)
+        {
+            string product_code = productCode;
+            string supplier_code = supplierCode;
+            var packingFare = from t in context.ProductPackingFare
+                              where t.year.Equals(Const.TARGET_YEAR)
+                                 && t.product_code.Equals(product_code)
+                                 && t.supplier_code.Equals(supplier_code)
+                                 && t.category.Equals((int)category)
+                              select t;
+
+            decimal sumCostKgPerAmount = 0;
+            DataTable fare = DataTableSupport.getInstance(category).fare;
+            foreach (var data in packingFare)
+            {
+                decimal amount = decimal.Multiply(data.quantity, DataTableSupport.getPrice(fare, data.code));
+                decimal kgPerAmount = (volume != decimal.Zero ? decimal.Divide(amount, volume) : decimal.Zero);
+                sumCostKgPerAmount += kgPerAmount;
+            }
+            return sumCostKgPerAmount.ToString("#,0");
         }
 
         /*************************************************************

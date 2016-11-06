@@ -38,6 +38,10 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textProduct = new System.Windows.Forms.TextBox();
+            this.textSupplier = new System.Windows.Forms.TextBox();
             this.category = new System.Windows.Forms.GroupBox();
             this.radioActual = new System.Windows.Forms.RadioButton();
             this.radioBudget = new System.Windows.Forms.RadioButton();
@@ -66,7 +70,7 @@
             this.btnRefOutputDir.Location = new System.Drawing.Point(627, 12);
             this.btnRefOutputDir.Name = "btnRefOutputDir";
             this.btnRefOutputDir.Size = new System.Drawing.Size(75, 23);
-            this.btnRefOutputDir.TabIndex = 0;
+            this.btnRefOutputDir.TabIndex = 2;
             this.btnRefOutputDir.Text = "変更";
             this.btnRefOutputDir.UseVisualStyleBackColor = true;
             this.btnRefOutputDir.Click += new System.EventHandler(this.btnRefOutputDir_Click);
@@ -77,7 +81,7 @@
             this.label1.Location = new System.Drawing.Point(12, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 15);
-            this.label1.TabIndex = 1;
+            this.label1.TabIndex = 0;
             this.label1.Text = "出力フォルダ：";
             // 
             // outputDir
@@ -86,7 +90,7 @@
             this.outputDir.Name = "outputDir";
             this.outputDir.ReadOnly = true;
             this.outputDir.Size = new System.Drawing.Size(525, 23);
-            this.outputDir.TabIndex = 2;
+            this.outputDir.TabIndex = 1;
             // 
             // listView
             // 
@@ -97,9 +101,9 @@
             this.columnHeader3,
             this.columnHeader4});
             this.listView.GridLines = true;
-            this.listView.Location = new System.Drawing.Point(12, 120);
+            this.listView.Location = new System.Drawing.Point(12, 167);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(690, 504);
+            this.listView.Size = new System.Drawing.Size(690, 457);
             this.listView.TabIndex = 6;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
@@ -127,14 +131,52 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.textProduct);
+            this.groupBox1.Controls.Add(this.textSupplier);
             this.groupBox1.Controls.Add(this.category);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(12, 57);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(279, 55);
-            this.groupBox1.TabIndex = 7;
+            this.groupBox1.Size = new System.Drawing.Size(690, 75);
+            this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "出力条件";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(301, 45);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(43, 15);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "商品名";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(277, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 15);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "請求先略称";
+            // 
+            // textProduct
+            // 
+            this.textProduct.Location = new System.Drawing.Point(350, 42);
+            this.textProduct.Name = "textProduct";
+            this.textProduct.Size = new System.Drawing.Size(334, 23);
+            this.textProduct.TabIndex = 5;
+            this.textProduct.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textSearch_KeyDown);
+            // 
+            // textSupplier
+            // 
+            this.textSupplier.Location = new System.Drawing.Point(350, 13);
+            this.textSupplier.Name = "textSupplier";
+            this.textSupplier.Size = new System.Drawing.Size(334, 23);
+            this.textSupplier.TabIndex = 4;
+            this.textSupplier.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textSearch_KeyDown);
             // 
             // category
             // 
@@ -207,7 +249,7 @@
             // recordCnt
             // 
             this.recordCnt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.recordCnt.Location = new System.Drawing.Point(297, 94);
+            this.recordCnt.Location = new System.Drawing.Point(174, 143);
             this.recordCnt.Name = "recordCnt";
             this.recordCnt.Size = new System.Drawing.Size(71, 18);
             this.recordCnt.TabIndex = 8;
@@ -216,7 +258,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(373, 95);
+            this.label4.Location = new System.Drawing.Point(251, 145);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(19, 15);
             this.label4.TabIndex = 9;
@@ -224,10 +266,10 @@
             // 
             // btnOutput
             // 
-            this.btnOutput.Location = new System.Drawing.Point(627, 91);
+            this.btnOutput.Location = new System.Drawing.Point(627, 138);
             this.btnOutput.Name = "btnOutput";
             this.btnOutput.Size = new System.Drawing.Size(75, 23);
-            this.btnOutput.TabIndex = 10;
+            this.btnOutput.TabIndex = 6;
             this.btnOutput.Text = "出力";
             this.btnOutput.UseVisualStyleBackColor = true;
             this.btnOutput.Click += new System.EventHandler(this.btnOutput_Click);
@@ -259,10 +301,10 @@
             // btnAllClear
             // 
             this.btnAllClear.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAllClear.Location = new System.Drawing.Point(479, 91);
+            this.btnAllClear.Location = new System.Drawing.Point(93, 138);
             this.btnAllClear.Name = "btnAllClear";
             this.btnAllClear.Size = new System.Drawing.Size(75, 23);
-            this.btnAllClear.TabIndex = 15;
+            this.btnAllClear.TabIndex = 5;
             this.btnAllClear.Text = "全て外す";
             this.btnAllClear.UseVisualStyleBackColor = true;
             this.btnAllClear.Click += new System.EventHandler(this.btnAllClear_Click);
@@ -270,10 +312,10 @@
             // btnAllCheck
             // 
             this.btnAllCheck.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAllCheck.Location = new System.Drawing.Point(398, 91);
+            this.btnAllCheck.Location = new System.Drawing.Point(12, 138);
             this.btnAllCheck.Name = "btnAllCheck";
             this.btnAllCheck.Size = new System.Drawing.Size(75, 23);
-            this.btnAllCheck.TabIndex = 14;
+            this.btnAllCheck.TabIndex = 4;
             this.btnAllCheck.Text = "全てチェック";
             this.btnAllCheck.UseVisualStyleBackColor = true;
             this.btnAllCheck.Click += new System.EventHandler(this.btnAllCheck_Click);
@@ -304,6 +346,7 @@
             this.Text = "商品帳票出力";
             this.Load += new System.EventHandler(this.Form_Print_Product_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.category.ResumeLayout(false);
             this.category.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -339,6 +382,10 @@
         private System.Windows.Forms.Label labelStatus;
         private System.Windows.Forms.Button btnAllClear;
         private System.Windows.Forms.Button btnAllCheck;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textSupplier;
+        private System.Windows.Forms.TextBox textProduct;
+        private System.Windows.Forms.Label label5;
 
     }
 }

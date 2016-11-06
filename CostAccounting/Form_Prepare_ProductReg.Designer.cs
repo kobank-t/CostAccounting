@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.btnFileOpen = new System.Windows.Forms.Button();
             this.listView = new System.Windows.Forms.ListView();
@@ -239,7 +239,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(181, 260);
+            this.label5.Location = new System.Drawing.Point(181, 255);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 15);
             this.label5.TabIndex = 3;
@@ -247,7 +247,7 @@
             // 
             // textRegName
             // 
-            this.textRegName.Location = new System.Drawing.Point(250, 257);
+            this.textRegName.Location = new System.Drawing.Point(250, 252);
             this.textRegName.Name = "textRegName";
             this.textRegName.Size = new System.Drawing.Size(366, 23);
             this.textRegName.TabIndex = 4;
@@ -428,8 +428,8 @@
             this.dataGridView.AccessibleRole = System.Windows.Forms.AccessibleRole.Animation;
             this.dataGridView.AllowUserToAddRows = false;
             this.dataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.code,
@@ -444,7 +444,7 @@
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.RowTemplate.Height = 21;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(607, 178);
+            this.dataGridView.Size = new System.Drawing.Size(607, 168);
             this.dataGridView.TabIndex = 14;
             this.dataGridView.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_RowEnter);
             // 
@@ -497,7 +497,7 @@
             // 
             // textRegCode
             // 
-            this.textRegCode.Location = new System.Drawing.Point(84, 257);
+            this.textRegCode.Location = new System.Drawing.Point(84, 252);
             this.textRegCode.Name = "textRegCode";
             this.textRegCode.Size = new System.Drawing.Size(55, 23);
             this.textRegCode.TabIndex = 2;
@@ -515,7 +515,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 260);
+            this.label2.Location = new System.Drawing.Point(14, 255);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 15);
             this.label2.TabIndex = 1;
