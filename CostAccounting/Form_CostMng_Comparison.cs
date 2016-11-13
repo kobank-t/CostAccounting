@@ -493,7 +493,18 @@ namespace CostAccounting
                     // ↓ここから
                     //----------------------------------------------------------------------------------------------
                     // dataGridView.Rows[i].Cells[21].Value = dataList[i].t_actual.t_product.packing_fare.ToString("#,0");
-                    dataGridView.Rows[i].Cells[21].Value = getPackingFare(context, Const.CATEGORY_TYPE.Actual, dataList[i].m_product.code, dataList[i].m_supplier.code, dataList[i].t_actual.t_product.volume);
+                    if (dataList[i].t_actual.t_product.type == (int)Const.PRODUCT_TYPE.Normal)
+                    {
+                        dataGridView.Rows[i].Cells[21].Value = getPackingFare(context, Const.CATEGORY_TYPE.Actual, dataList[i].m_product.code, dataList[i].m_supplier.code, dataList[i].t_actual.t_product.volume).ToString("#,0");
+                    }
+                    else if (dataList[i].t_actual.t_product.type == (int)Const.PRODUCT_TYPE.Blend)
+                    {
+                        dataGridView.Rows[i].Cells[21].Value = getPackingFareForBlend(context, Const.CATEGORY_TYPE.Actual, dataList[i].m_product.code, dataList[i].m_supplier.code, dataList[i].t_actual.t_product.volume).ToString("#,0");
+                    }
+                    else
+                    {
+                        throw new Exception("商品タイプが不正:" + type);
+                    }
                     //----------------------------------------------------------------------------------------------
                     // ↑ここまで
                     //----------------------------------------------------------------------------------------------
@@ -553,7 +564,18 @@ namespace CostAccounting
                         // ↓ここから
                         //----------------------------------------------------------------------------------------------
                         // dataGridView.Rows[i].Cells[20].Value = dataList[i].t_budget.t_product.packing_fare.ToString("#,0");
-                        dataGridView.Rows[i].Cells[20].Value = getPackingFare(context, Const.CATEGORY_TYPE.Budget, dataList[i].m_product.code, dataList[i].m_supplier.code, dataList[i].t_budget.t_product.volume);
+                        if (dataList[i].t_budget.t_product.type == (int)Const.PRODUCT_TYPE.Normal)
+                        {
+                            dataGridView.Rows[i].Cells[21].Value = getPackingFare(context, Const.CATEGORY_TYPE.Budget, dataList[i].m_product.code, dataList[i].m_supplier.code, dataList[i].t_budget.t_product.volume).ToString("#,0");
+                        }
+                        else if (dataList[i].t_budget.t_product.type == (int)Const.PRODUCT_TYPE.Blend)
+                        {
+                            dataGridView.Rows[i].Cells[21].Value = getPackingFareForBlend(context, Const.CATEGORY_TYPE.Budget, dataList[i].m_product.code, dataList[i].m_supplier.code, dataList[i].t_budget.t_product.volume).ToString("#,0");
+                        }
+                        else
+                        {
+                            throw new Exception("商品タイプが不正:" + type);
+                        }
                         //----------------------------------------------------------------------------------------------
                         // ↑ここまで
                         //----------------------------------------------------------------------------------------------

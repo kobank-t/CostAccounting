@@ -521,7 +521,19 @@ namespace CostAccounting
                     // ↓ここから
                     //----------------------------------------------------------------------------------------------
                     // dataGridView.Rows[i].Cells[12].Value = dataList[i].t_product.packing_fare.ToString("#,0");
-                    dataGridView.Rows[i].Cells[12].Value = getPackingFare(context, category, dataList[i].m_product.code, dataList[i].m_supplier.code, dataList[i].t_product.volume);
+                    int type = dataList[i].t_product.type;
+                    if (type == (int)Const.PRODUCT_TYPE.Normal)
+                    {
+                        dataGridView.Rows[i].Cells[12].Value = getPackingFare(context, category, dataList[i].m_product.code, dataList[i].m_supplier.code, dataList[i].t_product.volume).ToString("#,0");
+                    }
+                    else if (type == (int)Const.PRODUCT_TYPE.Blend)
+                    {
+                        dataGridView.Rows[i].Cells[12].Value = getPackingFareForBlend(context, category, dataList[i].m_product.code, dataList[i].m_supplier.code, dataList[i].t_product.volume).ToString("#,0");
+                    }
+                    else
+                    {
+                        throw new Exception("商品タイプが不正:" + type);
+                    }
                     //----------------------------------------------------------------------------------------------
                     // ↑ここまで
                     //----------------------------------------------------------------------------------------------
@@ -575,14 +587,13 @@ namespace CostAccounting
         /*************************************************************
          * 指定した取引先の荷造運賃を返却する
          *************************************************************/
-        protected string getPackingFare(CostAccountingEntities context, Const.CATEGORY_TYPE category, string productCode, string supplierCode, decimal volume)
+        protected decimal getPackingFare(CostAccountingEntities context, Const.CATEGORY_TYPE category
+                                        , string productCode, string supplierCode, decimal volume)
         {
-            string product_code = productCode;
-            string supplier_code = supplierCode;
             var packingFare = from t in context.ProductPackingFare
                               where t.year.Equals(Const.TARGET_YEAR)
-                                 && t.product_code.Equals(product_code)
-                                 && t.supplier_code.Equals(supplier_code)
+                                 && t.product_code.Equals(productCode)
+                                 && t.supplier_code.Equals(supplierCode)
                                  && t.category.Equals((int)category)
                               select t;
 
@@ -594,7 +605,31 @@ namespace CostAccounting
                 decimal kgPerAmount = (volume != decimal.Zero ? decimal.Divide(amount, volume) : decimal.Zero);
                 sumCostKgPerAmount += kgPerAmount;
             }
-            return sumCostKgPerAmount.ToString("#,0");
+            return sumCostKgPerAmount;
+        }
+
+        /*************************************************************
+         * 指定した取引先の荷造運賃を返却する（ブレンド品用）
+         *************************************************************/
+        protected decimal getPackingFareForBlend(CostAccountingEntities context, Const.CATEGORY_TYPE category
+                                                , string productCode, string supplierCode, decimal volume)
+        {
+            var blend = from t_blend in context.ProductBlend
+                        join t_product in context.Product
+                          on new { t_blend.year, t_blend.code, t_blend.category } equals new { t_product.year, t_product.code, t_product.category }
+                        where t_blend.year.Equals(Const.TARGET_YEAR)
+                              && t_blend.product_code.Equals(productCode)
+                              && t_blend.category.Equals((int)category)
+                        orderby t_blend.no
+                        select new { t_blend, t_product };
+
+            decimal packingFareSum = decimal.Zero;
+            foreach (var data in blend)
+            {
+                decimal packingFare = getPackingFare(context, category, data.t_blend.code, supplierCode, data.t_product.volume);
+                packingFareSum += decimal.Multiply(packingFare, data.t_blend.blend_rate);
+            }
+            return packingFareSum;
         }
 
         /*************************************************************

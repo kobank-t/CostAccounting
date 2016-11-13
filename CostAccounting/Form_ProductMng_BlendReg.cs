@@ -596,6 +596,7 @@ namespace CostAccounting
                     {
                         string code = (string)form.dataGridView.SelectedRows[0].Cells[0].Value;
                         setProductData(code, e.RowIndex);
+                        setPackingFareData(code, suppllierCode.Text, e.RowIndex);
 
                         if (e.RowIndex == dgvProduct.NewRowIndex)
                         {
@@ -745,7 +746,12 @@ namespace CostAccounting
                     dgvProduct.Rows[rowIndex].Cells["dgvUtilitiesCost"].Value = product.First().t.utilities_cost.ToString("N");
                     dgvProduct.Rows[rowIndex].Cells["dgvOtherCost"].Value = product.First().t.other_cost.ToString("N");
                     dgvProduct.Rows[rowIndex].Cells["dgvProductCost"].Value = product.First().t.product_cost.ToString("N");
-                    dgvProduct.Rows[rowIndex].Cells["dgvPackingFare"].Value = product.First().t.packing_fare.ToString("N");
+
+                    /** 2016.11.11 荷造運賃は取引先単位に登録したデータを参照するよう修正を行う。 start---- */
+                    // dgvProduct.Rows[rowIndex].Cells["dgvPackingFare"].Value = product.First().t.packing_fare.ToString("N");
+                    dgvProduct.Rows[rowIndex].Cells["dgvVolume"].Value = product.First().t.volume;
+                    /** ----end */
+
                     dgvProduct.Rows[rowIndex].Cells["dgvSellingCost"].Value = product.First().t.selling_cost.ToString("N");
                     dgvProduct.Rows[rowIndex].Cells["dgvManagementCost"].Value = product.First().t.management_cost.ToString("N");
                     dgvProduct.Rows[rowIndex].Cells["dgvOverallCost"].Value = product.First().t.overall_cost.ToString("N");
@@ -769,7 +775,12 @@ namespace CostAccounting
                     dgvProduct.Rows[rowIndex].Cells["dgvUtilitiesCost"].Value = string.Empty;
                     dgvProduct.Rows[rowIndex].Cells["dgvOtherCost"].Value = string.Empty;
                     dgvProduct.Rows[rowIndex].Cells["dgvProductCost"].Value = string.Empty;
-                    dgvProduct.Rows[rowIndex].Cells["dgvPackingFare"].Value = string.Empty;
+
+                    /** 2016.11.11 荷造運賃は取引先単位に登録したデータを参照するよう修正を行う。 start---- */
+                    // dgvProduct.Rows[rowIndex].Cells["dgvPackingFare"].Value = string.Empty;
+                    dgvProduct.Rows[rowIndex].Cells["dgvVolume"].Value = string.Empty;
+                    /** ----end */
+
                     dgvProduct.Rows[rowIndex].Cells["dgvSellingCost"].Value = string.Empty;
                     dgvProduct.Rows[rowIndex].Cells["dgvManagementCost"].Value = string.Empty;
                     dgvProduct.Rows[rowIndex].Cells["dgvOverallCost"].Value = string.Empty;
@@ -784,13 +795,13 @@ namespace CostAccounting
         {
             using (var context = new CostAccountingEntities())
             {
-                int category = (int)Program.judgeCategory(radioBudget, radioActual);
+                Const.CATEGORY_TYPE category = Program.judgeCategory(radioBudget, radioActual);
 
                 var supplier = from t in context.ProductSupplier
                                where t.year.Equals(Const.TARGET_YEAR)
                                   && t.product_code.Equals(productCode.Text)
                                   && t.supplier_code.Equals(suppllierCode.Text)
-                                  && t.category.Equals(category)
+                                  && t.category.Equals((int)category)
                                   && t.type.Equals((int)Const.PRODUCT_TYPE.Blend)
                                select t;
 
@@ -799,13 +810,66 @@ namespace CostAccounting
                     unitPrice.Text = supplier.First().unit_price.ToString("N");
                     updateTime.Text = supplier.First().update_date.ToString();
                     updatePC.Text = supplier.First().update_user;
+
+                    /** 2016.11.11 荷造運賃は取引先単位に登録したデータを参照するよう修正を行う。 start---- */
+                    foreach (DataGridViewRow row in dgvProduct.Rows)
+                    {
+                        string code = (string)row.Cells["dgvProductCode"].Value;
+                        if (!String.IsNullOrEmpty(code))
+                        {
+                            setPackingFareData(code, supplier.First().supplier_code, row.Index);
+                        }
+                    }
+                    /** ----end */
                 }
                 else
                 {
                     unitPrice.Text = String.Empty;
                     updateTime.Text = String.Empty;
                     updatePC.Text = String.Empty;
+
+                    /** 2016.11.11 荷造運賃は取引先単位に登録したデータを参照するよう修正を行う。 start---- */
+                    foreach (DataGridViewRow row in dgvProduct.Rows)
+                    {
+                        string code = (string)row.Cells["dgvProductCode"].Value;
+                        if (!String.IsNullOrEmpty(code))
+                        {
+                            dgvProduct.Rows[row.Index].Cells["dgvPackingFare"].Value = decimal.Zero.ToString("N");
+                        }
+                    }
+                    /** ----end */
                 }
+            }
+        }
+
+        /*************************************************************
+         * データグリッドビューに荷造り運賃データを設定する
+         *************************************************************/
+        private void setPackingFareData(string productCode, string supplierCode, int rowIndex)
+        {
+            using (var context = new CostAccountingEntities())
+            {
+                Const.CATEGORY_TYPE category = Program.judgeCategory(radioBudget, radioActual);
+                string product_code = productCode;
+                string supplier_code = supplierCode;
+                var packingFare = from t in context.ProductPackingFare
+                                  where t.year.Equals(Const.TARGET_YEAR)
+                                     && t.product_code.Equals(product_code)
+                                     && t.supplier_code.Equals(supplier_code)
+                                     && t.category.Equals((int)category)
+                                  select t;
+
+                decimal sumCostKgPerAmount = 0;
+                decimal volume = (decimal)dgvProduct.Rows[rowIndex].Cells["dgvVolume"].Value;
+                DataTable fare = DataTableSupport.getInstance(category).fare;
+                foreach (var data in packingFare)
+                {
+                    decimal amount = decimal.Multiply(data.quantity, DataTableSupport.getPrice(fare, data.code));
+                    decimal kgPerAmount = (volume != decimal.Zero ? decimal.Divide(amount, volume) : decimal.Zero);
+                    sumCostKgPerAmount += kgPerAmount;
+                }
+
+                dgvProduct.Rows[rowIndex].Cells["dgvPackingFare"].Value = sumCostKgPerAmount.ToString("N");
             }
         }
 

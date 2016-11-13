@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.otherCost = new System.Windows.Forms.Label();
@@ -90,26 +90,6 @@
             this.btnChange = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvProduct = new System.Windows.Forms.DataGridView();
-            this.dgvProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSearchBtn = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dgvBlendRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMaterialCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvContractorsCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvLaborCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvLaborCostDirect = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvLaborCostIndirect = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvManufacturingCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMaterialsFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPackingCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvMachineCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvUtilitiesCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvOtherCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvProductCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvPackingFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvSellingCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvManagementCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvOverallCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.updatePC = new System.Windows.Forms.TextBox();
             this.updateTime = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -147,6 +127,27 @@
             this.labelStatus = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.btnAllCalc = new System.Windows.Forms.Button();
+            this.dgvProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSearchBtn = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dgvBlendRate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMaterialCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvContractorsCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvLaborCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvLaborCostDirect = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvLaborCostIndirect = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvManufacturingCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMaterialsFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPackingCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvMachineCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUtilitiesCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvOtherCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProductCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvPackingFare = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSellingCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvManagementCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvOverallCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvVolume = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
@@ -901,7 +902,8 @@
             this.dgvPackingFare,
             this.dgvSellingCost,
             this.dgvManagementCost,
-            this.dgvOverallCost});
+            this.dgvOverallCost,
+            this.dgvVolume});
             this.dgvProduct.Location = new System.Drawing.Point(15, 489);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.RowTemplate.Height = 21;
@@ -911,169 +913,6 @@
             this.dgvProduct.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellEndEdit);
             this.dgvProduct.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellEnter);
             this.dgvProduct.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.dataGridView_EditingControlShowing);
-            // 
-            // dgvProductCode
-            // 
-            this.dgvProductCode.Frozen = true;
-            this.dgvProductCode.HeaderText = "商品";
-            this.dgvProductCode.Name = "dgvProductCode";
-            this.dgvProductCode.ReadOnly = true;
-            this.dgvProductCode.Width = 60;
-            // 
-            // dgvProductName
-            // 
-            this.dgvProductName.Frozen = true;
-            this.dgvProductName.HeaderText = "";
-            this.dgvProductName.Name = "dgvProductName";
-            this.dgvProductName.ReadOnly = true;
-            this.dgvProductName.Width = 200;
-            // 
-            // dgvSearchBtn
-            // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            dataGridViewCellStyle9.NullValue = "商品検索";
-            this.dgvSearchBtn.DefaultCellStyle = dataGridViewCellStyle9;
-            this.dgvSearchBtn.Frozen = true;
-            this.dgvSearchBtn.HeaderText = "";
-            this.dgvSearchBtn.Name = "dgvSearchBtn";
-            this.dgvSearchBtn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSearchBtn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dgvSearchBtn.Text = "商品検索";
-            this.dgvSearchBtn.UseColumnTextForButtonValue = true;
-            this.dgvSearchBtn.Width = 70;
-            // 
-            // dgvBlendRate
-            // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvBlendRate.DefaultCellStyle = dataGridViewCellStyle10;
-            this.dgvBlendRate.Frozen = true;
-            this.dgvBlendRate.HeaderText = "ブレンド割合";
-            this.dgvBlendRate.Name = "dgvBlendRate";
-            // 
-            // dgvMaterialCost
-            // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Gainsboro;
-            this.dgvMaterialCost.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvMaterialCost.HeaderText = "①原料費";
-            this.dgvMaterialCost.Name = "dgvMaterialCost";
-            this.dgvMaterialCost.ReadOnly = true;
-            this.dgvMaterialCost.Width = 120;
-            // 
-            // dgvContractorsCost
-            // 
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Gainsboro;
-            this.dgvContractorsCost.DefaultCellStyle = dataGridViewCellStyle12;
-            this.dgvContractorsCost.HeaderText = "②外注費";
-            this.dgvContractorsCost.Name = "dgvContractorsCost";
-            this.dgvContractorsCost.ReadOnly = true;
-            this.dgvContractorsCost.Width = 120;
-            // 
-            // dgvLaborCost
-            // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Gainsboro;
-            this.dgvLaborCost.DefaultCellStyle = dataGridViewCellStyle13;
-            this.dgvLaborCost.HeaderText = "③労務費";
-            this.dgvLaborCost.Name = "dgvLaborCost";
-            this.dgvLaborCost.ReadOnly = true;
-            this.dgvLaborCost.Width = 120;
-            // 
-            // dgvLaborCostDirect
-            // 
-            this.dgvLaborCostDirect.HeaderText = "直接労務費";
-            this.dgvLaborCostDirect.Name = "dgvLaborCostDirect";
-            this.dgvLaborCostDirect.ReadOnly = true;
-            this.dgvLaborCostDirect.Width = 120;
-            // 
-            // dgvLaborCostIndirect
-            // 
-            this.dgvLaborCostIndirect.HeaderText = "間接労務費";
-            this.dgvLaborCostIndirect.Name = "dgvLaborCostIndirect";
-            this.dgvLaborCostIndirect.ReadOnly = true;
-            this.dgvLaborCostIndirect.Width = 120;
-            // 
-            // dgvManufacturingCost
-            // 
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Gainsboro;
-            this.dgvManufacturingCost.DefaultCellStyle = dataGridViewCellStyle14;
-            this.dgvManufacturingCost.HeaderText = "④製造経費";
-            this.dgvManufacturingCost.Name = "dgvManufacturingCost";
-            this.dgvManufacturingCost.ReadOnly = true;
-            this.dgvManufacturingCost.Width = 120;
-            // 
-            // dgvMaterialsFare
-            // 
-            this.dgvMaterialsFare.HeaderText = "原料運賃";
-            this.dgvMaterialsFare.Name = "dgvMaterialsFare";
-            this.dgvMaterialsFare.ReadOnly = true;
-            this.dgvMaterialsFare.Width = 120;
-            // 
-            // dgvPackingCost
-            // 
-            this.dgvPackingCost.HeaderText = "包装資材費";
-            this.dgvPackingCost.Name = "dgvPackingCost";
-            this.dgvPackingCost.ReadOnly = true;
-            this.dgvPackingCost.Width = 120;
-            // 
-            // dgvMachineCost
-            // 
-            this.dgvMachineCost.HeaderText = "設備費";
-            this.dgvMachineCost.Name = "dgvMachineCost";
-            this.dgvMachineCost.ReadOnly = true;
-            this.dgvMachineCost.Width = 120;
-            // 
-            // dgvUtilitiesCost
-            // 
-            this.dgvUtilitiesCost.HeaderText = "水道光熱費";
-            this.dgvUtilitiesCost.Name = "dgvUtilitiesCost";
-            this.dgvUtilitiesCost.ReadOnly = true;
-            this.dgvUtilitiesCost.Width = 120;
-            // 
-            // dgvOtherCost
-            // 
-            this.dgvOtherCost.HeaderText = "その他経費";
-            this.dgvOtherCost.Name = "dgvOtherCost";
-            this.dgvOtherCost.ReadOnly = true;
-            this.dgvOtherCost.Width = 120;
-            // 
-            // dgvProductCost
-            // 
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.dgvProductCost.DefaultCellStyle = dataGridViewCellStyle15;
-            this.dgvProductCost.HeaderText = "合計製品原価";
-            this.dgvProductCost.Name = "dgvProductCost";
-            this.dgvProductCost.ReadOnly = true;
-            this.dgvProductCost.Width = 120;
-            // 
-            // dgvPackingFare
-            // 
-            this.dgvPackingFare.HeaderText = "荷造運賃(送料)";
-            this.dgvPackingFare.Name = "dgvPackingFare";
-            this.dgvPackingFare.ReadOnly = true;
-            this.dgvPackingFare.Width = 120;
-            // 
-            // dgvSellingCost
-            // 
-            this.dgvSellingCost.HeaderText = "販売費";
-            this.dgvSellingCost.Name = "dgvSellingCost";
-            this.dgvSellingCost.ReadOnly = true;
-            this.dgvSellingCost.Width = 120;
-            // 
-            // dgvManagementCost
-            // 
-            this.dgvManagementCost.HeaderText = "一般管理費/営業外費用";
-            this.dgvManagementCost.Name = "dgvManagementCost";
-            this.dgvManagementCost.ReadOnly = true;
-            this.dgvManagementCost.Width = 120;
-            // 
-            // dgvOverallCost
-            // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.dgvOverallCost.DefaultCellStyle = dataGridViewCellStyle16;
-            this.dgvOverallCost.HeaderText = "総原価";
-            this.dgvOverallCost.Name = "dgvOverallCost";
-            this.dgvOverallCost.ReadOnly = true;
-            this.dgvOverallCost.Width = 120;
             // 
             // updatePC
             // 
@@ -1549,6 +1388,175 @@
             this.btnAllCalc.UseVisualStyleBackColor = true;
             this.btnAllCalc.Click += new System.EventHandler(this.btnAllCalc_Click);
             // 
+            // dgvProductCode
+            // 
+            this.dgvProductCode.Frozen = true;
+            this.dgvProductCode.HeaderText = "商品";
+            this.dgvProductCode.Name = "dgvProductCode";
+            this.dgvProductCode.ReadOnly = true;
+            this.dgvProductCode.Width = 60;
+            // 
+            // dgvProductName
+            // 
+            this.dgvProductName.Frozen = true;
+            this.dgvProductName.HeaderText = "";
+            this.dgvProductName.Name = "dgvProductName";
+            this.dgvProductName.ReadOnly = true;
+            this.dgvProductName.Width = 200;
+            // 
+            // dgvSearchBtn
+            // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("メイリオ", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            dataGridViewCellStyle1.NullValue = "商品検索";
+            this.dgvSearchBtn.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSearchBtn.Frozen = true;
+            this.dgvSearchBtn.HeaderText = "";
+            this.dgvSearchBtn.Name = "dgvSearchBtn";
+            this.dgvSearchBtn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSearchBtn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dgvSearchBtn.Text = "商品検索";
+            this.dgvSearchBtn.UseColumnTextForButtonValue = true;
+            this.dgvSearchBtn.Width = 70;
+            // 
+            // dgvBlendRate
+            // 
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvBlendRate.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvBlendRate.Frozen = true;
+            this.dgvBlendRate.HeaderText = "ブレンド割合";
+            this.dgvBlendRate.Name = "dgvBlendRate";
+            // 
+            // dgvMaterialCost
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
+            this.dgvMaterialCost.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvMaterialCost.HeaderText = "①原料費";
+            this.dgvMaterialCost.Name = "dgvMaterialCost";
+            this.dgvMaterialCost.ReadOnly = true;
+            this.dgvMaterialCost.Width = 120;
+            // 
+            // dgvContractorsCost
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro;
+            this.dgvContractorsCost.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvContractorsCost.HeaderText = "②外注費";
+            this.dgvContractorsCost.Name = "dgvContractorsCost";
+            this.dgvContractorsCost.ReadOnly = true;
+            this.dgvContractorsCost.Width = 120;
+            // 
+            // dgvLaborCost
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Gainsboro;
+            this.dgvLaborCost.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvLaborCost.HeaderText = "③労務費";
+            this.dgvLaborCost.Name = "dgvLaborCost";
+            this.dgvLaborCost.ReadOnly = true;
+            this.dgvLaborCost.Width = 120;
+            // 
+            // dgvLaborCostDirect
+            // 
+            this.dgvLaborCostDirect.HeaderText = "直接労務費";
+            this.dgvLaborCostDirect.Name = "dgvLaborCostDirect";
+            this.dgvLaborCostDirect.ReadOnly = true;
+            this.dgvLaborCostDirect.Width = 120;
+            // 
+            // dgvLaborCostIndirect
+            // 
+            this.dgvLaborCostIndirect.HeaderText = "間接労務費";
+            this.dgvLaborCostIndirect.Name = "dgvLaborCostIndirect";
+            this.dgvLaborCostIndirect.ReadOnly = true;
+            this.dgvLaborCostIndirect.Width = 120;
+            // 
+            // dgvManufacturingCost
+            // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gainsboro;
+            this.dgvManufacturingCost.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvManufacturingCost.HeaderText = "④製造経費";
+            this.dgvManufacturingCost.Name = "dgvManufacturingCost";
+            this.dgvManufacturingCost.ReadOnly = true;
+            this.dgvManufacturingCost.Width = 120;
+            // 
+            // dgvMaterialsFare
+            // 
+            this.dgvMaterialsFare.HeaderText = "原料運賃";
+            this.dgvMaterialsFare.Name = "dgvMaterialsFare";
+            this.dgvMaterialsFare.ReadOnly = true;
+            this.dgvMaterialsFare.Width = 120;
+            // 
+            // dgvPackingCost
+            // 
+            this.dgvPackingCost.HeaderText = "包装資材費";
+            this.dgvPackingCost.Name = "dgvPackingCost";
+            this.dgvPackingCost.ReadOnly = true;
+            this.dgvPackingCost.Width = 120;
+            // 
+            // dgvMachineCost
+            // 
+            this.dgvMachineCost.HeaderText = "設備費";
+            this.dgvMachineCost.Name = "dgvMachineCost";
+            this.dgvMachineCost.ReadOnly = true;
+            this.dgvMachineCost.Width = 120;
+            // 
+            // dgvUtilitiesCost
+            // 
+            this.dgvUtilitiesCost.HeaderText = "水道光熱費";
+            this.dgvUtilitiesCost.Name = "dgvUtilitiesCost";
+            this.dgvUtilitiesCost.ReadOnly = true;
+            this.dgvUtilitiesCost.Width = 120;
+            // 
+            // dgvOtherCost
+            // 
+            this.dgvOtherCost.HeaderText = "その他経費";
+            this.dgvOtherCost.Name = "dgvOtherCost";
+            this.dgvOtherCost.ReadOnly = true;
+            this.dgvOtherCost.Width = 120;
+            // 
+            // dgvProductCost
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.dgvProductCost.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvProductCost.HeaderText = "合計製品原価";
+            this.dgvProductCost.Name = "dgvProductCost";
+            this.dgvProductCost.ReadOnly = true;
+            this.dgvProductCost.Width = 120;
+            // 
+            // dgvPackingFare
+            // 
+            this.dgvPackingFare.HeaderText = "荷造運賃(送料)";
+            this.dgvPackingFare.Name = "dgvPackingFare";
+            this.dgvPackingFare.ReadOnly = true;
+            this.dgvPackingFare.Width = 120;
+            // 
+            // dgvSellingCost
+            // 
+            this.dgvSellingCost.HeaderText = "販売費";
+            this.dgvSellingCost.Name = "dgvSellingCost";
+            this.dgvSellingCost.ReadOnly = true;
+            this.dgvSellingCost.Width = 120;
+            // 
+            // dgvManagementCost
+            // 
+            this.dgvManagementCost.HeaderText = "一般管理費/営業外費用";
+            this.dgvManagementCost.Name = "dgvManagementCost";
+            this.dgvManagementCost.ReadOnly = true;
+            this.dgvManagementCost.Width = 120;
+            // 
+            // dgvOverallCost
+            // 
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.dgvOverallCost.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvOverallCost.HeaderText = "総原価";
+            this.dgvOverallCost.Name = "dgvOverallCost";
+            this.dgvOverallCost.ReadOnly = true;
+            this.dgvOverallCost.Width = 120;
+            // 
+            // dgvVolume
+            // 
+            this.dgvVolume.HeaderText = "volume";
+            this.dgvVolume.Name = "dgvVolume";
+            this.dgvVolume.Visible = false;
+            // 
             // Form_ProductMng_BlendReg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1697,6 +1705,14 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox blendRateTotal;
         private System.Windows.Forms.Label operationKbn;
+        private System.Windows.Forms.GroupBox category;
+        private System.Windows.Forms.RadioButton radioActual;
+        private System.Windows.Forms.RadioButton radioBudget;
+        private System.Windows.Forms.TextBox packing;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelStatus;
+        private System.Windows.Forms.ProgressBar progressBar;
+        private System.Windows.Forms.Button btnAllCalc;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvProductCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvProductName;
         private System.Windows.Forms.DataGridViewButtonColumn dgvSearchBtn;
@@ -1717,14 +1733,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvSellingCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvManagementCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvOverallCost;
-        private System.Windows.Forms.GroupBox category;
-        private System.Windows.Forms.RadioButton radioActual;
-        private System.Windows.Forms.RadioButton radioBudget;
-        private System.Windows.Forms.TextBox packing;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label labelStatus;
-        private System.Windows.Forms.ProgressBar progressBar;
-        private System.Windows.Forms.Button btnAllCalc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvVolume;
 
 
     }
