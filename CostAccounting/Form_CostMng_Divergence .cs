@@ -152,16 +152,17 @@ namespace CostAccounting
             using (var context = new CostAccountingEntities())
             {
                 string inStr = string.Empty;
+                List<int> targetMonthList = new List<int>();
                 foreach (CheckBox target in checkboxPairText.Keys)
                 {
                     if (target.Checked)
-                        inStr += string.Concat(checkboxPairMonth[target], ",");
+                        targetMonthList.Add(checkboxPairMonth[target]);
                 }
 
-                inStr = inStr.TrimEnd(',');
+                int[] targetMonthArray = targetMonthList.ToArray();
                 var targetData = from t in context.Divergence
                                  where t.year.Equals(Const.TARGET_YEAR)
-                                    && inStr.Contains(t.month.ToString())
+                                    && targetMonthList.Contains(t.month)
                                     && t.del_flg.Equals(Const.FLG_OFF)
                                  select t;
 
