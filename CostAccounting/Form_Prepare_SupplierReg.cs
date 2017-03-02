@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO;
+using Microsoft.VisualBasic.FileIO;
 
 namespace CostAccounting
 {
@@ -202,32 +203,34 @@ namespace CostAccounting
                 return;
             }
 
-            StreamReader reader = new StreamReader(filePath, System.Text.Encoding.Default);
-            string line;
-            try
-            {
-                // 既に表示されているデータをクリアする
-                listView.Items.Clear();
+            // 既に表示されているデータをクリアする
+            listView.Items.Clear();
 
-                if ((line = reader.ReadLine()) != null)
+            var parser = new TextFieldParser(filePath, System.Text.Encoding.GetEncoding("Shift_JIS"));
+            using (parser)
+            {
+                parser.TextFieldType = FieldType.Delimited;
+                parser.SetDelimiters(",");
+                parser.HasFieldsEnclosedInQuotes = true;
+                parser.TrimWhiteSpace = true;
+
+                if (!parser.EndOfData)
                 {
-                    // ヘッダ行は読み飛ばす
-                    while ((line = reader.ReadLine()) != null)
+                    // ヘッダ行読み飛ばす
+                    parser.ReadFields();
+
+                    while (!parser.EndOfData)
                     {
-                        string[] lineItems = line.Split(',');
-                        if (lineItems.Length == 3)
+                        string[] lineItems = parser.ReadFields();
+                        if (lineItems.Length >= 3)
                         {
-                            ListViewItem item = new ListViewItem(lineItems[0].Replace("\"", string.Empty));
-                            item.SubItems.Add(lineItems[1].Replace("\"", string.Empty) + "　" + lineItems[2].Replace("\"", string.Empty));
+                            ListViewItem item = new ListViewItem(lineItems[0]);
+                            item.SubItems.Add(lineItems[1] + "　" + lineItems[2]);
                             listView.Items.Add(item);
                         }
                     }
                     recordCnt.Text = listView.Items.Count.ToString();
                 }
-            }
-            finally
-            {
-                reader.Close();
             }
         }
 
