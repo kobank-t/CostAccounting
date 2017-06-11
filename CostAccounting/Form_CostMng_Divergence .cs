@@ -168,14 +168,14 @@ namespace CostAccounting
 
                 foreach (var data in targetData.ToList())
                 {
-                    materialCost_db.Text = decimal.Add(Conversion.Parse(materialCost_db.Text), data.materialCost_costing).ToString("#,0");
-                    laborCost_db.Text = decimal.Add(Conversion.Parse(laborCost_db.Text), data.laborCost_costing).ToString("#,0");
-                    contractorsCost_db.Text = decimal.Add(Conversion.Parse(contractorsCost_db.Text), data.contractorsCost_costing).ToString("#,0");
-                    materialsFare_db.Text = decimal.Add(Conversion.Parse(materialsFare_db.Text), data.materialsFare_costing).ToString("#,0");
-                    packingCost_db.Text = decimal.Add(Conversion.Parse(packingCost_db.Text), data.packingCost_costing).ToString("#,0");
-                    utilitiesCost_db.Text = decimal.Add(Conversion.Parse(utilitiesCost_db.Text), data.utilitiesCost_costing).ToString("#,0");
-                    otherCost_db.Text = decimal.Add(Conversion.Parse(otherCost_db.Text), data.otherCost_costing).ToString("#,0");
-                    packingFare_db.Text = decimal.Add(Conversion.Parse(packingFare_db.Text), data.packingFare_costing).ToString("#,0");
+                    materialCost_db.Text = decimal.Add(Conversion.Parse(materialCost_db.Text), data.materialCost_costing).ToString("N");
+                    laborCost_db.Text = decimal.Add(Conversion.Parse(laborCost_db.Text), data.laborCost_costing).ToString("N");
+                    contractorsCost_db.Text = decimal.Add(Conversion.Parse(contractorsCost_db.Text), data.contractorsCost_costing).ToString("N");
+                    materialsFare_db.Text = decimal.Add(Conversion.Parse(materialsFare_db.Text), data.materialsFare_costing).ToString("N");
+                    packingCost_db.Text = decimal.Add(Conversion.Parse(packingCost_db.Text), data.packingCost_costing).ToString("N");
+                    utilitiesCost_db.Text = decimal.Add(Conversion.Parse(utilitiesCost_db.Text), data.utilitiesCost_costing).ToString("N");
+                    otherCost_db.Text = decimal.Add(Conversion.Parse(otherCost_db.Text), data.otherCost_costing).ToString("N");
+                    packingFare_db.Text = decimal.Add(Conversion.Parse(packingFare_db.Text), data.packingFare_costing).ToString("N");
                 }
             }
         }
@@ -205,7 +205,7 @@ namespace CostAccounting
             decimal total_rate = total_db != decimal.Zero ? decimal.Divide(total_diff, total_db) : decimal.Zero;
 
             this.total.Text = total.ToString("#,0");
-            this.total_db.Text = total_db.ToString("#,0");
+            this.total_db.Text = total_db.ToString("N");
             this.total_diff.Text = total_diff.ToString("#,0");
             this.total_rate.Text = total_rate.ToString("P");
         }

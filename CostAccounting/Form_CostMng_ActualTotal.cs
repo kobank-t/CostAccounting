@@ -184,14 +184,14 @@ namespace CostAccounting
 
                 for (int i = 0; i < columnlIndex.Length; i++)
                 {
-                    if (columnlIndex[i] != 28 && columnlIndex[i] != 39)
+                    if (!(28 <= columnlIndex[i] && columnlIndex[i] <= 39))
                     {
                         dataGridView.Rows[index].Cells[columnlIndex[i]].Value = aggregateRow[i].ToString("#,0");
                     }
                     else
                     {
                         // 数量は小数ありのフォーマットで表示
-                        if (columnlIndex[i] == 28)
+                        if (28 <= columnlIndex[i] && columnlIndex[i] <= 38)
                           dataGridView.Rows[index].Cells[columnlIndex[i]].Value = aggregateRow[i].ToString("N");
 
                         // 固定配賦率はパーセントのフォーマットで表示
